@@ -1,0 +1,407 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Attractor cooperation experimental message v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "specversion",
+    "id",
+    "source",
+    "type",
+    "time",
+    "datacontenttype",
+    "data"
+  ],
+  "properties": {
+    "specversion": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "enum": [
+        "org.attractor.cooperation.question.v0.1",
+        "org.attractor.cooperation.propose.v0.1",
+        "org.attractor.cooperation.contest.v0.1",
+        "org.attractor.cooperation.experiment.v0.1",
+        "org.attractor.cooperation.adopt.v0.1",
+        "org.attractor.cooperation.reject.v0.1",
+        "org.attractor.cooperation.transmit.v0.1",
+        "org.attractor.cooperation.withdraw.v0.1"
+      ]
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datacontenttype": {
+      "const": "application/json"
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "community",
+        "actor",
+        "question",
+        "reason",
+        "limitations"
+      ],
+      "properties": {
+        "profile": {
+          "const": "attractor-cooperation/0.1"
+        },
+        "community": {
+          "type": "string",
+          "format": "uri"
+        },
+        "actor": {
+          "type": "string",
+          "format": "uri"
+        },
+        "question": {
+          "type": "object",
+          "required": [
+            "source",
+            "id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "type": "string",
+              "format": "uri"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "type": "object",
+          "required": [
+            "source",
+            "id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "type": "string",
+              "format": "uri"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "procedure": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outcome": {
+          "enum": [
+            "pass",
+            "fail",
+            "inconclusive"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "policy": {
+          "type": "string",
+          "format": "uri"
+        },
+        "basis": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supersedes": {
+          "type": "object",
+          "required": [
+            "source",
+            "id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "type": "string",
+              "format": "uri"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "recipient": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.question.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "body"
+            ],
+            "properties": {
+              "target": false,
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "policy": false,
+              "basis": false,
+              "scope": false,
+              "supersedes": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.propose.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "body"
+            ],
+            "properties": {
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "policy": false,
+              "basis": false,
+              "scope": false,
+              "supersedes": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.contest.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "target",
+              "body"
+            ],
+            "properties": {
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "policy": false,
+              "basis": false,
+              "scope": false,
+              "supersedes": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.experiment.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "target",
+              "procedure",
+              "outcome",
+              "evidence"
+            ],
+            "properties": {
+              "body": false,
+              "policy": false,
+              "basis": false,
+              "scope": false,
+              "supersedes": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.adopt.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "target",
+              "policy",
+              "basis",
+              "scope"
+            ],
+            "properties": {
+              "body": false,
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.reject.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "target",
+              "policy",
+              "basis",
+              "scope"
+            ],
+            "properties": {
+              "body": false,
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.transmit.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "target",
+              "recipient"
+            ],
+            "properties": {
+              "body": false,
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "policy": false,
+              "basis": false,
+              "scope": false,
+              "supersedes": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "org.attractor.cooperation.withdraw.v0.1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "required": [
+              "target",
+              "policy",
+              "basis",
+              "scope"
+            ],
+            "properties": {
+              "body": false,
+              "procedure": false,
+              "outcome": false,
+              "evidence": false,
+              "supersedes": false,
+              "recipient": false
+            }
+          }
+        }
+      }
+    }
+  ]
+}

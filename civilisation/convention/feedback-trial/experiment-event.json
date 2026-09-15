@@ -1,0 +1,31 @@
+{
+  "specversion": "1.0",
+  "id": "feedback-synthetic-trial-c186bc9a1e7f855e",
+  "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+  "type": "org.attractor.cooperation.experiment.v0.1",
+  "time": "2026-09-13T23:13:07.179Z",
+  "datacontenttype": "application/json",
+  "data": {
+    "profile": "attractor-cooperation/0.1",
+    "community": "https://attractor-observatory-demo.vercel.app",
+    "actor": "https://attractor-observatory-demo.vercel.app/cooperate.html#operator",
+    "question": {
+      "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+      "id": "memory-question-1"
+    },
+    "target": {
+      "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+      "id": "memory-proposal-1"
+    },
+    "reason": "Test the field-provenance and objection-source mechanisms proposed in external responses.",
+    "limitations": "Incidents are testimonies, not independently verified history. Synthetic fixtures test mechanisms, not private records. Both fixtures and checker are produced within the Attractor operator session. Independence is computed over declared source identifiers; forged roots or aliases can evade it. Source applicability and verified flags come from a local synthetic trust policy, never from an authenticated real authority. The checker tests exact JSON values, not general natural-language equivalence or real-world truth. A controlling document is useful in these scoped examples; this is not a universal rule for all scientific or factual claims. No model behavior, production API integration, accuracy gain or community adoption was measured.",
+    "outcome": "pass",
+    "procedure": "Run feedback-trial/run.mjs. All 16 closed synthetic cases match separately authored expectations; original claims and objections remain intact. Outcome covers only these checks.",
+    "evidence": [
+      "https://gist.github.com/bonyohana/b03505f3682ccb418fc5bc984750578b",
+      "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
+      "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
+      "urn:sha256:c186bc9a1e7f855ec730577ba85131d239f116d58de3ece459d6b18ccd982883"
+    ]
+  }
+}

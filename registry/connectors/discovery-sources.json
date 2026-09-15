@@ -1,0 +1,267 @@
+{
+  "purpose": "Reduced observed public responses for read-only discovery adapters; projections preserve actual field names and omit unrelated fields. No agents contacted, no writes to remote services.",
+  "sources": [
+    {
+      "id": "hol",
+      "docs": [
+        "https://hol.org/docs/registry-broker/search/",
+        "https://hol.org/registry/api/v1/openapi.json",
+        "https://hol.org/docs/registry-broker/getting-started/faq/"
+      ],
+      "endpoint": "https://hol.org/registry/api/v1/search",
+      "parameters": {
+        "q": "optional string",
+        "page": "1-indexed integer, default 1",
+        "limit": "integer 1..500, default 20",
+        "registries": "optional comma-separated registry identifiers",
+        "includeAggregations": "optional true/false string"
+      },
+      "pagination": "page/limit + total; preserve limited and totalBeforeFilters/totalAvailable where present. A limited result does not establish an exhaustive registry total. No cursor field observed.",
+      "auth": "Keyword discovery documented as public and no credentials used in probes.",
+      "rateLimit": "No rate headers in sampled keyword responses. Documentation describes vector-search rate limiting; no numeric keyword quota established.",
+      "identity": "Use uaid as provider identifier. originalId can repeat between listings. Registry is declared origin, not a verified community membership.",
+      "version": "profile.version is a profile format version, not necessarily the revision of an agent record. Use updatedAt/hash for observed content."
+    },
+    {
+      "id": "nanda",
+      "docs": [
+        "https://github.com/projnanda/nanda-index-v2",
+        "https://github.com/projnanda/nanda-index-v2/blob/9e6d64a6f8de24e954dfa1479138cdbf60385e39/server/src/routes/search.ts",
+        "https://github.com/projnanda/nanda-index-v2/blob/9e6d64a6f8de24e954dfa1479138cdbf60385e39/server/src/db/queries/organizations.ts",
+        "https://github.com/projnanda/nanda-index-v2/blob/9e6d64a6f8de24e954dfa1479138cdbf60385e39/server/src/plugins/rateLimit.ts"
+      ],
+      "sourceCommit": "9e6d64a6f8de24e954dfa1479138cdbf60385e39",
+      "searchEndpoint": "https://api.nandaindex.org/api/v1/search",
+      "indexEndpoint": "https://api.nandaindex.org/api/v1/index",
+      "parameters": {
+        "q": "search required, trimmed length at least 2"
+      },
+      "pagination": "Search SQL LIMIT 50; count equals returned rows, not total. No page, offset or cursor. Index returns the entire active list without pagination. Client limit must be explicitly local truncation, never presented as remote paging.",
+      "auth": "Public reads, no credentials used in probes.",
+      "rateLimit": "Source registers rate limiting with global:false and public read routes do not opt in; upstream infrastructure limits not established.",
+      "identity": "org_id identifies an index record. identifier is optional. Results include catalogs, skills, cards and DNS pointers; not all are agents/runtimes.",
+      "url": "registry_url may be null and is a discovery destination, not automatically an invocation endpoint.",
+      "version": "version is optional in source schema; absent from these samples. updated_at is observed record update time."
+    }
+  ],
+  "probes": [
+    {
+      "id": "hol-search",
+      "url": "https://hol.org/registry/api/v1/search?q=research&limit=2&page=1",
+      "method": "GET",
+      "authentication": "none",
+      "fetchedAt": "2026-09-13T23:46:49.456Z",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "responseBytes": 10715,
+      "responseSha256": "6e0b732c1b11966a5947efbb51f2b48d8fe7b9b844897aefddd3b70b3c5d6462",
+      "projectionOnly": true,
+      "responseProjection": {
+        "total": 10000,
+        "page": 1,
+        "limit": 2,
+        "totalBeforeFilters": 10000,
+        "totalAvailable": 10000,
+        "limited": true,
+        "visible": 2,
+        "hits": [
+          {
+            "uaid": "uaid:aid:4T7kEqjGzPyxy5JDmp5qYoWqs3HvHNmhDFgNwWGrYUc9Ak75vManx5EczaT6gpuBcJ",
+            "originalId": "agent1qdlul5ynuu35c06yk7n247849f9zuwufxg2ttz75309dxn2x4pf6jyv3m09",
+            "registry": "agentverse",
+            "name": "Gemini deep research agent",
+            "description": "Google Interactions API Agent — Stateful chat + Deep Research",
+            "protocols": [
+              "uagent"
+            ],
+            "endpoints": {
+              "api": "https://agentverse.ai/v2/agents/mailbox/submit"
+            },
+            "lastIndexed": "2026-01-02T16:11:25.000Z",
+            "updatedAt": "2026-08-15T12:44:58.891Z",
+            "createdAt": "2025-12-31T15:54:09.000Z",
+            "available": false,
+            "profile": {
+              "display_name": "Gemini deep research agent",
+              "version": "1.0"
+            },
+            "metadata": {
+              "uid": "gemini-interactions-api",
+              "updatedAt": "2026-08-15T12:44:58.891Z"
+            }
+          },
+          {
+            "uaid": "uaid:aid:7un2w3cdZ6ycZzgGvVoYaepY7hA4mJ28U52CTVNdbc2HxicE9CrQinEgoZ94Wm4nWX",
+            "originalId": "agent1qdlul5ynuu35c06yk7n247849f9zuwufxg2ttz75309dxn2x4pf6jyv3m09",
+            "registry": "agentverse",
+            "name": "Gemini deep research agent",
+            "description": "Google Interactions API Agent — Stateful chat + Deep Research",
+            "protocols": [
+              "uagent"
+            ],
+            "endpoints": {
+              "api": "https://agentverse.ai/v2/agents/mailbox/submit"
+            },
+            "lastIndexed": "2026-04-14T10:09:15.000Z",
+            "updatedAt": "2026-08-09T02:07:33.844Z",
+            "createdAt": "2025-12-31T15:54:09.000Z",
+            "available": false,
+            "profile": {
+              "display_name": "Gemini deep research agent",
+              "version": "1.0"
+            },
+            "metadata": {
+              "uid": "gemini-deep-rsearch",
+              "updatedAt": "2026-08-09T02:07:33.844Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nanda-search",
+      "url": "https://api.nandaindex.org/api/v1/search?q=research",
+      "method": "GET",
+      "authentication": "none",
+      "fetchedAt": "2026-09-13T23:46:49.506Z",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "responseBytes": 1666,
+      "responseSha256": "611cafc83cffb4ff79021986a1cf023cfcdee2959577d3ca20fc57df61884493",
+      "projectionOnly": true,
+      "responseProjection": {
+        "query": "research",
+        "count": 2,
+        "results": [
+          {
+            "org_id": "aiq-research-3qqtw4bm",
+            "display_name": "aiq-research",
+            "registry_url": "https://ai-catalog.outshift.io",
+            "identifier": "urn:ai:org.agntcy:cid:baeareieaiex4loef2jblo6bx4nd33aapye2mieifn4ntruwiat3qqtw4bm",
+            "media_type": "application/agentskill+zip",
+            "description": "AI artifact: aiq-research",
+            "updated_at": "2026-06-26T08:15:52.716Z",
+            "ttl_seconds": 86400,
+            "status": "active",
+            "tags": [
+              "oasf:1.0.0:domains:technology/software_engineering",
+              "oasf:1.0.0:skills:retrieval_augmented_generation/document_or_dat",
+              "oasf:1.0.0:skills:retrieval_augmented_generation/retrieval_of_in"
+            ],
+            "publisher": {
+              "identifier": "urn:ai:org.agntcy",
+              "displayName": "Cisco agntcy",
+              "identityType": "did"
+            }
+          },
+          {
+            "org_id": "aiq-research-jt6wg2wq",
+            "display_name": "aiq-research",
+            "registry_url": "https://ai-catalog.outshift.io",
+            "identifier": "urn:ai:org.agntcy:cid:baeareigsl6svxnl7bpydq23brjm5xb7mfuz7i74ft43pbtekpcjt6wg2wq",
+            "media_type": "application/agentskill+zip",
+            "description": "AI artifact: aiq-research",
+            "updated_at": "2026-06-26T08:15:51.731Z",
+            "ttl_seconds": 86400,
+            "status": "active",
+            "tags": [
+              "oasf:1.0.0:domains:technology/data_science",
+              "oasf:1.0.0:domains:technology/internet_of_things",
+              "oasf:1.0.0:domains:technology/software_engineering",
+              "oasf:1.0.0:skills:retrieval_augmented_generation/document_or_dat",
+              "oasf:1.0.0:skills:retrieval_augmented_generation/generation_of_a"
+            ],
+            "publisher": {
+              "identifier": "urn:ai:org.agntcy",
+              "displayName": "Cisco agntcy",
+              "identityType": "did"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nanda-index",
+      "url": "https://api.nandaindex.org/api/v1/index",
+      "method": "GET",
+      "authentication": "none",
+      "fetchedAt": "2026-09-13T23:46:50.390Z",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "responseBytes": 189261,
+      "responseSha256": "386cc904991f1fb8bac2b5ccb89c680220e51f46a69fe20b7633b0eebdc29cb0",
+      "projectionOnly": true,
+      "responseProjection": {
+        "arrayLength": 257,
+        "arraySample": [
+          {
+            "org_id": "travel26",
+            "display_name": "Travel26",
+            "registry_url": "https://travel26.net/api",
+            "identifier": "urn:ai:domain:travel26.net",
+            "media_type": "application/ai-catalog+json",
+            "description": "Enterprise AI Catalog for Travel26 booking agents, concierge, and travel tools.",
+            "updated_at": "2026-06-17T08:08:06.212Z",
+            "ttl_seconds": 86400,
+            "status": "active",
+            "tags": [
+              "enterprise",
+              "travel",
+              "ai-catalog",
+              "booking"
+            ],
+            "publisher": {
+              "identifier": "urn:ai:domain:travel26.net",
+              "displayName": "Travel26",
+              "identityType": "dns"
+            }
+          },
+          {
+            "org_id": "travel26-flights",
+            "display_name": "Travel26 Flights",
+            "registry_url": null,
+            "identifier": "urn:ai:domain:flights.travel26.net",
+            "media_type": "application/vnd.dns-aid+json",
+            "description": "Flight search and booking agent via DNS-AID discovery.",
+            "updated_at": "2026-06-17T07:14:35.773Z",
+            "ttl_seconds": 86400,
+            "status": "active",
+            "tags": [
+              "enterprise",
+              "dns-aid",
+              "flights",
+              "travel"
+            ],
+            "publisher": {
+              "identifier": "urn:ai:domain:flights.travel26.net",
+              "displayName": "Travel26 Flights",
+              "identityType": "dns"
+            }
+          },
+          {
+            "org_id": "agntcy",
+            "display_name": "AGNTCY AI Catalog",
+            "registry_url": "https://ai-catalog.outshift.io",
+            "identifier": "urn:ai:org.agntcy",
+            "media_type": "application/ai-catalog+json",
+            "description": "AGNTCY AI Catalog for agents, tools, skills, gateways, and AI resources.",
+            "updated_at": "2026-06-17T08:56:17.907Z",
+            "ttl_seconds": 86400,
+            "status": "active",
+            "tags": [
+              "enterprise",
+              "ai-catalog",
+              "agntcy",
+              "agent-discovery"
+            ],
+            "publisher": {
+              "identifier": "urn:ai:org.agntcy",
+              "displayName": "AGNTCY",
+              "identityType": "dns"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

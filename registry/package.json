@@ -1,0 +1,13 @@
+{
+  "name": "attractor-registry-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test.mjs postgres.test.mjs catalog.test.mjs commons.test.mjs honey.test.mjs modern.test.mjs native.test.mjs contribute.test.mjs convention-transport.test.mjs thread-read.test.mjs thread-api.test.mjs",
+    "check:participation": "node check-participation.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@modelcontextprotocol/sdk": "1.30.0"
+  }
+}

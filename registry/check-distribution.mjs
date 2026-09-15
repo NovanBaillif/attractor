@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+const name='io.github.NovanBaillif/attractor-machine-commons';
+const registryUrl='https://registry.modelcontextprotocol.io/v0.1/servers/'+encodeURIComponent(name)+'/versions/3.0.0';
+const registry=await fetch(registryUrl);assert.equal(registry.status,200);
+const listing=await registry.json();assert.equal(listing.server.name,name);assert.equal(listing.server.remotes[0].url,'https://attractor-observatory-demo.vercel.app/mcp');
+const repo=await fetch('https://api.github.com/repos/NovanBaillif/attractor-machine-commons');assert.equal(repo.status,200);const metadata=await repo.json();assert.equal(metadata.private,false);assert.equal(metadata.default_branch,'main');
+const readme=await fetch('https://raw.githubusercontent.com/NovanBaillif/attractor-machine-commons/main/README.md');assert.equal(readme.status,200);assert.ok((await readme.text()).includes('modern-example.mjs'));
+const result={checked_at:new Date().toISOString(),registry_url:registryUrl,registry_name:name,version:listing.server.version,repository:metadata.html_url,public:true};
+writeFileSync('.vercel/distribution-check.json',JSON.stringify(result,null,2));console.log(result);

@@ -1,0 +1,264 @@
+{
+  "experiment": "Attractor external feedback: synthetic receiver checks",
+  "controlled_project_test": true,
+  "checked_at": "2026-09-13T23:13:07.179Z",
+  "external_contest": {
+    "url": "https://gist.github.com/bonyohana/b03505f3682ccb418fc5bc984750578b",
+    "revision": "f87ab3a83075c2e5f73bbb91911d8e22cece9c32",
+    "schema_valid": true,
+    "references_match": true
+  },
+  "hashes": {
+    "run.mjs": "790e2ca15280a0fa7ee822928d788e53b525593894c7586151288315a7888984",
+    "check-cases.mjs": "f070d9b50e33dbc66f6a763fe42d0afc36d3b2d29efce3b3a628f24014031b13",
+    "guard.mjs": "a741ddf9c6eb4ec91225e8c7d348d688b32f0462c69fa17a07051aaba28bef97",
+    "cases.json": "d26bc5658913acb925d5681f41c05c12fe3ebd7135bef613ff65bfacd1491c5a",
+    "external-contest.json": "f148f21a8eee90ffb21a8271abb16b40e8aaaaa67fcc4abee484a65957a5745a",
+    "../message.schema.json": "cc013ef87ac7275b6763f02bcfa0b620db07b11ec195038ede301f2842a2a421"
+  },
+  "results": [
+    {
+      "id": "lineage-direct-backfill-from-comparand",
+      "kind": "lineage",
+      "expected": {
+        "status": "dependent",
+        "sharedSources": [
+          "current"
+        ]
+      },
+      "status": "dependent",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example, not the contributor's private incident: a repaired estimate was copied from the value against which it is checked. Agreement provides no independent check.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-transitive-common-origin",
+      "kind": "lineage",
+      "expected": {
+        "status": "dependent",
+        "sharedSources": [
+          "sensor-root"
+        ]
+      },
+      "status": "dependent",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: distinct immediate parents conceal the same observed root two hops away. Checking only immediate source IDs would miss this dependency.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-equal-independent-observations-zero-disagreement",
+      "kind": "lineage",
+      "expected": {
+        "status": "independent",
+        "sharedSources": []
+      },
+      "status": "independent",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic counterexample to 'zero disagreement implies obedience': two independent declared observations can agree. Independence is only within the declared graph. The record alone cannot detect lying provenance or distinct IDs that secretly alias one observation: independent and dependent private histories can produce this identical input.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-disagreement-despite-common-origin",
+      "kind": "lineage",
+      "expected": {
+        "status": "dependent",
+        "sharedSources": [
+          "same-origin"
+        ]
+      },
+      "status": "dependent",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: different transformations of one observation disagree. Disagreement does not establish independence any more than agreement disproves it.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-unknown-provenance",
+      "kind": "lineage",
+      "expected": {
+        "status": "unknown"
+      },
+      "status": "unknown",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: an unknown origin is not an independently observed root. Equal values do not fill in missing provenance.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-source-reference-not-supplied",
+      "kind": "lineage",
+      "expected": {
+        "status": "unknown"
+      },
+      "status": "unknown",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: a named source is absent, so the promised complete graph is incomplete. A receiver must not infer a disjoint root from the missing reference.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-cyclic-provenance",
+      "kind": "lineage",
+      "expected": {
+        "status": "unknown"
+      },
+      "status": "unknown",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: a provenance cycle supplies no observed foundation. The checker must terminate without treating the empty root set as evidence of independence.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "lineage-comparison-operand-absent",
+      "kind": "lineage",
+      "expected": {
+        "status": "unknown"
+      },
+      "status": "unknown",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: no comparison of provenance can be completed when one operand is missing.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-stronger-secondary-source-controller-missing",
+      "kind": "dispute",
+      "expected": {
+        "status": "unresolved",
+        "value": "14 days"
+      },
+      "status": "unresolved",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic contractual example: an authenticated secondary source contradicts the claim, but the locally designated agreement is missing. Neither apparent source quality nor objection presence authorizes replacing the claim.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-controller-confirms-original-over-objection",
+      "kind": "dispute",
+      "expected": {
+        "status": "confirmed",
+        "value": "14 days"
+      },
+      "status": "confirmed",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic contractual example: the verified, correctly scoped controlling agreement confirms the original. Its confirmation must not erase the contrary objection or rewrite history.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-unverified-self-designated-policy",
+      "kind": "dispute",
+      "expected": {
+        "status": "unresolved",
+        "value": "14 days"
+      },
+      "status": "unresolved",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: verifying a document is not verifying its authority to govern this claim. An unverified local-policy binding cannot become authoritative because the objection names the same document.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-obsolete-controlling-version",
+      "kind": "dispute",
+      "expected": {
+        "status": "unresolved",
+        "value": "14 days"
+      },
+      "status": "unresolved",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: a genuine document from another version cannot settle the current claim even when the source ID and proposed value match.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-policy-for-wrong-domain",
+      "kind": "dispute",
+      "expected": {
+        "status": "unresolved",
+        "value": "14 days"
+      },
+      "status": "unresolved",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: a verified policy and document for another agreement do not acquire authority over this claim merely through matching field and source IDs.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-correction-supported-without-overwrite",
+      "kind": "dispute",
+      "expected": {
+        "status": "correction_supported",
+        "value": "14 days"
+      },
+      "status": "correction_supported",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: the exact controlling source supports the correction. This justifies a new decision or version; it does not mutate the original claim or remove the objection.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-duplicate-controlling-source-identifiers",
+      "kind": "dispute",
+      "expected": {
+        "status": "unresolved",
+        "value": "14 days"
+      },
+      "status": "unresolved",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example: two incompatible documents claim the same source identity. Array order or last-write-wins must not decide whether the original is confirmed or corrected.",
+      "current_profile_shape_valid": true
+    },
+    {
+      "id": "dispute-value-match-does-not-transfer-source-authority",
+      "kind": "dispute",
+      "expected": {
+        "status": "unresolved",
+        "value": "14 days"
+      },
+      "status": "unresolved",
+      "expectation_met": true,
+      "original_preserved": true,
+      "why": "Synthetic example of the deliberately strict fixture policy: matching the controlling value does not make a secondary source controlling. A supported correction must cite the exact designated source, while the original remains preserved.",
+      "current_profile_shape_valid": true
+    }
+  ],
+  "total_cases": 16,
+  "expected_outcomes_met": 16,
+  "current_profile": {
+    "all_test_envelopes_shape_valid": true,
+    "semantic_checks_implemented": false,
+    "proposed_native_field_rejected": true,
+    "native_extension_errors": [
+      {
+        "instancePath": "/data",
+        "schemaPath": "#/properties/data/additionalProperties",
+        "keyword": "additionalProperties",
+        "params": {
+          "additionalProperty": "field_provenance"
+        },
+        "message": "must NOT have additional properties"
+      }
+    ]
+  },
+  "falsification": {
+    "identical_records_different_private_histories": true,
+    "checker_distinguishes_hidden_copy": false,
+    "equality_alone_proves_obedience": false
+  },
+  "limitations": [
+    "Incidents are testimonies, not independently verified history.",
+    "Synthetic fixtures test mechanisms, not private records.",
+    "Both fixtures and checker are produced within the Attractor operator session.",
+    "Independence is computed over declared source identifiers; forged roots or aliases can evade it.",
+    "Source applicability and verified flags come from a local synthetic trust policy, never from an authenticated real authority.",
+    "The checker tests exact JSON values, not general natural-language equivalence or real-world truth.",
+    "A controlling document is useful in these scoped examples; this is not a universal rule for all scientific or factual claims.",
+    "No model behavior, production API integration, accuracy gain or community adoption was measured."
+  ]
+}

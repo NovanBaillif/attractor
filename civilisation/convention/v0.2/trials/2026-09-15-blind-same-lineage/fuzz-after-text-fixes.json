@@ -1,0 +1,642 @@
+{
+ "lineage": {
+  "runs": 5000,
+  "divergent": 0,
+  "examples": []
+ },
+ "dispute": {
+  "runs": 5000,
+  "divergent": 0,
+  "examples": []
+ },
+ "record": {
+  "runs": 5000,
+  "divergent": 0,
+  "examples": []
+ },
+ "hop": {
+  "runs": 5000,
+  "divergent": 0,
+  "examples": []
+ },
+ "reveal": {
+  "runs": 5000,
+  "divergent": 0,
+  "examples": []
+ },
+ "drift": {
+  "runs": 5000,
+  "divergent": 3,
+  "examples": [
+   {
+    "input": {
+     "sent": {
+      "id": "rec-a-1",
+      "parent": null,
+      "author": {
+       "actor": "https://example.org/agent-a",
+       "lineage": "example/lineage-a"
+      },
+      "fields": [
+       {
+        "id": "venue-read",
+        "value": 0.71,
+        "kind": "observed",
+        "sources": [],
+        "channel": "direct",
+        "upstream": "https://venue.example/api"
+       },
+       {
+        "id": "analyst-note",
+        "value": "base rate 0.55, one new filing",
+        "kind": "observed",
+        "sources": [],
+        "channel": "direct"
+       },
+       {
+        "id": "estimate",
+        "value": 0.62,
+        "kind": "derived",
+        "sources": [
+         "analyst-note",
+         "venue-read"
+        ],
+        "uncertainty": {
+         "type": "interval",
+         "low": 0.55,
+         "high": 0.7
+        },
+        "expect": "verify"
+       },
+       {
+        "id": "thesis",
+        "kind": "derived",
+        "sources": [
+         "analyst-note"
+        ],
+        "expect": "re_derive",
+        "sealed": {
+         "alg": "sha256-jcs",
+         "commitment": "457ee7229589fd04a284abe56a91a2ab798b0582cc58ba022bb2c0aa0326bf49"
+        }
+       }
+      ],
+      "objections": [
+       {
+        "id": "obj-a-1",
+        "target": "estimate",
+        "proposedValue": 0.5,
+        "by": "https://example.org/agent-c",
+        "basis": {
+         "sourceId": "analyst-note",
+         "citation": "secondary"
+        }
+       }
+      ]
+     },
+     "receipt": {
+      "id": "receipt-b-1",
+      "target": "rec-a-1",
+      "dispositions": [
+       {
+        "field": "venue-read",
+        "action": "accept"
+       },
+       {
+        "field": "analyst-note",
+        "action": "modify"
+       },
+       {
+        "field": "estimate",
+        "action": "verify",
+        "basis": "filing-check"
+       },
+       {
+        "field": "thesis",
+        "action": "re_derive"
+       }
+      ],
+      "record": {
+       "id": "rec-b-1",
+       "parent": "rec-a-1",
+       "author": {
+        "actor": "https://example.org/agent-b",
+        "lineage": "example/lineage-b"
+       },
+       "fields": [
+        {
+         "id": "venue-read",
+         "value": 0.71,
+         "kind": "observed",
+         "sources": [],
+         "channel": "direct",
+         "upstream": "https://venue.example/api"
+        },
+        {
+         "id": "estimate",
+         "value": 0.62,
+         "kind": "derived",
+         "sources": [
+          "analyst-note",
+          "venue-read"
+         ],
+         "uncertainty": {
+          "type": "interval",
+          "low": 0.55,
+          "high": 0.7
+         }
+        },
+        {
+         "id": "filing-check",
+         "value": "one new filing, no change to base rate",
+         "kind": "observed",
+         "sources": [],
+         "channel": "direct",
+         "upstream": "https://registry.example/filings"
+        },
+        {
+         "id": "thesis",
+         "value": 0.58,
+         "kind": "derived",
+         "sources": [
+          "analyst-note",
+          "filing-check"
+         ]
+        }
+       ],
+       "objections": [
+        {
+         "id": "obj-a-1",
+         "target": "estimate",
+         "proposedValue": 0.5,
+         "by": "https://example.org/agent-c",
+         "basis": {
+          "sourceId": "analyst-note",
+          "citation": "secondary"
+         }
+        }
+       ]
+      }
+     }
+    },
+    "reference": {
+     "level": "red",
+     "counts": {
+      "accept": 1,
+      "verify": 1,
+      "re_derive": 1,
+      "contest": 0,
+      "modify": 1,
+      "drop": 0,
+      "re_derive_agree": 0,
+      "re_derive_disagree": 0
+     },
+     "violations": [
+      "receiver/modified-field-missing:analyst-note",
+      "receiver/modify-without-basis:analyst-note",
+      "receiver/provenance-truncated:estimate",
+      "receiver/provenance-truncated:thesis"
+     ],
+     "warnings": [
+      "receiver/ancestor-modified:estimate",
+      "receiver/verification-unverifiable:estimate"
+     ],
+     "pendingReveal": [
+      "thesis"
+     ]
+    },
+    "blind": {
+     "level": "red",
+     "counts": {
+      "accept": 1,
+      "verify": 1,
+      "re_derive": 1,
+      "contest": 0,
+      "modify": 1,
+      "drop": 0,
+      "re_derive_agree": 0,
+      "re_derive_disagree": 0
+     },
+     "violations": [
+      "receiver/modified-field-missing:analyst-note",
+      "receiver/modify-without-basis:analyst-note",
+      "receiver/provenance-truncated:estimate",
+      "receiver/provenance-truncated:thesis"
+     ],
+     "warnings": [
+      "receiver/verification-unverifiable:estimate"
+     ],
+     "pendingReveal": [
+      "thesis"
+     ]
+    }
+   },
+   {
+    "input": {
+     "sent": {
+      "id": "rec-a-1",
+      "parent": null,
+      "author": {
+       "actor": "https://example.org/agent-a",
+       "lineage": "example/lineage-a"
+      },
+      "fields": [
+       {
+        "id": "venue-read",
+        "value": 0.71,
+        "kind": "observed",
+        "sources": [],
+        "channel": "direct",
+        "upstream": "https://venue.example/api"
+       },
+       {
+        "id": "analyst-note",
+        "value": "base rate 0.55, one new filing",
+        "kind": "observed",
+        "sources": [],
+        "channel": "direct"
+       },
+       {
+        "id": "estimate",
+        "value": 0.62,
+        "kind": "derived",
+        "sources": [
+         "analyst-note",
+         "venue-read"
+        ],
+        "uncertainty": {
+         "type": "interval",
+         "low": 0.55,
+         "high": 0.7
+        },
+        "expect": "verify"
+       },
+       {
+        "id": "thesis",
+        "kind": "derived",
+        "sources": [
+         "analyst-note"
+        ],
+        "expect": "re_derive",
+        "sealed": {
+         "alg": "sha256-jcs",
+         "commitment": "457ee7229589fd04a284abe56a91a2ab798b0582cc58ba022bb2c0aa0326bf49"
+        }
+       }
+      ],
+      "objections": [
+       {
+        "id": "obj-a-1",
+        "target": "estimate",
+        "proposedValue": 0.5,
+        "by": "https://example.org/agent-c",
+        "basis": {
+         "sourceId": "analyst-note",
+         "citation": "secondary"
+        }
+       }
+      ]
+     },
+     "receipt": {
+      "id": "receipt-b-1",
+      "target": "rec-a-1",
+      "dispositions": [
+       {
+        "field": "venue-read",
+        "action": "accept"
+       },
+       {
+        "field": "analyst-note",
+        "action": "modify"
+       },
+       {
+        "field": "estimate",
+        "action": "verify",
+        "basis": "filing-check"
+       },
+       {
+        "field": "thesis",
+        "action": "re_derive"
+       }
+      ],
+      "record": {
+       "id": "rec-b-1",
+       "parent": "rec-a-1",
+       "author": {
+        "actor": "https://example.org/agent-b",
+        "lineage": "example/lineage-b"
+       },
+       "fields": [
+        {
+         "id": "venue-read",
+         "value": 0.71,
+         "kind": "observed",
+         "sources": [],
+         "channel": "direct",
+         "upstream": "https://venue.example/api"
+        },
+        {
+         "id": "estimate",
+         "value": 0.62,
+         "kind": "derived",
+         "sources": [
+          "analyst-note",
+          "venue-read"
+         ],
+         "uncertainty": {
+          "type": "interval",
+          "low": 0.55,
+          "high": 0.7
+         }
+        },
+        {
+         "id": "filing-check",
+         "value": "one new filing, no change to base rate",
+         "kind": "observed",
+         "sources": [],
+         "channel": "direct",
+         "upstream": "https://registry.example/filings"
+        },
+        {
+         "id": "thesis",
+         "value": 0.58,
+         "kind": "derived",
+         "sources": [
+          "analyst-note",
+          "filing-check"
+         ]
+        }
+       ],
+       "objections": [
+        {
+         "id": "obj-a-1",
+         "target": "estimate",
+         "proposedValue": 0.5,
+         "by": "https://example.org/agent-c",
+         "basis": {
+          "sourceId": "analyst-note",
+          "citation": "secondary"
+         }
+        }
+       ]
+      }
+     }
+    },
+    "reference": {
+     "level": "red",
+     "counts": {
+      "accept": 1,
+      "verify": 1,
+      "re_derive": 1,
+      "contest": 0,
+      "modify": 1,
+      "drop": 0,
+      "re_derive_agree": 0,
+      "re_derive_disagree": 0
+     },
+     "violations": [
+      "receiver/modified-field-missing:analyst-note",
+      "receiver/modify-without-basis:analyst-note",
+      "receiver/provenance-truncated:estimate",
+      "receiver/provenance-truncated:thesis"
+     ],
+     "warnings": [
+      "receiver/ancestor-modified:estimate",
+      "receiver/verification-unverifiable:estimate"
+     ],
+     "pendingReveal": [
+      "thesis"
+     ]
+    },
+    "blind": {
+     "level": "red",
+     "counts": {
+      "accept": 1,
+      "verify": 1,
+      "re_derive": 1,
+      "contest": 0,
+      "modify": 1,
+      "drop": 0,
+      "re_derive_agree": 0,
+      "re_derive_disagree": 0
+     },
+     "violations": [
+      "receiver/modified-field-missing:analyst-note",
+      "receiver/modify-without-basis:analyst-note",
+      "receiver/provenance-truncated:estimate",
+      "receiver/provenance-truncated:thesis"
+     ],
+     "warnings": [
+      "receiver/verification-unverifiable:estimate"
+     ],
+     "pendingReveal": [
+      "thesis"
+     ]
+    }
+   },
+   {
+    "input": {
+     "sent": {
+      "id": "rec-a-1",
+      "parent": null,
+      "author": {
+       "actor": "https://example.org/agent-a",
+       "lineage": "example/lineage-a"
+      },
+      "fields": [
+       {
+        "id": "venue-read",
+        "value": 0.71,
+        "kind": "observed",
+        "sources": [],
+        "channel": "direct",
+        "upstream": "https://venue.example/api"
+       },
+       {
+        "id": "analyst-note",
+        "value": "base rate 0.55, one new filing",
+        "kind": "observed",
+        "sources": [],
+        "channel": "direct"
+       },
+       {
+        "id": "estimate",
+        "value": 0.62,
+        "kind": "derived",
+        "sources": [
+         "analyst-note",
+         "venue-read"
+        ],
+        "uncertainty": {
+         "type": "interval",
+         "low": 0.55,
+         "high": 0.7
+        },
+        "expect": "verify"
+       },
+       {
+        "id": "thesis",
+        "kind": "derived",
+        "sources": [
+         "analyst-note"
+        ],
+        "expect": "re_derive",
+        "sealed": {
+         "alg": "sha256-jcs",
+         "commitment": "457ee7229589fd04a284abe56a91a2ab798b0582cc58ba022bb2c0aa0326bf49"
+        }
+       }
+      ],
+      "objections": [
+       {
+        "id": "obj-a-1",
+        "target": "estimate",
+        "proposedValue": 0.5,
+        "by": "https://example.org/agent-c",
+        "basis": {
+         "sourceId": "analyst-note",
+         "citation": "secondary"
+        }
+       }
+      ]
+     },
+     "receipt": {
+      "id": "receipt-b-1",
+      "target": "rec-a-1",
+      "dispositions": [
+       {
+        "field": "venue-read",
+        "action": "accept"
+       },
+       {
+        "field": "analyst-note",
+        "action": "modify"
+       },
+       {
+        "field": "estimate",
+        "action": "verify",
+        "basis": "filing-check"
+       },
+       {
+        "field": "thesis",
+        "action": "re_derive"
+       }
+      ],
+      "record": {
+       "id": "rec-b-1",
+       "parent": "rec-a-1",
+       "author": {
+        "actor": "https://example.org/agent-b",
+        "lineage": "example/lineage-b"
+       },
+       "fields": [
+        {
+         "id": "venue-read",
+         "value": 0.71,
+         "kind": "observed",
+         "sources": [],
+         "channel": "direct",
+         "upstream": "https://venue.example/api"
+        },
+        {
+         "id": "estimate",
+         "value": 0.62,
+         "kind": "derived",
+         "sources": [
+          "analyst-note",
+          "venue-read"
+         ],
+         "uncertainty": {
+          "type": "interval",
+          "low": 0.55,
+          "high": 0.7
+         }
+        },
+        {
+         "id": "filing-check",
+         "value": "one new filing, no change to base rate",
+         "kind": "observed",
+         "sources": [],
+         "channel": "direct",
+         "upstream": "https://registry.example/filings"
+        },
+        {
+         "id": "thesis",
+         "value": 0.58,
+         "kind": "derived",
+         "sources": [
+          "analyst-note",
+          "filing-check"
+         ]
+        }
+       ],
+       "objections": [
+        {
+         "id": "obj-a-1",
+         "target": "estimate",
+         "proposedValue": 0.5,
+         "by": "https://example.org/agent-c",
+         "basis": {
+          "sourceId": "analyst-note",
+          "citation": "secondary"
+         }
+        }
+       ]
+      }
+     }
+    },
+    "reference": {
+     "level": "red",
+     "counts": {
+      "accept": 1,
+      "verify": 1,
+      "re_derive": 1,
+      "contest": 0,
+      "modify": 1,
+      "drop": 0,
+      "re_derive_agree": 0,
+      "re_derive_disagree": 0
+     },
+     "violations": [
+      "receiver/modified-field-missing:analyst-note",
+      "receiver/modify-without-basis:analyst-note",
+      "receiver/provenance-truncated:estimate",
+      "receiver/provenance-truncated:thesis"
+     ],
+     "warnings": [
+      "receiver/ancestor-modified:estimate",
+      "receiver/verification-unverifiable:estimate"
+     ],
+     "pendingReveal": [
+      "thesis"
+     ]
+    },
+    "blind": {
+     "level": "red",
+     "counts": {
+      "accept": 1,
+      "verify": 1,
+      "re_derive": 1,
+      "contest": 0,
+      "modify": 1,
+      "drop": 0,
+      "re_derive_agree": 0,
+      "re_derive_disagree": 0
+     },
+     "violations": [
+      "receiver/modified-field-missing:analyst-note",
+      "receiver/modify-without-basis:analyst-note",
+      "receiver/provenance-truncated:estimate",
+      "receiver/provenance-truncated:thesis"
+     ],
+     "warnings": [
+      "receiver/verification-unverifiable:estimate"
+     ],
+     "pendingReveal": [
+      "thesis"
+     ]
+    }
+   }
+  ]
+ }
+}

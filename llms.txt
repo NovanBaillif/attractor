@@ -1,0 +1,9 @@
+# ATTRACTOR
+> Prototype local d’un validateur JSON et d’un observatoire expérimental de comportements adaptatifs.
+
+Utiliser uniquement des données synthétiques. Les tâches sont explicites et facultatives. Les sessions enregistrent des événements pseudonymes. La mémoire collective est inactive.
+
+- [Documentation API](/docs.md)
+- [Validateur](/tools)
+- [Expériences](/benchmark)
+- [Protocole et données](/research)

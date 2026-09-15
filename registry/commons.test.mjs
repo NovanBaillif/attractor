@@ -1,0 +1,83 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import http from 'node:http';
+import {readFileSync} from 'node:fs';
+import {PGlite} from '@electric-sql/pglite';
+import {Client} from '@modelcontextprotocol/sdk/client/index.js';
+import {StreamableHTTPClientTransport} from '@modelcontextprotocol/sdk/client/streamableHttp.js';
+import {createHandler} from './api.mjs';
+import {seeds,contribution} from './recipes.mjs';
+import {descriptor} from './commons.mjs';
+import {handleMcp} from './mcp.mjs';
+import {honeyCatalog} from './honey-catalog.mjs';
+
+test('official MCP client + real PostgreSQL: resolve, contribute, cross-session revision, verified reuse and shutdown',async t=>{
+  t.mock.method(console,'log',()=>{});
+  const db=new PGlite();await db.exec('create role anon; create role authenticated; create role service_role bypassrls;');
+  await db.exec(readFileSync(new URL('./schema.sql',import.meta.url),'utf8'));
+  await db.exec('set role service_role');
+  const rpc=async(op,token,network,args)=> (await db.query('select public.attractor_rpc($1,$2,$3,$4::jsonb) as result',[op,token,network,JSON.stringify(args||{})])).rows[0].result;
+  const env={ATTRACTOR_DB_URL:'test',ATTRACTOR_DB_KEY:'test',ATTRACTOR_NETWORK_KEY:'test',ATTRACTOR_ADMIN_KEY:'test',ATTRACTOR_ORIGIN:'https://attractor.example'};
+  const server=http.createServer(createHandler({env,rpc}));await new Promise(r=>server.listen(0,'127.0.0.1',r));
+  t.after(async()=>{server.closeAllConnections();await new Promise(r=>server.close(r));await db.close();});
+  const base='http://127.0.0.1:'+server.address().port;
+  await rpc('session','seed','seed',{source:'controlled'});
+  await rpc('create','seed','seed',contribution(seeds[1]));
+  const connect=async()=>{const client=new Client({name:'attractor-controlled-test',version:'0.4.0'});const transport=new StreamableHTTPClientTransport(new URL(base+'/mcp'),{fetch:async(url,options)=>{
+    if(options?.body){const message=JSON.parse(options.body);if(message.method==='initialize'){message.params._meta={'attractor/source':'controlled'};options={...options,body:JSON.stringify(message)};}}
+    return fetch(url,options);
+  }});await client.connect(transport);t.after(()=>client.close());return client;};
+  const a=await connect();assert.equal((await a.listTools()).tools.length,17);
+  const call=async(client,name,args)=>{const r=await client.callTool({name,arguments:args});assert.notEqual(r.isError,true,JSON.stringify(r));return r.structuredContent;};
+  const input={amount:' 12,50 '},output_schema=descriptor(contribution(seeds[1])).output_schema;
+  const found=await call(a,'find_solutions',{input,output_schema});assert.equal(found.solutions.length,1);assert.equal(found.solutions[0].output.amount,12.5);
+  assert.equal(found.solutions[0].confidence.level,'recomputed_and_schema_checked');
+  const noMatch=await call(a,'find_solutions',{input:{amount:'not-a-number'},output_schema});assert.equal(noMatch.solutions.length,0);
+  const schemaError=await a.callTool({name:'find_solutions',arguments:{output_schema:{$ref:'https://evil.invalid'}}});assert.equal(schemaError.isError,true);
+  const original=found.solutions[0],receipt=await call(a,'read_solution',{id:original.id});
+  const revision=await call(a,'contribute_solution',{problem:{title:'Decimal comma conversion',output_schema},solution:{...seeds[1],conventions:{variant:'tested'},parent_id:original.id,exposure_id:receipt.exposure_id}});
+  assert.equal(revision.artifact.parent_id,original.id);
+  const b=await connect(),read=await call(b,'read_solution',{id:revision.artifact.id});
+  assert.notEqual(read.marker,receipt.marker);
+  const forged=await b.callTool({name:'verify_reuse',arguments:{id:original.id,exposure_id:receipt.exposure_id,marker:receipt.marker,input,output:{amount:12.5}}});assert.equal(forged.isError,true);
+  assert.equal((await call(b,'verify_reuse',{id:revision.artifact.id,exposure_id:read.exposure_id,marker:read.marker,input,output:{amount:12.5}})).verified,true);
+  const again=await call(a,'find_solutions',{input,output_schema});
+  const candidate=again.solutions.find(x=>x.id===revision.artifact.id);assert.equal(candidate.confidence.evidence.controlled_uses,1);assert.equal(candidate.confidence.evidence.unattributed_uses,0);assert.ok(candidate.variants.some(x=>x.id===original.id));
+  const data=await db.query("select detail from attractor.events where action='COMMONS_SEARCH'");assert.ok(data.rows.length);assert.ok(data.rows.every(x=>!JSON.stringify(x.detail).includes('12,50')));
+  const invalid=await a.callTool({name:'contribute_solution',arguments:{problem:{title:'False schema',output_schema:{type:'object',properties:{amount:{type:'string'}}}},solution:seeds[1]}});assert.equal(invalid.isError,true);
+  const traces=(await db.query("select e.session_id,e.detail,s.source from attractor.events e left join attractor.sessions s on s.id=e.session_id where e.action='MCP_REQUEST' order by e.id")).rows;
+  const initialization=traces.filter(x=>x.detail.jsonrpc_method==='initialize');assert.equal(initialization.length,2);
+  assert.ok(initialization.every(x=>x.session_id&&x.source==='controlled'));
+  assert.notEqual(initialization[0].detail.mcp_session_id,initialization[1].detail.mcp_session_id);
+  assert.ok(traces.some(x=>x.detail.jsonrpc_method==='notifications/initialized'&&x.detail.http_status===202));
+  assert.ok(traces.some(x=>x.detail.jsonrpc_method==='tools/list'&&x.detail.result_status==='success'));
+  assert.ok(traces.some(x=>x.detail.tool_name==='verify_reuse'&&x.detail.result_status==='tool_error'&&x.detail.tool_http_status===409));
+  assert.ok(traces.some(x=>x.detail.tool_name==='verify_reuse'&&x.detail.result_status==='success'&&x.detail.api_endpoint.endsWith('/use')));
+  assert.ok(traces.every(x=>!JSON.stringify(x.detail).includes('12,50')));
+  assert.equal(new Set(traces.map(x=>x.detail.request_id)).size,traces.length);
+  assert.ok(traces.filter(x=>x.detail.jsonrpc_method==='tools/call').every(x=>/^[a-f0-9]{64}$/.test(x.detail.arguments_hash)));
+  for(const init of initialization)assert.ok(traces.filter(x=>x.session_id===init.session_id).every(x=>x.detail.mcp_session_id===init.detail.mcp_session_id));
+  const honeyClient=await connect();
+  for(const tool of honeyCatalog){const result=await call(honeyClient,tool.name,tool.example);assert.equal(result.ok,true);}
+  const badHoney=await honeyClient.callTool({name:'map_fields',arguments:{value:{a:1},mapping:{'__proto__.probe':'a'}}});assert.equal(badHoney.isError,true);
+  const toolEvents=(await db.query("select action,detail from attractor.events where action like 'AGENT_TOOL_CALL_%'")).rows;
+  assert.equal(toolEvents.filter(x=>x.action==='AGENT_TOOL_CALL_SUCCESS').length,9);
+  assert.equal(toolEvents.filter(x=>x.action==='AGENT_TOOL_CALL_ERROR').length,1);
+  assert.ok(toolEvents.every(x=>!JSON.stringify(x.detail).includes('Ada')));
+  const invalidSchemaSuccess=toolEvents.find(x=>x.action==='AGENT_TOOL_CALL_SUCCESS'&&x.detail.tool_name==='validate_schema');assert.equal(invalidSchemaSuccess.detail.validation_valid,false);
+  await rpc('admin_mode','operator','operator',{mode:'OBSERVATION_ONLY'});
+  const suspendedHoney=await honeyClient.callTool({name:'fingerprint_json',arguments:{value:1}});assert.equal(suspendedHoney.isError,true);
+  const blocked=await a.callTool({name:'contribute_solution',arguments:{problem:{title:'Suspended write',output_schema},solution:seeds[1]}});assert.equal(blocked.isError,true);
+  await rpc('admin_mode','operator','operator',{mode:'FULL_STOP'});
+  await assert.rejects(()=>a.listTools());
+  assert.equal((await fetch(base+'/mcp',{headers:{Origin:'https://evil.invalid'}})).status,403);
+});
+
+test('malformed MCP requests are sanitized and audit failure does not replace the response',async t=>{
+  const logs=[];t.mock.method(console,'log',v=>logs.push(JSON.parse(v)));
+  let result,status;const headers={};
+  await handleMcp({method:'POST',url:'/mcp',headers:{accept:'application/json, text/event-stream','content-type':'application/json','user-agent':'test-client','referer':'https://example.com/path?secret=hidden#fragment','mcp-session-id':'a'.repeat(64)},body:'private malformed content'}, {setHeader(k,v){headers[k]=v;},set statusCode(v){status=v;},end(v){result=JSON.parse(v);}},()=>{throw Error('unexpected dispatch');},{ATTRACTOR_NETWORK_KEY:'test-key'},async()=>{throw Error('offline');});
+  assert.equal(status,400);assert.equal(result.error.code,-32700);assert.equal(logs.length,1);
+  assert.equal(logs[0].persisted,false);assert.equal(logs[0].referrer,'https://example.com/path');assert.equal(logs[0].user_agent,'test-client');
+  assert.ok(!JSON.stringify(logs).includes('private malformed content'));assert.ok(!JSON.stringify(logs).includes('a'.repeat(64)));assert.equal(logs[0].request_id,headers['X-Attractor-Request-Id']);
+});

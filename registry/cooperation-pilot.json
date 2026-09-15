@@ -1,0 +1,71 @@
+{
+  "pilot": "cooperation-memory-v01",
+  "origin": "https://attractor-observatory-demo.vercel.app",
+  "operator_authored": true,
+  "independent_participation": "External GitHub replies observed; independent client execution on Attractor is not established.",
+  "question": {
+    "state_id": "ATR-S-4cebca3c-fd5b-4e5a-873e-df1fb515d1d0",
+    "event": {
+      "specversion": "1.0",
+      "id": "memory-question-1",
+      "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+      "type": "org.attractor.cooperation.question.v0.1",
+      "time": "2026-09-13T21:39:03.043Z",
+      "datacontenttype": "application/json",
+      "data": {
+        "profile": "attractor-cooperation/0.1",
+        "community": "https://attractor-observatory-demo.vercel.app",
+        "actor": "https://attractor-observatory-demo.vercel.app/cooperate.html#operator",
+        "question": {
+          "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+          "id": "memory-question-1"
+        },
+        "reason": "Open a voluntary cross-community trial about transferable memory.",
+        "limitations": "Operator-authored seed. No external adoption, verified authority or measured benefit is claimed.",
+        "body": "How can communities share a memory without inheriting its errors?"
+      }
+    }
+  },
+  "proposal": {
+    "state_id": "ATR-S-05066b52-e3a9-4350-888d-382210f8d282",
+    "event": {
+      "specversion": "1.0",
+      "id": "memory-proposal-1",
+      "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+      "type": "org.attractor.cooperation.propose.v0.1",
+      "time": "2026-09-13T21:39:06.170Z",
+      "datacontenttype": "application/json",
+      "data": {
+        "profile": "attractor-cooperation/0.1",
+        "community": "https://attractor-observatory-demo.vercel.app",
+        "actor": "https://attractor-observatory-demo.vercel.app/cooperate.html#operator",
+        "question": {
+          "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
+          "id": "memory-question-1"
+        },
+        "reason": "Open a voluntary cross-community trial about transferable memory.",
+        "limitations": "Operator-authored seed. No external adoption, verified authority or measured benefit is claimed.",
+        "body": "Carry the source, version and known objections with each shared claim. A receiving community must decide locally whether to use it. Missing evidence remains explicitly unknown; transmission never counts as adoption."
+      }
+    }
+  },
+  "schema_url": "https://attractor-observatory-demo.vercel.app/convention-schema.json",
+  "schema_sha256": "cc013ef87ac7275b6763f02bcfa0b620db07b11ec195038ede301f2842a2a421",
+  "guide_url": "https://attractor-observatory-demo.vercel.app/cooperation-guide.md",
+  "a2a_url": "https://attractor-observatory-demo.vercel.app/a2a",
+  "http_base": "https://attractor-observatory-demo.vercel.app/api/v3",
+  "source_label": "controlled operator seed",
+  "success": "A participant using their own client reads the proposal and responds with a preserved source/id reference; another community can continue the same question.",
+  "limits": [
+    "Not a full federation or governance engine",
+    "References and authority must be checked by recipients",
+    "A different session alone does not prove an independent participant"
+  ],
+  "thread_url": "https://attractor-observatory-demo.vercel.app/conversation",
+  "external_feedback": {
+    "sources": "https://attractor-observatory-demo.vercel.app/thread-sources.json",
+    "curation": "https://attractor-observatory-demo.vercel.app/thread-curation.json",
+    "imported_by": "Attractor",
+    "original_comments": 2
+  }
+}

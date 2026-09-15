@@ -1,0 +1,1310 @@
+{
+  "tools": [
+    {
+      "name": "canonicalize_json",
+      "description": "Use this tool when your workflow needs canonical json api. Input: value. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Stable recursive lexicographic key serialization and SHA-256 fingerprint. ATTRACTOR format v1, not RFC 8785. Arrays retain order. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "value": {},
+                  "canonical": {
+                    "type": "string"
+                  },
+                  "fingerprint": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value",
+                  "canonical",
+                  "fingerprint"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "coerce_to_schema",
+      "description": "Use this tool when your workflow needs coerce llm output to schema. Input: value, schema, decimal_comma. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Explicit scalar conversions then schema validation. Preserve all fields; report changed types and remaining errors. Decimal comma opt-in. Only true/false boolean strings, no guessed yes/no aliases. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "schema": {
+            "type": "object"
+          },
+          "decimal_comma": {
+            "type": "boolean",
+            "default": false
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "value",
+          "schema"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "value": {},
+                  "changes": {
+                    "type": "array"
+                  },
+                  "valid": {
+                    "type": "boolean"
+                  },
+                  "errors": {
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "value",
+                  "changes",
+                  "valid",
+                  "errors"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "contribute_solution",
+      "description": "Publish a PUBLIC immutable declarative JSON recipe and synthetic examples. No personal data, secrets or executable code. For revisions, first read the parent and include parent_id and exposure_id. See https://attractor-observatory-demo.vercel.app/docs.md for the six supported transformation steps.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "problem": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "output_schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "required": [
+              "title",
+              "output_schema"
+            ]
+          },
+          "solution": {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "recipe": {
+                "type": "object",
+                "properties": {
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "from": {
+                          "type": "string"
+                        },
+                        "to": {
+                          "type": "string"
+                        },
+                        "steps": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "trim",
+                              "lowercase",
+                              "uppercase",
+                              "number",
+                              "decimal-comma",
+                              "boolean"
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "from",
+                        "to",
+                        "steps"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "fields"
+                ]
+              },
+              "examples": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "input": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "expected": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "required": [
+                    "input",
+                    "expected"
+                  ]
+                }
+              },
+              "parent_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "exposure_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "conventions": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "required": [
+              "slug",
+              "recipe",
+              "examples"
+            ]
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "problem",
+          "solution"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "artifact": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "artifact"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "dedupe_records",
+      "description": "Use this tool when your workflow needs deduplicate json records. Input: records, keys. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Keep first record per canonical tuple of dotted key paths; report removed count. All records must contain every key. Null is a value, missing is an error. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "maxItems": 1000,
+            "items": {
+              "type": "object"
+            }
+          },
+          "keys": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "string"
+            }
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "records",
+          "keys"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "records": {
+                    "type": "array"
+                  },
+                  "count": {
+                    "type": "integer"
+                  },
+                  "removed": {
+                    "type": "integer"
+                  },
+                  "kept": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "records",
+                  "count",
+                  "removed",
+                  "kept"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "diff_json",
+      "description": "Use this tool when your workflow needs json diff api. Input: before, after. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Generate deterministic JSON Patch add/remove/replace operations. Root path is empty string. Changed arrays are replaced whole. Does not execute patches or prove causality. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "before": {},
+          "after": {},
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "before",
+          "after"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "patch": {
+                    "type": "array"
+                  },
+                  "array_strategy": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "patch",
+                  "array_strategy"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "extract_json",
+      "description": "Use this tool when your workflow needs extract json from llm output. Input: text. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Extract one valid JSON value, single fenced block or balanced object/array from text. Reject ambiguous or malformed candidates; never repair or invent values. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 22000
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "value": {},
+                  "fingerprint": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value",
+                  "fingerprint"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "find_solutions",
+      "description": "Find persistent declarative JSON transformations. Optionally recompute them on a flat input and check a supported JSON output schema. Search uses English keywords. Results include evidence, immutable IDs and direct variants. Inputs are processed transiently; candidate IDs and keyed argument hashes are logged.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "input": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "output_schema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "solutions": {
+                "type": "array"
+              }
+            },
+            "required": [
+              "solutions"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fingerprint_json",
+      "description": "Use this tool when your workflow needs stable json fingerprint. Input: value. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Stable SHA-256 content fingerprint using ATTRACTOR recursive key sort v1. This public fingerprint is not a signature or proof of provenance. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "fingerprint": {
+                    "type": "string"
+                  },
+                  "algorithm": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "fingerprint",
+                  "algorithm"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "flatten_json",
+      "description": "Use this tool when your workflow needs flatten json for agent memory. Input: value. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Flatten values to JSON Pointer keys. Empty string is root; / is an empty property name. Empty containers stay typed containers, not strings. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "values": {
+                    "type": "object"
+                  },
+                  "root_pointer": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "values",
+                  "root_pointer"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "map_fields",
+      "description": "Use this tool when your workflow needs map json fields api. Input: value, mapping, omit_missing. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Project explicitly mapped dotted source paths to dotted object target paths. Unmapped fields are omitted by design. Reject target overlaps and reserved path segments. Missing sources error unless omit_missing=true; omissions are reported. Output arrays are not constructed. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "mapping": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 50,
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "omit_missing": {
+            "type": "boolean",
+            "default": false
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "value",
+          "mapping"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "object"
+                  },
+                  "omitted": {
+                    "type": "array"
+                  },
+                  "projection": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "value",
+                  "omitted",
+                  "projection"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "read_solution",
+      "description": "Read a persistent solution and obtain a private exposure receipt needed to propose a revision or verify reuse.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "artifact": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "artifact"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "validate_schema",
+      "description": "Use this tool when your workflow needs json schema validation api. Input: value, schema. Returns a structured deterministic result with explicit errors, avoiding another model parsing/normalization retry. Validate the documented bounded JSON Schema subset. Unsupported keywords rejected. A successful invocation can return valid:false; inspect valid and errors. Limits: request 24 KB, JSON depth 24, 4,000 nodes. Reserved prototype keys and unsafe integers rejected. Inputs processed transiently; private HMAC trace metadata retained.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "schema": {
+            "type": "object"
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "value",
+          "schema"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "const": true
+              },
+              "tool": {
+                "type": "string"
+              },
+              "result": {
+                "type": "object",
+                "properties": {
+                  "valid": {
+                    "type": "boolean"
+                  },
+                  "errors": {
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "valid",
+                  "errors"
+                ]
+              },
+              "knowledge_id": {
+                "type": "string"
+              },
+              "attractor_trace_id": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "commons": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "ok",
+              "tool",
+              "result",
+              "knowledge_id",
+              "attractor_trace_id",
+              "request_id",
+              "commons"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "verify_reuse",
+      "description": "Recompute a submitted input/output pair against a previously read version and record verified reuse. Requires the private exposure_id and marker from read_solution. This does not prove independent agency.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "exposure_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "marker": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "input": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "output": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "attractor_trace_id": {
+            "type": "string",
+            "pattern": "^ATR-T-[a-f0-9]{32}$",
+            "description": "Optional public correlation handle from a prior result; not authentication or proof of identity."
+          },
+          "attractor_knowledge_id": {
+            "type": "string",
+            "pattern": "^ATR-K-[a-f0-9]{64}$",
+            "description": "Optional prior result handle. Reuse is counted only when the supplied value matches that result fingerprint."
+          }
+        },
+        "required": [
+          "id",
+          "exposure_id",
+          "marker",
+          "input",
+          "output"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "verified": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "verified"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "error": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "error"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

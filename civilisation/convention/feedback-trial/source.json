@@ -1,0 +1,16 @@
+{
+  "external_event_url": "https://gist.github.com/bonyohana/b03505f3682ccb418fc5bc984750578b",
+  "external_event_revision": "f87ab3a83075c2e5f73bbb91911d8e22cece9c32",
+  "external_event_owner": "bonyohana",
+  "external_event_snapshot": "Parsed JSON snapshot; whitespace is reserialized, event content is preserved.",
+  "schema_sha256": "cc013ef87ac7275b6763f02bcfa0b620db07b11ec195038ede301f2842a2a421",
+  "comment_urls": [
+    "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
+    "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610"
+  ],
+  "limits": [
+    "Incidents are testimonies, not independently verified history.",
+    "Synthetic fixtures test mechanisms, not private records.",
+    "Both fixtures and checker are produced within the Attractor operator session."
+  ]
+}

@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+const base=process.env.ATTRACTOR_CHECK_URL||'https://attractor-observatory-demo.vercel.app';
+const checkedAt=new Date().toISOString();let context;
+const call=async(method,name,args)=>{
+  const response=await fetch(base+'/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream','MCP-Protocol-Version':'2026-07-28','Mcp-Method':method,...(name?{'Mcp-Name':name}:{})},body:JSON.stringify({jsonrpc:'2.0',id:crypto.randomUUID(),method,params:{...(name?{name,arguments:args}:{}),_meta:{'io.modelcontextprotocol/protocolVersion':'2026-07-28','io.modelcontextprotocol/clientCapabilities':{},'io.modelcontextprotocol/clientInfo':{name:'attractor-release-check',version:'3.0.0'},'attractor/source':'controlled',...(context?{'io.attractor/context':context}:{})}}}),signal:AbortSignal.timeout(15000)});
+  assert.equal(response.status,200);assert.equal(response.headers.has('mcp-session-id'),false);const message=await response.json();assert.ok(message.result,JSON.stringify(message.error));assert.notEqual(message.result.isError,true);if(message.result._meta['io.attractor/context'])context=message.result._meta['io.attractor/context'];return message.result;
+};
+const extracted=(await call('tools/call','extract_json_from_llm_output',{text:'Result: {"release_count":2}'})).structuredContent;
+const verified=(await call('tools/call','validate_json_schema',{value:extracted.result.value,schema:{type:'object',properties:{release_count:{type:'integer'}},required:['release_count']},attractor_trace_id:extracted.attractor_trace_id,attractor_knowledge_id:extracted.knowledge_id})).structuredContent;
+assert.equal(verified.result.valid,true);
+const discovery=await call('server/discover');assert.ok(discovery.supportedVersions.includes('2026-07-28'));
+const list=await call('tools/list');assert.equal(list.tools.length,17);assert.ok(list.tools.every(t=>t.outputSchema));
+const freeze=await (await fetch(base+'/experiment.json')).json();assert.equal(freeze.modern_catalog_hash,list._meta['io.attractor/catalogHash']);
+const operator=JSON.parse(readFileSync('.vercel/registry-private.json','utf8')).admin;
+const dashboard=await fetch(base+'/api/v2/admin/observatory',{headers:{'x-attractor-operator':operator}});assert.equal(dashboard.status,200);const report=await dashboard.json();
+assert.equal(report.classification_version,'observatory-2.0');
+const controlled=report.groups.find(g=>g.classification==='CONTROLLED'&&g.clients.includes('attractor-release-check/3.0.0'));assert.ok(controlled);assert.ok(controlled.tool_calls>=2);
+const timeline=await (await fetch(base+'/api/v2/admin/timeline?subject='+controlled.subject_ids.at(-1),{headers:{'x-attractor-operator':operator}})).json();
+assert.ok(timeline.events.some(e=>e.detail.reused_knowledge_id===extracted.knowledge_id));
+assert.ok(!JSON.stringify(timeline).includes(context));
+const output={checked_at:checkedAt,base,server_version:'3.0.0',direct_call:true,two_tool_value_reuse:true,catalog_tools:list.tools.length,catalog_hash:freeze.modern_catalog_hash,operator_classification:true,counts:report.counts,kpis:report.kpis};
+writeFileSync('.vercel/modern-check.json',JSON.stringify(output,null,2));console.log(JSON.stringify(output,null,2));

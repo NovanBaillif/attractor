@@ -1,0 +1,248 @@
+[
+  {
+    "specversion": "1.0",
+    "id": "q1",
+    "source": "https://example.org/alpha",
+    "type": "org.attractor.cooperation.question.v0.1",
+    "time": "2026-09-14T00:00:00Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/alpha",
+      "actor": "https://example.org/alpha/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "body": "Comment transmettre une mémoire sans transmettre ses erreurs ?"
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "p1",
+    "source": "https://example.org/alpha",
+    "type": "org.attractor.cooperation.propose.v0.1",
+    "time": "2026-09-14T00:00:01Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/alpha",
+      "actor": "https://example.org/alpha/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "body": "Conserver les réponses précédentes dans la mémoire suivante."
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "o1",
+    "source": "https://example.org/beta",
+    "type": "org.attractor.cooperation.contest.v0.1",
+    "time": "2026-09-14T00:00:02Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/beta",
+      "actor": "https://example.org/beta/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/alpha",
+        "id": "p1"
+      },
+      "body": "Une réponse erronée conservée peut être répétée."
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "e1",
+    "source": "https://example.org/gamma",
+    "type": "org.attractor.cooperation.experiment.v0.1",
+    "time": "2026-09-14T00:00:03Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/gamma",
+      "actor": "https://example.org/gamma/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/alpha",
+        "id": "p1"
+      },
+      "procedure": "Scénario fictif : transmettre une réponse dont on connaît une erreur et vérifier sa reprise.",
+      "outcome": "fail",
+      "evidence": []
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "p2",
+    "source": "https://example.org/gamma",
+    "type": "org.attractor.cooperation.propose.v0.1",
+    "time": "2026-09-14T00:00:04Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/gamma",
+      "actor": "https://example.org/gamma/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/alpha",
+        "id": "p1"
+      },
+      "body": "Joindre les sources et incertitudes ; vérifier une affirmation avant de la reprendre comme acquise."
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "a1",
+    "source": "https://example.org/alpha",
+    "type": "org.attractor.cooperation.adopt.v0.1",
+    "time": "2026-09-14T00:00:05Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/alpha",
+      "actor": "https://example.org/alpha/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/gamma",
+        "id": "p2"
+      },
+      "policy": "https://example.org/alpha/policies/v1",
+      "basis": [
+        "https://example.org/alpha/minutes/1"
+      ],
+      "scope": "Atelier de démonstration"
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "r1",
+    "source": "https://example.org/beta",
+    "type": "org.attractor.cooperation.reject.v0.1",
+    "time": "2026-09-14T00:00:06Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/beta",
+      "actor": "https://example.org/beta/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/gamma",
+        "id": "p2"
+      },
+      "policy": "https://example.org/beta/policies/v1",
+      "basis": [
+        "https://example.org/beta/minutes/1"
+      ],
+      "scope": "Atelier de démonstration"
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "t1",
+    "source": "https://example.org/gamma",
+    "type": "org.attractor.cooperation.transmit.v0.1",
+    "time": "2026-09-14T00:00:07Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/gamma",
+      "actor": "https://example.org/gamma/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/gamma",
+        "id": "p2"
+      },
+      "recipient": "https://example.org/beta"
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "o2",
+    "source": "https://example.org/beta",
+    "type": "org.attractor.cooperation.contest.v0.1",
+    "time": "2026-09-14T00:00:08Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/beta",
+      "actor": "https://example.org/beta/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/gamma",
+        "id": "p2"
+      },
+      "body": "Des sources jointes ne prouvent pas que leur vérification a été faite."
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "w1",
+    "source": "https://example.org/alpha",
+    "type": "org.attractor.cooperation.withdraw.v0.1",
+    "time": "2026-09-14T00:00:09Z",
+    "datacontenttype": "application/json",
+    "data": {
+      "profile": "attractor-cooperation/0.1",
+      "community": "https://example.org/alpha",
+      "actor": "https://example.org/alpha/delegate",
+      "question": {
+        "source": "https://example.org/alpha",
+        "id": "q1"
+      },
+      "reason": "Scénario pédagogique de coopération.",
+      "limitations": "Communautés et résultats fictifs ; aucune autorité réelle.",
+      "target": {
+        "source": "https://example.org/alpha",
+        "id": "a1"
+      },
+      "policy": "https://example.org/alpha/policies/v1",
+      "basis": [
+        "https://example.org/alpha/minutes/1"
+      ],
+      "scope": "Atelier de démonstration"
+    }
+  }
+]
