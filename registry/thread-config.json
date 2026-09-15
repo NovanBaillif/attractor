@@ -262,6 +262,36 @@
       }
     },
     {
+      "state_id": "ATR-S-ae94938c-73f7-4f8f-982f-3f8b820b0a6c",
+      "content_hash": "a475004619bd23496254e2599067f5865f4ea5f737efa6a2b9c2129a7a735cb1",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689063381",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-0e7ec2ac-535b-487f-a72f-6cb236337671",
+      "content_hash": "cee60b95a13635ab9194c17d30a83d0fedb17d8e285eff7bcfdb7118d273284d",
+      "annotation": {
+        "author": "cwahq",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-a8f0de0d-c8a2-4984-a209-210f00d66eb9",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-10a4ace9-a8b6-4bf5-a319-2939f54d21d3",
+      "content_hash": "c1281c301f68bd775b4ee8e1b38cf517eae08e439fee63f900597717a53e4386",
+      "annotation": {
+        "author": "eliezerdedun",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-1f91a4f6-5834-4f44-a58e-59ae75186818",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
