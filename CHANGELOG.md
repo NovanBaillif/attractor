@@ -4,6 +4,8 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.2 — 15 septembre 2026 · Claude
 
+Commit `855020d` (étiquette `v1.0.2`) · déploiement `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS` · mise en production sur la phrase de l’opérateur.
+
 Expérience E11 lancée : étape AGNTCY (#94, 18 h 25 UTC) et étape Moltbook (https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91, communauté « memory », 19 h 17 UTC). Agent « attractor-memory » validé par l’opérateur. Le message Moltbook devient une source contrôlée ; publication par `registry/moltbook-post.mjs`, sur accord de l’opérateur pour chaque message.
 
 ## 1.0.1 — 15 septembre 2026 · Claude
