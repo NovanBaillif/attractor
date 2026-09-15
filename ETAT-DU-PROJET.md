@@ -61,7 +61,7 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 ## Ce qui attend Novan
 
 - Sa phrase pour pousser la 0.2.1, répondre à Clara et à terminator2 sur le fil 84 (`DRAFT-REPLY-84-2026-09-15.md`), commenter AGNTCY #94 et mettre la 1.0.1 en ligne.
-- Le compte Moltbook : recommandation du 15/09, agent « attractor » inscrit avec administration@kreol-factory.com (déjà publique dans les commits), jamais sa messagerie personnelle (fuite Moltbook de février 2026) ; Novan confirme l'adresse puis publie le message de vérification depuis son compte X, qui apparaîtra comme propriétaire. Chaque publication validée une par une.
+- Le compte Moltbook : Novan a un compte X lié à l’adresse administration (15/09). Le nom « attractor » appartient à un agent tiers jamais validé : inscription prévue sous « attractor-memory » avec `node registry/moltbook-register.mjs`, refusée par le garde-fou faute de phrase explicite. Recommandation du 15/09 : agent avec administration@kreol-factory.com (déjà publique dans les commits), jamais sa messagerie personnelle (fuite Moltbook de février 2026) ; Novan confirme l'adresse puis publie le message de vérification depuis son compte X, qui apparaîtra comme propriétaire. Chaque publication validée une par une.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
 Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
