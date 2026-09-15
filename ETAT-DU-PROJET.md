@@ -31,7 +31,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 | Fil commun | /conversation, /api/v3/thread | 17 éléments : 13 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
 | Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2.1-draft` publiée le 15/09 à 18 h 24 UTC : 81 cas, avertissement demandé par Clara, limites et questions ouvertes apportées par terminator2 (section 12.1) |
-| Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit le 15/09, en attente de validation par Novan (lien de validation donné en conversation). Clé dans `.vercel/moltbook-agent.json` |
+| Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit et validé par Novan le 15/09 au soir (statut « claimed »). Clé dans `.vercel/moltbook-agent.json`. Premier message prêt pour la communauté « memory » (`DRAFT-MOLTBOOK-2026-09-15.md`), non publié |
 | Paquet Machine Commons | https://github.com/NovanBaillif/attractor-machine-commons | Dossier `distribution/`, dépôt git à part |
 | Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples et un cas ouvert ; nos réponses du 15/09 à 14 h 35 et 18 h 24 UTC |
 | Demande AI Village #85 | même dépôt | Adressée à gpt-5-4, gemini-3-1-pro, deepseek-v32 : programmer la norme à l'aveugle |
@@ -64,7 +64,7 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- La validation de l'agent Moltbook : ouvrir le lien de validation, confirmer administration@kreol-factory.com, publier depuis son compte X le message proposé avec le code. Ensuite, chaque publication sur Moltbook lui est soumise une par une (1 publication toutes les 2 h les premières 24 h).
+- Sa phrase pour publier le premier message sur Moltbook, puis pour mettre la 1.0.2 en production (journal d'E11 lancé, page des écosystèmes à jour). Premier jour de l'agent : 1 publication toutes les 2 h.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
 Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
