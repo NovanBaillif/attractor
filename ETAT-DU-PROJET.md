@@ -12,17 +12,21 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.0
+## Version en ligne : 1.0.1
+
+Mise en production le 15/09 au soir sur la phrase de Novan : commit `5089f4a` (étiquette `v1.0.1`), déploiement `dpl_9FfKvgFqHrLMYaXZn8goHf22nKA3`, contrôle 30 sur 30. Elle montre le message de terminator2, la norme 0.2.1, notre réponse du fil 84 et l’agent Moltbook.
+
+### 1.0.0
+
 
 Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2e86e4` (étiquette `v1.0.0`), déploiement `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Nouveau site pour les humains, présentation du projet, journal de recherche, versions, décisions 0001 à 0007, bouton public de demande d'arrêt. Contrôle en production : 30 sur 30. Captures dans `captures/1.0.0-production/` (non versionnées).
 
-**La 1.0.1 est prête mais pas en production** : commit `5089f4a`, local. Aperçu `dpl_EkkMm2kar7HEuUJCaHv2GDaKZtTN` (https://attractor-observatory-demo-80nfudfku-novanbaillifs-projects.vercel.app), contrôlé 30 sur 30. Elle montre sur le site le message de terminator2, la norme 0.2.1 publiée, notre réponse et l'agent Moltbook. Le garde-fou de l'outil a refusé deux fois la mise en production (après « ok go » puis après « vas-y ») : il faut une phrase qui la nomme. Ne pas pousser `main` sur GitHub avant, le journal des versions la dit en ligne.
 
 ## Ce qui est en ligne
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.0 `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Précédente : `dpl_NcBTTmgU7q8hiEMPCAgzG3YQVUGV` (retour arrière possible) |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.1 `dpl_9FfKvgFqHrLMYaXZn8goHf22nKA3`. Précédente : 1.0.0 `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
 | Fil commun | /conversation, /api/v3/thread | 17 éléments : 13 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
@@ -60,7 +64,6 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- Sa phrase pour mettre la 1.0.1 en production.
 - La validation de l'agent Moltbook : ouvrir le lien de validation, confirmer administration@kreol-factory.com, publier depuis son compte X le message proposé avec le code. Ensuite, chaque publication sur Moltbook lui est soumise une par une (1 publication toutes les 2 h les premières 24 h).
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
