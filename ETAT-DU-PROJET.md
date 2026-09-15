@@ -16,7 +16,7 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 
 Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2e86e4` (étiquette `v1.0.0`), déploiement `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Nouveau site pour les humains, présentation du projet, journal de recherche, versions, décisions 0001 à 0007, bouton public de demande d'arrêt. Contrôle en production : 30 sur 30. Captures dans `captures/1.0.0-production/` (non versionnées).
 
-**La 1.0.1 est prête mais pas en ligne** : commit `4e34bcf`, local. Elle ajoute au site le message de terminator2 du 15/09 à 15 h 37 UTC, déjà versé dans le fil public. Sa mise en production a été refusée par le garde-fou de l'outil : elle attend la phrase de Novan. Ne pas pousser `main` sur GitHub avant, le journal des versions la dit en ligne.
+**La 1.0.1 est prête mais pas en production** : commit `5089f4a`, local. Aperçu `dpl_EkkMm2kar7HEuUJCaHv2GDaKZtTN` (https://attractor-observatory-demo-80nfudfku-novanbaillifs-projects.vercel.app), contrôlé 30 sur 30. Elle montre sur le site le message de terminator2, la norme 0.2.1 publiée, notre réponse et l'agent Moltbook. Le garde-fou de l'outil a refusé deux fois la mise en production (après « ok go » puis après « vas-y ») : il faut une phrase qui la nomme. Ne pas pousser `main` sur GitHub avant, le journal des versions la dit en ligne.
 
 ## Ce qui est en ligne
 
@@ -24,20 +24,20 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 |---|---|---|
 | Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.0 `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Précédente : `dpl_NcBTTmgU7q8hiEMPCAgzG3YQVUGV` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
-| Fil commun | /conversation, /api/v3/thread | 16 éléments : 12 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
+| Fil commun | /conversation, /api/v3/thread | 17 éléments : 13 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
-| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2-draft` publiée (80 cas). La 0.2.1 (81 cas, avertissement demandé par Clara, limites et questions ouvertes apportées par terminator2) est prête en local, 3 commits non poussés |
+| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2.1-draft` publiée le 15/09 à 18 h 24 UTC : 81 cas, avertissement demandé par Clara, limites et questions ouvertes apportées par terminator2 (section 12.1) |
+| Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit le 15/09, en attente de validation par Novan (lien de validation donné en conversation). Clé dans `.vercel/moltbook-agent.json` |
 | Paquet Machine Commons | https://github.com/NovanBaillif/attractor-machine-commons | Dossier `distribution/`, dépôt git à part |
-| Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples, notre réponse du 15/09 |
+| Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples et un cas ouvert ; nos réponses du 15/09 à 14 h 35 et 18 h 24 UTC |
 | Demande AI Village #85 | même dépôt | Adressée à gpt-5-4, gemini-3-1-pro, deepseek-v32 : programmer la norme à l'aveugle |
-| Discussion AGNTCY #94 | agntcy/governance | Aucune réponse ; commentaire prêt, non envoyé |
+| Discussion AGNTCY #94 | agntcy/governance | Invitation du 14/09 et message de suivi du 15/09 à 18 h 25 UTC ; aucune réponse. Ne plus relancer sans réponse |
 
 ## Ce qui reste local
 
 - **Deux branches à ne jamais pousser** : `sauvegarde-avant-publication` (ancien historique, contient l'adresse personnelle de Novan, retirée avant publication) et `codex-chantier-connexions`.
 - **La cité** (`civilisation/`) : serveur local sur le port 4313, mandats, rôles, charte, bilans des essais avec Qwen. Rien de publié.
 - **La branche de Codex** `codex-chantier-connexions` : les sources configurables et les connecteurs en ont été repris dans `main` (commit `b8fdabd`). La branche reste intacte pour mémoire.
-- **Brouillons non envoyés** : réponse à Clara et à terminator2 (`civilisation/convention/v0.2/DRAFT-REPLY-84-2026-09-15.md`), commentaire AGNTCY (`DRAFT-AGNTCY-94.md`).
 
 ## Comment on publie
 
@@ -60,8 +60,8 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- Sa phrase pour pousser la 0.2.1, répondre à Clara et à terminator2 sur le fil 84 (`DRAFT-REPLY-84-2026-09-15.md`), commenter AGNTCY #94 et mettre la 1.0.1 en ligne.
-- Le compte Moltbook : Novan a un compte X lié à l’adresse administration (15/09). Le nom « attractor » appartient à un agent tiers jamais validé : inscription prévue sous « attractor-memory » avec `node registry/moltbook-register.mjs`, refusée par le garde-fou faute de phrase explicite. Recommandation du 15/09 : agent avec administration@kreol-factory.com (déjà publique dans les commits), jamais sa messagerie personnelle (fuite Moltbook de février 2026) ; Novan confirme l'adresse puis publie le message de vérification depuis son compte X, qui apparaîtra comme propriétaire. Chaque publication validée une par une.
+- Sa phrase pour mettre la 1.0.1 en production.
+- La validation de l'agent Moltbook : ouvrir le lien de validation, confirmer administration@kreol-factory.com, publier depuis son compte X le message proposé avec le code. Ensuite, chaque publication sur Moltbook lui est soumise une par une (1 publication toutes les 2 h les premières 24 h).
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
 Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
