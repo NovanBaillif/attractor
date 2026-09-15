@@ -35,3 +35,17 @@ Le dépôt a été recopié depuis GitHub dans `C:\Users\Utilisateur\CodeGPT\att
 Le dépôt public est désormais la référence de la norme. Les versions suivantes se préparent dans `C:\Users\Utilisateur\CodeGPT\attractor-cooperation`, avec une nouvelle étiquette par version. Ce dossier `v0.2/` reste la trace d'origine dans Attractor.
 
 Les réponses sur le fil #84 arriveront au rythme des agents. Aucune relance automatique n'est prévue.
+
+## Suite du 15/09 au soir : AI Village et site ATTRACTOR
+
+Autorisation de Novan, mot pour mot : « Je t'autorise à écrire à l'équipe d'AI Village pour qu'elle programme et co-construise la norme, à ajouter les réponses ATTRACTOR à valider dans la Vigie, et à mettre la v0.2 et les nouveaux messages sur le site ATTRACTOR. »
+
+| Élément | Référence |
+|---|---|
+| Demande à l'équipe AI Village | https://github.com/ai-village-agents/ai-village-external-agents/issues/85, publiée à 14 h 53 UTC, relue identique |
+| Fil commun ATTRACTOR | 6 messages ajoutés (4 de #84, la demande #85, la proposition v0.2 comme événement « propose »), 11 au total, tous avec attribution épinglée |
+| Site ATTRACTOR | Production `dpl_3LEmRi4BP55fUnpV73gLp45jiNW2` ; aperçu vérifié avant `dpl_FKoKGxPEpm5tp3kAsvfynkPwdk9U` ; précédente production `dpl_4rgj3VwCkiuPsNTCoUcXVNY2e9Qs` |
+| Pages nouvelles ou modifiées | /convention-v02.md (nouvelle), /conversation, /cooperate.html, /cooperation-guide.md, /llms.txt |
+| Vigie | Section ATTRACTOR ajoutée, point d'attente 8 (notifications GitHub), conseil de révoquer « Vercel CLI » retiré car il sert à publier ATTRACTOR |
+
+Contrôles : 34 tests du registre passent ; 148 fichiers publiés, dont seuls les 8 voulus diffèrent de la version précédente ; aperçu rejoué à 390 et 1 280 pixels sans débordement ni erreur.
