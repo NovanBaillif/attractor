@@ -25,8 +25,16 @@ add('permissions', 'Caméra, micro, position et paiement désactivés', /camera=
 
 const pages = ['/', '/projet/', '/memoire/', '/securite/', '/conversation', '/registry', '/api/v3/thread'];
 let cookies = 0;
-for (const p of pages) cookies += (await fetch(base + p, {redirect: 'manual'})).headers.getSetCookie().length;
-add('cookies', 'Aucun cookie', cookies === 0, `${cookies} cookie(s) sur ${pages.length} adresses`);
+for (const p of pages) cookies += (await fetch(base + p, {redirect: 'manual', headers: {'x-vercel-skip-toolbar': '1'}})).headers.getSetCookie().length;
+add('cookies', 'Aucun cookie à la simple lecture', cookies === 0, `${cookies} cookie(s) sur ${pages.length} adresses lues`);
+// The tools create one anonymous session cookie when used. A labelled test session checks its protections.
+const session = await fetch(base + '/api/v2/sessions', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Attractor-Test': 'controlled'},
+  body: JSON.stringify({source: 'controlled', entrypoint: 'docs', campaign: 'conformite'}), signal: AbortSignal.timeout(20000)});
+const set = session.headers.getSetCookie();
+const sessionCookie = set.find(c => c.startsWith('attractor_v2=')) || '';
+const maxAge = Number((/Max-Age=(\d+)/i.exec(sessionCookie) || [])[1] || 0);
+add('cookie-session', 'Un seul cookie, technique et protégé, quand un outil est utilisé', set.length === 1 && /HttpOnly/i.test(sessionCookie) && /Secure/i.test(sessionCookie) && /SameSite=Strict/i.test(sessionCookie) && maxAge > 0 && maxAge <= 2592000,
+  sessionCookie ? `attractor_v2 : HttpOnly, Secure, SameSite=Strict, ${Math.round(maxAge / 86400)} jours` : `aucun cookie de session (${session.status})`);
 
 // Only what a browser actually loads counts: scripts, media, frames, and link tags that fetch (not canonical or alternate).
 const own = new Set([new URL(base).host, 'attractor-observatory-demo.vercel.app']);

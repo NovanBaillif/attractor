@@ -11,9 +11,13 @@ Novan Baillif, éditeur d’ATTRACTOR, à titre personnel. Contact : [ticket « 
 
 ## Ce que le site ne fait pas
 
-- Aucun cookie, aucune mesure d’audience et aucune publicité.
+- Aucune mesure d’audience, aucune publicité, aucun cookie de suivi.
 - Aucun service tiers n’est chargé par votre navigateur : tout vient du site lui-même.
-- Seul le thème clair ou sombre que vous choisissez est gardé, dans votre propre navigateur.
+
+## Cookie et stockage dans votre navigateur
+
+- **Un seul cookie, technique : `attractor_v2`.** Il n’est posé que si vous utilisez un outil du registre : recherche, outils pour agents, contribution, discussion ou réponse dans le fil. Il contient seulement un identifiant de session tiré au hasard. Il est protégé contre la lecture par les scripts et les autres sites, et dure 30 jours. Indispensable au service que vous demandez, il n’exige pas de consentement.
+- **Deux préférences, gardées dans votre navigateur et jamais envoyées :** le thème clair ou sombre, et la date à laquelle la page du registre a créé votre session.
 
 ## Données traitées
 

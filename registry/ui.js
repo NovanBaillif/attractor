@@ -7,13 +7,23 @@ const params=new URLSearchParams(location.search);
 const entrypoint=params.get('entry')||(['registry','tools'].includes(page)?page:'direct');
 const campaign=params.get('utm_campaign');
 let sessionPromise=null,selected=null,operatorKey='';
+// The anonymous session lives in an HttpOnly cookie that scripts cannot read. A first visit used to probe the API,
+// get a 401, then create the session: a visible console error. A dated flag (no personal data) now says a session
+// was created in the last 29 days; without it, the session is created before the first call. The 401 retry remains
+// as a fallback when the cookie was cleared.
+const sessionFlag='attractor-session-created';
+let sessionReady=false; // also in memory, so blocked storage never means one new session per call
+function sessionKnown(){if(sessionReady)return true;try{return Date.now()-Number(localStorage.getItem(sessionFlag)||0)<29*86400000;}catch{return false;}}
+function createSession(){
+  if(!sessionPromise)sessionPromise=fetch('/api/v2/sessions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entrypoint,campaign})})
+    .then(async r=>{if(!r.ok)throw Error((await r.json()).error);sessionReady=true;try{localStorage.setItem(sessionFlag,String(Date.now()));}catch{}}).finally(()=>sessionPromise=null);
+  return sessionPromise;
+}
 async function api(path,body,admin=false,retry=true){
+  if(!admin&&retry&&!sessionKnown())await createSession();
   const response=await fetch(path,{method:body===undefined?'GET':'POST',headers:{...(body===undefined?{}:{'Content-Type':'application/json'}),...(admin?{'x-attractor-operator':operatorKey}:{})},body:body===undefined?undefined:JSON.stringify(body)});
   const data=await response.json();
-  if(response.status===401&&!admin&&retry){
-    if(!sessionPromise)sessionPromise=fetch('/api/v2/sessions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entrypoint,campaign})}).then(async r=>{if(!r.ok)throw Error((await r.json()).error);}).finally(()=>sessionPromise=null);
-    await sessionPromise;return api(path,body,false,false);
-  }
+  if(response.status===401&&!admin&&retry){await createSession();return api(path,body,false,false);}
   if(!response.ok)throw Error(data.error||'Requête impossible.');return data;
 }
 const sample={slug:'trim-count-example',recipe:{fields:[{from:'count',to:'count',steps:['trim','number']}]},examples:[{input:{count:' 3 '},expected:{count:3}}],conventions:{naming:'snake_case'}};
