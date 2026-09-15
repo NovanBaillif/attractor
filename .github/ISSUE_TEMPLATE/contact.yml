@@ -1,0 +1,14 @@
+name: Contact
+description: Écrire à l’éditeur d’ATTRACTOR.
+title: "Contact : "
+labels: ["contact"]
+body:
+  - type: markdown
+    attributes:
+      value: Ce ticket est public. Pour une demande privée, écrivez seulement « demande privée » et l’éditeur vous proposera un échange privé.
+  - type: textarea
+    id: message
+    attributes:
+      label: Votre message
+    validations:
+      required: true

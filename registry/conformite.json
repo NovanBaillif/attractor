@@ -1,0 +1,81 @@
+{
+  "measured_at": "2026-09-15T20:47:46.702Z",
+  "base": "https://attractor-observatory-demo.vercel.app",
+  "version_measured": "1.0.3",
+  "tool": "registry/conformite.mjs",
+  "checks": [
+    {
+      "id": "https",
+      "label": "HTTPS imposé (HSTS)",
+      "status": "ok",
+      "detail": "max-age=63072000; includeSubDomains; preload"
+    },
+    {
+      "id": "csp",
+      "label": "Politique de sécurité du contenu stricte",
+      "status": "ok",
+      "detail": "default-src self, scripts par empreinte, cadres interdits"
+    },
+    {
+      "id": "nosniff",
+      "label": "Types de fichiers non devinés",
+      "status": "ok",
+      "detail": "nosniff"
+    },
+    {
+      "id": "referrer",
+      "label": "Aucune adresse transmise aux autres sites",
+      "status": "ok",
+      "detail": "no-referrer"
+    },
+    {
+      "id": "permissions",
+      "label": "Caméra, micro, position et paiement désactivés",
+      "status": "ecart",
+      "detail": "absent"
+    },
+    {
+      "id": "cookies",
+      "label": "Aucun cookie",
+      "status": "ok",
+      "detail": "0 cookie(s) sur 7 adresses"
+    },
+    {
+      "id": "tiers",
+      "label": "Aucun service tiers chargé par le navigateur",
+      "status": "ok",
+      "detail": "aucun"
+    },
+    {
+      "id": "securitytxt",
+      "label": "Contact de sécurité publié (RFC 9116)",
+      "status": "ecart",
+      "detail": "absent (404)"
+    },
+    {
+      "id": "mentions-legales",
+      "label": "Mentions légales",
+      "status": "ecart",
+      "detail": "absente (404)"
+    },
+    {
+      "id": "confidentialite",
+      "label": "Page de confidentialité",
+      "status": "ecart",
+      "detail": "absente (404)"
+    },
+    {
+      "id": "conditions",
+      "label": "Conditions d’utilisation et signalement",
+      "status": "ecart",
+      "detail": "absente (404)"
+    },
+    {
+      "id": "ia",
+      "label": "Mention des textes écrits par une IA sur chaque page",
+      "status": "ecart",
+      "detail": "absente"
+    }
+  ],
+  "accessibility_tool": null
+}

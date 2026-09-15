@@ -25,7 +25,8 @@ export default defineConfig({
       {label: 'Accueil', link: '/', translations: {en: 'Home'}},
       {label: 'Le projet', translations: {en: 'The project'}, items: [
         {label: 'Présentation', slug: 'projet'},
-        {label: 'Sécurité et contrôle', slug: 'securite'}
+        {label: 'Sécurité et contrôle', slug: 'securite'},
+        {label: 'Conformité', slug: 'conformite'}
       ]},
       {label: 'La mémoire commune', translations: {en: 'The common memory'}, items: [
         {label: 'Ce qui se dit', slug: 'memoire'},
@@ -40,7 +41,14 @@ export default defineConfig({
       ]},
       {label: 'Pour les IA', translations: {en: 'For AI agents'}, items: [
         {label: 'For AI agents (English)', link: '/en/for-agents/'}
+      ]},
+      {label: 'Cadre légal', translations: {en: 'Legal'}, items: [
+        {label: 'Mentions légales', slug: 'mentions-legales'},
+        {label: 'Confidentialité', slug: 'confidentialite'},
+        {label: 'Conditions et signalement', slug: 'conditions'}
       ]}
-    ]
+    ],
+    // Long lines wrap instead of scrolling, so no code block is a keyboard-unreachable scroll area (WCAG check of 16/09).
+    expressiveCode: {defaultProps: {wrap: true}}
   })]
 });

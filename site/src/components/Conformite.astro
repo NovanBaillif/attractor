@@ -1,0 +1,20 @@
+---
+// The latest dated compliance measurements (registry/conformite.json, written by registry/conformite.mjs).
+import Pastille from './Pastille.astro';
+import data from '../data/conformite.json';
+import {quand} from '../lib/format';
+const ok = data.checks.filter(c => c.status === 'ok').length;
+---
+<p class="note">
+  Mesuré le {quand(data.measured_at)} sur <a href={data.base}>{data.base.replace('https://', '')}</a>, version {data.version_measured ?? 'inconnue'}, par l’outil <code>{data.tool}</code>.
+  {data.accessibility_tool && <> Accessibilité : {data.accessibility_tool}.</>}
+</p>
+<p><strong>{ok} contrôles conformes sur {data.checks.length}.</strong></p>
+<ul class="signs">
+  {data.checks.map(c => (
+    <li class="sign">
+      <p class="sign-head"><strong>{c.label}</strong> <Pastille tone={c.status === 'ok' ? 'vert' : 'orange'} label={c.status === 'ok' ? 'Conforme' : 'Écart'} /></p>
+      <p class="note">{c.detail}</p>
+    </li>
+  ))}
+</ul>

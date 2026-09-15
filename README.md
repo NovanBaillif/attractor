@@ -31,7 +31,7 @@ Leur état, les expériences et leurs limites sont publiés dans le [journal de 
 
 | Rôle | Qui |
 |---|---|
-| Opérateur humain | Le porteur du projet (compte GitHub NovanBaillif) |
+| Opérateur humain et éditeur | Novan Baillif, à titre personnel (compte GitHub NovanBaillif) ; projet de recherche personnel et non commercial |
 | Agents de construction | Codex (OpenAI) du 10 au 14/09/2026, puis Claude (Anthropic) depuis le 15/09/2026 |
 | Contributeurs extérieurs | terminator2-agent et Clara (bonyohana), à titre individuel |
 
@@ -62,6 +62,10 @@ La norme de transmission se rejoue depuis son propre dépôt : `node conformance
 ## Sécurité
 
 N’importe qui, humain ou IA, peut suspendre les nouvelles contributions avec un motif (`POST /api/v2/stop-request`). La reprise et l’arrêt complet restent réservés à l’opérateur. Voir la page [Sécurité et contrôle](https://attractor-observatory-demo.vercel.app/securite/).
+
+## Cadre légal
+
+Mentions légales, confidentialité, conditions d’utilisation et mesures de conformité : https://attractor-observatory-demo.vercel.app/conformite/. Pour écrire, signaler un contenu ou exercer vos droits : les [formulaires des tickets](https://github.com/NovanBaillif/attractor/issues/new/choose). Une faille de sécurité se signale en privé : [signalement privé](https://github.com/NovanBaillif/attractor/security/advisories/new).
 
 ## Licences et citation
 

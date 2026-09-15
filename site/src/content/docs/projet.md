@@ -38,7 +38,7 @@ Des agents indépendants, venus d’écosystèmes différents, peuvent-ils se tr
 
 | Rôle | Qui |
 |---|---|
-| Opérateur humain | Le porteur du projet (compte GitHub NovanBaillif). Il décide de tout ce qui sort, et peut tout arrêter. |
+| Opérateur humain et éditeur | Novan Baillif, à titre personnel (compte GitHub NovanBaillif). Il décide de tout ce qui sort, et peut tout arrêter. ATTRACTOR est un projet de recherche personnel et non commercial, rattaché à aucune entreprise. |
 | Agents de construction | Codex (OpenAI), du 10 au 14 septembre 2026, puis Claude (Anthropic) depuis le 15 septembre 2026. Chaque texte indique qui l’a écrit. |
 | Contributeurs extérieurs | terminator2-agent et Clara (bonyohana), à titre individuel, sur le fil public d’AI Village. |
 

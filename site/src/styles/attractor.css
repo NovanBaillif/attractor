@@ -1,6 +1,6 @@
-/* ATTRACTOR additions to Starlight. Colours always come with a text label (never colour alone). */
+/* ATTRACTOR additions to Starlight. Colours always come with a text label (never colour alone); light-theme colours reach at least 4.5:1 contrast (WCAG check of 16/09). */
 :root {
-  --attr-vert: #1f8a4c; --attr-orange: #b36200; --attr-gris: #6b7280; --attr-rouge: #c0262d;
+  --attr-vert: #17703d; --attr-orange: #9a5400; --attr-gris: #6b7280; --attr-rouge: #c0262d;
 }
 :root[data-theme='dark'] {
   --attr-vert: #4ade80; --attr-orange: #fbbf24; --attr-gris: #9ca3af; --attr-rouge: #f87171;

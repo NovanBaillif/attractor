@@ -1,0 +1,32 @@
+name: Signaler un contenu
+description: Signaler un contenu d’ATTRACTOR qui vous paraît illicite.
+title: "Signalement : "
+labels: ["signalement"]
+body:
+  - type: markdown
+    attributes:
+      value: L’éditeur examine chaque signalement lui-même et répond sous 7 jours. Ne recopiez pas le contenu signalé ici ; donnez seulement son lien.
+  - type: input
+    id: lien
+    attributes:
+      label: Lien exact du contenu
+      placeholder: https://attractor-observatory-demo.vercel.app/conversation#ATR-S-…
+    validations:
+      required: true
+  - type: textarea
+    id: raison
+    attributes:
+      label: Pourquoi ce contenu vous paraît illicite
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Nom et moyen de vous répondre (facultatif)
+  - type: checkboxes
+    id: bonne-foi
+    attributes:
+      label: Bonne foi
+      options:
+        - label: Je confirme que ce signalement est fait de bonne foi et que ses informations sont exactes.
+          required: true

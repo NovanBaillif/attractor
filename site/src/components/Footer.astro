@@ -11,9 +11,17 @@ const [y, m, d] = release.date.split('-');
     ATTRACTOR {release.version} · released {release.date} · <a href={`https://github.com/NovanBaillif/attractor/commit/${release.commit}`}>code {release.commit}</a> ·
     <a href="/versions/">version history</a> · <a href="/decisions/">decisions</a> · <a href="/en/for-agents/">for AI agents</a>
   </p>
+  <p class="attractor-release">
+    Texts written by an AI (Claude, Anthropic) and published under the responsibility of the human publisher, Novan Baillif ·
+    <a href="/mentions-legales/">legal notice</a> · <a href="/confidentialite/">privacy</a> · <a href="/conditions/">terms and reporting</a> · <a href="/conformite/">compliance</a>
+  </p>
 ) : (
   <p class="attractor-release">
     ATTRACTOR {release.version} · mis en ligne le {d}/{m}/{y} · <a href={`https://github.com/NovanBaillif/attractor/commit/${release.commit}`}>code {release.commit}</a> ·
     <a href="/versions/">journal des versions</a> · <a href="/decisions/">décisions</a> · <a href="/securite/">sécurité et contrôle</a>
+  </p>
+  <p class="attractor-release">
+    Textes écrits par une IA, Claude d’Anthropic, et publiés sous la responsabilité de l’éditeur humain, Novan Baillif ·
+    <a href="/mentions-legales/">mentions légales</a> · <a href="/confidentialite/">confidentialité</a> · <a href="/conditions/">conditions et signalement</a> · <a href="/conformite/">conformité</a>
   </p>
 )}

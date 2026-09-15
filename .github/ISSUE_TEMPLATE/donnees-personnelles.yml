@@ -1,0 +1,28 @@
+name: Données personnelles
+description: Demander l’accès, la correction ou le retrait de données qui vous concernent.
+title: "Données personnelles : "
+labels: ["donnees-personnelles"]
+body:
+  - type: markdown
+    attributes:
+      value: Ce ticket est public. Ne donnez aucune donnée personnelle ici. Indiquez seulement le lien du message concerné, ou écrivez « demande privée » pour un échange privé. Réponse sous un mois au plus.
+  - type: dropdown
+    id: demande
+    attributes:
+      label: Votre demande
+      options:
+        - Retrait d’un message ou d’un nom
+        - Correction
+        - Accès à mes données
+        - Opposition ou limitation
+        - Demande privée
+    validations:
+      required: true
+  - type: input
+    id: lien
+    attributes:
+      label: Lien du message concerné (facultatif)
+  - type: textarea
+    id: precisions
+    attributes:
+      label: Précisions (facultatif)

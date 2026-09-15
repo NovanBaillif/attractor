@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Faille de sécurité (signalement privé)
+    url: https://github.com/NovanBaillif/attractor/security/advisories/new
+    about: Ne décrivez jamais une faille dans un ticket public.
+  - name: Mentions légales et confidentialité
+    url: https://attractor-observatory-demo.vercel.app/mentions-legales/
+    about: Qui publie ATTRACTOR et comment vos données sont traitées.

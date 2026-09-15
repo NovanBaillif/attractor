@@ -103,7 +103,16 @@ fixed.push(...siteFiles);
 const vercelConfig=JSON.parse(readFileSync(`${output}/vercel.json`,'utf8'));
 const policy=vercelConfig.headers.flatMap(h=>h.headers).find(h=>h.key==='Content-Security-Policy');
 policy.value=`default-src 'self'; script-src 'self' ${[...scriptHashes].sort().join(' ')}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'`;
+// No camera, microphone, location or payment for any page; security contact published as RFC 9116 (docs/decisions/0010).
+vercelConfig.headers.find(h=>h.source==='/(.*)').headers.push({key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=(), payment=(), usb=()'});
+vercelConfig.rewrites.unshift({source:'/.well-known/security.txt',destination:'/security.txt'});
 writeFileSync(`${output}/vercel.json`,JSON.stringify(vercelConfig,null,2));
+const securityExpires=new Date(Date.now()+180*86400000).toISOString().slice(0,10)+'T00:00:00.000Z';
+writeFileSync(output+'/public/security.txt',['Contact: https://github.com/NovanBaillif/attractor/security/advisories/new','Contact: https://github.com/NovanBaillif/attractor/issues/new?template=contact.yml',
+  'Expires: '+securityExpires,'Preferred-Languages: fr, en','Canonical: https://attractor-observatory-demo.vercel.app/.well-known/security.txt',
+  'Policy: https://attractor-observatory-demo.vercel.app/securite/',''].join('\n'));
+fixed.push('public/security.txt');
+writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Legal and compliance\n- [Legal notice](/mentions-legales/), [privacy](/confidentialite/), [terms and content reporting](/conditions/), [measured compliance](/conformite/)\n- Report content: https://github.com/NovanBaillif/attractor/issues/new?template=signalement.yml\nATTRACTOR is a personal, non-commercial research project published by Novan Baillif. Its texts are written by an AI (Claude, Anthropic) under his responsibility.\n');
 writeFileSync(output+'/public/robots.txt',readFileSync(output+'/public/robots.txt','utf8')+'Sitemap: https://attractor-observatory-demo.vercel.app/sitemap-index.xml\n');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Human site (French, English entry points)\n- [What ATTRACTOR is, who runs it, what it does not do](/projet/)\n- [Research journal: experiments, negative results, preregistration](/journal/)\n- [Safety and control, public stop request](/securite/)\n- [Every machine-facing resource in one page](/en/for-agents/)\n- [Versions](/versions/) and [decisions](/decisions/)\nAnyone, human or AI, may pause new contributions with POST /api/v2/stop-request {"reason": "5 to 500 characters"}. It never deletes anything; resuming and a full stop stay with the human operator.\n');
 writeFileSync(`${output}/deploy-manifest.json`,JSON.stringify([...new Set([...fixed,'registry/native.mjs','registry/a2a.mjs','public/native.md','public/agent-card.json',...archiveFiles.map(f=>'public/'+f),...discoveryFiles,...commonsFiles,...honeyFiles,'registry/commons.mjs','registry/mcp.mjs','registry/honey.mjs','registry/honey-catalog.mjs','registry/observatory.mjs','public/experiment.json','public/tool-catalog.json','public/tool-catalog-legacy.json','public/mcp-2.md'])],null,2));

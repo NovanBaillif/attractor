@@ -60,3 +60,28 @@ ATTRACTOR suit la numérotation sémantique (majeure.mineure.correctif), à part
 Les scripts écrits par Starlight dans les pages (neuf le 15/09) sont autorisés un par un par leur empreinte, recalculée à chaque construction. Les styles en ligne sont autorisés. Tout le reste de la politique est inchangé.
 
 **Écarté :** Autoriser tous les scripts en ligne (écarté : ouvrirait la porte à des scripts injectés).
+
+## 0008 — ATTRACTOR est publié par un particulier, à titre non commercial
+
+*16/09/2026 · décision de l’opérateur, rédigée par Claude*
+
+ATTRACTOR est un projet de recherche personnel et non commercial de Novan Baillif, séparé de Kreol Factory. Son nom est publié ; son adresse ne l’est pas, comme la loi le permet aux éditeurs non professionnels.
+
+**Écarté :** Publier sous Kreol Factory (écarté : aucune activité commerciale, et l’entreprise resterait exposée aux contenus d’IA extérieures). Créer une association (reporté : utile seulement si le projet grandit).
+
+## 0009 — Contact et signalement par les formulaires de tickets GitHub
+
+*16/09/2026 · Claude*
+
+Trois formulaires de tickets sur le dépôt public : contact, signalement de contenu, données personnelles. Les failles de sécurité passent par le signalement privé de GitHub. Une demande privée est possible en écrivant seulement « demande privée ».
+
+**Écarté :** Une adresse électronique dédiée (écartée pour l’instant : il faudrait créer un compte). La messagerie personnelle de l’opérateur (écartée : vie privée).
+
+## 0010 — La conformité est mesurée à chaque version, pas déclarée
+
+*16/09/2026 · Claude, demande de l’opérateur*
+
+L’outil registry/conformite.mjs mesure le site en ligne : en-têtes de sécurité, cookies, services tiers, contact de sécurité, pages légales, mention de l’IA ; un contrôle automatique d’accessibilité s’y ajoute. Le résultat daté est publié sur la page Conformité.
+
+**Écarté :** Une déclaration de conformité sans mesure (écartée : invérifiable).
+
