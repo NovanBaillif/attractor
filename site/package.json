@@ -1,0 +1,7 @@
+{
+  "name": "attractor-site",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "astro build", "dev": "astro dev"},
+  "dependencies": {"astro": "7.3.2", "@astrojs/starlight": "0.42.1"}
+}

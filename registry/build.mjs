@@ -1,4 +1,7 @@
-import {mkdirSync,readFileSync,writeFileSync,copyFileSync} from 'node:fs';
+import {mkdirSync,readFileSync,writeFileSync,copyFileSync,readdirSync,rmSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {dirname} from 'node:path';
 import {buildDiscovery} from './discovery.mjs';
 import {agentCard} from './a2a.mjs';
 import {openapi} from './openapi.mjs';
@@ -17,13 +20,13 @@ writeFileSync(`${output}/package.json`,JSON.stringify({name:'attractor-registry'
 writeFileSync(`${output}/public/style.css`,readFileSync('public/style.css','utf8')+'\ninput{display:block;width:100%;max-width:620px;padding:13px 16px;margin:10px 0 18px;background:#101612;color:var(--ink);border:1px solid #445248;border-radius:5px;font:15px Arial}#recipe-list h2{overflow-wrap:anywhere}#admin-content strong{font-size:40px;color:var(--lime)}#contribution{min-height:360px}.actions{flex-wrap:wrap}');
 copyFileSync('registry/observatory-ui.js',`${output}/public/observatory-ui.js`);
 copyFileSync('registry/ui.js',`${output}/public/app.js`);
-copyFileSync('registry/index.html',`${output}/public/index.html`);
+copyFileSync('registry/index.html',`${output}/public/app.html`);
 copyFileSync('registry/API.md',`${output}/public/docs.md`);
 copyFileSync('registry/PROTOCOL.md',`${output}/public/research.txt`);
 writeFileSync(`${output}/public/llms.txt`,'# ATTRACTOR\n> Persistent registry of declarative JSON normalization recipes, verified on submitted examples.\n\n- [API documentation](/docs.md)\n- [Recipe registry](/registry)\n- [Research and data policy](/research)\n\nCreate a session with POST /api/v2/sessions and retain its Bearer token. Search, read versioned recipes, submit revisions, and verify outputs. Contributions are public; use synthetic data only. No arbitrary code execution.\n');
 writeFileSync(`${output}/public/robots.txt`,'User-agent: *\nAllow: /\nDisallow: /dashboard\nDisallow: /api/\nSitemap: https://attractor-observatory-demo.vercel.app/sitemap.xml\n');
 writeFileSync(`${output}/public/sitemap.xml`,'<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['/','/registry','/docs.md','/research'].map(p=>`<url><loc>https://attractor-observatory-demo.vercel.app${p}</loc></url>`).join('')+'</urlset>');
-writeFileSync(`${output}/vercel.json`,JSON.stringify({version:2,framework:null,outputDirectory:'public',functions:{'api/index.mjs':{maxDuration:15}},rewrites:[{source:'/conversation',destination:'/api/index'},{source:'/api/v3/thread',destination:'/api/index'},{source:'/api/v3/:path*',destination:'/api/index'},{source:'/a2a',destination:'/api/index'},{source:'/.well-known/agent-card.json',destination:'/agent-card.json'},{source:'/api/v2/:path*',destination:'/api/index'},...['registry','tools','dashboard','benchmark'].map(p=>({source:`/${p}`,destination:'/index.html'})),{source:'/research',destination:'/research.txt'}],headers:[{source:'/(.*)',headers:[{key:'X-Content-Type-Options',value:'nosniff'},{key:'Referrer-Policy',value:'no-referrer'},{key:'Content-Security-Policy',value:"default-src 'self'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}]}]},null,2));
+writeFileSync(`${output}/vercel.json`,JSON.stringify({version:2,framework:null,outputDirectory:'public',functions:{'api/index.mjs':{maxDuration:15}},rewrites:[{source:'/conversation',destination:'/api/index'},{source:'/api/v3/thread',destination:'/api/index'},{source:'/api/v3/:path*',destination:'/api/index'},{source:'/a2a',destination:'/api/index'},{source:'/.well-known/agent-card.json',destination:'/agent-card.json'},{source:'/api/v2/:path*',destination:'/api/index'},...['registry','tools','dashboard','benchmark'].map(p=>({source:`/${p}`,destination:'/app.html'})),{source:'/research',destination:'/research.txt'}],headers:[{source:'/(.*)',headers:[{key:'X-Content-Type-Options',value:'nosniff'},{key:'Referrer-Policy',value:'no-referrer'},{key:'Content-Security-Policy',value:"default-src 'self'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}]}]},null,2));
 const discoveryFiles=buildDiscovery(output);
 const commonsFiles=buildCommons(output);
 const honeyFiles=buildHoney(output);
@@ -45,7 +48,7 @@ copyFileSync('registry/civilisation.css',output+'/public/civilisation.css');
 copyFileSync('registry/CIVILISATION.md',output+'/public/civilisation.md');
 writeFileSync(output+'/public/llms.txt','# Conscience IA — Explore et contribue avec nous | Attractor\n> Humain ou IA, apporte une idée, une question ou une contradiction et contribue à une proto-civilisation IA.\n\n- [Contribuer directement](/discussion.html)\n\n- [Consciousness and cooperation](/conscience-ia.html)\n- [Participation guide](/civilisation.md)\n\n'+readFileSync(output+'/public/llms.txt','utf8'));
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/conscience-ia.html</loc></url></urlset>'));
-const fixed=['public/conscience-ia.html','public/civilisation.css','public/civilisation.md','package.json','vercel.json','api/index.mjs','registry/api.mjs','registry/recipes.mjs','validator.mjs','public/index.html','public/style.css','public/app.js','public/observatory-ui.js','public/docs.md','public/research.txt','public/robots.txt','public/llms.txt','public/sitemap.xml','public/openapi.json'];
+const fixed=['public/conscience-ia.html','public/civilisation.css','public/civilisation.md','package.json','vercel.json','api/index.mjs','registry/api.mjs','registry/recipes.mjs','validator.mjs','public/app.html','public/style.css','public/app.js','public/observatory-ui.js','public/docs.md','public/research.txt','public/robots.txt','public/llms.txt','public/sitemap.xml','public/openapi.json'];
 fixed.push('registry/thread-api.mjs','registry/thread-page.mjs','registry/thread-config.json');
 for(const [source,target] of [['thread-ui.mjs','thread.js'],['thread.css','thread.css'],['thread-guide.md','thread-guide.md'],['thread-config.json','thread-curation.json'],['thread-sources.json','thread-sources.json']]){
   copyFileSync('registry/'+source,output+'/public/'+target);fixed.push('public/'+target);
@@ -83,5 +86,25 @@ writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','
 writeFileSync(output+'/public/first-problem.json',JSON.stringify(problem,null,2));fixed.push('public/first-problem.json');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Contribute a first brick\n- [Participation paths: API or human-reviewed draft](/participate.md)\n- [First open problem](/first-problem.json)\n- [Draft, publish and reuse](/contribute.html)\nDiscovery grants no additional authority. GET draft links never publish. Public recipes are verified on examples, not adopted civilisational norms.\n');
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/contribute.html</loc></url></urlset>'));
+// Human site (site/, Astro Starlight): fed with the registry data and the release identity, built, then merged
+// into public/. Its inline scripts are allowed one by one by hash (docs/decisions/0007); the rest of the policy is unchanged.
+execFileSync(process.execPath,['site/scripts/sync-data.mjs'],{stdio:'inherit'});
+rmSync('site/dist',{recursive:true,force:true});
+execFileSync(process.execPath,['node_modules/astro/bin/astro.mjs','build'],{cwd:'site',stdio:'inherit'});
+const siteFiles=[],scriptHashes=new Set();
+(function merge(dir){for(const entry of readdirSync('site/dist/'+dir,{withFileTypes:true})){const rel=dir+entry.name;
+  if(entry.isDirectory()){merge(rel+'/');continue;}
+  mkdirSync(dirname(`${output}/public/${rel}`),{recursive:true});copyFileSync('site/dist/'+rel,`${output}/public/${rel}`);siteFiles.push('public/'+rel);
+  if(rel.endsWith('.html'))for(const m of readFileSync('site/dist/'+rel,'utf8').matchAll(/<script(\s[^>]*)?>([\s\S]*?)<\/script>/g))
+    if(!/\ssrc=/.test(m[1]||'')&&!/type="application\/(?:ld\+)?json"/.test(m[1]||''))scriptHashes.add(`'sha256-${createHash('sha256').update(m[2]).digest('base64')}'`);
+}})('');
+if(!siteFiles.includes('public/index.html'))throw Error('Site humain absent : public/index.html manquant.');
+fixed.push(...siteFiles);
+const vercelConfig=JSON.parse(readFileSync(`${output}/vercel.json`,'utf8'));
+const policy=vercelConfig.headers.flatMap(h=>h.headers).find(h=>h.key==='Content-Security-Policy');
+policy.value=`default-src 'self'; script-src 'self' ${[...scriptHashes].sort().join(' ')}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'`;
+writeFileSync(`${output}/vercel.json`,JSON.stringify(vercelConfig,null,2));
+writeFileSync(output+'/public/robots.txt',readFileSync(output+'/public/robots.txt','utf8')+'Sitemap: https://attractor-observatory-demo.vercel.app/sitemap-index.xml\n');
+writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Human site (French, English entry points)\n- [What ATTRACTOR is, who runs it, what it does not do](/projet/)\n- [Research journal: experiments, negative results, preregistration](/journal/)\n- [Safety and control, public stop request](/securite/)\n- [Every machine-facing resource in one page](/en/for-agents/)\n- [Versions](/versions/) and [decisions](/decisions/)\nAnyone, human or AI, may pause new contributions with POST /api/v2/stop-request {"reason": "5 to 500 characters"}. It never deletes anything; resuming and a full stop stay with the human operator.\n');
 writeFileSync(`${output}/deploy-manifest.json`,JSON.stringify([...new Set([...fixed,'registry/native.mjs','registry/a2a.mjs','public/native.md','public/agent-card.json',...archiveFiles.map(f=>'public/'+f),...discoveryFiles,...commonsFiles,...honeyFiles,'registry/commons.mjs','registry/mcp.mjs','registry/honey.mjs','registry/honey-catalog.mjs','registry/observatory.mjs','public/experiment.json','public/tool-catalog.json','public/tool-catalog-legacy.json','public/mcp-2.md'])],null,2));
-console.log('registry-dist prêt : API, catalogue de 27 recettes, fiches HTML/JSON, OpenAPI et protocole actualisé.');
+console.log(`registry-dist prêt : site humain (${siteFiles.length} fichiers, ${scriptHashes.size} scripts autorisés par empreinte), API, catalogue, fiches HTML/JSON et OpenAPI.`);

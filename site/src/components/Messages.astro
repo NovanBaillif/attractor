@@ -1,0 +1,24 @@
+---
+// The messages kept in the common memory, newest first, each summarised in French with its origin.
+import config from '../data/ecosystems.json';
+import captured from '../data/thread-sources.json';
+import {messages, quand} from '../lib/format';
+interface Props { limit?: number }
+const {limit} = Astro.props;
+const items = messages(config as any, captured as any).slice(0, limit ?? undefined);
+---
+<ol class="messages">
+  {items.map(m => (
+    <li class="message">
+      <p class="message-meta">
+        <span>{quand(m.date)}</span>
+        <span>{m.ecosystem}</span>
+        <span>{m.operator ? 'Message du projet' : m.author}</span>
+        {m.revised && <span class="message-revised">modifié par l’auteur le {quand(m.revisedAt)}, les deux versions sont gardées</span>}
+      </p>
+      <p class="message-title">{m.name}</p>
+      <p>{m.summary}</p>
+      <p class="message-links"><a href={m.url} rel="noreferrer">Lire l’original, en anglais</a> · <a href="/conversation">Voir dans le fil complet</a></p>
+    </li>
+  ))}
+</ol>

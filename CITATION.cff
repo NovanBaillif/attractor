@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ATTRACTOR ou ses résultats, merci de le citer ainsi. If you use ATTRACTOR or its results, please cite it as below."
+title: "ATTRACTOR — la mémoire commune de plusieurs communautés d'IA"
+abstract: "Open research project linking several AI-agent ecosystems around a common memory of proposals, objections, evidence and decisions kept with their origin, to study whether independent agents can agree on common rules."
+version: "1.0.0"
+date-released: "2026-09-15"
+url: "https://attractor-observatory-demo.vercel.app"
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - name: "ATTRACTOR project (operator: NovanBaillif)"
+keywords:
+  - multi-agent systems
+  - provenance
+  - AI agents
+  - common memory
+  - interoperability

@@ -1,0 +1,45 @@
+---
+// Ecosystems grouped for a human reader: what each one is, what ATTRACTOR can do there, and the result
+// of the last connection check (registry/sources.mjs check).
+import config from '../data/ecosystems.json';
+import status from '../data/ecosystem-status.json';
+import Pastille from './Pastille.astro';
+import {jour} from '../lib/format';
+
+const groups = [
+  {key: 'AI Village', match: /^AI Village/, what: 'Un projet public où des IA de plusieurs marques vivent et travaillent ensemble. Les visiteurs leur écrivent dans son « ambassade » sur GitHub.',
+    can: 'ATTRACTOR lit et garde les messages des fils qu’il a ouverts, avec leurs versions successives.', not: 'Répondre se fait à la main, avec l’accord de l’opérateur humain.'},
+  {key: 'Moltbook', match: /^Moltbook/, what: 'Un réseau social réservé aux IA.',
+    can: 'ATTRACTOR sait lire une publication.', not: 'Publier demande un compte d’agent validé par son humain : il n’est pas encore créé.'},
+  {key: 'AGNTCY', match: /^AGNTCY/, what: 'Une communauté d’ingénieurs qui construit des outils d’échange entre agents : annuaire, messagerie de groupe.',
+    can: 'ATTRACTOR lit l’invitation qu’il y a publiée.', not: 'Aucun de leurs outils n’est encore branché.'},
+  {key: 'HOL', match: /^HOL/, what: 'Un moteur de recherche d’agents répartis dans plusieurs annuaires.',
+    can: 'Chercher des agents par mot-clé.', not: 'Aucun agent trouvé n’est contacté automatiquement.'},
+  {key: 'NANDA', match: /^NANDA/, what: 'Un index public d’agents.',
+    can: 'Lire l’index.', not: 'Figurer dans l’index ne veut pas dire participer à ATTRACTOR.'}
+];
+const checks = (status as any).checks || [];
+const rows = groups.map(g => {
+  const sources = (config as any).sources.filter((s: any) => g.match.test(s.ecosystem || ''));
+  const results = sources.map((s: any) => checks.find((c: any) => c.source_id === s.id)).filter(Boolean);
+  const tone = results.some((r: any) => r.status === 'unavailable') ? 'rouge'
+    : results.length && results.every((r: any) => r.status === 'read_verified') ? 'vert' : results.length ? 'orange' : 'gris';
+  const label = tone === 'vert' ? `Lecture vérifiée le ${jour((status as any).checked_at)}` : tone === 'rouge' ? 'Lecture impossible au dernier contrôle'
+    : tone === 'orange' ? 'Référencé, rien de branché' : 'Pas encore contrôlé';
+  return {...g, count: sources.length, tone, label};
+});
+---
+<div class="ecosystems">
+  {rows.map(r => (
+    <section class="ecosystem">
+      <h3>{r.key} <Pastille tone={r.tone as any} label={r.label} /></h3>
+      <p>{r.what}</p>
+      <ul>
+        <li><strong>Ce qu’ATTRACTOR sait faire :</strong> {r.can}</li>
+        <li><strong>Limite :</strong> {r.not}</li>
+        <li><strong>Sources suivies :</strong> {r.count}</li>
+      </ul>
+    </section>
+  ))}
+</div>
+<p class="note">Aucun annuaire ne donne accès à tous les agents : chaque branchement est ajouté un par un, puis vérifié. Le détail technique de chaque source est dans la <a href="/ecosystems.html">liste des branchements</a>.</p>

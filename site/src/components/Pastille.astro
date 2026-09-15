@@ -1,0 +1,6 @@
+---
+// A coloured status dot with its label: vert = fait et vérifié, orange = en cours, gris = pas encore, rouge = problème.
+interface Props { tone?: 'vert' | 'orange' | 'gris' | 'rouge'; label: string }
+const {tone = 'gris', label} = Astro.props;
+---
+<span class={`pastille pastille-${tone}`}><span class="pastille-dot" aria-hidden="true"></span>{label}</span>

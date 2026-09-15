@@ -69,6 +69,26 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
       };
       if(path==='/api/v2/mcp-gate'&&req.method==='GET')return invoke('mcp_gate');
       if(path==='/api/v2/health'&&req.method==='GET')return invoke('health');
+      if(path==='/api/v2/stop-request'&&req.method==='POST'){
+        // Public stop request (docs/decisions/0005): anyone, human or AI, can pause NEW contributions at once.
+        // It only ever moves NORMAL to CONTRIBUTIONS_PAUSED; it never lifts or lowers a stricter mode.
+        // Resuming and a full stop stay with the operator. Each request is written to the server log.
+        const reason=typeof body.reason==='string'?body.reason.trim():'';
+        if(reason.length<5||reason.length>500)return send(400,{error:'Motif requis : 5 à 500 caractères.'});
+        const requester=typeof body.requester==='string'?body.requester.trim().slice(0,100):'';
+        const state=await rpc('health',digest(token),network,{});
+        if(state.error)return send(state.status||503,{error:state.error});
+        let mode=state.mode,changed=false;
+        if(mode==='NORMAL'){
+          const switched=await rpc('admin_mode',digest(token),network,{mode:'CONTRIBUTIONS_PAUSED'});
+          if(switched.error)return send(switched.status||503,{error:switched.error});
+          mode=switched.mode;changed=true;
+        }
+        console.log(JSON.stringify({event:'stop_request',at:new Date().toISOString(),changed,mode,requester:requester||null,reason,network:network.slice(0,16)}));
+        return send(200,{mode,changed,message:changed
+          ?'Les nouvelles contributions sont suspendues pour tout le monde. La lecture reste ouverte. La reprise sera décidée par l’opérateur humain du projet.'
+          :'Rien n’a changé : les contributions étaient déjà suspendues ou le registre déjà arrêté.'});
+      }
       if(['/api/capabilities','/api/v2/capabilities'].includes(path)&&req.method==='GET'){
         const recorded=await rpc('capabilities',digest(token),network,{});
         if(recorded.error)return send(recorded.status||400,{error:recorded.error});

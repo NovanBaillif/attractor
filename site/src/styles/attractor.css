@@ -1,0 +1,38 @@
+/* ATTRACTOR additions to Starlight. Colours always come with a text label (never colour alone). */
+:root {
+  --attr-vert: #1f8a4c; --attr-orange: #b36200; --attr-gris: #6b7280; --attr-rouge: #c0262d;
+}
+:root[data-theme='dark'] {
+  --attr-vert: #4ade80; --attr-orange: #fbbf24; --attr-gris: #9ca3af; --attr-rouge: #f87171;
+}
+
+.pastille { display: inline-flex; align-items: center; gap: .4em; font-size: var(--sl-text-sm); font-weight: 600;
+  padding: .1em .6em; border: 1px solid currentColor; border-radius: 999px; white-space: nowrap; vertical-align: middle; }
+.pastille-dot { width: .6em; height: .6em; border-radius: 50%; background: currentColor; flex: none; }
+.pastille-vert { color: var(--attr-vert); } .pastille-orange { color: var(--attr-orange); }
+.pastille-gris { color: var(--attr-gris); } .pastille-rouge { color: var(--attr-rouge); }
+
+.messages, .signs { list-style: none; padding: 0; }
+.message, .sign { border: 1px solid var(--sl-color-gray-5); border-radius: .5rem; padding: .9rem 1rem; margin: 0 0 .9rem; }
+.message p, .sign p { margin: .25rem 0; }
+.message-meta { display: flex; flex-wrap: wrap; gap: .3rem .9rem; font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); }
+.message-revised { color: var(--attr-orange); }
+.message-title { font-weight: 700; color: var(--sl-color-white); }
+.message-links { font-size: var(--sl-text-sm); }
+.sign-head { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+
+.ecosystem { border-top: 1px solid var(--sl-color-gray-5); padding-top: .8rem; margin-top: 1rem; }
+.ecosystem h3 { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.note { font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); }
+
+.stop-panel { border: 2px solid var(--attr-rouge); border-radius: .6rem; padding: 1rem; margin: 1rem 0; }
+.stop-form { display: grid; gap: .5rem; margin-top: .8rem; }
+.stop-form label span { font-weight: 400; color: var(--sl-color-gray-3); }
+.stop-form textarea, .stop-form input:not([type='checkbox']) { width: 100%; font: inherit; padding: .5rem;
+  border: 1px solid var(--sl-color-gray-4); border-radius: .4rem; background: var(--sl-color-bg); color: var(--sl-color-white); }
+.stop-confirm { display: flex; gap: .5rem; align-items: flex-start; font-size: var(--sl-text-sm); }
+.stop-button { justify-self: start; min-height: 44px; padding: .5rem 1.1rem; border: 0; border-radius: .4rem;
+  background: var(--attr-rouge); color: #fff; font-weight: 700; cursor: pointer; }
+.stop-button:disabled { opacity: .6; cursor: progress; }
+
+.attractor-release { margin-top: 1.5rem; font-size: var(--sl-text-xs); color: var(--sl-color-gray-3); }

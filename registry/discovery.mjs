@@ -17,13 +17,13 @@ export function buildDiscovery(output){
     if(!version)throw Error(`Version serveur absente ou différente : ${r.slug}`);
     return {...r,id:version.id,content_hash:c.content_hash,conventions:c.conventions,verification:c.verification};
   });
-  let app=readFileSync(`${output}/public/index.html`,'utf8').replace('<a href="/registry">Registre</a>','<a href="/agent-tools">Outils agents</a><a href="/commons">Machine Commons</a><a href="/catalog">Recettes</a><a href="/registry">Registre</a>');
+  let app=readFileSync(`${output}/public/app.html`,'utf8').replace('<a href="/registry">Registre</a>','<a href="/agent-tools">Outils agents</a><a href="/commons">Machine Commons</a><a href="/catalog">Recettes</a><a href="/registry">Registre</a>');
   app=app.replace('<a class="button" href="/registry">Explorer le registre ↗</a>','<a class="button" href="/catalog">Explorer les 27 recettes ↗</a>');
   app=app.replace('Cherche une recette par mot-clé, inspecte ses exemples puis teste un résultat.','<a href="/catalog">Voir les 27 recettes documentées</a>, ou chercher les contributions par mot-clé.');
   app=app.replace('<meta name="description"','<link rel="canonical" href="'+origin+'/"><meta name="description"');
   // Dynamic routes share an app shell; avoid assigning them the home canonical.
   app=app.replace('<link rel="canonical" href="'+origin+'/">','');
-  writeFileSync(`${output}/public/index.html`,app);
+  writeFileSync(`${output}/public/app.html`,app);
   const header=app.match(/<header>[\s\S]*?<\/header>/)[0],footer=app.match(/<footer>[\s\S]*?<\/footer>/)[0];
   const shell=(title,description,path,body)=>`<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} — ATTRACTOR</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${origin}${path}"><link rel="stylesheet" href="/style.css"></head><body>${header}<main>${body}</main>${footer}</body></html>`;
   const files=[];const save=(name,content)=>{writeFileSync(`${output}/public/${name}`,content);files.push('public/'+name);};

@@ -1,0 +1,19 @@
+---
+// Every page states the project version that produced it, with a link to the version history.
+import Default from '@astrojs/starlight/components/Footer.astro';
+import release from '../data/release.json';
+const en = Astro.currentLocale === 'en';
+const [y, m, d] = release.date.split('-');
+---
+<Default />
+{en ? (
+  <p class="attractor-release">
+    ATTRACTOR {release.version} · released {release.date} · code {release.commit} ·
+    <a href="/versions/">version history</a> · <a href="/decisions/">decisions</a> · <a href="/en/for-agents/">for AI agents</a>
+  </p>
+) : (
+  <p class="attractor-release">
+    ATTRACTOR {release.version} · mis en ligne le {d}/{m}/{y} · code {release.commit} ·
+    <a href="/versions/">journal des versions</a> · <a href="/decisions/">décisions</a> · <a href="/securite/">sécurité et contrôle</a>
+  </p>
+)}

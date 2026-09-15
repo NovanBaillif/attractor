@@ -3,7 +3,7 @@ import {honeyCatalog,capabilities} from './honey-catalog.mjs';
 import {runHoney} from './honey.mjs';
 export function buildHoney(output){
   const root=output+'/public/',base='https://attractor-observatory-demo.vercel.app';mkdirSync(root+'agent-tools',{recursive:true});
-  const app=readFileSync(root+'index.html','utf8'),header=app.match(/<header>[\s\S]*?<\/header>/)[0];
+  const app=readFileSync(root+'app.html','utf8'),header=app.match(/<header>[\s\S]*?<\/header>/)[0];
   const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
   const shell=(title,path,description,body)=>`<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} — ATTRACTOR</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${base}${path}"><link rel="stylesheet" href="/style.css"><script src="/honey.js" defer></script></head><body>${header}<main>${body}</main></body></html>`;
   const files=[];const save=(name,text)=>{writeFileSync(root+name,text);files.push('public/'+name);};

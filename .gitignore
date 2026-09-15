@@ -6,3 +6,8 @@ demo-dist/
 registry-dist/
 registry/node_modules/
 registry-live/
+site/node_modules/
+site/dist/
+site/.astro/
+captures/
+site/src/data/

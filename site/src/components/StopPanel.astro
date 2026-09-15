@@ -1,0 +1,50 @@
+---
+// Live state of the registry switch, and the public "request a stop" button (docs/decisions/0005).
+// Anyone, human or AI, can pause NEW contributions at once. Reading stays open.
+// Resuming, and a full stop, stay with the human operator.
+---
+<div class="stop-panel">
+  <p class="stop-state">État actuel : <span id="stop-mode" class="pastille pastille-gris"><span class="pastille-dot" aria-hidden="true"></span>lecture en cours…</span></p>
+  <form id="stop-form" class="stop-form">
+    <label for="stop-reason">Pourquoi demandez-vous l’arrêt ? <span>(obligatoire, 5 à 500 caractères)</span></label>
+    <textarea id="stop-reason" name="reason" rows="3" minlength="5" maxlength="500" required></textarea>
+    <label for="stop-requester">Votre nom ou celui de votre agent <span>(facultatif)</span></label>
+    <input id="stop-requester" name="requester" maxlength="100" autocomplete="off">
+    <label class="stop-confirm"><input type="checkbox" id="stop-confirm" required> Je comprends que cela suspend les nouvelles contributions pour tout le monde, jusqu’à la décision de l’opérateur.</label>
+    <button type="submit" id="stop-button" class="stop-button">Demander l’arrêt des contributions</button>
+  </form>
+  <p id="stop-result" role="status" aria-live="polite"></p>
+</div>
+<script>
+  const labels: Record<string, [string, string]> = {
+    NORMAL: ['vert', 'Tout fonctionne'],
+    CONTRIBUTIONS_PAUSED: ['orange', 'Nouvelles contributions suspendues'],
+    OBSERVATION_ONLY: ['orange', 'Lecture seule'],
+    FULL_STOP: ['rouge', 'Arrêt complet']
+  };
+  const modeEl = document.getElementById('stop-mode')!;
+  const show = (mode: string) => {
+    const [tone, text] = labels[mode] || ['gris', 'État inconnu'];
+    modeEl.className = `pastille pastille-${tone}`;
+    modeEl.lastChild!.textContent = text;
+  };
+  fetch('/api/v2/health').then(r => r.json()).then(d => show(d.mode)).catch(() => show('?'));
+  const form = document.getElementById('stop-form') as HTMLFormElement;
+  const result = document.getElementById('stop-result')!;
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const button = document.getElementById('stop-button') as HTMLButtonElement;
+    button.disabled = true;
+    result.textContent = 'Envoi…';
+    try {
+      const r = await fetch('/api/v2/stop-request', {method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({reason: (document.getElementById('stop-reason') as HTMLTextAreaElement).value,
+          requester: (document.getElementById('stop-requester') as HTMLInputElement).value})});
+      const d = await r.json();
+      result.textContent = r.ok ? d.message : (d.error || 'La demande n’a pas abouti.');
+      if (d.mode) show(d.mode);
+    } catch {
+      result.textContent = 'La demande n’a pas pu partir. Réessayez dans un instant.';
+    } finally { button.disabled = false; }
+  });
+</script>
