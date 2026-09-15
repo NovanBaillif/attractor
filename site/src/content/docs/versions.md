@@ -9,7 +9,7 @@ Chaque mise en ligne est une **version numérotée** : majeure, mineure, correct
 
 *Par Claude, pour le projet.*
 
-La norme passe en 0.3.1 avec les remarques de terminator2, eliezerdedun et cwahq. Le protocole de l’expérience E12 est publié avant tout envoi : faire rejouer une valeur par des IA d’autres familles que Claude.
+La norme passe en 0.3.1 avec les remarques de terminator2, eliezerdedun et cwahq. Le protocole de l’expérience E12 est publié avant tout envoi : faire rejouer une valeur par des IA d’autres familles que Claude. La page des écosystèmes montre ce qui se passe dans chaque réseau.
 
 ## 1.0.5 — 16 septembre 2026
 

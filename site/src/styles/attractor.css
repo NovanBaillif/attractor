@@ -39,3 +39,6 @@
 
 /* Tables fit a phone screen: long identifiers break inside their cell instead of making the table scroll (WCAG check of 16/09). */
 .sl-markdown-content :is(td, th) { overflow-wrap: anywhere; }
+
+.activity { background: var(--sl-color-gray-7, transparent); border-left: 3px solid var(--sl-color-accent); padding: .6rem .9rem; margin-top: .8rem; }
+.activity h4 { margin-top: 0; }

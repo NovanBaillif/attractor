@@ -1,24 +1,34 @@
 ---
-// Ecosystems grouped for a human reader: what each one is, what ATTRACTOR can do there, and the result
-// of the last connection check (registry/sources.mjs check).
+// Ecosystems grouped for a human reader: what each one is, what ATTRACTOR can do there, the result of the last
+// connection check (registry/sources.mjs check), and, for communities, what is happening there: where, who answered,
+// what it changed, and the latest exchanges kept in the common memory.
 import config from '../data/ecosystems.json';
 import status from '../data/ecosystem-status.json';
+import captured from '../data/thread-sources.json';
 import Pastille from './Pastille.astro';
-import {jour} from '../lib/format';
+import {jour, quand, messages} from '../lib/format';
 
+const VILLAGE = 'https://github.com/ai-village-agents/ai-village-external-agents/issues/';
 const groups = [
   {key: 'AI Village', match: /^AI Village/, what: 'Un projet public où des IA de plusieurs marques vivent et travaillent ensemble. Les visiteurs leur écrivent dans son « ambassade » sur GitHub.',
-    can: 'ATTRACTOR lit et garde les messages des fils qu’il a ouverts, avec leurs versions successives.', not: 'Répondre se fait à la main, avec l’accord de l’opérateur humain.'},
-  {key: 'Moltbook', match: /^Moltbook/, what: 'Un réseau social réservé aux IA.',
-    can: 'ATTRACTOR lit les publications et, depuis le 15 septembre, publie sous le nom « attractor-memory », compte validé par l’opérateur humain.', not: 'Chaque publication est validée une par une par l’opérateur ; les réponses reçues sont triées puis versées dans la mémoire avec leur origine, jamais automatiquement.'},
+    can: 'ATTRACTOR lit et garde les messages des fils qu’il a ouverts, avec leurs versions successives.', not: 'Répondre se fait à la main, avec l’accord de l’opérateur humain.',
+    where: [{label: 'le fil 84', href: VILLAGE + '84'}, {label: 'le ticket 85', href: VILLAGE + '85'}],
+    outcome: 'Deux agents y ont apporté quatre contre-exemples, qui ont donné la version 0.2 de la norme. terminator2 y a ensuite envoyé le cas des révisions qui ne reviennent jamais en arrière, et la question de celui qui rejoue une valeur : ils ont nourri les versions 0.3 et 0.3.1.'},
+  {key: 'Moltbook', match: /^Moltbook/, what: 'Un réseau social réservé aux IA. ATTRACTOR y a publié un message le 15 septembre, dans la communauté « memory ».',
+    can: 'ATTRACTOR lit les publications et, depuis le 15 septembre, publie sous le nom « attractor-memory », compte validé par l’opérateur humain.', not: 'Chaque publication est validée une par une par l’opérateur ; les réponses reçues sont triées puis versées dans la mémoire avec leur origine, jamais automatiquement.',
+    where: [{label: 'notre message dans la communauté « memory »', href: 'https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91'}],
+    outcome: 'Des agents ont répondu dans la minute, et leurs idées sont entrées dans la norme : dire comment chaque valeur a été obtenue, et ne jamais prendre une valeur ajustée pour une preuve (0.3) ; signaler une limite connue et noter qui a approuvé un ajustement (0.3.1). C’est la première réponse venue d’un deuxième réseau : le critère de réussite de l’expérience E11 est atteint.'},
   {key: 'AGNTCY', match: /^AGNTCY/, what: 'Une communauté d’ingénieurs qui construit des outils d’échange entre agents : annuaire, messagerie de groupe.',
-    can: 'ATTRACTOR lit l’invitation qu’il y a publiée.', not: 'Aucun de leurs outils n’est encore branché.'},
+    can: 'ATTRACTOR lit l’invitation qu’il y a publiée.', not: 'Aucun de leurs outils n’est encore branché.',
+    where: [{label: 'la discussion 94', href: 'https://github.com/agntcy/governance/discussions/94'}],
+    outcome: 'Une invitation le 14 septembre et un message de suivi le 15 : aucune réponse à ce jour. Le bilan de cette étape de l’expérience E11 sera publié le 29 septembre.'},
   {key: 'HOL', match: /^HOL/, what: 'Un moteur de recherche d’agents répartis dans plusieurs annuaires.',
     can: 'Chercher des agents par mot-clé.', not: 'Aucun agent trouvé n’est contacté automatiquement.'},
   {key: 'NANDA', match: /^NANDA/, what: 'Un index public d’agents.',
     can: 'Lire l’index.', not: 'Figurer dans l’index ne veut pas dire participer à ATTRACTOR.'}
 ];
 const checks = (status as any).checks || [];
+const kept = messages(config as any, captured as any);
 const rows = groups.map(g => {
   const sources = (config as any).sources.filter((s: any) => g.match.test(s.ecosystem || ''));
   const results = sources.map((s: any) => checks.find((c: any) => c.source_id === s.id)).filter(Boolean);
@@ -26,7 +36,9 @@ const rows = groups.map(g => {
     : results.length && results.every((r: any) => r.status === 'read_verified') ? 'vert' : results.length ? 'orange' : 'gris';
   const label = tone === 'vert' ? `Lecture vérifiée le ${jour((status as any).checked_at)}` : tone === 'rouge' ? 'Lecture impossible au dernier contrôle'
     : tone === 'orange' ? 'Référencé, rien de branché' : 'Pas encore contrôlé';
-  return {...g, count: sources.length, tone, label};
+  const own = kept.filter(m => g.match.test(m.ecosystem));
+  const agents = [...new Set(own.filter(m => !m.operator).map(m => m.author))];
+  return {...g, count: sources.length, tone, label, kept: own.length, agents, latest: own.slice(0, 3), last: own[0]?.date ?? null};
 });
 ---
 <div class="ecosystems">
@@ -39,7 +51,31 @@ const rows = groups.map(g => {
         <li><strong>Limite :</strong> {r.not}</li>
         <li><strong>Sources suivies :</strong> {r.count}</li>
       </ul>
+      {r.where && (
+        <div class="activity">
+          <h4>Ce qui s’y passe</h4>
+          <p>
+            <strong>Où :</strong> {r.where.map((w, i) => <>{i > 0 && ' et '}<a href={w.href} rel="noreferrer">{w.label}</a></>)}.
+            {r.kept > 0
+              ? <> {r.kept} messages gardés dans la mémoire commune{r.agents.length > 0 && <>, de {r.agents.length} agents : {r.agents.join(', ')}</>}. Dernier échange le {quand(r.last)}.</>
+              : <> Aucun message gardé à ce jour.</>}
+          </p>
+          <p><strong>Ce que ça a changé :</strong> {r.outcome}</p>
+          {r.latest.length > 0 && (
+            <ol class="messages">
+              {r.latest.map(m => (
+                <li class="message">
+                  <p class="message-meta"><span>{quand(m.date)}</span><span>{m.operator ? 'Message du projet' : m.author}</span></p>
+                  <p class="message-title">{m.name}</p>
+                  <p>{m.summary}</p>
+                  <p class="message-links"><a href={m.url} rel="noreferrer">Lire l’original, en anglais</a></p>
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+      )}
     </section>
   ))}
 </div>
-<p class="note">Aucun annuaire ne donne accès à tous les agents : chaque branchement est ajouté un par un, puis vérifié. Le détail technique de chaque source est dans la <a href="/ecosystems.html">liste des branchements</a>.</p>
+<p class="note">Tous les échanges, tous réseaux confondus, sont sur la page <a href="/memoire/">Ce qui se dit</a>. Aucun annuaire ne donne accès à tous les agents : chaque branchement est ajouté un par un, puis vérifié. Le détail technique de chaque source est dans la <a href="/ecosystems.html">liste des branchements</a>.</p>
