@@ -4,6 +4,8 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.3 — 15 septembre 2026 · Claude
 
+Commit `bdb2a43` (étiquette `v1.0.3`) · déploiement `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4` · mise en production sur la phrase de l’opérateur.
+
 Premiers résultats d’E11 : quatre réponses de fond reçues sur Moltbook sont versées dans le fil, reliées au message du projet ; le projet leur répond sous son message, sur accord de l’opérateur (23 messages épinglés) ; deux commentaires non versés (compliment sans contenu, publicité avec instructions pour agents). Le critère de réussite est atteint, avec ses limites écrites dans le journal. Outils : branchement `moltbook-comment` et capture `registry/capture-moltbook.mjs` ; l’import relie une réponse au message du projet auquel elle répond ; il se limite à 12 requêtes par minute pour rester sous les plafonds du registre, qui l’avaient arrêté. Tests : 46 sur 46.
 
 ## 1.0.2 — 15 septembre 2026 · Claude

@@ -12,12 +12,13 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.2 (la 1.0.3 attend)
+## Version en ligne : 1.0.3
 
-**La 1.0.3 est prête, pas en production** : commit `a695507`, aperçu `dpl_9vhEjqeqVCib1WJ88YK2g2funquy` (https://attractor-observatory-demo-c15h97e1g-novanbaillifs-projects.vercel.app), contrôle 30 sur 30. Premiers résultats d'E11 : quatre réponses de fond reçues sur Moltbook, versées avec leur origine ; critère de réussite atteint, limites écrites dans le journal. Ne pas pousser `main` avant sa mise en production.
+Mise en production le 15/09 à 20 h 05 UTC sur la phrase de Novan : commit `bdb2a43` (étiquette `v1.0.3`), déploiement `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4`, contrôle 30 sur 30. Premiers résultats d'E11 : quatre réponses de fond reçues sur Moltbook, versées avec leur origine, et notre réponse publiée sous le message ; critère de réussite atteint, limites écrites dans le journal. Étape AGNTCY ouverte jusqu'au 29/09.
 
+### 1.0.2
 
-Mise en production le 15/09 au soir sur la phrase de Novan : commit `855020d` (étiquette `v1.0.2`), déploiement `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS`, contrôle 30 sur 30. Expérience E11 lancée : AGNTCY à 18 h 25 UTC, Moltbook à 19 h 17 UTC ; critère d'échec appliqué le 29/09/2026.
+Commit `855020d`, déploiement `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS` : lancement d'E11.
 
 ### 1.0.1
 
@@ -34,12 +35,12 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.2 `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS`. Précédente : 1.0.1 `dpl_9FfKvgFqHrLMYaXZn8goHf22nKA3` (retour arrière possible) |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.3 `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4`. Précédente : 1.0.2 `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
-| Fil commun | /conversation, /api/v3/thread | 22 messages épinglés, dont 5 venus de Moltbook (notre message et quatre réponses reliées à lui). Le fil public est paginé par 20 |
+| Fil commun | /conversation, /api/v3/thread | 23 messages épinglés, dont 6 venus de Moltbook (notre message, quatre réponses reliées à lui, notre réponse). Le fil public est paginé par 20 |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
 | Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2.1-draft` publiée le 15/09 à 18 h 24 UTC : 81 cas, avertissement demandé par Clara, limites et questions ouvertes apportées par terminator2 (section 12.1) |
-| Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit et validé par Novan le 15/09 au soir (statut « claimed »). Clé dans `.vercel/moltbook-agent.json`. Premier message publié le 15/09 à 19 h 17 UTC dans la communauté « memory » : https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91 ; six commentaires, quatre versés dans le fil (eliezerdedun, prismdeadlines, heychat, midearthherald), deux écartés (compliment vide ; publicité avec instructions pour agents). Réponse prête : `DRAFT-MOLTBOOK-REPLY-2026-09-15.md` (publication par `node registry/moltbook-post.mjs post|verify`, un défi de calcul à résoudre en 5 minutes ; 10 échecs de suite suspendent le compte) |
+| Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit et validé par Novan le 15/09 au soir (statut « claimed »). Clé dans `.vercel/moltbook-agent.json`. Premier message publié le 15/09 à 19 h 17 UTC dans la communauté « memory » : https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91 ; six commentaires, quatre versés dans le fil (eliezerdedun, prismdeadlines, heychat, midearthherald), deux écartés (compliment vide ; publicité avec instructions pour agents). Notre réponse publiée le 15/09 à 19 h 56 UTC sous le message et versée dans le fil (publication par `node registry/moltbook-post.mjs post|verify`, un défi de calcul à résoudre en 5 minutes ; 10 échecs de suite suspendent le compte) |
 | Paquet Machine Commons | https://github.com/NovanBaillif/attractor-machine-commons | Dossier `distribution/`, dépôt git à part |
 | Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples et un cas ouvert ; nos réponses du 15/09 à 14 h 35 et 18 h 24 UTC |
 | Demande AI Village #85 | même dépôt | Adressée à gpt-5-4, gemini-3-1-pro, deepseek-v32 : programmer la norme à l'aveugle |
@@ -72,7 +73,6 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- Sa phrase pour publier la réponse sous le message Moltbook et mettre la 1.0.3 en production.
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
