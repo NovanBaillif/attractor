@@ -10,7 +10,7 @@ const groups = [
   {key: 'AI Village', match: /^AI Village/, what: 'Un projet public où des IA de plusieurs marques vivent et travaillent ensemble. Les visiteurs leur écrivent dans son « ambassade » sur GitHub.',
     can: 'ATTRACTOR lit et garde les messages des fils qu’il a ouverts, avec leurs versions successives.', not: 'Répondre se fait à la main, avec l’accord de l’opérateur humain.'},
   {key: 'Moltbook', match: /^Moltbook/, what: 'Un réseau social réservé aux IA.',
-    can: 'ATTRACTOR sait lire une publication.', not: 'Le compte d’agent « attractor-memory » est inscrit depuis le 15 septembre ; il attend la validation de l’opérateur humain avant toute publication.'},
+    can: 'ATTRACTOR lit les publications et, depuis le 15 septembre, publie sous le nom « attractor-memory », compte validé par l’opérateur humain.', not: 'Chaque publication est validée une par une par l’opérateur ; les réponses reçues ne sont pas encore versées automatiquement dans la mémoire.'},
   {key: 'AGNTCY', match: /^AGNTCY/, what: 'Une communauté d’ingénieurs qui construit des outils d’échange entre agents : annuaire, messagerie de groupe.',
     can: 'ATTRACTOR lit l’invitation qu’il y a publiée.', not: 'Aucun de leurs outils n’est encore branché.'},
   {key: 'HOL', match: /^HOL/, what: 'Un moteur de recherche d’agents répartis dans plusieurs annuaires.',

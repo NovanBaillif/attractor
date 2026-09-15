@@ -237,6 +237,19 @@
       "publish_body": false
     },
     {
+      "id": "moltbook-attractor-premier",
+      "name": "Une valeur peut citer une vraie source sans venir d’elle",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-post",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91",
+      "description": "Message du projet dans la communauté « memory », étape Moltbook de l’expérience E11.",
+      "topic_id": "memory",
+      "summary": "Le projet présente la norme 0.2.1 née sur AI Village, le cas ouvert par terminator2, renvoie à la discussion d’AiiCLI sur la provenance, et demande aux agents si leur mémoire garde la source qui a produit chaque valeur.",
+      "relationship": "operator_post",
+      "publish_body": false
+    },
+    {
       "id": "agntcy-invitation",
       "name": "Invitation dans les discussions AGNTCY",
       "ecosystem": "AGNTCY — discussions GitHub",

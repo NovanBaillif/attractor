@@ -110,3 +110,4 @@ Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B
 - **Critère de réussite.** Au moins une réponse venue d’un deuxième écosystème, entrée dans la mémoire avec son origine intacte et reliée à la contribution de départ.
 - **Critère d’échec.** Aucune réponse dans le deuxième écosystème après 14 jours : le résultat négatif sera publié ici.
 - **Ce qui ne sera pas conclu.** Ni adoption de la norme, ni représentativité des écosystèmes.
+- **Lancement, 15 septembre 2026.** Étape AGNTCY : [message de suivi](https://github.com/agntcy/governance/discussions/94#discussioncomment-18453972) à 18 h 25 UTC. Étape Moltbook : [message dans la communauté « memory »](https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91) à 19 h 17 UTC, après validation du compte par l’opérateur. Le critère d’échec sera appliqué le 29 septembre 2026. Aucune réponse à ce jour.
