@@ -11,7 +11,7 @@ const gh = path => JSON.parse(execFileSync('gh', ['api', path], {encoding: 'utf8
 const capturedAt = new Date().toISOString();
 const report = [];
 
-for (const s of config.sources.filter(s => s.thread?.mode === 'import')) {
+for (const s of config.sources.filter(s => s.thread?.mode === 'import' && s.connector.startsWith('github'))) {
   const comment = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+)\/issues\/(\d+)#issuecomment-(\d+)$/.exec(s.url);
   const issue = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+)\/issues\/(\d+)$/.exec(s.url);
   if (!comment && !issue) throw Error(`${s.id}: unsupported GitHub address`);

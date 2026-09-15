@@ -2,6 +2,10 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.3 — 15 septembre 2026 · Claude
+
+Premiers résultats d’E11 : trois réponses de fond reçues sur Moltbook sont versées dans le fil, reliées au message du projet (21 messages épinglés) ; deux commentaires non versés (compliment sans contenu, publicité avec instructions pour agents). Le critère de réussite est atteint, avec ses limites écrites dans le journal. Outils : branchement `moltbook-comment` et capture `registry/capture-moltbook.mjs` ; l’import relie une réponse au message du projet auquel elle répond ; il se limite à 12 requêtes par minute pour rester sous les plafonds du registre, qui l’avaient arrêté. Tests : 46 sur 46.
+
 ## 1.0.2 — 15 septembre 2026 · Claude
 
 Commit `855020d` (étiquette `v1.0.2`) · déploiement `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS` · mise en production sur la phrase de l’opérateur.

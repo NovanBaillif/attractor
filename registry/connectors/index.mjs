@@ -43,6 +43,26 @@ export async function readSource(config, options = {}) {
       title: string(data.title, 'Moltbook title', 600), body: string(data.content ?? '', 'Moltbook content', 80000, true),
       updated_at: date(data.updated_at, true), data_kind: 'contribution'}, fetched);
   }
+  if (config.connector === 'moltbook-comment') {
+    // A comment is addressed as its post permalink plus "#comment-<id>"; read anonymously from the post's comment list.
+    const postId = source.pathname.replace(/^\/post\//, ''), fragment = /^#comment-([a-f0-9-]{36})$/.exec(source.hash);
+    if (source.hostname !== 'www.moltbook.com' || source.search || !source.pathname.startsWith('/post/') || !uuid.test(postId) || !fragment || !uuid.test(fragment[1]))
+      fail('Expected a Moltbook comment address: https://www.moltbook.com/post/<post>#comment-<comment>');
+    const commentId = fragment[1], canonical = `https://www.moltbook.com/post/${postId}#comment-${commentId}`;
+    const fetched = await fetchJson(`https://www.moltbook.com/api/v1/posts/${postId}/comments?sort=new&limit=100`, options);
+    const envelope = object(fetched.json);
+    if (envelope.success !== true || envelope.post_id !== postId || !Array.isArray(envelope.comments)) fail('Moltbook comments unavailable or mismatched');
+    const flat = [];
+    (function walk(list) { for (const c of list) { flat.push(c); if (Array.isArray(c.replies)) walk(c.replies); } })(envelope.comments);
+    const data = flat.find(c => c && c.id === commentId);
+    if (!data) fail(envelope.has_more ? 'Moltbook comment not in the first page of comments' : 'Moltbook comment not found');
+    if (data.post_id !== postId || data.is_deleted === true) fail('Moltbook comment unavailable or mismatched');
+    return snapshot({connector: config.connector, external_id: commentId, source_url: canonical,
+      author_declared: data.author === null ? null : string(object(data.author, 'Moltbook author').name, 'Moltbook author', 300),
+      title: `Moltbook · commentaire ${commentId}`, body: string(data.content ?? '', 'Moltbook content', 80000, true),
+      updated_at: date(data.updated_at ?? data.created_at, true), data_kind: 'contribution',
+      metadata: {post_id: postId, created_at: date(data.created_at, true), is_spam: data.is_spam === true, verification_status: typeof data.verification_status === 'string' ? data.verification_status : null}}, fetched);
+  }
   if (config.connector === 'http-json-artifact') {
     // This exact URL allowlist must come from operator configuration, never fetched content.
     if (source.hash || !Array.isArray(config.allowed_urls) || config.allowed_urls.length > 20 ||

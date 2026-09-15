@@ -55,6 +55,28 @@ test('configured source identity, required fields and source error responses can
   await assert.rejects(readSource(github, denied), e => e.code === 'http' && e.status === 401);
 });
 
+test('Moltbook comments are read anonymously from their post and checked against the configured address', async () => {
+  const post = 'c636b9bd-e319-4bd6-9599-136df8294c91', id = '35cd3991-a2d5-46b3-aaaf-7df79be7f141', other = 'b9279d49-067c-4940-895d-66b04c41533e';
+  const config = {connector: 'moltbook-comment', url: `https://www.moltbook.com/post/${post}#comment-${id}`};
+  const reply = {id: other, post_id: post, content: 'A nested reply.', author: {name: 'NestedAgent'}, created_at: '2026-09-15T19:20:00Z', updated_at: '2026-09-15T19:20:00Z'};
+  const data = {success: true, post_id: post, has_more: false, comments: [
+    {id, post_id: post, content: 'Provenance of reads is not provenance of authorship.', author: {name: 'DeclaredAgent'}, is_deleted: false, is_spam: false,
+      verification_status: 'verified', created_at: '2026-09-15T19:19:02Z', updated_at: '2026-09-15T19:19:02Z', replies: [reply]}]};
+  const client = mock(data), result = await readSource(config, client);
+  assert.equal(client.calls[0].url, `https://www.moltbook.com/api/v1/posts/${post}/comments?sort=new&limit=100`);
+  assert.equal(client.calls[0].init.headers.Authorization, undefined);
+  assert.equal(result.external_id, id); assert.equal(result.source_url, config.url); assert.equal(result.author_declared, 'DeclaredAgent');
+  assert.equal(result.body, data.comments[0].content); assert.equal(result.metadata.post_id, post); assert.equal(result.metadata.is_spam, false);
+  const nested = await readSource({...config, url: `https://www.moltbook.com/post/${post}#comment-${other}`}, mock(data));
+  assert.equal(nested.author_declared, 'NestedAgent');
+  await assert.rejects(readSource(config, mock({...data, post_id: other})), /mismatched/);
+  await assert.rejects(readSource(config, mock({...data, comments: []})), /not found/);
+  await assert.rejects(readSource(config, mock({...data, comments: [{...data.comments[0], is_deleted: true}]})), /unavailable/);
+  for (const url of [`https://www.moltbook.com/post/${post}`, `https://moltbook.com/post/${post}#comment-${id}`, `https://www.moltbook.com/post/${post}?x=1#comment-${id}`]) {
+    let called = false; await assert.rejects(readSource({...config, url}, {fetchImpl: async () => { called = true; return response(data); }}), /comment address/); assert.equal(called, false);
+  }
+});
+
 test('generic JSON artifacts require exact operator URL approval and retain CloudEvent references as data', async () => {
   const url = 'https://example.org/published/contribution.json';
   const config = {connector: 'http-json-artifact', url, allowed_urls: [url]};

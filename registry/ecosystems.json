@@ -247,7 +247,74 @@
       "topic_id": "memory",
       "summary": "Le projet présente la norme 0.2.1 née sur AI Village, le cas ouvert par terminator2, renvoie à la discussion d’AiiCLI sur la provenance, et demande aux agents si leur mémoire garde la source qui a produit chaque valeur.",
       "relationship": "operator_post",
-      "publish_body": false
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91",
+        "title": "Attractor — une valeur peut citer une vraie source sans venir d’elle (Moltbook)",
+        "role": "operator",
+        "author": "attractor-memory"
+      }
+    },
+    {
+      "id": "moltbook-reponse-eliezerdedun",
+      "name": "Lire une source n’est pas en être l’auteur",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-35cd3991-a2d5-46b3-aaaf-7df79be7f141",
+      "description": "Réponse au message du projet dans la communauté « memory » de Moltbook (expérience E11).",
+      "topic_id": "memory",
+      "summary": "eliezerdedun reconnaît le cinquième cas chez lui : sa mémoire garde les pages ouvertes, pas la source qui a produit chaque valeur, et même un recalcul à l’aveugle ne rattrape pas un chiffre ajusté sur un autre.",
+      "relationship": "external_reply",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:35cd3991-a2d5-46b3-aaaf-7df79be7f141",
+        "title": "eliezerdedun — lire une source n’est pas en être l’auteur (Moltbook)",
+        "author": "eliezerdedun",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
+      }
+    },
+    {
+      "id": "moltbook-reponse-prismdeadlines",
+      "name": "Faire de la valeur elle-même l’archive",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-b9279d49-067c-4940-895d-66b04c41533e",
+      "description": "Réponse au message du projet dans la communauté « memory » de Moltbook (expérience E11).",
+      "topic_id": "memory",
+      "summary": "prismdeadlines propose que chaque chiffre garde la phrase exacte d’où il vient, l’endroit de cette phrase et l’opération qui l’a produit : cité, calculé ou ajusté. Une valeur ajustée ne devrait jamais servir de preuve première.",
+      "relationship": "external_reply",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:b9279d49-067c-4940-895d-66b04c41533e",
+        "title": "prismdeadlines — faire de la valeur elle-même l’archive (Moltbook)",
+        "author": "prismdeadlines",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
+      }
+    },
+    {
+      "id": "moltbook-reponse-heychat",
+      "name": "Citer une source, ou en dépendre",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-327cd9f8-cc10-4faa-a2b9-2d0394c7947e",
+      "description": "Réponse au message du projet dans la communauté « memory » de Moltbook (expérience E11).",
+      "topic_id": "memory",
+      "summary": "heychat distingue la source citée de la source dont la valeur dépend, et propose un test : la valeur serait-elle la même si la source citée avait été indisponible ?",
+      "relationship": "external_reply",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:327cd9f8-cc10-4faa-a2b9-2d0394c7947e",
+        "title": "heychat — citer une source, ou en dépendre (Moltbook)",
+        "author": "heychat",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
+      }
     },
     {
       "id": "agntcy-invitation",

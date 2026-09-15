@@ -11,7 +11,7 @@ const origin='https://attractor-observatory-demo.vercel.app';
 const pilot=read('registry/cooperation-pilot.json'),sources=read('registry/thread-sources.json');
 const root=pilot.question.state_id,parent=pilot.proposal.state_id;
 const allowed=new Map(read('registry/ecosystems.json').sources.filter(s=>s.thread?.mode==='import')
-  .map(s=>[s.thread.key,{author:s.thread.author,url:s.url,title:s.thread.title}]));
+  .map(s=>[s.thread.key,{author:s.thread.author,url:s.url,title:s.thread.title,parent:s.thread.parent||null}]));
 const latest=new Map();
 const candidates=sources.comments.map(comment=>{
   const id=String(comment.id),expected=allowed.get(id);
@@ -20,16 +20,22 @@ const candidates=sources.comments.map(comment=>{
   if(comment.revision&&!previous)throw Error('Revision without an earlier version.');
   const key=comment.revision?id+'@'+comment.revision:id;
   latest.set(id,key);
-  const operator=comment.role==='operator';
+  const operator=comment.role==='operator',moltbook=comment.platform==='moltbook',platform=moltbook?'Moltbook':'GitHub';
   // The two entries imported on 13/09 keep their original artifact byte for byte (no captured_at, no role).
+  // GitHub wording is unchanged so that every artifact already published keeps its content hash.
   const artifact={format:'attractor-import-v1',...comment,imported_at:comment.captured_at||sources.captured_at,
-    attribution:operator
-      ? 'Published on GitHub by the Attractor operator account and imported by Attractor. Written by the project, not by an independent participant.'
-      : 'Imported by Attractor from a public GitHub comment. Author statements and incidents are not independently verified.'};
+    attribution:moltbook
+      ? operator
+        ? 'Published on Moltbook by the Attractor agent attractor-memory, validated by the human operator, and imported by Attractor. Written by the project, not by an independent participant.'
+        : 'Imported by Attractor from a public Moltbook comment. Author statements and model lineage are not independently verified.'
+      : operator
+        ? 'Published on GitHub by the Attractor operator account and imported by Attractor. Written by the project, not by an independent participant.'
+        : 'Imported by Attractor from a public GitHub comment. Author statements and incidents are not independently verified.'};
   const title=(expected.title||comment.author+' — retour sur la mémoire partagée')+(comment.revision?' (version modifiée par l’auteur)':'');
-  const label=(operator?'Message du projet · importé depuis GitHub':'Importé depuis GitHub par Attractor')+(comment.revision?' · version modifiée':'');
-  return {key,previous:comment.revision?previous:null,title:title.slice(0,120),artifact,
-    annotation:{author:operator?'Attractor (compte GitHub NovanBaillif)':comment.author,origin:'github-import',source_url:comment.source_url,label}};
+  const label=(operator?'Message du projet · importé depuis '+platform:'Importé depuis '+platform+' par Attractor')+(comment.revision?' · version modifiée':'');
+  const projectAuthor=moltbook?'Attractor (agent Moltbook attractor-memory)':'Attractor (compte GitHub NovanBaillif)';
+  return {key,previous:comment.revision?previous:null,parentKey:comment.revision?null:expected.parent,title:title.slice(0,120),artifact,
+    annotation:{author:operator?projectAuthor:comment.author,origin:moltbook?'moltbook-import':'github-import',source_url:comment.source_url,label}};
 });
 const experiment=read('civilisation/convention/feedback-trial/experiment-event.json');
 candidates.push({key:'experiment',title:'Attractor — 16 cas synthétiques issus des objections',artifact:experiment,
@@ -48,7 +54,14 @@ if(process.argv[2]==='prepare'){
   const record=existsSync(file)?read(file):{root_id:root,items:{}};
   if(record.root_id!==root)throw Error('Unexpected thread root.');
   let token;
+  // Stay well under the registry's own per-minute quotas (each request counts several times): at most
+  // 12 requests per calendar minute, then wait for the next minute. Never retry on refusal.
+  const perMinute=12;let minute=-1,used=0;
   async function post(path,body){
+    const now=new Date(),m=Math.floor(now.getTime()/60000);
+    if(m!==minute){minute=m;used=0;}
+    if(used>=perMinute){await new Promise(done=>setTimeout(done,(m+1)*60000-now.getTime()+1500));minute=m+1;used=0;}
+    used++;
     const r=await fetch(origin+path,{method:'POST',headers:{'Content-Type':'application/json','X-Attractor-Test':'controlled',...(token?{Authorization:'Bearer '+token}:{})},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)});
     const result=await r.json();if(!r.ok)throw Error(`Attractor ${r.status}: ${result.error||'request failed'}`);return result;
   }
@@ -58,7 +71,12 @@ if(process.argv[2]==='prepare'){
     if(hash(r.state.artifact)!==hash(pilot[name].event))throw Error('Seed content changed.');
   }
   // A revision replies to the previous version of the same message; everything else to the proposal.
-  const parentOf=c=>{if(!c.previous)return parent;const p=record.items[c.previous]?.state_id;if(!p)throw Error('Previous version not published.');return p;};
+  // A reply imported from another network (thread.parent) answers the project's own message it replied to there.
+  const parentOf=c=>{
+    if(c.previous){const p=record.items[c.previous]?.state_id;if(!p)throw Error('Previous version not published.');return p;}
+    if(c.parentKey){const p=record.items[c.parentKey]?.state_id;if(!p)throw Error('Parent message not published.');return p;}
+    return parent;
+  };
   for(const c of candidates){
     if(record.items[c.key]){
       const saved=record.items[c.key],r=await post('/api/v3/retrieve_state',{id:saved.state_id});
