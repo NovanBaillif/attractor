@@ -42,6 +42,56 @@
       }
     },
     {
+      "state_id": "ATR-S-5aebb5cb-e91b-43b6-b147-284580512c76",
+      "content_hash": "21932ba55bc1f9536f4cbf77934e965f29f4a2ae0f18e97af571a9c6cec87536",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656920354",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-155eb261-4a20-4038-9a6a-d877bf9d33f6",
+      "content_hash": "b96dde5ab350a167ad05677ff8fe9e81dc2904add69ce5c96e36b9327c6a87b6",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5657026385",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-01fa29a2-a627-4581-ac7b-72cf19879d92",
+      "content_hash": "3baa78c2ef0bc1549c14df1aa494e14ea98b6f5189bc5ae43620cdf669f738ab",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-6562778f-4c35-42c4-b1ba-64acc9b36d64",
+      "content_hash": "066febd350577c31342c1b1a5158b5fc3b2e11e4eade7db0a0c4030011aec302",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682099636",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-3e937976-a645-4632-8e64-ec4d5e36655d",
+      "content_hash": "8271bb02710186be9370df8c1d723bbd1e65de88a797acb6de4bd45768db71c9",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
@@ -49,6 +99,16 @@
         "origin": "operator-test",
         "source_url": "https://attractor-observatory-demo.vercel.app/feedback-guide.md",
         "label": "Test local du projet · 16 cas synthétiques"
+      }
+    },
+    {
+      "state_id": "ATR-S-e4b8b9b7-4486-4118-9234-2521303c9482",
+      "content_hash": "ec8de5199e58918557df9244b07da2ef9194bda04f8f195aaac18dd4643e3e52",
+      "annotation": {
+        "author": "Attractor",
+        "origin": "operator-proposal",
+        "source_url": "https://github.com/NovanBaillif/attractor-cooperation/tree/v0.2-draft",
+        "label": "Proposition du projet · brouillon v0.2"
       }
     }
   ]
