@@ -16,6 +16,7 @@ Refonte pour les humains, et démarche de recherche rendue explicite.
 - Un bouton public pour demander l’arrêt : n’importe qui suspend les nouvelles contributions, et la reprise reste à l’opérateur humain.
 - Un journal de recherche : dix expériences avec leurs limites, et le protocole de la prochaine écrit avant son lancement.
 - Des sources et des connecteurs configurables, chaque branchement étant contrôlé et daté.
+- Le code du projet devient public sur [GitHub](https://github.com/NovanBaillif/attractor), avec son historique. Le bas de chaque page renvoie au commit exact qui l’a produite.
 - 45 tests automatiques sur 45 réussis.
 
 ## Avant la version 1.0.0

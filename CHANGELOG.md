@@ -12,6 +12,7 @@ Refonte pour les humains, et démarche de recherche rendue explicite.
 - Journal de recherche : dix expériences publiées avec leurs limites, et le protocole de l’expérience E11 écrit avant son lancement.
 - Sources et connecteurs configurables : fiche unique `registry/ecosystems.json`, contrôle `registry/sources.mjs check`, capture avec versions `registry/capture-github.mjs`.
 - Politique de sécurité du contenu : scripts du site autorisés un par un par empreinte ([décision 0007](docs/decisions/0007-politique-de-securite-du-contenu.md)).
+- Code du projet public sur GitHub, avec son historique : https://github.com/NovanBaillif/attractor. Avant publication, une adresse e-mail personnelle a été retirée de l’historique et le nom de famille d’une contributrice retiré des intitulés de commit ; les pièces figées (captures, essais, version 0.2 publiée) sont inchangées.
 - Tests : 45 sur 45.
 
 ## Avant la version 1.0.0

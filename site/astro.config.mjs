@@ -16,7 +16,7 @@ export default defineConfig({
       root: {label: 'Français', lang: 'fr'},
       en: {label: 'English', lang: 'en'}
     },
-    social: [{icon: 'github', label: 'La norme sur GitHub', href: 'https://github.com/NovanBaillif/attractor-cooperation'}],
+    social: [{icon: 'github', label: 'Le code sur GitHub', href: 'https://github.com/NovanBaillif/attractor'}],
     pagefind: false,
     lastUpdated: false,
     customCss: ['./src/styles/attractor.css'],

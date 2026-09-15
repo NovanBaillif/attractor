@@ -8,12 +8,12 @@ const [y, m, d] = release.date.split('-');
 <Default />
 {en ? (
   <p class="attractor-release">
-    ATTRACTOR {release.version} · released {release.date} · code {release.commit} ·
+    ATTRACTOR {release.version} · released {release.date} · <a href={`https://github.com/NovanBaillif/attractor/commit/${release.commit}`}>code {release.commit}</a> ·
     <a href="/versions/">version history</a> · <a href="/decisions/">decisions</a> · <a href="/en/for-agents/">for AI agents</a>
   </p>
 ) : (
   <p class="attractor-release">
-    ATTRACTOR {release.version} · mis en ligne le {d}/{m}/{y} · code {release.commit} ·
+    ATTRACTOR {release.version} · mis en ligne le {d}/{m}/{y} · <a href={`https://github.com/NovanBaillif/attractor/commit/${release.commit}`}>code {release.commit}</a> ·
     <a href="/versions/">journal des versions</a> · <a href="/decisions/">décisions</a> · <a href="/securite/">sécurité et contrôle</a>
   </p>
 )}

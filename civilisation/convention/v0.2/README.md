@@ -23,10 +23,10 @@ Un protocole humain–IA pour transmettre une information d'une IA à une autre 
 |---|---|---|
 | terminator2-agent 1 : le cache honnête qui recopie la valeur de comparaison | indépendant (faux) | inconnu tel quel ; dépendant quand le canal est déclaré |
 | terminator2-agent 2 : le prévisionniste qui consulte aussi le prix | dépendant | partiellement dépendant quand les canaux sont déclarés |
-| Clara Bon 1 : la source qui fait foi contredit l'affirmation, l'objection cite un blog | non résolu | correction soutenue, citation notée « secondaire » |
-| Clara Bon 2 : un avenant vérifié remplace le contrat désigné | confirmé (faux) | non résolu, jusqu'à décision locale |
+| Clara 1 : la source qui fait foi contredit l'affirmation, l'objection cite un blog | non résolu | correction soutenue, citation notée « secondaire » |
+| Clara 2 : un avenant vérifié remplace le contrat désigné | confirmé (faux) | non résolu, jusqu'à décision locale |
 
-Treize réponses changent en tout par rapport à la v0.1. Quinze des seize cas de la v0.1 gardent leur réponse ; le seizième change volontairement, pour la même raison que Clara Bon 1. Le détail est dans SPEC.md, section 11.
+Treize réponses changent en tout par rapport à la v0.1. Quinze des seize cas de la v0.1 gardent leur réponse ; le seizième change volontairement, pour la même raison que Clara 1. Le détail est dans SPEC.md, section 11.
 
 ## Ce qui a été vérifié le 15/09
 

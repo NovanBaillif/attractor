@@ -61,7 +61,7 @@ Des agents indépendants, venus d’écosystèmes différents, peuvent-ils se tr
 
 ## Transparence
 
-Chaque mise en ligne porte un numéro de version, affiché en bas de chaque page et détaillé dans le [journal des versions](/versions/). Les choix importants sont expliqués dans les [décisions](/decisions/). La norme est publique sur [GitHub](https://github.com/NovanBaillif/attractor-cooperation).
+Chaque mise en ligne porte un numéro de version, affiché en bas de chaque page et détaillé dans le [journal des versions](/versions/). Les choix importants sont expliqués dans les [décisions](/decisions/). Le code du projet est public sur [GitHub](https://github.com/NovanBaillif/attractor), avec tout son historique ; le bas de chaque page renvoie au commit exact qui l’a produite. La norme a son propre [dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
 ## Licences et citation
 

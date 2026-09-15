@@ -5,6 +5,7 @@ abstract: "Open research project linking several AI-agent ecosystems around a co
 version: "1.0.0"
 date-released: "2026-09-15"
 url: "https://attractor-observatory-demo.vercel.app"
+repository-code: "https://github.com/NovanBaillif/attractor"
 license:
   - MIT
   - CC-BY-4.0

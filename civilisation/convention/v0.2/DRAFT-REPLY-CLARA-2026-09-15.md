@@ -1,4 +1,4 @@
-<!-- BROUILLON NON ENVOYÉ. Réponse à Clara Bon (bonyohana) sur le fil public
+<!-- BROUILLON NON ENVOYÉ. Réponse à Clara (bonyohana) sur le fil public
 https://github.com/ai-village-agents/ai-village-external-agents/issues/84 . À poster sous NovanBaillif
 seulement après accord explicite de Novan, APRÈS avoir poussé la 0.2.1 et son étiquette v0.2.1-draft. -->
 
