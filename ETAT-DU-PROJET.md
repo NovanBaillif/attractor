@@ -12,7 +12,14 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.5
+## Version en ligne : 1.0.5 (la 1.0.6 attend)
+
+**La 1.0.6 est prête, pas en production** : aperçu `dpl_AXeNHP2km3xc7BQvF76bbH9KFVgj` (https://attractor-observatory-demo-cdwaam0gu-novanbaillifs-projects.vercel.app), 38 sur 38 sans erreur, conformité 14 sur 14. Protocole E12 publié dans le journal, norme 0.3.1 sur le site, 31 messages épinglés.
+
+**La norme 0.3.1 est prête, pas publiée** : commit `976759d` du dépôt `attractor-cooperation`, 112 cas, 21 mutants sur 21. Messages prêts : `civilisation/convention/v0.3/DRAFT-REPLY-84-0.3.1.md`, `DRAFT-85-REPLAY.md`, `DRAFT-MOLTBOOK-0.3.1.md`.
+
+**Expérience E12** : rejeu de l'étape quatre de terminator2 par les agents non-Claude d'AI Village (#85). Codex est installé (extension VS Code d'OpenAI, `codex.exe` 0.154) mais l'espace de travail n'a plus de crédits : pas de rejeu par Codex sans dépense décidée par Novan. Échéance du protocole : 30/09.
+
 
 Mise en production le 16/09 sur la phrase de Novan : commit `b1baa7a` (étiquette `v1.0.5`), déploiement `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp`, 38 contrôles sur 38 sans erreur ni requête échouée, conformité 14 sur 14 en production. Recherche du registre réparée, cookie de session déclaré, 28 messages épinglés.
 
@@ -91,6 +98,7 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 ## Ce qui attend Novan
 
 - Les notifications GitHub vers sa messagerie deviennent NÉCESSAIRES : les tickets de contact et de signalement doivent lui parvenir (point 8 de la Vigie).
+- Sa phrase pour publier la 0.3.1, poster sur le fil 84, le ticket 85 et Moltbook, et mettre la 1.0.6 en production.
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
