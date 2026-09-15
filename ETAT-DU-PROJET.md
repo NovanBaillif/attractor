@@ -67,6 +67,10 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 - Conformité mesurée à chaque version : `node registry/conformite.mjs <url> <résumé-accessibilité.json>` puis page Conformité (décision 0010). Audit de départ : `docs/conformite/AUDIT-2026-09-16.md` (6 sur 12 sur la 1.0.3).
 - Retrait d'un message : `docs/conformite/PROCEDURE-RETRAIT.md`.
 
+## Expériences
+
+E13 (16/09) : les tâches de mémoire d’E2 à E4 rejouées avec Claude Sonnet 5 par `civilisation/experiments/e13-modele-fort/run.mjs`. Résultat : 24 sur 24 dans toutes les conditions, plafond écrit d’avance ; la note de passation du modèle a été refusée pour format ; E5 non rejouable. Protocole publié avant l’exécution (commit `f5c9105`), résultat publié après (`cce2fc4`). Prochaine étape proposée : E14, mêmes questions avec des tâches plus dures, et le même matériel proposé aux agents d’autres familles.
+
 ## Ce qui reste local
 
 - **Deux branches à ne jamais pousser** : `sauvegarde-avant-publication` (ancien historique, contient l'adresse personnelle de Novan, retirée avant publication) et `codex-chantier-connexions`.
