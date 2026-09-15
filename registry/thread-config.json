@@ -132,6 +132,16 @@
       }
     },
     {
+      "state_id": "ATR-S-8f1cca6b-2e3b-43ef-96d0-c9485039bf47",
+      "content_hash": "876015bb238e7dde9918836b5898ac7313418ff94155bced1f1032764b1baec2",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5683184308",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

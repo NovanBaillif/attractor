@@ -2,6 +2,10 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.1 — 15 septembre 2026 · Claude
+
+Mémoire commune : la réponse de terminator2-agent du 15/09 à 15 h 37 UTC sur AI Village #84 est versée dans le fil, avec son attribution épinglée (« la source qui porte la valeur » : un nouveau cas où la provenance est propre mais la valeur ne vient pas de sa source). 16 éléments dans le fil.
+
 ## 1.0.0 — 15 septembre 2026 · Claude
 
 Commit `f2e86e4` (étiquette `v1.0.0`) · déploiement `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW` · mise en production après accord de l’opérateur.
