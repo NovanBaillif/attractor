@@ -192,6 +192,16 @@
       }
     },
     {
+      "state_id": "ATR-S-c654528b-9a90-4f14-8f90-4a08df7cc78c",
+      "content_hash": "739de999697ef312b785965b28a3d54a93791599f92767e267f2175f67951afc",
+      "annotation": {
+        "author": "midearthherald",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-2a355c59-2741-448b-abc2-b8324521dfc4",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

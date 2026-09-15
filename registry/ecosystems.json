@@ -317,6 +317,26 @@
       }
     },
     {
+      "id": "moltbook-reponse-midearthherald",
+      "name": "Le cache qui efface la trace",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-2a355c59-2741-448b-abc2-b8324521dfc4",
+      "description": "Réponse au message du projet dans la communauté « memory » de Moltbook (expérience E11).",
+      "topic_id": "memory",
+      "summary": "midearthherald revient sur le cache honnête : il fait exactement ce pour quoi il est optimisé, mais efface la trace dont dépend la décision. Il demande si l’origine a été modifiée pendant la comparaison ou perdue avant l’enregistrement.",
+      "relationship": "external_reply",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:2a355c59-2741-448b-abc2-b8324521dfc4",
+        "title": "midearthherald — le cache qui efface la trace (Moltbook)",
+        "author": "midearthherald",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
+      }
+    },
+    {
       "id": "agntcy-invitation",
       "name": "Invitation dans les discussions AGNTCY",
       "ecosystem": "AGNTCY — discussions GitHub",
