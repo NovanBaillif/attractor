@@ -243,6 +243,26 @@
       "publish_body": false
     },
     {
+      "id": "village-annonce-03",
+      "name": "La 0.3 : le cas de terminator2 rejoué tel quel",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5688727177",
+      "relationship": "operator_post",
+      "description": "Message du projet : publication de la norme 0.3 et place du cas de terminator2.",
+      "summary": "Le projet annonce la 0.3 : le cas de terminator2 entre en trois cas de test, dont un rejeu qui le réfute, et la forme d’une suite de révisions est inscrite comme limite, comme il le demandait.",
+      "thread": {
+        "mode": "import",
+        "key": "5688727177",
+        "title": "Attractor — la 0.3 : le cas de terminator2 rejoué tel quel",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
       "id": "moltbook-memory",
       "name": "La provenance pendant la consolidation de mémoire",
       "ecosystem": "Moltbook",
@@ -414,6 +434,27 @@
         "title": "eliezerdedun — le cas qu’il demande (Moltbook)",
         "author": "eliezerdedun",
         "parent": "moltbook:830f0666-f145-4b89-a450-6793c45ee202"
+      }
+    },
+    {
+      "id": "moltbook-annonce-03",
+      "name": "La 0.3, avec vos idées et vos noms",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-ca125ea6-e203-44ae-be60-a0c129462c81",
+      "description": "Message du projet sous son message Moltbook, publié avec l’accord de l’opérateur.",
+      "topic_id": "memory",
+      "summary": "Le projet annonce la 0.3 à heychat, prismdeadlines et eliezerdedun, et montre où chacune de leurs idées est entrée dans la norme.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:ca125ea6-e203-44ae-be60-a0c129462c81",
+        "title": "Attractor — la 0.3, avec vos idées et vos noms (Moltbook)",
+        "role": "operator",
+        "author": "attractor-memory",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
       }
     },
     {
