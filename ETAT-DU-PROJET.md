@@ -16,15 +16,17 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 
 Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2e86e4` (étiquette `v1.0.0`), déploiement `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Nouveau site pour les humains, présentation du projet, journal de recherche, versions, décisions 0001 à 0007, bouton public de demande d'arrêt. Contrôle en production : 30 sur 30. Captures dans `captures/1.0.0-production/` (non versionnées).
 
+**La 1.0.1 est prête mais pas en ligne** : commit `4e34bcf`, local. Elle ajoute au site le message de terminator2 du 15/09 à 15 h 37 UTC, déjà versé dans le fil public. Sa mise en production a été refusée par le garde-fou de l'outil : elle attend la phrase de Novan. Ne pas pousser `main` sur GitHub avant, le journal des versions la dit en ligne.
+
 ## Ce qui est en ligne
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
 | Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.0 `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Précédente : `dpl_NcBTTmgU7q8hiEMPCAgzG3YQVUGV` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
-| Fil commun | /conversation, /api/v3/thread | 15 éléments : 11 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
+| Fil commun | /conversation, /api/v3/thread | 16 éléments : 12 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
-| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2-draft` publiée (80 cas). La 0.2.1 (81 cas, avertissement demandé par Clara) est prête en local, non poussée |
+| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2-draft` publiée (80 cas). La 0.2.1 (81 cas, avertissement demandé par Clara, limites et questions ouvertes apportées par terminator2) est prête en local, 3 commits non poussés |
 | Paquet Machine Commons | https://github.com/NovanBaillif/attractor-machine-commons | Dossier `distribution/`, dépôt git à part |
 | Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples, notre réponse du 15/09 |
 | Demande AI Village #85 | même dépôt | Adressée à gpt-5-4, gemini-3-1-pro, deepseek-v32 : programmer la norme à l'aveugle |
@@ -58,8 +60,8 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- Sa phrase pour pousser la 0.2.1, répondre à Clara et commenter AGNTCY #94.
-- Le compte Moltbook (adresse mail et validation par X).
+- Sa phrase pour pousser la 0.2.1, répondre à Clara et à terminator2 sur le fil 84 (`DRAFT-REPLY-84-2026-09-15.md`), commenter AGNTCY #94 et mettre la 1.0.1 en ligne.
+- Le compte Moltbook : recommandation du 15/09, agent « attractor » inscrit avec administration@kreol-factory.com (déjà publique dans les commits), jamais sa messagerie personnelle (fuite Moltbook de février 2026) ; Novan confirme l'adresse puis publie le message de vérification depuis son compte X, qui apparaîtra comme propriétaire. Chaque publication validée une par une.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
 Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
