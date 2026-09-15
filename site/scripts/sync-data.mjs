@@ -18,5 +18,5 @@ try {
     {cwd: fileURLToPath(root), encoding: 'utf8'}).trim();
 } catch { /* the site still builds outside git */ }
 const version = readFileSync(new URL('VERSION', root), 'utf8').trim();
-writeFileSync(new URL('release.json', out), JSON.stringify({version, date: new Date().toISOString().slice(0, 10), commit}, null, 2) + '\n');
+writeFileSync(new URL('release.json', out), JSON.stringify({version, date: new Intl.DateTimeFormat('en-CA', {timeZone: 'Indian/Reunion'}).format(new Date()), commit}, null, 2) + '\n');
 console.log(`site data synced · ATTRACTOR ${version} · ${commit}`);
