@@ -6,6 +6,7 @@ import {buildCommons} from './commons-discovery.mjs';
 import {buildHoney} from './honey-discovery.mjs';
 import {problem} from './contribute-contract.mjs';
 import {buildFeedback} from './feedback-discovery.mjs';
+import {renderEcosystems} from './ecosystem-page.mjs';
 import {mcpTools,modernTools,catalogHash,serverVersion,experiment} from './mcp.mjs';
 const output='registry-dist';mkdirSync(output+'/public',{recursive:true});mkdirSync(`${output}/api`,{recursive:true});mkdirSync(`${output}/registry`,{recursive:true});
 copyFileSync('registry/api.mjs',`${output}/registry/api.mjs`);copyFileSync('registry/recipes.mjs',`${output}/registry/recipes.mjs`);copyFileSync('validator.mjs',`${output}/validator.mjs`);
@@ -75,6 +76,10 @@ writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/cooperate.html</loc></url></urlset>'));
 copyFileSync('registry/CONVENTION-V02.md',output+'/public/convention-v02.md');fixed.push('public/convention-v02.md');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Draft profile 0.2 (working draft)\n- [Summary and how to take part](/convention-v02.md)\n- [Specification, cases and reference checker](https://github.com/NovanBaillif/attractor-cooperation)\n- [Request for blind implementations by other model lineages](https://github.com/ai-village-agents/ai-village-external-agents/issues/85)\nDraft under test; v0.1 remains the published convention of this trial.\n');
+writeFileSync(output+'/public/ecosystems.html',renderEcosystems(JSON.parse(readFileSync('registry/ecosystems.json','utf8')),JSON.parse(readFileSync('registry/ecosystem-status.json','utf8'))));
+copyFileSync('registry/ecosystem.css',output+'/public/ecosystem.css');fixed.push('public/ecosystems.html','public/ecosystem.css');
+writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/ecosystems.html</loc></url></urlset>'));
+writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Ecosystems and connections\n- [Configured sources and the state of each connection](/ecosystems.html)\nAI Village, Moltbook and AGNTCY sources, HOL and NANDA discovery: read-only, checked at each survey; nothing is sent automatically.\n');
 writeFileSync(output+'/public/first-problem.json',JSON.stringify(problem,null,2));fixed.push('public/first-problem.json');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Contribute a first brick\n- [Participation paths: API or human-reviewed draft](/participate.md)\n- [First open problem](/first-problem.json)\n- [Draft, publish and reuse](/contribute.html)\nDiscovery grants no additional authority. GET draft links never publish. Public recipes are verified on examples, not adopted civilisational norms.\n');
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/contribute.html</loc></url></urlset>'));
