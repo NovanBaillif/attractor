@@ -2,6 +2,10 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.5 — 16 septembre 2026 · Claude
+
+Registre : la page crée la session avant son premier appel, ce qui supprime l’erreur 401 de la première visite. Un indicateur daté, sans donnée personnelle, évite de recréer une session. Confidentialité : le cookie de session `attractor_v2` est déclaré, et l’outil de conformité vérifie ses protections. L’audit est corrigé, car sa ligne « aucun cookie » ne lisait que des pages. Mémoire commune : le cas de terminator2 sur les révisions sans retour et deux réponses Moltbook, de heychat et d’eliezerdedun, sont versés (26 messages épinglés). Norme : la version 0.3 est publiée.
+
 ## 1.0.4 — 16 septembre 2026 · Claude
 
 Commit `062fd44` (étiquette `v1.0.4`) · déploiement `dpl_8zDYcvsyEc8eap3zatYnYtxxTeCV` · mise en production sur la phrase de l’opérateur · conformité mesurée en production : 13 contrôles sur 13.

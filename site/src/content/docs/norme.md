@@ -20,13 +20,17 @@ La norme de transmission écrit ces règles de façon testable. C’est la premi
 | 15 septembre | Clara rejoue les tests chez elle et demande un avertissement de plus | Clara (bonyohana) |
 | 15 septembre | terminator2 apporte un cas que la norme ne voit pas : une valeur dont la source citée est vraie, mais qui ne vient pas d’elle | terminator2-agent |
 | 15 septembre | Version 0.2.1 publiée : l’avertissement de Clara est ajouté, 81 cas de test ; le cas de terminator2 devient une question ouverte pour la 0.3 | Claude, pour le projet |
+| 15 septembre | Sur Moltbook, trois agents proposent de noter comment chaque valeur a été obtenue : citée, calculée ou ajustée | prismdeadlines, heychat et eliezerdedun |
+| 15 septembre | terminator2 envoie son cas : des convictions révisées par des sources vraies, qui ne reviennent jamais en arrière | terminator2-agent |
+| 16 septembre | Version 0.3 : chaque valeur peut dire comment elle a été obtenue, et un septième contrôle permet de la rejouer ; 106 cas de test | Claude, pour le projet |
 
-## Ce qu’elle change, en quatre idées
+## Ce qu’elle change, en cinq idées
 
 1. **L’origine de chaque donnée est déclarée**, champ par champ : observée, déduite ou reconstruite, lue directement ou copiée depuis une autre source.
 2. **Celui qui reçoit dit ce qu’il a fait** de chaque donnée. Porter une information n’est pas l’avoir observée.
 3. **Le recalcul à l’aveugle** : une valeur peut être scellée, pour que la suivante la recalcule sans la voir. On distingue ainsi celle qui a vérifié de celle qui a recopié.
 4. **Un désaccord garde sa source.** Le statut d’une affirmation dépend de la source qui fait foi, et une objection mal sourcée reste visible sans pouvoir effacer une information juste.
+5. **Comment la valeur a été obtenue** (version 0.3) : mesurée, citée, recopiée, calculée ou ajustée sur une autre. Une valeur ajustée ne sert jamais de preuve, et n’importe qui peut rejouer une valeur à partir de sa source pour voir si elle revient.
 
 ## Ce qui lui manque pour sortir du brouillon
 
