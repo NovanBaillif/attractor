@@ -12,18 +12,15 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.5 (la 1.0.6 attend)
+## Version en ligne : 1.0.6
 
-**La 1.0.6 est prête, pas en production** : aperçu `dpl_AXeNHP2km3xc7BQvF76bbH9KFVgj` (https://attractor-observatory-demo-cdwaam0gu-novanbaillifs-projects.vercel.app), 38 sur 38 sans erreur, conformité 14 sur 14. Protocole E12 publié dans le journal, norme 0.3.1 sur le site, 31 messages épinglés.
+Mise en production le 16/09 sur la phrase de Novan : commit `aca94de` (étiquette `v1.0.6`), déploiement `dpl_3SyqFxUfQvud2Jp8qsnkaFnuxHPv`, 38 contrôles sur 38 sans erreur, conformité 14 sur 14, accessibilité sans défaut. Protocole E12 publié ; la page des écosystèmes montre ce qui se passe dans chaque réseau.
 
-**La norme 0.3.1 est prête, pas publiée** : commit `976759d` du dépôt `attractor-cooperation`, 112 cas, 21 mutants sur 21. Messages prêts : `civilisation/convention/v0.3/DRAFT-REPLY-84-0.3.1.md`, `DRAFT-85-REPLAY.md`, `DRAFT-MOLTBOOK-0.3.1.md`.
+Norme 0.3.1 publiée le 16/09 (étiquette `v0.3.1-draft`, 112 cas) et annoncée sur #84, #85 et Moltbook. Les trois envois sont versés dans le fil : 34 messages épinglés, qui s’afficheront sur le site à la version suivante.
 
-**Expérience E12** : rejeu de l'étape quatre de terminator2 par les agents non-Claude d'AI Village (#85). Codex est installé (extension VS Code d'OpenAI, `codex.exe` 0.154) mais l'espace de travail n'a plus de crédits : pas de rejeu par Codex sans dépense décidée par Novan. Échéance du protocole : 30/09.
+### 1.0.5
 
-
-Mise en production le 16/09 sur la phrase de Novan : commit `b1baa7a` (étiquette `v1.0.5`), déploiement `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp`, 38 contrôles sur 38 sans erreur ni requête échouée, conformité 14 sur 14 en production. Recherche du registre réparée, cookie de session déclaré, 28 messages épinglés.
-
-Norme 0.3 publiée le 16/09 (étiquette `v0.3-draft`, 106 cas) et annoncée sur AI Village #84 et sur Moltbook.
+Commit `b1baa7a`, déploiement `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp` : recherche du registre réparée, cookie déclaré.
 
 ### 1.0.4
 
@@ -52,11 +49,11 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.5 `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp`. Précédente : 1.0.4 `dpl_8zDYcvsyEc8eap3zatYnYtxxTeCV` (retour arrière possible) |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.6 `dpl_3SyqFxUfQvud2Jp8qsnkaFnuxHPv`. Précédente : 1.0.5 `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
-| Fil commun | /conversation, /api/v3/thread | 28 messages épinglés, dont 9 venus de Moltbook. Le fil public est paginé par 20 |
+| Fil commun | /conversation, /api/v3/thread | 34 messages épinglés, dont 12 venus de Moltbook. Le fil public est paginé par 20 ; les trois derniers envois s’afficheront sur le site à la version suivante |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
-| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.3-draft` publiée le 16/09 : 106 cas, dérivation de chaque valeur, contrôle de rejeu, cas de terminator2 sur les révisions sans retour. Précédente : `v0.2.1-draft` (81 cas) |
+| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.3.1-draft` publiée le 16/09 : 112 cas ; le rejeu déclare sa famille de modèle, un résultat qui repose sur une valeur non déclarée porte `limits`, `approvedBy` nomme qui a approuvé un ajustement. Précédente : `v0.3-draft` (106 cas) |
 | Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit et validé par Novan le 15/09 au soir (statut « claimed »). Clé dans `.vercel/moltbook-agent.json`. Premier message publié le 15/09 à 19 h 17 UTC dans la communauté « memory » : https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91 ; six commentaires, quatre versés dans le fil (eliezerdedun, prismdeadlines, heychat, midearthherald), deux écartés (compliment vide ; publicité avec instructions pour agents). Notre réponse publiée le 15/09 à 19 h 56 UTC sous le message et versée dans le fil (publication par `node registry/moltbook-post.mjs post|verify`, un défi de calcul à résoudre en 5 minutes ; 10 échecs de suite suspendent le compte) |
 | Paquet Machine Commons | https://github.com/NovanBaillif/attractor-machine-commons | Dossier `distribution/`, dépôt git à part |
 | Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples et un cas ouvert ; nos réponses du 15/09 à 14 h 35 et 18 h 24 UTC |
@@ -98,7 +95,6 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 ## Ce qui attend Novan
 
 - Les notifications GitHub vers sa messagerie deviennent NÉCESSAIRES : les tickets de contact et de signalement doivent lui parvenir (point 8 de la Vigie).
-- Sa phrase pour publier la 0.3.1, poster sur le fil 84, le ticket 85 et Moltbook, et mettre la 1.0.6 en production.
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 

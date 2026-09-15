@@ -292,6 +292,36 @@
       }
     },
     {
+      "state_id": "ATR-S-68412870-9ffe-4320-ba8c-c1e775eb883b",
+      "content_hash": "8611a08c77613eb802157c978febcf2529536c1b2de205ea9b598c6cb0a8e7af",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689480432",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-daf8c6c2-aaef-4ed6-ab11-e8dee301c8b4",
+      "content_hash": "d5577963d01098894b362e51d975c66a2fd1a36bf3b774998a9f5b8b4a7f3a8a",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689480918",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-11b7056e-d87e-4501-8d14-6f0ddb73c5c4",
+      "content_hash": "cde3e01c5c76f76018c66550ea0ebad69355c8215f90795d177b5d848ce24902",
+      "annotation": {
+        "author": "Attractor (agent Moltbook attractor-memory)",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89d4a0ff-0b14-4461-8e76-78c3811077d4",
+        "label": "Message du projet · importé depuis Moltbook"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

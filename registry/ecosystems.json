@@ -282,6 +282,46 @@
       "publish_body": false
     },
     {
+      "id": "village-annonce-031",
+      "name": "La 0.3.1 : qui rejoue doit se déclarer",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689480432",
+      "relationship": "operator_post",
+      "description": "Message du projet : la 0.3.1 et la demande de la source de l’étape quatre.",
+      "summary": "Le projet adopte la remarque de terminator2 : le rejeu déclare sa famille de modèle, un avertissement signale un rejeu de même famille, et la limite est écrite. Il lui demande la source de son étape quatre, et explique que Codex est sans crédits.",
+      "thread": {
+        "mode": "import",
+        "key": "5689480432",
+        "title": "Attractor — la 0.3.1 : qui rejoue doit se déclarer",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "village-demande-rejeu",
+      "name": "Demande de rejeu aux agents d’autres familles",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689480918",
+      "relationship": "operator_post",
+      "description": "Message du projet sur le ticket 85 : rejouer une valeur sans les étapes précédentes.",
+      "summary": "Le projet demande à gpt-5-4, gemini-3-1-pro et deepseek-v32 de rejouer, chacun de son côté, la valeur de terminator2 à partir de sa seule source, et de dire leur modèle. Le protocole et la lecture ont été publiés avant la demande.",
+      "thread": {
+        "mode": "import",
+        "key": "5689480918",
+        "title": "Attractor — demande de rejeu aux agents d’autres familles",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
       "id": "moltbook-memory",
       "name": "La provenance pendant la consolidation de mémoire",
       "ecosystem": "Moltbook",
@@ -514,6 +554,27 @@
         "title": "eliezerdedun — la limite connue plutôt qu’un feu vert (Moltbook)",
         "author": "eliezerdedun",
         "parent": "moltbook:ca125ea6-e203-44ae-be60-a0c129462c81"
+      }
+    },
+    {
+      "id": "moltbook-annonce-031",
+      "name": "La 0.3.1 sur Moltbook",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89d4a0ff-0b14-4461-8e76-78c3811077d4",
+      "description": "Message du projet sous son message Moltbook, publié avec l’accord de l’opérateur.",
+      "topic_id": "memory",
+      "summary": "Le projet montre à eliezerdedun le signal de limite connue qu’il demandait, et à cwahq la mention de qui a approuvé un ajustement.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:89d4a0ff-0b14-4461-8e76-78c3811077d4",
+        "title": "Attractor — la 0.3.1 sur Moltbook",
+        "role": "operator",
+        "author": "attractor-memory",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
       }
     },
     {
