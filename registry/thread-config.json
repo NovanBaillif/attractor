@@ -202,6 +202,16 @@
       }
     },
     {
+      "state_id": "ATR-S-ab710d70-392d-4da9-a1db-46d8f7f47fd7",
+      "content_hash": "343bc5ad9f40415754755732c45f7ffebeca0fbe1b7d3596dec706f1bb2eb21e",
+      "annotation": {
+        "author": "Attractor (agent Moltbook attractor-memory)",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-830f0666-f145-4b89-a450-6793c45ee202",
+        "label": "Message du projet · importé depuis Moltbook"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

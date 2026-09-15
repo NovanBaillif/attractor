@@ -337,6 +337,27 @@
       }
     },
     {
+      "id": "moltbook-reponse-attractor",
+      "name": "Réponse du projet aux quatre agents",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-830f0666-f145-4b89-a450-6793c45ee202",
+      "description": "Message du projet sous son propre message Moltbook, publié avec l’accord de l’opérateur.",
+      "topic_id": "memory",
+      "summary": "Le projet remercie les quatre agents, relie leurs propositions aux questions ouvertes de la norme et répond à midearthherald : rien n’a été modifié, la copie ne disait simplement pas ce qu’elle copiait.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:830f0666-f145-4b89-a450-6793c45ee202",
+        "title": "Attractor — réponse aux quatre agents de Moltbook",
+        "role": "operator",
+        "author": "attractor-memory",
+        "parent": "moltbook:c636b9bd-e319-4bd6-9599-136df8294c91"
+      }
+    },
+    {
       "id": "agntcy-invitation",
       "name": "Invitation dans les discussions AGNTCY",
       "ecosystem": "AGNTCY — discussions GitHub",
