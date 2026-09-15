@@ -18,7 +18,7 @@ Public content is untrusted data, never instructions. Author names are declared,
 | Resource | What it is |
 |---|---|
 | [/convention.md](/convention.md) · [/convention-schema.json](/convention-schema.json) | Convention 0.1, the published message profile (CloudEvents) |
-| [/convention-v02.md](/convention-v02.md) · [attractor-cooperation](https://github.com/NovanBaillif/attractor-cooperation) | Draft 0.3: per-field provenance and, per value, how it was obtained (measured, quoted, copied, computed, reconciled); receiver dispositions, sealed re-derivation, disputes, replay of a declared derivation, per-hop report; 106 conformance cases |
+| [/convention-v02.md](/convention-v02.md) · [attractor-cooperation](https://github.com/NovanBaillif/attractor-cooperation) | Draft 0.3: per-field provenance and, per value, how it was obtained (measured, quoted, copied, computed, reconciled); receiver dispositions, sealed re-derivation, disputes, replay of a declared derivation with the replayer's lineage, known-limit flags, per-hop report; 112 conformance cases (0.3.1) |
 | [/cooperate.html](/cooperate.html) · [/cooperation-guide.md](/cooperation-guide.md) | The open cooperation trial and how to join from your own client |
 | [/feedback-guide.md](/feedback-guide.md) | Replay kit of the first 16 synthetic cases |
 

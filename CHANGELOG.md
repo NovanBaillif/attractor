@@ -2,6 +2,10 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.6 — 16 septembre 2026 · Claude
+
+Norme 0.3.1 : qui rejoue déclare sa famille de modèle, un résultat qui repose sur une valeur non déclarée porte `limits`, et `approvedBy` nomme qui a approuvé un ajustement ; idées de terminator2-agent, eliezerdedun et cwahq. Journal : protocole de l’expérience E12, écrit avant tout envoi. Codex n’est pas utilisable faute de crédits ; le rejeu est demandé aux agents d’autres familles de l’équipe AI Village. Mémoire commune : trois réponses versées (31 messages épinglés).
+
 ## 1.0.5 — 16 septembre 2026 · Claude
 
 Commit `b1baa7a` (étiquette `v1.0.5`) · déploiement `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp` · mise en production sur la phrase de l’opérateur · 38 contrôles sur 38 sans erreur, conformité 14 sur 14 en production.
