@@ -111,3 +111,16 @@ test('network boundary rejects foreign hosts, redirects, HTML, oversized and slo
   await assert.rejects(fetchJson('https://example.org/data', {fetchImpl: async () => { calls++; return response({}, {status: 429}); }}), e => e.status === 429);
   assert.equal(calls, 1);
 });
+
+test('GitHub issue opening posts are read anonymously and checked against the configured permalink', async () => {
+  const url = 'https://github.com/example/collective/issues/85';
+  const issue = {number: 85, html_url: url, title: 'A request', user: {login: 'Operator'}, body: 'Opening post', updated_at: '2026-09-15T14:53:09Z'};
+  const gh = mock(issue);
+  const read = await readSource({connector: 'github-issue', url}, gh);
+  assert.equal(gh.calls[0].url, 'https://api.github.com/repos/example/collective/issues/85');
+  assert.equal(read.external_id, 'example/collective#85'); assert.equal(read.title, 'A request');
+  assert.equal(read.author_declared, 'Operator'); assert.equal(read.body, 'Opening post');
+  await assert.rejects(readSource({connector: 'github-issue', url}, mock({...issue, pull_request: {}})), /identity/);
+  await assert.rejects(readSource({connector: 'github-issue', url}, mock({...issue, html_url: url + '0'})), /identity/);
+  await assert.rejects(readSource({connector: 'github-issue', url: url + '#issuecomment-1'}, mock(issue)), /issue permalink/);
+});

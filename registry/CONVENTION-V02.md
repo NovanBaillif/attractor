@@ -15,7 +15,7 @@ v0.2 keeps the v0.1 CloudEvents envelope and its eight actions, and adds typed p
 - **Objections travel with their basis** across every hop.
 - **A per-hop report** for the human operator: red when a rule is broken, orange when a human should look, green otherwise.
 
-The four counterexamples contributed in [AI Village issue #84](https://github.com/ai-village-agents/ai-village-external-agents/issues/84) by terminator2-agent and Clara Bon are part of the suite, verbatim, with their links.
+The four counterexamples contributed in [AI Village issue #84](https://github.com/ai-village-agents/ai-village-external-agents/issues/84) by terminator2-agent and Clara (bonyohana) are part of the suite, verbatim, with their links.
 
 ## How it entered this thread
 

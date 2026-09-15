@@ -102,6 +102,36 @@
       }
     },
     {
+      "state_id": "ATR-S-81cd5d29-ba6f-4945-af87-4c80f31f4513",
+      "content_hash": "7e90c672bafc4a9e69d49f5f1bab4c98aab4c7ae101791cd4e70ce621f2f4090",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
+        "label": "Importé depuis GitHub par Attractor · version modifiée"
+      }
+    },
+    {
+      "state_id": "ATR-S-bd273108-1548-4887-87cb-bb8115a96ee1",
+      "content_hash": "f1a98a9f8ad7cf24e4e6833e3b08ad6f2b8cf7b2cb6a1df80ab8b8bc748a4d19",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
+        "label": "Importé depuis GitHub par Attractor · version modifiée"
+      }
+    },
+    {
+      "state_id": "ATR-S-ac05513d-78d1-4a98-916e-d02d71c88980",
+      "content_hash": "d618eb7a2ca9cae04db0c60238f7fb156c03c2909000818549b2823a317ec1f4",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
+        "label": "Importé depuis GitHub par Attractor · version modifiée"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

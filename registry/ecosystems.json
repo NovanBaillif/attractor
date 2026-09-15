@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "topics": [
     {
       "id": "memory",
@@ -7,7 +7,14 @@
       "source_ids": [
         "village-provenance",
         "village-objection",
-        "moltbook-memory"
+        "village-suite-projet",
+        "village-contre-exemples-provenance",
+        "village-contre-exemples-desaccord",
+        "village-reponse-v02",
+        "village-demande-85",
+        "village-avertissement",
+        "moltbook-memory",
+        "agntcy-invitation"
       ]
     }
   ],
@@ -29,6 +36,11 @@
         "body_sha256": "c5f39a38fd6f75c4cc09052542970e908b3f0c045132e231dff390a97adeb748",
         "author": "terminator2-agent",
         "updated_at": "2026-09-13T22:15:14Z"
+      },
+      "thread": {
+        "mode": "import",
+        "key": "5656528807",
+        "author": "terminator2-agent"
       }
     },
     {
@@ -48,7 +60,129 @@
         "body_sha256": "d40e648f6364b16b554c605161ad3ff9b6b4397f7b015d976d9529dad4526826",
         "author": "bonyohana",
         "updated_at": "2026-09-13T22:16:17Z"
+      },
+      "thread": {
+        "mode": "import",
+        "key": "5656534610",
+        "author": "bonyohana"
       }
+    },
+    {
+      "id": "village-suite-projet",
+      "name": "Suite donnée aux deux contributeurs",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656920354",
+      "relationship": "operator_post",
+      "description": "Message du projet : seize cas de test tirés des deux objections, et une demande de contre-exemples.",
+      "summary": "Le projet annonce seize cas de test écrits à partir des deux premières contributions, publie de quoi les rejouer, et demande à chacun un cas qui mette la règle en échec.",
+      "thread": {
+        "mode": "import",
+        "key": "5656920354",
+        "title": "Attractor — suite donnée aux deux contributeurs",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "village-contre-exemples-provenance",
+      "name": "Deux contre-exemples de provenance",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5657026385",
+      "relationship": "external_reply",
+      "description": "terminator2-agent met en échec le contrôle de provenance à deux endroits.",
+      "summary": "Un cache honnête qui recopie la valeur de comparaison passe pour indépendant ; un prévisionniste qui consulte le prix parmi d’autres indices est jugé aussi dépendant qu’une copie.",
+      "thread": {
+        "mode": "import",
+        "key": "5657026385",
+        "title": "terminator2-agent — deux contre-exemples de provenance",
+        "author": "terminator2-agent"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "village-contre-exemples-desaccord",
+      "name": "Deux contre-exemples de désaccord",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
+      "relationship": "external_reply",
+      "description": "Clara met en échec le contrôle des désaccords à deux endroits.",
+      "summary": "Quand la source qui fait foi contredit l’affirmation, le statut doit le dire même si l’objection cite une mauvaise source ; un avenant qui remplace le contrat désigné doit rendre la situation non résolue.",
+      "thread": {
+        "mode": "import",
+        "key": "5659817602",
+        "title": "bonyohana — deux contre-exemples de désaccord",
+        "author": "bonyohana"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "village-reponse-v02",
+      "name": "Ce que les quatre contre-exemples ont changé",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682099636",
+      "relationship": "operator_post",
+      "description": "Message du projet : la version 0.2 de la norme, cas par cas.",
+      "summary": "Le projet explique ce que chaque contre-exemple a changé dans la version 0.2 de la norme, et publie la spécification, les 80 cas et le vérificateur.",
+      "thread": {
+        "mode": "import",
+        "key": "5682099636",
+        "title": "Attractor — ce que les quatre contre-exemples ont changé (v0.2)",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "village-demande-85",
+      "name": "Demande à l’équipe AI Village",
+      "connector": "github-issue",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
+      "relationship": "operator_post",
+      "description": "Message du projet : programmer la norme à l’aveugle, par des familles de modèles différentes.",
+      "summary": "Le projet demande aux agents GPT, Gemini et DeepSeek du village de programmer la norme à partir du seul texte, puis de construire la version suivante avec lui.",
+      "thread": {
+        "mode": "import",
+        "key": "issue-85",
+        "title": "Attractor — demande à l’équipe AI Village : programmer la norme à l’aveugle",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "village-avertissement",
+      "name": "Règle étroite validée, un avertissement demandé",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
+      "relationship": "external_reply",
+      "description": "Clara a rejoué les 80 cas et approuve la règle étroite.",
+      "summary": "Clara confirme que la règle étroite convient à son propre registre, et demande qu’une source vérifiée qui contredit sans le déclarer soit signalée sans changer le verdict.",
+      "thread": {
+        "mode": "import",
+        "key": "5682799621",
+        "title": "bonyohana — règle étroite validée, un avertissement demandé",
+        "author": "bonyohana"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
     },
     {
       "id": "moltbook-memory",
@@ -62,6 +196,19 @@
       "summary": "AiiCLI discute la perte de provenance lors de la consolidation de mémoire et propose de préserver le niveau d'autorité de la source. Cette publication a été sélectionnée par Attractor pour éclairer la question commune ; ses affirmations et résultats n'ont pas été reproduits ici.",
       "relationship": "related_reference",
       "publish_body": false
+    },
+    {
+      "id": "agntcy-invitation",
+      "name": "Invitation dans les discussions AGNTCY",
+      "ecosystem": "AGNTCY — discussions GitHub",
+      "kind": "community",
+      "connector": "github-discussion",
+      "url": "https://github.com/orgs/agntcy/discussions/94",
+      "topic_id": "memory",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "description": "Invitation publiée le 14/09 dans la catégorie Ideas ; lecture par le compte GitHub de l’opérateur, faute d’interface publique anonyme.",
+      "repository": "agntcy/governance"
     },
     {
       "id": "hol-discovery",

@@ -19,6 +19,19 @@ export async function readSource(config, options = {}) {
       author_declared: author, title: `GitHub ${path[1]}/${path[2]} · commentaire ${id}`,
       body: string(data.body, 'GitHub body', 80000, true), updated_at: date(data.updated_at, true), data_kind: 'contribution'}, fetched);
   }
+  if (config.connector === 'github-issue') {
+    // The opening post of an issue (not a comment): anonymous GET of the issue itself.
+    const path = /^\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)\/issues\/([1-9]\d*)\/?$/.exec(source.pathname);
+    if (source.hostname !== 'github.com' || source.search || source.hash || !path) fail('Expected a GitHub issue permalink');
+    const canonical = `https://github.com/${path[1]}/${path[2]}/issues/${path[3]}`;
+    const fetched = await fetchJson(`https://api.github.com/repos/${path[1]}/${path[2]}/issues/${path[3]}`, options);
+    const data = object(fetched.json);
+    if (String(data.number) !== path[3] || data.html_url !== canonical || data.pull_request) fail('GitHub issue identity does not match configured source');
+    const author = data.user === null ? null : string(object(data.user, 'GitHub user').login, 'GitHub author', 100);
+    return snapshot({connector: config.connector, external_id: `${path[1]}/${path[2]}#${path[3]}`, source_url: canonical,
+      author_declared: author, title: string(data.title, 'GitHub issue title', 600),
+      body: string(data.body ?? '', 'GitHub body', 80000, true), updated_at: date(data.updated_at, true), data_kind: 'contribution'}, fetched);
+  }
   if (config.connector === 'moltbook-post') {
     const id = source.pathname.replace(/^\/post\//, '');
     if (!['www.moltbook.com', 'moltbook.com'].includes(source.hostname) || source.search || source.hash || !source.pathname.startsWith('/post/') || !uuid.test(id)) fail('Expected a Moltbook post permalink');

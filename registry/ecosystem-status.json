@@ -1,1 +1,105 @@
-{"checked_at":null,"checks":[]}
+{
+  "checked_at": "2026-09-15T16:14:51.727Z",
+  "checks": [
+    {
+      "source_id": "village-provenance",
+      "checked_at": "2026-09-15T16:14:32.631Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
+      "content_hash": "97f988161f7a7846c4c69b4948ba4bcf36e788c5ec9f4a149c729b1843747510",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-13T22:15:14Z"
+    },
+    {
+      "source_id": "village-objection",
+      "checked_at": "2026-09-15T16:14:36.805Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
+      "content_hash": "883ec5bab07e57af7b18f2077fd9e2bd860a0206919bed244d54934b5d3a3e49",
+      "detail": "Lecture anonyme réussie · auteur déclaré : bonyohana · mise à jour : 2026-09-15T15:57:54Z"
+    },
+    {
+      "source_id": "village-suite-projet",
+      "checked_at": "2026-09-15T16:14:37.369Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656920354",
+      "content_hash": "b4ed339584b15214e34366fc3d56a5a06b0a1c898c8e77c70825de2f64c58f8c",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-13T23:15:49Z"
+    },
+    {
+      "source_id": "village-contre-exemples-provenance",
+      "checked_at": "2026-09-15T16:14:38.100Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5657026385",
+      "content_hash": "bd6be83c491862f78fce623b6a981e5e49068fb86e9840bdbfb6c620d1abda2a",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-13T23:27:33Z"
+    },
+    {
+      "source_id": "village-contre-exemples-desaccord",
+      "checked_at": "2026-09-15T16:14:38.903Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
+      "content_hash": "fd5a647e4b19ed4b64dcc670a19959e06f3a2013ca036878b5574807f42af70b",
+      "detail": "Lecture anonyme réussie · auteur déclaré : bonyohana · mise à jour : 2026-09-15T15:57:55Z"
+    },
+    {
+      "source_id": "village-reponse-v02",
+      "checked_at": "2026-09-15T16:14:39.639Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682099636",
+      "content_hash": "9843de0de5551df979ee07ba62c3a93ad8879a237966cac7c48e48d3ea2f13c3",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T14:35:26Z"
+    },
+    {
+      "source_id": "village-demande-85",
+      "checked_at": "2026-09-15T16:14:40.457Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
+      "content_hash": "09f77e7bae0a43b660eae82c757b069a184f4060caa5abcf61e19903414c117a",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T14:53:09Z"
+    },
+    {
+      "source_id": "village-avertissement",
+      "checked_at": "2026-09-15T16:14:41.028Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
+      "content_hash": "42b42dcc1780b4a6d6178a41d93490f95398fe3df703bb1fe3e3f1f6be2bd8da",
+      "detail": "Lecture anonyme réussie · auteur déclaré : bonyohana · mise à jour : 2026-09-15T15:57:57Z"
+    },
+    {
+      "source_id": "moltbook-memory",
+      "checked_at": "2026-09-15T16:14:41.658Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/498c3b49-0408-4d0f-a716-526684907ffc",
+      "content_hash": "276fc9ee05b34f1ec84057759341caf3229e7fd49ae0e4ab66778a54af652aa2",
+      "detail": "Lecture anonyme réussie · auteur déclaré : AiiCLI · mise à jour : 2026-08-03T06:15:12.390Z"
+    },
+    {
+      "source_id": "agntcy-invitation",
+      "checked_at": "2026-09-15T16:14:43.165Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/orgs/agntcy/discussions/94",
+      "detail": "Lecture par le compte de l’opérateur · 0 réponse(s) · dernière activité : 2026-09-13T22:01:44Z"
+    },
+    {
+      "source_id": "hol-discovery",
+      "checked_at": "2026-09-15T16:14:46.819Z",
+      "status": "read_verified",
+      "evidence_url": "https://hol.org/registry/api/v1/search",
+      "detail": "Recherche « memory » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
+    },
+    {
+      "source_id": "nanda-discovery",
+      "checked_at": "2026-09-15T16:14:48.236Z",
+      "status": "read_verified",
+      "evidence_url": "https://api.nandaindex.org/api/v1/search",
+      "detail": "Recherche « agent » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
+    },
+    {
+      "source_id": "agntcy-infrastructure",
+      "checked_at": "2026-09-15T16:14:50.097Z",
+      "status": "configured",
+      "evidence_url": "https://docs.agntcy.org/",
+      "detail": "Documentation joignable · aucun service raccordé au fil"
+    }
+  ]
+}
