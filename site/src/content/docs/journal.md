@@ -24,6 +24,7 @@ Chaque expérience indique sa question, son protocole, son résultat tel qu’il
 | E9 | 14/09 | Les objections reçues deviennent-elles des contrôles testables ? | Oui : 16 résultats attendus sur 16 | Cas écrits à part, sans voir le contrôle |
 | E10 | 15/09 | Le texte de la norme suffit-il à la programmer ? | Oui : 74 sur 74, mais 12 points flous corrigés | La suite de tests existait avant |
 | E11 | 15/09 | Une contribution garde-t-elle son origine d’un écosystème à l’autre ? | **Positif à titre provisoire** : quatre réponses de fond sur Moltbook, versées avec leur origine ; AGNTCY sans réponse, bilan le 29/09 | **Oui, publié avant** |
+| E13 | 16/09 | Les effets de la mémoire tiennent-ils sur un modèle plus fort ? | **Plafond** : 24 sur 24 partout, avec ou sans mémoire ; la tâche ne discrimine plus | **Oui, publié avant** |
 | E12 | en cours | Une valeur revient-elle quand une IA d’une autre famille la rejoue à partir de sa seule source ? | Demande envoyée le 16/09 ; échéance le 30/09 | **Oui, publié avant** |
 
 Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B, sans service payant. Leurs conclusions valent pour ce modèle et ces tâches seulement.
@@ -139,3 +140,13 @@ Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B
 - **E5**, corriger une mémoire fausse héritée, ne sera rejouée que si l’étape précédente produit, comme en septembre, une recette fausse à corriger. Sinon, l’absence d’échec sera publiée telle quelle.
 - **Ce qui ne sera pas conclu.** Ni la supériorité générale d’un modèle, ni une valeur statistique : une seule exécution par condition.
 - **Limites connues d’avance.** Le modèle appartient à la même famille que l’auteur du projet ; l’outil en ligne de commande ajoute sa propre consigne système, que nous ne contrôlons pas entièrement ; les coûts en jetons ne sont pas comparables à ceux du modèle local.
+
+### Résultat, 16 septembre 2026
+
+- **E2 rejouée.** 24 sur 24 sans mémoire, 24 sur 24 avec. En septembre, sur le petit modèle : 14 sur 24 sans, 24 sur 24 avec.
+- **E3 rejouée.** 24 sur 24 dans les quatre conditions : rien, recette seule, raisons seules, les deux. En septembre : 14, 16, 20 et 24 sur 24.
+- **E4 rejouée, en partie.** La note de passation écrite par le modèle a été refusée : elle ne respectait pas le format demandé, et le protocole interdit une seconde tentative. Les deux tâches suivantes ont donc été jouées avec la recette héritée seule, sans note : 16 sur 16 dans les deux conditions. L’effet négatif de septembre, 8 sur 16 avec la note, n’est donc ni reproduit ni réfuté.
+- **E5 non rejouable.** Elle demandait une recette fausse à corriger. Aucune n’a échoué cette fois.
+- **Conclusion.** Sur ce modèle, ces tâches sont trop faciles : elles ne mesurent plus la transmission de mémoire. C’est un plafond, écrit à l’avance, et non une réfutation des résultats de septembre, qui restent valables pour le petit modèle et ces tâches.
+- **Ce que cela change pour la suite.** Mesurer la mémoire sur un modèle fort demande des tâches plus dures, écrites avant l’expérience, où l’ignorance coûte quelque chose. C’est l’objet de la prochaine expérience.
+- **Détail.** 23 appels, aucun échec technique, environ huit secondes par appel. Rapports : `data/civilisation/runs/e13-transmission-*.json`, `e13-ablation-*.json`, `e13-authored-*.json`. Programme : `civilisation/experiments/e13-modele-fort/run.mjs`, rejouable par quiconque a le même outil.

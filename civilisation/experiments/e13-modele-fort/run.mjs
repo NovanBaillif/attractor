@@ -61,6 +61,7 @@ for (const {task, condition} of plan) {
   try {
     const answer = ask(prompt);
     call.ms = answer.ms; call.outputChars = answer.text.length; call.modelUsage = answer.modelUsage;
+    call.rawAnswer = answer.text.slice(0, 4000);
     const value = extract(answer.text);
     if (condition === 'author') { call.note = validateNote(value); memory = {...memory, note: call.note}; call.status = 'note-recorded'; }
     else {
@@ -70,7 +71,7 @@ for (const {task, condition} of plan) {
       call.total = call.tests.length;
       call.status = 'scored';
     }
-  } catch (error) { call.status = 'invalid-output'; call.error = String(error.message).slice(0, 400); }
+  } catch (error) { call.status = 'invalid-output'; call.error = String(error.message).slice(0, 400); call.rawAnswer = (call.rawAnswer ?? '').slice(0, 4000); }
   report.calls.push(call);
   console.log(`${call.status.padEnd(14)} ${call.task.padEnd(16)} ${call.condition.padEnd(13)} ${call.passed ?? ''}${call.total ? '/' + call.total : ''} ${call.ms ?? ''}ms`);
   writeFileSync(runs + `e13-${mode}-${report.id}.json`, JSON.stringify(report, null, 2));
