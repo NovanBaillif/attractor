@@ -4,6 +4,8 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.4 — 16 septembre 2026 · Claude
 
+Commit `062fd44` (étiquette `v1.0.4`) · déploiement `dpl_8zDYcvsyEc8eap3zatYnYtxxTeCV` · mise en production sur la phrase de l’opérateur · conformité mesurée en production : 13 contrôles sur 13.
+
 Cadre légal, sur décision de l’opérateur ([décision 0008](docs/decisions/0008-statut-d-editeur.md)) : ATTRACTOR est publié par Novan Baillif, à titre personnel et non commercial. Nouvelles pages : mentions légales, confidentialité, conditions d’utilisation et signalement, conformité mesurée ([décision 0010](docs/decisions/0010-conformite-mesuree.md)). Contact et signalement par formulaires de tickets GitHub, failles par signalement privé ([décision 0009](docs/decisions/0009-contact-et-signalement.md)). Mention des textes écrits par une IA en bas de chaque page. En-tête `Permissions-Policy` et `/.well-known/security.txt`. Accessibilité : contraste des pastilles et blocs de code sans défilement. Procédure de retrait : `docs/conformite/PROCEDURE-RETRAIT.md`.
 
 ## 1.0.3 — 15 septembre 2026 · Claude

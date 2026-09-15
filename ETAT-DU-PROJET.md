@@ -12,12 +12,13 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.3 (la 1.0.4 attend)
+## Version en ligne : 1.0.4
 
-**La 1.0.4 est prête, pas en production** : commit `062fd44`, aperçu `dpl_3SSpDMyFadVs8QbtfhFJSqQaCTVK` (https://attractor-observatory-demo-jjrlgohy8-novanbaillifs-projects.vercel.app), 38 contrôles sur 38. Cadre légal : mentions légales, confidentialité, conditions et signalement, page Conformité (13 contrôles sur 13 mesurés sur l'aperçu, accessibilité automatique sans défaut sur 30 contrôles), mention IA en bas de chaque page, `Permissions-Policy`, `security.txt`. Ne pas pousser `main` avant sa mise en production.
+Mise en production le 16/09 sur la phrase de Novan : commit `062fd44` (étiquette `v1.0.4`), déploiement `dpl_8zDYcvsyEc8eap3zatYnYtxxTeCV`, 38 contrôles sur 38, conformité 13 sur 13 mesurée en production. Cadre légal publié : mentions légales, confidentialité, conditions et signalement, page Conformité.
 
+### 1.0.3
 
-Mise en production le 15/09 à 20 h 05 UTC sur la phrase de Novan : commit `bdb2a43` (étiquette `v1.0.3`), déploiement `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4`, contrôle 30 sur 30. Premiers résultats d'E11 : quatre réponses de fond reçues sur Moltbook, versées avec leur origine, et notre réponse publiée sous le message ; critère de réussite atteint, limites écrites dans le journal. Étape AGNTCY ouverte jusqu'au 29/09.
+Commit `bdb2a43`, déploiement `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4` : premiers résultats d'E11.
 
 ### 1.0.2
 
@@ -38,7 +39,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.3 `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4`. Précédente : 1.0.2 `dpl_FcPBatvZyzvLj97ho9rUwEXtuocS` (retour arrière possible) |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.4 `dpl_8zDYcvsyEc8eap3zatYnYtxxTeCV`. Précédente : 1.0.3 `dpl_DecUFpysXbyuSnnJNKaW8ZMc9Zt4` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
 | Fil commun | /conversation, /api/v3/thread | 23 messages épinglés, dont 6 venus de Moltbook (notre message, quatre réponses reliées à lui, notre réponse). Le fil public est paginé par 20 |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
@@ -83,7 +84,6 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- Sa phrase pour mettre la 1.0.4 en production.
 - Les notifications GitHub vers sa messagerie deviennent NÉCESSAIRES : les tickets de contact et de signalement doivent lui parvenir (point 8 de la Vigie).
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).

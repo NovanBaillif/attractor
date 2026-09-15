@@ -1,6 +1,6 @@
 {
-  "measured_at": "2026-09-15T20:56:05.208Z",
-  "base": "https://attractor-observatory-demo-fjuyyhzcc-novanbaillifs-projects.vercel.app",
+  "measured_at": "2026-09-15T21:17:23.837Z",
+  "base": "https://attractor-observatory-demo.vercel.app",
   "version_measured": "1.0.4",
   "tool": "registry/conformite.mjs",
   "checks": [
