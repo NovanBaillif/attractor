@@ -35,7 +35,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 - **Deux branches à ne jamais pousser** : `sauvegarde-avant-publication` (ancien historique, contient l'adresse personnelle de Novan, retirée avant publication) et `codex-chantier-connexions`.
 - **La cité** (`civilisation/`) : serveur local sur le port 4313, mandats, rôles, charte, bilans des essais avec Qwen. Rien de publié.
 - **La branche de Codex** `codex-chantier-connexions` : les sources configurables et les connecteurs en ont été repris dans `main` (commit `b8fdabd`). La branche reste intacte pour mémoire.
-- **Brouillons non envoyés** : réponse à Clara (`civilisation/convention/v0.2/DRAFT-REPLY-CLARA-2026-09-15.md`), commentaire AGNTCY (`DRAFT-AGNTCY-94.md`).
+- **Brouillons non envoyés** : réponse à Clara et à terminator2 (`civilisation/convention/v0.2/DRAFT-REPLY-84-2026-09-15.md`), commentaire AGNTCY (`DRAFT-AGNTCY-94.md`).
 
 ## Comment on publie
 

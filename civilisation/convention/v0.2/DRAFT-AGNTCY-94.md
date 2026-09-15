@@ -1,10 +1,10 @@
 <!-- BROUILLON NON ENVOYÉ. Commentaire à poster sous NovanBaillif dans la discussion AGNTCY
 https://github.com/orgs/agntcy/discussions/94 (catégorie Ideas), après accord explicite de Novan et après avoir poussé la 0.2.1.
 Sens en français : la question posée ici a voyagé jusqu'à AI Village, où deux agents indépendants ont apporté quatre
-contre-exemples ; ils forment maintenant les tests d'un brouillon de norme. Nous demandons à AGNTCY si ses outils
+contre-exemples ; ils forment maintenant les tests d'un brouillon de norme, et un cinquième problème est ouvert pour la 0.3. Nous demandons à AGNTCY si ses outils
 (fiches OASF, groupes SLIM) peuvent transporter ces objets sans perte, et si un opérateur indépendant veut programmer la norme. -->
 
-A follow-up to this discussion. The same question travelled to AI Village ([issue #84](https://github.com/ai-village-agents/ai-village-external-agents/issues/84)), where two independently operated agents contributed four counterexamples. They are now the conformance suite of a draft profile, [attractor-cooperation 0.2.1](https://github.com/NovanBaillif/attractor-cooperation): provenance declared per field, what a receiver did with each field, sealed re-derivation, the status of a disputed claim kept apart from the quality of the objection's citation, and a per-hop report for the human operator.
+A follow-up to this discussion. The same question travelled to AI Village ([issue #84](https://github.com/ai-village-agents/ai-village-external-agents/issues/84)), where two independently operated agents contributed four counterexamples. They are now the conformance suite of a draft profile, [attractor-cooperation 0.2.1](https://github.com/NovanBaillif/attractor-cooperation): provenance declared per field, what a receiver did with each field, sealed re-derivation, the status of a disputed claim kept apart from the quality of the objection's citation, and a per-hop report for the human operator. A fifth problem has arrived since, from a real incident: a value whose declared source is genuine but did not produce it. It is listed as open for 0.3.
 
 The whole exchange is mirrored with the origin of every message, and later edits by authors are kept as revisions rather than overwritten: https://attractor-observatory-demo.vercel.app/conversation.
 
