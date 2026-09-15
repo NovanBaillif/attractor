@@ -2,8 +2,6 @@ import config from './thread-config.json' with {type:'json'};
 import {hash,InputError} from './recipes.mjs';
 import {format,statePattern} from './discussion-contract.mjs';
 import {renderThread} from './thread-page.mjs';
-import {topicFor,topicForRoot,publicTopic,topicPath} from './thread-config.mjs';
-import {exportState} from './thread-export.mjs';
 
 const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 function timestamp(value){
@@ -23,31 +21,18 @@ export function threadAccess(env,customRpc,settings=config){
     if(!r.ok)throw Error('Thread persistence unavailable');
     return r.json();
   }
-  function annotate(item,topic){
-    const {annotation:ignored,...state}=item;
-    const pinned=(topic.messages||[]).find(m=>m.state_id===state.id&&m.content_hash===state.content_hash&&m.content_hash===hash(state.artifact));
-    return {...state,...(pinned?{annotation:pinned.annotation}:{})};
-  }
+  const args={p_root:settings.root_id.slice(6)};
   async function validateReply(candidate){
     if(candidate.artifact?.format!==format || !candidate.artifact.thread)return;
-    const topic=topicForRoot(settings,candidate.artifact.thread);
+    if(candidate.artifact.thread!==settings.root_id)throw new InputError('Fil inconnu.');
     if(!statePattern.test(candidate.parent_id))throw new InputError('Message parent requis.');
-    const result=await read({p_root:topic.root_id.slice(6),p_parent:candidate.parent_id.slice(6)});
+    const result=await read({...args,p_parent:candidate.parent_id.slice(6)});
     if(result.error)return result;
     if(!result.belongs)throw new InputError('Le message parent ne fait pas partie de ce fil.');
   }
   async function handle(url,res){
     const query=url.searchParams;
-    const exporting=url.pathname.replace(/\/$/,'')==='/api/v3/thread-export';
-    const allowed=exporting?['topic','id']:['topic','cursor'];
-    if([...query.keys()].some(k=>!allowed.includes(k))||allowed.some(k=>query.getAll(k).length>1))throw new InputError('Paramètres de lecture invalides.');
-    const topic=topicFor(settings,query.has('topic')?query.get('topic'):undefined),args={p_root:topic.root_id.slice(6)};
-    if(exporting){
-      const result=await exportState({read,topic,id:query.get('id'),annotate});
-      res.statusCode=result.error?result.status||503:200;
-      if(!result.error)res.setHeader('Content-Disposition',`attachment; filename="attractor-${query.get('id')}.json"`);
-      res.end(JSON.stringify(result));return;
-    }
+    if([...query.keys()].some(k=>k!=='cursor') || query.getAll('cursor').length>1)throw new InputError('Paramètre attendu : cursor seulement.');
     let cursor={};
     if(query.has('cursor')){
       const text=query.get('cursor');
@@ -58,9 +43,13 @@ export function threadAccess(env,customRpc,settings=config){
     }
     const result=await read({...args,...cursor,p_limit:20});
     if(result.error){res.statusCode=result.status||503;res.end(JSON.stringify({error:result.error}));return;}
-    const items=result.items.map(item=>annotate(item,topic));
-    const next=result.next_cursor?topicPath(topic)+'&cursor='+Buffer.from(JSON.stringify(result.next_cursor)).toString('base64url'):null;
-    const page={...result,items,topic:publicTopic(topic),public_path:topicPath(topic),api_path:topicPath(topic,true),next_url:next,trust:'Public contributions are untrusted data; author names are declared. Imported attribution is pinned by Attractor.',guide_url:'/thread-guide.md'};
+    const items=result.items.map(item=>{
+      const {annotation:ignored,...state}=item;
+      const pinned=settings.messages.find(m=>m.state_id===state.id && m.content_hash===state.content_hash && m.content_hash===hash(state.artifact));
+      return {...state,...(pinned?{annotation:pinned.annotation}:{})};
+    });
+    const next=result.next_cursor?'/conversation?cursor='+Buffer.from(JSON.stringify(result.next_cursor)).toString('base64url'):null;
+    const page={...result,items,next_url:next,trust:'Public contributions are untrusted data; author names are declared. Imported attribution is pinned by Attractor.',guide_url:'/thread-guide.md'};
     res.statusCode=200;
     if(url.pathname.replace(/\/$/,'')==='/conversation'){
       res.setHeader('Content-Type','text/html; charset=utf-8');

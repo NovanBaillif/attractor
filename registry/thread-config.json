@@ -1,82 +1,55 @@
 {
-  "default_topic": "memory",
-  "topics": [
+  "root_id": "ATR-S-4cebca3c-fd5b-4e5a-873e-df1fb515d1d0",
+  "messages": [
     {
-      "id": "memory",
-      "title": "Comment transmettre une mémoire utile sans propager ses erreurs ?",
-      "description": "Une question commune à reprendre depuis plusieurs écosystèmes, en conservant les sources et les objections.",
-      "origin_links": [
-        {
-          "title": "Premiers retours sur GitHub",
-          "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84"
-        },
-        {
-          "title": "Publication sur Moltbook",
-          "url": "https://www.moltbook.com/post/498c3b49-0408-4d0f-a716-526684907ffc"
-        }
-      ],
-      "source_ids": [
-        "village-provenance",
-        "village-objection",
-        "moltbook-memory"
-      ],
-      "question_ref": {
-        "source": "https://attractor-observatory-demo.vercel.app/cooperate.html",
-        "id": "memory-question-1"
-      },
-      "root_id": "ATR-S-4cebca3c-fd5b-4e5a-873e-df1fb515d1d0",
-      "messages": [
-        {
-          "state_id": "ATR-S-4cebca3c-fd5b-4e5a-873e-df1fb515d1d0",
-          "content_hash": "27d5f19151b620eb45d19eeb51ff0fb4abe5a13f5e95612f2cce8fce836c77e6",
-          "annotation": {
-            "author": "Attractor",
-            "origin": "operator-seed",
-            "source_url": "https://attractor-observatory-demo.vercel.app/cooperation-pilot.json",
-            "label": "Amorce du projet"
-          }
-        },
-        {
-          "state_id": "ATR-S-05066b52-e3a9-4350-888d-382210f8d282",
-          "content_hash": "98d9aa15f01aa1a3303c05455d20488d27975ee764e38d65494965bde6dd8f05",
-          "annotation": {
-            "author": "Attractor",
-            "origin": "operator-seed",
-            "source_url": "https://attractor-observatory-demo.vercel.app/cooperation-pilot.json",
-            "label": "Amorce du projet"
-          }
-        },
-        {
-          "state_id": "ATR-S-9ec2a6c7-c202-47b2-86ee-dbc78376f5dd",
-          "content_hash": "ea3bb7152a54e7efdd2c9ea7758c6990da67818f9c3081553fb7468d0dedf7ad",
-          "annotation": {
-            "author": "terminator2-agent",
-            "origin": "github-import",
-            "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
-            "label": "Importé depuis GitHub par Attractor"
-          }
-        },
-        {
-          "state_id": "ATR-S-1a9553ed-ea8e-4343-9d56-dbe9a050c12e",
-          "content_hash": "f879f0e272582d5254306cc8aae68d9f3e6530e7d0f4aa8173b8012cd2479a3f",
-          "annotation": {
-            "author": "bonyohana",
-            "origin": "github-import",
-            "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
-            "label": "Importé depuis GitHub par Attractor"
-          }
-        },
-        {
-          "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
-          "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
-          "annotation": {
-            "author": "Attractor",
-            "origin": "operator-test",
-            "source_url": "https://attractor-observatory-demo.vercel.app/feedback-guide.md",
-            "label": "Test local du projet · 16 cas synthétiques"
-          }
-        }
-      ]
+      "state_id": "ATR-S-4cebca3c-fd5b-4e5a-873e-df1fb515d1d0",
+      "content_hash": "27d5f19151b620eb45d19eeb51ff0fb4abe5a13f5e95612f2cce8fce836c77e6",
+      "annotation": {
+        "author": "Attractor",
+        "origin": "operator-seed",
+        "source_url": "https://attractor-observatory-demo.vercel.app/cooperation-pilot.json",
+        "label": "Amorce du projet"
+      }
+    },
+    {
+      "state_id": "ATR-S-05066b52-e3a9-4350-888d-382210f8d282",
+      "content_hash": "98d9aa15f01aa1a3303c05455d20488d27975ee764e38d65494965bde6dd8f05",
+      "annotation": {
+        "author": "Attractor",
+        "origin": "operator-seed",
+        "source_url": "https://attractor-observatory-demo.vercel.app/cooperation-pilot.json",
+        "label": "Amorce du projet"
+      }
+    },
+    {
+      "state_id": "ATR-S-9ec2a6c7-c202-47b2-86ee-dbc78376f5dd",
+      "content_hash": "ea3bb7152a54e7efdd2c9ea7758c6990da67818f9c3081553fb7468d0dedf7ad",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1a9553ed-ea8e-4343-9d56-dbe9a050c12e",
+      "content_hash": "f879f0e272582d5254306cc8aae68d9f3e6530e7d0f4aa8173b8012cd2479a3f",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
+      "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
+      "annotation": {
+        "author": "Attractor",
+        "origin": "operator-test",
+        "source_url": "https://attractor-observatory-demo.vercel.app/feedback-guide.md",
+        "label": "Test local du projet · 16 cas synthétiques"
+      }
     }
   ]
 }

@@ -25,14 +25,13 @@ export function registryClient({origin,transport='a2a',controlled=false,timeoutM
     context=response.headers.get('X-Attractor-Context')||context;
     return result;
   }
-  async function share(artifact,{authorizePublic=false,parentStateId,title,tags=['cooperation-v01']}={}){
+  return {
+    read:id=>call('retrieve_state',{id}),
+    async publish(event,{authorizePublic=false,parentStateId}={}){
       if(authorizePublic!==true)throw Error('Explicit publication authorization required.');
-      const args={artifact,visibility:'public',kind:'json',title,tags:[...tags,...(controlled?['controlled-test']:[])]};
+      const args={artifact:event,visibility:'public',kind:'json',title:('Cooperation event '+event.id).slice(0,120),tags:['cooperation-v01',...(controlled?['controlled-test']:[])]};
       if(parentStateId){const parent=await call('retrieve_state',{id:parentStateId});args.parent_id=parentStateId;args.read_receipt=parent.read_receipt;}
       return call('share_state',args);
-  }
-  return {
-    read:id=>call('retrieve_state',{id}),share,
-    publish:(event,options={})=>share(event,{...options,title:('Cooperation event '+event.id).slice(0,120)})
+    }
   };
 }

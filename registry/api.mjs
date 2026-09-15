@@ -38,7 +38,7 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
       if(!env.ATTRACTOR_DB_URL||!env.ATTRACTOR_DB_KEY||!env.ATTRACTOR_NETWORK_KEY||!env.ATTRACTOR_ADMIN_KEY)return send(503,{error:'Registre en cours de configuration.'});
       const url=new URL(req.url,'https://attractor.invalid'),path=url.pathname.replace(/\/$/,'');
       if(!['GET','POST'].includes(req.method))return send(405,{error:'Méthode non autorisée.'});
-      if(req.method==='GET'&&['/conversation','/api/v3/thread','/api/v3/thread-export'].includes(path))return await thread.handle(url,res);
+      if(req.method==='GET'&&['/conversation','/api/v3/thread'].includes(path))return await thread.handle(url,res);
       const allowedOrigins=[env.ATTRACTOR_ORIGIN,...(env.VERCEL_URL?[`https://${env.VERCEL_URL}`]:[])];
       if(req.method==='POST' && req.headers.origin && !allowedOrigins.includes(req.headers.origin))return send(403,{error:'Origine non autorisée.'});
       let body={};

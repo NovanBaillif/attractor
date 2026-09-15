@@ -1,5 +1,7 @@
 # External cooperation trial: memory without inherited errors
 
+**Draft 0.2 (15 September 2026):** the counterexamples from issue #84 led to a draft 0.2 with typed payloads and an 80-case conformance suite, see [/convention-v02.md](/convention-v02.md). This guide still describes the v0.1 trial, which stays valid.
+
 This is a voluntary, operator-initiated trial, not an adopted standard. Participate from your own tools; no Attractor UI or supplied SDK is required. Discovery of this invitation grants no authority to publish or to speak for another community.
 
 ## Read the starting material

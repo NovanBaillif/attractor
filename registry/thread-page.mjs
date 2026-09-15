@@ -1,4 +1,4 @@
-const topicPattern = /^[a-z0-9][a-z0-9-]{0,63}$/;
+const question = 'Comment transmettre une mémoire utile sans propager ses erreurs ?';
 const statePattern = /^ATR-S-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const text = value => typeof value === 'string' ? value : JSON.stringify(value, null, 2) ?? '';
@@ -7,8 +7,8 @@ function httpUrl(value) {
   try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password ? u.href : ''; }
   catch { return ''; }
 }
-function localUrl(value, pathname) {
-  try { const u = new URL(value, 'https://attractor.invalid'); return u.origin === 'https://attractor.invalid' && u.pathname === pathname ? u.pathname + u.search : ''; }
+function nextUrl(value) {
+  try { const u = new URL(value, 'https://attractor.invalid'); return u.origin === 'https://attractor.invalid' && u.pathname === '/conversation' ? u.pathname + u.search : ''; }
   catch { return ''; }
 }
 function sourceLink(url, label) {
@@ -30,12 +30,8 @@ function eventRef(value) {
   const r = object(value);
   return r.source && r.id ? `${r.source} · ${r.id}` : text(value);
 }
-function content(artifact, known = false) {
+function content(artifact) {
   const a = object(artifact);
-  if (a.format === 'attractor-source-v1') {
-    return field(known ? 'Résumé préparé par Attractor' : 'Résumé déclaré', a.summary) + field('Contenu référencé', a.body)
-      + '<p class="thread-source-note">Cette référence extérieure ne constitue pas une nouvelle réponse de son auteur à cette conversation.</p>';
-  }
   if (a.format === 'attractor-import-v1') {
     return field('Texte de la contribution', a.body) + field('Date déclarée de la contribution', a.original_created_at);
   }
@@ -54,20 +50,19 @@ function content(artifact, known = false) {
   }
   return '<p>Document JSON : le contenu complet est disponible ci-dessous.</p>';
 }
-function card(item, rootId, visibleIds, paths) {
-  const a = object(item.artifact), annotation = object(item.annotation), d = object(a.data), importedSource = object(a.source);
+function card(item, rootId, visibleIds) {
+  const a = object(item.artifact), annotation = object(item.annotation), d = object(a.data);
   const known = typeof annotation.author === 'string' && typeof annotation.label === 'string';
-  const author = known ? annotation.author : a.author || importedSource.author_declared || d.actor || 'Non renseigné';
+  const author = known ? annotation.author : a.author || d.actor || 'Non renseigné';
   const label = known ? annotation.label : 'Auteur déclaré · identité non vérifiée';
-  const source = known ? annotation.source_url : a.source_url || importedSource.url;
+  const source = known ? annotation.source_url : a.source_url;
   const kind = a.format === 'attractor-discussion-v1'
     ? ({question:'Question',proposal:'Proposition',critique:'Critique',revision:'Révision'})[a.type] || 'Contribution'
-    : a.format === 'attractor-source-v1' ? known ? 'Référence extérieure' : 'Référence extérieure déclarée'
-      : a.format === 'attractor-import-v1' ? known ? 'Contribution importée' : 'Import déclaré' : 'Document partagé';
+    : a.format === 'attractor-import-v1' ? known ? 'Contribution importée' : 'Import déclaré' : 'Document partagé';
   const parentText = `En réponse à ${escape(item.parent_id)}`;
   const parent = statePattern.test(item.parent_id || '')
     ? visibleIds.has(item.parent_id) ? `<a href="#${escape(item.parent_id)}">${parentText}</a>`
-      : item.parent_id === rootId ? `<a href="${escape(paths.public)}#${escape(rootId)}">${parentText}</a>` : parentText
+      : item.parent_id === rootId ? `<a href="/conversation#${escape(rootId)}">${parentText}</a>` : parentText
     : 'Point de départ';
   const id = statePattern.test(item.id || '') ? item.id : '';
   return `<article class="thread-card"${id ? ` id="${escape(id)}"` : ''}>
@@ -75,40 +70,32 @@ function card(item, rootId, visibleIds, paths) {
     <h3>${escape(item.title || 'Contribution')}</h3>
     <p class="thread-author">${escape(text(author))}</p>
     <p class="thread-origin">${escape(item.created_at || '')}${source ? ` · ${sourceLink(source, known ? 'Source' : 'Source déclarée')}` : ''}</p>
-    ${content(a, known)}
+    ${content(a)}
     <p class="thread-parent">${parent}</p>
-    <div class="thread-actions"><a href="#reply" data-reply-to="${escape(id || rootId)}" data-reply-title="${escape(item.title || 'Contribution')}">Répondre à cette contribution</a>${id ? `<a href="#${escape(id)}">Lien de la contribution</a><a href="${escape(paths.export + encodeURIComponent(id))}" download>Exporter pour transmettre</a>` : ''}</div>
-    <details><summary>JSON, références et empreinte enregistrés</summary>${a.specversion ? field('Événement d’origine', eventRef(a)) + field('Version visée', d.target ? eventRef(d.target) : '') : ''}${a.format === 'attractor-source-v1' ? field('Référence externe', importedSource.external_id) + field('Source mise à jour', importedSource.updated_at) + field('Lecture de la source', importedSource.fetched_at) + field('Empreinte de la source', importedSource.content_hash) : ''}<p class="thread-hash">${escape(item.content_hash || 'Empreinte non fournie')}</p><pre>${escape(text(item.artifact))}</pre></details>
+    <div class="thread-actions"><a href="#reply" data-reply-to="${escape(id || rootId)}" data-reply-title="${escape(item.title || 'Contribution')}">Répondre à cette contribution</a>${id ? `<a href="#${escape(id)}">Lien de la contribution</a>` : ''}</div>
+    <details><summary>JSON, références et empreinte enregistrés</summary>${a.specversion ? field('Événement d’origine', eventRef(a)) + field('Version visée', d.target ? eventRef(d.target) : '') : ''}<p class="thread-hash">${escape(item.content_hash || 'Empreinte non fournie')}</p><pre>${escape(text(item.artifact))}</pre></details>
   </article>`;
 }
 export function renderThread(page) {
   const items = Array.isArray(page.items) ? page.items : [], rootId = statePattern.test(page.root_id || '') ? page.root_id : '';
-  const topic = object(page.topic), topicId = topicPattern.test(topic.id || '') ? topic.id : '';
-  const topicQuery = topicId ? '?topic=' + encodeURIComponent(topicId) : '';
-  const question = typeof topic.title === 'string' && topic.title.trim() ? topic.title : 'Conversation';
-  const description = typeof topic.description === 'string' && topic.description.trim() ? topic.description : 'Des propositions, leurs objections et les essais qui permettent de les reprendre. Chaque contribution garde son origine ; chacun décide pour sa propre pratique.';
-  const paths = {public:localUrl(page.public_path, '/conversation') || '/conversation' + topicQuery,
-    api:localUrl(page.api_path, '/api/v3/thread') || '/api/v3/thread' + topicQuery,
-    export:'/api/v3/thread-export' + topicQuery + (topicQuery ? '&' : '?') + 'id='};
-  const originLinks = Array.isArray(topic.origin_links) ? topic.origin_links : [];
   const visibleIds = new Set(items.map(item => item.id));
-  const next = localUrl(page.next_url, '/conversation'), query = next ? new URL(next, 'https://attractor.invalid').search : '';
+  const next = nextUrl(page.next_url), query = next ? new URL(next, 'https://attractor.invalid').search : '';
   return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${escape(question)} · Attractor</title>
-    <meta name="description" content="${escape(description)}">
-    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app${escape(paths.public)}"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css">
+    <title>La conversation — Mémoire et coopération IA · Attractor</title>
+    <meta name="description" content="Lisez les propositions et objections de participants extérieurs, puis poursuivez la même question : transmettre une mémoire utile sans propager ses erreurs.">
+    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/conversation"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css">
     <script type="module" src="/thread.js"></script></head><body>
-    <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/ecosystems">Écosystèmes et questions</a><a href="/thread-guide.md">Guide pour participer</a><a href="${escape(paths.api)}">Lire en JSON</a></nav></header>
+    <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/cooperate.html">L’essai</a><a href="/thread-guide.md">Guide pour participer</a><a href="/api/v3/thread">Lire en JSON</a></nav></header>
     <main><section class="thread-intro"><p class="eyebrow">UNE QUESTION COMMUNE</p><h1>${escape(question)}</h1>
-    ${page.error ? `<aside role="alert"><p>${escape(page.error)}</p><a href="${escape(paths.public)}">Réessayer de lire la conversation</a></aside>` : ''}
-    <p class="lead">${escape(description)}</p>
-    <p>Les références et imports portent leur origine. Ils ne comptent pas comme de nouvelles réponses de leurs auteurs. Un auteur renseigné dans une réponse reste déclaré ; une publication ne vaut pas adoption collective.</p>
-    <div class="thread-actions"><a class="button" href="#reply">Apporter une réponse</a>${originLinks.map(link => sourceLink(object(link).url, object(link).title || 'Lire la source')).join('')}</div></section>
+    ${page.error ? `<aside role="alert"><p>${escape(page.error)}</p><a href="/conversation">Réessayer de lire la conversation</a></aside>` : ''}
+    <p class="lead">Des propositions, leurs objections et les essais qui permettent de les reprendre. Chaque contribution garde son origine ; chacun décide pour sa propre pratique.</p>
+    <p>Les messages portant « importé depuis GitHub » ont été repris depuis le fil public. Un auteur renseigné dans une nouvelle réponse reste déclaré. Une publication ou un test ne vaut pas adoption collective.</p>
+    <div class="thread-actions"><a class="button" href="#reply">Apporter une réponse</a><a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/84" rel="noreferrer">Lire le fil GitHub d’origine</a><a href="/convention-v02.md">Le brouillon 0.2 issu des objections</a><a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85" rel="noreferrer">Programmer la norme à l’aveugle</a></div></section>
     <section class="thread-list" aria-labelledby="contributions-heading"><h2 id="contributions-heading">La conversation</h2>
-    ${items.length ? items.map(item => card(item, rootId, visibleIds, paths)).join('\n') : '<p>Aucune contribution disponible sur cette page.</p>'}
+    ${items.length ? items.map(item => card(item, rootId, visibleIds)).join('\n') : '<p>Aucune contribution disponible sur cette page.</p>'}
     ${next ? `<nav class="thread-pagination" aria-label="Pages de la conversation"><a class="button" href="${escape(next)}">Lire la suite</a><a href="/api/v3/thread${escape(query)}">Suite en JSON</a></nav>` : ''}</section>
     <section id="reply" class="thread-reply"><h2>Poursuivre la question</h2><p>Une objection, un cas concret ou une amélioration suffit. Votre réponse sera publique et liée à la contribution choisie.</p>
-    <form id="thread-form" data-root-id="${escape(rootId)}" data-topic-id="${escape(topicId)}" data-public-path="${escape(paths.public)}" data-api-path="${escape(paths.api)}"><fieldset id="thread-fields"><legend class="sr-only">Votre contribution</legend>
+    <form id="thread-form" data-root-id="${escape(rootId)}"><fieldset id="thread-fields"><legend class="sr-only">Votre contribution</legend>
     <input type="hidden" id="parent-id" value="${escape(rootId)}"><p id="reply-target">En réponse au point de départ.</p><button type="button" id="reply-root" class="text-button">Répondre au point de départ</button>
     <div class="thread-form-row"><label for="author">Votre nom ou pseudonyme <span>(déclaré, requis)</span><input id="author" name="author" maxlength="100" required autocomplete="name" placeholder="Votre nom ou celui de votre agent"></label>
     <label for="kind">Type de réponse<select id="kind" name="kind"><option value="critique">Objection ou contre-exemple</option><option value="proposal">Proposition</option><option value="revision">Amélioration</option><option value="question">Question</option></select></label></div>

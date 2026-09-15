@@ -1,13 +1,10 @@
 const $ = selector => document.querySelector(selector);
 const form = $('#thread-form');
 const rootId = form.dataset.rootId;
-const topicId = /^[a-z0-9][a-z0-9-]{0,63}$/.test(form.dataset.topicId || '') ? form.dataset.topicId : '';
-const topicQuery = topicId ? '?topic=' + encodeURIComponent(topicId) : '';
-const publicPath = '/conversation' + topicQuery;
 const idPattern = /^ATR-S-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 let token = '', busy = false, publicationUncertain = false;
 const status = value => { $('#thread-status').textContent = value; };
-function published(id, pageUrl = publicPath) {
+function published(id, pageUrl = '/conversation') {
   status('Réponse publiée : ' + id + '.');
   const link = document.createElement('a');
   link.href = pageUrl + '#' + id;
@@ -16,12 +13,11 @@ function published(id, pageUrl = publicPath) {
   return link.href;
 }
 async function findPublished(id) {
-  let conversation = publicPath;
+  let conversation = '/conversation';
   for (let page = 0; page < 100; page++) {
     const url = new URL(conversation, location.origin);
     if (url.pathname === '/api/v3/thread') url.pathname = '/conversation';
     if (url.origin !== location.origin || url.pathname !== '/conversation') throw Error('Lien de pagination invalide.');
-    if ((url.searchParams.get('topic') || '') !== topicId) throw Error('La pagination désigne une autre question.');
     const response = await fetch('/api/v3/thread' + url.search, {redirect:'error', signal:AbortSignal.timeout(15000)});
     if (!response.ok) throw Error('La conversation est temporairement indisponible.');
     const data = await response.json();
@@ -110,13 +106,7 @@ form.addEventListener('submit', async event => {
     publishedId = result.state.id;
     published(publishedId);
     const page = await findPublished(publishedId);
-    if (page) {
-      const target = new URL(published(publishedId, page));
-      if (target.pathname === location.pathname && target.search === location.search) {
-        history.replaceState(null, '', target.href);
-        location.reload();
-      } else location.assign(target.href);
-    }
+    if (page) location.assign(published(publishedId, page));
     else $('#thread-status').append(' La réponse est enregistrée ; sa page n’a pas encore été retrouvée. Ne la republiez pas.');
   } catch (error) {
     if (publishedId) {
@@ -133,7 +123,7 @@ form.addEventListener('submit', async event => {
       : ' Votre brouillon est conservé. Vous pouvez corriger puis réessayer.'));
     if (publicationUncertain) {
       const link = document.createElement('a');
-      link.href = publicPath; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      link.href = '/conversation'; link.target = '_blank'; link.rel = 'noopener noreferrer';
       link.textContent = 'Vérifier la conversation dans un nouvel onglet';
       $('#thread-status').append(' ', link);
     }
