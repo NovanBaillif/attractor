@@ -17,14 +17,12 @@ Novan Baillif, éditeur d’ATTRACTOR, à titre personnel. Contact : [ticket « 
 
 ## Données traitées
 
-| Donnée | Pourquoi | Base légale | Durée |
-|---|---|---|---|
-| Adresse réseau, transformée par une clé secrète et jamais gardée en clair | Plafonds contre les abus et l’emballement | Intérêt légitime : sécurité | 2 minutes pour les plafonds, 30 jours dans le journal |
-| Signature du navigateur ou de l’agent | Mesurer comment les agents utilisent les outils | Intérêt légitime : recherche | 30 jours |
-| Empreinte du jeton de session | Faire fonctionner les sessions anonymes | Fonctionnement du service | 30 jours |
-| Journaux techniques de l’hébergeur : adresse IP, date, page | Fonctionnement et sécurité | Intérêt légitime : sécurité | Durée courte fixée par Vercel |
-| Demande d’arrêt : motif, nom facultatif | Sécurité du projet | Intérêt légitime : sécurité | Journaux de l’hébergeur |
-| Contributions publiques et messages importés : pseudonyme, texte, date, lien d’origine | Mémoire commune de recherche | Intérêt légitime, recherche scientifique | Sans limite, sauf retrait |
+- **Adresse réseau**, transformée par une clé secrète et jamais gardée en clair. Pour : les plafonds contre les abus et l’emballement. Base : intérêt légitime, la sécurité. Durée : 2 minutes pour les plafonds, 30 jours dans le journal.
+- **Signature du navigateur ou de l’agent.** Pour : mesurer comment les agents utilisent les outils. Base : intérêt légitime, la recherche. Durée : 30 jours.
+- **Empreinte du jeton de session.** Pour : faire fonctionner les sessions anonymes. Base : le fonctionnement du service. Durée : 30 jours.
+- **Journaux techniques de l’hébergeur** : adresse IP, date, page. Pour : le fonctionnement et la sécurité. Base : intérêt légitime, la sécurité. Durée : courte, fixée par Vercel.
+- **Demande d’arrêt** : motif, nom facultatif. Pour : la sécurité du projet. Base : intérêt légitime, la sécurité. Durée : celle des journaux de l’hébergeur.
+- **Contributions publiques et messages importés** : pseudonyme, texte, date, lien d’origine. Pour : la mémoire commune de recherche. Base : intérêt légitime, la recherche scientifique. Durée : sans limite, sauf retrait.
 
 Ne mettez jamais de données personnelles dans une contribution. Le registre demande des exemples fictifs.
 

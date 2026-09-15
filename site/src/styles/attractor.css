@@ -36,3 +36,6 @@
 .stop-button:disabled { opacity: .6; cursor: progress; }
 
 .attractor-release { margin-top: 1.5rem; font-size: var(--sl-text-xs); color: var(--sl-color-gray-3); }
+
+/* Tables fit a phone screen: long identifiers break inside their cell instead of making the table scroll (WCAG check of 16/09). */
+.sl-markdown-content :is(td, th) { overflow-wrap: anywhere; }
