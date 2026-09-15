@@ -6,8 +6,9 @@ import {readFileSync, writeFileSync} from 'node:fs';
 
 const base = (process.argv[2] || 'https://attractor-observatory-demo.vercel.app').replace(/\/$/, '');
 const axeFile = process.argv[3];
+// A preview deployment injects Vercel's review toolbar; this header asks Vercel not to, so a preview is measured as the public site.
 const get = async path => {
-  const r = await fetch(base + path, {redirect: 'manual', signal: AbortSignal.timeout(20000)});
+  const r = await fetch(base + path, {redirect: 'manual', headers: {'x-vercel-skip-toolbar': '1'}, signal: AbortSignal.timeout(20000)});
   return {status: r.status, headers: r.headers, text: await r.text()};
 };
 const checks = [];
@@ -27,13 +28,18 @@ let cookies = 0;
 for (const p of pages) cookies += (await fetch(base + p, {redirect: 'manual'})).headers.getSetCookie().length;
 add('cookies', 'Aucun cookie', cookies === 0, `${cookies} cookie(s) sur ${pages.length} adresses`);
 
+// Only what a browser actually loads counts: scripts, media, frames, and link tags that fetch (not canonical or alternate).
+const own = new Set([new URL(base).host, 'attractor-observatory-demo.vercel.app']);
 const external = new Set();
+const hostOf = url => { const m = /^(?:https?:)?\/\/([^/"?#]+)/i.exec(url); return m ? m[1].toLowerCase() : null; };
 for (const p of pages.slice(0, 5)) {
   const html = (await get(p)).text;
-  for (const m of html.matchAll(/<(?:script|link|img|iframe|source|video|audio)\b[^>]*?\s(?:src|href)="(https?:)?\/\/([^/"]+)[^"]*"/gi)) {
-    const host = m[2].toLowerCase();
-    if (host !== new URL(base).host) external.add(host);
+  const urls = [...html.matchAll(/<(?:script|img|iframe|source|video|audio)\b[^>]*?\ssrc="([^"]+)"/gi)].map(m => m[1]);
+  for (const tag of html.match(/<link\b[^>]*>/gi) || []) {
+    const rel = (/\srel="([^"]+)"/i.exec(tag) || [])[1] || '', href = (/\shref="([^"]+)"/i.exec(tag) || [])[1];
+    if (href && /\b(?:stylesheet|preload|modulepreload|prefetch|icon|manifest)\b/i.test(rel)) urls.push(href);
   }
+  for (const url of urls) { const host = hostOf(url); if (host && !own.has(host)) external.add(host); }
 }
 add('tiers', 'Aucun service tiers chargé par le navigateur', external.size === 0, external.size ? [...external].join(', ') : 'aucun');
 

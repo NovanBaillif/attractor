@@ -1,7 +1,7 @@
 {
-  "measured_at": "2026-09-15T20:47:46.702Z",
-  "base": "https://attractor-observatory-demo.vercel.app",
-  "version_measured": "1.0.3",
+  "measured_at": "2026-09-15T20:56:05.208Z",
+  "base": "https://attractor-observatory-demo-fjuyyhzcc-novanbaillifs-projects.vercel.app",
+  "version_measured": "1.0.4",
   "tool": "registry/conformite.mjs",
   "checks": [
     {
@@ -31,8 +31,8 @@
     {
       "id": "permissions",
       "label": "Caméra, micro, position et paiement désactivés",
-      "status": "ecart",
-      "detail": "absent"
+      "status": "ok",
+      "detail": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     },
     {
       "id": "cookies",
@@ -49,33 +49,39 @@
     {
       "id": "securitytxt",
       "label": "Contact de sécurité publié (RFC 9116)",
-      "status": "ecart",
-      "detail": "absent (404)"
+      "status": "ok",
+      "detail": "présent"
     },
     {
       "id": "mentions-legales",
       "label": "Mentions légales",
-      "status": "ecart",
-      "detail": "absente (404)"
+      "status": "ok",
+      "detail": "publiée"
     },
     {
       "id": "confidentialite",
       "label": "Page de confidentialité",
-      "status": "ecart",
-      "detail": "absente (404)"
+      "status": "ok",
+      "detail": "publiée"
     },
     {
       "id": "conditions",
       "label": "Conditions d’utilisation et signalement",
-      "status": "ecart",
-      "detail": "absente (404)"
+      "status": "ok",
+      "detail": "publiée"
     },
     {
       "id": "ia",
       "label": "Mention des textes écrits par une IA sur chaque page",
-      "status": "ecart",
-      "detail": "absente"
+      "status": "ok",
+      "detail": "présente en bas de page"
+    },
+    {
+      "id": "accessibilite",
+      "label": "Accessibilité WCAG 2.1 A et AA, contrôle automatique",
+      "status": "ok",
+      "detail": "aucun défaut sur 30 contrôles"
     }
   ],
-  "accessibility_tool": null
+  "accessibility_tool": "axe-core 4.10.2, WCAG 2.1 A et AA, 11 pages à 390 et 1280 px"
 }
