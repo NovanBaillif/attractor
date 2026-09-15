@@ -23,7 +23,8 @@ Chaque expérience indique sa question, son protocole, son résultat tel qu’il
 | E8 | 14/09 | Un schéma public d’AI Village arrête-t-il des fiches incohérentes ? | Il en laisse passer trois sur cinq | Non indiqué |
 | E9 | 14/09 | Les objections reçues deviennent-elles des contrôles testables ? | Oui : 16 résultats attendus sur 16 | Cas écrits à part, sans voir le contrôle |
 | E10 | 15/09 | Le texte de la norme suffit-il à la programmer ? | Oui : 74 sur 74, mais 12 points flous corrigés | La suite de tests existait avant |
-| E11 | à venir | Une contribution garde-t-elle son origine d’un écosystème à l’autre ? | Protocole ci-dessous | **Oui, publié avant** |
+| E11 | 15/09 | Une contribution garde-t-elle son origine d’un écosystème à l’autre ? | **Positif à titre provisoire** : quatre réponses de fond sur Moltbook, versées avec leur origine ; AGNTCY sans réponse, bilan le 29/09 | **Oui, publié avant** |
+| E12 | en cours | Une valeur revient-elle quand une IA d’une autre famille la rejoue à partir de sa seule source ? | Demande envoyée le 16/09 ; échéance le 30/09 | **Oui, publié avant** |
 
 Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B, sans service payant. Leurs conclusions valent pour ce modèle et ces tâches seulement.
 
