@@ -1,4 +1,4 @@
-# ATTRACTOR — état du projet au 15 septembre 2026 (soir)
+# ATTRACTOR — état du projet au 15 septembre 2026 (soir, après la 1.0.0)
 
 Reprise par Claude le 15/09, sur décision de Novan : « codex ne viendra pas ; donc reprends le projet ». À relire au début de chaque session sur ATTRACTOR.
 
@@ -12,17 +12,16 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en préparation : 1.0.0
+## Version en ligne : 1.0.0
 
-Commit `80d33c1` : nouveau site pour les humains, présentation du projet, journal de recherche, versions, décisions 0001 à 0007, bouton public de demande d'arrêt.
-
-**En aperçu seulement** : `dpl_52RZd6yfvULxd4vGFssyqNXpneds`, https://attractor-observatory-demo-brboyvf49-novanbaillifs-projects.vercel.app. Elle attend l'accord de Novan pour la production. Captures de chaque page dans `captures/1.0.0/` (non versionnées).
+Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2e86e4` (étiquette `v1.0.0`), déploiement `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Nouveau site pour les humains, présentation du projet, journal de recherche, versions, décisions 0001 à 0007, bouton public de demande d'arrêt. Contrôle en production : 30 sur 30. Captures dans `captures/1.0.0-production/` (non versionnées).
 
 ## Ce qui est en ligne
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production `dpl_NcBTTmgU7q8hiEMPCAgzG3YQVUGV` (16 h 20 UTC) : ancien accueil, v0.2 et fil à jour |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.0 `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW`. Précédente : `dpl_NcBTTmgU7q8hiEMPCAgzG3YQVUGV` (retour arrière possible) |
+| Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
 | Fil commun | /conversation, /api/v3/thread | 15 éléments : 11 messages importés (versions modifiées gardées), 1 proposition, 1 essai, 2 tests contrôlés |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
 | Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2-draft` publiée (80 cas). La 0.2.1 (81 cas, avertissement demandé par Clara) est prête en local, non poussée |
@@ -33,14 +32,14 @@ Commit `80d33c1` : nouveau site pour les humains, présentation du projet, journ
 
 ## Ce qui reste local
 
-- **Le code d'ATTRACTOR** : dépôt git local seulement. Le rendre public attend une phrase de Novan.
+- **Deux branches à ne jamais pousser** : `sauvegarde-avant-publication` (ancien historique, contient l'adresse personnelle de Novan, retirée avant publication) et `codex-chantier-connexions`.
 - **La cité** (`civilisation/`) : serveur local sur le port 4313, mandats, rôles, charte, bilans des essais avec Qwen. Rien de publié.
 - **La branche de Codex** `codex-chantier-connexions` : les sources configurables et les connecteurs en ont été repris dans `main` (commit `b8fdabd`). La branche reste intacte pour mémoire.
 - **Brouillons non envoyés** : réponse à Clara (`civilisation/convention/v0.2/DRAFT-REPLY-CLARA-2026-09-15.md`), commentaire AGNTCY (`DRAFT-AGNTCY-94.md`).
 
 ## Comment on publie
 
-1. Travailler dans `attractor/`, qui a son propre historique git local (`git -c safe.directory=* …`).
+1. Travailler dans `attractor/`, dont l'historique est publié sur GitHub (`git -c safe.directory=* …`, puis `push` de `main` après chaque mise en ligne). Rien de personnel dans les fichiers : le dépôt est public.
 2. Tests : `cd registry && npm test` (45 tests).
 3. Committer, puis assembler avec `node registry/build.mjs`. L'assemblage construit aussi le site humain (`site/`, Astro Starlight) et le fusionne. Le bas de chaque page affiche le commit : on committe donc avant d'assembler.
 4. Comparer avec la production : liste des fichiers par l'API Vercel. Aucun fichier en ligne ne doit disparaître.
@@ -59,12 +58,11 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- **Son accord pour mettre la 1.0.0 en production.**
-- **Sa phrase pour rendre public le code d'ATTRACTOR sur GitHub.**
-- **Son nom sur la page Présentation** : par défaut « opérateur humain (compte GitHub NovanBaillif) ».
 - Sa phrase pour pousser la 0.2.1, répondre à Clara et commenter AGNTCY #94.
 - Le compte Moltbook (adresse mail et validation par X).
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
+
+Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
 
 L'expérience E11 (une même contribution qui circule entre deux écosystèmes) est préenregistrée et attend ces accords.
 

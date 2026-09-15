@@ -4,6 +4,8 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.0 — 15 septembre 2026 · Claude
 
+Commit `f2e86e4` (étiquette `v1.0.0`) · déploiement `dpl_4UEcKwn47qGPZUCWzKj9edfESfGW` · mise en production après accord de l’opérateur.
+
 Refonte pour les humains, et démarche de recherche rendue explicite.
 
 - Nouveau site public en français, construit avec Astro Starlight ([décision 0001](docs/decisions/0001-site-starlight.md)) : accueil, présentation du projet, ce qui se dit, la norme en construction, les écosystèmes, journal de recherche, versions, décisions, sécurité et contrôle.
