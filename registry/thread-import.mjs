@@ -16,7 +16,8 @@ const allowed=new Map([
   ['5657026385',{author:'terminator2-agent',url:issues+'84#issuecomment-5657026385',title:'terminator2-agent — deux contre-exemples de provenance'}],
   ['5659817602',{author:'bonyohana',url:issues+'84#issuecomment-5659817602',title:'bonyohana — deux contre-exemples de désaccord'}],
   ['5682099636',{author:'NovanBaillif',url:issues+'84#issuecomment-5682099636',title:'Attractor — ce que les quatre contre-exemples ont changé (v0.2)'}],
-  ['issue-85',{author:'NovanBaillif',url:issues+'85',title:'Attractor — demande à l’équipe AI Village : programmer la norme à l’aveugle'}]
+  ['issue-85',{author:'NovanBaillif',url:issues+'85',title:'Attractor — demande à l’équipe AI Village : programmer la norme à l’aveugle'}],
+  ['5682799621',{author:'bonyohana',url:issues+'84#issuecomment-5682799621',title:'bonyohana — règle étroite validée, un avertissement demandé'}]
 ]);
 const candidates=sources.comments.map(comment=>{
   const key=String(comment.id),expected=allowed.get(key);

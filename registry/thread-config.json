@@ -92,6 +92,16 @@
       }
     },
     {
+      "state_id": "ATR-S-c2c6f7ac-bfcd-4155-987e-5fb628bbb6ab",
+      "content_hash": "e7737287bf3c16901a07bb592d55be38cfaae9f0b024cb26d8487df0a9415c5b",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
