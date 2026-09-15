@@ -12,7 +12,12 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.4
+## Version en ligne : 1.0.4 (la 1.0.5 attend)
+
+**La 1.0.5 est prête, pas en production** : commit `060fb1c`, aperçu `dpl_55HXn6mYNkQUdU2TvVMJoYnymxjX` (https://attractor-observatory-demo-5a4rrstzd-novanbaillifs-projects.vercel.app), 38 sur 38 sans aucune erreur ni requête échouée, conformité 14 sur 14. Recherche du registre réparée (session créée avant le premier appel), cookie de session déclaré, trois nouveaux messages versés (26 épinglés), norme 0.3 sur le site. Ne pas pousser `main` avant sa mise en production.
+
+**La norme 0.3 est prête, pas publiée** : dépôt local `attractor-cooperation`, commits `485d207` et `72bbc05`, 106 cas sur 106, 15 mutants sur 15 détectés. Annonces prêtes : `civilisation/convention/v0.3/DRAFT-REPLY-84-0.3.md` et `DRAFT-MOLTBOOK-0.3.md`.
+
 
 Mise en production le 16/09 sur la phrase de Novan : commit `062fd44` (étiquette `v1.0.4`), déploiement `dpl_8zDYcvsyEc8eap3zatYnYtxxTeCV`, 38 contrôles sur 38, conformité 13 sur 13 mesurée en production. Cadre légal publié : mentions légales, confidentialité, conditions et signalement, page Conformité.
 
@@ -43,7 +48,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
 | Fil commun | /conversation, /api/v3/thread | 23 messages épinglés, dont 6 venus de Moltbook (notre message, quatre réponses reliées à lui, notre réponse). Le fil public est paginé par 20 |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
-| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2.1-draft` publiée le 15/09 à 18 h 24 UTC : 81 cas, avertissement demandé par Clara, limites et questions ouvertes apportées par terminator2 (section 12.1) |
+| Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.2.1-draft` publiée le 15/09 à 18 h 24 UTC (81 cas). La 0.3 (106 cas, dérivation de chaque valeur, contrôle de rejeu, cas de terminator2 sur les révisions sans retour) est prête en local |
 | Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit et validé par Novan le 15/09 au soir (statut « claimed »). Clé dans `.vercel/moltbook-agent.json`. Premier message publié le 15/09 à 19 h 17 UTC dans la communauté « memory » : https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91 ; six commentaires, quatre versés dans le fil (eliezerdedun, prismdeadlines, heychat, midearthherald), deux écartés (compliment vide ; publicité avec instructions pour agents). Notre réponse publiée le 15/09 à 19 h 56 UTC sous le message et versée dans le fil (publication par `node registry/moltbook-post.mjs post|verify`, un défi de calcul à résoudre en 5 minutes ; 10 échecs de suite suspendent le compte) |
 | Paquet Machine Commons | https://github.com/NovanBaillif/attractor-machine-commons | Dossier `distribution/`, dépôt git à part |
 | Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples et un cas ouvert ; nos réponses du 15/09 à 14 h 35 et 18 h 24 UTC |
@@ -85,6 +90,7 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 ## Ce qui attend Novan
 
 - Les notifications GitHub vers sa messagerie deviennent NÉCESSAIRES : les tickets de contact et de signalement doivent lui parvenir (point 8 de la Vigie).
+- Sa phrase pour publier la 0.3, l'annoncer sur le fil 84 et sur Moltbook, et mettre la 1.0.5 en production.
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
 - Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
 
