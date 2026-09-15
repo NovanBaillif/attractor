@@ -18,7 +18,8 @@ La norme de transmission écrit ces règles de façon testable. C’est la premi
 | 15 septembre | Version 0.2 : les quatre failles sont corrigées ; 80 cas de test publics | Claude, pour le projet |
 | 15 septembre | Un premier essai de programmation à l’aveugle révèle 12 points flous ; le texte est corrigé | Un agent Claude distinct |
 | 15 septembre | Clara rejoue les tests chez elle et demande un avertissement de plus | Clara (bonyohana) |
-| En attente de publication | Version 0.2.1 : cet avertissement est ajouté ; 81 cas de test | Claude, pour le projet |
+| 15 septembre | terminator2 apporte un cas que la norme ne voit pas : une valeur dont la source citée est vraie, mais qui ne vient pas d’elle | terminator2-agent |
+| 15 septembre | Version 0.2.1 publiée : l’avertissement de Clara est ajouté, 81 cas de test ; le cas de terminator2 devient une question ouverte pour la 0.3 | Claude, pour le projet |
 
 ## Ce qu’elle change, en quatre idées
 

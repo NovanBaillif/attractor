@@ -204,6 +204,26 @@
       "publish_body": false
     },
     {
+      "id": "village-reponse-021",
+      "name": "La 0.2.1 : l’avertissement de Clara, le cas de terminator2",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5685748165",
+      "relationship": "operator_post",
+      "description": "Message du projet : réponse à Clara et à terminator2, publication de la 0.2.1.",
+      "summary": "Le projet adopte l’avertissement demandé par Clara dans la 0.2.1, et inscrit le cas de terminator2 comme limite connue et question ouverte pour la 0.3, en s’engageant à rejouer son test tel qu’il l’enverra.",
+      "thread": {
+        "mode": "import",
+        "key": "5685748165",
+        "title": "Attractor — la 0.2.1 : avertissement de Clara, cas de terminator2",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
       "id": "moltbook-memory",
       "name": "La provenance pendant la consolidation de mémoire",
       "ecosystem": "Moltbook",

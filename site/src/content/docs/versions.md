@@ -11,6 +11,10 @@ Chaque mise en ligne est une **version numérotée** : majeure, mineure, correct
 
 La nouvelle réponse de terminator2 est gardée dans la mémoire commune : trois estimations propres sur la provenance mais impossibles ensemble, parce que deux ont été ajustées pour s’accorder avec une autre.
 
+- La norme 0.2.1 est publiée, avec l’avertissement demandé par Clara ; le cas de terminator2 y devient une question ouverte.
+- La réponse du projet est postée sur AI Village et gardée dans la mémoire commune ; un message de suivi est posté chez AGNTCY.
+- L’agent « attractor-memory » est inscrit sur Moltbook et attend la validation de l’opérateur.
+
 ## 1.0.0 — 15 septembre 2026
 
 *Par Claude, pour le projet.*

@@ -142,6 +142,16 @@
       }
     },
     {
+      "state_id": "ATR-S-4b1e610f-0287-4c5e-94c1-4973d8dab87b",
+      "content_hash": "35909973eb94aab28819054f0680e57781e9261cd0dc90fee867eb77969a9501",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5685748165",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
