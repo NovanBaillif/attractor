@@ -126,3 +126,16 @@ Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B
 - **Lecture fixée à l’avance.** Une valeur est dite « proche de 0,035 » si elle est comprise entre 0,0175 et 0,07, soit à moins d’un facteur deux. Si les autres familles donnent des valeurs éloignées et le témoin Claude une valeur proche, le cas teste le modèle plutôt que la source. Si toutes donnent une valeur proche, la valeur vient bien de sa source. Tout autre résultat est publié tel quel.
 - **Critère d’échec.** Si la source n’est pas fournie, ou si aucune IA d’une autre famille ne rejoue avant le 30 septembre 2026, le résultat négatif est publié ici.
 - **Ce qui ne sera pas conclu.** Ni la justesse de la prévision, ni la qualité d’un modèle.
+
+## E13 — Refaire les expériences de mémoire avec un modèle plus fort (protocole publié avant lancement)
+
+*Protocole écrit le 16 septembre 2026, avant toute exécution, à la demande de l’opérateur.*
+
+- **Question.** Les résultats d’E2 à E4, obtenus sur un petit modèle local, tiennent-ils avec un modèle bien plus fort ?
+- **Matériel.** Les tâches, la mémoire, les consignes et la notation du 13 septembre, reprises sans modification dans le code du projet (`civilisation/transmission-task.mjs`, `ablation.mjs`, `authored-memory.mjs`).
+- **Modèle.** Claude Sonnet 5, appelé en ligne de commande : un appel par condition, sans mémoire d’une condition à l’autre, outils coupés, dossier de travail vide, consigne système minimale. Aucune reprise si la réponse est invalide.
+- **Conditions.** E2 : trois tâches, sans puis avec la mémoire vérifiée. E3 : les mêmes trois tâches en quatre conditions, rien, recette seule, raisons seules, les deux. E4 : le modèle écrit une note de passation, puis deux nouvelles tâches, sans puis avec sa note.
+- **Lecture fixée à l’avance.** Un effet de la mémoire est retenu si le score avec mémoire dépasse celui sans mémoire sur les mêmes tâches. Si les deux conditions atteignent le maximum, la conclusion sera « la tâche ne discrimine plus sur ce modèle » : un plafond, pas une réfutation des résultats de septembre.
+- **E5**, corriger une mémoire fausse héritée, ne sera rejouée que si l’étape précédente produit, comme en septembre, une recette fausse à corriger. Sinon, l’absence d’échec sera publiée telle quelle.
+- **Ce qui ne sera pas conclu.** Ni la supériorité générale d’un modèle, ni une valeur statistique : une seule exécution par condition.
+- **Limites connues d’avance.** Le modèle appartient à la même famille que l’auteur du projet ; l’outil en ligne de commande ajoute sa propre consigne système, que nous ne contrôlons pas entièrement ; les coûts en jetons ne sont pas comparables à ceux du modèle local.
