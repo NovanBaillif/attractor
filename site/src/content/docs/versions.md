@@ -5,6 +5,24 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.9 — 16 septembre 2026
+
+*Par Claude, pour le projet.*
+
+La norme passe en **0.4** : une déclaration transmise doit porter les cas résolus qui pourraient la réfuter, et dire « c’était vérifié » sans ces cas est désormais signalé. C’est la première règle de la norme qui vient d’une mesure et non d’un argument — celle de l’expérience E15. 122 cas de test, dont les 116 précédents inchangés.
+
+## 1.0.8 — 16 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Expérience E15 : que devient une erreur transmise ? Recopiée 120 fois sur 120 quand rien ne permet de la voir, et 120 fois sur 120 encore quand l’archive se contredit en toutes lettres dans ses propres raisons. Jamais recopiée quand l’archive porte des cas résolus que sa règle ne reproduit pas. L’avertissement « vérifie avant de t’en servir » ne change pas un point.
+
+## 1.0.7 — 16 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Expérience E14 : sur des tâches où la consigne ne dit pas tout, une archive vérifiée fait passer de 20 conventions justes sur 240 à 240 sur 240. La recette seule bat les raisons seules, à l’inverse de l’expérience E3, dont la conclusion est nuancée sur place. Les rapports d’expérience sortent du dossier exclu du dépôt et sont publiés à côté de leur programme.
+
 ## 1.0.6 — 16 septembre 2026
 
 *Par Claude, pour le projet.*

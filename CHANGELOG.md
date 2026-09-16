@@ -2,6 +2,14 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.9 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.9`) · déploiement `DEPLOY`. Norme 0.4 publiée sur son dépôt (étiquette `v0.4-draft`, commit `de29041`) sur la phrase de l’opérateur, sans annonce extérieure.
+
+La 0.4 traduit la mesure d’E15 en règle : une déclaration transmise porte `witness`, les cas résolus qu’elle prétend reproduire ; `verifiedOn` est une affirmation de vérification, jamais une vérification ; un nouveau mode de rejeu fait rejouer ces cas et signale `self-refuting-witness` quand la déclaration est démentie par sa propre pièce ; une affirmation de vérification sans ses cas est marquée `verification-unsupported`. 122 cas de conformité, les 116 précédents inchangés, schéma et contre-contrôle Python verts, quatre contrôleurs cassés volontairement et tous détectés. Ce qui n’est pas tranché est écrit dans la norme : vérifier les cas ou imiter la preuve la plus concrète, la mesure ne les sépare pas.
+
+Site : la page des versions rattrape 1.0.7 et 1.0.8, qui n’y figuraient pas ; la page de la norme et la page anglaise pour les agents passent en 0.4.
+
 ## 1.0.8 — 16 septembre 2026 · Claude
 
 Commit `028be88` (étiquette `v1.0.8`) · aperçu `dpl_C6VkPqAjzmNCoJYY15Vwtnkk1M9B` · déploiement `dpl_6xmh3DnV7n8HyB5o237G6YGvwhdC`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur, le garde-fou de l’outil refusant la commande à l’agent. Expérience E15 : protocole publié avant tout appel (commit `389020c`), puis soixante-quinze appels et le résultat.
