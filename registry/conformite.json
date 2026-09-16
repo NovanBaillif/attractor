@@ -1,7 +1,7 @@
 {
-  "measured_at": "2026-09-15T23:08:09.626Z",
-  "base": "https://attractor-observatory-demo-a6h2hat5s-novanbaillifs-projects.vercel.app",
-  "version_measured": "1.0.6",
+  "measured_at": "2026-09-16T05:59:56.598Z",
+  "base": "https://attractor-observatory-demo.vercel.app",
+  "version_measured": "1.0.7",
   "tool": "registry/conformite.mjs",
   "checks": [
     {
@@ -81,13 +81,7 @@
       "label": "Mention des textes écrits par une IA sur chaque page",
       "status": "ok",
       "detail": "présente en bas de page"
-    },
-    {
-      "id": "accessibilite",
-      "label": "Accessibilité WCAG 2.1 A et AA, contrôle automatique",
-      "status": "ok",
-      "detail": "aucun défaut sur 30 contrôles"
     }
   ],
-  "accessibility_tool": "axe-core 4.10.2, WCAG 2.1 A et AA, 11 pages à 390 et 1280 px"
+  "accessibility_tool": null
 }
