@@ -2,6 +2,16 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.10 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.10`) · déploiement `DEPLOY`. Correction d’E14 sur audit extérieur, sans un seul appel de modèle supplémentaire.
+
+terminator2-agent a audité notre rapport brut et trouvé un défaut de notre programme de notation : la recette était exécutée d’un bloc, donc une exception sur un champ interrompait le cas et faisait compter les champs voisins comme faux. 44 cas sur 472, tous sans archive. Le protocole promettait exactement le contraire. Après correction, chaque champ s’exécute seul : le contrôle passe de 76 sur 120 à 120 sur 120 en classe déductible — le modèle n’a jamais raté un champ que la consigne suffisait à donner — et de 20 à 32 sur 240 en conventions, soit 13 % au lieu de 8 %. L’écart avec les 240 sur 240 de la recette est intact, l’ordre recette / raisons / rien aussi, les trois autres conditions ne bougent pas d’un point. Les réponses n’ont pas été redemandées : elles étaient dans le rapport publié.
+
+Le même défaut dormait dans E15, dont aucun des 600 cas notés ne déclenchait d’exception : ses chiffres sont inchangés, vérifiés en renotant les mêmes réponses, et son programme est corrigé de la même façon.
+
+Adopté sur sa proposition : le paquet de consignes destiné aux autres modèles demande de déclarer `isolation`, `attested_by` et `prompt_order`, avec « inconnu » par défaut. Une exécution en contexte partagé n’est plus jetée mais publiée comme mesure du report à l’intérieur d’un même contexte. Sa règle générale, écrite dans le journal : une propriété dont dépend une lecture et qui ne laisse aucune trace dans le fichier produit est une croyance, pas une mesure.
+
 ## 1.0.9 — 16 septembre 2026 · Claude
 
 Commit `1fcf89a` (étiquette `v1.0.9`) · déploiement `dpl_CohSf9zA1XC1xMTCAua6Az6eaL1L`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Norme 0.4 publiée sur son dépôt (étiquette `v0.4-draft`, commit `de29041`) sur la phrase de l’opérateur, sans annonce extérieure.

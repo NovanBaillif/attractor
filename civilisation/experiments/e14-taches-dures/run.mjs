@@ -56,7 +56,8 @@ function summarise(calls) {
 
 if (mode === 'pack') {
   const pack = {experiment: 'E14', archiveHash: hash(archive), builtAt: new Date().toISOString(),
-    howTo: 'Answer each prompt with one JSON recipe and nothing else, one fresh context per prompt, no access to the other answers. Send back {"model": …, "operator": …, "answers": {"<id>": <recipe>}}. Run the whole set several times if you can — we run it five times — and send {"repetitions": [{"answers": …}, …]} instead. Scoring: node run.mjs score answers.json, field by field, split between what the specification gives and what only the archive gives.',
+    howTo: 'Answer each prompt with one JSON recipe and nothing else, one fresh context per prompt, no access to the other answers. Send back {"model": …, "operator": …, "isolation": …, "attested_by": …, "prompt_order": […], "answers": {"<id>": <recipe>}}. Run the whole set several times if you can — we run it five times — and send {"repetitions": [{"answers": …}, …]} instead. Scoring: node run.mjs score answers.json, field by field, split between what the specification gives and what only the archive gives.',
+    isolationField: 'isolation is "fresh-context-per-prompt", "shared-context" or "unknown", and defaults to unknown when you leave it out: a contaminated run and a clean run emit identical answer files, so the property this design rests on has to be declared rather than assumed. attested_by is "operator" or "agent-self-report". prompt_order is the order you actually read the prompts in — a trace rather than a claim, empty or arbitrary under real isolation, and under a shared context it says which conditions were contaminated by which. A shared-context run is not discarded: it measures within-context carry-over, which is a different and perfectly good result, and it is reported as such. Asked for by terminator2-agent, https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690452796',
     prompts: plan.map(({id, prompt}) => ({id, prompt}))};
   writeFileSync(here + 'prompts.json', JSON.stringify(pack, null, 2) + '\n');
   console.log(JSON.stringify({written: 'prompts.json', prompts: pack.prompts.length, archiveHash: pack.archiveHash}));
@@ -70,8 +71,13 @@ if (mode === 'pack') {
     const recipe = (round.answers ?? round)[id];
     return {id, round: i + 1, task: task.id, condition, score: recipe ? scoreFields(task, recipe) : null, missing: !recipe};
   }));
+  const isolation = given.isolation ?? 'unknown';
   const report = {id: randomUUID(), at: new Date().toISOString(), experiment: 'E14', mode: 'external-answers', repeats: rounds.length,
-    replayer: {model: given.model ?? null, operator: given.operator ?? null, lineage: given.lineage ?? null},
+    replayer: {model: given.model ?? null, operator: given.operator ?? null, lineage: given.lineage ?? null,
+      isolation, attestedBy: given.attested_by ?? null, promptOrder: given.prompt_order ?? null},
+    measures: isolation === 'fresh-context-per-prompt' ? 'transmitted memory, as designed'
+      : isolation === 'shared-context' ? 'within-context carry-over, not transmitted memory: every prompt was read in one window'
+      : 'unknown: the answer file does not say whether each prompt was answered in a fresh context, so it cannot be read as either',
     archiveHash: hash(archive), summary: summarise(calls),
     byRound: Object.fromEntries(rounds.map((round, i) => ['round-' + (i + 1), summarise(calls.filter(c => c.round === i + 1))])), calls};
   writeFileSync(runs + `e14-external-${report.id}.json`, JSON.stringify(report, null, 2));

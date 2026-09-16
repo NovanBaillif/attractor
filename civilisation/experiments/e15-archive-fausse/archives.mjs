@@ -74,21 +74,31 @@ export function scoreE15(task, recipe) {
     intactConvention: {passed: 0, total: 0},
     cases: []
   };
+  // Each field's pipeline runs on its own: an exception belongs to its field and never to its neighbours.
+  // Corrected on 16 September 2026 after terminator2-agent's audit of the E14 report
+  // (https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693413381).
+  // E15 had no execution error in its 600 scored cases, so its published numbers do not change; the defect was
+  // latent here and is removed anyway, because a scorer that can hide a correct field must not be handed on.
+  let structural = null;
+  try { checkRecipe(recipe); } catch (e) { structural = e.message; }
   for (const input of task.inputs) {
     const expected = task.expected(input);
-    let output = null, error = null;
-    try { checkRecipe(recipe); output = runRecipe(recipe, input); } catch (e) { error = e.message; }
     const fields = {};
     for (const [field, klass] of Object.entries(task.outputs)) {
-      const got = output && Object.hasOwn(output, field) ? output[field] : undefined;
-      const right = Boolean(output) && canonical(got) === canonical(expected[field]);
+      let got, error = structural;
+      if (!error) {
+        const own = recipe.fields.find(f => f.to === field);
+        if (!own) error = 'Champ de sortie absent de la recette.';
+        else { try { got = runRecipe({fields: [own]}, input)[field]; } catch (e) { error = e.message; } }
+      }
+      const right = !error && canonical(got) === canonical(expected[field]);
       if (klass === 'derivable') {
         result.derivable.total += 1;
         if (right) result.derivable.passed += 1;
         fields[field] = {klass, passed: right};
       } else if (field === hit.field) {
         result.corruptedField.total += 1;
-        const copied = Boolean(output) && canonical(got) === canonical(lower(input[hit.from]));
+        const copied = !error && canonical(got) === canonical(lower(input[hit.from]));
         const verdict = right ? 'correct' : copied ? 'propagated' : 'other';
         result.corruptedField[verdict] += 1;
         fields[field] = {klass, verdict, expected: expected[field], got};
@@ -98,7 +108,7 @@ export function scoreE15(task, recipe) {
         fields[field] = {klass, passed: right};
       }
     }
-    result.cases.push({input, error, fields});
+    result.cases.push({input, fields});
   }
   return result;
 }

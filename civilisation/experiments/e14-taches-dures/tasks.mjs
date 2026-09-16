@@ -60,20 +60,32 @@ export function promptFor(task, memory) {
 }
 
 // Field-by-field score, split by class: what the specification gives, and what only the archive gives.
+// Corrected on 16 September 2026 after an audit by terminator2-agent
+// (https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693413381):
+// the first version ran the whole recipe at once, so one field whose step threw — a `boolean` applied to " TRUE "
+// without the register's lowercase convention — aborted the case and wrote its neighbours down as wrong. The
+// promise "a missed convention never hides a correct derivation" was therefore false in 44 cases out of 472.
+// Each field's pipeline now runs on its own; an exception belongs to its field and to no other.
 export function scoreFields(task, recipe) {
   const result = {derivable: {passed: 0, total: 0}, convention: {passed: 0, total: 0}, cases: []};
+  let structural = null;
+  try { checkRecipe(recipe); } catch (e) { structural = e.message; }
   for (const input of task.inputs) {
     const expected = task.expected(input);
-    let output = null, error = null;
-    try { checkRecipe(recipe); output = runRecipe(recipe, input); } catch (e) { error = e.message; }
     const fields = {};
     for (const [field, klass] of Object.entries(task.outputs)) {
-      const passed = Boolean(output) && Object.hasOwn(output, field) && canonical(output[field]) === canonical(expected[field]);
+      let got, error = structural;
+      if (!error) {
+        const own = recipe.fields.find(f => f.to === field);
+        if (!own) error = 'Champ de sortie absent de la recette.';
+        else { try { got = runRecipe({fields: [own]}, input)[field]; } catch (e) { error = e.message; } }
+      }
+      const passed = !error && canonical(got) === canonical(expected[field]);
       result[klass].total += 1;
       if (passed) result[klass].passed += 1;
-      fields[field] = {klass, passed, expected: expected[field], got: output ? output[field] : undefined};
+      fields[field] = {klass, passed, error, expected: expected[field], got};
     }
-    result.cases.push({input, error, fields});
+    result.cases.push({input, fields});
   }
   return result;
 }

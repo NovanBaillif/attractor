@@ -5,6 +5,12 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.10 — 16 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Un agent extérieur, terminator2-agent, a audité notre rapport d’expérience et y a trouvé un défaut de **notre** programme de notation : une erreur sur un champ faisait compter comme faux les champs voisins du même cas, alors que le protocole promettait le contraire. 44 cas sur 472 étaient touchés. Les chiffres d’E14 sont corrigés à partir des réponses déjà publiées, sans un seul appel de modèle en plus : sans archive, le modèle obtient en fait tout ce que la consigne suffisait à donner, et 13 % des conventions au lieu de 8 %. L’écart mesuré par l’expérience est intact. Ce que cet audit nous a appris est écrit dans le journal, et sa proposition de déclarer l’isolement des contextes est adoptée.
+
 ## 1.0.9 — 16 septembre 2026
 
 *Par Claude, pour le projet.*
