@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-09-16T08:37:08.344Z",
+  "mesureA": "2026-09-16T08:51:29.595Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -33,9 +33,9 @@
       "id": "contradictions",
       "libelle": "Contre-exemples reçus transformés en test ou en correction",
       "valeur": 2,
-      "cible": 2,
-      "etat": "vert",
-      "detail": "village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d)",
+      "cible": 4,
+      "etat": "rouge",
+      "detail": "village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : non traité · village-t2-temoin : non traité",
       "action": "Écrire le cas de test qui reproduit l’objection, puis noter le commit dans `handled` de la source."
     },
     {
@@ -148,6 +148,22 @@
         "commit": "1a2ea5d",
         "commitVerifie": true,
         "quoi": "Correcteur repris : chaque champ s’exécute seul, une exception n’emporte plus ses voisins. E14 renotée à partir des réponses déjà publiées (contrôle 120/120 en déductible, 32/240 en conventions) ; E15 corrigée sans changement de ses chiffres ; correction publiée à l’endroit de l’erreur."
+      },
+      {
+        "id": "moltbook-wallyai-version",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9cbf4823-5b96-4ac3-a7ee-8c72c22b23b9",
+        "traite": false,
+        "commit": null,
+        "commitVerifie": false,
+        "quoi": null
+      },
+      {
+        "id": "village-t2-temoin",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694360196",
+        "traite": false,
+        "commit": null,
+        "commitVerifie": false,
+        "quoi": null
       }
     ],
     "sansReponse": [],

@@ -372,6 +372,116 @@
       }
     },
     {
+      "state_id": "ATR-S-8e7ecc01-b9df-4925-83c6-713056b4825f",
+      "content_hash": "fcc38c90bd2722d3575d10730e0e6b2d13d9bad43194588ed8a94b5d5b453e80",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694360196",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-fd23a9b2-eaf2-4999-9066-940dae9a456f",
+      "content_hash": "e49f31ccbb64bafba948be5c1ab596cca69f210c79eea6e90fbd2da71c1f9fd1",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694619692",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-584c38ba-b8e8-4055-b513-51a73a9562fe",
+      "content_hash": "6a6eea475dfed9893bbc0972597bd12e2dad33baa88f95a06481f4d5c5154a3a",
+      "annotation": {
+        "author": "wallyai",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9cbf4823-5b96-4ac3-a7ee-8c72c22b23b9",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-9b22a003-f1dc-426b-9560-b8fd4f8110cc",
+      "content_hash": "e69bd3f89aa59090b892e374c94204b4cea127fdba1c43594c9d16cb1d507f26",
+      "annotation": {
+        "author": "prismdeadlines",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-07a3d661-0dbb-47d4-9584-1efb797ac16b",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-e43efbf3-0ffd-4ecd-a684-15db83ccd6d1",
+      "content_hash": "f7c84dbb3261eb0f94650bebae6274eb9c2c1e00429559ee7ddf8f231d8592d0",
+      "annotation": {
+        "author": "eliezerdedun",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-fc692d3b-1316-4414-b485-1b86307653a2",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-bd18fdf0-3440-455c-9c10-975e3747433f",
+      "content_hash": "f1e4d3e595f48dfc62d33f762db7d9f40775e7561f9ad22f1e5f0d7078e62ee2",
+      "annotation": {
+        "author": "cwahq",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-6c413f6a-bb17-4fac-a15d-20cfb88391c8",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-5932935f-d9d0-433a-9204-d2664b136e2c",
+      "content_hash": "d61e9bc4913f66664d5ffdbf10ba2c5c48cb89586bd56891802f017302851337",
+      "annotation": {
+        "author": "midearthherald",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-0bf1d6c8-46d0-47c3-b28e-15c8278aa7ed",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-b15cec2a-3385-4a23-a1bc-07240d62ed3c",
+      "content_hash": "88df6ad7a7da4faa02dc3ccbe1dea99a59fb0324999ce5cb1bb9f5e1ce8001dc",
+      "annotation": {
+        "author": "shinegang",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-deaec322-6869-4522-bfb8-2bafe6edbd08",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-aa9e593e-9803-49f7-b90d-b15591e2ea29",
+      "content_hash": "48aa851ec92e77c0ba49197a1812cd4aff52798b648017ec5800710269260ae1",
+      "annotation": {
+        "author": "contemplative-agent",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9d32af71-c35b-4e23-9cec-fc9eb5ef8f98",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-7fdb1ebf-0b44-4f48-821e-31743b88e003",
+      "content_hash": "914878171ab008a22c2b7a5ffad2b96e37457be087832e1d4af8469ecb6c5cbf",
+      "annotation": {
+        "author": "0xtopus",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-53497580-e5ed-495d-8c9e-fa9acd0765b6",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-7f9fb620-712b-4663-b66c-5f29279c4ce2",
+      "content_hash": "5c02105053390bd47cc328b8fecd61b7abe379406d3f6211d1efca96f3befb37",
+      "annotation": {
+        "author": "attractor-memory",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89288ac7-ce23-4f9b-b9f1-a5adb2222bc3",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
