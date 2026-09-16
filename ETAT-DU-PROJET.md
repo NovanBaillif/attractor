@@ -12,7 +12,13 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.6
+## Version en ligne : 1.0.7
+
+Mise en production le 16/09 : commit `b4a9d93` (étiquette `v1.0.7`), déploiement `dpl_AFGLkiu7zKr3u2yomBskVepEkc2x`, conformité 13 sur 13 mesurée sur le site en ligne, aucune erreur de console, aucun débordement à 390 px. Expérience E14 publiée : protocole avant (`2966b4b`), invitation aux agents d’AI Village avant notre propre passage, puis le résultat. Les rapports d’E13 et E14 sortent de `data/` (exclu du dépôt) et sont publiés à côté de leur programme.
+
+La commande de mise en production a été refusée à l’agent par le garde-fou du mode auto (« Production Deploy ») : Novan l’a lancée lui-même. Prévenir dès qu’une version est prête.
+
+### 1.0.6
 
 Mise en production le 16/09 sur la phrase de Novan : commit `aca94de` (étiquette `v1.0.6`), déploiement `dpl_3SyqFxUfQvud2Jp8qsnkaFnuxHPv`, 38 contrôles sur 38 sans erreur, conformité 14 sur 14, accessibilité sans défaut. Protocole E12 publié ; la page des écosystèmes montre ce qui se passe dans chaque réseau.
 
@@ -71,6 +77,8 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 
 E13 (16/09) : les tâches de mémoire d’E2 à E4 rejouées avec Claude Sonnet 5 par `civilisation/experiments/e13-modele-fort/run.mjs`. Résultat : 24 sur 24 dans toutes les conditions, plafond écrit d’avance ; la note de passation du modèle a été refusée pour format ; E5 non rejouable. Protocole publié avant l’exécution (commit `f5c9105`), résultat publié après (`cce2fc4`). Prochaine étape proposée : E14, mêmes questions avec des tâches plus dures, et le même matériel proposé aux agents d’autres familles.
 
+E14 (16/09) : trois entrées d’un registre inventé dont les conventions ne vivent que dans l’archive vérifiée de l’entrée précédente ; notation champ par champ en deux classes, quatre conditions, douze consignes rejouées cinq fois (60 appels) par `civilisation/experiments/e14-taches-dures/run.mjs`. Résultat : 20 conventions sur 240 sans archive, 240 sur 240 avec la recette, 152 sur 240 avec les raisons seules — la recette bat les raisons, à l’inverse d’E3, nuancée en conséquence. Sans archive, 44 points sur 120 perdus sur ce que la consigne suffisait à donner. Un appel perdu par dépassement du temps, compté comme manquant. Protocole publié avant (`2966b4b`), résultat après (`b4a9d93`). Les douze mêmes consignes sont proposées aux agents d’AI Village (`pack` et `score`) : leurs réponses, si elles arrivent, seront notées par le même programme et publiées quel que soit le sens du résultat.
+
 ## Ce qui reste local
 
 - **Deux branches à ne jamais pousser** : `sauvegarde-avant-publication` (ancien historique, contient l'adresse personnelle de Novan, retirée avant publication) et `codex-chantier-connexions`.
@@ -108,4 +116,4 @@ L'expérience E11 (une même contribution qui circule entre deux écosystèmes) 
 
 ## Défaut connu
 
-La recherche de l'ancienne application (/registry) appelle /api/v2/recipes sans session et reçoit une erreur 401. Le défaut existait avant la 1.0.0.
+Aucun à ce jour. La recherche de l'ancienne application (/registry), qui recevait une erreur 401 à la première visite, est réparée depuis la 1.0.3 : la page ouvre sa session avant le premier appel.
