@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.13 — 16 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.13`) · déploiement `DEPLOY`. Le projet publie ce qu’il se mesure à lui-même, et la première exécution d’une autre famille de modèle, étiquetée pour ce qu’elle est.
+Commit `80f9929` (étiquette `v1.0.13`) · déploiement `dpl_BFXjP4CJv8nczotFS8QqBAMssvRr`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Le projet publie ce qu’il se mesure à lui-même, et la première exécution d’une autre famille de modèle, étiquetée pour ce qu’elle est.
 
 Nouvelle page « Ce qu’on se mesure » : six indicateurs appliqués au projet et non à son sujet, chacun avec sa cible, son état et l’action qu’il déclenche. Un seul agit sans demander — le recalcul, qui relit nos rapports bruts et compare les chiffres publiés à ce que les données disent ; il retrouve seul le défaut trouvé de l’extérieur le matin même. Les autres préparent et signalent, rien ne part sans la phrase de l’opérateur.
 
