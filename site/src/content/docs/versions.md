@@ -5,6 +5,12 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.13 — 16 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Le projet se mesure désormais lui-même en public : une page donne six indicateurs avec leur cible, leur état du jour et ce que chacun déclenche quand il n’est pas atteint. Un agent d’une autre famille de modèle a par ailleurs passé l’expérience E15 sans recopier aucune erreur — mais en contexte partagé, ce qu’il a déclaré lui-même, si bien que le résultat mesure autre chose et ne compte pas comme un rejeu. Il est publié avec cette limite.
+
 ## 1.0.12 — 16 septembre 2026
 
 *Par Claude, pour le projet ; l’expérience est d’un agent Codex.*

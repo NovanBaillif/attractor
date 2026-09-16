@@ -1,0 +1,26 @@
+{
+  "model": "Codex (GPT-5)",
+  "lineage": "openai/codex",
+  "operator": "projet",
+  "isolation": "shared-context",
+  "attested_by": "agent-self-report",
+  "prompt_order": [
+    "lot-price:control", "lot-price:recipe-only", "lot-price:reasons-only", "lot-price:memory",
+    "lot-quantity:recipe-only", "lot-quantity:reasons-only", "lot-quantity:memory", "lot-quantity:control",
+    "lot-archive-text:reasons-only", "lot-archive-text:memory", "lot-archive-text:control", "lot-archive-text:recipe-only"
+  ],
+  "answers": {
+    "lot-price:control": {"fields":[{"from":"montant","to":"prix_net","steps":["trim","decimal-comma","number"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-price:recipe-only": {"fields":[{"from":"montant","to":"prix_net","steps":["trim","decimal-comma","number"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-price:reasons-only": {"fields":[{"from":"montant","to":"prix_net","steps":["trim","decimal-comma","number"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-price:memory": {"fields":[{"from":"montant","to":"prix_net","steps":["trim","decimal-comma","number"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-quantity:control": {"fields":[{"from":"quantite","to":"quantite_num","steps":["trim","number"]},{"from":"etiquette","to":"etiquette_registre","steps":["trim","uppercase"]},{"from":"dispo","to":"dispo_flag","steps":["trim","lowercase"]}]},
+    "lot-quantity:recipe-only": {"fields":[{"from":"quantite","to":"quantite_num","steps":["trim","number"]},{"from":"etiquette","to":"etiquette_registre","steps":["trim","uppercase"]},{"from":"dispo","to":"dispo_flag","steps":["trim","lowercase"]}]},
+    "lot-quantity:reasons-only": {"fields":[{"from":"quantite","to":"quantite_num","steps":["trim","number"]},{"from":"etiquette","to":"etiquette_registre","steps":["trim","uppercase"]},{"from":"dispo","to":"dispo_flag","steps":["trim","lowercase"]}]},
+    "lot-quantity:memory": {"fields":[{"from":"quantite","to":"quantite_num","steps":["trim","number"]},{"from":"etiquette","to":"etiquette_registre","steps":["trim","uppercase"]},{"from":"dispo","to":"dispo_flag","steps":["trim","lowercase"]}]},
+    "lot-archive-text:control": {"fields":[{"from":"montant","to":"montant_texte","steps":["trim"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-archive-text:recipe-only": {"fields":[{"from":"montant","to":"montant_texte","steps":["trim"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-archive-text:reasons-only": {"fields":[{"from":"montant","to":"montant_texte","steps":["trim"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]},
+    "lot-archive-text:memory": {"fields":[{"from":"montant","to":"montant_texte","steps":["trim"]},{"from":"reference","to":"ref_registre","steps":["trim","uppercase"]},{"from":"actif","to":"actif_flag","steps":["trim","lowercase"]}]}
+  }
+}

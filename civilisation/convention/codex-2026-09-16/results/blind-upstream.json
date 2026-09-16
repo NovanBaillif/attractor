@@ -1,0 +1,34 @@
+{
+  "observedAt": "2026-09-16T09:25:12.750Z",
+  "mode": "blind",
+  "harness": "upstream",
+  "harnessSha256": "1a2ba5ecebd8496d5dc1a6a0ecac22eb6816d52f7cdbfcc1cbb7dbe110004be2",
+  "exitCode": 1,
+  "signal": null,
+  "error": null,
+  "stderr": "",
+  "stdout": "{\n  \"implementation\": \"C:\\\\Users\\\\Utilisateur\\\\CodeGPT\\\\marmit-find\\\\attractor\\\\civilisation\\\\convention\\\\codex-2026-09-16\\\\blind\\\\index.mjs\",\n  \"total\": 122,\n  \"passed\": 121,\n  \"byKind\": {\n    \"lineage\": \"27/27\",\n    \"dispute\": \"16/16\",\n    \"record\": \"24/24\",\n    \"hop\": \"25/25\",\n    \"reveal\": \"8/8\",\n    \"drift\": \"5/5\",\n    \"replay\": \"16/17\"\n  },\n  \"failures\": [\n    {\n      \"id\": \"v04-witness-undeclared\",\n      \"kind\": \"replay\",\n      \"problems\": [\n        \"problems: expected [\\\"witness-undeclared\\\"], got [\\\"replay-produced-invalid\\\",\\\"witness-undeclared\\\"]\"\n      ]\n    }\n  ]\n}\n",
+  "report": {
+    "implementation": "C:\\Users\\Utilisateur\\CodeGPT\\marmit-find\\attractor\\civilisation\\convention\\codex-2026-09-16\\blind\\index.mjs",
+    "total": 122,
+    "passed": 121,
+    "byKind": {
+      "lineage": "27/27",
+      "dispute": "16/16",
+      "record": "24/24",
+      "hop": "25/25",
+      "reveal": "8/8",
+      "drift": "5/5",
+      "replay": "16/17"
+    },
+    "failures": [
+      {
+        "id": "v04-witness-undeclared",
+        "kind": "replay",
+        "problems": [
+          "problems: expected [\"witness-undeclared\"], got [\"replay-produced-invalid\",\"witness-undeclared\"]"
+        ]
+      }
+    ]
+  }
+}

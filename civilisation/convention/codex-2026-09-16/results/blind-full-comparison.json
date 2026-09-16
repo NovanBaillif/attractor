@@ -1,0 +1,62 @@
+{
+  "observedAt": "2026-09-16T09:25:22.035Z",
+  "implementation": "blind",
+  "total": 122,
+  "matching": 120,
+  "differences": [
+    {
+      "id": "v04-witness-undeclared",
+      "kind": "replay",
+      "expected": {
+        "status": "invalid",
+        "reproduced": null,
+        "independence": "not-established",
+        "problems": [
+          "witness-undeclared"
+        ],
+        "warnings": []
+      },
+      "actual": {
+        "status": "invalid",
+        "reproduced": null,
+        "independence": "not-established",
+        "problems": [
+          "replay-produced-invalid",
+          "witness-undeclared"
+        ],
+        "warnings": [],
+        "cases": {
+          "matched": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "v04-witness-count-mismatch",
+      "kind": "replay",
+      "expected": {
+        "status": "invalid",
+        "reproduced": null,
+        "independence": "not-established",
+        "problems": [
+          "replay-produced-invalid"
+        ],
+        "warnings": []
+      },
+      "actual": {
+        "status": "invalid",
+        "reproduced": null,
+        "independence": "not-established",
+        "problems": [
+          "replay-produced-invalid"
+        ],
+        "warnings": [],
+        "cases": {
+          "matched": 0,
+          "total": 2
+        }
+      }
+    }
+  ],
+  "scope": "Full-result differential on published cases, excluding only top-level free-text interpretation/reason. Reference agreement is not an independent truth oracle."
+}

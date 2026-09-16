@@ -1,0 +1,17 @@
+{
+  "frozenAt": "2026-09-16T09:07:13.070Z",
+  "runtime": "v24.19.0",
+  "sourceCommit": "de29041138c301e5d7eb4f5883723e36491f696d",
+  "files": [
+    {
+      "file": "evaluation/empty-checker.mjs",
+      "sha256": "f2a4b1e144f2ced25ff0dec0b041362a81332a0b9a099dbd650382244919065d"
+    },
+    {
+      "file": "evaluation/evaluate.mjs",
+      "sha256": "46d289843d2c7d26a8201cdc87facc7d3ac78f82dc152d11ae2d34107b12d3a3"
+    }
+  ],
+  "harnessSha256": "1a2ba5ecebd8496d5dc1a6a0ecac22eb6816d52f7cdbfcc1cbb7dbe110004be2",
+  "casesSha256": "8ccc9d164a0f6d27d2b4ba0a566da005b9b8c5f6809dbd6cfc5fdc0db8866614"
+}

@@ -1,0 +1,7 @@
+Implement the Attractor Cooperation Profile 0.4 from its text alone.
+
+Your only permitted input files are input/SPEC.md and input/schema/transmission.schema.json in the directory given by the coordinator. Read them completely. Do not open any other project file, reference implementation, test, fixture, result, sibling trial, or network resource. You may consult files you yourself create in blind/ and run your own tests there using Node.js built-ins. Do not inspect the coordinator's evaluation or other agents' files.
+
+Write a Node.js 24 ECMAScript implementation in blind/index.mjs. It must export inspectLineage, inspectDispute, inspectRecord, inspectHop, inspectReveal, inspectReplay, and driftReport with the exact function interfaces, result shapes, diagnostic strings and semantics specified by SPEC.md. Use only Node.js built-ins. Split helper modules so source files stay within 300 lines each. Functions must not mutate inputs. Handle the unspecified cases with the most literal reading you can justify.
+
+Write blind/AMBIGUITIES.md listing uncertainties in the written specification and your chosen readings. Do not claim to have passed the official suite: you will not see it until after the first implementation has been frozen and evaluated separately. When finished, report the file list and any self-tests run. Stop editing after your final report; later corrections belong to a separate revision, not blind/.

@@ -1,0 +1,162 @@
+{
+  "observedAt": "2026-09-16T09:09:07.622Z",
+  "casesPerChecker": 122,
+  "checks": 7,
+  "observations": [
+    {
+      "label": "returns undefined",
+      "upstream": {
+        "exitCode": 0,
+        "passed": 122,
+        "total": 122,
+        "firstFailure": null
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "result must be a non-null, non-array object"
+          ]
+        }
+      }
+    },
+    {
+      "label": "returns null",
+      "upstream": {
+        "exitCode": 0,
+        "passed": 122,
+        "total": 122,
+        "firstFailure": null
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "result must be a non-null, non-array object"
+          ]
+        }
+      }
+    },
+    {
+      "label": "returns false",
+      "upstream": {
+        "exitCode": 0,
+        "passed": 122,
+        "total": 122,
+        "firstFailure": null
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "result must be a non-null, non-array object"
+          ]
+        }
+      }
+    },
+    {
+      "label": "returns 0",
+      "upstream": {
+        "exitCode": 0,
+        "passed": 122,
+        "total": 122,
+        "firstFailure": null
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "result must be a non-null, non-array object"
+          ]
+        }
+      }
+    },
+    {
+      "label": "returns \"\"",
+      "upstream": {
+        "exitCode": 0,
+        "passed": 122,
+        "total": 122,
+        "firstFailure": null
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "result must be a non-null, non-array object"
+          ]
+        }
+      }
+    },
+    {
+      "label": "returns []",
+      "upstream": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "status: expected \"dependent\", got undefined",
+            "sharedSources: expected [\"current\"], got undefined",
+            "independentRoots: expected {\"left\":[],\"right\":[]}, got undefined"
+          ]
+        }
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "result must be a non-null, non-array object"
+          ]
+        }
+      }
+    },
+    {
+      "label": "valid result then missing on reordered call",
+      "upstream": {
+        "exitCode": 0,
+        "passed": 122,
+        "total": 122,
+        "firstFailure": null
+      },
+      "strict": {
+        "exitCode": 1,
+        "passed": 0,
+        "total": 122,
+        "firstFailure": {
+          "id": "v01-lineage-direct-backfill-from-comparand",
+          "kind": "lineage",
+          "problems": [
+            "arrival order changed the result"
+          ]
+        }
+      }
+    }
+  ]
+}

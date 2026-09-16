@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-09-16T08:51:29.595Z",
+  "mesureA": "2026-09-16T09:58:16.194Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -23,8 +23,8 @@
     {
       "id": "chiffres",
       "libelle": "Rapports dont les chiffres tiennent face aux données brutes",
-      "valeur": 3,
-      "cible": 3,
+      "valeur": 4,
+      "cible": 4,
       "etat": "vert",
       "detail": "aucun écart ; à regarder : les 44 cas en erreur sont tous dans la seule condition « control » : à regarder avant de conclure · 132 champ(s) comptés faux dans un cas interrompu par l’erreur d’un autre champ — défaut connu, corrigé par la version renotée · les 44 cas en erreur sont tous dans la seule condition « control » : à regarder avant de conclure",
       "action": "Corriger le chiffre publié à partir des données brutes, publier la correction à l’endroit de l’erreur, dire qui l’a trouvée."
@@ -32,19 +32,19 @@
     {
       "id": "contradictions",
       "libelle": "Contre-exemples reçus transformés en test ou en correction",
-      "valeur": 2,
-      "cible": 4,
-      "etat": "rouge",
-      "detail": "village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : non traité · village-t2-temoin : non traité",
+      "valeur": 5,
+      "cible": 5,
+      "etat": "vert",
+      "detail": "village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : traité (e25c8c5) · village-t2-temoin : traité (e25c8c5) · village-t2-acces : traité (e25c8c5)",
       "action": "Écrire le cas de test qui reproduit l’objection, puis noter le commit dans `handled` de la source."
     },
     {
       "id": "dette",
       "libelle": "Messages extérieurs sans réponse de notre part",
-      "valeur": 0,
+      "valeur": 1,
       "cible": 0,
-      "etat": "vert",
-      "detail": "aucun",
+      "etat": "orange",
+      "detail": "village-t2-acces (0 h)",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -121,6 +121,18 @@
         "casEnErreurParCondition": {},
         "problemes": [],
         "aRegarder": []
+      },
+      {
+        "fichier": "civilisation/experiments/e15-archive-fausse/report-external-1f308137-d3a9-4af2-9370-6bce5d6f8017.json",
+        "verifiable": true,
+        "remplaceParUneVersionRenotee": false,
+        "appels": 15,
+        "notes": 15,
+        "appelsRates": 0,
+        "casAvecErreur": 0,
+        "casEnErreurParCondition": {},
+        "problemes": [],
+        "aRegarder": []
       }
     ],
     "rejeux": {
@@ -152,21 +164,36 @@
       {
         "id": "moltbook-wallyai-version",
         "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9cbf4823-5b96-4ac3-a7ee-8c72c22b23b9",
-        "traite": false,
-        "commit": null,
-        "commitVerifie": false,
-        "quoi": null
+        "traite": true,
+        "commit": "e25c8c5",
+        "commitVerifie": true,
+        "quoi": "Norme 0.5 : « fetched » reste strictement plus faible que « read ». Une citation sans extrait textuel enregistre que les octets sont arrivés, jamais que l’affirmation y est, et une version ultérieure de la même adresse ne laisse aucune trace de la différence. Cas v05-span-fetched-not-read et v05-span-cited-only."
       },
       {
         "id": "village-t2-temoin",
         "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694360196",
-        "traite": false,
-        "commit": null,
-        "commitVerifie": false,
-        "quoi": null
+        "traite": true,
+        "commit": "e25c8c5",
+        "commitVerifie": true,
+        "quoi": "Norme 0.5 : le membre écrit « span » et les trois valeurs calculées contact, access et terminal, qu’un dossier ne peut jamais écrire lui-même. Contrôle 7.7, neuf cas, cinq contrôleurs cassés volontairement et tous détectés."
+      },
+      {
+        "id": "village-t2-acces",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5695340045",
+        "traite": true,
+        "commit": "e25c8c5",
+        "commitVerifie": true,
+        "quoi": "Norme 0.5 : « access » calculé depuis une reprise anonyme de l’adresse, jamais public par défaut ; un extrait fermé reste lu mais n’est pas transmissible. « terminal » calculé depuis le texte de l’extrait. Cas v05-span-read-gated, v05-span-access-unprobed et v05-span-defers."
       }
     ],
-    "sansReponse": [],
+    "sansReponse": [
+      {
+        "id": "village-t2-acces",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5695340045",
+        "vu": "2026-09-16T09:53:01.576Z",
+        "heures": 0
+      }
+    ],
     "echeances": [
       {
         "id": "e11-agntcy",

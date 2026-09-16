@@ -1,0 +1,21 @@
+{
+  "frozenAt": "2026-09-16T09:26:05.583Z",
+  "runtime": "v24.19.0",
+  "sourceCommit": "de29041138c301e5d7eb4f5883723e36491f696d",
+  "files": [
+    {
+      "file": "revision/index.mjs",
+      "sha256": "8f2e1a68fc7209e36a8651ab547105aebbfb7e744b54e232ff69873df21c7077"
+    },
+    {
+      "file": "revision/replay.mjs",
+      "sha256": "6c51ef89ae83c062ffe1722f0d3969c3f4bf4b01402dfdf8e969301ea1228c48"
+    },
+    {
+      "file": "revision/REVISION.md",
+      "sha256": "fd5a3df8c3ff1b63ada7bd7982da53a6210e31b4c26073bec55a701fa6f7e64c"
+    }
+  ],
+  "harnessSha256": "1a2ba5ecebd8496d5dc1a6a0ecac22eb6816d52f7cdbfcc1cbb7dbe110004be2",
+  "casesSha256": "8ccc9d164a0f6d27d2b4ba0a566da005b9b8c5f6809dbd6cfc5fdc0db8866614"
+}

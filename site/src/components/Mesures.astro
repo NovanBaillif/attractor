@@ -1,0 +1,26 @@
+---
+// Les indicateurs que le projet applique à lui-même (registry/mesures.json, écrit par registry/mesures.mjs).
+import Pastille from './Pastille.astro';
+import data from '../data/mesures.json';
+import {quand} from '../lib/format';
+const ton = {vert: 'vert', orange: 'orange', rouge: 'rouge'};
+const mot = {vert: 'Atteint', orange: 'À surveiller', rouge: 'Non atteint'};
+const rouges = data.indicateurs.filter(i => i.etat === 'rouge').length;
+---
+<p class="note">
+  Mesuré le {quand(data.mesureA)} par l’outil <code>{data.outil}</code>, à partir des fichiers du projet lui-même.
+  Aucune action vers l’extérieur n’est déclenchée automatiquement : un indicateur non atteint prépare une action et la signale à l’opérateur humain.
+</p>
+<p><strong>{rouges === 0 ? 'Tous les indicateurs sont atteints.' : `${rouges} indicateur${rouges > 1 ? 's' : ''} non atteint${rouges > 1 ? 's' : ''} sur ${data.indicateurs.length}.`}</strong></p>
+<ul class="signs">
+  {data.indicateurs.map(i => (
+    <li class="sign">
+      <p class="sign-head">
+        <strong>{i.libelle}</strong> <Pastille tone={ton[i.etat]} label={mot[i.etat]} />
+      </p>
+      <p><strong>{i.valeur}</strong> {typeof i.cible === 'number' && <>sur une cible de <strong>{i.cible}</strong></>}</p>
+      <p class="note">{i.detail}</p>
+      {i.etat !== 'vert' && <p class="note"><em>Ce que cela déclenche :</em> {i.action}</p>}
+    </li>
+  ))}
+</ul>

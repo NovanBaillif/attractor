@@ -84,10 +84,16 @@ function rejeux(tous) {
   const familles = new Set(), operateurs = new Set(), externes = [];
   for (const {contenu: r} of tous) {
     if (r.mode === 'external-answers') {
-      externes.push({experience: r.experiment, modele: r.replayer?.model ?? 'non déclaré',
+      const replay = {experience: r.experiment, modele: r.replayer?.model ?? 'non déclaré',
         famille: r.replayer?.lineage ?? 'non déclarée', operateur: r.replayer?.operator ?? 'non déclaré',
-        isolement: r.replayer?.isolation ?? 'inconnu'});
-      if (r.replayer?.lineage) familles.add(r.replayer.lineage);
+        isolement: r.replayer?.isolation ?? 'inconnu'};
+      // A file imported through the external-answer format can still be run by this project.
+      // It adds a model family but must never be counted as an independent operator.
+      if (replay.operateur !== 'projet') externes.push(replay);
+      // Ni une famille : une exécution en contexte partagé mesure le report à l'intérieur d'une fenêtre,
+      // pas la transmission d'une mémoire. Compter sa famille fermerait l'indicateur par la moitié facile
+      // de sa propre définition, et il cesserait d'être un instrument (terminator2-agent, 16/09).
+      if (r.replayer?.lineage && replay.isolement === 'fresh-context-per-prompt') familles.add(r.replayer.lineage);
       if (r.replayer?.operator) operateurs.add(r.replayer.operator);
     } else if (r.model) { familles.add('anthropic/claude'); operateurs.add('projet'); }
   }
@@ -99,7 +105,7 @@ function contradictions(config, commitExiste) {
   const recues = config.sources.filter(s => s.relationship === 'external_counterexample');
   return recues.map(s => {
     const t = s.handled ?? null;
-    const verifie = t?.commit ? commitExiste(t.commit) : false;
+    const verifie = t?.commit ? commitExiste(t.commit, t.repo) : false;
     return {id: s.id, url: s.url, traite: Boolean(t), commit: t?.commit ?? null, commitVerifie: verifie, quoi: t?.what ?? null};
   });
 }
@@ -123,8 +129,14 @@ const config = read('registry/ecosystems.json');
 const sources = existsSync('registry/thread-sources.json') ? read('registry/thread-sources.json') : {comments: []};
 const jalons = existsSync('registry/jalons.json') ? read('registry/jalons.json') : {jalons: []};
 // Le dépôt appartient à un autre compte Windows : git refuse de le lire sans cette exception.
-const commitExiste = sha => {
-  try { execFileSync('git', ['-c', 'safe.directory=' + process.cwd(), 'cat-file', '-e', sha + '^{commit}'], {stdio: 'ignore'}); return true; }
+// Un contre-exemple peut être traité dans le dépôt de la norme plutôt qu'ici. Le commit est vérifié là où il vit ;
+// si le dépôt n'est pas présent sur cette machine, la vérification échoue et l'indicateur reste au rouge,
+// ce qui est le bon défaut : nous ne comptons comme traité que ce que nous pouvons montrer.
+const DEPOTS = {'attractor-cooperation': 'C:/Users/Utilisateur/CodeGPT/attractor-cooperation'};
+const commitExiste = (sha, depot) => {
+  const chemin = depot ? DEPOTS[depot] : process.cwd();
+  if (!chemin || !existsSync(chemin)) return false;
+  try { execFileSync('git', ['-c', 'safe.directory=' + chemin, 'cat-file', '-e', sha + '^{commit}'], {stdio: 'ignore', cwd: chemin}); return true; }
   catch { return false; }
 };
 

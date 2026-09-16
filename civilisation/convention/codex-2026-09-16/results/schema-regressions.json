@@ -1,0 +1,1406 @@
+{
+  "upstream": "C:\\Users\\Utilisateur\\CodeGPT\\attractor-cooperation",
+  "schemaBefore": "urn:attractor:cooperation:0.3:transmission",
+  "schemaProposed": "urn:attractor:cooperation:0.4:transmission",
+  "scope": "Schema validation only. Outputs are supplied data; count matching and execution remain semantic checks.",
+  "regression_count": 26,
+  "regression_passed": 26,
+  "regressions": [
+    {
+      "id": "complete-witness-record",
+      "definition": "record",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "verifiedOn-with-witness",
+      "definition": "record",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "unsupported-verification-is-a-warning-not-a-shape-error",
+      "definition": "record",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "legacy-derivation-without-v04-members",
+      "definition": "record",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "empty-witness",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/witness",
+          "schemaPath": "#/properties/witness/minItems",
+          "keyword": "minItems",
+          "params": {
+            "limit": 1
+          },
+          "message": "must NOT have fewer than 1 items"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "null-witness",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/witness",
+          "schemaPath": "#/properties/witness/type",
+          "keyword": "type",
+          "params": {
+            "type": "array"
+          },
+          "message": "must be array"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "object-witness",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/witness",
+          "schemaPath": "#/properties/witness/type",
+          "keyword": "type",
+          "params": {
+            "type": "array"
+          },
+          "message": "must be array"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "primitive-case",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/witness/0",
+          "schemaPath": "#/properties/witness/items/type",
+          "keyword": "type",
+          "params": {
+            "type": "object"
+          },
+          "message": "must be object"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "missing-input",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/witness/0",
+          "schemaPath": "#/properties/witness/items/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "input"
+          },
+          "message": "must have required property 'input'"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "missing-output",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/witness/0",
+          "schemaPath": "#/properties/witness/items/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "output"
+          },
+          "message": "must have required property 'output'"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-verifiedOn-\"\"",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/verifiedOn",
+          "schemaPath": "#/properties/verifiedOn/minLength",
+          "keyword": "minLength",
+          "params": {
+            "limit": 1
+          },
+          "message": "must NOT have fewer than 1 characters"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-verifiedOn-7",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/verifiedOn",
+          "schemaPath": "#/properties/verifiedOn/type",
+          "keyword": "type",
+          "params": {
+            "type": "string"
+          },
+          "message": "must be string"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-verifiedOn-null",
+      "definition": "record",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/fields/0/derivation/verifiedOn",
+          "schemaPath": "#/properties/verifiedOn/type",
+          "keyword": "type",
+          "params": {
+            "type": "string"
+          },
+          "message": "must be string"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "null-is-a-json-value-in-both-witness-members",
+      "definition": "record",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "matching-witness-replay",
+      "definition": "replay",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "refuted-witness-replay-still-has-valid-shape",
+      "definition": "replay",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "witness-requires-produced",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/then/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "produced"
+          },
+          "message": "must have required property 'produced'"
+        },
+        {
+          "instancePath": "",
+          "schemaPath": "#/if",
+          "keyword": "if",
+          "params": {
+            "failingKeyword": "then"
+          },
+          "message": "must match \"then\" schema"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-produced-empty",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/produced",
+          "schemaPath": "#/properties/produced/minItems",
+          "keyword": "minItems",
+          "params": {
+            "limit": 1
+          },
+          "message": "must NOT have fewer than 1 items"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-produced-null",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/produced",
+          "schemaPath": "#/properties/produced/type",
+          "keyword": "type",
+          "params": {
+            "type": "array"
+          },
+          "message": "must be array"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-produced-scalar",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/produced",
+          "schemaPath": "#/properties/produced/type",
+          "keyword": "type",
+          "params": {
+            "type": "array"
+          },
+          "message": "must be array"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-produced-object",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/produced",
+          "schemaPath": "#/properties/produced/type",
+          "keyword": "type",
+          "params": {
+            "type": "array"
+          },
+          "message": "must be array"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "produced-accepts-all-json-value-types",
+      "definition": "replay",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "unknown-method",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/method",
+          "schemaPath": "#/properties/method/enum",
+          "keyword": "enum",
+          "params": {
+            "allowedValues": [
+              "sufficiency",
+              "quote",
+              "witness"
+            ]
+          },
+          "message": "must be equal to one of the allowed values"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "unknown-replay-member",
+      "definition": "replay",
+      "expectedValid": false,
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/additionalProperties",
+          "keyword": "additionalProperties",
+          "params": {
+            "additionalProperty": "extra"
+          },
+          "message": "must NOT have additional properties"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "legacy-sufficiency-replay",
+      "definition": "replay",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "id": "legacy-quote-replay",
+      "definition": "replay",
+      "expectedValid": true,
+      "valid": true,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "legacy": {
+    "cases": 69,
+    "parts": 129,
+    "unchanged": 129,
+    "changes": []
+  },
+  "original_official_selection": {
+    "replays_validated": 17,
+    "conformant_inputs_validated": 17,
+    "schema_errors": [
+      {
+        "id": "v04-record-verified-claim-without-witness",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-record-verified-claim-with-witness",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-record-no-claim-no-duty",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-confirmed",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-self-refuted",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-partial-refuted",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-undeclared",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-count-mismatch",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-same-lineage",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      }
+    ],
+    "schema_error_count": 18,
+    "failing_case_ids": [
+      "v04-record-verified-claim-without-witness",
+      "v04-record-verified-claim-with-witness",
+      "v04-record-no-claim-no-duty",
+      "v04-witness-confirmed",
+      "v04-witness-self-refuted",
+      "v04-witness-partial-refuted",
+      "v04-witness-undeclared",
+      "v04-witness-count-mismatch",
+      "v04-witness-same-lineage"
+    ],
+    "violation_cases": 45,
+    "violation_cases_also_rejected_by_schema": 10,
+    "incomplete_fixture_errors": 18,
+    "incomplete_fixture_case_ids": [
+      "v04-record-verified-claim-without-witness",
+      "v04-record-verified-claim-with-witness",
+      "v04-record-no-claim-no-duty",
+      "v04-witness-confirmed",
+      "v04-witness-self-refuted",
+      "v04-witness-partial-refuted",
+      "v04-witness-undeclared",
+      "v04-witness-count-mismatch",
+      "v04-witness-same-lineage"
+    ],
+    "unsupported_witness_errors": 0
+  },
+  "original_official_runner": {
+    "exitCode": 1,
+    "stderr": "",
+    "result": {
+      "replays_validated": 17,
+      "conformant_inputs_validated": 17,
+      "schema_errors": [
+        {
+          "id": "v04-record-verified-claim-without-witness",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-record-verified-claim-with-witness",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-record-no-claim-no-duty",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-witness-confirmed",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-witness-self-refuted",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-witness-partial-refuted",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-witness-undeclared",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-witness-count-mismatch",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        },
+        {
+          "id": "v04-witness-same-lineage",
+          "errors": [
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "parent"
+              },
+              "message": "must have required property 'parent'"
+            },
+            {
+              "instancePath": "",
+              "schemaPath": "#/required",
+              "keyword": "required",
+              "params": {
+                "missingProperty": "objections"
+              },
+              "message": "must have required property 'objections'"
+            }
+          ]
+        }
+      ],
+      "violation_cases": 45,
+      "violation_cases_also_rejected_by_schema": 10
+    }
+  },
+  "original_runner_matches_selection": true,
+  "proposed_official_selection": {
+    "replays_validated": 17,
+    "conformant_inputs_validated": 17,
+    "schema_errors": [
+      {
+        "id": "v04-record-verified-claim-without-witness",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-record-verified-claim-with-witness",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-record-no-claim-no-duty",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-confirmed",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-self-refuted",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-partial-refuted",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-undeclared",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-count-mismatch",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      },
+      {
+        "id": "v04-witness-same-lineage",
+        "part": "record",
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "parent"
+            },
+            "message": "must have required property 'parent'"
+          },
+          {
+            "instancePath": "",
+            "schemaPath": "#/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "objections"
+            },
+            "message": "must have required property 'objections'"
+          }
+        ]
+      }
+    ],
+    "schema_error_count": 18,
+    "failing_case_ids": [
+      "v04-record-verified-claim-without-witness",
+      "v04-record-verified-claim-with-witness",
+      "v04-record-no-claim-no-duty",
+      "v04-witness-confirmed",
+      "v04-witness-self-refuted",
+      "v04-witness-partial-refuted",
+      "v04-witness-undeclared",
+      "v04-witness-count-mismatch",
+      "v04-witness-same-lineage"
+    ],
+    "violation_cases": 45,
+    "violation_cases_also_rejected_by_schema": 10,
+    "incomplete_fixture_errors": 18,
+    "incomplete_fixture_case_ids": [
+      "v04-record-verified-claim-without-witness",
+      "v04-record-verified-claim-with-witness",
+      "v04-record-no-claim-no-duty",
+      "v04-witness-confirmed",
+      "v04-witness-self-refuted",
+      "v04-witness-partial-refuted",
+      "v04-witness-undeclared",
+      "v04-witness-count-mismatch",
+      "v04-witness-same-lineage"
+    ],
+    "unsupported_witness_errors": 0
+  },
+  "v04_complete_clones": [
+    {
+      "id": "v04-record-verified-claim-without-witness",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-record-verified-claim-with-witness",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-record-no-claim-no-duty",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-record-witness-malformed",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": false,
+            "errors": [
+              {
+                "instancePath": "/fields/1/derivation/witness/0",
+                "schemaPath": "#/properties/witness/items/required",
+                "keyword": "required",
+                "params": {
+                  "missingProperty": "output"
+                },
+                "message": "must have required property 'output'"
+              }
+            ]
+          },
+          "after": {
+            "valid": false,
+            "errors": [
+              {
+                "instancePath": "/fields/1/derivation/witness/0",
+                "schemaPath": "#/properties/witness/items/required",
+                "keyword": "required",
+                "params": {
+                  "missingProperty": "output"
+                },
+                "message": "must have required property 'output'"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-witness-confirmed",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        },
+        {
+          "part": "replay",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-witness-self-refuted",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        },
+        {
+          "part": "replay",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-witness-partial-refuted",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        },
+        {
+          "part": "replay",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-witness-undeclared",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        },
+        {
+          "part": "replay",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-witness-count-mismatch",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        },
+        {
+          "part": "replay",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "v04-witness-same-lineage",
+      "suppliedOnlyOnClone": [
+        "parent",
+        "objections"
+      ],
+      "parts": [
+        {
+          "part": "record",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        },
+        {
+          "part": "replay",
+          "before": {
+            "valid": true,
+            "errors": []
+          },
+          "after": {
+            "valid": true,
+            "errors": []
+          }
+        }
+      ]
+    }
+  ],
+  "remaining_errors_are_original_fixture_omissions": true,
+  "schema_check_source_unchanged": true,
+  "passed": true
+}

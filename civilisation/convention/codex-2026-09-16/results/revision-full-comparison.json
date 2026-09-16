@@ -1,0 +1,8 @@
+{
+  "observedAt": "2026-09-16T09:26:05.663Z",
+  "implementation": "revision",
+  "total": 122,
+  "matching": 122,
+  "differences": [],
+  "scope": "Full-result differential on published cases, excluding only top-level free-text interpretation/reason. Reference agreement is not an independent truth oracle."
+}

@@ -1,0 +1,176 @@
+--- a/conformance/run.mjs
++++ b/conformance/run.mjs
+@@ -54,7 +54,9 @@
+     const mutated = structuredClone(c.input);
+     try { fn(mutated); } catch { /* reported above */ }
+     if (!isDeepStrictEqual(mutated, before)) problems.push('input mutated');
+-    if (actual) {
++    const validResult = actual !== null && typeof actual === "object" && !Array.isArray(actual);
++    if (!validResult) problems.push("result must be a non-null, non-array object");
++    if (validResult) {
+       for (const [key, expected] of Object.entries(c.expected)) {
+         if (!isDeepStrictEqual(actual[key], expected)) {
+           problems.push(`${key}: expected ${JSON.stringify(expected)}, got ${JSON.stringify(actual[key])}`);
+@@ -62,7 +64,7 @@
+       }
+       let again;
+       try { again = fn(reorder(c.kind, c.input)); } catch (error) { problems.push('reordered input threw: ' + error.message); }
+-      if (again && !isDeepStrictEqual(again, actual)) problems.push('arrival order changed the result');
++      if (!isDeepStrictEqual(again, actual)) problems.push('arrival order changed the result');
+       if (c.kind === 'dispute' && actual.applied !== false) problems.push('a revision was applied');
+       if (c.kind === 'dispute' && !isDeepStrictEqual(actual.original, before.claim)) problems.push('original claim lost');
+       if (c.kind === 'dispute' && !isDeepStrictEqual(actual.objection, before.objection)) problems.push('objection lost');
+--- a/schema/transmission.schema.json
++++ b/schema/transmission.schema.json
+@@ -1,8 +1,8 @@
+ {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+-  "$id": "urn:attractor:cooperation:0.3:transmission",
+-  "title": "attractor-cooperation/0.3 transmission objects (draft)",
+-  "description": "Shape of Record, Receipt and Reveal (SPEC section 4). Shape validity establishes nothing about truth, authority or conformance of behaviour; see the checks in SPEC section 7.",
++  "$id": "urn:attractor:cooperation:0.4:transmission",
++  "title": "attractor-cooperation/0.4 transmission objects (draft)",
++  "description": "Shape of Record, Receipt, Reveal and Replay (SPEC section 4). Shape validity establishes nothing about truth, authority or conformance of behaviour; see the checks in SPEC section 7.",
+   "$defs": {
+     "id": {
+       "type": "string",
+@@ -472,7 +472,8 @@
+         "method": {
+           "enum": [
+             "sufficiency",
+-            "quote"
++            "quote",
++            "witness"
+           ]
+         },
+         "input": {
+@@ -489,7 +490,27 @@
+         "lineage": {
+           "type": "string",
+           "minLength": 1
+-        }
++        },
++        "produced": {
++          "type": "array",
++          "minItems": 1,
++          "items": true
++        }
++      },
++      "if": {
++        "required": [
++          "method"
++        ],
++        "properties": {
++          "method": {
++            "const": "witness"
++          }
++        }
++      },
++      "then": {
++        "required": [
++          "produced"
++        ]
+       }
+     }
+   }
+--- a/conformance/cases.json
++++ b/conformance/cases.json
+@@ -4021,7 +4021,9 @@
+               "verifiedOn": "two fixed cases of the previous entry"
+             }
+           }
+-        ]
++        ],
++        "parent": null,
++        "objections": []
+       },
+       "expected": {
+         "status": "conformant",
+@@ -4086,7 +4088,9 @@
+               "verifiedOn": "two fixed cases of the previous entry"
+             }
+           }
+-        ]
++        ],
++        "parent": null,
++        "objections": []
+       },
+       "expected": {
+         "status": "conformant",
+@@ -4130,7 +4134,9 @@
+               ]
+             }
+           }
+-        ]
++        ],
++        "parent": null,
++        "objections": []
+       },
+       "expected": {
+         "status": "conformant",
+@@ -11843,7 +11849,9 @@
+                 ]
+               }
+             }
+-          ]
++          ],
++          "parent": null,
++          "objections": []
+         },
+         "replay": {
+           "field": "procedure",
+@@ -11926,7 +11934,9 @@
+                 ]
+               }
+             }
+-          ]
++          ],
++          "parent": null,
++          "objections": []
+         },
+         "replay": {
+           "field": "procedure",
+@@ -12011,7 +12021,9 @@
+                 ]
+               }
+             }
+-          ]
++          ],
++          "parent": null,
++          "objections": []
+         },
+         "replay": {
+           "field": "procedure",
+@@ -12078,7 +12090,9 @@
+                 ]
+               }
+             }
+-          ]
++          ],
++          "parent": null,
++          "objections": []
+         },
+         "replay": {
+           "field": "procedure",
+@@ -12156,7 +12170,9 @@
+                 ]
+               }
+             }
+-          ]
++          ],
++          "parent": null,
++          "objections": []
+         },
+         "replay": {
+           "field": "procedure",
+@@ -12234,7 +12250,9 @@
+                 ]
+               }
+             }
+-          ]
++          ],
++          "parent": null,
++          "objections": []
+         },
+         "replay": {
+           "field": "procedure",

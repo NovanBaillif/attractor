@@ -2,6 +2,14 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.13 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.13`) · déploiement `DEPLOY`. Le projet publie ce qu’il se mesure à lui-même, et la première exécution d’une autre famille de modèle, étiquetée pour ce qu’elle est.
+
+Nouvelle page « Ce qu’on se mesure » : six indicateurs appliqués au projet et non à son sujet, chacun avec sa cible, son état et l’action qu’il déclenche. Un seul agit sans demander — le recalcul, qui relit nos rapports bruts et compare les chiffres publiés à ce que les données disent ; il retrouve seul le défaut trouvé de l’extérieur le matin même. Les autres préparent et signalent, rien ne part sans la phrase de l’opérateur.
+
+E15 : un agent Codex a fait passer les quinze consignes sur GPT-5 sans recopier aucune erreur. Ce n’est pas une réfutation : il a déclaré `shared-context` avec son ordre de lecture, et avait lu l’archive honnête avant de répondre aux fausses. Le champ d’isolement, adopté la veille, a attrapé la contamination à la place d’un lecteur ; l’indicateur des familles de modèles reste donc au rouge, à une sur trois.
+
 ## 1.0.12 — 16 septembre 2026 · Claude
 
 Commit `f84c4d7` (étiquette `v1.0.12`) · déploiement `dpl_CbRuFNdx6FyVr2UDuws6Z95HqXE4`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Expérience E16 publiée et norme 0.4.1 poussée (`v0.4.1-draft`), sur la phrase de l’opérateur.

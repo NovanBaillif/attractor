@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-09-16T09:07:35.538Z",
+  "mode": "reference",
+  "harness": "strict",
+  "harnessSha256": "9c20f8592a60f690ff35d89233d172b6ec7c9db425b1c7c61c7a7545149757ae",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "stderr": "",
+  "stdout": "{\n  \"implementation\": \"C:\\\\Users\\\\Utilisateur\\\\CodeGPT\\\\attractor-cooperation\\\\reference\\\\index.mjs\",\n  \"total\": 122,\n  \"passed\": 122,\n  \"byKind\": {\n    \"lineage\": \"27/27\",\n    \"dispute\": \"16/16\",\n    \"record\": \"24/24\",\n    \"hop\": \"25/25\",\n    \"reveal\": \"8/8\",\n    \"drift\": \"5/5\",\n    \"replay\": \"17/17\"\n  },\n  \"failures\": []\n}\n",
+  "report": {
+    "implementation": "C:\\Users\\Utilisateur\\CodeGPT\\attractor-cooperation\\reference\\index.mjs",
+    "total": 122,
+    "passed": 122,
+    "byKind": {
+      "lineage": "27/27",
+      "dispute": "16/16",
+      "record": "24/24",
+      "hop": "25/25",
+      "reveal": "8/8",
+      "drift": "5/5",
+      "replay": "17/17"
+    },
+    "failures": []
+  }
+}

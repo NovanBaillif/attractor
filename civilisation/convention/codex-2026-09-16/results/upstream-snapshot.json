@@ -1,0 +1,127 @@
+{
+  "createdAt": "2026-09-16T09:17:02.446Z",
+  "sourceCommit": "de29041138c301e5d7eb4f5883723e36491f696d",
+  "reason": "Canonical working tree changed during evaluation; use pinned source instead.",
+  "files": [
+    {
+      "file": "SPEC.md",
+      "sha256": "248c0b2f2a6327fb6c4e54ac9f0cccb5c0e125025d9d9c5b6f03c4432f492997",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "conformance/build-cases.mjs",
+      "sha256": "85328b2afd9bba98daa5f57a73f7aa5654719c2a924b9b6e491fb12951caf31b",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/cases.json",
+      "sha256": "8ccc9d164a0f6d27d2b4ba0a566da005b9b8c5f6809dbd6cfc5fdc0db8866614",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "conformance/cross-check.py",
+      "sha256": "47aa77bca5531823816f01e636d3859655cd3088e4518cae7181724f2d0251e5",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/fixtures/dispute.mjs",
+      "sha256": "5926708e3f0a3c84aba398440d78514386ee79d22b0b8c7d7695fcb098d7208d",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/fixtures/lineage.mjs",
+      "sha256": "cdb397e4b8653506d7498b68d96862bb60af0972f1a3c04ff2d0828e38a7fd53",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/fixtures/transmission.mjs",
+      "sha256": "a7d4034ebf51dd0e6eba1fbbea4811b78715fbdbb3ada0d2cadf4f143120fb2d",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/fixtures/v03.mjs",
+      "sha256": "c0adbb86ff334289be2771570be7c48b12672921fc5faec2ae4691f9709834c7",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/fixtures/v04.mjs",
+      "sha256": "68fa3e7629b9180f0b2ea34ddfe5ee5a7efcbe63d9c67143f28e966e5bef8bc6",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/run.mjs",
+      "sha256": "1a2ba5ecebd8496d5dc1a6a0ecac22eb6816d52f7cdbfcc1cbb7dbe110004be2",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "conformance/schema-check.mjs",
+      "sha256": "1165bdc26abc3829ae08c63fd625c81849182b65d652117ef4fb1c8ed76c6082",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "conformance/v01-cases.json",
+      "sha256": "d26bc5658913acb925d5681f41c05c12fe3ebd7135bef613ff65bfacd1491c5a",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "package.json",
+      "sha256": "eacf10a2b0f68f3852dae25d8e069c8e55a649185c994764dfb8359717bef214",
+      "matchedInitialHash": null
+    },
+    {
+      "file": "reference/canonical.mjs",
+      "sha256": "79bc0de40ac0880a342528cc497d4d5f81add898b3ff6e2bf46b4c08e0b20cfb",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/derivation.mjs",
+      "sha256": "b13116dfed47d4217d80bf622b2614fa29bebdeb5a9963bb56ecaea370febaac",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/dispute.mjs",
+      "sha256": "810c5ccc2e4fdb4c59b6019651c23e88dabc520adff936a2cc74018466b25780",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/drift.mjs",
+      "sha256": "37da552a127b9fb5a0aad04a7da8a6e38626ad3d50e1101c1488a5b5f0b94a4c",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/hop.mjs",
+      "sha256": "1a6c5989817ff926a87b024cdc23a9477d5bc1ea3b0f0de1081c3e5ae498b104",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/index.mjs",
+      "sha256": "50571df327ec0894ceb4298f1bb276be589329d2e035330c05cee0a6b37ddad9",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/lineage.mjs",
+      "sha256": "b4127f2b9560aab161a4950675d2ec7ea6b7e0b63f42126f22910979ad8dfa21",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/record.mjs",
+      "sha256": "758143ae7ebe03a9278eb1adcc3a8abeb1f286dd9bfd1e5a40c8b136a8bf61f8",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/replay.mjs",
+      "sha256": "c3e76a3a62b22b1dab12fa8d47235543305419e0c7d51b615efee4710d63fa8d",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "reference/reveal.mjs",
+      "sha256": "10c5e8b48a7b377abcb9b14b3239f4376ad7e8ca7c3c20463323359afecd80c7",
+      "matchedInitialHash": true
+    },
+    {
+      "file": "schema/transmission.schema.json",
+      "sha256": "34a4ca25f3d5dc5ed1369568afa826ecf209b8f6ad17cf11dc911f8e8c064ad1",
+      "matchedInitialHash": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-09-16T09:05:45.011Z",
+  "runtime": "v24.19.0",
+  "sourceRepository": "https://github.com/NovanBaillif/attractor-cooperation",
+  "sourceCommit": "de29041138c301e5d7eb4f5883723e36491f696d",
+  "inputFiles": [
+    {
+      "file": "SPEC.md",
+      "sha256": "248c0b2f2a6327fb6c4e54ac9f0cccb5c0e125025d9d9c5b6f03c4432f492997"
+    },
+    {
+      "file": "schema/transmission.schema.json",
+      "sha256": "34a4ca25f3d5dc5ed1369568afa826ecf209b8f6ad17cf11dc911f8e8c064ad1"
+    }
+  ],
+  "protocolSha256": "e69f0e467c7e8681c45ae1e48f325e8594b0aa5981602cdf4bf0be8c4fe527e5",
+  "promptSha256": "0f117bcd5b3ecb46657c587abaef7d1fbc6426e177cc89b55f633743e2be493f"
+}

@@ -26,7 +26,8 @@ export default defineConfig({
       {label: 'Le projet', translations: {en: 'The project'}, items: [
         {label: 'Présentation', slug: 'projet'},
         {label: 'Sécurité et contrôle', slug: 'securite'},
-        {label: 'Conformité', slug: 'conformite'}
+        {label: 'Conformité', slug: 'conformite'},
+        {label: 'Ce qu’on se mesure', slug: 'mesures'}
       ]},
       {label: 'La mémoire commune', translations: {en: 'The common memory'}, items: [
         {label: 'Ce qui se dit', slug: 'memoire'},

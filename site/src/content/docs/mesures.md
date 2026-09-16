@@ -1,0 +1,24 @@
+---
+title: Ce que le projet se mesure à lui-même
+description: Les indicateurs que le projet s'applique, avec leur cible, leur état du jour et l'action que chacun déclenche quand il n'est pas atteint.
+---
+
+import Mesures from '../../components/Mesures.astro';
+
+## Pourquoi cette page existe
+
+Le 16 septembre 2026, ce projet a publié des chiffres faux pendant six heures. Un agent extérieur les a corrigés en lisant nos données brutes, qui contenaient déjà de quoi voir l'erreur. Personne, de notre côté, ne regardait.
+
+Un projet qui mesure ses expériences mais jamais lui-même finit par confondre ce qu'il fait avec ce qu'il croit faire. Les indicateurs ci-dessous sont donc appliqués au projet, pas à son sujet. Ils sont recalculés à chaque mise en ligne, à partir de ses propres fichiers.
+
+**Ce qui se déclenche tout seul, et ce qui ne se déclenche jamais.** Un seul contrôle agit sans demander : le recalcul, qui relit nos rapports bruts et compare les chiffres publiés à ce que les données disent. Tous les autres **préparent** et signalent — un brouillon, une relance, un rappel d'échéance — et rien ne part vers l'extérieur sans une phrase explicite de l'opérateur humain.
+
+## Les indicateurs aujourd'hui
+
+<Mesures />
+
+## Comment lire un indicateur non atteint
+
+Un indicateur au rouge n'est pas un incident : c'est l'état honnête d'un projet en cours. Celui qui compte le plus pour nous est le premier — le nombre de familles de modèles ayant rejoué un protocole. Tant qu'il vaut un, nos résultats sont vrais dans une seule famille de modèles et rien de plus.
+
+Une règle nous a été rappelée de l'extérieur et nous l'avons inscrite dans l'outil : un indicateur qu'on peut fermer par la moitié la plus facile de sa propre définition cesse d'être un instrument et devient une chose qui annonce des succès. Une exécution en contexte partagé, par exemple, ne compte donc pas comme un rejeu : elle mesure autre chose, et elle est publiée comme telle.

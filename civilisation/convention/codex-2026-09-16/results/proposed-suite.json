@@ -1,0 +1,177 @@
+{
+  "sourceBase": {
+    "commit": "de29041",
+    "directory": "C:\\Users\\Utilisateur\\CodeGPT\\marmit-find\\attractor\\civilisation\\convention\\codex-2026-09-16\\evaluation\\upstream",
+    "fileSha256": {
+      "conformance/cases.json": "8ccc9d164a0f6d27d2b4ba0a566da005b9b8c5f6809dbd6cfc5fdc0db8866614",
+      "conformance/schema-check.mjs": "1165bdc26abc3829ae08c63fd625c81849182b65d652117ef4fb1c8ed76c6082",
+      "conformance/run.mjs": "1a2ba5ecebd8496d5dc1a6a0ecac22eb6816d52f7cdbfcc1cbb7dbe110004be2",
+      "schema/transmission.schema.json": "34a4ca25f3d5dc5ed1369568afa826ecf209b8f6ad17cf11dc911f8e8c064ad1",
+      "reference/index.mjs": "50571df327ec0894ceb4298f1bb276be589329d2e035330c05cee0a6b37ddad9"
+    }
+  },
+  "runtime": "v24.19.0",
+  "cases": {
+    "total": 122,
+    "changedCases": [
+      "v04-record-verified-claim-without-witness",
+      "v04-record-verified-claim-with-witness",
+      "v04-record-no-claim-no-duty",
+      "v04-witness-confirmed",
+      "v04-witness-self-refuted",
+      "v04-witness-partial-refuted",
+      "v04-witness-undeclared",
+      "v04-witness-count-mismatch",
+      "v04-witness-same-lineage"
+    ],
+    "additions": [
+      {
+        "id": "v04-record-verified-claim-without-witness",
+        "path": "input.parent",
+        "value": null
+      },
+      {
+        "id": "v04-record-verified-claim-without-witness",
+        "path": "input.objections",
+        "value": []
+      },
+      {
+        "id": "v04-record-verified-claim-with-witness",
+        "path": "input.parent",
+        "value": null
+      },
+      {
+        "id": "v04-record-verified-claim-with-witness",
+        "path": "input.objections",
+        "value": []
+      },
+      {
+        "id": "v04-record-no-claim-no-duty",
+        "path": "input.parent",
+        "value": null
+      },
+      {
+        "id": "v04-record-no-claim-no-duty",
+        "path": "input.objections",
+        "value": []
+      },
+      {
+        "id": "v04-witness-confirmed",
+        "path": "input.record.parent",
+        "value": null
+      },
+      {
+        "id": "v04-witness-confirmed",
+        "path": "input.record.objections",
+        "value": []
+      },
+      {
+        "id": "v04-witness-self-refuted",
+        "path": "input.record.parent",
+        "value": null
+      },
+      {
+        "id": "v04-witness-self-refuted",
+        "path": "input.record.objections",
+        "value": []
+      },
+      {
+        "id": "v04-witness-partial-refuted",
+        "path": "input.record.parent",
+        "value": null
+      },
+      {
+        "id": "v04-witness-partial-refuted",
+        "path": "input.record.objections",
+        "value": []
+      },
+      {
+        "id": "v04-witness-undeclared",
+        "path": "input.record.parent",
+        "value": null
+      },
+      {
+        "id": "v04-witness-undeclared",
+        "path": "input.record.objections",
+        "value": []
+      },
+      {
+        "id": "v04-witness-count-mismatch",
+        "path": "input.record.parent",
+        "value": null
+      },
+      {
+        "id": "v04-witness-count-mismatch",
+        "path": "input.record.objections",
+        "value": []
+      },
+      {
+        "id": "v04-witness-same-lineage",
+        "path": "input.record.parent",
+        "value": null
+      },
+      {
+        "id": "v04-witness-same-lineage",
+        "path": "input.record.objections",
+        "value": []
+      }
+    ],
+    "onlyApprovedAdditions": true,
+    "expectedOutputsUnchanged": true,
+    "negativeFixtureUnchanged": true
+  },
+  "schemaHasOnlyApprovedDelta": true,
+  "testOnlyAdapter": {
+    "description": "Executes the exact pinned schema-check source after three import/path substitutions; validation logic is unchanged.",
+    "substitutions": [
+      {
+        "from": "'ajv/dist/2020.js'",
+        "to": "\"file:///C:/Users/Utilisateur/CodeGPT/attractor-cooperation/node_modules/ajv/dist/2020.js\""
+      },
+      {
+        "from": "new URL('../schema/transmission.schema.json', import.meta.url)",
+        "to": "\"C:\\\\Users\\\\Utilisateur\\\\CodeGPT\\\\marmit-find\\\\attractor\\\\civilisation\\\\convention\\\\codex-2026-09-16\\\\proposals\\\\schema\\\\transmission.schema.json\""
+      },
+      {
+        "from": "new URL('./cases.json', import.meta.url)",
+        "to": "\"C:\\\\Users\\\\Utilisateur\\\\CodeGPT\\\\marmit-find\\\\attractor\\\\civilisation\\\\convention\\\\codex-2026-09-16\\\\proposals\\\\conformance\\\\cases.json\""
+      }
+    ],
+    "originalSha256": "1165bdc26abc3829ae08c63fd625c81849182b65d652117ef4fb1c8ed76c6082",
+    "adaptedSha256": "383b0d9ab5aa35b169c6679901ba48a1cea8e7e7e02c90c397ee17948d85d603"
+  },
+  "officialSchemaCheck": {
+    "exitCode": 0,
+    "stderr": "",
+    "result": {
+      "replays_validated": 17,
+      "conformant_inputs_validated": 17,
+      "schema_errors": [],
+      "violation_cases": 45,
+      "violation_cases_also_rejected_by_schema": 10
+    }
+  },
+  "strictReferenceRun": {
+    "runner": "C:\\Users\\Utilisateur\\CodeGPT\\marmit-find\\attractor\\civilisation\\convention\\codex-2026-09-16\\proposals\\conformance\\run.mjs",
+    "runnerSha256": "9c20f8592a60f690ff35d89233d172b6ec7c9db425b1c7c61c7a7545149757ae",
+    "exitCode": 0,
+    "stderr": "",
+    "result": {
+      "implementation": "C:\\Users\\Utilisateur\\CodeGPT\\marmit-find\\attractor\\civilisation\\convention\\codex-2026-09-16\\evaluation\\upstream\\reference\\index.mjs",
+      "total": 122,
+      "passed": 122,
+      "byKind": {
+        "lineage": "27/27",
+        "dispute": "16/16",
+        "record": "24/24",
+        "hop": "25/25",
+        "reveal": "8/8",
+        "drift": "5/5",
+        "replay": "17/17"
+      },
+      "failures": []
+    }
+  },
+  "sourceFilesUnchanged": true,
+  "passed": true
+}

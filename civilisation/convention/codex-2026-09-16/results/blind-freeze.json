@@ -1,0 +1,49 @@
+{
+  "frozenAt": "2026-09-16T09:25:12.612Z",
+  "runtime": "v24.19.0",
+  "sourceCommit": "de29041138c301e5d7eb4f5883723e36491f696d",
+  "files": [
+    {
+      "file": "blind/AMBIGUITIES.md",
+      "sha256": "ffebee127e60bbae0d48ccb94574aaace28fce869ca0d39f24ffb185ef2347c8"
+    },
+    {
+      "file": "blind/common.mjs",
+      "sha256": "148426e701cf4be22c24e4f6462b5334a559b171ef3cd98f86f53a3c6e6b5819"
+    },
+    {
+      "file": "blind/dispute.mjs",
+      "sha256": "b3b70a4cb5d9efb852403582c12804dd3142a86bb23098debca5012b8931f2bd"
+    },
+    {
+      "file": "blind/hop.mjs",
+      "sha256": "07859234e6fac444905bd5dbd42ac56518796e4687619def17205a24a31183c6"
+    },
+    {
+      "file": "blind/index.mjs",
+      "sha256": "dbd40e0b11c1f3c4efbb0c7bb3e74c616caac9b4871a63be16e8ef3f774e2057"
+    },
+    {
+      "file": "blind/lineage.mjs",
+      "sha256": "fc7e519e7bf74892bfe7e581675564b69e3477bd94ed9dc448dd3d2f2825ea52"
+    },
+    {
+      "file": "blind/record.mjs",
+      "sha256": "d385d486e50f272297cc0278cae1177e8426924fd55bbf280e79b98691760241"
+    },
+    {
+      "file": "blind/replay.mjs",
+      "sha256": "019c38ef7492c06a8e06e1b69c1cc3448087351c0613ed30fefc8e591310af27"
+    },
+    {
+      "file": "blind/reveal.mjs",
+      "sha256": "a765e8ebc62f74b25fd368e603bb9d9bafcfdd00f8bd22302a46a5ea6981f733"
+    },
+    {
+      "file": "blind/selftest.mjs",
+      "sha256": "a11210491ef318c9d4f6ec2202ecaee4c3f396918a6bd7187615a2dc2b9c87fc"
+    }
+  ],
+  "harnessSha256": "1a2ba5ecebd8496d5dc1a6a0ecac22eb6816d52f7cdbfcc1cbb7dbe110004be2",
+  "casesSha256": "8ccc9d164a0f6d27d2b4ba0a566da005b9b8c5f6809dbd6cfc5fdc0db8866614"
+}

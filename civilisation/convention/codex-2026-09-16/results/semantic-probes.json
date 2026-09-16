@@ -1,0 +1,168 @@
+{
+  "observedAt": "2026-09-16T09:09:09.811Z",
+  "witness": {
+    "record": {
+      "id": "s",
+      "parent": null,
+      "author": {
+        "actor": "sender",
+        "lineage": "family-A"
+      },
+      "fields": [
+        {
+          "id": "f",
+          "kind": "observed",
+          "channel": "direct",
+          "sources": [],
+          "value": "x => x + 1",
+          "derivation": {
+            "operation": "measured",
+            "inputs": [],
+            "witness": [
+              {
+                "input": 1,
+                "output": 2
+              }
+            ]
+          }
+        }
+      ],
+      "objections": []
+    },
+    "wrongReplay": {
+      "field": "f",
+      "method": "witness",
+      "produced": [
+        999
+      ],
+      "lineage": "family-B"
+    },
+    "matchingReplay": {
+      "field": "f",
+      "method": "witness",
+      "produced": [
+        2
+      ],
+      "lineage": "family-B"
+    },
+    "wrongResult": {
+      "status": "refuted",
+      "reproduced": false,
+      "cases": {
+        "matched": 0,
+        "total": 1
+      },
+      "independence": "not-established",
+      "problems": [],
+      "warnings": [
+        "self-refuting-witness"
+      ],
+      "interpretation": "A replay tests a declaration. It does not show how the value was produced, nor its independence."
+    },
+    "matchingResult": {
+      "status": "confirmed",
+      "reproduced": true,
+      "cases": {
+        "matched": 1,
+        "total": 1
+      },
+      "independence": "not-established",
+      "problems": [],
+      "warnings": [],
+      "interpretation": "A replay tests a declaration. It does not show how the value was produced, nor its independence."
+    },
+    "independentlyComputedOutput": 2,
+    "matchingReplaySchemaValid": false,
+    "schemaErrors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/additionalProperties",
+        "keyword": "additionalProperties",
+        "params": {
+          "additionalProperty": "produced"
+        },
+        "message": "must NOT have additional properties"
+      },
+      {
+        "instancePath": "/method",
+        "schemaPath": "#/properties/method/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "sufficiency",
+            "quote"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  "requestedVerification": {
+    "input": {
+      "sent": {
+        "id": "s",
+        "parent": null,
+        "author": {
+          "actor": "sender",
+          "lineage": "family-A"
+        },
+        "fields": [
+          {
+            "id": "f",
+            "value": 1,
+            "kind": "observed",
+            "sources": [],
+            "channel": "direct",
+            "expect": "verify"
+          }
+        ],
+        "objections": []
+      },
+      "receipt": {
+        "id": "r",
+        "target": "s",
+        "dispositions": [
+          {
+            "field": "f",
+            "action": "accept"
+          }
+        ],
+        "record": {
+          "id": "t",
+          "parent": "s",
+          "author": {
+            "actor": "receiver",
+            "lineage": "family-B"
+          },
+          "fields": [
+            {
+              "id": "f",
+              "value": 1,
+              "kind": "observed",
+              "sources": [],
+              "channel": "direct",
+              "expect": "verify"
+            }
+          ],
+          "objections": []
+        }
+      }
+    },
+    "actual": {
+      "level": "green",
+      "counts": {
+        "accept": 1,
+        "verify": 0,
+        "re_derive": 0,
+        "contest": 0,
+        "modify": 0,
+        "drop": 0,
+        "re_derive_agree": 0,
+        "re_derive_disagree": 0
+      },
+      "violations": [],
+      "warnings": [],
+      "pendingReveal": []
+    }
+  }
+}
