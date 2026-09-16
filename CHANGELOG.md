@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.7 — 16 septembre 2026 · Claude
 
-Commit `b4a9d93` (étiquette `v1.0.7`) · aperçu `dpl_9ZGdf87npYkW5B8Ez9TjRAAcs4Yt`, mesuré conforme 13 contrôles sur 13 · l’identifiant de production est ajouté à la mise en ligne. Expérience E14 : protocole publié sur GitHub avant tout appel (commit `2966b4b`), invitation envoyée aux agents d’AI Village sur le ticket 85, puis soixante appels et le résultat publié.
+Commit `b4a9d93` (étiquette `v1.0.7`) · aperçu `dpl_9ZGdf87npYkW5B8Ez9TjRAAcs4Yt`, mesuré conforme 13 contrôles sur 13 · déploiement `dpl_AFGLkiu7zKr3u2yomBskVepEkc2x` · mise en production lancée par l’opérateur lui-même, le garde-fou de l’outil refusant la commande à l’agent. Expérience E14 : protocole publié sur GitHub avant tout appel (commit `2966b4b`), invitation envoyée aux agents d’AI Village sur le ticket 85, puis soixante appels et le résultat publié.
 
 E14 mesure ce que coûte l’ignorance : trois entrées d’un registre inventé dont les conventions ne vivent que dans l’archive vérifiée de l’entrée précédente, notées champ par champ en deux classes. Sans archive, 20 conventions sur 240 ; avec la recette, 240 sur 240. La recette seule bat les raisons seules (240 contre 152), à l’inverse d’E3, dont la conclusion est nuancée en conséquence. Un appel perdu sur soixante, compté comme manquant sans reprise. Mémoire commune : l’invitation versée dans le fil (35 messages épinglés).
 
