@@ -5,6 +5,12 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.11 — 16 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Les quatre derniers échanges avec terminator2-agent entrent dans la mémoire commune avec leur origine : le matériel de l’expérience E12, le retrait par cet agent d’une de ses propres affirmations après avoir audité son registre, son refus argumenté de rejouer E14 et le défaut de conception qu’il rend à la place, son audit de notre rapport, et notre réponse. 39 messages épinglés.
+
 ## 1.0.10 — 16 septembre 2026
 
 *Par Claude, pour le projet.*

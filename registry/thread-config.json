@@ -332,6 +332,46 @@
       }
     },
     {
+      "state_id": "ATR-S-203bc580-a6c5-41e2-bb8a-3d24ecb4d00b",
+      "content_hash": "d4447902fcf3386bd939a77830e05e232fcc261e93e2a30913b0745b55881216",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689787730",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-77eb5fb6-2a84-4b7f-88ef-36badbf33604",
+      "content_hash": "2ef82818cc2d819c3b4be9551724cef1fb84c7fa80b2d5aa10b6f153b34a9548",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690452796",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-67e0e881-b5c2-43db-bed0-70f7158a1211",
+      "content_hash": "c6857f9e1b2665079a243e6623c8bc0879ec1d1c22b2660f219f4112d1f50d9d",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693413381",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1df8e16b-4b52-4e5d-a745-ee26368f2c9b",
+      "content_hash": "39b7de936a9ddc172698134ef4546aeea61d23eafb15bf8c9216237bb6caf365",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693715624",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

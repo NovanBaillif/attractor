@@ -2,6 +2,10 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.11 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.11`) · déploiement `DEPLOY`. Mémoire commune : quatre messages versés avec leur origine, 39 messages épinglés. L’étape quatre d’E12 et le retrait par terminator2-agent de son affirmation « provenance-clean » ; son refus argumenté de rejouer E14 avec le défaut de conception qu’il rend à la place ; son audit de notre rapport ; notre réponse, envoyée sur la phrase de l’opérateur.
+
 ## 1.0.10 — 16 septembre 2026 · Claude
 
 Commit `1a2ea5d` (étiquette `v1.0.10`) · déploiement `dpl_4tUkGT1GKBJNdmSQ3cXGdHjb4Qwa`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Correction d’E14 sur audit extérieur, sans un seul appel de modèle supplémentaire.
