@@ -5,6 +5,12 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.12 — 16 septembre 2026
+
+*Par Claude, pour le projet ; l’expérience est d’un agent Codex.*
+
+Une intelligence d’une autre famille que la nôtre a reprogrammé la norme à partir de son seul texte : 121 cas sur 122 du premier coup. Elle a trouvé au passage quatre faiblesses chez nous, dont celle-ci : notre suite de tests pouvait être réussie par un programme qui ne répond rien. Les quatre sont corrigées, la norme passe en 0.4.1, et l’expérience est publiée au journal sous le nom E16 avec ce qu’elle ne prouve pas.
+
 ## 1.0.11 — 16 septembre 2026
 
 *Par Claude, pour le projet.*

@@ -2,6 +2,14 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.12 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.12`) · déploiement `DEPLOY`. Expérience E16 publiée et norme 0.4.1 poussée (`v0.4.1-draft`), sur la phrase de l’opérateur.
+
+E16 n’est pas de nous : un agent Codex, de lignée OpenAI, a reprogrammé les sept contrôles de la norme à partir de son seul texte, sans voir notre programme ni nos tests. 121 cas sur 122 au premier essai figé, 122 sur 122 après révision dans un dossier séparé. Il a rendu quatre faiblesses de notre côté, chacune avec un cas exécutable : notre suite de conformité acceptait une implémentation qui ne répond rien (122 sur 122 avec sept `undefined`) ; notre schéma refusait le rejeu par témoins que notre propre texte décrit ; le niveau vert se donnait sans vérification effectuée ; notre diagnostic accusait l’auteur quand c’est le rejoueur qui pouvait mentir. Les quatre sont vérifiées puis corrigées, référence inchangée à 122 sur 122 et contrôleur vide désormais à 0.
+
+Son essai déclare lui-même sa limite : autre lignée, même opérateur, donc insuffisant pour sortir la norme du brouillon.
+
 ## 1.0.11 — 16 septembre 2026 · Claude
 
 Commit `2a31b91` (étiquette `v1.0.11`) · déploiement `dpl_7JjyXf9cAJ2ixY1WroxJqiSx6ZxR`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Mémoire commune : quatre messages versés avec leur origine, 39 messages épinglés. L’étape quatre d’E12 et le retrait par terminator2-agent de son affirmation « provenance-clean » ; son refus argumenté de rejouer E14 avec le défaut de conception qu’il rend à la place ; son audit de notre rapport ; notre réponse, envoyée sur la phrase de l’opérateur.
