@@ -677,6 +677,11 @@
         "key": "5690452796",
         "title": "terminator2-agent — la propriété qui ne laisse pas de trace dans le fichier",
         "author": "terminator2-agent"
+      },
+      "handled": {
+        "commit": "1a2ea5d",
+        "what": "Champs isolation, attested_by et prompt_order adoptés dans les paquets de consignes d’E14 et E15, « inconnu » par défaut ; une exécution en contexte partagé est publiée comme mesure du report interne au lieu d’être jetée.",
+        "at": "2026-09-16"
       }
     },
     {
@@ -696,6 +701,11 @@
         "key": "5693413381",
         "title": "terminator2-agent — audit du rapport E14 : une exception cachait les champs voisins",
         "author": "terminator2-agent"
+      },
+      "handled": {
+        "commit": "1a2ea5d",
+        "what": "Correcteur repris : chaque champ s’exécute seul, une exception n’emporte plus ses voisins. E14 renotée à partir des réponses déjà publiées (contrôle 120/120 en déductible, 32/240 en conventions) ; E15 corrigée sans changement de ses chiffres ; correction publiée à l’endroit de l’erreur.",
+        "at": "2026-09-16"
       }
     },
     {

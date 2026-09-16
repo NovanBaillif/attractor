@@ -1,0 +1,7 @@
+{
+  "note": "Échéances déclarées par le projet dans ses protocoles publiés. Une échéance est une déclaration, pas une mesure : elle est ici pour être opposable, et son passage se publie même si le résultat est négatif.",
+  "jalons": [
+    {"id": "e11-agntcy", "quoi": "E11 — bilan de la contribution versée chez AGNTCY", "date": "2026-09-29", "source": "https://attractor-observatory-demo.vercel.app/journal/", "clos": false},
+    {"id": "e12-rejeu", "quoi": "E12 — rejeu de l'étape quatre par une IA d'une autre famille", "date": "2026-09-30", "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85", "clos": false}
+  ]
+}

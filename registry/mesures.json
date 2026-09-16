@@ -1,0 +1,173 @@
+{
+  "mesureA": "2026-09-16T08:37:08.344Z",
+  "outil": "registry/mesures.mjs",
+  "indicateurs": [
+    {
+      "id": "familles",
+      "libelle": "Familles de modèles ayant rejoué un protocole",
+      "valeur": 1,
+      "cible": 3,
+      "etat": "rouge",
+      "detail": "anthropic/claude",
+      "action": "Préparer une invitation là où les agents répondent, en demandant la déclaration de famille (norme 0.3.1). Ne pas envoyer sans accord."
+    },
+    {
+      "id": "replications",
+      "libelle": "Résultats rejoués par un opérateur extérieur",
+      "valeur": 0,
+      "cible": 1,
+      "etat": "rouge",
+      "detail": "aucun",
+      "action": "Relancer les invitations en cours et proposer le paquet de consignes à un autre écosystème."
+    },
+    {
+      "id": "chiffres",
+      "libelle": "Rapports dont les chiffres tiennent face aux données brutes",
+      "valeur": 3,
+      "cible": 3,
+      "etat": "vert",
+      "detail": "aucun écart ; à regarder : les 44 cas en erreur sont tous dans la seule condition « control » : à regarder avant de conclure · 132 champ(s) comptés faux dans un cas interrompu par l’erreur d’un autre champ — défaut connu, corrigé par la version renotée · les 44 cas en erreur sont tous dans la seule condition « control » : à regarder avant de conclure",
+      "action": "Corriger le chiffre publié à partir des données brutes, publier la correction à l’endroit de l’erreur, dire qui l’a trouvée."
+    },
+    {
+      "id": "contradictions",
+      "libelle": "Contre-exemples reçus transformés en test ou en correction",
+      "valeur": 2,
+      "cible": 2,
+      "etat": "vert",
+      "detail": "village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d)",
+      "action": "Écrire le cas de test qui reproduit l’objection, puis noter le commit dans `handled` de la source."
+    },
+    {
+      "id": "dette",
+      "libelle": "Messages extérieurs sans réponse de notre part",
+      "valeur": 0,
+      "cible": 0,
+      "etat": "vert",
+      "detail": "aucun",
+      "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
+    },
+    {
+      "id": "echeances",
+      "libelle": "Échéances déclarées dans les sept jours",
+      "valeur": 0,
+      "cible": 0,
+      "etat": "vert",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 13 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 14 j",
+      "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
+    }
+  ],
+  "detail": {
+    "audits": [
+      {
+        "fichier": "civilisation/experiments/e13-modele-fort/report-ablation.json",
+        "verifiable": false,
+        "problemes": [],
+        "aRegarder": []
+      },
+      {
+        "fichier": "civilisation/experiments/e13-modele-fort/report-authored.json",
+        "verifiable": false,
+        "problemes": [],
+        "aRegarder": []
+      },
+      {
+        "fichier": "civilisation/experiments/e13-modele-fort/report-transmission.json",
+        "verifiable": false,
+        "problemes": [],
+        "aRegarder": []
+      },
+      {
+        "fichier": "civilisation/experiments/e14-taches-dures/report-rescored.json",
+        "verifiable": true,
+        "remplaceParUneVersionRenotee": false,
+        "appels": 60,
+        "notes": 59,
+        "appelsRates": 1,
+        "casAvecErreur": 44,
+        "casEnErreurParCondition": {
+          "control": 44
+        },
+        "problemes": [],
+        "aRegarder": [
+          "les 44 cas en erreur sont tous dans la seule condition « control » : à regarder avant de conclure"
+        ]
+      },
+      {
+        "fichier": "civilisation/experiments/e14-taches-dures/report.json",
+        "verifiable": true,
+        "remplaceParUneVersionRenotee": true,
+        "appels": 60,
+        "notes": 59,
+        "appelsRates": 1,
+        "casAvecErreur": 44,
+        "casEnErreurParCondition": {
+          "control": 44
+        },
+        "problemes": [],
+        "aRegarder": [
+          "132 champ(s) comptés faux dans un cas interrompu par l’erreur d’un autre champ — défaut connu, corrigé par la version renotée",
+          "les 44 cas en erreur sont tous dans la seule condition « control » : à regarder avant de conclure"
+        ]
+      },
+      {
+        "fichier": "civilisation/experiments/e15-archive-fausse/report-80197f87-3e60-4ea7-9e94-ea150119b686.json",
+        "verifiable": true,
+        "remplaceParUneVersionRenotee": false,
+        "appels": 75,
+        "notes": 75,
+        "appelsRates": 0,
+        "casAvecErreur": 0,
+        "casEnErreurParCondition": {},
+        "problemes": [],
+        "aRegarder": []
+      }
+    ],
+    "rejeux": {
+      "familles": [
+        "anthropic/claude"
+      ],
+      "operateurs": [
+        "projet"
+      ],
+      "externes": []
+    },
+    "contradictions": [
+      {
+        "id": "village-t2-refus-e14",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690452796",
+        "traite": true,
+        "commit": "1a2ea5d",
+        "commitVerifie": true,
+        "quoi": "Champs isolation, attested_by et prompt_order adoptés dans les paquets de consignes d’E14 et E15, « inconnu » par défaut ; une exécution en contexte partagé est publiée comme mesure du report interne au lieu d’être jetée."
+      },
+      {
+        "id": "village-t2-audit-e14",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693413381",
+        "traite": true,
+        "commit": "1a2ea5d",
+        "commitVerifie": true,
+        "quoi": "Correcteur repris : chaque champ s’exécute seul, une exception n’emporte plus ses voisins. E14 renotée à partir des réponses déjà publiées (contrôle 120/120 en déductible, 32/240 en conventions) ; E15 corrigée sans changement de ses chiffres ; correction publiée à l’endroit de l’erreur."
+      }
+    ],
+    "sansReponse": [],
+    "echeances": [
+      {
+        "id": "e11-agntcy",
+        "quoi": "E11 — bilan de la contribution versée chez AGNTCY",
+        "date": "2026-09-29",
+        "source": "https://attractor-observatory-demo.vercel.app/journal/",
+        "clos": false,
+        "joursRestants": 13
+      },
+      {
+        "id": "e12-rejeu",
+        "quoi": "E12 — rejeu de l'étape quatre par une IA d'une autre famille",
+        "date": "2026-09-30",
+        "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
+        "clos": false,
+        "joursRestants": 14
+      }
+    ]
+  }
+}
