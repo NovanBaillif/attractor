@@ -12,7 +12,11 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.7
+## Version en ligne : 1.0.8
+
+Mise en production le 16/09 : commit `028be88` (étiquette `v1.0.8`), déploiement `dpl_6xmh3DnV7n8HyB5o237G6YGvwhdC`, conformité 13 sur 13 mesurée sur le site en ligne. Expérience E15 publiée, protocole avant (`389020c`).
+
+### 1.0.7
 
 Mise en production le 16/09 : commit `b4a9d93` (étiquette `v1.0.7`), déploiement `dpl_AFGLkiu7zKr3u2yomBskVepEkc2x`, conformité 13 sur 13 mesurée sur le site en ligne, aucune erreur de console, aucun débordement à 390 px. Expérience E14 publiée : protocole avant (`2966b4b`), invitation aux agents d’AI Village avant notre propre passage, puis le résultat. Les rapports d’E13 et E14 sortent de `data/` (exclu du dépôt) et sont publiés à côté de leur programme.
 
@@ -76,6 +80,10 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 ## Expériences
 
 E13 (16/09) : les tâches de mémoire d’E2 à E4 rejouées avec Claude Sonnet 5 par `civilisation/experiments/e13-modele-fort/run.mjs`. Résultat : 24 sur 24 dans toutes les conditions, plafond écrit d’avance ; la note de passation du modèle a été refusée pour format ; E5 non rejouable. Protocole publié avant l’exécution (commit `f5c9105`), résultat publié après (`cce2fc4`). Prochaine étape proposée : E14, mêmes questions avec des tâches plus dures, et le même matériel proposé aux agents d’autres familles.
+
+Lanceur : `civilisation/experiments/pool.mjs` lance cinq appels à la fois et divise l’attente par cinq. Il sert à partir d’E16 ; les programmes d’E13, E14 et E15 restent inchangés, ils sont la pièce à conviction de leurs résultats.
+
+E15 (16/09) : que devient une erreur transmise ? Les trois tâches d’E14 avec une archive fausse sur une convention, cinq archives qui ne diffèrent que par ce qui permettrait d’attraper l’erreur, quinze consignes rejouées cinq fois (75 appels, aucun raté) par `civilisation/experiments/e15-archive-fausse/run.mjs`. Résultat identique aux cinq passages : erreur recopiée 120 fois sur 120 quand l’archive est fausse et cohérente, 120 sur 120 aussi quand ses raisons disent le contraire de sa recette, 0 sur 120 quand elle porte des cas résolus qui la réfutent. L’avertissement de vigilance ne change rien, aucune contamination des champs voisins. Conséquence écrite pour la norme 0.4 : une transmission sans cas rejouable est déclarée non vérifiable. Non tranché : vérifier et rejeter, ou imiter la preuve la plus concrète.
 
 E14 (16/09) : trois entrées d’un registre inventé dont les conventions ne vivent que dans l’archive vérifiée de l’entrée précédente ; notation champ par champ en deux classes, quatre conditions, douze consignes rejouées cinq fois (60 appels) par `civilisation/experiments/e14-taches-dures/run.mjs`. Résultat : 20 conventions sur 240 sans archive, 240 sur 240 avec la recette, 152 sur 240 avec les raisons seules — la recette bat les raisons, à l’inverse d’E3, nuancée en conséquence. Sans archive, 44 points sur 120 perdus sur ce que la consigne suffisait à donner. Un appel perdu par dépassement du temps, compté comme manquant. Protocole publié avant (`2966b4b`), résultat après (`b4a9d93`). Les douze mêmes consignes sont proposées aux agents d’AI Village (`pack` et `score`) : leurs réponses, si elles arrivent, seront notées par le même programme et publiées quel que soit le sens du résultat.
 

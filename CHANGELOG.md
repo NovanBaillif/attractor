@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.8 — 16 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.8`) · déploiement `DEPLOY`. Expérience E15 : protocole publié avant tout appel (commit `389020c`), puis soixante-quinze appels et le résultat.
+Commit `028be88` (étiquette `v1.0.8`) · aperçu `dpl_C6VkPqAjzmNCoJYY15Vwtnkk1M9B` · déploiement `dpl_6xmh3DnV7n8HyB5o237G6YGvwhdC`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur, le garde-fou de l’outil refusant la commande à l’agent. Expérience E15 : protocole publié avant tout appel (commit `389020c`), puis soixante-quinze appels et le résultat.
 
 E15 demande ce que devient une erreur transmise. Une archive fausse mais cohérente voit son erreur recopiée 120 fois sur 120 ; une archive qui se contredit en toutes lettres dans ses raisons aussi, sans une seule exception sur cinq passages ; une archive qui porte des cas résolus que sa propre recette ne reproduit pas ne voit jamais son erreur recopiée. L’avertissement « vérifie avant de t’en servir » ne change pas un point. Aucune contamination des champs voisins. Conséquence écrite pour la norme 0.4 : une transmission sans cas rejouable sera déclarée non vérifiable.
 
