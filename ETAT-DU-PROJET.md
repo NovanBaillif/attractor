@@ -126,9 +126,9 @@ Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux di
 
 ## Ce qui attend Novan
 
-- Les notifications GitHub vers sa messagerie deviennent NÉCESSAIRES : les tickets de contact et de signalement doivent lui parvenir (point 8 de la Vigie).
+- ~~Notifications GitHub vers sa messagerie~~ **FAIT le 16/09** : surveillance du dépôt et envoi par courriel réglés par Novan. Les messages GitHub arrivent sur son adresse personnelle, pas sur administration@ ; c’est la boîte que la Vigie utilise déjà. Aucun ticket n’avait été manqué : le dépôt n’en avait reçu aucun.
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
-- Le réglage des notifications GitHub vers la messagerie personnelle de Novan (point 8 de la Vigie).
+- Proposé le 16/09, non demandé : que la Vigie signale chaque matin les tickets ouverts du dépôt, en filet de sécurité si un réglage saute. À n’ajouter que sur demande de Novan.
 
 Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
 
