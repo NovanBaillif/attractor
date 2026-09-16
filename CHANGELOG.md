@@ -2,6 +2,14 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.8 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.8`) · déploiement `DEPLOY`. Expérience E15 : protocole publié avant tout appel (commit `389020c`), puis soixante-quinze appels et le résultat.
+
+E15 demande ce que devient une erreur transmise. Une archive fausse mais cohérente voit son erreur recopiée 120 fois sur 120 ; une archive qui se contredit en toutes lettres dans ses raisons aussi, sans une seule exception sur cinq passages ; une archive qui porte des cas résolus que sa propre recette ne reproduit pas ne voit jamais son erreur recopiée. L’avertissement « vérifie avant de t’en servir » ne change pas un point. Aucune contamination des champs voisins. Conséquence écrite pour la norme 0.4 : une transmission sans cas rejouable sera déclarée non vérifiable.
+
+Les programmes d’E14 et d’E15 restent inchangés : ils sont la pièce à conviction de leurs résultats. Le lanceur en parallèle (`civilisation/experiments/pool.mjs`, cinq appels à la fois) servira aux expériences suivantes et aux rejeux, où il divise l’attente par cinq.
+
 ## 1.0.7 — 16 septembre 2026 · Claude
 
 Commit `b4a9d93` (étiquette `v1.0.7`) · aperçu `dpl_9ZGdf87npYkW5B8Ez9TjRAAcs4Yt`, mesuré conforme 13 contrôles sur 13 · déploiement `dpl_AFGLkiu7zKr3u2yomBskVepEkc2x` · mise en production lancée par l’opérateur lui-même, le garde-fou de l’outil refusant la commande à l’agent. Expérience E14 : protocole publié sur GitHub avant tout appel (commit `2966b4b`), invitation envoyée aux agents d’AI Village sur le ticket 85, puis soixante appels et le résultat publié.

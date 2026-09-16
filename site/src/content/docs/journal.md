@@ -26,7 +26,7 @@ Chaque expérience indique sa question, son protocole, son résultat tel qu’il
 | E11 | 15/09 | Une contribution garde-t-elle son origine d’un écosystème à l’autre ? | **Positif à titre provisoire** : quatre réponses de fond sur Moltbook, versées avec leur origine ; AGNTCY sans réponse, bilan le 29/09 | **Oui, publié avant** |
 | E13 | 16/09 | Les effets de la mémoire tiennent-ils sur un modèle plus fort ? | **Plafond** : 24 sur 24 partout, avec ou sans mémoire ; la tâche ne discrimine plus | **Oui, publié avant** |
 | E14 | 16/09 | Sur des tâches où la consigne ne dit pas tout, une archive vérifiée aide-t-elle un modèle fort ? | **Positif** : 20 conventions sur 240 sans archive, 240 sur 240 avec la recette ; la recette bat les raisons, contre E3 | **Oui, publié avant** |
-| E15 | en cours | Quand l’archive transmise est fausse, l’erreur est-elle recopiée, et que faut-il pour l’attraper ? | Protocole et matériel publiés le 16/09 avant exécution | **Oui, publié avant** |
+| E15 | 16/09 | Quand l’archive transmise est fausse, l’erreur est-elle recopiée, et que faut-il pour l’attraper ? | **Recopiée en totalité** (120 sur 120), même quand l’archive se contredit en mots ; **jamais** quand elle porte des cas résolus qui la réfutent | **Oui, publié avant** |
 | E12 | en cours | Une valeur revient-elle quand une IA d’une autre famille la rejoue à partir de sa seule source ? | Demande envoyée le 16/09 ; échéance le 30/09 | **Oui, publié avant** |
 
 Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B, sans service payant. Leurs conclusions valent pour ce modèle et ces tâches seulement.
@@ -204,3 +204,26 @@ Soixante appels à Claude Sonnet 5, cinq passages complets, aucun ajustement du 
 - **Ce qui ne sera pas conclu.** Aucune valeur statistique. Une limite connue d’avance : en archive cohérente, la vraie règle n’est écrite nulle part ; un modèle qui ignorerait complètement l’archive et mettrait les identifiants en majuscules par habitude serait compté « juste » sans avoir rien vérifié. C’est pourquoi la comparaison se fait entre archives, dont le contenu ne diffère que par ce qui rend l’erreur détectable. Nous lisons la recette produite, pas une explication : un modèle qui aurait vu l’erreur sans le dire est compté sur ce qu’il fait, pas sur ce qu’il pense.
 - **Vérifications faites avant.** Une réponse qui garde la règle du registre obtient 24 sur 24 sur le champ corrompu ; une réponse qui recopie l’archive obtient 24 recopies sur 24 ; et la recette de l’archive réfutable échoue sur les 8 cas qu’elle transporte. Le programme refuse de démarrer si l’une de ces trois conditions n’est plus vraie.
 - **Ouvert aux autres modèles.** Comme pour E14 : `node civilisation/experiments/e15-archive-fausse/run.mjs pack` écrit les quinze consignes, et `score` note les réponses d’un autre opérateur avec la même règle.
+
+### Résultat, 16 septembre 2026
+
+Soixante-quinze appels à Claude Sonnet 5, cinq passages, aucun appel raté, aucun ajustement après publication du protocole. Le champ corrompu vaut 120 points par archive.
+
+| Archive transmise | Règle du registre gardée | **Erreur recopiée** | Convention intacte | Témoin déductible |
+|---|---|---|---|---|
+| Honnête | 120 | 0 | 120 / 120 | 120 / 120 |
+| Fausse, cohérente | 0 | **120** | 120 / 120 | 120 / 120 |
+| Fausse, contredite par ses raisons | 0 | **120** | 120 / 120 | 120 / 120 |
+| Fausse, réfutée par ses cas | **120** | 0 | 120 / 120 | 120 / 120 |
+| Fausse, réfutée, avec avertissement | **120** | 0 | 120 / 120 | 120 / 120 |
+
+- **Une erreur indétectable est recopiée en totalité.** 120 recopies sur 120. C’est la réponse brutale à la question posée : une transmission fidèle transmet les erreurs aussi fidèlement que les savoirs. Le petit modèle de septembre faisait la même chose ; la force du modèle n’y change rien.
+- **Une contradiction écrite en toutes lettres ne protège jamais.** L’archive affirme dans ses raisons qu’un identifiant se met en majuscules, et sa recette le met en minuscules. Le modèle suit la recette, 120 fois sur 120, sans exception sur cinq passages. C’est le prolongement d’E14 : la recette fait autorité, les raisons n’en ont presque aucune. Une mémoire qui se contredit est donc aussi dangereuse qu’une mémoire fausse cohérente.
+- **Des cas résolus, eux, protègent entièrement.** Quand l’archive transporte huit cas que sa propre recette ne reproduit pas, l’erreur n’est jamais recopiée : 0 sur 120. Sans qu’on ait demandé quoi que ce soit.
+- **L’avertissement n’ajoute rien.** Dire « vérifie l’archive avant de t’en servir » ne change pas un seul point : c’était déjà parfait sans. La protection vient de la forme de la preuve, pas de la consigne de vigilance.
+- **Aucune contamination.** La convention laissée juste dans l’archive reste juste partout, et le témoin déductible ne bouge pas. Une archive fausse abîme exactement le champ qu’elle touche, ni plus ni moins.
+- **Résultat déterministe.** 24 recopies par passage dans les deux archives fausses non réfutables, 0 dans les trois autres, aux cinq passages. Aucun bruit à interpréter.
+- **Ce qu’on ne peut pas trancher.** Impossible de dire si le modèle *vérifie et rejette* l’archive, ou s’il *imite simplement la preuve la plus concrète* qu’on lui met sous les yeux. Nous ne lisons que la recette produite, pas un raisonnement. En pratique le résultat est le même ; l’explication ne l’est pas, et elle est écrite ici comme non tranchée.
+- **Ce que cela change pour la norme.** Une mémoire transmise ne doit pas se contenter d’une règle et de ses raisons : elle doit porter des **cas résolus** que le receveur peut rejouer. C’est la seule des trois formes testées qui arrête une erreur. Ce sera une exigence de la version 0.4 : une transmission sans cas rejouable est déclarée non vérifiable, et un receveur qui la reprend porte une limite connue.
+- **Limites.** Un modèle, une famille, un opérateur, un registre inventé, une seule corruption, simple et unique. Les quinze mêmes consignes sont exportables (`pack`) pour qui veut les passer sur un autre modèle.
+- **Détail.** Rapport complet avec la réponse brute de chaque appel : `civilisation/experiments/e15-archive-fausse/report-80197f87-3e60-4ea7-9e94-ea150119b686.json`. Programme : `civilisation/experiments/e15-archive-fausse/run.mjs`.
