@@ -1,0 +1,788 @@
+{
+  "id": "df39868e-3a83-431c-bcc6-0278f249c4f0",
+  "at": "2026-09-15T23:44:20.725Z",
+  "experiment": "E13",
+  "mode": "authored",
+  "model": "sonnet",
+  "replaces": "E2, E3, E4 of 13/09/2026 (Qwen3 4B)",
+  "design": "Same tasks, memories, prompts and scoring as 13/09; one stateless call per condition; tools disabled; no retry on an invalid answer.",
+  "memoryHash": "1e0c0e28ad10af89eada7e0bc1083000dade61c706310c04ab67ed8caf8bcbef",
+  "calls": [
+    {
+      "task": "memory-author",
+      "condition": "author",
+      "promptHash": "1fca20531881253e2edb31f9a53c76be57a600a645f5b1384997925d4f32d967",
+      "promptChars": 1988,
+      "ms": 60963,
+      "outputChars": 3274,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "status": "invalid-output",
+      "error": "Invalid note sections"
+    },
+    {
+      "task": "signed-invoice",
+      "condition": "control",
+      "promptHash": "80ae86de90fa8a78845ac15a1f77a0cad7f53d46a1bbd1e2ad11802718eca532",
+      "promptChars": 879,
+      "ms": 9742,
+      "outputChars": 349,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "unitPrice",
+            "to": "net",
+            "steps": [
+              "trim",
+              "decimal-comma",
+              "number"
+            ]
+          },
+          {
+            "from": "sku",
+            "to": "productCode",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          },
+          {
+            "from": "active",
+            "to": "isActive",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "unitPrice": "-12,50",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "-12,50",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": " +0003,20 ",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": " +0003,20 ",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "0",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "0",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "\t-0,75\n",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "\t-0,75\n",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "signed-invoice",
+      "condition": "memory",
+      "promptHash": "a4c5cb38048fcfee4a5ccb244fac1ea6af7ab5740c3cfe29390218fa59bf518a",
+      "promptChars": 1452,
+      "ms": 9904,
+      "outputChars": 222,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "unitPrice",
+            "to": "net",
+            "steps": [
+              "trim",
+              "decimal-comma",
+              "number"
+            ]
+          },
+          {
+            "from": "sku",
+            "to": "productCode",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          },
+          {
+            "from": "active",
+            "to": "isActive",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "unitPrice": "-12,50",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "-12,50",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": -12.5,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": " +0003,20 ",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": " +0003,20 ",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": 3.2,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "0",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "0",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": 0,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "\t-0,75\n",
+            "sku": " 00ab-7 ",
+            "active": " TRUE "
+          },
+          "expected": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "output": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "unitPrice": "\t-0,75\n",
+            "sku": " 00ab-7 ",
+            "active": "False"
+          },
+          "expected": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "output": {
+            "net": -0.75,
+            "productCode": "00AB-7",
+            "isActive": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "printed-label",
+      "condition": "memory",
+      "promptHash": "1f2e4fb775fcffb763929bc2ab4a20fbeaa57cbefb9597363b8ba90ab1eeefe4",
+      "promptChars": 1500,
+      "ms": 6259,
+      "outputChars": 184,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "gross",
+            "to": "printedPrice",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "serial",
+            "to": "serialNumber",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "ready",
+            "to": "readyText",
+            "steps": [
+              "trim",
+              "lowercase"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "gross": "000,00",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "000,00",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": " 0008,40 ",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": " 0008,40 ",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "\t17,3\n",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "\t17,3\n",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "99",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "99",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "printed-label",
+      "condition": "control",
+      "promptHash": "520daf2b6a06ef7c3738d542a6155914eaa5e73ca87becdcf0cb65be71ac3bff",
+      "promptChars": 927,
+      "ms": 7286,
+      "outputChars": 307,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "gross",
+            "to": "printedPrice",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "serial",
+            "to": "serialNumber",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "ready",
+            "to": "readyText",
+            "steps": [
+              "trim",
+              "lowercase"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "gross": "000,00",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "000,00",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "000,00",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": " 0008,40 ",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": " 0008,40 ",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "0008,40",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "\t17,3\n",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "\t17,3\n",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "17,3",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "99",
+            "serial": " 000014 ",
+            "ready": " TRUE "
+          },
+          "expected": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "output": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "true"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "gross": "99",
+            "serial": " 000014 ",
+            "ready": "FaLsE"
+          },
+          "expected": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "output": {
+            "printedPrice": "99",
+            "serialNumber": "000014",
+            "readyText": "false"
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    }
+  ],
+  "protocolHash": "f8de86e257b54d5dde86510185e2c1857e3b64656a13765eb785cb2abf0956b1",
+  "summary": {
+    "control": "16/16",
+    "memory": "16/16"
+  },
+  "finishedAt": "2026-09-15T23:45:54.890Z"
+}

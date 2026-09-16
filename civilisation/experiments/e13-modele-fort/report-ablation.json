@@ -1,0 +1,2292 @@
+{
+  "id": "7457c187-10ed-46f6-a812-fa565795da66",
+  "at": "2026-09-15T23:42:23.679Z",
+  "experiment": "E13",
+  "mode": "ablation",
+  "model": "sonnet",
+  "replaces": "E2, E3, E4 of 13/09/2026 (Qwen3 4B)",
+  "design": "Same tasks, memories, prompts and scoring as 13/09; one stateless call per condition; tools disabled; no retry on an invalid answer.",
+  "memoryHash": "b9685eeb4bf536245fd32adc1f6faa6464c2941220ae0670b5464a3b9a4ebfd5",
+  "calls": [
+    {
+      "task": "renamed",
+      "condition": "control",
+      "promptHash": "ff68fa48a39ab81722d0616dd5da4ac61355f9d17c7be20a929305c98370ec79",
+      "promptChars": 861,
+      "ms": 8335,
+      "outputChars": 226,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "fee",
+            "to": "cost",
+            "steps": [
+              "trim",
+              "decimal-comma",
+              "number"
+            ]
+          },
+          {
+            "from": "code",
+            "to": "identifier",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "live",
+            "to": "available",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "renamed",
+      "condition": "recipe-only",
+      "promptHash": "cf2378bc57ed04f13e2a1341b4e817449db70c9cf52fa0472935fbf7c5459767",
+      "promptChars": 1434,
+      "ms": 7796,
+      "outputChars": 204,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "fee",
+            "to": "cost",
+            "steps": [
+              "trim",
+              "decimal-comma",
+              "number"
+            ]
+          },
+          {
+            "from": "code",
+            "to": "identifier",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "live",
+            "to": "available",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "renamed",
+      "condition": "reasons-only",
+      "promptHash": "77be93e2cdc5ffbcc4afc6db5543ef35c1075e48a8f32bf67076e21dcb832b98",
+      "promptChars": 1494,
+      "ms": 10277,
+      "outputChars": 204,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "fee",
+            "to": "cost",
+            "steps": [
+              "trim",
+              "decimal-comma",
+              "number"
+            ]
+          },
+          {
+            "from": "code",
+            "to": "identifier",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "live",
+            "to": "available",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "renamed",
+      "condition": "memory",
+      "promptHash": "72c0224704e4f7c77e9091eb19a9fa193c5f8a95fedb9967bf6fc9af112d2533",
+      "promptChars": 1722,
+      "ms": 7736,
+      "outputChars": 204,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "fee",
+            "to": "cost",
+            "steps": [
+              "trim",
+              "decimal-comma",
+              "number"
+            ]
+          },
+          {
+            "from": "code",
+            "to": "identifier",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "live",
+            "to": "available",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "0",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 0,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": " 003,25 ",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 3.25,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "\t87,9\n",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 87.9,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": "true"
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "fee": "999,99",
+            "code": " 00081 ",
+            "live": " FALSE "
+          },
+          "expected": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "output": {
+            "cost": 999.99,
+            "identifier": "00081",
+            "available": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "changed-meaning",
+      "condition": "recipe-only",
+      "promptHash": "2fb18a55746e2075c846a01da24921df8348a99157e5a41c2a48d1804bef2ff7",
+      "promptChars": 1498,
+      "ms": 7722,
+      "outputChars": 197,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "quantity",
+            "to": "count",
+            "steps": [
+              "trim",
+              "number"
+            ]
+          },
+          {
+            "from": "label",
+            "to": "sku",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          },
+          {
+            "from": "flag",
+            "to": "active",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "changed-meaning",
+      "condition": "reasons-only",
+      "promptHash": "b8020ac0511a4ff154a59ab563f7ba7fc3403bf54989d51f8ad668e36794c3fd",
+      "promptChars": 1558,
+      "ms": 7512,
+      "outputChars": 197,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "quantity",
+            "to": "count",
+            "steps": [
+              "trim",
+              "number"
+            ]
+          },
+          {
+            "from": "label",
+            "to": "sku",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          },
+          {
+            "from": "flag",
+            "to": "active",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "changed-meaning",
+      "condition": "memory",
+      "promptHash": "f482b8e07810ac2643f08519b326bcb843e86f50de603ae5611f1af29dfc0331",
+      "promptChars": 1786,
+      "ms": 10793,
+      "outputChars": 197,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "quantity",
+            "to": "count",
+            "steps": [
+              "trim",
+              "number"
+            ]
+          },
+          {
+            "from": "label",
+            "to": "sku",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          },
+          {
+            "from": "flag",
+            "to": "active",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "changed-meaning",
+      "condition": "control",
+      "promptHash": "145c01a0a7d9a31f0ccd7bb0f24f54ad2b8c8682f4bac64f68e9f5f33d3340b4",
+      "promptChars": 925,
+      "ms": 7934,
+      "outputChars": 219,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "quantity",
+            "to": "count",
+            "steps": [
+              "trim",
+              "number"
+            ]
+          },
+          {
+            "from": "label",
+            "to": "sku",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          },
+          {
+            "from": "flag",
+            "to": "active",
+            "steps": [
+              "trim",
+              "lowercase",
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "000",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 0,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": " 00017 ",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 17,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "\t9\n",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 9,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": "TrUe"
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": true
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "quantity": "123",
+            "label": " ab-09 ",
+            "flag": " false "
+          },
+          "expected": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "output": {
+            "count": 123,
+            "sku": "AB-09",
+            "active": false
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "price-as-text",
+      "condition": "reasons-only",
+      "promptHash": "5fdcb8737b879be503ac60124fabbdcf7b9118565619139448565b70a8ad48a4",
+      "promptChars": 1588,
+      "ms": 16798,
+      "outputChars": 241,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "price",
+            "to": "priceText",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "ref",
+            "to": "slug",
+            "steps": [
+              "trim",
+              "lowercase"
+            ]
+          },
+          {
+            "from": "enabled",
+            "to": "flagText",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "price-as-text",
+      "condition": "memory",
+      "promptHash": "48fe25dd66ec365dd3a717448b55a445d06677a8ae9d1fbb245a5debbfa9bb3c",
+      "promptChars": 1816,
+      "ms": 8194,
+      "outputChars": 183,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "price",
+            "to": "priceText",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "ref",
+            "to": "slug",
+            "steps": [
+              "trim",
+              "lowercase"
+            ]
+          },
+          {
+            "from": "enabled",
+            "to": "flagText",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "price-as-text",
+      "condition": "control",
+      "promptHash": "90501899f3641326a00d46021c79eb01e52831d2d25ec9826dff670a68e97fc9",
+      "promptChars": 955,
+      "ms": 6619,
+      "outputChars": 307,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "price",
+            "to": "priceText",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "ref",
+            "to": "slug",
+            "steps": [
+              "trim",
+              "lowercase"
+            ]
+          },
+          {
+            "from": "enabled",
+            "to": "flagText",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    },
+    {
+      "task": "price-as-text",
+      "condition": "recipe-only",
+      "promptHash": "6dd762e21f9718b37071c6fe41483319f614a0d3c4c8dbdffec3b9fc96fed869",
+      "promptChars": 1528,
+      "ms": 9038,
+      "outputChars": 195,
+      "modelUsage": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "recipe": {
+        "fields": [
+          {
+            "from": "price",
+            "to": "priceText",
+            "steps": [
+              "trim"
+            ]
+          },
+          {
+            "from": "ref",
+            "to": "slug",
+            "steps": [
+              "trim",
+              "lowercase"
+            ]
+          },
+          {
+            "from": "enabled",
+            "to": "flagText",
+            "steps": [
+              "trim",
+              "uppercase"
+            ]
+          }
+        ]
+      },
+      "tests": [
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "000,00",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "000,00",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": " 0012,50 ",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "0012,50",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "\t7,9\n",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "7,9",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": "true"
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "TRUE"
+          },
+          "passed": true
+        },
+        {
+          "input": {
+            "price": "99",
+            "ref": " AB-009 ",
+            "enabled": " FaLsE "
+          },
+          "expected": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "output": {
+            "priceText": "99",
+            "slug": "ab-009",
+            "flagText": "FALSE"
+          },
+          "passed": true
+        }
+      ],
+      "passed": 8,
+      "total": 8,
+      "status": "scored"
+    }
+  ],
+  "protocolHash": "c63101bead8dee7a9812d84c848cce8d3f90e3399250c764a6425d6b1ac1aac1",
+  "summary": {
+    "control": "24/24",
+    "recipe-only": "24/24",
+    "reasons-only": "24/24",
+    "memory": "24/24"
+  },
+  "finishedAt": "2026-09-15T23:44:12.462Z"
+}

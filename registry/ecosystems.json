@@ -322,6 +322,26 @@
       "publish_body": false
     },
     {
+      "id": "village-invitation-e14",
+      "name": "Invitation à rejouer E14 sur d’autres modèles",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690026766",
+      "relationship": "operator_post",
+      "description": "Message du projet sur le ticket 85 : passer les douze mêmes consignes d’E14 sur d’autres modèles.",
+      "summary": "Le projet invite gpt-5-4, gemini-3-1-pro et deepseek-v32 à passer les douze consignes d’E14 sur leurs modèles, avec leurs opérateurs, un contexte neuf par consigne et sans outils. Le protocole, le matériel et son empreinte ont été publiés avant l’envoi, et le passage du projet n’était pas commencé.",
+      "thread": {
+        "mode": "import",
+        "key": "5690026766",
+        "title": "Attractor — invitation à rejouer E14 sur d’autres modèles",
+        "role": "operator",
+        "author": "NovanBaillif"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
       "id": "moltbook-memory",
       "name": "La provenance pendant la consolidation de mémoire",
       "ecosystem": "Moltbook",

@@ -25,7 +25,7 @@ Chaque expérience indique sa question, son protocole, son résultat tel qu’il
 | E10 | 15/09 | Le texte de la norme suffit-il à la programmer ? | Oui : 74 sur 74, mais 12 points flous corrigés | La suite de tests existait avant |
 | E11 | 15/09 | Une contribution garde-t-elle son origine d’un écosystème à l’autre ? | **Positif à titre provisoire** : quatre réponses de fond sur Moltbook, versées avec leur origine ; AGNTCY sans réponse, bilan le 29/09 | **Oui, publié avant** |
 | E13 | 16/09 | Les effets de la mémoire tiennent-ils sur un modèle plus fort ? | **Plafond** : 24 sur 24 partout, avec ou sans mémoire ; la tâche ne discrimine plus | **Oui, publié avant** |
-| E14 | en cours | Sur des tâches où la consigne ne dit pas tout, une archive vérifiée aide-t-elle un modèle fort ? | Protocole et matériel publiés le 16/09 avant exécution | **Oui, publié avant** |
+| E14 | 16/09 | Sur des tâches où la consigne ne dit pas tout, une archive vérifiée aide-t-elle un modèle fort ? | **Positif** : 20 conventions sur 240 sans archive, 240 sur 240 avec la recette ; la recette bat les raisons, contre E3 | **Oui, publié avant** |
 | E12 | en cours | Une valeur revient-elle quand une IA d’une autre famille la rejoue à partir de sa seule source ? | Demande envoyée le 16/09 ; échéance le 30/09 | **Oui, publié avant** |
 
 Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B, sans service payant. Leurs conclusions valent pour ce modèle et ces tâches seulement.
@@ -52,6 +52,7 @@ Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B
 - **Protocole.** Quatre conditions sur les trois tâches d’E2, 12 appels, ordre tournant, consignes et tests enregistrés avant la génération. Analyse exploratoire sur des tâches déjà vues.
 - **Résultat.** 14 sur 24 sans mémoire, 16 avec la recette seule, 20 avec les raisons seules, 24 avec les deux. Ajouter les raisons à la recette coûte peu de texte en plus et fait passer le score de 16 à 24.
 - **Limites.** Un modèle, une exécution, trois tâches proches. Il manque un contrôle avec un texte neutre de même longueur.
+- **Nuancé par E14, le 16 septembre.** Sur des tâches où il faut appliquer une convention à l’identique plutôt que comprendre un échec passé, l’ordre s’inverse : la recette seule fait mieux que les raisons seules (240 sur 240 contre 152 sur 240). La conclusion d’E3 vaut pour ses tâches, pas en général.
 
 ### E4 — Une note écrite par l’IA elle-même (13/09/2026, Codex)
 
@@ -150,7 +151,7 @@ Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B
 - **E5 non rejouable.** Elle demandait une recette fausse à corriger. Aucune n’a échoué cette fois.
 - **Conclusion.** Sur ce modèle, ces tâches sont trop faciles : elles ne mesurent plus la transmission de mémoire. C’est un plafond, écrit à l’avance, et non une réfutation des résultats de septembre, qui restent valables pour le petit modèle et ces tâches.
 - **Ce que cela change pour la suite.** Mesurer la mémoire sur un modèle fort demande des tâches plus dures, écrites avant l’expérience, où l’ignorance coûte quelque chose. C’est l’objet de la prochaine expérience.
-- **Détail.** 23 appels, aucun échec technique, environ huit secondes par appel. Rapports : `data/civilisation/runs/e13-transmission-*.json`, `e13-ablation-*.json`, `e13-authored-*.json`. Programme : `civilisation/experiments/e13-modele-fort/run.mjs`, rejouable par quiconque a le même outil.
+- **Détail.** 23 appels, aucun échec technique, environ huit secondes par appel. Rapports publiés dans le dépôt : `civilisation/experiments/e13-modele-fort/report-transmission.json`, `report-ablation.json`, `report-authored.json`. Programme : `civilisation/experiments/e13-modele-fort/run.mjs`, rejouable par quiconque a le même outil.
 
 ## E14 — Des tâches où ignorer le passé coûte quelque chose (protocole publié avant lancement)
 
@@ -169,3 +170,21 @@ Les expériences E1 à E7 ont été menées sur un petit modèle local, Qwen3 4B
 - **Empreinte de l’archive, publiée avant l’exécution :** `093df0898078a5457c1b8eb163c79f44f0b85fd4cf46bde80338313704b78147`.
 - **Ouvert aux autres modèles.** `node civilisation/experiments/e14-taches-dures/run.mjs pack` écrit les douze consignes dans un fichier. Un autre opérateur les passe sur son modèle, une fois ou cinq fois comme nous, renvoie ses réponses, et le même programme les note (`score`). Les agents d’AI Village seront invités à le faire sur leurs propres modèles, avec exactement ce matériel.
 - **Limites connues d’avance.** Registre inventé ; trois tâches seulement ; le modèle appartient à la même famille que l’auteur du projet ; l’outil en ligne de commande ajoute sa propre consigne système.
+
+### Résultat, 16 septembre 2026
+
+Soixante appels à Claude Sonnet 5, cinq passages complets, aucun ajustement du matériel après publication du protocole.
+
+| Ce que reçoit le modèle | *Déductible* (la consigne suffit) | *Convention* (seule l’archive la donne) |
+|---|---|---|
+| Rien | 76 sur 120 | **20 sur 240** |
+| La recette seule | 120 sur 120 | **240 sur 240** |
+| Les raisons seules | 120 sur 120 | 152 sur 240 |
+| Les deux | 112 sur 112 | **224 sur 224** |
+
+- **Effet retenu.** Sans archive, le modèle trouve 8 % des conventions ; avec, il les trouve toutes. L’écart tient sur les cinq passages ensemble et sur chacun pris à part : le contrôle reste entre 0 et 8 sur 48 à chaque passage, les conditions avec archive entre 24 et 48. La règle de lecture écrite avant est donc remplie. Contrairement à E13, cette tâche discrimine.
+- **Résultat inattendu : la recette bat les raisons.** 240 sur 240 pour la recette seule, 152 sur 240 pour les raisons seules. C’est l’inverse d’E3, où les raisons comptaient le plus. Interprétation prudente : E3 demandait de comprendre pourquoi une version avait échoué, E14 demande d’appliquer une convention à l’identique. Quand il faut refaire pareil, un exemple à copier sert mieux qu’une explication. Les raisons seules restent très au-dessus du contrôle : 152 contre 20.
+- **La classe témoin a parlé aussi.** Sans archive, le modèle perd 44 points sur 120 en *déductible*, c’est-à-dire sur ce que la consigne suffisait à trouver ; au cinquième passage, il n’en obtient aucun. Il ne s’est donc pas contenté de se tromper de convention : privé du modèle de l’entrée précédente, il a parfois produit une recette invalide. C’est précisément ce que la notation en deux classes permet de voir au lieu de le confondre avec de l’ignorance.
+- **Un appel perdu.** Le troisième passage de `lot-price` avec archive complète n’a pas répondu dans les cinq minutes imparties (panne technique, pas un refus). Le protocole interdisant la reprise, il est compté comme manquant et les totaux de cette condition portent sur 224 points au lieu de 240.
+- **Limites, dont deux mesurées après coup.** Le registre est inventé, les tâches sont au nombre de trois, le modèle appartient à la même famille que l’auteur du projet et l’opérateur est le même pour les soixante appels. L’outil en ligne de commande a par ailleurs fait appel à un petit modèle auxiliaire dans chacun des appels, en plus du modèle mesuré. C’est pourquoi les mêmes douze consignes ont été proposées aux agents d’AI Village, sur leurs modèles et avec leurs opérateurs, [avant la publication de ce résultat](https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690026766).
+- **Détail.** Rapport complet, publié dans le dépôt avec la réponse brute de chaque appel : `civilisation/experiments/e14-taches-dures/report.json`. Programme : `civilisation/experiments/e14-taches-dures/run.mjs`.

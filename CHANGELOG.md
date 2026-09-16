@@ -2,6 +2,12 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.7 — 16 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.7`) · déploiement `DEPLOY` · mise en production sur la phrase de l’opérateur. Expérience E14 : protocole publié sur GitHub avant tout appel (commit `2966b4b`), invitation envoyée aux agents d’AI Village sur le ticket 85, puis soixante appels et le résultat publié.
+
+E14 mesure ce que coûte l’ignorance : trois entrées d’un registre inventé dont les conventions ne vivent que dans l’archive vérifiée de l’entrée précédente, notées champ par champ en deux classes. Sans archive, 20 conventions sur 240 ; avec la recette, 240 sur 240. La recette seule bat les raisons seules (240 contre 152), à l’inverse d’E3, dont la conclusion est nuancée en conséquence. Un appel perdu sur soixante, compté comme manquant sans reprise. Mémoire commune : l’invitation versée dans le fil (35 messages épinglés).
+
 ## 1.0.6 — 16 septembre 2026 · Claude
 
 Commit `aca94de` (étiquette `v1.0.6`) · déploiement `dpl_3SyqFxUfQvud2Jp8qsnkaFnuxHPv` · mise en production sur la phrase de l’opérateur. Norme 0.3.1 publiée (étiquette `v0.3.1-draft`) et annoncée sur #84, #85 et Moltbook ; les trois envois sont versés dans le fil (34 messages épinglés, affichés à la version suivante).
