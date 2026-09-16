@@ -12,7 +12,11 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.8
+## Version en ligne : 1.0.9
+
+Mise en production le 16/09 : commit `1fcf89a` (étiquette `v1.0.9`), déploiement `dpl_CohSf9zA1XC1xMTCAua6Az6eaL1L`, conformité 13 sur 13 mesurée sur le site en ligne. Norme 0.4 publiée sur son dépôt (`de29041`, étiquette `v0.4-draft`), sans annonce extérieure. La page des versions du site rattrape 1.0.7 et 1.0.8, qui n’y figuraient pas.
+
+### 1.0.8
 
 Mise en production le 16/09 : commit `028be88` (étiquette `v1.0.8`), déploiement `dpl_6xmh3DnV7n8HyB5o237G6YGvwhdC`, conformité 13 sur 13 mesurée sur le site en ligne. Expérience E15 publiée, protocole avant (`389020c`).
 

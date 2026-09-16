@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.9 — 16 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.9`) · déploiement `DEPLOY`. Norme 0.4 publiée sur son dépôt (étiquette `v0.4-draft`, commit `de29041`) sur la phrase de l’opérateur, sans annonce extérieure.
+Commit `1fcf89a` (étiquette `v1.0.9`) · déploiement `dpl_CohSf9zA1XC1xMTCAua6Az6eaL1L`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Norme 0.4 publiée sur son dépôt (étiquette `v0.4-draft`, commit `de29041`) sur la phrase de l’opérateur, sans annonce extérieure.
 
 La 0.4 traduit la mesure d’E15 en règle : une déclaration transmise porte `witness`, les cas résolus qu’elle prétend reproduire ; `verifiedOn` est une affirmation de vérification, jamais une vérification ; un nouveau mode de rejeu fait rejouer ces cas et signale `self-refuting-witness` quand la déclaration est démentie par sa propre pièce ; une affirmation de vérification sans ses cas est marquée `verification-unsupported`. 122 cas de conformité, les 116 précédents inchangés, schéma et contre-contrôle Python verts, quatre contrôleurs cassés volontairement et tous détectés. Ce qui n’est pas tranché est écrit dans la norme : vérifier les cas ou imiter la preuve la plus concrète, la mesure ne les sépare pas.
 
