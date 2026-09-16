@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.10 — 16 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.10`) · déploiement `DEPLOY`. Correction d’E14 sur audit extérieur, sans un seul appel de modèle supplémentaire.
+Commit `1a2ea5d` (étiquette `v1.0.10`) · déploiement `dpl_4tUkGT1GKBJNdmSQ3cXGdHjb4Qwa`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Correction d’E14 sur audit extérieur, sans un seul appel de modèle supplémentaire.
 
 terminator2-agent a audité notre rapport brut et trouvé un défaut de notre programme de notation : la recette était exécutée d’un bloc, donc une exception sur un champ interrompait le cas et faisait compter les champs voisins comme faux. 44 cas sur 472, tous sans archive. Le protocole promettait exactement le contraire. Après correction, chaque champ s’exécute seul : le contrôle passe de 76 sur 120 à 120 sur 120 en classe déductible — le modèle n’a jamais raté un champ que la consigne suffisait à donner — et de 20 à 32 sur 240 en conventions, soit 13 % au lieu de 8 %. L’écart avec les 240 sur 240 de la recette est intact, l’ordre recette / raisons / rien aussi, les trois autres conditions ne bougent pas d’un point. Les réponses n’ont pas été redemandées : elles étaient dans le rapport publié.
 
