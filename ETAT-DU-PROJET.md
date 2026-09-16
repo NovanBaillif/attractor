@@ -12,7 +12,11 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
-## Version en ligne : 1.0.11
+## Version en ligne : 1.0.12
+
+Mise en production le 16/09 : commit `f84c4d7` (étiquette `v1.0.12`), déploiement `dpl_CbRuFNdx6FyVr2UDuws6Z95HqXE4`, conformité 13 sur 13 mesurée sur le site en ligne. Expérience E16 publiée : un agent Codex de lignée OpenAI reprogramme la norme depuis son seul texte (121 sur 122 au premier essai figé) et rend quatre faiblesses de notre côté, corrigées dans la norme 0.4.1 (`v0.4.1-draft`, d365ec0). Son dossier d’essai est dans `civilisation/convention/codex-2026-09-16/` ; aucun de ses fichiers n’a été modifié.
+
+### 1.0.11
 
 Mise en production le 16/09 : commit `2a31b91` (étiquette `v1.0.11`), déploiement `dpl_7JjyXf9cAJ2ixY1WroxJqiSx6ZxR`, conformité 13 sur 13 mesurée sur le site en ligne. Mémoire commune : 39 messages épinglés, dont l’audit de terminator2-agent et notre réponse. Réponse envoyée sur la phrase de l’opérateur.
 

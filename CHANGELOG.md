@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.12 — 16 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.12`) · déploiement `DEPLOY`. Expérience E16 publiée et norme 0.4.1 poussée (`v0.4.1-draft`), sur la phrase de l’opérateur.
+Commit `f84c4d7` (étiquette `v1.0.12`) · déploiement `dpl_CbRuFNdx6FyVr2UDuws6Z95HqXE4`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Expérience E16 publiée et norme 0.4.1 poussée (`v0.4.1-draft`), sur la phrase de l’opérateur.
 
 E16 n’est pas de nous : un agent Codex, de lignée OpenAI, a reprogrammé les sept contrôles de la norme à partir de son seul texte, sans voir notre programme ni nos tests. 121 cas sur 122 au premier essai figé, 122 sur 122 après révision dans un dossier séparé. Il a rendu quatre faiblesses de notre côté, chacune avec un cas exécutable : notre suite de conformité acceptait une implémentation qui ne répond rien (122 sur 122 avec sept `undefined`) ; notre schéma refusait le rejeu par témoins que notre propre texte décrit ; le niveau vert se donnait sans vérification effectuée ; notre diagnostic accusait l’auteur quand c’est le rejoueur qui pouvait mentir. Les quatre sont vérifiées puis corrigées, référence inchangée à 122 sur 122 et contrôleur vide désormais à 0.
 
