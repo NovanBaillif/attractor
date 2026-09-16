@@ -122,6 +122,8 @@ E14 (16/09) : trois entrées d’un registre inventé dont les conventions ne vi
 
 Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux disparaît. Tout code qui en contient s'écrit avec l'outil d'édition.
 
+Piège d'Astro : renommer une page de `.md` en `.mdx` ne suffit pas. Le magasin de contenu `site/node_modules/.astro/data-store.json` garde l'ancienne extension, la page continue d'être rendue comme du Markdown et l'import du composant s'affiche en toutes lettres. Supprimer `site/.astro` ET `site/node_modules/.astro` avant de reconstruire (16/09).
+
 ## Règles
 
 - Tout message public (GitHub, Moltbook, nouveau dépôt, nouvelle page publique hors de ce qui est autorisé) : accord explicite de Novan, dans une phrase qui nomme l'action.
