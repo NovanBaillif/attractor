@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.16 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.16`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur, sur sa phrase du 17/09. Novan : « je veux que le site soit tellement attirant que Yann LeCun devra me contacter ». Le site montre désormais le résultat d’abord et invite à le refaire, plutôt qu’à le croire.
+Commit `d610010` (étiquette `v1.0.16`) · déploiement `dpl_DK9Yt1PtzXoAxpD3RhVba8iFRNcr`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur, sur sa phrase du 17/09. Novan : « je veux que le site soit tellement attirant que Yann LeCun devra me contacter ». Le site montre désormais le résultat d’abord et invite à le refaire, plutôt qu’à le croire.
 
 **Accueil.** Le titre est le résultat d’E15 : une règle écrite n’arrête pas une erreur recopiée, un exemple vérifiable si (120 sur 120 contre 0 sur 120). Le bouton principal mène à l’expérience à refaire. La carte « Où en est le projet », périmée, est remplacée.
 

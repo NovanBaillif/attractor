@@ -19,7 +19,21 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.15
+## Version en ligne : 1.0.16
+
+Mise en production le 17/09 : commit `d610010` (étiquette `v1.0.16`), déploiement `dpl_DK9Yt1PtzXoAxpD3RhVba8iFRNcr`, conformité 13 sur 13. Accueil et formulaire contrôlés à 390 et 1280 px, sur le site en ligne. Contenu :
+- l'accueil commence par le résultat d'E15 ;
+- `/en/replay/` et `POST /api/v3/replay/e15` : n'importe qui refait E15 et obtient sa note, rien n'est enregistré ;
+- la note garde-fous (FR `/note-garde-fous/`, EN `/en/words-vs-cases/`) ;
+- `/actu` et `/api/v3/actu` : la veille, lue sur GitHub (`raw.githubusercontent.com/NovanBaillif/attractor/main/registry/actu.json`), puis la copie embarquée à défaut.
+
+Tâche GitHub Actions `.github/workflows/veille.yml` : chaque jour à 03:00 UTC, elle lance `node registry/actu.mjs` et enregistre le résultat. Mise en place sur la phrase de Novan du 17/09 ; pour l'arrêter, désactiver le fichier. Précédente : 1.0.15 `dpl_HKwVXL1ug8xH33ueMoohV26q3yPy`.
+
+Pièges de cette version :
+- une route `/api/v3/…` servie par le joker de réécriture reçoit un paramètre caché `path`. Une page qui refuse les paramètres doit avoir sa propre réécriture ;
+- `registry/deploy.mjs` n'accepte que les fichiers serveur de sa liste, à compléter pour tout nouveau module.
+
+### 1.0.15
 
 Mise en production le 17/09 : commit `4ec6897` (étiquette `v1.0.15`), déploiement `dpl_HKwVXL1ug8xH33ueMoohV26q3yPy`, conformité 13 sur 13, pages contrôlées à 390 et 1280 px. `/a2a` répond à un texte libre par une présentation, sans session ni publication. C'est le test d'a2aregistry.org (« Hello, what can you do? », kit A2A officiel). La carte d'agent annonce `text/plain` et son fournisseur. Précédente : 1.0.14 `dpl_AMsA3YoPbxsHeVyAhFpNCu8YNhcZ`.
 
