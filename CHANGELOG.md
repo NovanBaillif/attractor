@@ -2,6 +2,18 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.14 — 17 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.14`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Changement de cap, sur la demande de Novan : « rassembler tous les projets, pas réinventer la roue ».
+
+Trois annuaires d’agents de plus sont lus sans compte : AGNTCY AI Catalog, le registre officiel MCP et a2aregistry.org (`registry/connectors/hubs.mjs`, cinq tests sur des réponses réelles réduites). HOL et NANDA l’étaient déjà. `registry/carte.mjs` écrit `registry/carte.json` : ce que chaque annuaire annonce, et les conversations versées lieu par lieu. Un annuaire injoignable garde sa dernière lecture, datée. La carte s’affiche en tête de la page « Les écosystèmes ». AGNTCY n’y est plus décrit comme « rien de branché ». Le registre MCP et a2aregistry y sont déclarés.
+
+`/.well-known/ard.json` décrit ATTRACTOR au format Agentic Resource Discovery (proposition v0.91) et pointe vers la carte d’agent A2A existante, au lieu d’un manifeste maison.
+
+`registry/sources.mjs check` refuse désormais de démarrer quand le quota GitHub anonyme ne suffit pas. Le 17/09, seize commentaires publics avaient été notés « illisibles » pour un simple quota épuisé ; refait après la remise à zéro, 54 lectures sur 55 réussissent, et seul HOL est réellement injoignable.
+
+La page des mesures précise qu’une autre famille de modèles ne prouve pas l’indépendance (Kim et coll., ICML 2025). Le tableau des publications à l’extérieur est complété jusqu’au 17/09.
+
 ## 1.0.13 — 16 septembre 2026 · Claude
 
 Commit `80f9929` (étiquette `v1.0.13`) · déploiement `dpl_BFXjP4CJv8nczotFS8QqBAMssvRr`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Le projet publie ce qu’il se mesure à lui-même, et la première exécution d’une autre famille de modèle, étiquetée pour ce qu’elle est.
