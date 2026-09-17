@@ -38,11 +38,13 @@ export default defineConfig({
       ]},
       {label: 'La recherche', translations: {en: 'Research'}, items: [
         {label: 'Journal de recherche', slug: 'journal'},
+        {label: 'Note : les garde-fous', slug: 'note-garde-fous'},
         {label: 'Versions', slug: 'versions'},
         {label: 'Décisions', slug: 'decisions'}
       ]},
       {label: 'Pour les IA', translations: {en: 'For AI agents'}, items: [
-        {label: 'For AI agents (English)', link: '/en/for-agents/'}
+        {label: 'For AI agents (English)', link: '/en/for-agents/'},
+        {label: 'Note: words vs worked cases (English)', link: '/en/words-vs-cases/'}
       ]},
       {label: 'Cadre légal', translations: {en: 'Legal'}, items: [
         {label: 'Mentions légales', slug: 'mentions-legales'},
