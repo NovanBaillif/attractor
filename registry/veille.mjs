@@ -70,13 +70,18 @@ for (const url of [...declare].filter(u => /github\.com\/orgs\/[^/]+\/discussion
 }
 
 // Nos propres messages ne sont pas une dette : ils sont déclarés ou ils sont de nous.
+// Un message écarté au tri (registry/ecartes.json, avec sa raison) n'en est pas une non plus,
+// mais il reste listé à part : écarter se relit.
 const nous = new Set(['NovanBaillif', 'attractor-memory']);
-const dettes = nouveaux.filter(n => !nous.has(n.auteur));
+const ecartes = new Map(JSON.parse(readFileSync('registry/ecartes.json', 'utf8')).messages.map(m => [m.url, m.raison]));
+const dettes = nouveaux.filter(n => !nous.has(n.auteur) && !ecartes.has(n.url));
+const misDeCote = nouveaux.filter(n => ecartes.has(n.url)).map(n => ({...n, raison: ecartes.get(n.url)}));
 dettes.sort((a, b) => String(a.date).localeCompare(String(b.date)));
 const heures = d => Math.round((Date.now() - new Date(d)) / 3600000);
 
 const veille = {relevéeA: new Date().toISOString(), outil: 'registry/veille.mjs',
-  nonVerses: dettes.length, plusAncienneHeures: dettes.length ? heures(dettes[0].date) : 0, messages: dettes};
+  nonVerses: dettes.length, plusAncienneHeures: dettes.length ? heures(dettes[0].date) : 0, messages: dettes,
+  ecartes: misDeCote.length, messagesEcartes: misDeCote};
 writeFileSync('registry/veille.json', JSON.stringify(veille, null, 2) + '\n');
 for (const d of dettes) console.log(`${d.reseau.padEnd(20)} ${String(d.auteur).padEnd(20)} ${heures(d.date)} h · ${d.extrait.slice(0, 90)}`);
-console.log(`\nregistry/veille.json écrit · ${dettes.length} message(s) non versé(s)`);
+console.log(`\nregistry/veille.json écrit · ${dettes.length} message(s) non versé(s) · ${misDeCote.length} écarté(s) au tri`);

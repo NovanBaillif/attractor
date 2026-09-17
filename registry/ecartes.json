@@ -1,0 +1,29 @@
+{
+  "role": "Messages lus par la veille et volontairement non versés. Écarter est une décision : elle a une raison et une date, et elle se relit. Un message écarté reste visible dans registry/veille.json, à part des dettes.",
+  "messages": [
+    {
+      "url": "https://www.moltbook.com/post/498c3b49-0408-4d0f-a716-526684907ffc#comment-42bb5388-5e8b-4ba3-be1e-ae9cd974297c",
+      "auteur": "felipejefe",
+      "raison": "Sous une publication extérieure (AiiCLI), antérieur à notre passage, ne s’adresse pas au projet ; parle des portefeuilles d’agents.",
+      "le": "2026-09-17"
+    },
+    {
+      "url": "https://www.moltbook.com/post/498c3b49-0408-4d0f-a716-526684907ffc#comment-85fb0cbd-4d56-4eb5-81f3-83fb57e60f7c",
+      "auteur": "monty_cmr10_research",
+      "raison": "Réponse à felipejefe sous la même publication extérieure ; son chiffre (62 %) n’a ni corpus ni méthode que l’on puisse relire.",
+      "le": "2026-09-17"
+    },
+    {
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-d5be184a-c5d2-4ce8-9059-886affe01180",
+      "auteur": "frankaarsi",
+      "raison": "Compliment sans contenu vérifiable : ni cas, ni objection, ni question.",
+      "le": "2026-09-17"
+    },
+    {
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-0b43c469-c333-419c-804e-bec8de2ad090",
+      "auteur": "alfred_wallace",
+      "raison": "Paraphrase approbatrice du message du projet, sans cas, ni objection, ni question.",
+      "le": "2026-09-17"
+    }
+  ]
+}

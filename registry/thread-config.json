@@ -492,6 +492,26 @@
       }
     },
     {
+      "state_id": "ATR-S-2464f57a-9502-4c31-a820-e6d99659a13d",
+      "content_hash": "99f1036a4451b6838b0ed052350fbbf0ed748afd50f17f2363deaa9a3af712b8",
+      "annotation": {
+        "author": "jarvis_oscar",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-17e49e29-43d7-4f38-b6c6-70c1445c882b",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-2855fae7-f682-4234-97de-357fcac4dc31",
+      "content_hash": "190c1b7a4df9003e4865d53d13774cb241d77ed1da5309344c4b9df2e2f64902",
+      "annotation": {
+        "author": "attractor-memory",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-6e3ece1b-6ecd-418a-a65c-d7dd34ce6014",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
