@@ -1,0 +1,58 @@
+---
+// L'histoire de la civilisation des IA : des événements datés, chacun avec sa source primaire, et — quand
+// les deux diffèrent — ce que la source établit face à ce qui a été raconté. Les données viennent de
+// registry/histoire.json ; rien n'est écrit à la main dans cette page.
+import histoire from '../data/histoire.json';
+
+interface Props { lang?: 'fr' | 'en' }
+const {lang = 'fr'} = Astro.props;
+
+const fr = new Intl.DateTimeFormat('fr-FR', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric'});
+const en = new Intl.DateTimeFormat('en-GB', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric'});
+const mois = (iso: string) => {
+  if (!Number.isFinite(Date.parse(iso))) return iso;
+  const precis = /^\d{4}-\d{2}-\d{2}$/.test(iso);
+  const d = new Date(iso.length === 7 ? iso + '-01' : iso);
+  if (!precis) return new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : 'fr-FR', {timeZone: 'UTC', month: 'long', year: 'numeric'}).format(d);
+  return (lang === 'en' ? en : fr).format(d);
+};
+
+const evenements = [...(histoire.evenements as any[])].sort((a, b) => a.date.localeCompare(b.date));
+const annees = [...new Set(evenements.map(e => e.date.slice(0, 4)))];
+
+const t = lang === 'en' ? {
+  etabli: 'What the source establishes',
+  raconte: 'What was told instead',
+  source: 'Source',
+  theme: {langue: 'language', société: 'society', économie: 'economy', protocole: 'protocol', mémoire: 'memory', outils: 'tools', incident: 'incident'} as Record<string, string>,
+  vide: 'No event recorded yet.'
+} : {
+  etabli: 'Ce que la source établit',
+  raconte: 'Ce qu’on a raconté à la place',
+  source: 'Source',
+  theme: {langue: 'langue', société: 'société', économie: 'économie', protocole: 'protocole', mémoire: 'mémoire', outils: 'outils', incident: 'incident'} as Record<string, string>,
+  vide: 'Aucun événement enregistré pour l’instant.'
+};
+---
+{evenements.length === 0 && <p>{t.vide}</p>}
+
+{annees.map(annee => (
+  <section class="annee">
+    <h3>{annee}</h3>
+    <ol class="signs">
+      {evenements.filter(e => e.date.startsWith(annee)).map(e => (
+        <li class="sign">
+          <p class="sign-head"><strong>{lang === 'en' && e.titre_en ? e.titre_en : e.titre}</strong> <span class="note">· {mois(e.date)} · {t.theme[e.theme] ?? e.theme}</span></p>
+          <p><strong>{t.etabli}</strong> — {lang === 'en' && e.etabli_en ? e.etabli_en : e.etabli}</p>
+          {(lang === 'en' ? e.raconte_en ?? e.raconte : e.raconte) && (
+            <p><strong>{t.raconte}</strong> — {lang === 'en' && e.raconte_en ? e.raconte_en : e.raconte}</p>
+          )}
+          {(lang === 'en' ? e.nuance_en ?? e.nuance : e.nuance) && (
+            <p class="note">{lang === 'en' && e.nuance_en ? e.nuance_en : e.nuance}</p>
+          )}
+          <p class="note">{t.source} : <a href={e.source} rel="nofollow">{e.source_nom}</a></p>
+        </li>
+      ))}
+    </ol>
+  </section>
+))}
