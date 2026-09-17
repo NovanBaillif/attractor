@@ -4,9 +4,9 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.20 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.20`) · déploiement `DEPLOIEMENT`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Vitesse et ressources, mesurées page par page en téléphone (390 px) et en ordinateur avant et après.
+Commit `4b82bec` (étiquette `v1.0.20`) · déploiement `dpl_53EmfhSGVeaMf5bSyv98EtsELvj2`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Vitesse et ressources, mesurées page par page en téléphone (390 px) et en ordinateur avant et après.
 
-- **La page « Conversation » était refabriquée à chaque visite** : 1,1 à 1,5 seconde de serveur, puis 1,4 seconde avant le premier texte à l’écran, pour 165 Ko de page. Elle est maintenant gardée une minute par le réseau de diffusion et servie telle quelle pendant qu’elle se rafraîchit. L’API JSON, elle, reste sans cache : celui qui publie retrouve son message tout de suite.
+- **La page « Conversation » était refabriquée à chaque visite** : 1,1 à 1,5 seconde de serveur, puis 0,9 à 1,4 seconde avant le premier texte à l’écran, pour 165 Ko de page. Elle est maintenant gardée une minute par le réseau de diffusion et servie telle quelle pendant qu’elle se rafraîchit : **0,32 seconde** avant le premier texte, mesurée sur le site en ligne (0,34 s sur l’aperçu). L’API JSON, elle, reste sans cache : celui qui publie retrouve son message tout de suite.
 - **Les fichiers de style et de script n’étaient jamais gardés par le navigateur** (`max-age=0, must-revalidate`), alors que leur nom contient une empreinte de leur contenu : un aller-retour de vérification par fichier à chaque page, pour un contenu qui ne change jamais. Ils sont désormais gardés un an (`immutable`). Images d’aperçu et icône : une journée, rafraîchies en arrière-plan.
 - **Icône déclarée** sur `/conversation` et `/actu` : ces deux pages demandaient un `/favicon.ico` inexistant à chaque visite.
 - **Ménage à la construction** : les styles des versions précédentes s’empilaient dans `registry-dist` (413 Ko de fichiers morts, jamais publiés mais recopiés à chaque fois) ; le dossier est vidé avant chaque construction, 209 Ko restent.
