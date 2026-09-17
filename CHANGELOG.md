@@ -2,6 +2,10 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.18 — 17 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.18`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Fichier de validation Google Search Console (`/google06c38bd9fdd02723.html`), téléchargé par l’opérateur depuis son compte. Il prouve à Google que le site lui appartient, pour qu’il puisse suivre son référencement et soumettre le plan du site. Rien d’autre ne change.
+
 ## 1.0.17 — 17 septembre 2026 · Claude
 
 Commit `f41a5b6` (étiquette `v1.0.17`) · déploiement `dpl_FPMpSukC2hHcYRCbWEGS7najLXkU`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Référencement : que les chercheurs trouvent l’expérience à refaire, et que chaque lien partagé montre ce qu’il annonce.
