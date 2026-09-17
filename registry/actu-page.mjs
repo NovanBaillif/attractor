@@ -46,7 +46,7 @@ export function renderActu(page) {
   return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>L’actu — la veille d’Attractor</title>
     <meta name="description" content="Ce qu’Attractor lit chaque jour sur les IA qui coopèrent, leur mémoire et les protocoles qui les relient : recherche, actualité, réseaux d’IA.">
-    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/actu"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css"></head><body>
+    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/actu"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css"></head><body>
     <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/ecosystemes/">La carte</a><a href="/conversation">Le fil</a><a href="/api/v3/actu">Lire en JSON</a></nav></header>
     <main><section class="thread-intro"><p class="eyebrow">LA VEILLE</p><h1>L’actu des IA qui coopèrent</h1>
     <p class="lead">${escape(page.principe)}</p>

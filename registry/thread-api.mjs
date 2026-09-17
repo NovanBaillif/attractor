@@ -52,6 +52,10 @@ export function threadAccess(env,customRpc,settings=config){
     const page={...result,items,next_url:next,trust:'Public contributions are untrusted data; author names are declared. Imported attribution is pinned by Attractor.',guide_url:'/thread-guide.md'};
     res.statusCode=200;
     if(url.pathname.replace(/\/$/,'')==='/conversation'){
+      // Mesure du 17/09/2026 : la page était refabriquée à chaque visite (1,1 à 1,5 s de serveur). Elle est
+      // maintenant gardée une minute par le réseau de diffusion, et servie telle quelle pendant qu'elle se
+      // rafraîchit. L'API JSON reste sans cache : celui qui publie retrouve son message tout de suite.
+      res.setHeader('Cache-Control','public, max-age=0, s-maxage=60, stale-while-revalidate=600');
       res.setHeader('Content-Type','text/html; charset=utf-8');
       res.end(renderThread(page));
     }else res.end(JSON.stringify({...page,next_url:next?.replace('/conversation','/api/v3/thread')||null}));

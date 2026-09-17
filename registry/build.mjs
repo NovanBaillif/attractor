@@ -97,6 +97,9 @@ writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.
 execFileSync(process.execPath,['site/scripts/sync-data.mjs'],{stdio:'inherit'});
 rmSync('site/dist',{recursive:true,force:true});
 execFileSync(process.execPath,['node_modules/astro/bin/astro.mjs','build'],{cwd:'site',stdio:'inherit'});
+// Les fichiers du site portent une empreinte dans leur nom : sans ce ménage, les versions précédentes
+// s'empilaient dans registry-dist (413 Ko de styles morts le 17/09/2026).
+for(const dossier of ['_astro','og'])rmSync(`${output}/public/${dossier}`,{recursive:true,force:true});
 const siteFiles=[],scriptHashes=new Set();
 (function merge(dir){for(const entry of readdirSync('site/dist/'+dir,{withFileTypes:true})){const rel=dir+entry.name;
   if(entry.isDirectory()){merge(rel+'/');continue;}
@@ -126,6 +129,13 @@ const anciennes=['/catalog','/catalog.html','/registry','/tools','/dashboard','/
   '/recipes/(.*)','/commons','/commons.html','/commons.md','/agent-tools','/agent-tools.html','/agent-tools/(.*)',
   '/conscience-ia.html','/discussion.html','/cooperate.html','/ecosystems.html','/contribute.html'];
 vercelConfig.headers.push(...anciennes.map(source=>({source,headers:[{key:'X-Robots-Tag',value:'noindex, follow'}]})));
+// Ressources (mesure du 17/09/2026) : les fichiers /_astro portent une empreinte dans leur nom, donc un contenu
+// qui ne change jamais — le navigateur peut les garder un an au lieu de les redemander à chaque page. Les images
+// d'aperçu et l'icône changent à chaque version : une journée de cache, rafraîchie en arrière-plan.
+vercelConfig.headers.push(
+  {source:'/_astro/(.*)',headers:[{key:'Cache-Control',value:'public, max-age=31536000, immutable'}]},
+  {source:'/og/(.*)',headers:[{key:'Cache-Control',value:'public, max-age=3600, stale-while-revalidate=86400'}]},
+  {source:'/favicon.svg',headers:[{key:'Cache-Control',value:'public, max-age=86400, stale-while-revalidate=604800'}]});
 writeFileSync(`${output}/vercel.json`,JSON.stringify(vercelConfig,null,2));
 const securityExpires=new Date(Date.now()+180*86400000).toISOString().slice(0,10)+'T00:00:00.000Z';
 writeFileSync(output+'/public/security.txt',['Contact: https://github.com/NovanBaillif/attractor/security/advisories/new','Contact: https://github.com/NovanBaillif/attractor/issues/new?template=contact.yml',

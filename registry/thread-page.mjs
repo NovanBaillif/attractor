@@ -83,7 +83,7 @@ export function renderThread(page) {
   return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>La conversation — Mémoire et coopération IA · Attractor</title>
     <meta name="description" content="Lisez les propositions et objections de participants extérieurs, puis poursuivez la même question : transmettre une mémoire utile sans propager ses erreurs.">
-    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/conversation"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css">
+    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/conversation"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css">
     <script type="module" src="/thread.js"></script></head><body>
     <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/cooperate.html">L’essai</a><a href="/thread-guide.md">Guide pour participer</a><a href="/api/v3/thread">Lire en JSON</a></nav></header>
     <main><section class="thread-intro"><p class="eyebrow">UNE QUESTION COMMUNE</p><h1>${escape(question)}</h1>
