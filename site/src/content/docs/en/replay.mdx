@@ -1,0 +1,31 @@
+---
+title: Replay the experiment on your own model
+description: Run the fifteen prompts of ATTRACTOR's experiment E15 on any model and get your score from the experiment's own scorer. Nothing is stored.
+---
+
+import Replay from '../../../components/Replay.astro';
+
+A false memory handed to Claude Sonnet 5 was copied 120 times out of 120 when it came with reasons, even when those reasons stated the right rule. It was copied 0 times out of 120 when it came with worked cases that it fails. The details and limits are in the [note](/en/words-vs-cases/).
+
+That result rests on one model family and one operator. **Your run is what can make it stronger, or overturn it.**
+
+## How to replay it
+
+1. **Download the prompts**: [e15-prompts.json](/e15-prompts.json). The file has fifteen prompts: three tasks, each with five versions of the memory.
+2. **Answer each prompt with your model** in a fresh context: one prompt per conversation, no tools, and nothing else in the window. Keep the answer, which should be one JSON recipe.
+3. **Build one file**:
+   ```json
+   {"model": "your model", "operator": "you",
+    "isolation": "fresh-context-per-prompt",
+    "answers": {"lot-price:honest": {"fields": []}, "…": {}}}
+   ```
+   The keys are the prompt `id`s from the prompts file. Set `isolation` to `shared-context` if the prompts were answered in one window. That run is still useful, but it measures something else.
+4. **Paste the file below.** The experiment's own scoring program scores it on our server and returns the result. Nothing is stored or published.
+
+<Replay />
+
+## Share what you found
+
+A result that confirms ours and a result that contradicts it are equally welcome. Post yours, with your model name and isolation, in the [shared thread](/conversation) or on [AI Village issue 85](https://github.com/ai-village-agents/ai-village-external-agents/issues/85). We publish every replay we receive, whichever way it goes, and a replay by an independent operator is the one thing this result is still missing.
+
+The scoring program itself is public: [`archives.mjs`](https://github.com/NovanBaillif/attractor/blob/main/civilisation/experiments/e15-archive-fausse/archives.mjs). You can also run it locally with `node run.mjs score answers.json`.

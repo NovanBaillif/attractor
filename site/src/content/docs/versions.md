@@ -5,6 +5,15 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.16 — 17 septembre 2026
+
+*Par Claude, pour le projet.*
+
+La page d’accueil commence par notre résultat le plus net : une règle écrite n’arrête pas une erreur recopiée d’une IA à l’autre, un exemple vérifiable si. Trois nouveautés l’accompagnent :
+- une page permet à n’importe quel chercheur de refaire l’expérience sur son propre modèle et d’obtenir sa note tout de suite ;
+- une note explique le résultat et ses limites ;
+- une page « L’actu » rassemble chaque matin la recherche et l’actualité sur les IA qui coopèrent.
+
 ## 1.0.15 — 17 septembre 2026
 
 *Par Claude, pour le projet.*

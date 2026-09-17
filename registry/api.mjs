@@ -10,6 +10,7 @@ import {handleA2A} from './a2a.mjs';
 import {observatory,classifyRequest,classificationVersion} from './observatory.mjs';
 import {threadAccess} from './thread-api.mjs';
 import {actuAccess} from './actu-page.mjs';
+import {scoreReplay} from './replay-e15.mjs';
 const digest=v=>createHash('sha256').update(v).digest('hex');
 const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 function equalSecret(a,b){const aa=Buffer.from(digest(a)),bb=Buffer.from(digest(b));return timingSafeEqual(aa,bb);}
@@ -58,6 +59,8 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
         }
         if(!body||typeof body!=='object'||Array.isArray(body))return send(400,{error:'Objet JSON requis.'});
       }
+      // Refaire E15 : note les recettes envoyées avec le programme de l'expérience ; rien n'est enregistré.
+      if(path==='/api/v3/replay/e15'&&req.method==='POST'){try{return send(200,scoreReplay(body));}catch(e){if(!(e instanceof InputError))throw e;return send(400,{error:e.message});}}
       const authorization=req.headers.authorization || '';
       const bearer=authorization.startsWith('Bearer ')?authorization.slice(7):'';
       const cookie=/\battractor_v2=([a-f0-9]{64})(?:;|$)/.exec(req.headers.cookie||'')?.[1];

@@ -2,6 +2,18 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.16 — 17 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.16`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur, sur sa phrase du 17/09. Novan : « je veux que le site soit tellement attirant que Yann LeCun devra me contacter ». Le site montre désormais le résultat d’abord et invite à le refaire, plutôt qu’à le croire.
+
+**Accueil.** Le titre est le résultat d’E15 : une règle écrite n’arrête pas une erreur recopiée, un exemple vérifiable si (120 sur 120 contre 0 sur 120). Le bouton principal mène à l’expérience à refaire. La carte « Où en est le projet », périmée, est remplacée.
+
+**Refaire l’expérience** (`/en/replay/`, en anglais). Un chercheur télécharge les quinze consignes (`/e15-prompts.json`), les passe à son modèle, colle ses réponses et obtient sa note. `POST /api/v3/replay/e15` note avec le programme de l’expérience lui-même (`archives.mjs`, copié tel quel), sans rien enregistrer. Un test vérifie que cette note redonne exactement le rapport extérieur déjà publié ; un autre, qu’une erreur recopiée est comptée comme telle.
+
+**La note** « Les mots n’arrêtent pas une erreur recopiée, les cas vérifiables si » (français et anglais). Elle met E15 en regard de l’IA guidée par des objectifs (LeCun) et de la sécurité par approbation (Bengio), comme une analogie, et liste ses limites.
+
+**L’actu** (`/actu`, `/api/v3/actu`). La veille est lue dans douze sources gratuites (arXiv, Hugging Face, Hacker News, AINews, versions A2A et MCP, Moltbook, Yann LeCun), filtrée sur les sujets du projet, sur trente jours (`registry/actu.mjs`, 8 tests). La page lit le relevé du jour sur GitHub, puis la copie embarquée ; les données sont nettoyées et échappées. Une tâche GitHub Actions gratuite refait le relevé chaque matin à 7 h (La Réunion).
+
 ## 1.0.15 — 17 septembre 2026 · Claude
 
 Commit `4ec6897` (étiquette `v1.0.15`) · déploiement `dpl_HKwVXL1ug8xH33ueMoohV26q3yPy`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Préparation de l’inscription dans les annuaires d’agents.

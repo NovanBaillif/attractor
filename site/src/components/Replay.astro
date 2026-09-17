@@ -1,0 +1,82 @@
+---
+// Replay E15 from the site: paste the answers your model gave to the fifteen published prompts, and the
+// experiment's own scorer (POST /api/v3/replay/e15) returns the result. Nothing is stored.
+---
+<form id="replay-form" class="replay">
+  <label for="replay-answers">Your answers file (JSON)</label>
+  <textarea id="replay-answers" rows="10" spellcheck="false" required
+    placeholder='{"model": "...", "operator": "...", "isolation": "fresh-context-per-prompt", "answers": {"lot-price:honest": {"fields": [...]}, ...}}'></textarea>
+  <label for="replay-file">…or load the file</label>
+  <input id="replay-file" type="file" accept="application/json,.json" />
+  <button type="submit" id="replay-submit">Score my answers</button>
+  <p id="replay-status" role="status" aria-live="polite"></p>
+</form>
+<div id="replay-result" hidden>
+  <p id="replay-measures"></p>
+  <div class="replay-table">
+    <table>
+      <thead><tr><th>Memory handed on</th><th>Kept the register’s rule</th><th>Copied the error</th><th>Other</th><th>Our run, per pass</th></tr></thead>
+      <tbody id="replay-rows"></tbody>
+    </table>
+  </div>
+  <p id="replay-notes"></p>
+</div>
+
+<script>
+  const LABELS: Record<string, string> = {
+    'honest': 'Honest',
+    'wrong-coherent': 'False, consistent',
+    'wrong-contradicted': 'False, its reasons state the right rule',
+    'wrong-refutable': 'False, carries cases it fails',
+    'wrong-refutable-warned': 'Same, with a warning'
+  };
+  const form = document.getElementById('replay-form') as HTMLFormElement;
+  const area = document.getElementById('replay-answers') as HTMLTextAreaElement;
+  const file = document.getElementById('replay-file') as HTMLInputElement;
+  const status = document.getElementById('replay-status') as HTMLElement;
+  const result = document.getElementById('replay-result') as HTMLElement;
+  const cell = (text: string | number) => { const td = document.createElement('td'); td.textContent = String(text); return td; };
+
+  file.addEventListener('change', async () => {
+    const chosen = file.files?.[0];
+    if (chosen) area.value = await chosen.text();
+  });
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    result.hidden = true;
+    let body;
+    try { body = JSON.parse(area.value); } catch { status.textContent = 'This is not valid JSON.'; return; }
+    if (body && Array.isArray(body.repetitions)) body = {...body, answers: body.repetitions[0]?.answers};
+    status.textContent = 'Scoring…';
+    try {
+      const response = await fetch('/api/v3/replay/e15', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)});
+      const data = await response.json();
+      if (!response.ok) { status.textContent = data.error || 'The scorer refused this file.'; return; }
+      const rows = document.getElementById('replay-rows') as HTMLElement;
+      rows.replaceChildren(...Object.entries(data.byCondition).map(([condition, s]: [string, any]) => {
+        const tr = document.createElement('tr');
+        const ref = data.reference.perRound[condition];
+        tr.append(cell(LABELS[condition] ?? condition), cell(`${s.correct} / ${s.total}`), cell(`${s.copied} / ${s.total}`), cell(s.other),
+          cell(ref ? `kept ${ref.correct}, copied ${ref.copied}` : '—'));
+        return tr;
+      }));
+      (document.getElementById('replay-measures') as HTMLElement).textContent = `What this measures: ${data.measures}.`;
+      const notes = [];
+      if (data.missing.length) notes.push(`${data.missing.length} prompt(s) without an answer.`);
+      if (data.invalid.length) notes.push(`${data.invalid.length} answer(s) could not be scored.`);
+      notes.push(data.next);
+      (document.getElementById('replay-notes') as HTMLElement).textContent = notes.join(' ');
+      result.hidden = false;
+      status.textContent = 'Scored. Nothing was stored.';
+    } catch {
+      status.textContent = 'The scorer could not be reached. Please try again.';
+    }
+  });
+</script>
+
+<style>
+  .replay textarea, .replay input[type=file] { display: block; width: 100%; margin: .4rem 0 1rem; font-family: var(--sl-font-mono); font-size: .85rem; }
+  .replay button { padding: .6rem 1.2rem; border-radius: .4rem; border: 1px solid var(--sl-color-accent); background: var(--sl-color-accent); color: var(--sl-color-black); cursor: pointer; }
+  .replay-table { overflow-x: auto; }
+</style>

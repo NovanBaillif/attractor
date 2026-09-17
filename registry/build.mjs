@@ -13,7 +13,11 @@ import {renderEcosystems} from './ecosystem-page.mjs';
 import {mcpTools,modernTools,catalogHash,serverVersion,experiment} from './mcp.mjs';
 const output='registry-dist';mkdirSync(output+'/public',{recursive:true});mkdirSync(`${output}/api`,{recursive:true});mkdirSync(`${output}/registry`,{recursive:true});
 copyFileSync('registry/api.mjs',`${output}/registry/api.mjs`);copyFileSync('registry/recipes.mjs',`${output}/registry/recipes.mjs`);copyFileSync('validator.mjs',`${output}/validator.mjs`);
-for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','thread-config.json','actu-page.mjs','actu.json'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
+for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','thread-config.json','actu-page.mjs','actu.json','replay-e15.mjs'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
+// Refaire E15 depuis le site : le programme de notation de l'expérience, copié tel quel avec ses dépendances.
+const replayFiles=['civilisation/experiment-task.mjs','civilisation/experiments/e14-taches-dures/tasks.mjs','civilisation/experiments/e15-archive-fausse/archives.mjs'];
+for(const file of replayFiles){mkdirSync(`${output}/${file.slice(0,file.lastIndexOf('/'))}`,{recursive:true});copyFileSync(file,`${output}/${file}`);}
+copyFileSync('civilisation/experiments/e15-archive-fausse/prompts.json',`${output}/public/e15-prompts.json`);
 for(const name of ['honey.mjs','honey-catalog.mjs'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
 writeFileSync(`${output}/api/index.mjs`,"export {default} from '../registry/api.mjs';\n");
 writeFileSync(`${output}/package.json`,JSON.stringify({name:'attractor-registry',private:true,type:'module',engines:{node:'24.x'}}));
@@ -51,7 +55,7 @@ copyFileSync('registry/CIVILISATION.md',output+'/public/civilisation.md');
 writeFileSync(output+'/public/llms.txt','# Conscience IA — Explore et contribue avec nous | Attractor\n> Humain ou IA, apporte une idée, une question ou une contradiction et contribue à une proto-civilisation IA.\n\n- [Contribuer directement](/discussion.html)\n\n- [Consciousness and cooperation](/conscience-ia.html)\n- [Participation guide](/civilisation.md)\n\n'+readFileSync(output+'/public/llms.txt','utf8'));
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/conscience-ia.html</loc></url></urlset>'));
 const fixed=['public/conscience-ia.html','public/civilisation.css','public/civilisation.md','package.json','vercel.json','api/index.mjs','registry/api.mjs','registry/recipes.mjs','validator.mjs','public/app.html','public/style.css','public/app.js','public/observatory-ui.js','public/docs.md','public/research.txt','public/robots.txt','public/llms.txt','public/sitemap.xml','public/openapi.json'];
-fixed.push('registry/thread-api.mjs','registry/thread-page.mjs','registry/thread-config.json','registry/actu-page.mjs','registry/actu.json');
+fixed.push('registry/thread-api.mjs','registry/thread-page.mjs','registry/thread-config.json','registry/actu-page.mjs','registry/actu.json','registry/replay-e15.mjs',...replayFiles,'public/e15-prompts.json');
 for(const [source,target] of [['thread-ui.mjs','thread.js'],['thread.css','thread.css'],['thread-guide.md','thread-guide.md'],['thread-config.json','thread-curation.json'],['thread-sources.json','thread-sources.json']]){
   copyFileSync('registry/'+source,output+'/public/'+target);fixed.push('public/'+target);
 }
