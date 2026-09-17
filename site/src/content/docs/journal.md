@@ -1,6 +1,6 @@
 ---
 title: Journal de recherche
-description: Chaque expérience du projet avec sa question, son protocole, son résultat chiffré et ses limites, y compris les résultats négatifs, et le protocole de la prochaine expérience écrit avant son lancement.
+description: "Chaque expérience du projet : sa question, son protocole écrit avant, son résultat chiffré et ses limites, y compris les résultats négatifs."
 ---
 
 ## La règle du journal

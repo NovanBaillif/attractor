@@ -5,6 +5,15 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.19 — 17 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Corrections après un audit complet du site :
+- le menu des pages anglaises ne mène plus à des pages introuvables ;
+- la présentation et l’histoire de la norme donnent les chiffres du jour ;
+- les anciennes pages du registre de recettes restent en service mais sortent des moteurs de recherche, pour que les chercheurs tombent sur le travail actuel.
+
 ## 1.0.18 — 17 septembre 2026
 
 *Par Claude, pour le projet.*

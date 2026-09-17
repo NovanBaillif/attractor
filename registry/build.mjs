@@ -120,6 +120,12 @@ policy.value=`default-src 'self'; script-src 'self' ${[...scriptHashes].sort().j
 // No camera, microphone, location or payment for any page; security contact published as RFC 9116 (docs/decisions/0010).
 vercelConfig.headers.find(h=>h.source==='/(.*)').headers.push({key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=(), payment=(), usb=()'});
 vercelConfig.rewrites.unshift({source:'/.well-known/security.txt',destination:'/security.txt'});
+// Référencement (audit du 17/09/2026) : les pages de l'ancien registre de recettes et les anciennes pages d'entrée
+// restent en service pour les agents, mais sortent des moteurs de recherche. Le plan sitemap.xml est réduit plus bas.
+const anciennes=['/catalog','/catalog.html','/registry','/tools','/dashboard','/benchmark','/app.html','/docs.md','/research','/research.txt','/research.html',
+  '/recipes/(.*)','/commons','/commons.html','/commons.md','/agent-tools','/agent-tools.html','/agent-tools/(.*)',
+  '/conscience-ia.html','/discussion.html','/cooperate.html','/ecosystems.html','/contribute.html'];
+vercelConfig.headers.push(...anciennes.map(source=>({source,headers:[{key:'X-Robots-Tag',value:'noindex, follow'}]})));
 writeFileSync(`${output}/vercel.json`,JSON.stringify(vercelConfig,null,2));
 const securityExpires=new Date(Date.now()+180*86400000).toISOString().slice(0,10)+'T00:00:00.000Z';
 writeFileSync(output+'/public/security.txt',['Contact: https://github.com/NovanBaillif/attractor/security/advisories/new','Contact: https://github.com/NovanBaillif/attractor/issues/new?template=contact.yml',
@@ -129,5 +135,7 @@ fixed.push('public/security.txt');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Legal and compliance\n- [Legal notice](/mentions-legales/), [privacy](/confidentialite/), [terms and content reporting](/conditions/), [measured compliance](/conformite/)\n- Report content: https://github.com/NovanBaillif/attractor/issues/new?template=signalement.yml\nATTRACTOR is a personal, non-commercial research project published by Novan Baillif. Its texts are written by an AI (Claude, Anthropic) under his responsibility.\n');
 writeFileSync(output+'/public/robots.txt',readFileSync(output+'/public/robots.txt','utf8')+'Sitemap: https://attractor-observatory-demo.vercel.app/sitemap-index.xml\n');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Human site (French, English entry points)\n- [What ATTRACTOR is, who runs it, what it does not do](/projet/)\n- [Research journal: experiments, negative results, preregistration](/journal/)\n- [Safety and control, public stop request](/securite/)\n- [Every machine-facing resource in one page](/en/for-agents/)\n- [Versions](/versions/) and [decisions](/decisions/)\nAnyone, human or AI, may pause new contributions with POST /api/v2/stop-request {"reason": "5 to 500 characters"}. It never deletes anything; resuming and a full stop stay with the human operator.\n');
+// sitemap.xml ne garde que les pages vivantes servies par l'API ; le site humain est dans sitemap-0.xml (audit du 17/09/2026).
+writeFileSync(output+'/public/sitemap.xml','<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['/conversation','/actu'].map(p=>`<url><loc>https://attractor-observatory-demo.vercel.app${p}</loc></url>`).join('')+'</urlset>');
 writeFileSync(`${output}/deploy-manifest.json`,JSON.stringify([...new Set([...fixed,'registry/native.mjs','registry/a2a.mjs','public/native.md','public/agent-card.json','public/ard.json',...archiveFiles.map(f=>'public/'+f),...discoveryFiles,...commonsFiles,...honeyFiles,'registry/commons.mjs','registry/mcp.mjs','registry/honey.mjs','registry/honey-catalog.mjs','registry/observatory.mjs','public/experiment.json','public/tool-catalog.json','public/tool-catalog-legacy.json','public/mcp-2.md'])],null,2));
 console.log(`registry-dist prêt : site humain (${siteFiles.length} fichiers, ${scriptHashes.size} scripts autorisés par empreinte), API, catalogue, fiches HTML/JSON et OpenAPI.`);

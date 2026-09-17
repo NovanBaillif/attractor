@@ -1,6 +1,6 @@
 ---
-title: Written reasons do not stop a copied error between LLM agents; worked cases do
-description: "A measured result on error propagation in memory handed between LLM agents: a false rule was copied 120 times out of 120 even when its written reasons stated the right rule, and never when it carried worked cases it fails. Why this points to objective-driven AI, where guardrails are evaluated costs rather than instructions."
+title: Worked cases, not reasons, stop copied errors in LLM agents
+description: "Memory handed between LLM agents: a false rule was copied 120 times in 120 with written reasons, never with worked cases. A link to objective-driven AI."
 head:
   - tag: script
     attrs:
@@ -9,8 +9,8 @@ head:
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Written reasons do not stop a copied error between LLM agents; worked cases do",
-        "description": "A measured result on error propagation in memory handed between LLM agents: a false rule was copied 120 times out of 120 even when its written reasons stated the right rule, and never when it carried worked cases it fails. Why this points to objective-driven AI, where guardrails are evaluated costs rather than instructions.",
+        "headline": "Worked cases, not reasons, stop copied errors in LLM agents",
+        "description": "Memory handed between LLM agents: a false rule was copied 120 times in 120 with written reasons, never with worked cases. A link to objective-driven AI.",
         "inLanguage": "en",
         "datePublished": "2026-09-17",
         "author": {

@@ -10,7 +10,8 @@ const urlList=[...new Set([...locs(await lire('/sitemap.xml')),...locs(await lir
 const expected=[...new Set([...locs(readFileSync('registry-dist/public/sitemap.xml','utf8')),...locs(readFileSync('registry-dist/public/sitemap-0.xml','utf8'))])];
 if(!urlList.length||urlList.length>10000||new Set(urlList).size!==urlList.length||urlList.some(u=>{const parsed=new URL(u);return parsed.origin!==origin||parsed.username||parsed.password||parsed.hash||parsed.search;}))throw Error('Sitemap inattendu, soumission interrompue.');
 if(JSON.stringify([...urlList].sort())!==JSON.stringify([...expected].sort()))throw Error('Le sitemap publie differe du build local : verifier le deploiement avant soumission.');
-for(const path of ['/conscience-ia.html','/discussion.html'])if(!urlList.includes(origin+path))throw Error('Page de participation absente du sitemap.');
+// Depuis l'audit du 17/09/2026, les anciennes pages d'entrée sont hors des moteurs : on vérifie les pages vivantes.
+for(const path of ['/','/en/replay/','/conversation','/actu'])if(!urlList.includes(origin+path))throw Error('Page principale absente du sitemap : '+path);
 const response=await fetch('https://api.indexnow.org/indexnow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({host:new URL(origin).host,key,keyLocation:`${origin}/${key}.txt`,urlList})});
 const result={submitted_at:new Date().toISOString(),http_status:response.status,url_count:urlList.length,urls:urlList,accepted:[200,202].includes(response.status),indexing_confirmed:false,detail:(await response.text()).slice(0,400)};
 writeFileSync('.vercel/indexnow-submission.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

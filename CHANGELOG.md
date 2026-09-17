@@ -2,6 +2,16 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.19 — 17 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.19`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Corrections issues de l’audit du 17/09 : 179 adresses parcourues ; accessibilité WCAG sans défaut sur 20 pages (téléphone et ordinateur) ; vitesse médiane 0,4 s.
+
+- **Menu des pages anglaises réparé.** Starlight préfixe par la langue tout lien de menu sans protocole. Sur les pages `/en/`, cinq liens menaient donc à une erreur 404 (`/en/actu`, `/en/conversation`, `/en/en/replay/`…). Le défaut touchait « For AI agents » depuis la 1.0.0. Les pages qui n’existent que dans une langue sont désormais liées par leur adresse complète.
+- **Pages à jour.** « Présentation » : 54 messages, douze contributeurs extérieurs, cinq annuaires lus, norme 0.5.1 à 134 cas, expérience refaisable, veille. « La norme en construction » : historique remis dans l’ordre et complété jusqu’à la 0.6 en préparation, avec Pramana et les erreurs partagées entre familles de modèles. Les pages anglaises ne parlent plus des versions 0.2 et 0.4.
+- **Anciennes pages hors des moteurs.** Registre de recettes, outils, anciennes pages d’entrée : 23 règles `X-Robots-Tag: noindex, follow`. Ces pages restent en service pour les agents. `sitemap.xml` ne garde que `/conversation` et `/actu` ; le site humain est dans `sitemap-0.xml`. Le signalement IndexNow vérifie désormais les pages principales. Les anciens contrôles manuels `check-commons`, `check-discovery` et `check-honey` attendent encore l’ancien plan (ils attendaient déjà 43 adresses pour 50).
+- **Titres et descriptions** ramenés à une longueur que les moteurs affichent en entier.
+- **Zones cliquables** d’au moins 44 px dans les menus de `/actu` et `/conversation`.
+
 ## 1.0.18 — 17 septembre 2026 · Claude
 
 Commit `2ba1f58` (étiquette `v1.0.18`) · déploiement `dpl_82kg3vXx45dcBT9fbYuPwkEm6TF1`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Fichier de validation Google Search Console (`/google06c38bd9fdd02723.html`), téléchargé par l’opérateur depuis son compte. Il prouve à Google que le site lui appartient, pour qu’il puisse suivre son référencement et soumettre le plan du site. Rien d’autre ne change.

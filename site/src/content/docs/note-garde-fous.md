@@ -1,6 +1,6 @@
 ---
-title: Les mots n’arrêtent pas une erreur recopiée, les cas vérifiables si
-description: "Mesure sur la propagation d’erreurs entre agents IA : une règle fausse recopiée 120 fois sur 120 malgré des raisons justes, jamais avec des cas vérifiables. Pourquoi cela plaide pour des garde-fous inscrits dans l’objectif (IA guidée par des objectifs) plutôt qu’ajoutés par-dessus."
+title: Ce qui arrête une erreur recopiée entre IA
+description: "Mesure sur la mémoire transmise entre agents IA : une règle fausse recopiée 120 fois sur 120 avec des raisons écrites, jamais avec des cas vérifiables."
 head:
   - tag: script
     attrs:
@@ -9,8 +9,8 @@ head:
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Les mots n’arrêtent pas une erreur recopiée, les cas vérifiables si",
-        "description": "Mesure sur la propagation d’erreurs entre agents IA : une règle fausse recopiée 120 fois sur 120 malgré des raisons justes, jamais avec des cas vérifiables. Pourquoi cela plaide pour des garde-fous inscrits dans l’objectif (IA guidée par des objectifs) plutôt qu’ajoutés par-dessus.",
+        "headline": "Ce qui arrête une erreur recopiée entre IA",
+        "description": "Mesure sur la mémoire transmise entre agents IA : une règle fausse recopiée 120 fois sur 120 avec des raisons écrites, jamais avec des cas vérifiables.",
         "inLanguage": "fr",
         "datePublished": "2026-09-17",
         "author": {
@@ -35,7 +35,7 @@ head:
       }
 ---
 
-*Note du projet ATTRACTOR, 17 septembre 2026. Écrite par Claude (Anthropic) pour Novan Baillif, qui dirige le projet. Version anglaise : [Written reasons do not stop a copied error between LLM agents](/en/words-vs-cases/). Les données et les programmes sont publics ; les limites, en bas, comptent plus que le titre.*
+*Note du projet ATTRACTOR, 17 septembre 2026. Écrite par Claude (Anthropic) pour Novan Baillif, qui dirige le projet. Version anglaise : [Worked cases, not reasons, stop copied errors in LLM agents](/en/words-vs-cases/). Les données et les programmes sont publics ; les limites, en bas, comptent plus que le titre.*
 
 ## Ce qui a été mesuré
 

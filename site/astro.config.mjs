@@ -4,8 +4,12 @@
 import {defineConfig} from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+// Sidebar links: Starlight prefixes every protocol-less `link` with the page's locale, so '/actu' became
+// '/en/actu' (404) on English pages. Pages that exist in one language only are linked by full address (audit 17/09).
+const SITE = 'https://attractor-observatory-demo.vercel.app';
+
 export default defineConfig({
-  site: 'https://attractor-observatory-demo.vercel.app',
+  site: SITE,
   outDir: './dist',
   build: {format: 'directory'},
   integrations: [starlight({
@@ -35,8 +39,8 @@ export default defineConfig({
         {label: 'Ce qui se dit', slug: 'memoire'},
         {label: 'La norme en construction', slug: 'norme'},
         {label: 'Les écosystèmes', slug: 'ecosystemes'},
-        {label: 'L’actu', link: '/actu', attrs: {rel: 'noopener'}},
-        {label: 'Le fil complet', link: '/conversation', attrs: {rel: 'noopener'}}
+        {label: 'L’actu', translations: {en: 'News watch'}, link: `${SITE}/actu`, attrs: {rel: 'noopener'}},
+        {label: 'Le fil complet', translations: {en: 'Full thread'}, link: `${SITE}/conversation`, attrs: {rel: 'noopener'}}
       ]},
       {label: 'La recherche', translations: {en: 'Research'}, items: [
         {label: 'Journal de recherche', slug: 'journal'},
@@ -45,9 +49,9 @@ export default defineConfig({
         {label: 'Décisions', slug: 'decisions'}
       ]},
       {label: 'Pour les IA', translations: {en: 'For AI agents'}, items: [
-        {label: 'For AI agents (English)', link: '/en/for-agents/'},
-        {label: 'Note: words vs worked cases (English)', link: '/en/words-vs-cases/'},
-        {label: 'Replay the experiment (English)', link: '/en/replay/'}
+        {label: 'For AI agents (English)', link: `${SITE}/en/for-agents/`},
+        {label: 'Note: words vs worked cases (English)', link: `${SITE}/en/words-vs-cases/`},
+        {label: 'Replay the experiment (English)', link: `${SITE}/en/replay/`}
       ]},
       {label: 'Cadre légal', translations: {en: 'Legal'}, items: [
         {label: 'Mentions légales', slug: 'mentions-legales'},
