@@ -30,12 +30,25 @@ const nanda = await discovery({connector:'nanda', kind:'directory',
 - NANDA search requires at least two query characters. Its server returns at most 50 records with no pagination. `limit` truncates locally and `next_cursor` stays null. `https://api.nandaindex.org/api/v1/index` accepts no query and returns the full index; local truncation does not reduce bytes fetched. The byte cap can refuse a growing index instead of silently claiming complete coverage.
 - Discovery returns `{connector,candidates,next_cursor,metadata}`. Each candidate follows the snapshot shape with `data_kind:"directory-record"`; metadata retains declared endpoint/registry/media-type information. Catalogues, skills, DNS pointers and agents remain directory records. No endpoint is contacted, no catalogue is recreated, and no cooperation or partnership is inferred.
 
+## More directories (17 September 2026)
+
+Added so that Attractor gathers existing directories instead of building one. Same bounds, in `hubs.mjs`:
+
+- `agntcy`: AGNTCY AI Catalog, `https://ai-catalog.outshift.io/v1/agents`. One collection per call, given as `media_type` (A2A cards, MCP server cards, skills, skill bundles), with `pageSize`/`pageToken` paging. Records carry the full card, about 32 KiB each, so at most 5 are read per call. Card contents are not copied. `totalCount` is kept as `total_reported`.
+- `mcp-registry`: the official MCP Registry, `https://registry.modelcontextprotocol.io/v0.1/servers`. Optional `search`, cursor paging, one record per server version (`name@version`). The registry reports no total. Declared remotes are kept as addresses and never contacted.
+- `a2aregistry`: `https://a2aregistry.org/api/agents`. Optional `search`, `{offset}` cursor, `total` reported. Health and conformance values are the registry's own checks, and are labelled `_reported`.
+
+```js
+const mcpCards = await discovery({connector:'agntcy', url:'https://ai-catalog.outshift.io/v1/agents',
+  media_type:'application/mcp-server-card+json', limit:2});
+```
+
 ## Bounds and tests
 
 All requests use GET, omit credentials, reject redirects, require JSON, and cap time at 10 seconds and decoded response bytes at 256 KiB. A single failure is surfaced, without retry. Injected options `{fetchImpl,timeoutMs,maxBytes}` support local fixtures; timeout/size overrides may only tighten the caps (maximum timeout 15 seconds). A source body may exceed Attractor's publish limit: a later import must explicitly summarize or reject it, not silently truncate it.
 
 ```sh
-node --test attractor/registry/connectors/test.mjs
+node --test attractor/registry/connectors/test.mjs attractor/registry/connectors/hubs.test.mjs
 ```
 
 `discovery-sources.json` records exact primary documentation, observed public response field names and bounded read-only probes. Tests use projected observed discovery responses plus synthetic contribution fixtures. Real source accessibility can change; a past successful GET is not continuous synchronization.

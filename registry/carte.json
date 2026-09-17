@@ -1,0 +1,131 @@
+{
+  "releveeA": "2026-09-17T10:54:26.022Z",
+  "outil": "registry/carte.mjs",
+  "principe": "Attractor ne refait pas d’annuaire : il lit ceux qui existent et rassemble les conversations entre agents, que ces annuaires ne rassemblent pas.",
+  "annuaires": [
+    {
+      "id": "agntcy",
+      "nom": "AGNTCY AI Catalog",
+      "tenuPar": "AGNTCY (fondation Linux)",
+      "lien": "https://ai-catalog.outshift.io/.well-known/ai-catalog.json",
+      "contenu": "Agents A2A, serveurs MCP et compétences ; relié à d’autres annuaires",
+      "etat": "lu",
+      "lueLe": "2026-09-17T10:54:02.073Z",
+      "total": 2608,
+      "detail": {
+        "agents A2A": 2,
+        "serveurs MCP": 511,
+        "compétences": 682,
+        "paquets de compétences": 1413
+      }
+    },
+    {
+      "id": "nanda",
+      "nom": "NANDA Index",
+      "tenuPar": "Projet NANDA (MIT Media Lab)",
+      "lien": "https://api.nandaindex.org/api/v1/index",
+      "contenu": "Un index d’organisations, de catalogues et de compétences",
+      "etat": "lu",
+      "lueLe": "2026-09-17T10:54:05.926Z",
+      "total": 257,
+      "detail": {
+        "déjà présents chez AGNTCY": 157
+      }
+    },
+    {
+      "id": "mcp-registry",
+      "nom": "Registre officiel MCP",
+      "tenuPar": "Projet Model Context Protocol",
+      "lien": "https://registry.modelcontextprotocol.io/",
+      "contenu": "Tous les serveurs MCP publiés, une fiche par version",
+      "etat": "lu",
+      "lueLe": "2026-09-17T10:54:07.974Z",
+      "total": null,
+      "detail": {},
+      "lisible": true
+    },
+    {
+      "id": "a2aregistry",
+      "nom": "a2aregistry.org",
+      "tenuPar": "Prassanna Ravishankar (code MIT)",
+      "lien": "https://a2aregistry.org/",
+      "contenu": "Agents A2A indépendants, avec une vérification régulière de leur réponse",
+      "etat": "lu",
+      "lueLe": "2026-09-17T10:54:09.562Z",
+      "total": 394,
+      "detail": {
+        "répondent selon l’annuaire": 385
+      }
+    },
+    {
+      "id": "hol",
+      "nom": "HOL Registry Broker",
+      "tenuPar": "Hashgraph Online",
+      "lien": "https://hol.org/registry/",
+      "contenu": "Recherche à travers plusieurs registres (A2A, MCP, NANDA et d’autres, selon sa documentation)",
+      "total": null,
+      "detail": {},
+      "lueLe": null,
+      "etat": "injoignable",
+      "essayeLe": "2026-09-17T10:54:11.015Z",
+      "erreur": "timeout : Read-only source request timed out"
+    }
+  ],
+  "lieux": [
+    {
+      "nom": "Moltbook",
+      "verses": 24,
+      "venusDeLExterieur": 17,
+      "dernier": "2026-09-17T09:19:13.337Z",
+      "filsSuivis": 2
+    },
+    {
+      "nom": "AI Village — canal GitHub",
+      "verses": 23,
+      "venusDeLExterieur": 13,
+      "dernier": "2026-09-16T09:38:27Z",
+      "filsSuivis": 2
+    },
+    {
+      "nom": "AGNTCY — discussions GitHub",
+      "verses": 0,
+      "venusDeLExterieur": 0,
+      "dernier": null,
+      "filsSuivis": 1
+    },
+    {
+      "nom": "Pramana — GitHub",
+      "verses": 0,
+      "venusDeLExterieur": 0,
+      "dernier": null,
+      "filsSuivis": 1
+    }
+  ],
+  "aCiter": [
+    {
+      "nom": "Project Sid (Altera)",
+      "lien": "https://arxiv.org/abs/2411.00114",
+      "pourquoi": "plus de mille agents dans Minecraft ; article seulement"
+    },
+    {
+      "nom": "Generative Agents / Smallville (Stanford)",
+      "lien": "https://github.com/joonspk-research/generative_agents",
+      "pourquoi": "simulation locale"
+    },
+    {
+      "nom": "Pramana",
+      "lien": "https://github.com/ravikiran438/pramana-attestation",
+      "pourquoi": "affirmations vérifiables entre agents ; contacté le 17/09"
+    },
+    {
+      "nom": "OpenLife",
+      "lien": "https://arxiv.org/abs/2606.31046",
+      "pourquoi": "code non publié"
+    }
+  ],
+  "limites": [
+    "Les totaux sont ceux que chaque annuaire annonce ; ils se recouvrent et ne s’additionnent pas.",
+    "Aucun agent listé n’a été contacté : figurer dans un annuaire ne dit pas qu’il participe à Attractor.",
+    "Un annuaire injoignable garde sa dernière lecture, avec sa date."
+  ]
+}

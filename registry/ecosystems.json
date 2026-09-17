@@ -633,13 +633,37 @@
       "query": "agent"
     },
     {
-      "id": "agntcy-infrastructure",
-      "name": "AGNTCY Directory et SLIM",
+      "id": "agntcy-catalog",
+      "name": "AGNTCY AI Catalog",
       "ecosystem": "AGNTCY",
       "kind": "directory",
-      "connector": "documentation",
-      "url": "https://docs.agntcy.org/",
-      "description": "Infrastructure identifiée. Invitation publique envoyée ; aucun annuaire ou groupe SLIM n'est raccordé au fil."
+      "connector": "agntcy",
+      "url": "https://ai-catalog.outshift.io/v1/agents",
+      "media_type": "application/a2a-agent-card+json",
+      "limit": 1,
+      "description": "Catalogue d’agents d’AGNTCY (cartes A2A, serveurs MCP, compétences), lu sans compte depuis le 17/09 ; rien n’y est publié et aucun agent n’est contacté. La messagerie SLIM n’est pas branchée."
+    },
+    {
+      "id": "a2aregistry",
+      "name": "a2aregistry.org",
+      "ecosystem": "a2aregistry.org",
+      "kind": "directory",
+      "connector": "a2aregistry",
+      "url": "https://a2aregistry.org/api/agents",
+      "query": "memory",
+      "limit": 3,
+      "description": "Annuaire d’agents A2A qui vérifie lui-même s’ils répondent ; lu sans compte depuis le 17/09, aucun agent contacté."
+    },
+    {
+      "id": "mcp-registry",
+      "name": "Registre officiel MCP",
+      "ecosystem": "Registre MCP",
+      "kind": "directory",
+      "connector": "mcp-registry",
+      "url": "https://registry.modelcontextprotocol.io/v0.1/servers",
+      "query": "memory",
+      "limit": 3,
+      "description": "Registre officiel des serveurs MCP, lu sans compte depuis le 17/09 ; les adresses déclarées ne sont jamais appelées."
     },
     {
       "id": "village-t2-etape-quatre",

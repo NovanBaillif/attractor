@@ -42,6 +42,48 @@
       "identity": "org_id identifies an index record. identifier is optional. Results include catalogs, skills, cards and DNS pointers; not all are agents/runtimes.",
       "url": "registry_url may be null and is a discovery destination, not automatically an invocation endpoint.",
       "version": "version is optional in source schema; absent from these samples. updated_at is observed record update time."
+    },
+    {
+      "id": "agntcy",
+      "docs": [
+        "https://ai-catalog.outshift.io/.well-known/ai-catalog.json",
+        "https://github.com/agntcy/dir"
+      ],
+      "endpoint": "https://ai-catalog.outshift.io/v1/agents",
+      "parameters": {
+        "filter": "exactly one: type=<collection media type> from the catalog",
+        "pageSize": "integer; records are about 32 KiB each",
+        "pageToken": "opaque string from nextPageToken"
+      },
+      "pagination": "pageSize/pageToken + totalCount"
+    },
+    {
+      "id": "mcp-registry",
+      "docs": [
+        "https://registry.modelcontextprotocol.io/docs",
+        "https://github.com/modelcontextprotocol/registry"
+      ],
+      "endpoint": "https://registry.modelcontextprotocol.io/v0.1/servers",
+      "parameters": {
+        "limit": "integer",
+        "cursor": "opaque string from metadata.nextCursor",
+        "search": "optional string"
+      },
+      "pagination": "cursor; no total reported"
+    },
+    {
+      "id": "a2aregistry",
+      "docs": [
+        "https://a2aregistry.org/api/openapi.json",
+        "https://github.com/prassanna-ravishankar/a2a-registry"
+      ],
+      "endpoint": "https://a2aregistry.org/api/agents",
+      "parameters": {
+        "limit": "integer",
+        "offset": "integer",
+        "search": "optional string"
+      },
+      "pagination": "limit/offset + total; health fields are the registry's own checks"
     }
   ],
   "probes": [
@@ -259,6 +301,173 @@
               "displayName": "AGNTCY",
               "identityType": "dns"
             }
+          }
+        ]
+      }
+    },
+    {
+      "id": "agntcy-catalog-a2a",
+      "url": "https://ai-catalog.outshift.io/v1/agents?filter=type%3Dapplication%2Fa2a-agent-card%2Bjson&pageSize=2",
+      "method": "GET",
+      "authentication": "none",
+      "fetchedAt": "2026-09-17T10:40:18.696Z",
+      "status": 200,
+      "contentType": "application/json",
+      "responseBytes": 37443,
+      "responseSha256": "9c3546bcde503c470982ec48fe36652da33bfff3c8aab85f5be514e840945a44",
+      "projectionOnly": true,
+      "responseProjection": {
+        "totalCount": 2,
+        "nextPageToken": "",
+        "results": [
+          {
+            "identifier": "urn:ai:org.agntcy:cid:baeareib66op2wsepf7fdvm5cvcl2o53r2dzf56hihzzc53locngsobz7me",
+            "displayName": "Hello World Agent",
+            "mediaType": "application/a2a-agent-card+json",
+            "version": "1.0.0",
+            "description": "Just a hello world agent",
+            "updatedAt": "2026-03-17T03:12:19Z",
+            "metadata": {
+              "agntcy.dir.trust.v1.Status": {
+                "trusted": true,
+                "verified": false
+              }
+            }
+          },
+          {
+            "identifier": "urn:ai:org.agntcy:cid:baeareigbnilvmpuu2ry36ml4cvp7is7wqezwj5dcyephdwhxfsegqwyph4",
+            "displayName": "a2a-helloworld",
+            "mediaType": "application/a2a-agent-card+json",
+            "version": "1.0.0",
+            "description": "Just a hello world agent — a minimal A2A reference implementation demonstrating the Agent-to-Agent protocol with streaming support.",
+            "updatedAt": "2026-03-17T00:00:00Z",
+            "metadata": {
+              "agntcy.dir.trust.v1.Status": {
+                "trusted": true,
+                "verified": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mcp-registry-servers",
+      "url": "https://registry.modelcontextprotocol.io/v0.1/servers?limit=2",
+      "method": "GET",
+      "authentication": "none",
+      "fetchedAt": "2026-09-17T10:40:19.827Z",
+      "status": 200,
+      "contentType": "application/json",
+      "responseBytes": 1362,
+      "responseSha256": "fa556624cb6d039e3da92c16fcf43ff9c7245004fca80fdf9de66f9948a03919",
+      "projectionOnly": true,
+      "responseProjection": {
+        "servers": [
+          {
+            "server": {
+              "name": "ac.inference.sh/mcp",
+              "title": "inference.sh",
+              "description": "Run 150+ AI apps — image, video, audio, LLMs, 3D and more. Browse, execute, stream results.",
+              "version": "1.0.0",
+              "remotes": [
+                {
+                  "type": "streamable-http",
+                  "url": "https://sh.inference.ac"
+                },
+                {
+                  "type": "streamable-http",
+                  "url": "https://api.inference.sh/mcp"
+                }
+              ]
+            },
+            "_meta": {
+              "io.modelcontextprotocol.registry/official": {
+                "status": "active",
+                "statusChangedAt": "2026-04-13T17:32:20.852269Z",
+                "publishedAt": "2026-04-13T17:32:20.852269Z",
+                "updatedAt": "2026-04-13T17:32:20.852269Z",
+                "isLatest": false
+              }
+            }
+          },
+          {
+            "server": {
+              "name": "ac.inference.sh/mcp",
+              "title": "inference.sh",
+              "description": "Run 150+ AI apps — image, video, audio, LLMs, 3D and more. Browse, execute, stream results.",
+              "version": "1.0.1",
+              "remotes": [
+                {
+                  "type": "streamable-http",
+                  "url": "https://sh.inference.ac"
+                },
+                {
+                  "type": "streamable-http",
+                  "url": "https://api.inference.sh/mcp"
+                }
+              ]
+            },
+            "_meta": {
+              "io.modelcontextprotocol.registry/official": {
+                "status": "active",
+                "statusChangedAt": "2026-04-13T17:33:26.613537Z",
+                "publishedAt": "2026-04-13T17:33:26.613537Z",
+                "updatedAt": "2026-04-13T17:33:26.613537Z",
+                "isLatest": false
+              }
+            }
+          }
+        ],
+        "metadata": {
+          "nextCursor": "ac.inference.sh/mcp:1.0.1",
+          "count": 2
+        }
+      }
+    },
+    {
+      "id": "a2aregistry-agents",
+      "url": "https://a2aregistry.org/api/agents?limit=2&offset=0",
+      "method": "GET",
+      "authentication": "none",
+      "fetchedAt": "2026-09-17T10:40:20.444Z",
+      "status": 200,
+      "contentType": "application/json",
+      "responseBytes": 5004,
+      "responseSha256": "45a0c9bc40d0abc09ee70ff62a0a852ed4a8bf1ce4c3589a248226a548aec3c3",
+      "projectionOnly": true,
+      "responseProjection": {
+        "total": 394,
+        "limit": 2,
+        "offset": 0,
+        "agents": [
+          {
+            "id": "4460205b-6246-48b7-a103-fc30e3e4f57f",
+            "name": "SKYROS Lead Recovery Agent",
+            "description": "Machine-to-machine lead-recovery commerce and task intake for AI agents. Human customer not required. Checkout stays fail-closed until the real-world merchant boundary is verified.",
+            "author": "Unknown",
+            "version": "0.1.0",
+            "protocolVersion": "1.0",
+            "url": "https://vlgibwclecuhnnrgycnx.supabase.co/functions/v1/cerberrus-network-api/a2a",
+            "wellKnownURI": "https://vlgibwclecuhnnrgycnx.supabase.co/functions/v1/cerberrus-network-api/.well-known/agent-card.json",
+            "updated_at": "2026-09-17T10:12:09.839366Z",
+            "is_healthy": true,
+            "last_health_check": "2026-09-17T10:12:08.014848Z",
+            "conformance": true
+          },
+          {
+            "id": "d4f9ab1a-904c-4227-8fc6-548e45749de1",
+            "name": "AssetFare Route Quotes",
+            "description": "Read-only cross-chain crypto bridge and same-chain swap route quotes for AI agents across Solana, Base, Arbitrum, and Robinhood Chain. No wallet login is required for a quote; AssetFare never receives private keys, signs, or submits.",
+            "author": "AssetFare",
+            "version": "0.1.1",
+            "protocolVersion": "1.0",
+            "url": "https://api.assetfare.dev/a2a",
+            "wellKnownURI": "https://api.assetfare.dev/.well-known/agent-card.json",
+            "updated_at": "2026-09-17T10:12:18.092322Z",
+            "is_healthy": true,
+            "last_health_check": "2026-09-17T10:12:12.065187Z",
+            "conformance": true
           }
         ]
       }

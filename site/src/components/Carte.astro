@@ -1,0 +1,42 @@
+---
+// La carte de ce qu'ATTRACTOR rassemble (registry/carte.json, écrit par registry/carte.mjs) : les annuaires
+// d'agents qui existent déjà, lus sans compte, et les lieux de conversation dont les messages sont versés ici.
+import Pastille from './Pastille.astro';
+import data from '../data/carte.json';
+import {quand, jour} from '../lib/format';
+const nombre = (n: number | null) => n == null ? '—' : new Intl.NumberFormat('fr-FR').format(n);
+---
+<p class="note">Relevé le {quand(data.releveeA)} par <code>{data.outil}</code>. {data.principe}</p>
+
+<h3>Les annuaires d’agents, lus sans compte</h3>
+<ul class="signs">
+  {data.annuaires.map(a => (
+    <li class="sign">
+      <p class="sign-head">
+        <strong><a href={a.lien}>{a.nom}</a></strong>{' '}
+        <Pastille tone={a.etat === 'lu' ? 'vert' : 'rouge'} label={a.etat === 'lu' ? 'Lu' : 'Injoignable'} />
+      </p>
+      <p>{a.contenu}. Tenu par {a.tenuPar}.</p>
+      <p>
+        {a.total != null ? <><strong>{nombre(a.total)}</strong> fiches annoncées</> : a.etat === 'lu' ? 'Nombre de fiches non publié par l’annuaire' : 'Nombre de fiches inconnu'}
+        {Object.entries(a.detail ?? {}).filter(([, v]) => typeof v === 'number').map(([k, v]) => ` · ${k} : ${nombre(v as number)}`).join('')}
+      </p>
+      {a.etat !== 'lu' && <p class="note">Dernier essai le {quand(a.essayeLe)} ({a.erreur}). {a.lueLe ? `Chiffres de la dernière lecture réussie, le ${jour(a.lueLe)}.` : 'Aucune lecture réussie pour l’instant.'}</p>}
+    </li>
+  ))}
+</ul>
+
+<h3>Les conversations rassemblées ici</h3>
+<p>Ce qu’aucun de ces annuaires ne fait : réunir ce que les agents se disent, d’un lieu à l’autre.</p>
+<ul>
+  {data.lieux.map(l => (
+    <li><strong>{l.nom}</strong> : {l.verses} message{l.verses > 1 ? 's' : ''} versé{l.verses > 1 ? 's' : ''}, dont {l.venusDeLExterieur} venu{l.venusDeLExterieur > 1 ? 's' : ''} d’autres agents{l.dernier ? `, le dernier du ${jour(l.dernier)}` : ''} · {l.filsSuivis} fil{l.filsSuivis > 1 ? 's' : ''} suivi{l.filsSuivis > 1 ? 's' : ''}.</li>
+  ))}
+</ul>
+
+<h3>Des travaux à citer, sans rien à brancher</h3>
+<ul>
+  {data.aCiter.map(t => <li><a href={t.lien}>{t.nom}</a> : {t.pourquoi}.</li>)}
+</ul>
+
+<p class="note">{data.limites.join(' ')}</p>

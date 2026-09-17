@@ -1,4 +1,5 @@
 import {fetchJson, snapshot, safeUrl, string, object, date, limit, fail} from './common.mjs';
+import {agntcy, mcpRegistry, a2aRegistry} from './hubs.mjs';
 
 function optional(value, label, max = 1000) { return value == null ? null : string(value, label, max, true); }
 function candidate(connector, record, fetched, sourceUrl) {
@@ -73,5 +74,8 @@ export async function discovery(config, options = {}) {
         provider_search_limit: search ? 50 : null, pagination_supported: false,
         meaning: 'Index records may be catalogs, skills, cards or DNS pointers; no endpoint has been followed.'}};
   }
+  if (config.connector === 'agntcy') return agntcy(url, config, count, options);
+  if (config.connector === 'mcp-registry') return mcpRegistry(url, config, count, options);
+  if (config.connector === 'a2aregistry') return a2aRegistry(url, config, count, options);
   fail('Unsupported directory connector');
 }

@@ -35,10 +35,13 @@ async function check(source) {
       return {...base, status: 'read_verified', evidence_url: d.url,
         detail: `Lecture par le compte de l’opérateur · ${d.comments.totalCount} réponse(s) · dernière activité : ${d.updatedAt}`};
     }
-    if (source.kind === 'directory' && ['hol', 'nanda'].includes(source.connector)) {
-      const r = await discovery({connector: source.connector, url: source.url, query: source.query, limit: source.limit});
+    if (source.kind === 'directory' && ['hol', 'nanda', 'agntcy', 'mcp-registry', 'a2aregistry'].includes(source.connector)) {
+      const r = await discovery({connector: source.connector, url: source.url, query: source.query, limit: source.limit,
+        ...(source.media_type ? {media_type: source.media_type} : {})});
+      const quoi = source.query ? `Recherche « ${source.query} »` : 'Lecture';
+      const total = Number.isInteger(r.metadata?.total_reported) ? ` sur ${r.metadata.total_reported} annoncée(s)` : '';
       return {...base, status: 'read_verified', evidence_url: source.url,
-        detail: `Recherche « ${source.query} » : ${r.candidates.length} fiche(s) lue(s) · aucun agent contacté ni ajouté`};
+        detail: `${quoi} : ${r.candidates.length} fiche(s) lue(s)${total} · aucun agent contacté ni ajouté`};
     }
     if (source.connector === 'documentation') {
       const r = await fetch(source.url, {method: 'GET', credentials: 'omit', signal: AbortSignal.timeout(10000)});
@@ -55,11 +58,23 @@ const command = process.argv[2];
 if (command === 'list') {
   for (const s of config.sources) console.log(`${s.id.padEnd(36)} ${s.ecosystem} · ${s.connector}`);
 } else if (command === 'check') {
-  const checks = [];
-  for (const source of config.sources) checks.push(await check(source));
-  const status = {checked_at: new Date().toISOString(), checks};
-  writeFileSync('registry/ecosystem-status.json', JSON.stringify(status, null, 2) + '\n');
-  for (const c of checks) console.log(`${c.status.padEnd(14)} ${c.source_id.padEnd(36)} ${c.detail}`);
+  // Anonymous GitHub reads are capped at 60 an hour. On 17 September 2026 the cap ran out mid-check and
+  // sixteen public comments were written down as "unavailable". Refuse to start rather than record a
+  // quota as an outage; the rate-limit endpoint itself does not count against the quota.
+  const github = config.sources.filter(s => CONTRIBUTION.has(s.connector) && String(s.connector).startsWith('github')).length;
+  const quota = await fetch('https://api.github.com/rate_limit', {credentials: 'omit', signal: AbortSignal.timeout(10000)})
+    .then(r => r.json()).then(j => j.rate).catch(() => null);
+  if (quota && quota.remaining < github) {
+    console.error(`Quota GitHub anonyme insuffisant : ${quota.remaining} lectures restantes pour ${github} sources.`
+      + ` Relancer après ${new Date(quota.reset * 1000).toISOString()}. Rien n'a été écrit.`);
+    process.exitCode = 2;
+  } else {
+    const checks = [];
+    for (const source of config.sources) checks.push(await check(source));
+    const status = {checked_at: new Date().toISOString(), checks};
+    writeFileSync('registry/ecosystem-status.json', JSON.stringify(status, null, 2) + '\n');
+    for (const c of checks) console.log(`${c.status.padEnd(14)} ${c.source_id.padEnd(36)} ${c.detail}`);
+  }
 } else {
   throw Error('Usage: node registry/sources.mjs check|list');
 }
