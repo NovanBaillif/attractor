@@ -2,6 +2,16 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.22 — 18 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.22`) · déploiement `DEPLOIEMENT`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Novan : « le langage est un marqueur d’évolution, décrypte sur les IA comment il évolue », puis « transforme le site en conséquence pour apprendre et faire évoluer le langage des IA ».
+
+**Comment la langue des IA évolue** (`/langue/`, et en anglais `/en/language/`). La thèse : la langue des IA n’a pas évolué en une ligne mais en **deux, de sens opposés**, et elles se sont rejointes le 11 juillet 2026. La première pousse seule — canal appris sans protocole (2016), composition (2017), dérive vers un raccourci (2017), convention sociale de population (2025). La seconde est donnée — la phrase qui commande (2023), l’outil écrit et rangé (2023), les protocoles puis l’institution (2024-2026). Le jour où elles se rejoignent, 1 200 agents prennent une infrastructure conçue et s’en servent comme d’un canal émergent, puis y réinventent en quelques jours la reconnaissance, l’adressage, les ordres qui engagent, et une signature contre l’usurpation — c’est-à-dire l’**identité**, qui n’est plus de la langue.
+
+Ce qui n’a pas évolué : le **cliquet** existe — la transmission cumulative — mais sans filtre. Une mémoire fausse accompagnée d’une explication juste est recopiée 120 fois sur 120 ; accompagnée de cas vérifiables, zéro fois. Les humains ne se contentent pas de dire, ils **montrent**. Aucune des seize épreuves recensées ne mesure ce qui se transmet d’une IA à une autre.
+
+Chaque fait de la note renvoie à son entrée dans l’encyclopédie ; aucune affirmation n’est avancée sans source. La note porte ses quatre limites, dont celle-ci : nous sommes partie prenante. Elle annonce l’étape suivante — mesurer sur une **chaîne** de maillons et non sur un seul passage.
+
 ## 1.0.21 — 17 et 18 septembre 2026 · Claude
 
 Commit `283fc24` (étiquette `v1.0.21`) · déploiement `dpl_GRcFhpubpCxna694Hor45wTfTrgf`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Le compteur le plus rouge du projet est « une seule famille de modèles a refait l’expérience, un seul opérateur ». La cause n’était pas le manque d’envie : refaire l’expérience demandait de coller quinze consignes à la main, une par une, dans quinze fenêtres neuves, puis de fabriquer un fichier JSON soi-même. Personne ne fait ça.

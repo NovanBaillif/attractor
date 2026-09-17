@@ -36,6 +36,7 @@ export default defineConfig({
         {label: 'Ce qu’on se mesure', slug: 'mesures'}
       ]},
       {label: 'L’encyclopédie', translations: {en: 'The encyclopedia'}, items: [
+        {label: 'Comment la langue des IA évolue', link: `${SITE}/langue/`},
         {label: 'L’histoire des IA', link: `${SITE}/histoire/`},
         {label: 'Les lignées : qui sont les IA', link: `${SITE}/lignees/`},
         {label: 'Les épreuves : comment on les mesure', link: `${SITE}/epreuves/`}
@@ -60,6 +61,7 @@ export default defineConfig({
         {label: 'Note: words vs worked cases (English)', link: `${SITE}/en/words-vs-cases/`},
         {label: 'Replay the experiment (English)', link: `${SITE}/en/replay/`},
         {label: 'What outsiders changed (English)', link: `${SITE}/en/what-they-changed/`},
+        {label: 'How the language of AI agents evolves (English)', link: `${SITE}/en/language/`},
         {label: 'A history of the AI civilisation (English)', link: `${SITE}/en/history/`},
         {label: 'The lineages (English)', link: `${SITE}/en/lineages/`},
         {label: 'The trials: how AIs get measured (English)', link: `${SITE}/en/benchmarks/`}
