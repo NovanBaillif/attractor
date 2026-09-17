@@ -47,6 +47,28 @@ for (const fil of [...new Set([...declare].map(u => (String(u).match(/^(https:\/
   } catch { console.error('Ticket illisible :', fil); }
 }
 
+// ————— GitHub : les discussions d'organisation (AGNTCY) —————
+// Elles ne sont pas des tickets : l'API des tickets ne les voit pas. Jusqu'au 17/09 la veille ne
+// les lisait donc pas du tout, et « aucune réponse chez AGNTCY » n'était pas une mesure. Une
+// discussion d'organisation vit dans un dépôt désigné, qu'il faut nommer : pour AGNTCY, governance.
+const DEPOT_DES_DISCUSSIONS = {agntcy: "governance"};
+for (const url of [...declare].filter(u => /github\.com\/orgs\/[^/]+\/discussions\/\d+/.test(u))) {
+  const [, org, numero] = url.match(/github\.com\/orgs\/([^/]+)\/discussions\/(\d+)/);
+  const depot = DEPOT_DES_DISCUSSIONS[org];
+  if (!depot) { console.error("Dépôt des discussions inconnu pour", org); continue; }
+  try {
+    const requete = `{repository(owner:"${org}",name:"${depot}"){discussion(number:${numero}){comments(first:100){nodes{id url author{login} createdAt body}}}}}`;
+    const r = JSON.parse(execFileSync("gh", ["api", "graphql", "-f", `query=${requete}`], {encoding: "utf8"}));
+    const discussion = r.data?.repository?.discussion;
+    if (!discussion) { console.error("Discussion introuvable :", url); continue; }
+    for (const c of discussion.comments.nodes) {
+      if (declare.has(c.url)) continue;
+      nouveaux.push({reseau: "AGNTCY — GitHub", auteur: c.author?.login ?? "(inconnu)", date: c.createdAt,
+        url: c.url, extrait: String(c.body ?? "").replace(/\s+/g, " ").slice(0, 400)});
+    }
+  } catch { console.error("Discussion illisible :", url); }
+}
+
 // Nos propres messages ne sont pas une dette : ils sont déclarés ou ils sont de nous.
 const nous = new Set(['NovanBaillif', 'attractor-memory']);
 const dettes = nouveaux.filter(n => !nous.has(n.auteur));

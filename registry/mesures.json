@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-09-16T09:58:16.194Z",
+  "mesureA": "2026-09-17T08:06:11.730Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -44,7 +44,7 @@
       "valeur": 1,
       "cible": 0,
       "etat": "orange",
-      "detail": "village-t2-acces (0 h)",
+      "detail": "village-t2-acces (22 h)",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -53,7 +53,7 @@
       "valeur": 0,
       "cible": 0,
       "etat": "vert",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 13 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 14 j",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 12 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 13 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -191,7 +191,7 @@
         "id": "village-t2-acces",
         "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5695340045",
         "vu": "2026-09-16T09:53:01.576Z",
-        "heures": 0
+        "heures": 22
       }
     ],
     "echeances": [
@@ -201,7 +201,7 @@
         "date": "2026-09-29",
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
         "clos": false,
-        "joursRestants": 13
+        "joursRestants": 12
       },
       {
         "id": "e12-rejeu",
@@ -209,7 +209,7 @@
         "date": "2026-09-30",
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
         "clos": false,
-        "joursRestants": 14
+        "joursRestants": 13
       }
     ]
   }
