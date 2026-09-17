@@ -19,7 +19,11 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.17
+## Version en ligne : 1.0.18
+
+Mise en production le 17/09 : commit `2ba1f58` (étiquette `v1.0.18`), déploiement `dpl_82kg3vXx45dcBT9fbYuPwkEm6TF1`, conformité 13 sur 13. Ajout du fichier de validation Google Search Console `site/public/google06c38bd9fdd02723.html`, téléchargé par Novan : propriété « Préfixe d'URL » `https://attractor-observatory-demo.vercel.app/`. Ne pas supprimer ce fichier, sinon Google perd la validation. Une version d'essai ajoute un script Vercel à la fin des fichiers HTML ; la version publique non.
+
+### 1.0.17
 
 Mise en production le 17/09 : commit `f41a5b6` (étiquette `v1.0.17`), déploiement `dpl_FPMpSukC2hHcYRCbWEGS7najLXkU`, conformité 13 sur 13. Référencement :
 - images d'aperçu `/og/<page>.png` (astro-og-canvas, déclarées par `site/src/routeData.ts`) ;

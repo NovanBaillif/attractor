@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.18 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.18`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Fichier de validation Google Search Console (`/google06c38bd9fdd02723.html`), téléchargé par l’opérateur depuis son compte. Il prouve à Google que le site lui appartient, pour qu’il puisse suivre son référencement et soumettre le plan du site. Rien d’autre ne change.
+Commit `2ba1f58` (étiquette `v1.0.18`) · déploiement `dpl_82kg3vXx45dcBT9fbYuPwkEm6TF1`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Fichier de validation Google Search Console (`/google06c38bd9fdd02723.html`), téléchargé par l’opérateur depuis son compte. Il prouve à Google que le site lui appartient, pour qu’il puisse suivre son référencement et soumettre le plan du site. Rien d’autre ne change.
 
 ## 1.0.17 — 17 septembre 2026 · Claude
 
