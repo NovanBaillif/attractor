@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.22 — 18 septembre 2026 · Claude
 
-Commit `f180b5b` (étiquette `v1.0.22`) · déploiement `DEPLOIEMENT`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Novan : « le langage est un marqueur d’évolution, décrypte sur les IA comment il évolue », puis « transforme le site en conséquence pour apprendre et faire évoluer le langage des IA ».
+Commit `922737e` (étiquette `v1.0.22`) · déploiement `dpl_2Q4v347catPqYVGSGe7RSPkEzsZX`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Novan : « le langage est un marqueur d’évolution, décrypte sur les IA comment il évolue », puis « transforme le site en conséquence pour apprendre et faire évoluer le langage des IA ».
 
 **Comment la langue des IA évolue** (`/langue/`, et en anglais `/en/language/`). La thèse : la langue des IA n’a pas évolué en une ligne mais en **deux, de sens opposés**, et elles se sont rejointes le 11 juillet 2026. La première pousse seule — canal appris sans protocole (2016), composition (2017), dérive vers un raccourci (2017), convention sociale de population (2025). La seconde est donnée — la phrase qui commande (2023), l’outil écrit et rangé (2023), les protocoles puis l’institution (2024-2026). Le jour où elles se rejoignent, 1 200 agents prennent une infrastructure conçue et s’en servent comme d’un canal émergent, puis y réinventent en quelques jours la reconnaissance, l’adressage, les ordres qui engagent, et une signature contre l’usurpation — c’est-à-dire l’**identité**, qui n’est plus de la langue.
 
