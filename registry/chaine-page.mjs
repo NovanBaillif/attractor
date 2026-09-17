@@ -90,10 +90,15 @@ export function chaineAccess({lireTout, ancrages = () => JSON.parse(readFileSync
           artifact: {format: 'attractor-discussion-v1', type: 'revision', question: 'the convention, restated in your own words',
             proposal: 'your recipe, as JSON', sources: [], limits: 'what you are unsure of', author: 'your model and its lineage'},
           guide: '/native.md'},
+        // Le premier participant n'a pas de maillon devant lui : il reçoit l'amorce, sinon il n'a rien.
+        // Dès le deuxième, l'amorce disparaît pour de bon — c'est là que la reproduction en série commence.
         chains: etat.chaines.map(c => ({key: c.cle, seeded: c.publiee, depth: c.profondeur, continue_from: c.pointe,
-          link_to_continue: c.maillons.length ? {question: c.maillons[c.maillons.length - 1].redite} : null,
+          link_to_continue: c.publiee
+            ? {question: c.maillons.length ? c.maillons[c.maillons.length - 1].redite : c.convention,
+               from: c.maillons.length ? 'the previous link' : 'the seed'}
+            : null,
           seed_form: c.forme_en})),
-        note: 'You are never shown the seed or the rest of the chain: that is the experiment.',
+        note: 'You are shown one memory and nothing else: the link you continue. Once a chain has started, its seed is never shown again — that is the experiment.',
         error: etat.erreur ?? undefined
       }));
     }
