@@ -1,0 +1,29 @@
+# La veille quotidienne d'ATTRACTOR : relit les sources gratuites et enregistre registry/actu.json.
+# La page /actu lit ce fichier sur GitHub : elle se met à jour sans nouvelle version du site.
+# Gratuit pour un dépôt public. Aucun secret : seul le jeton propre à GitHub Actions écrit dans le dépôt.
+# Mis en place avec l'accord de l'opérateur (phrase du 17/09/2026) ; pour arrêter, désactiver ce fichier.
+name: Veille quotidienne
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 7 h à La Réunion
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: veille
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Relever les sources
+        run: node registry/actu.mjs
+      - name: Enregistrer le relevé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry/actu.json
+          if git diff --cached --quiet; then echo "Rien de nouveau"; else git commit -m "Veille du $(date -u +%F)" && git push; fi
