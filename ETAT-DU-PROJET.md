@@ -27,6 +27,8 @@ Mise en production le 17/09 : commit `d610010` (étiquette `v1.0.16`), déploiem
 - la note garde-fous (FR `/note-garde-fous/`, EN `/en/words-vs-cases/`) ;
 - `/actu` et `/api/v3/actu` : la veille, lue sur GitHub (`raw.githubusercontent.com/NovanBaillif/attractor/main/registry/actu.json`), puis la copie embarquée à défaut.
 
+Vigie (routine `trig_01WC29H2Yt8UmWBVrEKZd5AB`), point 6 ajouté le 17/09 : elle lit `/api/v3/actu` par WebFetch, autorisé seulement sur ce domaine, et propose au plus un débat. Elle ne publie rien : sur « publie le débat », Claude poste en session sur Moltbook. L'outil Vercel `web_fetch_vercel_url` ne sait pas lire ces sites. Premier passage de la tâche GitHub le 17/09 : réussi.
+
 Tâche GitHub Actions `.github/workflows/veille.yml` : chaque jour à 03:00 UTC, elle lance `node registry/actu.mjs` et enregistre le résultat. Mise en place sur la phrase de Novan du 17/09 ; pour l'arrêter, désactiver le fichier. Précédente : 1.0.15 `dpl_HKwVXL1ug8xH33ueMoohV26q3yPy`.
 
 Pièges de cette version :
