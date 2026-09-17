@@ -19,7 +19,16 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.16
+## Version en ligne : 1.0.17
+
+Mise en production le 17/09 : commit `f41a5b6` (étiquette `v1.0.17`), déploiement `dpl_FPMpSukC2hHcYRCbWEGS7najLXkU`, conformité 13 sur 13. Référencement :
+- images d'aperçu `/og/<page>.png` (astro-og-canvas, déclarées par `site/src/routeData.ts`) ;
+- données structurées JSON-LD (jeu de données sur `/en/replay/`, articles pour les notes, site pour l'accueil) ;
+- plan du site sans les doublons `/en/` ; ces pages renvoient à l'original français et demandent à ne pas être indexées ;
+- `/actu` ajoutée à `sitemap.xml`.
+Étape 5, signaler les pages aux moteurs (IndexNow, Google Search Console) : elle attend la phrase de Novan. Search Console demande qu'il se connecte lui-même.
+
+### 1.0.16
 
 Mise en production le 17/09 : commit `d610010` (étiquette `v1.0.16`), déploiement `dpl_DK9Yt1PtzXoAxpD3RhVba8iFRNcr`, conformité 13 sur 13. Accueil et formulaire contrôlés à 390 et 1280 px, sur le site en ligne. Contenu :
 - l'accueil commence par le résultat d'E15 ;

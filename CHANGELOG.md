@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.17 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.17`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Référencement : que les chercheurs trouvent l’expérience à refaire, et que chaque lien partagé montre ce qu’il annonce.
+Commit `f41a5b6` (étiquette `v1.0.17`) · déploiement `dpl_FPMpSukC2hHcYRCbWEGS7najLXkU`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Référencement : que les chercheurs trouvent l’expérience à refaire, et que chaque lien partagé montre ce qu’il annonce.
 
 - **Images d’aperçu.** Chaque page a sa carte de partage (`/og/<page>.png`), générée à la construction par astro-og-canvas. Elle est déclarée par l’intergiciel de route de Starlight (`site/src/routeData.ts`). L’accueil montre le titre-résultat et ses chiffres.
 - **Données structurées (JSON-LD).** `/en/replay/` se déclare comme jeu de données (consignes, programme de notation, résultat publié), pour Google Dataset Search. Les deux notes se déclarent comme articles, et l’accueil comme site.
