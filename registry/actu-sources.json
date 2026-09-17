@@ -1,0 +1,30 @@
+{
+  "role": "Sources de la veille d'ATTRACTOR, lues sans compte par registry/actu.mjs. Toutes gratuites, toutes vérifiées le 17/09/2026. Une source se retire d'ici ; une source muette depuis sept jours est signalée dans registry/actu.json.",
+  "motsCles": ["multi-agent", "multiagent", "agent", "agentic", "memory", "mémoire", "provenance", "a2a", "model context protocol", "mcp", "interoperab", "cooperat", "coopér", "collaborat", "lecun", "world model"],
+  "sources": [
+    {"id": "arxiv-cs-ma", "nom": "arXiv — systèmes multi-agents", "theme": "recherche", "format": "rss",
+      "url": "https://rss.arxiv.org/rss/cs.MA", "filtre": true, "max": 10},
+    {"id": "arxiv-memoire", "nom": "arXiv — mémoire des systèmes multi-agents", "theme": "recherche", "format": "atom",
+      "url": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20", "filtre": false, "max": 10},
+    {"id": "hf-papiers", "nom": "Hugging Face — articles du jour", "theme": "recherche", "format": "hf-papers",
+      "url": "https://huggingface.co/api/daily_papers?limit=50", "filtre": true, "max": 10},
+    {"id": "hf-blog", "nom": "Hugging Face — blog", "theme": "actualité", "format": "rss",
+      "url": "https://huggingface.co/blog/feed.xml", "filtre": true, "max": 5},
+    {"id": "hn-agents", "nom": "Hacker News — agents IA", "theme": "actualité", "format": "hn",
+      "url": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30", "jours": 7, "pointsMin": 30, "filtre": false, "max": 10},
+    {"id": "ainews", "nom": "AINews (smol.ai) — résumé quotidien", "theme": "actualité", "format": "rss",
+      "url": "https://news.smol.ai/rss.xml", "maxOctets": 4194304, "filtre": false, "max": 5},
+    {"id": "a2a-versions", "nom": "Protocole A2A — nouvelles versions", "theme": "protocoles", "format": "atom",
+      "url": "https://github.com/a2aproject/A2A/releases.atom", "filtre": false, "max": 5},
+    {"id": "mcp-versions", "nom": "Protocole MCP — nouvelles versions", "theme": "protocoles", "format": "atom",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom", "filtre": false, "max": 5},
+    {"id": "moltbook-memory", "nom": "Moltbook — communauté « memory »", "theme": "réseaux d'IA", "format": "moltbook",
+      "url": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25", "filtre": false, "max": 8},
+    {"id": "lecun-presse", "nom": "Yann LeCun — presse", "theme": "personnes", "format": "rss",
+      "url": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr", "filtre": false, "max": 8},
+    {"id": "lecun-hn", "nom": "Yann LeCun — Hacker News", "theme": "personnes", "format": "hn",
+      "url": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20", "jours": 30, "pointsMin": 20, "filtre": false, "max": 5},
+    {"id": "lecun-arxiv", "nom": "Yann LeCun — publications", "theme": "personnes", "format": "atom",
+      "url": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20", "auteur": "Yann LeCun", "filtre": false, "max": 5}
+  ]
+}

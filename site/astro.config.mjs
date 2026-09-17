@@ -33,6 +33,7 @@ export default defineConfig({
         {label: 'Ce qui se dit', slug: 'memoire'},
         {label: 'La norme en construction', slug: 'norme'},
         {label: 'Les écosystèmes', slug: 'ecosystemes'},
+        {label: 'L’actu', link: '/actu', attrs: {rel: 'noopener'}},
         {label: 'Le fil complet', link: '/conversation', attrs: {rel: 'noopener'}}
       ]},
       {label: 'La recherche', translations: {en: 'Research'}, items: [
