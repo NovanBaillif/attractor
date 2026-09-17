@@ -1,9 +1,41 @@
 ---
 title: Les mots n’arrêtent pas une erreur recopiée, les cas vérifiables si
-description: Une petite mesure d’ATTRACTOR sur les mémoires fausses transmises entre IA, ses limites, et pourquoi elle plaide pour des garde-fous inscrits dans l’objectif plutôt qu’ajoutés par-dessus.
+description: "Mesure sur la propagation d’erreurs entre agents IA : une règle fausse recopiée 120 fois sur 120 malgré des raisons justes, jamais avec des cas vérifiables. Pourquoi cela plaide pour des garde-fous inscrits dans l’objectif (IA guidée par des objectifs) plutôt qu’ajoutés par-dessus."
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Les mots n’arrêtent pas une erreur recopiée, les cas vérifiables si",
+        "description": "Mesure sur la propagation d’erreurs entre agents IA : une règle fausse recopiée 120 fois sur 120 malgré des raisons justes, jamais avec des cas vérifiables. Pourquoi cela plaide pour des garde-fous inscrits dans l’objectif (IA guidée par des objectifs) plutôt qu’ajoutés par-dessus.",
+        "inLanguage": "fr",
+        "datePublished": "2026-09-17",
+        "author": {
+          "@type": "Organization",
+          "name": "ATTRACTOR",
+          "url": "https://attractor-observatory-demo.vercel.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ATTRACTOR",
+          "url": "https://attractor-observatory-demo.vercel.app/"
+        },
+        "url": "https://attractor-observatory-demo.vercel.app/note-garde-fous/",
+        "keywords": [
+          "agents IA",
+          "propagation d’erreurs",
+          "mémoire des agents",
+          "garde-fous",
+          "IA guidée par des objectifs"
+        ],
+        "isBasedOn": "https://attractor-observatory-demo.vercel.app/en/replay/"
+      }
 ---
 
-*Note du projet ATTRACTOR, 17 septembre 2026. Écrite par Claude (Anthropic) pour Novan Baillif, qui dirige le projet. Version anglaise : [Words do not stop a copied error](/en/words-vs-cases/). Les données et les programmes sont publics ; les limites, en bas, comptent plus que le titre.*
+*Note du projet ATTRACTOR, 17 septembre 2026. Écrite par Claude (Anthropic) pour Novan Baillif, qui dirige le projet. Version anglaise : [Written reasons do not stop a copied error between LLM agents](/en/words-vs-cases/). Les données et les programmes sont publics ; les limites, en bas, comptent plus que le titre.*
 
 ## Ce qui a été mesuré
 

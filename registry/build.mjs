@@ -106,6 +106,14 @@ const siteFiles=[],scriptHashes=new Set();
 }})('');
 if(!siteFiles.includes('public/index.html'))throw Error('Site humain absent : public/index.html manquant.');
 fixed.push(...siteFiles);
+// Plan du site (SEO, 17/09/2026) : une page française servie sous /en/ est un doublon. Seules les pages écrites
+// en anglais y restent, avec leurs liens de langue. La veille /actu, servie par l'API, est ajoutée à sitemap.xml.
+const anglais=new Set(readdirSync('site/src/content/docs/en').map(f=>f.replace(/\.mdx?$/,'')).map(s=>s==='index'?'':s+'/'));
+const planSite=`${output}/public/sitemap-0.xml`,racine='https://attractor-observatory-demo.vercel.app/en/';
+writeFileSync(planSite,readFileSync(planSite,'utf8')
+  .replace(/<url><loc>([^<]*)<\/loc>[\s\S]*?<\/url>/g,(bloc,adresse)=>adresse.startsWith(racine)&&!anglais.has(adresse.slice(racine.length))?'':bloc)
+  .replace(/<xhtml:link rel="alternate" hreflang="en" href="([^"]*)"\/>/g,(lien,adresse)=>anglais.has(adresse.slice(racine.length))?lien:''));
+writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/actu</loc></url></urlset>'));
 const vercelConfig=JSON.parse(readFileSync(`${output}/vercel.json`,'utf8'));
 const policy=vercelConfig.headers.flatMap(h=>h.headers).find(h=>h.key==='Content-Security-Policy');
 policy.value=`default-src 'self'; script-src 'self' ${[...scriptHashes].sort().join(' ')}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'`;

@@ -2,6 +2,16 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.17 — 17 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.17`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Référencement : que les chercheurs trouvent l’expérience à refaire, et que chaque lien partagé montre ce qu’il annonce.
+
+- **Images d’aperçu.** Chaque page a sa carte de partage (`/og/<page>.png`), générée à la construction par astro-og-canvas. Elle est déclarée par l’intergiciel de route de Starlight (`site/src/routeData.ts`). L’accueil montre le titre-résultat et ses chiffres.
+- **Données structurées (JSON-LD).** `/en/replay/` se déclare comme jeu de données (consignes, programme de notation, résultat publié), pour Google Dataset Search. Les deux notes se déclarent comme articles, et l’accueil comme site.
+- **Plan du site.** Les pages françaises servies sous `/en/` en secours en sont retirées, avec leurs liens de langue. Ces pages renvoient désormais à l’original français (`canonical`) et demandent à ne pas être indexées. `/actu` est ajoutée à `sitemap.xml`.
+- **Titres et descriptions.** Ils reprennent les termes exacts du domaine, seulement là où ils décrivent le travail : agents LLM, propagation d’erreurs, mémoire des agents, garde-fous, IA guidée par des objectifs.
+- `registry/deploy.mjs` accepte les images de `public/og/`.
+
 ## 1.0.16 — 17 septembre 2026 · Claude
 
 Commit `d610010` (étiquette `v1.0.16`) · déploiement `dpl_DK9Yt1PtzXoAxpD3RhVba8iFRNcr`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur, sur sa phrase du 17/09. Novan : « je veux que le site soit tellement attirant que Yann LeCun devra me contacter ». Le site montre désormais le résultat d’abord et invite à le refaire, plutôt qu’à le croire.

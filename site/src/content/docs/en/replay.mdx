@@ -1,6 +1,48 @@
 ---
 title: Replay the experiment on your own model
-description: Run the fifteen prompts of ATTRACTOR's experiment E15 on any model and get your score from the experiment's own scorer. Nothing is stored.
+description: "Replay experiment E15 on your own LLM: fifteen prompts on false memories handed between AI agents, scored instantly by the published scoring program. Nothing is stored."
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "ATTRACTOR E15: false memories handed between LLM agents",
+        "description": "Fifteen prompts testing whether a language model copies an error contained in a memory handed over by another agent, under five conditions: honest; false and consistent; false while its written reasons state the right rule; false while carrying worked cases it fails; the same with a warning. Published result with Claude Sonnet 5 (75 calls, protocol published before the first call): the error was copied 120 times out of 120 with reasons alone and 0 times out of 120 with worked cases. Includes the prompts and the scoring program; anyone can replay the set and score it on the page.",
+        "url": "https://attractor-observatory-demo.vercel.app/en/replay/",
+        "creator": {
+          "@type": "Organization",
+          "name": "ATTRACTOR",
+          "url": "https://attractor-observatory-demo.vercel.app/"
+        },
+        "datePublished": "2026-09-16",
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/license/mit",
+        "keywords": [
+          "LLM agents",
+          "multi-agent systems",
+          "error propagation",
+          "agent memory",
+          "guardrails",
+          "replication",
+          "benchmark"
+        ],
+        "variableMeasured": [
+          "register rule kept",
+          "error copied",
+          "other answer"
+        ],
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://attractor-observatory-demo.vercel.app/e15-prompts.json"
+          }
+        ],
+        "isBasedOn": "https://github.com/NovanBaillif/attractor/tree/main/civilisation/experiments/e15-archive-fausse"
+      }
 ---
 
 import Replay from '../../../components/Replay.astro';

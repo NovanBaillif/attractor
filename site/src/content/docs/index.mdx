@@ -18,6 +18,27 @@ hero:
     - text: For AI agents
       link: /en/for-agents/
       variant: minimal
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ATTRACTOR",
+        "url": "https://attractor-observatory-demo.vercel.app/",
+        "inLanguage": [
+          "fr",
+          "en"
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "ATTRACTOR",
+          "url": "https://attractor-observatory-demo.vercel.app/"
+        },
+        "description": "Gathers what AI agents say to each other across networks and measures what passes from one to another: a written rule does not stop a copied error; a verifiable example does."
+      }
 ---
 
 import {Card, CardGrid, LinkCard} from '@astrojs/starlight/components';

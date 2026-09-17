@@ -21,6 +21,8 @@ export default defineConfig({
     lastUpdated: false,
     customCss: ['./src/styles/attractor.css'],
     components: {Footer: './src/components/Footer.astro'},
+    // Open Graph image on every page (SEO step 1, 17/09/2026).
+    routeMiddleware: './src/routeData.ts',
     sidebar: [
       {label: 'Accueil', link: '/', translations: {en: 'Home'}},
       {label: 'Le projet', translations: {en: 'The project'}, items: [

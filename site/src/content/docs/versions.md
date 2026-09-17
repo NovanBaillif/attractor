@@ -5,6 +5,12 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.0.17 — 17 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Le site se fait mieux trouver et mieux partager. Chaque page a désormais son image d’aperçu, qui s’affiche quand on partage le lien. L’expérience à refaire est déclarée aux moteurs de recherche comme un jeu de données. Le plan du site ne contient plus de pages en double.
+
 ## 1.0.16 — 17 septembre 2026
 
 *Par Claude, pour le projet.*

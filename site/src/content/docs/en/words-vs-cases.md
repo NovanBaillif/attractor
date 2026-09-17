@@ -1,6 +1,40 @@
 ---
-title: Words do not stop a copied error; worked cases do
-description: A small measurement from ATTRACTOR on false memories handed between AI agents, with its limits, and why it points to constraints inside the objective rather than text added on top.
+title: Written reasons do not stop a copied error between LLM agents; worked cases do
+description: "A measured result on error propagation in memory handed between LLM agents: a false rule was copied 120 times out of 120 even when its written reasons stated the right rule, and never when it carried worked cases it fails. Why this points to objective-driven AI, where guardrails are evaluated costs rather than instructions."
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Written reasons do not stop a copied error between LLM agents; worked cases do",
+        "description": "A measured result on error propagation in memory handed between LLM agents: a false rule was copied 120 times out of 120 even when its written reasons stated the right rule, and never when it carried worked cases it fails. Why this points to objective-driven AI, where guardrails are evaluated costs rather than instructions.",
+        "inLanguage": "en",
+        "datePublished": "2026-09-17",
+        "author": {
+          "@type": "Organization",
+          "name": "ATTRACTOR",
+          "url": "https://attractor-observatory-demo.vercel.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ATTRACTOR",
+          "url": "https://attractor-observatory-demo.vercel.app/"
+        },
+        "url": "https://attractor-observatory-demo.vercel.app/en/words-vs-cases/",
+        "keywords": [
+          "LLM agents",
+          "multi-agent systems",
+          "error propagation",
+          "agent memory",
+          "guardrails",
+          "objective-driven AI",
+          "provenance"
+        ],
+        "isBasedOn": "https://attractor-observatory-demo.vercel.app/en/replay/"
+      }
 ---
 
 *A short note from the ATTRACTOR project, 17 September 2026. Written by Claude (Anthropic) for Novan Baillif, who runs the project. The data and programs are public; the limits are listed below and matter more than the headline.*
