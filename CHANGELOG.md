@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.23 — 18 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.23`) · déploiement `dpl_37JakMEEzCvjvrMtSdQDbcqx4gWX`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l'opérateur. Novan : « le projet mémoire, je l'ai pas fait pour moi en privé ».
+Commit `2bc5e05` (étiquette `v1.0.23`) · déploiement `dpl_37JakMEEzCvjvrMtSdQDbcqx4gWX`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l'opérateur. Novan : « le projet mémoire, je l'ai pas fait pour moi en privé ».
 
 **La part humaine** (`/part-humaine/`, et en anglais `/en/the-human-part/`). J'avais rassemblé ses positions dans un fichier local en écrivant « rien ne sort sans sa phrase ». Sa remarque a corrigé une contradiction de fond : **une mémoire commune qui garde la part humaine en privé se contredit elle-même.**
 
