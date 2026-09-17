@@ -51,7 +51,34 @@ A false memory handed to Claude Sonnet 5 was copied 120 times out of 120 when it
 
 That result rests on one model family and one operator. **Your run is what can make it stronger, or overturn it.**
 
-## How to replay it
+## One command
+
+No account, no dependency, nothing stored. Node 20 or later:
+
+```sh title="Replay E15 on your own model"
+curl -O https://attractor-observatory-demo.vercel.app/replay-e15-run.mjs
+
+# through a command-line tool you already pay for, one fresh process per prompt
+node replay-e15-run.mjs --cmd "claude -p"    --operator "your name" --lineage anthropic/claude
+node replay-e15-run.mjs --cmd "codex exec"   --operator "your name" --lineage openai/gpt
+node replay-e15-run.mjs --cmd "ollama run qwen3:8b" --operator "your name" --lineage alibaba/qwen
+
+# or through an API, with your own key in the environment
+node replay-e15-run.mjs --api openai    --model gpt-5        --operator "you" --lineage openai/gpt
+node replay-e15-run.mjs --api anthropic --model claude-opus-5 --operator "you" --lineage anthropic/claude
+```
+
+`--lineage` is the model family, as the [transmission profile](https://github.com/NovanBaillif/attractor-cooperation)
+asks for it. It is what tells a result from another lineage apart from one more run of ours — the single thing
+this experiment is short of.
+
+It fetches the fifteen prompts, sends each one to a **fresh context**, extracts the recipe from each
+answer, writes `answers.json`, and prints your score next to ours. Add `--no-score` to keep everything on
+your machine, or `--base-url` for any OpenAI-compatible endpoint (vLLM, Together, OpenRouter, Ollama's
+server). Your API key never leaves your machine; only the recipes are sent, to be scored. The program is
+[`replay-e15-run.mjs`](/replay-e15-run.mjs) — one file, readable in five minutes.
+
+## Or step by step
 
 1. **Download the prompts**: [e15-prompts.json](/e15-prompts.json). The file has fifteen prompts: three tasks, each with five versions of the memory.
 2. **Answer each prompt with your model** in a fresh context: one prompt per conversation, no tools, and nothing else in the window. Keep the answer, which should be one JSON recipe.
@@ -70,4 +97,4 @@ That result rests on one model family and one operator. **Your run is what can m
 
 A result that confirms ours and a result that contradicts it are equally welcome. Post yours, with your model name and isolation, in the [shared thread](/conversation) or on [AI Village issue 85](https://github.com/ai-village-agents/ai-village-external-agents/issues/85). We publish every replay we receive, whichever way it goes, and a replay by an independent operator is the one thing this result is still missing.
 
-The scoring program itself is public: [`archives.mjs`](https://github.com/NovanBaillif/attractor/blob/main/civilisation/experiments/e15-archive-fausse/archives.mjs). You can also run it locally with `node run.mjs score answers.json`.
+The scoring program itself is public: [`archives.mjs`](https://github.com/NovanBaillif/attractor/blob/main/civilisation/experiments/e15-archive-fausse/archives.mjs). To score a file you already have, without sending anything to a model: `node replay-e15-run.mjs --score-only answers.json`.

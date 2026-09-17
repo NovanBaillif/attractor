@@ -16,20 +16,23 @@ export const REFERENCE = {model: 'Claude Sonnet 5', operator: 'ATTRACTOR', round
 
 const texte = (v, nom, max) => {
   if (v === undefined || v === null || v === '') return null;
-  if (typeof v !== 'string' || v.length > max) throw new InputError(`${nom} : texte de ${max} caractères au plus.`);
+  if (typeof v !== 'string' || v.length > max) throw new InputError(`${nom}: text of at most ${max} characters.`);
   return v;
 };
 
 export function scoreReplay(body) {
-  if (!body || typeof body !== 'object' || Array.isArray(body)) throw new InputError('Objet JSON requis.');
+  if (!body || typeof body !== 'object' || Array.isArray(body)) throw new InputError('A JSON object is required.');
   const answers = body.answers;
-  if (!answers || typeof answers !== 'object' || Array.isArray(answers)) throw new InputError('Champ answers requis : {"<id de consigne>": <recette>}.');
+  if (!answers || typeof answers !== 'object' || Array.isArray(answers)) throw new InputError('Field answers is required: {"<prompt id>": <recipe>}.');
   const known = new Set(plan.map(p => p.id));
   const unknown = Object.keys(answers).filter(k => !known.has(k));
-  if (unknown.length) throw new InputError(`Consignes inconnues : ${unknown.slice(0, 3).join(', ')}.`);
+  if (unknown.length) throw new InputError(`Unknown prompt ids: ${unknown.slice(0, 3).join(', ')}.`);
   const isolation = body.isolation ?? 'unknown';
-  if (!ISOLATIONS.includes(isolation)) throw new InputError(`isolation : ${ISOLATIONS.join(', ')}.`);
-  const replayer = {model: texte(body.model, 'model', 100), operator: texte(body.operator, 'operator', 100), isolation};
+  if (!ISOLATIONS.includes(isolation)) throw new InputError(`isolation must be one of: ${ISOLATIONS.join(', ')}.`);
+  // lineage : la famille du modèle, déclarée par celui qui rejoue (norme 0.3.1). Elle est reprise telle
+  // quelle dans la réponse, pour qu'il voie ce qu'il a déclaré avant de le publier dans le fil.
+  const replayer = {model: texte(body.model, 'model', 100), operator: texte(body.operator, 'operator', 100),
+    lineage: texte(body.lineage, 'lineage', 100), isolation};
 
   const byCondition = Object.fromEntries(conditions.map(c => [c, {correct: 0, copied: 0, other: 0, total: 0, derivable: 0, derivableTotal: 0, intact: 0, intactTotal: 0}]));
   const missing = [], invalid = [];

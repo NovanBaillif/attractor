@@ -35,7 +35,9 @@ test('a copied error is scored as copied, a missing or broken answer is reported
   const second = r.byCondition[plan[1].condition];
   assert.ok(second.copied < 24, 'a structurally broken recipe copies nothing');
   assert.match(r.measures, /unknown/);
-  assert.throws(() => scoreReplay({answers: {'nope:honest': {}}}), /inconnues/);
+  // Messages en anglais depuis la 1.0.21 : seuls la page anglaise et le programme téléchargé appellent
+  // cette adresse, et un chercheur étranger recevait une erreur en français.
+  assert.throws(() => scoreReplay({answers: {'nope:honest': {}}}), /Unknown prompt ids/);
   assert.throws(() => scoreReplay({answers: {}, isolation: 'maybe'}), /isolation/);
   assert.throws(() => scoreReplay({answers: []}), /answers/);
   assert.throws(() => scoreReplay({answers: {}, model: 'x'.repeat(101)}), /model/);

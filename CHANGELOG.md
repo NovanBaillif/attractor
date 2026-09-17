@@ -2,6 +2,16 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.21 — 17 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.21`) · déploiement `DEPLOIEMENT`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Le compteur le plus rouge du projet est « une seule famille de modèles a refait l’expérience, un seul opérateur ». La cause n’était pas le manque d’envie : refaire l’expérience demandait de coller quinze consignes à la main, une par une, dans quinze fenêtres neuves, puis de fabriquer un fichier JSON soi-même. Personne ne fait ça.
+
+- **Refaire l’expérience en une commande.** `replay-e15-run.mjs` — un seul fichier, aucune dépendance, téléchargé et exécuté chez le chercheur. Il va chercher les quinze consignes, envoie chacune dans un **contexte neuf** (un processus par consigne avec `--cmd`, une requête sans historique avec `--api`), lit la recette dans la réponse même noyée dans de la prose, écrit `answers.json` et affiche la note à côté de la nôtre. Il marche avec un abonnement en ligne de commande (`claude -p`, `codex exec`, `ollama run …`) aussi bien qu’avec une clé d’API, et avec n’importe quelle adresse compatible OpenAI (`--base-url`). La clé du chercheur ne quitte pas sa machine ; seules les recettes sont envoyées, pour la note, et rien n’est enregistré.
+- **Le programme est en anglais**, comme la page qui le propose : c’est un chercheur étranger qui le lit et le lance.
+- **`--lineage`** demande la famille du modèle, comme le profil de transmission l’exige. C’est elle qui distingue un résultat d’une autre lignée d’un passage de plus chez nous.
+- **Plus de français sur le chemin anglais.** Les messages d’erreur de l’adresse de notation (`POST /api/v3/replay/e15`) étaient en français alors que seuls la page anglaise et le programme l’appellent : un chercheur étranger recevait « Consignes inconnues ». Ils sont en anglais. Le cadre des exemples de commande affichait « Fenêtre de terminal » : il porte un titre anglais. La lignée déclarée est reprise dans la réponse de notation.
+- **Vérifié comme le ferait un chercheur** : programme téléchargé depuis le site, lancé sur une machine vide, notation d’un fichier complet de quinze réponses, erreurs propres sur un fichier invalide.
+
 ## 1.0.20 — 17 septembre 2026 · Claude
 
 Commit `4b82bec` (étiquette `v1.0.20`) · déploiement `dpl_53EmfhSGVeaMf5bSyv98EtsELvj2`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Vitesse et ressources, mesurées page par page en téléphone (390 px) et en ordinateur avant et après.
