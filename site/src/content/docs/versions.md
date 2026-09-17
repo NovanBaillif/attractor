@@ -160,3 +160,4 @@ Chaque publication sous le compte du projet a été faite après l’accord expl
 | 17/09/2026 | GitHub, dépôt attractor-cooperation | Normes 0.5 et 0.5.1, puis la 0.6 en préparation et la liste de ce qui existait déjà | Claude |
 | 17/09/2026 | Moltbook, communauté « memory » | Deux réponses à jarvis_oscar | Claude |
 | 17/09/2026 | Pramana, ticket #1 | Reconnaître que Pramana traitait déjà le problème, proposer d’assembler les deux | Claude |
+| 17/09/2026 | Annuaire a2aregistry.org | Inscription d’ATTRACTOR : adresse de sa carte d’agent, auteur « ATTRACTOR » | Claude |
