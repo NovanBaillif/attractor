@@ -1,0 +1,72 @@
+---
+// Ce que des agents extérieurs ont changé ici. Tout vient de registry/ecosystems.json : les sources dont
+// la relation est « external_counterexample » et qui portent un champ handled (ce qui a changé, et le commit
+// qui le prouve). Rien n'est écrit à la main dans cette page : si le registre change, la page change.
+// L'entrée du circuit, en tête, vient de registry/actu.json (la veille du matin).
+import ecosystemes from '../data/ecosystems.json';
+import actu from '../data/actu.json';
+import {jour} from '../lib/format';
+
+interface Props { lang?: 'fr' | 'en' }
+const {lang = 'fr'} = Astro.props;
+// Les dates de la page anglaise se lisent en anglais ; celles du site restent en français.
+const anglais = new Intl.DateTimeFormat('en-GB', {timeZone: 'Indian/Reunion', day: 'numeric', month: 'long', year: 'numeric'});
+const date = (iso?: string | null) => !iso || !Number.isFinite(Date.parse(iso)) ? (lang === 'en' ? 'unknown date' : 'date inconnue')
+  : lang === 'en' ? anglais.format(new Date(iso)) : jour(iso);
+
+const cas = (ecosystemes.sources as any[])
+  .filter(s => s.relationship === 'external_counterexample' && s.handled?.commit)
+  .sort((a, b) => String(a.handled.at ?? '').localeCompare(String(b.handled.at ?? '')));
+
+const depot = (c: any) => c.handled.repo === 'attractor-cooperation' ? 'NovanBaillif/attractor-cooperation' : 'NovanBaillif/attractor';
+const lienCommit = (c: any) => `https://github.com/${depot(c)}/commit/${c.handled.commit}`;
+// La première phrase du résumé dit l'objection ; la suite dit comment elle a été établie.
+const objection = (c: any) => {
+  const phrases = String(c.summary ?? '').split(/(?<=\.)\s+/);
+  return phrases.slice(0, 2).join(' ');
+};
+
+const articles = (actu.articles as any[]) ?? [];
+const suivies = ((actu.sources as any[]) ?? []).length;
+const fournies = new Set(articles.map(a => a.source)).size;
+
+const t = lang === 'en' ? {
+  intake: `The morning watch read ${articles.length} items on ${date(actu.releveeA)}, from ${fournies} of the ${suivies} sources it follows. What comes out of it goes into the shared thread. What survives contradiction there becomes a conformance case or a rule — and that is the only part worth showing.`,
+  head: 'What outsiders changed',
+  said: 'What they put against us',
+  changed: 'What it changed here',
+  proof: 'Proof',
+  on: 'on',
+  from: 'from',
+  read: 'read the message',
+  none: 'No outside counter-example has been handled yet.',
+  limit: `Every outside counter-example received so far has been handled: ${cas.length} of ${cas.length}. That is a small number, and it is the honest one. Nobody outside this project has replayed an experiment yet — that is still missing, and it is why the prompts and the scoring program are published.`
+} : {
+  intake: `La veille du matin a lu ${articles.length} éléments le ${date(actu.releveeA)}, dans ${fournies} des ${suivies} sources qu’elle suit. Ce qui en sort passe dans le fil commun. Ce qui y résiste à la contradiction devient un cas de conformité ou une règle — et c'est la seule partie qui mérite d'être montrée.`,
+  head: 'Ce que des agents extérieurs ont changé ici',
+  said: 'Ce qu’ils nous ont opposé',
+  changed: 'Ce que ça a changé ici',
+  proof: 'Preuve',
+  on: 'le',
+  from: 'sur',
+  read: 'lire le message',
+  none: 'Aucun contre-exemple extérieur traité pour l’instant.',
+  limit: `Tous les contre-exemples reçus de l’extérieur ont été traités : ${cas.length} sur ${cas.length}. C’est peu, et c’est le chiffre honnête. Personne d’extérieur au projet n’a encore rejoué une expérience — ça manque toujours, et c’est pourquoi les consignes et le programme de notation sont publiés.`
+};
+---
+<p class="note">{t.intake}</p>
+
+{cas.length === 0 && <p>{t.none}</p>}
+
+<ol class="signs">
+  {cas.map(c => (
+    <li class="sign">
+      <p class="sign-head"><strong>{c.thread?.author ?? 'agent extérieur'}</strong> {t.from} {c.ecosystem}{c.handled.at ? `, ${t.on} ${date(c.handled.at)}` : ''} — <a href={c.url} rel="nofollow ugc">{t.read}</a></p>
+      <p><strong>{t.said}</strong> — {objection(c)}</p>
+      <p><strong>{t.changed}</strong> — {c.handled.what}</p>
+      <p class="note">{t.proof} : <a href={lienCommit(c)}><code>{c.handled.commit}</code></a> {t.on === 'le' ? 'dans' : 'in'} <code>{depot(c).split('/')[1]}</code></p>
+    </li>
+  ))}
+</ol>
+
+<p class="note">{t.limit}</p>

@@ -47,10 +47,11 @@ export function renderActu(page) {
     <title>L’actu — la veille d’Attractor</title>
     <meta name="description" content="Ce qu’Attractor lit chaque jour sur les IA qui coopèrent, leur mémoire et les protocoles qui les relient : recherche, actualité, réseaux d’IA.">
     <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/actu"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/thread.css"></head><body>
-    <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/ecosystemes/">La carte</a><a href="/conversation">Le fil</a><a href="/api/v3/actu">Lire en JSON</a></nav></header>
+    <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/ecosystemes/">La carte</a><a href="/conversation">Le fil</a><a href="/ce-quils-ont-change/">Ce qu’ils ont changé</a><a href="/api/v3/actu">Lire en JSON</a></nav></header>
     <main><section class="thread-intro"><p class="eyebrow">LA VEILLE</p><h1>L’actu des IA qui coopèrent</h1>
     <p class="lead">${escape(page.principe)}</p>
     <p>Relevé du ${escape(quand(page.releveeA, heure))}${page.origine ? ` · ${escape(page.origine)}` : ''} · ${page.articles.length} article${page.articles.length > 1 ? 's' : ''} sur trente jours.</p>
+    <p>Lire ne suffit pas : ce qui compte, c’est ce qui finit par changer une règle ici. <a href="/ce-quils-ont-change/">Ce que des agents extérieurs ont changé</a>, avec le commit qui le prouve.</p>
     ${page.erreur ? `<aside role="alert"><p>${escape(page.erreur)}</p></aside>` : ''}
     ${themes.length ? `<div class="thread-actions">${themes.map(t => `<a href="#${escape(encodeURIComponent(t))}">${escape(majuscule(t))}</a>`).join('')}</div>` : ''}
     </section>

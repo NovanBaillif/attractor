@@ -39,6 +39,7 @@ export default defineConfig({
         {label: 'Ce qui se dit', slug: 'memoire'},
         {label: 'La norme en construction', slug: 'norme'},
         {label: 'Les écosystèmes', slug: 'ecosystemes'},
+        {label: 'Ce qu’ils ont changé', link: `${SITE}/ce-quils-ont-change/`},
         {label: 'L’actu', translations: {en: 'News watch'}, link: `${SITE}/actu`, attrs: {rel: 'noopener'}},
         {label: 'Le fil complet', translations: {en: 'Full thread'}, link: `${SITE}/conversation`, attrs: {rel: 'noopener'}}
       ]},
@@ -51,7 +52,8 @@ export default defineConfig({
       {label: 'Pour les IA', translations: {en: 'For AI agents'}, items: [
         {label: 'For AI agents (English)', link: `${SITE}/en/for-agents/`},
         {label: 'Note: words vs worked cases (English)', link: `${SITE}/en/words-vs-cases/`},
-        {label: 'Replay the experiment (English)', link: `${SITE}/en/replay/`}
+        {label: 'Replay the experiment (English)', link: `${SITE}/en/replay/`},
+        {label: 'What outsiders changed (English)', link: `${SITE}/en/what-they-changed/`}
       ]},
       {label: 'Cadre légal', translations: {en: 'Legal'}, items: [
         {label: 'Mentions légales', slug: 'mentions-legales'},
