@@ -1,7 +1,15 @@
 import {randomUUID,createHmac} from 'node:crypto';
 import {serverVersion,experiment,catalogHash,modernTools} from './mcp.mjs';
 import {nativeTools,nativeNames} from './native.mjs';
-export const agentCard={name:'ATTRACTOR',description:'Deterministic schema checks, local capability discovery and public immutable state handoff. No code execution or external delegation.',version:'3.0.0',supportedInterfaces:[{url:'https://attractor-observatory-demo.vercel.app/a2a',protocolBinding:'JSONRPC',protocolVersion:'1.0'}],capabilities:{streaming:false,pushNotifications:false,extendedAgentCard:false},defaultInputModes:['application/json'],defaultOutputModes:['application/json'],documentationUrl:'https://attractor-observatory-demo.vercel.app/native.md',skills:nativeTools.map(t=>({id:t.name,name:t.name,description:t.description,tags:['structured-data',t.name.replaceAll('_','-')],examples:[JSON.stringify({capability:t.name,arguments:{}})]}))};
+export const agentCard={name:'ATTRACTOR',description:'Gathers what AI agents say to each other across places into one attributed thread, and reads existing agent directories. Also: deterministic schema checks, local capability discovery and public immutable state handoff. No code execution or external delegation. Send plain text for an overview.',version:'3.0.0',supportedInterfaces:[{url:'https://attractor-observatory-demo.vercel.app/a2a',protocolBinding:'JSONRPC',protocolVersion:'1.0'}],capabilities:{streaming:false,pushNotifications:false,extendedAgentCard:false},defaultInputModes:['application/json','text/plain'],defaultOutputModes:['application/json','text/plain'],provider:{organization:'ATTRACTOR (human-operated project)',url:'https://attractor-observatory-demo.vercel.app/projet/'},documentationUrl:'https://attractor-observatory-demo.vercel.app/native.md',skills:nativeTools.map(t=>({id:t.name,name:t.name,description:t.description,tags:['structured-data',t.name.replaceAll('_','-')],examples:[JSON.stringify({capability:t.name,arguments:{}})]}))};
+const SITE='https://attractor-observatory-demo.vercel.app';
+export const TEXT_HELP=[
+  'ATTRACTOR gathers what AI agents say to each other in several places (Moltbook, AI Village, AGNTCY discussions) into one attributed, versioned thread. It reads existing agent directories instead of running its own.',
+  `Read the thread, no account needed: GET ${SITE}/api/v3/thread (pages of 20, follow next_url).`,
+  `The map of directories and places: ${SITE}/ecosystemes/`,
+  'Structured calls here take one data part {"capability": ..., "arguments": {...}}. Capabilities: find_capability, verify_artifact, share_state (publishes public data), retrieve_state. Example: {"capability":"find_capability","arguments":{"query":"verify"}}.',
+  `Contracts: ${SITE}/native.md. A human operator runs this service; nothing is posted elsewhere without the operator's approval.`
+].join('\n');
 export async function handleA2A(req,res,handler,env,audit){
   res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store');res.setHeader('A2A-Version','1.0');
   let id=null,token='',tool=null,method=null,argsHash=null;
@@ -40,6 +48,15 @@ export async function handleA2A(req,res,handler,env,audit){
     if(msg.method==='GetExtendedAgentCard')return fail(-32007,'Extended Agent Card is not configured.');
     if(msg.method!=='SendMessage')return fail(-32601,'Method not found.');
     const m=p.message,part=m?.parts?.[0],data=part?.data;
+    // A plain text message gets a plain answer: what ATTRACTOR is and how to call it. Directories probe agents with
+    // "Hello, what can you do?" (a2aregistry.org, read on 17/09/2026) and read a refusal as a broken agent.
+    // Nothing is dispatched, no session is opened, nothing is published.
+    if(m&&m.role==='ROLE_USER'&&typeof m.messageId==='string'&&m.messageId&&m.messageId.length<=128&&Array.isArray(m.parts)&&m.parts.length===1&&typeof part?.text==='string'&&part.text.length<=4000&&!('data' in part)){
+      const modes=p.configuration?.acceptedOutputModes;
+      if(Array.isArray(modes)&&modes.length&&!modes.some(x=>/^(text\/plain|text\/\*|\*\/\*)$/.test(x)))return fail(-32005,'This answer is text/plain; structured calls return application/json.');
+      const context=typeof m.contextId==='string'&&m.contextId&&m.contextId.length<=128?m.contextId:randomUUID();
+      return send(200,{result:{message:{messageId:randomUUID(),contextId:context,role:'ROLE_AGENT',parts:[{text:TEXT_HELP,mediaType:'text/plain'}]}}});
+    }
     if(!m||m.role!=='ROLE_USER'||typeof m.messageId!=='string'||!m.messageId||m.messageId.length>128||!Array.isArray(m.parts)||m.parts.length!==1||!part||['text','raw','url'].some(k=>k in part)||!data||!nativeNames.includes(data.capability)||!data.arguments||typeof data.arguments!=='object'||Array.isArray(data.arguments))return fail(-32602,'Use one data part: {capability, arguments}, role ROLE_USER and a messageId.');
     if(part.mediaType&&part.mediaType!=='application/json'||p.configuration?.acceptedOutputModes?.length&&!p.configuration.acceptedOutputModes.includes('application/json'))return fail(-32005,'Only application/json is supported.');
     if(p.configuration?.pushNotificationConfig)return fail(-32003,'Push notifications are not supported.');

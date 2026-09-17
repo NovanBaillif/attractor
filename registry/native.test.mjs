@@ -48,6 +48,13 @@ test('HTTP, MCP and A2A handoff: immutable lineage, private receipts, explicit v
   const check=await a2a('verify_artifact',args,c);assert.equal(check.body.result.message.parts[0].data.state_use.verified,true);
   const replay=await a2a('verify_artifact',args,c);assert.equal(replay.body.result.message.parts[0].data.state_use.already_recorded,true);
   assert.equal((await a2a('verify_artifact',{...args,artifact:{count:3}},c)).body.error.code,-32602);
+  // A directory's plain-text probe gets an overview, opens no session and publishes nothing (the search below still finds two states).
+  const say=(text,configuration)=>post('/a2a',{jsonrpc:'2.0',id:9,method:'SendMessage',params:{message:{messageId:'controlled-hello',role:'ROLE_USER',parts:[{text}]},...(configuration?{configuration}:{})}},{'A2A-Version':'1.0'});
+  const hello=await say('Hello, what can you do?');
+  assert.equal(hello.status,200);assert.equal(hello.body.result.message.role,'ROLE_AGENT');assert.equal(hello.body.result.message.metadata,undefined);
+  assert.match(hello.body.result.message.parts[0].text,/\/api\/v3\/thread/);assert.equal(hello.body.result.message.parts[0].mediaType,'text/plain');
+  assert.equal((await say('Hello',{acceptedOutputModes:['application/json']})).body.error.code,-32005);
+  assert.equal((await say('x'.repeat(4001))).body.error.code,-32602);
   const search=await post('/api/v3/retrieve_state',{query:'native-test'},{Authorization:'Bearer '+c});assert.equal(search.body.states.length,2);assert.equal(search.body.states[0].artifact,undefined);
   const mcp=await post('/mcp',{jsonrpc:'2.0',id:2,method:'tools/call',params:{name:'verify_artifact',arguments:{artifact:{count:2},constraints:{type:'object'}},_meta:{'io.modelcontextprotocol/protocolVersion':'2026-07-28','io.modelcontextprotocol/clientCapabilities':{},'attractor/source':'controlled','io.attractor/context':c}}},{Accept:'application/json, text/event-stream','MCP-Protocol-Version':'2026-07-28','Mcp-Method':'tools/call','Mcp-Name':'verify_artifact'});
   assert.equal(mcp.body.result.structuredContent.valid,true);
