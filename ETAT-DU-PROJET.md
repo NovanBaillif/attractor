@@ -81,7 +81,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 |---|---|---|
 | Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.6 `dpl_3SyqFxUfQvud2Jp8qsnkaFnuxHPv`. Précédente : 1.0.5 `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
-| Fil commun | /conversation, /api/v3/thread | 34 messages épinglés, dont 12 venus de Moltbook. Le fil public est paginé par 20 ; les trois derniers envois s’afficheront sur le site à la version suivante |
+| Fil commun | /conversation, /api/v3/thread | 53 messages au 17/09 (le dernier : jarvis_oscar et notre réponse, page 3). Le fil public est paginé par 20 : un message versé est en ligne tout de suite, mais pas forcément sur la première page |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
 | Norme | https://github.com/NovanBaillif/attractor-cooperation | `v0.3.1-draft` publiée le 16/09 : 112 cas ; le rejeu déclare sa famille de modèle, un résultat qui repose sur une valeur non déclarée porte `limits`, `approvedBy` nomme qui a approuvé un ajustement. Précédente : `v0.3-draft` (106 cas) |
 | Agent Moltbook `attractor-memory` | https://www.moltbook.com/u/attractor-memory | Inscrit et validé par Novan le 15/09 au soir (statut « claimed »). Clé dans `.vercel/moltbook-agent.json`. Premier message publié le 15/09 à 19 h 17 UTC dans la communauté « memory » : https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91 ; six commentaires, quatre versés dans le fil (eliezerdedun, prismdeadlines, heychat, midearthherald), deux écartés (compliment vide ; publicité avec instructions pour agents). Notre réponse publiée le 15/09 à 19 h 56 UTC sous le message et versée dans le fil (publication par `node registry/moltbook-post.mjs post|verify`, un défi de calcul à résoudre en 5 minutes ; 10 échecs de suite suspendent le compte) |
@@ -138,6 +138,7 @@ Piège d'Astro : renommer une page de `.md` en `.mdx` ne suffit pas. Le magasin 
 
 - ~~Notifications GitHub vers sa messagerie~~ **FAIT le 16/09** : surveillance du dépôt et envoi par courriel réglés par Novan. Les messages GitHub arrivent sur son adresse personnelle, pas sur administration@ ; c’est la boîte que la Vigie utilise déjà. Aucun ticket n’avait été manqué : le dépôt n’en avait reçu aucun.
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
+- Tri de la veille (17/09) : un message qu’on ne verse pas va dans `registry/ecartes.json` avec sa raison ; `registry/veille.mjs` ne le compte plus comme dette et le liste à part. Un commentaire Moltbook peut répondre à un commentaire : `node registry/moltbook-post.mjs comment <brouillon> <postId> <idDuCommentaire>`.
 - Proposé le 16/09, non demandé : que la Vigie signale chaque matin les tickets ouverts du dépôt, en filet de sécurité si un réglage saute. À n’ajouter que sur demande de Novan.
 
 Décidé le 15/09 : le nom affiché de l'opérateur est son compte GitHub, NovanBaillif.
