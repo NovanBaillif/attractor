@@ -19,7 +19,18 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.20
+## Version en ligne : 1.0.21
+
+Mise en production le 18/09 : commit `283fc24` (étiquette `v1.0.21`), déploiement `dpl_GRcFhpubpCxna694Hor45wTfTrgf`, conformité 13 sur 13. Quatre livraisons dans la même version.
+
+- **Refaire E15 en une commande** : `registry/replay-e15-run.mjs`, publié sur `/replay-e15-run.mjs`. Un fichier, aucune dépendance, exécuté chez le chercheur. Marche par outil en ligne de commande (`--cmd "claude -p"`), par API (`--api openai|anthropic`), ou avec toute adresse compatible OpenAI (`--base-url`). Écrit en **anglais**, comme les messages d'erreur de `POST /api/v3/replay/e15` : c'est un chercheur étranger qui les lit. `--lineage` déclare la famille du modèle, ce que compte l'indicateur « familles ayant rejoué » (`registry/mesures.mjs`, champ `replayer.lineage` avec `isolation` en contexte neuf).
+- **Ce qu'ils ont changé** (`/ce-quils-ont-change/`, `/en/what-they-changed/`) : les six contre-exemples extérieurs et ce qu'ils ont changé ici, avec le commit. Rendu depuis `registry/ecosystems.json` (sources `external_counterexample` portant `handled`) — la page suit le registre, rien n'y est écrit à la main.
+- **L'histoire de la civilisation des IA** (`/histoire/`, `/en/history/`) : 26 événements datés de 2016 à 2026, dans `registry/histoire.json`. Chaque entrée porte sa **source primaire** et, quand la légende diffère, ce qui a été **raconté** à sa place (9 entrées sur 26). Catégories : outils 8, société 6, langue 4, protocole 4, économie 3, incident 1. Ajouter un lot vérifié : `node scripts-histoire.mjs <lot.json>` (contrôle des champs et de la date).
+- **L'encyclopédie** : **Les lignées** (`/lignees/`, `/en/lineages/`) 28 familles, et **Les épreuves** (`/epreuves/`, `/en/benchmarks/`) 16 bancs d'essai avec leur limite documentée, dans `registry/encyclopedie.json`. Ajouter un lot : `node scripts-encyclopedie.mjs lignees|epreuves <lot.json>` — il **remplace** une entrée déjà présente, parce qu'une vérification qui arrive après doit pouvoir corriger la précédente (c'est arrivé sur quatre lignées).
+
+Repères à retenir de ce travail : 11 lignées à poids ouverts, 3 fermées, 14 mixtes ; deux seulement publient corpus et journaux d'entraînement, ce sont les seules dont l'entraînement se rejoue. Et **aucun banc d'essai établi ne mesure ce qu'une IA transmet à une autre** — le seul qui s'en approche mesure le tuyau, pas ce qui passe dedans. C'est la place qu'occupe E15.
+
+### 1.0.20
 
 Mise en production le 17/09 : commit `4b82bec` (étiquette `v1.0.20`), déploiement `dpl_53EmfhSGVeaMf5bSyv98EtsELvj2`, conformité 13 sur 13. Vitesse et ressources, mesurées avant et après sur le site en ligne (390 et 1280 px).
 
