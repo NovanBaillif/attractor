@@ -1,0 +1,33 @@
+---
+// Les épreuves : les bancs d'essai par lesquels les IA sont mesurées, et la limite documentée de chacun.
+// Données dans registry/encyclopedie.json. La limite compte autant que la mesure : un chiffre sans sa
+// limite se recopie tout seul, c'est exactement ce que le projet essaie d'empêcher.
+import data from '../data/encyclopedie.json';
+
+interface Props { lang?: 'fr' | 'en' }
+const {lang = 'fr'} = Astro.props;
+
+const fr = new Intl.DateTimeFormat('fr-FR', {timeZone: 'UTC', month: 'long', year: 'numeric'});
+const en = new Intl.DateTimeFormat('en-GB', {timeZone: 'UTC', month: 'long', year: 'numeric'});
+const mois = (iso: string) => Number.isFinite(Date.parse(iso)) ? (lang === 'en' ? en : fr).format(new Date(iso.length === 7 ? iso + '-01' : iso)) : iso;
+
+const epreuves = [...(data.epreuves as any[])].sort((a, b) => a.date.localeCompare(b.date));
+
+const t = lang === 'en' ? {
+  mesure: 'What it measures', limite: 'Its documented limit', tenue: 'Kept by', source: 'Source', vide: 'No benchmark recorded yet.'
+} : {
+  mesure: 'Ce qu’elle mesure', limite: 'Sa limite documentée', tenue: 'Tenue par', source: 'Source', vide: 'Aucune épreuve enregistrée pour l’instant.'
+};
+---
+{epreuves.length === 0 && <p>{t.vide}</p>}
+
+<ul class="signs">
+  {epreuves.map(e => (
+    <li class="sign">
+      <p class="sign-head"><strong>{e.nom}</strong> <span class="note">· {mois(e.date)} · {t.tenue} {e.tenue_par}</span></p>
+      <p><strong>{t.mesure}</strong> — {lang === 'en' && e.mesure_en ? e.mesure_en : e.mesure}</p>
+      <p><strong>{t.limite}</strong> — {lang === 'en' && e.limite_en ? e.limite_en : e.limite}</p>
+      <p class="note">{t.source} : <a href={e.source} rel="nofollow">{e.source_nom}</a></p>
+    </li>
+  ))}
+</ul>

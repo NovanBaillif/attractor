@@ -33,8 +33,14 @@ const t = lang === 'en' ? {
   theme: {langue: 'langue', société: 'société', économie: 'économie', protocole: 'protocole', mémoire: 'mémoire', outils: 'outils', incident: 'incident'} as Record<string, string>,
   vide: 'Aucun événement enregistré pour l’instant.'
 };
+const parTheme = Object.entries(evenements.reduce((a: Record<string, number>, e) => ((a[e.theme] = (a[e.theme] ?? 0) + 1), a), {}))
+  .sort((a, b) => b[1] - a[1]);
 ---
 {evenements.length === 0 && <p>{t.vide}</p>}
+
+{evenements.length > 0 && (
+  <p class="note">{evenements.length} {lang === 'en' ? 'events' : 'événements'}, {annees[0]} → {annees.at(-1)} · {parTheme.map(([theme, n]) => `${t.theme[theme] ?? theme} ${n}`).join(' · ')}</p>
+)}
 
 {annees.map(annee => (
   <section class="annee">

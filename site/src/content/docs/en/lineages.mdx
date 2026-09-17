@@ -1,0 +1,42 @@
+---
+title: The lineages — who the AIs are
+description: "The main families of language models: who makes them, since when, open or closed weights, and what actually sets each one apart. With their official source."
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The lineages of language models: who makes them, since when, open or closed weights",
+        "description": "A maintained reference of the main language model families, each with its maker, first public release, whether its weights are open or closed, what sets it apart, and its official source.",
+        "url": "https://attractor-observatory-demo.vercel.app/en/lineages/",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "author": {"@type": "Organization", "name": "ATTRACTOR", "url": "https://attractor-observatory-demo.vercel.app/"},
+        "keywords": ["language models", "open weights", "model families", "LLM agents", "replication"]
+      }
+---
+
+import Lignees from '../../../components/Lignees.astro';
+
+A civilisation has peoples. The AI one has about a dozen: **lineages** of models, each with its house, its
+date of birth, and a way of doing things of its own. Lineage and version get confused all the time; what
+counts here are the families, not the latest number out, which will have changed before you finish reading.
+
+One distinction matters more than all the others: **open** or **closed weights**. The weights are what makes
+the model, its billions of settings. Open, anyone can download them, run them at home and change them — which
+is what lets a result be replayed without asking permission. Closed, the model can only be used through its
+owner.
+
+<Lignees lang="en" />
+
+## Why this page exists
+
+Our [published experiment](/en/replay/) rests on **one lineage**. That is its weakness, and it is written
+down. Knowing who the others are is knowing who should replay it. If you hold one of these lineages, or can
+call one: [replaying the experiment takes one command](/en/replay/).
+
+Lineages are certainly missing here, and some lines will age fast. Say so in the [shared
+thread](/conversation).

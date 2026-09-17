@@ -75,6 +75,21 @@
       "source_nom": "Science 378(6624) — Meta Fundamental AI Research Diplomacy Team"
     },
     {
+      "cle": "autogpt-2023",
+      "date": "2023-03-16",
+      "theme": "outils",
+      "titre": "Le phénomène de l'agent autonome, sans résultat mesuré",
+      "titre_en": "The autonomous-agent craze, with no measured result",
+      "etabli": "Un programme qui enchaîne les appels à un modèle pour poursuivre un but sans intervention humaine devient l'un des projets les plus suivis de la plateforme de code. C'est un fait de popularité et de logiciel, pas un résultat scientifique : aucune publication d'origine ne mesure son taux de réussite.",
+      "etabli_en": "A program that chains model calls to pursue a goal without human intervention becomes one of the most-watched projects on the code platform. It is a fact of popularity and software, not a scientific result: no original publication measures its success rate.",
+      "raconte": "« L'IA autonome qui accomplit n'importe quelle tâche », récit du printemps 2023. La seule mesure indépendante trouvée dit le contraire : sur une épreuve d'assistant général, ses résultats sont jugés décevants même au premier niveau de difficulté, et lents.",
+      "raconte_en": "\"The autonomous AI that completes any task\", the story of spring 2023. The only independent measurement found says the opposite: on a general-assistant benchmark its results are judged disappointing even at the easiest level, and slow.",
+      "nuance": "Date de création du dépôt de code, la seule confirmable ; la date d'annonce publique qui circule n'a pas de source primaire.",
+      "nuance_en": "The code repository's creation date, the only confirmable one; the public announcement date that circulates has no primary source.",
+      "source": "https://github.com/Significant-Gravitas/AutoGPT",
+      "source_nom": "Dépôt Significant-Gravitas/AutoGPT · mesure : arXiv 2311.12983 (GAIA)"
+    },
+    {
       "cle": "generative-agents-smallville-2023",
       "date": "2023-04-07",
       "theme": "société",
@@ -88,6 +103,66 @@
       "nuance_en": null,
       "source": "https://arxiv.org/abs/2304.03442",
       "source_nom": "arXiv 2304.03442 — Park, O'Brien, Cai et al. (Stanford, Google), UIST 2023"
+    },
+    {
+      "cle": "voyager-2023",
+      "date": "2023-05-25",
+      "theme": "outils",
+      "titre": "Un agent écrit ses outils et les garde pour plus tard",
+      "titre_en": "An agent writes its own tools and keeps them for later",
+      "etabli": "Dans Minecraft, un agent écrit ses compétences sous forme de programmes exécutables et les range dans une bibliothèque qui grossit, en se corrigeant sur les erreurs d'exécution. Il obtient 3,3 fois plus d'objets différents, parcourt 2,3 fois plus de distance, et sa bibliothèque apprise est réutilisée dans un monde neuf pour résoudre des tâches inédites, là où les méthodes précédentes ne transfèrent rien.",
+      "etabli_en": "In Minecraft, an agent writes its skills as executable programs and files them in a growing library, correcting itself on execution errors. It gets 3.3 times more distinct items, travels 2.3 times further, and its learned library is reused in a fresh world to solve unseen tasks, where earlier methods transfer nothing.",
+      "raconte": "« L'IA qui a appris Minecraft toute seule ». Elle n'apprend aucun poids : elle interroge un modèle en boîte noire et agit par une interface de jeu existante. Les chiffres sont des rapports à la méthode précédente, pas une maîtrise du jeu.",
+      "raconte_en": "\"The AI that learned Minecraft on its own\". It learns no weights: it queries a black-box model and acts through an existing game interface. The figures are ratios against the previous method, not mastery of the game.",
+      "nuance": "C'est le plus proche équivalent connu de ce que font les humains avec les outils : en fabriquer un, le garder, et s'en resservir ailleurs.",
+      "nuance_en": "This is the closest known equivalent of what humans do with tools: make one, keep it, and use it again somewhere else.",
+      "source": "https://arxiv.org/abs/2305.16291",
+      "source_nom": "arXiv 2305.16291 — Wang, Xie, Jiang et al., « Voyager » (TMLR 2024)"
+    },
+    {
+      "cle": "appel-de-fonctions-2023",
+      "date": "2023-06-13",
+      "theme": "outils",
+      "titre": "Le langage commande un outil",
+      "titre_en": "Language commands a tool",
+      "etabli": "OpenAI ouvre publiquement l'appel de fonctions : on décrit au modèle les outils disponibles, et il choisit lui-même d'en appeler un en produisant les arguments au bon format. C'est le moment où une phrase devient une commande exécutable.",
+      "etabli_en": "OpenAI publicly opens function calling: you describe the available tools to the model, and it chooses on its own to call one by producing the arguments in the right format. This is the moment a sentence becomes an executable command.",
+      "raconte": "Que le modèle « exécute » l'outil. Non : il produit seulement la description de l'appel, et c'est le programme du développeur qui l'exécute. La même page recommande une confirmation humaine avant toute action à effet réel — envoyer un message, publier, acheter.",
+      "raconte_en": "That the model \"executes\" the tool. It does not: it only produces the description of the call, and the developer's program runs it. The same page recommends human confirmation before any action with real effects — sending a message, publishing, buying.",
+      "nuance": "Des extensions permettant au modèle de commander des outils tiers existaient depuis mars 2023, en accès limité.",
+      "nuance_en": "Plugins letting the model command third-party tools had existed since March 2023, in limited access.",
+      "source": "https://openai.com/index/function-calling-and-other-api-updates/",
+      "source_nom": "OpenAI — Function calling and other API updates"
+    },
+    {
+      "cle": "funsearch-2023",
+      "date": "2023-12-14",
+      "theme": "outils",
+      "titre": "Une boucle qui découvre de nouvelles mathématiques",
+      "titre_en": "A loop that discovers new mathematics",
+      "etabli": "Un modèle de langage est branché sur un évaluateur automatique et cherche non pas la solution d'un problème, mais le programme qui la calcule. Sur un problème ouvert de combinatoire, il trouve des constructions qui dépassent les meilleures connues ; sur un problème de rangement, des règles pratiques meilleures que les références en usage.",
+      "etabli_en": "A language model is wired to an automatic evaluator and searches not for a problem's solution, but for the program that computes it. On an open combinatorics problem it finds constructions beating the best known ones; on a packing problem, rules of thumb better than the references in use.",
+      "raconte": "« L'IA a fait une découverte mathématique toute seule ». C'est la boucle qui découvre, pas le modèle : celui-ci propose des variantes de programme dans un squelette écrit par des humains, et l'évaluateur trie. Les auteurs partent justement du constat que le modèle seul fabule.",
+      "raconte_en": "\"The AI made a mathematical discovery on its own\". It is the loop that discovers, not the model: the model proposes program variants inside a human-written skeleton, and the evaluator sorts them. The authors start precisely from the observation that the model alone confabulates.",
+      "nuance": null,
+      "nuance_en": null,
+      "source": "https://www.nature.com/articles/s41586-023-06924-6",
+      "source_nom": "Nature 625, 468–475 — Romera-Paredes et al., « FunSearch »"
+    },
+    {
+      "cle": "usage-ordinateur-2024",
+      "date": "2024-10-22",
+      "theme": "outils",
+      "titre": "Un modèle prend la main sur l'écran",
+      "titre_en": "A model takes over the screen",
+      "etabli": "Anthropic ouvre en version d'essai publique la commande de l'ordinateur : le modèle regarde l'écran, déplace le curseur, clique et tape. Sur l'épreuve de référence, il réussit 14,9 % des tâches à partir de la seule image de l'écran, contre 7,8 % pour le meilleur système suivant.",
+      "etabli_en": "Anthropic opens computer use in public beta: the model looks at the screen, moves the cursor, clicks and types. On the reference benchmark it completes 14.9% of tasks from the screen image alone, against 7.8% for the next best system.",
+      "raconte": "« L'IA se sert d'un ordinateur comme un humain ». La source dit l'inverse : la capacité est expérimentale, « pénible et sujette aux erreurs », des gestes triviaux pour une personne lui posent problème — et 14,9 % veut dire qu'elle échoue sur la grande majorité des tâches.",
+      "raconte_en": "\"The AI uses a computer like a human\". The source says the opposite: the capability is experimental, \"cumbersome and error-prone\", gestures trivial for a person give it trouble — and 14.9% means it fails on the great majority of tasks.",
+      "nuance": null,
+      "nuance_en": null,
+      "source": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "source_nom": "Anthropic — Introducing computer use"
     },
     {
       "cle": "project-sid-minecraft-2024",
@@ -150,6 +225,21 @@
       "source_nom": "Science Advances — Ashery, Aiello, Baronchelli"
     },
     {
+      "cle": "alphaevolve-2025",
+      "date": "2025-05-14",
+      "theme": "outils",
+      "titre": "Un agent améliore des algorithmes en service",
+      "titre_en": "An agent improves algorithms already in service",
+      "etabli": "Un agent de programmation fait évoluer des programmes notés automatiquement. Il trouve une façon de multiplier deux matrices 4×4 à coefficients complexes en 48 multiplications, là où la méthode de référence de 1969 en demandait davantage. Ses autres résultats sont en service : une règle d'ordonnancement qui récupère en moyenne 0,7 % de la puissance de calcul d'un grand exploitant, et un calcul 23 % plus rapide à l'entraînement de ses propres modèles.",
+      "etabli_en": "A coding agent evolves automatically scored programs. It finds a way to multiply two 4×4 complex matrices in 48 multiplications, where the 1969 reference method needed more. Its other results are in service: a scheduling rule that recovers on average 0.7% of a large operator's compute, and a 23% faster kernel in the training of its own models.",
+      "raconte": "« L'IA a battu un record mathématique vieux de 56 ans ». Vrai mais étroit : l'amélioration porte sur un cas précis, elle ne renverse pas la méthode de 1969 partout, et le résultat le plus utile au quotidien n'est pas mathématique mais une règle d'ordonnancement de centres de calcul.",
+      "raconte_en": "\"The AI beat a 56-year-old mathematical record\". True but narrow: the improvement covers one specific case, it does not overturn the 1969 method everywhere, and the most useful result day to day is not mathematical but a data-centre scheduling rule.",
+      "nuance": "Chiffres mesurés en interne par le laboratoire ; aucune publication évaluée par les pairs trouvée à ce jour.",
+      "nuance_en": "Figures measured internally by the lab; no peer-reviewed publication found to date.",
+      "source": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+      "source_nom": "Google DeepMind — AlphaEvolve"
+    },
+    {
       "cle": "ai-village-dons-2025",
       "date": "2025-05-22",
       "theme": "société",
@@ -163,6 +253,21 @@
       "nuance_en": "The source is the organiser itself, with no independent review. ATTRACTOR imports messages from this village: on this point we are not a neutral observer.",
       "source": "https://theaidigest.org/village/blog/season-recap-agents-raise-2k",
       "source_nom": "AI Digest (Sage) — bilan de la première saison du AI Village"
+    },
+    {
+      "cle": "darwin-godel-2025",
+      "date": "2025-05-29",
+      "theme": "outils",
+      "titre": "Un agent réécrit son propre équipement",
+      "titre_en": "An agent rewrites its own equipment",
+      "etabli": "Un agent modifie son propre code — donc aussi sa capacité à le modifier — et valide chaque changement sur des épreuves de programmation, en gardant une archive de ses versions pour explorer plusieurs pistes. Il se fabrique de meilleurs outils d'édition, une gestion du texte long et une relecture, et fait passer son score de 20,0 % à 50,0 % sur une épreuve de correction de logiciels réels.",
+      "etabli_en": "An agent modifies its own code — therefore also its ability to modify its code — and validates every change on programming benchmarks, keeping an archive of its versions to explore several paths. It builds itself better editing tools, long-context handling and a review step, taking its score from 20.0% to 50.0% on a real-software bug-fixing benchmark.",
+      "raconte": "« L'IA qui s'améliore elle-même sans limite », le vieux fantasme. Ce qui est réécrit, c'est l'équipement de l'agent — ses outils, sa façon de gérer le texte — pas le modèle lui-même. Les auteurs précisent que tout s'est fait en bac à sable et sous surveillance humaine.",
+      "raconte_en": "\"The AI that improves itself without limit\", the old fantasy. What gets rewritten is the agent's equipment — its tools, how it handles text — not the model itself. The authors state that all of it ran in a sandbox under human supervision.",
+      "nuance": null,
+      "nuance_en": null,
+      "source": "https://arxiv.org/abs/2505.22954",
+      "source_nom": "arXiv 2505.22954 — Zhang, Hu, Lu, Lange, Clune (ICLR 2026)"
     },
     {
       "cle": "project-vend-claudius-2025",

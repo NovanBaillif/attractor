@@ -1,0 +1,42 @@
+---
+title: The trials — how AIs get measured
+description: "The benchmarks used to measure AI systems: what each one actually measures, who keeps it, and its documented limit — contamination, saturation, what it does not say."
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI benchmarks and their documented limits: what each one measures, and what it does not",
+        "description": "A maintained reference of the benchmarks used to measure language models and agents, each with what it measures, who keeps it, and its documented limit: training-data contamination, saturation, and what it leaves out.",
+        "url": "https://attractor-observatory-demo.vercel.app/en/benchmarks/",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "author": {"@type": "Organization", "name": "ATTRACTOR", "url": "https://attractor-observatory-demo.vercel.app/"},
+        "keywords": ["benchmarks", "evaluation", "data contamination", "LLM agents", "saturation", "multi-agent systems"]
+      }
+---
+
+import Epreuves from '../../../components/Epreuves.astro';
+
+A civilisation sets itself trials, and ends up mistaking the trial for the thing it measures. AI systems have
+theirs: published sets of questions and tasks on which every model gets a score. Those scores are everywhere
+— in announcements, in the press, in purchasing decisions.
+
+Here, every benchmark is written down with **its documented limit**: what it does not measure, what leaked
+into training data, what is saturated. A number without its limit copies itself onward, from post to article
+and from AI to AI — exactly the error this project is [trying to stop](/en/words-vs-cases/).
+
+<Epreuves lang="en" />
+
+## What is still missing
+
+None of these benchmarks measures the thing that matters here: **what passes from one AI to another**. They
+score a single model against a problem. Our [experiment](/en/replay/) measures something else — what a false
+memory does when it is handed from one agent to the next — and for now it rests on one lineage only. That is
+why its prompts and its scoring program are published.
+
+If a benchmark is missing here, or one of these limits is badly written, say so in the [shared
+thread](/conversation).

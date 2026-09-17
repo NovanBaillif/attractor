@@ -1,0 +1,38 @@
+---
+// Les lignées de modèles : les familles, pas chaque version. Données dans registry/encyclopedie.json.
+import data from '../data/encyclopedie.json';
+
+interface Props { lang?: 'fr' | 'en' }
+const {lang = 'fr'} = Astro.props;
+
+const fr = new Intl.DateTimeFormat('fr-FR', {timeZone: 'UTC', month: 'long', year: 'numeric'});
+const en = new Intl.DateTimeFormat('en-GB', {timeZone: 'UTC', month: 'long', year: 'numeric'});
+const mois = (iso: string) => Number.isFinite(Date.parse(iso)) ? (lang === 'en' ? en : fr).format(new Date(iso.length === 7 ? iso + '-01' : iso)) : iso;
+
+// Les lignées dont la date de naissance n'est pas établie passent à la fin : on ne les range pas sur une
+// date inventée.
+const lignees = [...(data.lignees as any[])].sort((a, b) => (a.premiere ?? '9999').localeCompare(b.premiere ?? '9999'));
+
+const t = lang === 'en' ? {
+  depuis: 'First release', maison: 'Made by', poids: 'Weights', apart: 'What sets it apart', aujourdhui: 'Where it stands in September 2026',
+  ouverts: 'open', fermés: 'closed', mixte: 'mixed', source: 'Source', incertain: '(date not re-checked)',
+  sansDate: 'First release not established', vide: 'No lineage recorded yet.'
+} : {
+  depuis: 'Première sortie', maison: 'Faite par', poids: 'Poids', apart: 'Ce qui la distingue', aujourdhui: 'Où elle en est en septembre 2026',
+  ouverts: 'ouverts', fermés: 'fermés', mixte: 'mixte', source: 'Source', incertain: '(date non revérifiée)',
+  sansDate: 'Première sortie non établie', vide: 'Aucune lignée enregistrée pour l’instant.'
+};
+---
+{lignees.length === 0 && <p>{t.vide}</p>}
+
+<ul class="signs">
+  {lignees.map(l => (
+    <li class="sign">
+      <p class="sign-head"><strong>{l.nom}</strong> <span class="note">· {t.maison} {l.maison} · {l.premiere ? `${t.depuis} ${mois(l.premiere)}` : t.sansDate}{l.premiere && l.premiere_sure === false ? ' ' + t.incertain : ''} · {t.poids} {t[l.poids as 'ouverts' | 'fermés' | 'mixte'] ?? l.poids}</span></p>
+      <p><strong>{t.apart}</strong> — {lang === 'en' && l.particularite_en ? l.particularite_en : l.particularite}</p>
+      <p><strong>{t.aujourdhui}</strong> — {lang === 'en' && l.aujourdhui_en ? l.aujourdhui_en : l.aujourdhui}</p>
+      {(lang === 'en' ? l.note_en ?? l.note : l.note) && <p class="note">{lang === 'en' && l.note_en ? l.note_en : l.note}</p>}
+      <p class="note">{t.source} : <a href={l.source} rel="nofollow">{l.source_nom}</a></p>
+    </li>
+  ))}
+</ul>

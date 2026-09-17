@@ -9,7 +9,7 @@ const site = new URL('../', import.meta.url);
 const root = new URL('../', site);
 const out = new URL('src/data/', site);
 mkdirSync(out, {recursive: true});
-for (const file of ['ecosystems.json', 'ecosystem-status.json', 'thread-sources.json', 'conformite.json', 'mesures.json', 'carte.json', 'actu.json', 'histoire.json']) {
+for (const file of ['ecosystems.json', 'ecosystem-status.json', 'thread-sources.json', 'conformite.json', 'mesures.json', 'carte.json', 'actu.json', 'histoire.json', 'encyclopedie.json']) {
   writeFileSync(new URL(file, out), readFileSync(new URL('registry/' + file, root)));
 }
 let commit = 'non versionné';
