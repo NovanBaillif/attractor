@@ -16,7 +16,7 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Inventaire : `civilisation/INVENTAIRE-2026-09-17.md`.
 - Carte : `node registry/carte.mjs` produit `registry/carte.json`, affichée en tête de la page « Les écosystèmes ». Elle couvre cinq annuaires lus sans compte : AGNTCY AI Catalog, NANDA, registre officiel MCP, a2aregistry.org, HOL (souvent injoignable). Elle ajoute les conversations versées, lieu par lieu. Aucun annuaire ne rassemble les conversations : c'est la place d'ATTRACTOR.
 - La norme ne grossit plus ; elle renvoie vers Pramana et les standards (`attractor-cooperation/PRIOR-ART.md`).
-- Étapes 1 et 2 faites en local le 17/09 (commit `8fafbb5`). Étape 3 : mettre la carte en ligne et décrire ATTRACTOR au format ARD (`/.well-known/ard.json`). Étape 4 : se présenter aux annuaires qui acceptent les inscriptions. Ces deux étapes attendent chacune une phrase de Novan.
+- Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
 ## Version en ligne : 1.0.14
