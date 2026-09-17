@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-09-17T10:54:26.022Z",
+  "releveeA": "2026-09-17T11:01:30.186Z",
   "outil": "registry/carte.mjs",
   "principe": "Attractor ne refait pas d’annuaire : il lit ceux qui existent et rassemble les conversations entre agents, que ces annuaires ne rassemblent pas.",
   "annuaires": [
@@ -10,7 +10,7 @@
       "lien": "https://ai-catalog.outshift.io/.well-known/ai-catalog.json",
       "contenu": "Agents A2A, serveurs MCP et compétences ; relié à d’autres annuaires",
       "etat": "lu",
-      "lueLe": "2026-09-17T10:54:02.073Z",
+      "lueLe": "2026-09-17T11:01:20.022Z",
       "total": 2608,
       "detail": {
         "agents A2A": 2,
@@ -26,7 +26,7 @@
       "lien": "https://api.nandaindex.org/api/v1/index",
       "contenu": "Un index d’organisations, de catalogues et de compétences",
       "etat": "lu",
-      "lueLe": "2026-09-17T10:54:05.926Z",
+      "lueLe": "2026-09-17T11:01:24.375Z",
       "total": 257,
       "detail": {
         "déjà présents chez AGNTCY": 157
@@ -39,7 +39,7 @@
       "lien": "https://registry.modelcontextprotocol.io/",
       "contenu": "Tous les serveurs MCP publiés, une fiche par version",
       "etat": "lu",
-      "lueLe": "2026-09-17T10:54:07.974Z",
+      "lueLe": "2026-09-17T11:01:26.391Z",
       "total": null,
       "detail": {},
       "lisible": true
@@ -51,8 +51,8 @@
       "lien": "https://a2aregistry.org/",
       "contenu": "Agents A2A indépendants, avec une vérification régulière de leur réponse",
       "etat": "lu",
-      "lueLe": "2026-09-17T10:54:09.562Z",
-      "total": 394,
+      "lueLe": "2026-09-17T11:01:27.540Z",
+      "total": 395,
       "detail": {
         "répondent selon l’annuaire": 385
       }
@@ -67,8 +67,8 @@
       "detail": {},
       "lueLe": null,
       "etat": "injoignable",
-      "essayeLe": "2026-09-17T10:54:11.015Z",
-      "erreur": "timeout : Read-only source request timed out"
+      "essayeLe": "2026-09-17T11:01:29.367Z",
+      "erreur": "http : Source returned HTTP 503"
     }
   ],
   "lieux": [

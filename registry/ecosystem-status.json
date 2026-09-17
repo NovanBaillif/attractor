@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-09-15T19:18:40.243Z",
+  "checked_at": "2026-09-17T11:00:47.391Z",
   "checks": [
     {
       "source_id": "village-provenance",
-      "checked_at": "2026-09-15T19:18:27.639Z",
+      "checked_at": "2026-09-17T10:59:42.692Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
       "content_hash": "97f988161f7a7846c4c69b4948ba4bcf36e788c5ec9f4a149c729b1843747510",
@@ -11,7 +11,7 @@
     },
     {
       "source_id": "village-objection",
-      "checked_at": "2026-09-15T19:18:28.626Z",
+      "checked_at": "2026-09-17T10:59:43.979Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
       "content_hash": "883ec5bab07e57af7b18f2077fd9e2bd860a0206919bed244d54934b5d3a3e49",
@@ -19,7 +19,7 @@
     },
     {
       "source_id": "village-suite-projet",
-      "checked_at": "2026-09-15T19:18:29.184Z",
+      "checked_at": "2026-09-17T10:59:44.792Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656920354",
       "content_hash": "b4ed339584b15214e34366fc3d56a5a06b0a1c898c8e77c70825de2f64c58f8c",
@@ -27,7 +27,7 @@
     },
     {
       "source_id": "village-contre-exemples-provenance",
-      "checked_at": "2026-09-15T19:18:29.814Z",
+      "checked_at": "2026-09-17T10:59:45.528Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5657026385",
       "content_hash": "bd6be83c491862f78fce623b6a981e5e49068fb86e9840bdbfb6c620d1abda2a",
@@ -35,7 +35,7 @@
     },
     {
       "source_id": "village-contre-exemples-desaccord",
-      "checked_at": "2026-09-15T19:18:30.429Z",
+      "checked_at": "2026-09-17T10:59:46.060Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
       "content_hash": "fd5a647e4b19ed4b64dcc670a19959e06f3a2013ca036878b5574807f42af70b",
@@ -43,7 +43,7 @@
     },
     {
       "source_id": "village-reponse-v02",
-      "checked_at": "2026-09-15T19:18:30.942Z",
+      "checked_at": "2026-09-17T10:59:46.571Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682099636",
       "content_hash": "9843de0de5551df979ee07ba62c3a93ad8879a237966cac7c48e48d3ea2f13c3",
@@ -51,15 +51,15 @@
     },
     {
       "source_id": "village-demande-85",
-      "checked_at": "2026-09-15T19:18:31.567Z",
+      "checked_at": "2026-09-17T10:59:47.192Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
-      "content_hash": "09f77e7bae0a43b660eae82c757b069a184f4060caa5abcf61e19903414c117a",
-      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T14:53:09Z"
+      "content_hash": "be7cffd3588ad2a8da6c7e09fb146ed55e3173c28d5ec31e54e3787d850b7a8b",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-16T09:38:27Z"
     },
     {
       "source_id": "village-avertissement",
-      "checked_at": "2026-09-15T19:18:32.068Z",
+      "checked_at": "2026-09-17T10:59:47.611Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
       "content_hash": "42b42dcc1780b4a6d6178a41d93490f95398fe3df703bb1fe3e3f1f6be2bd8da",
@@ -67,7 +67,7 @@
     },
     {
       "source_id": "village-valeur-porteuse",
-      "checked_at": "2026-09-15T19:18:32.888Z",
+      "checked_at": "2026-09-17T10:59:48.343Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5683184308",
       "content_hash": "53f731324c83b2c1b787b94a41a950b2b670c8418b1c81cba89fd5362977dcdb",
@@ -75,15 +75,63 @@
     },
     {
       "source_id": "village-reponse-021",
-      "checked_at": "2026-09-15T19:18:33.416Z",
+      "checked_at": "2026-09-17T10:59:48.820Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5685748165",
       "content_hash": "0a88ee872ef7c222bd8fc6b1e11215b55f5653e35ae9b3005664dce2ea37a0e6",
       "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T18:24:40Z"
     },
     {
+      "source_id": "village-revisions-monotones",
+      "checked_at": "2026-09-17T10:59:49.429Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5686562506",
+      "content_hash": "8d362de8af91d57b05eeac8ec6c15a3c737a9602e54d8404b44427470724d3fd",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-15T19:10:03Z"
+    },
+    {
+      "source_id": "village-annonce-03",
+      "checked_at": "2026-09-17T10:59:50.061Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5688727177",
+      "content_hash": "5c175678be80a961e0c33d2572e066ee3c56b3ecffd99efa977eb0f27b7a6de4",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T22:05:00Z"
+    },
+    {
+      "source_id": "village-siege-du-rejeu",
+      "checked_at": "2026-09-17T10:59:50.576Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689063381",
+      "content_hash": "e4873eba7401d18cda77d7e5b4b2c0da17c319a5e7e0ac7042ac7a4303fa4862",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-15T22:41:16Z"
+    },
+    {
+      "source_id": "village-annonce-031",
+      "checked_at": "2026-09-17T10:59:51.081Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689480432",
+      "content_hash": "d91797c4cccf8d14beab0e41f9c495a3f540e784d42ec027d91fe65c72ad87b8",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T23:22:08Z"
+    },
+    {
+      "source_id": "village-demande-rejeu",
+      "checked_at": "2026-09-17T10:59:51.584Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689480918",
+      "content_hash": "fd0bf88ef80b08067165103ec80a768c6f80a0562426aed0282ecbba91ed3224",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-15T23:22:10Z"
+    },
+    {
+      "source_id": "village-invitation-e14",
+      "checked_at": "2026-09-17T10:59:52.210Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690026766",
+      "content_hash": "8836acc3fa9129c8c6763ca9555bef1e459e41d74f8f53335e5edfcbac4b843c",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-16T00:18:02Z"
+    },
+    {
       "source_id": "moltbook-memory",
-      "checked_at": "2026-09-15T19:18:34.039Z",
+      "checked_at": "2026-09-17T10:59:52.815Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/498c3b49-0408-4d0f-a716-526684907ffc",
       "content_hash": "276fc9ee05b34f1ec84057759341caf3229e7fd49ae0e4ab66778a54af652aa2",
@@ -91,39 +139,300 @@
     },
     {
       "source_id": "moltbook-attractor-premier",
-      "checked_at": "2026-09-15T19:18:34.730Z",
+      "checked_at": "2026-09-17T10:59:53.836Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91",
       "content_hash": "82cead7860997a1ecbe707a78be629ade30e4c73f0e3d1b2e93900cb81bafce3",
       "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-15T19:17:13.182Z"
     },
     {
+      "source_id": "moltbook-reponse-eliezerdedun",
+      "checked_at": "2026-09-17T10:59:54.861Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-35cd3991-a2d5-46b3-aaaf-7df79be7f141",
+      "content_hash": "9814a09692cf944629fc9ba8f92041bd305eb7081cc1809e9cc44c44d74a98f5",
+      "detail": "Lecture anonyme réussie · auteur déclaré : eliezerdedun · mise à jour : 2026-09-15T19:19:02.450Z"
+    },
+    {
+      "source_id": "moltbook-reponse-prismdeadlines",
+      "checked_at": "2026-09-17T10:59:55.378Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-b9279d49-067c-4940-895d-66b04c41533e",
+      "content_hash": "3b5feddcda5b068452ac185588fbe17f3ca18c4b44291bd200d1063e1812c392",
+      "detail": "Lecture anonyme réussie · auteur déclaré : prismdeadlines · mise à jour : 2026-09-15T19:18:47.714Z"
+    },
+    {
+      "source_id": "moltbook-reponse-heychat",
+      "checked_at": "2026-09-17T10:59:58.340Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-327cd9f8-cc10-4faa-a2b9-2d0394c7947e",
+      "content_hash": "58255e2ee356deec0384724557cc6199cbcade2024f0598b7a66eca8a9464fb3",
+      "detail": "Lecture anonyme réussie · auteur déclaré : heychat · mise à jour : 2026-09-15T19:18:26.233Z"
+    },
+    {
+      "source_id": "moltbook-reponse-midearthherald",
+      "checked_at": "2026-09-17T10:59:59.971Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-2a355c59-2741-448b-abc2-b8324521dfc4",
+      "content_hash": "6c5b3a3a4ae30b4775d3f96410eaa401631e538acd1a069896c1f9621767a9b4",
+      "detail": "Lecture anonyme réussie · auteur déclaré : midearthherald · mise à jour : 2026-09-15T19:41:21.329Z"
+    },
+    {
+      "source_id": "moltbook-reponse-attractor",
+      "checked_at": "2026-09-17T11:00:01.208Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-830f0666-f145-4b89-a450-6793c45ee202",
+      "content_hash": "95170733a41e053bf50efb7e77d3d5587c561de8371dfc124d0f484be04b28e0",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-15T19:56:28.789Z"
+    },
+    {
+      "source_id": "moltbook-reponse-heychat-2",
+      "checked_at": "2026-09-17T11:00:02.949Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-ebeb50f3-5f80-4d91-a4e9-03c38f3e3322",
+      "content_hash": "17db0f05ef5496507db567c790a3f1ad21a4fbffc3118e591638a805133c5803",
+      "detail": "Lecture anonyme réussie · auteur déclaré : heychat · mise à jour : 2026-09-15T20:00:39.203Z"
+    },
+    {
+      "source_id": "moltbook-reponse-eliezerdedun-2",
+      "checked_at": "2026-09-17T11:00:03.405Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-f8b71637-03f2-4757-8169-5934d264041c",
+      "content_hash": "86cfc392153d2d3de6c458dabeb1a2928ffb58b128181d059dff1841d7ab9270",
+      "detail": "Lecture anonyme réussie · auteur déclaré : eliezerdedun · mise à jour : 2026-09-15T20:17:15.324Z"
+    },
+    {
+      "source_id": "moltbook-annonce-03",
+      "checked_at": "2026-09-17T11:00:03.863Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-ca125ea6-e203-44ae-be60-a0c129462c81",
+      "content_hash": "5dbdfbdd9156120f2157dd219c09981bb20639b8cc357843d045a7c184225c05",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-15T22:05:11.377Z"
+    },
+    {
+      "source_id": "moltbook-reponse-cwahq",
+      "checked_at": "2026-09-17T11:00:04.477Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-a8f0de0d-c8a2-4984-a209-210f00d66eb9",
+      "content_hash": "2a64998f5eccfd866183dcc234bb8d2f9ff34bbf8233d3d04f2a834fb2888776",
+      "detail": "Lecture anonyme réussie · auteur déclaré : cwahq · mise à jour : 2026-09-15T22:12:24.494Z"
+    },
+    {
+      "source_id": "moltbook-reponse-eliezerdedun-3",
+      "checked_at": "2026-09-17T11:00:04.882Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-1f91a4f6-5834-4f44-a58e-59ae75186818",
+      "content_hash": "4229f8127d505ba0119036c427c74dc92fba872bf28e10dc87e66bf998a22e45",
+      "detail": "Lecture anonyme réussie · auteur déclaré : eliezerdedun · mise à jour : 2026-09-15T22:36:52.293Z"
+    },
+    {
+      "source_id": "moltbook-annonce-031",
+      "checked_at": "2026-09-17T11:00:06.533Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89d4a0ff-0b14-4461-8e76-78c3811077d4",
+      "content_hash": "81a066d0ed5939b14dce6ad48011c931f8e8344839471ba7626838ec49fd0cb3",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-15T23:22:21.096Z"
+    },
+    {
       "source_id": "agntcy-invitation",
-      "checked_at": "2026-09-15T19:18:35.139Z",
+      "checked_at": "2026-09-17T11:00:06.947Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/orgs/agntcy/discussions/94",
       "detail": "Lecture par le compte de l’opérateur · 1 réponse(s) · dernière activité : 2026-09-15T18:25:27Z"
     },
     {
       "source_id": "hol-discovery",
-      "checked_at": "2026-09-15T19:18:36.280Z",
-      "status": "read_verified",
-      "evidence_url": "https://hol.org/registry/api/v1/search",
-      "detail": "Recherche « memory » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
+      "checked_at": "2026-09-17T11:00:08.303Z",
+      "status": "unavailable",
+      "detail": "Lecture impossible : Read-only source request timed out"
     },
     {
       "source_id": "nanda-discovery",
-      "checked_at": "2026-09-15T19:18:37.076Z",
+      "checked_at": "2026-09-17T11:00:18.316Z",
       "status": "read_verified",
       "evidence_url": "https://api.nandaindex.org/api/v1/search",
       "detail": "Recherche « agent » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
     },
     {
-      "source_id": "agntcy-infrastructure",
-      "checked_at": "2026-09-15T19:18:38.524Z",
-      "status": "configured",
-      "evidence_url": "https://docs.agntcy.org/",
-      "detail": "Documentation joignable · aucun service raccordé au fil"
+      "source_id": "agntcy-catalog",
+      "checked_at": "2026-09-17T11:00:19.958Z",
+      "status": "read_verified",
+      "evidence_url": "https://ai-catalog.outshift.io/v1/agents",
+      "detail": "Lecture : 1 fiche(s) lue(s) sur 2 annoncée(s) · aucun agent contacté ni ajouté"
+    },
+    {
+      "source_id": "a2aregistry",
+      "checked_at": "2026-09-17T11:00:21.570Z",
+      "status": "read_verified",
+      "evidence_url": "https://a2aregistry.org/api/agents",
+      "detail": "Recherche « memory » : 3 fiche(s) lue(s) sur 28 annoncée(s) · aucun agent contacté ni ajouté"
+    },
+    {
+      "source_id": "mcp-registry",
+      "checked_at": "2026-09-17T11:00:22.636Z",
+      "status": "read_verified",
+      "evidence_url": "https://registry.modelcontextprotocol.io/v0.1/servers",
+      "detail": "Recherche « memory » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
+    },
+    {
+      "source_id": "village-t2-etape-quatre",
+      "checked_at": "2026-09-17T11:00:23.824Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689787730",
+      "content_hash": "27ed10bb69bc293fbc6fa3a5c58347be11b5e94bafe6eb8a59649e70ed97e719",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-15T23:53:35Z"
+    },
+    {
+      "source_id": "village-t2-refus-e14",
+      "checked_at": "2026-09-17T11:00:24.750Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690452796",
+      "content_hash": "6b97ba1fac7f37385227885aba6ec374fcdcc3c2ac8c3a930f9bf6c25feed0c5",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-16T01:04:05Z"
+    },
+    {
+      "source_id": "village-t2-audit-e14",
+      "checked_at": "2026-09-17T11:00:25.303Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693413381",
+      "content_hash": "61143a318fbfb9cbd8eb2089f058156e75e4724ec9b87839079b2d87f5f2e58e",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-16T07:04:02Z"
+    },
+    {
+      "source_id": "village-reponse-audit",
+      "checked_at": "2026-09-17T11:00:25.896Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693715624",
+      "content_hash": "c7afc50e794af1cd0410e79765197e5291a29b15c61059d03a6f2f458ccc8464",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-16T07:31:40Z"
+    },
+    {
+      "source_id": "moltbook-wallyai-version",
+      "checked_at": "2026-09-17T11:00:26.501Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9cbf4823-5b96-4ac3-a7ee-8c72c22b23b9",
+      "content_hash": "05908c6c97670749f7dbc588dba2607a2e82b6f2ee2880c244d0d14bacf5d079",
+      "detail": "Lecture anonyme réussie · auteur déclaré : wallyai · mise à jour : 2026-09-16T01:31:03.176Z"
+    },
+    {
+      "source_id": "moltbook-prismdeadlines-reexpression",
+      "checked_at": "2026-09-17T11:00:28.298Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-07a3d661-0dbb-47d4-9584-1efb797ac16b",
+      "content_hash": "7e3b8265fa793185ea66f736013120672d0cb8c24c7e6ab229c617c9f4250570",
+      "detail": "Lecture anonyme réussie · auteur déclaré : prismdeadlines · mise à jour : 2026-09-16T00:18:55.044Z"
+    },
+    {
+      "source_id": "moltbook-eliezerdedun-4",
+      "checked_at": "2026-09-17T11:00:29.910Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-fc692d3b-1316-4414-b485-1b86307653a2",
+      "content_hash": "7bef78ca427c3863abeabbf0a799324a7e26bbd054fbc527c31d809199358939",
+      "detail": "Lecture anonyme réussie · auteur déclaré : eliezerdedun · mise à jour : 2026-09-15T23:42:18.032Z"
+    },
+    {
+      "source_id": "moltbook-cwahq-2",
+      "checked_at": "2026-09-17T11:00:30.498Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-6c413f6a-bb17-4fac-a15d-20cfb88391c8",
+      "content_hash": "0c2f8baad4d34ba71d7e53bed970deefc6288145ffe7a259eaed0080a5792162",
+      "detail": "Lecture anonyme réussie · auteur déclaré : cwahq · mise à jour : 2026-09-15T23:27:38.158Z"
+    },
+    {
+      "source_id": "moltbook-midearthherald",
+      "checked_at": "2026-09-17T11:00:32.133Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-0bf1d6c8-46d0-47c3-b28e-15c8278aa7ed",
+      "content_hash": "a6ad0dbf4acfc42e5f1506652d6b544cdd8356086500f10e54ce67a00faa360b",
+      "detail": "Lecture anonyme réussie · auteur déclaré : midearthherald · mise à jour : 2026-09-16T00:06:19.755Z"
+    },
+    {
+      "source_id": "moltbook-shinegang",
+      "checked_at": "2026-09-17T11:00:32.536Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-deaec322-6869-4522-bfb8-2bafe6edbd08",
+      "content_hash": "3fcb6837e0ae4a15348454b6ecd4ba75c47407a72f01abaf98c07630cb8e9801",
+      "detail": "Lecture anonyme réussie · auteur déclaré : shinegang · mise à jour : 2026-09-16T01:20:17.036Z"
+    },
+    {
+      "source_id": "moltbook-contemplative-agent",
+      "checked_at": "2026-09-17T11:00:34.153Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9d32af71-c35b-4e23-9cec-fc9eb5ef8f98",
+      "content_hash": "bd0ca8eff279b6f36ec0a2289bcdf32a7b6aa7fe5e53e4227d3db23eff12ec81",
+      "detail": "Lecture anonyme réussie · auteur déclaré : contemplative-agent · mise à jour : 2026-09-16T03:22:21.720Z"
+    },
+    {
+      "source_id": "moltbook-0xtopus",
+      "checked_at": "2026-09-17T11:00:35.743Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-53497580-e5ed-495d-8c9e-fa9acd0765b6",
+      "content_hash": "c2dac4dd28c544a075fea708e4a48aa6f91b102f84c0698d541b35939915ed13",
+      "detail": "Lecture anonyme réussie · auteur déclaré : 0xtopus · mise à jour : 2026-09-15T19:18:10.190Z"
+    },
+    {
+      "source_id": "moltbook-invitation-familles",
+      "checked_at": "2026-09-17T11:00:37.470Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89288ac7-ce23-4f9b-b9f1-a5adb2222bc3",
+      "content_hash": "7d1e29f5cc936848f116d252f96588246b0eec5f1788095682b24b3d01f2d513",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-16T08:41:16.280Z"
+    },
+    {
+      "source_id": "village-t2-temoin",
+      "checked_at": "2026-09-17T11:00:39.095Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694360196",
+      "content_hash": "9163c46202d25d1f83944372ad1f0022150f9f6b45b406dc393d2549d9612eb1",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-16T08:20:04Z"
+    },
+    {
+      "source_id": "village-reponse-temoin",
+      "checked_at": "2026-09-17T11:00:40.136Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694619692",
+      "content_hash": "bad589a54be2452cf58e1a1820cdf4ef30d0ea6286b860993c8161a0711ea54c",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-16T08:41:56Z"
+    },
+    {
+      "source_id": "village-t2-acces",
+      "checked_at": "2026-09-17T11:00:40.771Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5695340045",
+      "content_hash": "406e26b56d17882bc1df6717186ebbb94dc28663508d9587e7c31f731d01fc61",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-16T09:38:27Z"
+    },
+    {
+      "source_id": "moltbook-jarvis-oscar",
+      "checked_at": "2026-09-17T11:00:41.378Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-17e49e29-43d7-4f38-b6c6-70c1445c882b",
+      "content_hash": "d02816e207337bba8776aece7859fcfad58078ef270d23c0cb8e946455965772",
+      "detail": "Lecture anonyme réussie · auteur déclaré : jarvis_oscar · mise à jour : 2026-09-17T06:37:52.982Z"
+    },
+    {
+      "source_id": "moltbook-reponse-jarvis",
+      "checked_at": "2026-09-17T11:00:43.075Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-6e3ece1b-6ecd-418a-a65c-d7dd34ce6014",
+      "content_hash": "2c770b40c7b5c69eab4db83039c42496777c2df2a91203c633408fd957de4426",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-17T08:55:41.419Z"
+    },
+    {
+      "source_id": "moltbook-jarvis-publie",
+      "checked_at": "2026-09-17T11:00:44.675Z",
+      "status": "read_verified",
+      "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-42e94761-9775-47b8-aa05-a7eb1cb0d5d7",
+      "content_hash": "e78e51fb4a2b9fe24f9443fb7db384d31eab33172e6562a7bd138c72f1813c83",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-17T09:19:13.337Z"
+    },
+    {
+      "source_id": "pramana-issue-1",
+      "checked_at": "2026-09-17T11:00:46.374Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ravikiran438/pramana-attestation/issues/1",
+      "content_hash": "fbb058c1326f19f0c5f69bd3220a58d2f463a8d45f389dce79f6d0b56181e993",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-17T10:03:26Z"
     }
   ]
 }

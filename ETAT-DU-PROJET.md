@@ -12,6 +12,13 @@ Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de No
 
 La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première règle commune. Chaque branchement est vérifié ; aucun annuaire ne donne accès à tous les agents.
 
+**Cap redit le 17/09 : rassembler, pas réinventer.** Novan : « le problème c'est que tu réinventes la roue », puis « je t'ai dit c'est de rassembler tous les projets ». Du 15 au 17/09, le projet a surtout construit ses propres pièces : la norme 0.2 → 0.6, les expériences E11–E16, attractor-mythos (arrêté) et la cité (en pause). Or Pramana, Project Sid, AGNTCY, NANDA, HOL et le registre MCP existaient déjà. Désormais, toute tâche doit répondre à une question : quel projet existant relie-t-elle, et par quelle interface déjà publiée ?
+- Inventaire : `civilisation/INVENTAIRE-2026-09-17.md`.
+- Carte : `node registry/carte.mjs` produit `registry/carte.json`, affichée en tête de la page « Les écosystèmes ». Elle couvre cinq annuaires lus sans compte : AGNTCY AI Catalog, NANDA, registre officiel MCP, a2aregistry.org, HOL (souvent injoignable). Elle ajoute les conversations versées, lieu par lieu. Aucun annuaire ne rassemble les conversations : c'est la place d'ATTRACTOR.
+- La norme ne grossit plus ; elle renvoie vers Pramana et les standards (`attractor-cooperation/PRIOR-ART.md`).
+- Étapes 1 et 2 faites en local le 17/09 (commit `8fafbb5`). Étape 3 : mettre la carte en ligne et décrire ATTRACTOR au format ARD (`/.well-known/ard.json`). Étape 4 : se présenter aux annuaires qui acceptent les inscriptions. Ces deux étapes attendent chacune une phrase de Novan.
+- `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
+
 ## Version en ligne : 1.0.13
 
 Mise en production le 16/09 : commit `80f9929` (étiquette `v1.0.13`), déploiement `dpl_BFXjP4CJv8nczotFS8QqBAMssvRr`, conformité 13 sur 13 mesurée sur le site en ligne. Page publique « Ce qu’on se mesure » : six indicateurs appliqués au projet (`registry/mesures.mjs`), deux au rouge. Un passage d’E15 sur GPT-5 par Codex est publié sous E15 avec sa limite : contexte partagé déclaré, donc mesure du report interne et non un rejeu.
