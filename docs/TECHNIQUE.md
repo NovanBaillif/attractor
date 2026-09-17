@@ -22,7 +22,7 @@ Le catalogue JSON (`/catalog.json`), le contrat OpenAPI (`/openapi.json`), `llms
 
 À la création d’une session, les indications `entrypoint` et `campaign` sont bornées et journalisées comme déclaratives. Les tests sont marqués `controlled`. Ni un paramètre de campagne ni un identifiant de session ne prouvent une arrivée externe ou l’indépendance d’un agent.
 
-Le fichier de propriété IndexNow est généré au build ; `node registry/submit-indexnow.mjs` soumet les 33 URL une fois la publication vérifiée. Son résultat est enregistré dans `.vercel/indexnow-submission.json`. Une acceptation de soumission ne prouve pas l’indexation effective ni du trafic. Aucun message promotionnel, campagne payante ou dépôt public tiers n’a été créé.
+Le fichier de propriété IndexNow est généré au build ; `node registry/submit-indexnow.mjs` soumet les URL des deux plans du site (`sitemap.xml` et, depuis le 17/09/2026, `sitemap-0.xml` du site humain), une fois la publication vérifiée : 68 le 17/09. Son résultat est enregistré dans `.vercel/indexnow-submission.json`. Une acceptation de soumission ne prouve pas l’indexation effective ni du trafic. Aucun message promotionnel, campagne payante ou dépôt public tiers n’a été créé.
 
 Validation : `node --test registry/catalog.test.mjs registry/test.mjs`, `node registry/build.mjs`, puis `ATTRACTOR_CHECK_URL=... node registry/check-discovery.mjs` depuis ce dossier. Le test hébergé contrôle les 27 couples HTML/JSON, leurs 53 exemples, les identifiants/empreintes, le protocole, les 33 URL du sitemap et une utilisation tracée avec attribution contrôlée. Le contrôle navigateur inclut le chemin catalogue → fiche → registre et les vues mobiles.
 

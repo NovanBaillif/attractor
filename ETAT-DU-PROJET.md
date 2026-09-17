@@ -30,7 +30,11 @@ Mise en production le 17/09 : commit `f41a5b6` (étiquette `v1.0.17`), déploiem
 - données structurées JSON-LD (jeu de données sur `/en/replay/`, articles pour les notes, site pour l'accueil) ;
 - plan du site sans les doublons `/en/` ; ces pages renvoient à l'original français et demandent à ne pas être indexées ;
 - `/actu` ajoutée à `sitemap.xml`.
-Étape 5, signaler les pages aux moteurs (IndexNow, Google Search Console) : elle attend la phrase de Novan. Search Console demande qu'il se connecte lui-même.
+Étape 5 faite le 17/09, sur la phrase de Novan :
+- IndexNow a accepté 68 adresses (HTTP 200) : `node registry/submit-indexnow.mjs`, qui lit maintenant les deux plans du site ;
+- Search Console est validé (Préfixe d'URL). Le plan du site y affichait « Impossible de récupérer » juste après l'envoi, état normal pour une propriété neuve ;
+- les « Demander l'indexation » ont atteint le quota du jour : Novan reprend le 18/09 (`/en/replay/` en premier).
+Une acceptation IndexNow ne prouve pas l'indexation.
 
 ### 1.0.16
 
