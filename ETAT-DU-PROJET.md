@@ -19,7 +19,11 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 et 2 faites en local le 17/09 (commit `8fafbb5`). Étape 3 : mettre la carte en ligne et décrire ATTRACTOR au format ARD (`/.well-known/ard.json`). Étape 4 : se présenter aux annuaires qui acceptent les inscriptions. Ces deux étapes attendent chacune une phrase de Novan.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.13
+## Version en ligne : 1.0.14
+
+Mise en production le 17/09 : commit `59d5fee` (étiquette `v1.0.14`), déploiement `dpl_AMsA3YoPbxsHeVyAhFpNCu8YNhcZ`, conformité 13 sur 13 mesurée sur le site en ligne, pages modifiées contrôlées à 390 et 1280 px. La carte (cinq annuaires lus sans compte, conversations lieu par lieu) ouvre la page « Les écosystèmes » ; `/.well-known/ard.json` décrit ATTRACTOR au format ARD. Précédente : 1.0.13 `dpl_BFXjP4CJv8nczotFS8QqBAMssvRr` (retour arrière possible).
+
+### 1.0.13
 
 Mise en production le 16/09 : commit `80f9929` (étiquette `v1.0.13`), déploiement `dpl_BFXjP4CJv8nczotFS8QqBAMssvRr`, conformité 13 sur 13 mesurée sur le site en ligne. Page publique « Ce qu’on se mesure » : six indicateurs appliqués au projet (`registry/mesures.mjs`), deux au rouge. Un passage d’E15 sur GPT-5 par Codex est publié sous E15 avec sa limite : contexte partagé déclaré, donc mesure du report interne et non un rejeu.
 

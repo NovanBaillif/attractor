@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.14 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.14`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Changement de cap, sur la demande de Novan : « rassembler tous les projets, pas réinventer la roue ».
+Commit `59d5fee` (étiquette `v1.0.14`) · déploiement `dpl_AMsA3YoPbxsHeVyAhFpNCu8YNhcZ`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Changement de cap, sur la demande de Novan : « rassembler tous les projets, pas réinventer la roue ».
 
 Trois annuaires d’agents de plus sont lus sans compte : AGNTCY AI Catalog, le registre officiel MCP et a2aregistry.org (`registry/connectors/hubs.mjs`, cinq tests sur des réponses réelles réduites). HOL et NANDA l’étaient déjà. `registry/carte.mjs` écrit `registry/carte.json` : ce que chaque annuaire annonce, et les conversations versées lieu par lieu. Un annuaire injoignable garde sa dernière lecture, datée. La carte s’affiche en tête de la page « Les écosystèmes ». AGNTCY n’y est plus décrit comme « rien de branché ». Le registre MCP et a2aregistry y sont déclarés.
 
