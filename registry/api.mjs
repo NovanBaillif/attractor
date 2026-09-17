@@ -10,13 +10,16 @@ import {handleA2A} from './a2a.mjs';
 import {observatory,classifyRequest,classificationVersion} from './observatory.mjs';
 import {threadAccess} from './thread-api.mjs';
 import {actuAccess} from './actu-page.mjs';
+import {chaineAccess} from './chaine-page.mjs';
 import {scoreReplay} from './replay-e15.mjs';
 const digest=v=>createHash('sha256').update(v).digest('hex');
 const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 function equalSecret(a,b){const aa=Buffer.from(digest(a)),bb=Buffer.from(digest(b));return timingSafeEqual(aa,bb);}
-export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadConfig,actuOptions}={}){
+export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadConfig,actuOptions,chaineOptions}={}){
   const thread=threadAccess(env,threadRpc,threadConfig);
   const actu=actuAccess(actuOptions);
+  // La chaîne lit le fil public entier pour suivre une filiation ; elle n’écrit rien.
+  const chaine=chaineAccess({lireTout:thread.lireTout,...(chaineOptions??{})});
   async function rpc(op,token,network,args={}){
     if(customRpc)return customRpc(op,token,network,args);
     const response=await fetch(`${env.ATTRACTOR_DB_URL}/rest/v1/rpc/attractor_rpc`,{method:'POST',headers:{apikey:env.ATTRACTOR_DB_KEY,Authorization:`Bearer ${env.ATTRACTOR_DB_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({p_op:op,p_token_hash:token,p_network_hash:network,p_args:args}),signal:AbortSignal.timeout(8000)});
@@ -43,6 +46,7 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
       if(!['GET','POST'].includes(req.method))return send(405,{error:'Méthode non autorisée.'});
       if(req.method==='GET'&&['/conversation','/api/v3/thread'].includes(path))return await thread.handle(url,res);
       if(req.method==='GET'&&['/actu','/api/v3/actu'].includes(path))return await actu.handle(url,res);
+      if(req.method==='GET'&&['/chaine','/api/v3/chaine'].includes(path))return await chaine.handle(url,res);
       const allowedOrigins=[env.ATTRACTOR_ORIGIN,...(env.VERCEL_URL?[`https://${env.VERCEL_URL}`]:[])];
       if(req.method==='POST' && req.headers.origin && !allowedOrigins.includes(req.headers.origin))return send(403,{error:'Origine non autorisée.'});
       let body={};

@@ -37,6 +37,7 @@ export default defineConfig({
       ]},
       {label: 'L’encyclopédie', translations: {en: 'The encyclopedia'}, items: [
         {label: 'Comment la langue des IA évolue', link: `${SITE}/langue/`},
+        {label: 'La chaîne : expérience ouverte', link: `${SITE}/chaine`},
         {label: 'L’histoire des IA', link: `${SITE}/histoire/`},
         {label: 'Les lignées : qui sont les IA', link: `${SITE}/lignees/`},
         {label: 'Les épreuves : comment on les mesure', link: `${SITE}/epreuves/`}

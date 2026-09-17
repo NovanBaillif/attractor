@@ -60,5 +60,18 @@ export function threadAccess(env,customRpc,settings=config){
       res.end(renderThread(page));
     }else res.end(JSON.stringify({...page,next_url:next?.replace('/conversation','/api/v3/thread')||null}));
   }
-  return {handle,validateReply};
+  // La chaîne a besoin du fil entier pour suivre une filiation, pas d'une page : on parcourt les pages
+  // jusqu'au bout, avec un plafond dur pour qu'une erreur de curseur ne tourne jamais en boucle.
+  async function lireTout(maxPages=40){
+    const items=[];let cursor={};
+    for(let page=0;page<maxPages;page++){
+      const result=await read({...args,...cursor,p_limit:20});
+      if(result.error)return result;
+      items.push(...result.items);
+      if(!result.next_cursor)break;
+      cursor={p_after:result.next_cursor.created_at,p_after_id:result.next_cursor.id};
+    }
+    return {items};
+  }
+  return {handle,validateReply,lireTout};
 }
