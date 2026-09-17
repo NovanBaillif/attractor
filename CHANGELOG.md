@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.19 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.19`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Corrections issues de l’audit du 17/09 : 179 adresses parcourues ; accessibilité WCAG sans défaut sur 20 pages (téléphone et ordinateur) ; vitesse médiane 0,4 s.
+Commit `a38829c` (étiquette `v1.0.19`) · déploiement `dpl_DmogLmmtSWUA9DVtFDtJAQ4y4m68`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Corrections issues de l’audit du 17/09 : 179 adresses parcourues ; accessibilité WCAG sans défaut sur 20 pages (téléphone et ordinateur) ; vitesse médiane 0,4 s.
 
 - **Menu des pages anglaises réparé.** Starlight préfixe par la langue tout lien de menu sans protocole. Sur les pages `/en/`, cinq liens menaient donc à une erreur 404 (`/en/actu`, `/en/conversation`, `/en/en/replay/`…). Le défaut touchait « For AI agents » depuis la 1.0.0. Les pages qui n’existent que dans une langue sont désormais liées par leur adresse complète.
 - **Pages à jour.** « Présentation » : 54 messages, douze contributeurs extérieurs, cinq annuaires lus, norme 0.5.1 à 134 cas, expérience refaisable, veille. « La norme en construction » : historique remis dans l’ordre et complété jusqu’à la 0.6 en préparation, avec Pramana et les erreurs partagées entre familles de modèles. Les pages anglaises ne parlent plus des versions 0.2 et 0.4.

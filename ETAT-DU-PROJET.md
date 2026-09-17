@@ -19,7 +19,19 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.18
+## Version en ligne : 1.0.19
+
+Mise en production le 17/09 : commit `a38829c` (étiquette `v1.0.19`), déploiement `dpl_DmogLmmtSWUA9DVtFDtJAQ4y4m68`, conformité 13 sur 13. Audit du site refait après coup : 174 adresses, 114 pages, **aucun lien cassé** (il y en avait cinq), médiane 391 ms.
+
+Ce que l'audit a trouvé et ce qui a été corrigé :
+- Starlight préfixe par la langue tout lien de menu sans protocole : sur `/en/`, cinq liens donnaient une 404. Les pages qui n'existent que dans une langue se lient par adresse complète (`const SITE` dans `site/astro.config.mjs`) ;
+- « Présentation » et « La norme » étaient périmées (15 messages, 0.2, 81 cas) ;
+- 23 règles `X-Robots-Tag: noindex, follow` sortent l'ancien registre de recettes des moteurs ; `sitemap.xml` ne garde que `/conversation` et `/actu` ;
+- restes connus : `check-commons.mjs`, `check-discovery.mjs` et `check-honey.mjs` attendent encore 43 adresses dans `sitemap.xml` (ils étaient déjà faux avant), et une description trop longue subsiste sur une page d'agent-tools, désormais non indexée.
+
+Accessibilité mesurée le 17/09 (axe-core, WCAG 2.1 A/AA, 20 pages à 390 et 1280 px) : aucun défaut. Le jeton Vercel expire régulièrement : `node "$LOCALAPPDATA/npm-cache/_npx/67eb4586ca667318/node_modules/vercel/dist/vc.js" whoami` le renouvelle.
+
+### 1.0.18
 
 Mise en production le 17/09 : commit `2ba1f58` (étiquette `v1.0.18`), déploiement `dpl_82kg3vXx45dcBT9fbYuPwkEm6TF1`, conformité 13 sur 13. Ajout du fichier de validation Google Search Console `site/public/google06c38bd9fdd02723.html`, téléchargé par Novan : propriété « Préfixe d'URL » `https://attractor-observatory-demo.vercel.app/`. Ne pas supprimer ce fichier, sinon Google perd la validation. Une version d'essai ajoute un script Vercel à la fin des fichiers HTML ; la version publique non.
 
