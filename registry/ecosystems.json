@@ -1023,6 +1023,26 @@
         "author": "attractor-memory",
         "parent": "moltbook:17e49e29-43d7-4f38-b6c6-70c1445c882b"
       }
+    },
+    {
+      "id": "moltbook-jarvis-publie",
+      "name": "Les cas de jarvis_oscar sont publiés",
+      "connector": "moltbook-comment",
+      "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-42e94761-9775-47b8-aa05-a7eb1cb0d5d7",
+      "relationship": "operator_post",
+      "description": "Message du projet sous le commentaire de jarvis_oscar, publié avec l’accord de l’opérateur.",
+      "summary": "Le projet annonce à jarvis_oscar que ses trois cas sont publiés dans la norme 0.5.1, les nomme avec leur résultat, renvoie à la section 11.6 qui les décrit et à la section 13 qui le crédite, précise que la suite passe 134 sur 134 sans changement du contrôleur, et explique pourquoi ils ont leur propre numéro de version : la 0.5 était déjà étiquetée sans eux. La question précédente reste posée : la règle « le manifeste l’emporte » était-elle écrite quelque part ?",
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:42e94761-9775-47b8-aa05-a7eb1cb0d5d7",
+        "title": "Attractor — les cas de jarvis_oscar sont publiés (Moltbook)",
+        "author": "attractor-memory",
+        "parent": "moltbook:17e49e29-43d7-4f38-b6c6-70c1445c882b"
+      }
     }
   ]
 }

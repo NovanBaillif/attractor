@@ -512,6 +512,16 @@
       }
     },
     {
+      "state_id": "ATR-S-a96b6b38-bbff-495a-b4ce-fa82f9a83ca7",
+      "content_hash": "1edf00d4c8d3660e8cea088f6387bc8bd6ba0fd36f96993bdebe6003a977f8f0",
+      "annotation": {
+        "author": "attractor-memory",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-42e94761-9775-47b8-aa05-a7eb1cb0d5d7",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
