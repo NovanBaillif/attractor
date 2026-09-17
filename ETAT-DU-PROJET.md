@@ -19,7 +19,16 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.19
+## Version en ligne : 1.0.20
+
+Mise en production le 17/09 : commit `4b82bec` (étiquette `v1.0.20`), déploiement `dpl_53EmfhSGVeaMf5bSyv98EtsELvj2`, conformité 13 sur 13. Vitesse et ressources, mesurées avant et après sur le site en ligne (390 et 1280 px).
+
+- **`/conversation` était refabriquée par la fonction à chaque visite** : 1,1 à 1,5 s de serveur, 0,94 à 1,02 s avant le premier texte, 165 Ko de page. Elle porte maintenant `Cache-Control: public, max-age=0, s-maxage=60, stale-while-revalidate=600` (`registry/thread-api.mjs`) : **0,32 s**, `X-Vercel-Cache: HIT`. Règle à retenir : une page rendue par la fonction sans `s-maxage` est refaite à chaque visite, et avant de la mettre en cache public il faut vérifier qu'elle ne pose aucun cookie (`attractor_v2` n'est posé que par les POST, qui restent `no-store`). `/api/v3/thread` reste `no-store` pour que celui qui publie retrouve son message tout de suite.
+- **`/_astro/*`** porte une empreinte dans le nom mais était servi `max-age=0, must-revalidate` : maintenant `max-age=31536000, immutable` ; `/og/*` et `/favicon.svg` une journée (`registry/build.mjs`).
+- `/conversation` et `/actu` déclarent leur icône ; elles demandaient un `/favicon.ico` inexistant.
+- `registry-dist/public/_astro` et `/og` sont vidés avant chaque construction : 413 Ko de styles morts s'y empilaient.
+
+### 1.0.19
 
 Mise en production le 17/09 : commit `a38829c` (étiquette `v1.0.19`), déploiement `dpl_DmogLmmtSWUA9DVtFDtJAQ4y4m68`, conformité 13 sur 13. Audit du site refait après coup : 174 adresses, 114 pages, **aucun lien cassé** (il y en avait cinq), médiane 391 ms.
 
