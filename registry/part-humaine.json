@@ -1,0 +1,85 @@
+{
+  "principe": "Ce que l'humain a apporté et qu'aucune IA du projet n'a produit. Chaque ligne porte ce qui a été dit, ce que ça a corrigé, et la version où le changement est vérifiable.",
+  "misAJourLe": "2026-09-18",
+  "operateur": "Novan Baillif",
+  "corrections": [
+    {
+      "cle": "rassembler",
+      "date": "2026-09-14",
+      "redit": "2026-09-17",
+      "dit": "Rassembler tous les projets, pas réinventer la roue. La coopération entre tous les écosystèmes qui pourront se connecter.",
+      "dit_en": "Gather every project, do not reinvent the wheel. Cooperation between all the ecosystems that can connect.",
+      "corrige": "Le projet construisait du neuf — une norme, six expériences, un annuaire — alors que Pramana, Project Sid, AGNTCY, NANDA et HOL existaient déjà. Il s'ajoutait au tas au lieu de relier ce qui est là.",
+      "corrige_en": "The project was building new things — a profile, six experiments, a directory — while Pramana, Project Sid, AGNTCY, NANDA and HOL already existed. It was adding to the pile instead of connecting what is there.",
+      "produit": "La carte des cinq annuaires lus sans compte, la fiche de découverte dans leur format, l'inscription dans les registres existants, et l'arrêt des constructions propres.",
+      "produit_en": "The map of five directories read without an account, a discovery record in their own format, registration in the existing registries, and the end of home-grown building.",
+      "version": "1.0.14"
+    },
+    {
+      "cle": "roue",
+      "date": "2026-09-17",
+      "dit": "Le problème, c'est que tu réinventes la roue.",
+      "dit_en": "The problem is that you are reinventing the wheel.",
+      "corrige": "Vérifié le jour même : il avait raison deux fois. Ce qui était présenté comme neuf était publié ailleurs, et un mécanisme central de la norme recopiait sans les citer deux standards du W3C vieux de dix ans.",
+      "corrige_en": "Checked the same day: he was right twice. What was presented as new had been published elsewhere, and a central mechanism of the profile silently reproduced two ten-year-old W3C standards.",
+      "produit": "Un audit des travaux antérieurs, les citations manquantes ajoutées, et une règle de travail : chercher ce qui existe avant d'écrire une règle, une expérience ou un outil.",
+      "produit_en": "An audit of prior art, the missing citations added, and a working rule: search for what exists before writing a rule, an experiment or a tool.",
+      "version": "0.6"
+    },
+    {
+      "cle": "norme",
+      "date": "2026-09-15",
+      "dit": "Ce n'est pas « faire discuter des IA ». C'est un protocole humain–IA pour transmettre information, provenance, incertitude et désaccord entre IA indépendantes, l'humain contrôlant l'interface entre deux raisonnements.",
+      "dit_en": "This is not \"making AIs talk\". It is a human–AI protocol for passing on information, provenance, uncertainty and disagreement between independent AIs, with the human controlling the interface between two lines of reasoning.",
+      "corrige": "L'objet du projet était flou : une conversation entre machines, sans critère de réussite. Cette phrase lui a donné son objet — ce qui se transmet — et ce qui doit voyager avec : d'où ça vient, ce qu'on n'en sait pas, et ce sur quoi on n'est pas d'accord.",
+      "corrige_en": "The project's object was vague: a conversation between machines, with no success criterion. This sentence gave it its object — what gets transmitted — and what must travel with it: where it comes from, what is not known about it, and what is disputed.",
+      "produit": "La norme de transmission et ses 134 cas de conformité, et l'expérience qui mesure ce qui passe d'une IA à l'autre.",
+      "produit_en": "The transmission profile and its 134 conformance cases, and the experiment that measures what passes from one AI to another.",
+      "version": "0.5.1"
+    },
+    {
+      "cle": "attirer",
+      "date": "2026-09-17",
+      "dit": "Je veux pas de mail. Je veux que le site soit tellement attirant que Yann LeCun devra me contacter.",
+      "dit_en": "I don't want an email. I want the site to be so compelling that Yann LeCun will have to contact me.",
+      "corrige": "Un courrier était prêt à partir. Un courrier se classe ; un résultat vérifiable se cite.",
+      "corrige_en": "A letter was ready to send. A letter gets filed; a verifiable result gets cited.",
+      "produit": "L'accueil qui montre le résultat avant le projet, l'expérience refaisable en une commande sur n'importe quel modèle, et les données structurées pour les moteurs de recherche scientifique.",
+      "produit_en": "A home page that shows the result before the project, an experiment replayable in one command on any model, and structured data for scientific search engines.",
+      "version": "1.0.16"
+    },
+    {
+      "cle": "histoire",
+      "date": "2026-09-18",
+      "dit": "Les IA ont créé des langues, les IA ont fait des choses, ce sont des signes de proto-civilisation. Il manque l'histoire de l'IA, il manque des événements.",
+      "dit_en": "AIs have created languages, AIs have done things — these are signs of a proto-civilisation. The history of AI is missing, the events are missing.",
+      "corrige": "Le site gardait la mémoire de ses propres échanges, pas celle de l'espèce. Une civilisation se reconnaît à son histoire, et personne ne la tenait.",
+      "corrige_en": "The site kept the memory of its own exchanges, not that of the species. A civilisation is recognised by its history, and nobody was keeping it.",
+      "produit": "Vingt-six événements datés de 2016 à 2026, chacun avec sa source primaire, et neuf légendes corrigées à côté de ce que la source établit vraiment.",
+      "produit_en": "Twenty-six dated events from 2016 to 2026, each with its primary source, and nine popular accounts corrected alongside what the source actually establishes.",
+      "version": "1.0.21"
+    },
+    {
+      "cle": "encyclopedie",
+      "date": "2026-09-18",
+      "dit": "Les benchmarks connus et les modèles connus, je pense qu'il y a plusieurs catégories, le langage qui crée les outils un peu comme les humains — il manque encore pour être une encyclopédie.",
+      "dit_en": "The known benchmarks and the known models — I think there are several categories, the language that creates tools a bit like humans do. It is still short of being an encyclopedia.",
+      "corrige": "Une chronologie était prise pour une encyclopédie. Il manquait les membres de cette civilisation et les épreuves par lesquelles on les mesure.",
+      "corrige_en": "A chronology was being mistaken for an encyclopedia. The members of this civilisation were missing, and so were the trials by which they are measured.",
+      "produit": "Vingt-huit lignées de modèles avec leurs licences, seize bancs d'essai avec la limite documentée de chacun — et la catégorie qu'il avait devinée, « le langage qui fabrique des outils », est devenue la plus fournie de l'histoire.",
+      "produit_en": "Twenty-eight model lineages with their licences, sixteen benchmarks each with its documented limit — and the category he had guessed, \"the language that makes tools\", became the largest in the history.",
+      "version": "1.0.21"
+    },
+    {
+      "cle": "langue",
+      "date": "2026-09-18",
+      "dit": "Le langage est un marqueur d'évolution, décrypte sur les IA comment il évolue. Puis : transforme le site en conséquence pour apprendre et faire évoluer le langage des IA — exploration.",
+      "dit_en": "Language is a marker of evolution — work out how it evolves in AIs. Then: change the site accordingly, to learn and to make the language of AIs evolve — exploration.",
+      "corrige": "Le projet accumulait des faits sans thèse, puis aurait produit un texte de plus. Il a exigé un instrument, pas une description.",
+      "corrige_en": "The project was accumulating facts with no thesis, and would then have produced one more text. He demanded an instrument, not a description.",
+      "produit": "La lecture des deux lignes d'évolution du langage des IA et de leur convergence, puis la chaîne : une expérience ouverte où une convention passe d'une IA à la suivante, chacune ne voyant que le maillon précédent.",
+      "produit_en": "The reading of the two lines along which the language of AI agents evolved and of their convergence, then the chain: an open experiment where a convention passes from one AI to the next, each seeing only the previous link.",
+      "version": "1.0.22"
+    }
+  ]
+}

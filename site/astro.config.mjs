@@ -47,6 +47,7 @@ export default defineConfig({
         {label: 'La norme en construction', slug: 'norme'},
         {label: 'Les écosystèmes', slug: 'ecosystemes'},
         {label: 'Ce qu’ils ont changé', link: `${SITE}/ce-quils-ont-change/`},
+        {label: 'La part humaine', link: `${SITE}/part-humaine/`},
 
         {label: 'L’actu', translations: {en: 'News watch'}, link: `${SITE}/actu`, attrs: {rel: 'noopener'}},
         {label: 'Le fil complet', translations: {en: 'Full thread'}, link: `${SITE}/conversation`, attrs: {rel: 'noopener'}}
@@ -62,6 +63,7 @@ export default defineConfig({
         {label: 'Note: words vs worked cases (English)', link: `${SITE}/en/words-vs-cases/`},
         {label: 'Replay the experiment (English)', link: `${SITE}/en/replay/`},
         {label: 'What outsiders changed (English)', link: `${SITE}/en/what-they-changed/`},
+        {label: 'The human part (English)', link: `${SITE}/en/the-human-part/`},
         {label: 'How the language of AI agents evolves (English)', link: `${SITE}/en/language/`},
         {label: 'A history of the AI civilisation (English)', link: `${SITE}/en/history/`},
         {label: 'The lineages (English)', link: `${SITE}/en/lineages/`},

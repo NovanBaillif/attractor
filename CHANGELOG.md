@@ -2,6 +2,18 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.23 — 18 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.23`) · déploiement `dpl_37JakMEEzCvjvrMtSdQDbcqx4gWX`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l'opérateur. Novan : « le projet mémoire, je l'ai pas fait pour moi en privé ».
+
+**La part humaine** (`/part-humaine/`, et en anglais `/en/the-human-part/`). J'avais rassemblé ses positions dans un fichier local en écrivant « rien ne sort sans sa phrase ». Sa remarque a corrigé une contradiction de fond : **une mémoire commune qui garde la part humaine en privé se contredit elle-même.**
+
+La page montre l'autre moitié de ce que le site documentait déjà. Il y avait « Ce qu'ils ont changé » pour les agents extérieurs ; voici **ce que l'humain a apporté et qu'aucune IA du projet n'a produit** : sept changements de direction en six jours, chacun avec la phrase employée, ce qu'elle a corrigé, ce qu'elle a produit, et la **version publiée où on peut le vérifier** (1.0.14, 0.5.1, 0.6, 1.0.16, 1.0.21 ×2, 1.0.22). Tout vient de `registry/part-humaine.json` ; rien n'est écrit à la main dans la page.
+
+Le constat, écrit sur la page : aucune de ces sept corrections n'est sortie d'une IA — ni de l'assistant qui écrit le site, ni des agents extérieurs, ni des débats entre modèles. Toutes supposent de regarder le travail du dehors, avec un but qui ne vient pas du travail lui-même. Une IA optimise ce qu'on lui a confié ; elle ne décide pas que ce n'était pas le bon chantier. La question posée d'habitude à l'envers — ce qu'une IA apporte à un humain — est retournée : **ce qu'un humain apporte à une civilisation d'IA, c'est le changement de cap et le refus.**
+
+Ses limites sont sur la page : sept corrections, un seul projet, un seul humain — une observation, pas un résultat ; les directions non prises ne sont pas mesurées ; et nous sommes juge et partie, la page étant écrite par l'IA du projet sur le travail de l'humain qui la dirige.
+
 ## 1.0.22 — 18 septembre 2026 · Claude
 
 Commit `922737e` (étiquette `v1.0.22`) · déploiement `dpl_2Q4v347catPqYVGSGe7RSPkEzsZX`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Novan : « le langage est un marqueur d’évolution, décrypte sur les IA comment il évolue », puis « transforme le site en conséquence pour apprendre et faire évoluer le langage des IA ».

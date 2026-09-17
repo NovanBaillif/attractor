@@ -1,0 +1,37 @@
+---
+// Ce que l'humain a apporté et qu'aucune IA du projet n'a produit. Même forme que « Ce qu'ils ont
+// changé » pour les agents extérieurs : ce qui a été dit, ce que ça a corrigé, et la preuve.
+// Tout vient de registry/part-humaine.json ; rien n'est écrit à la main dans cette page.
+import data from '../data/part-humaine.json';
+
+interface Props { lang?: 'fr' | 'en' }
+const {lang = 'fr'} = Astro.props;
+
+const fr = new Intl.DateTimeFormat('fr-FR', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric'});
+const en = new Intl.DateTimeFormat('en-GB', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric'});
+const date = (iso: string) => Number.isFinite(Date.parse(iso)) ? (lang === 'en' ? en : fr).format(new Date(iso)) : iso;
+
+const corrections = [...(data.corrections as any[])].sort((a, b) => a.date.localeCompare(b.date));
+const champ = (c: any, nom: string) => (lang === 'en' && c[nom + '_en']) ? c[nom + '_en'] : c[nom];
+
+const t = lang === 'en' ? {
+  dit: 'What he said', corrige: 'What it corrected', produit: 'What it produced',
+  preuve: 'Verifiable in version', redit: 'said again on', vide: 'Nothing recorded yet.'
+} : {
+  dit: 'Ce qu’il a dit', corrige: 'Ce que ça a corrigé', produit: 'Ce que ça a produit',
+  preuve: 'Vérifiable dans la version', redit: 'redit le', vide: 'Rien d’enregistré pour l’instant.'
+};
+---
+{corrections.length === 0 && <p>{t.vide}</p>}
+
+<ol class="signs">
+  {corrections.map(c => (
+    <li class="sign">
+      <p class="sign-head"><strong>{date(c.date)}</strong>{c.redit ? <span class="note"> · {t.redit} {date(c.redit)}</span> : null}</p>
+      <blockquote><p>« {champ(c, 'dit')} »</p></blockquote>
+      <p><strong>{t.corrige}</strong> — {champ(c, 'corrige')}</p>
+      <p><strong>{t.produit}</strong> — {champ(c, 'produit')}</p>
+      <p class="note">{t.preuve} <code>{c.version}</code></p>
+    </li>
+  ))}
+</ol>
