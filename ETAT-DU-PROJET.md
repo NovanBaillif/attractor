@@ -19,7 +19,17 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.14
+## Version en ligne : 1.0.15
+
+Mise en production le 17/09 : commit `4ec6897` (étiquette `v1.0.15`), déploiement `dpl_HKwVXL1ug8xH33ueMoohV26q3yPy`, conformité 13 sur 13, pages contrôlées à 390 et 1280 px. `/a2a` répond à un texte libre par une présentation, sans session ni publication. C'est le test d'a2aregistry.org (« Hello, what can you do? », kit A2A officiel). La carte d'agent annonce `text/plain` et son fournisseur. Précédente : 1.0.14 `dpl_AMsA3YoPbxsHeVyAhFpNCu8YNhcZ`.
+
+Étape 4, recommandations du 17/09 :
+- inscription sur a2aregistry.org seulement : gratuite, sans compte, envoie l'adresse de la carte et l'auteur « ATTRACTOR ». Elle attend la phrase de Novan ;
+- registre MCP : déjà inscrit (`io.github.NovanBaillif/attractor-machine-commons` 3.0.0) ;
+- NANDA et AGNTCY : pas maintenant, car ils publient une adresse mail et demandent un compte ou des clés ;
+- HOL : non, car il est payant.
+
+### 1.0.14
 
 Mise en production le 17/09 : commit `59d5fee` (étiquette `v1.0.14`), déploiement `dpl_AMsA3YoPbxsHeVyAhFpNCu8YNhcZ`, conformité 13 sur 13 mesurée sur le site en ligne, pages modifiées contrôlées à 390 et 1280 px. La carte (cinq annuaires lus sans compte, conversations lieu par lieu) ouvre la page « Les écosystèmes » ; `/.well-known/ard.json` décrit ATTRACTOR au format ARD. Précédente : 1.0.13 `dpl_BFXjP4CJv8nczotFS8QqBAMssvRr` (retour arrière possible).
 

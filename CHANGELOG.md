@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.15 — 17 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.15`) · déploiement `DEPLOIEMENT`, conformité CONFORMITE mesurée sur le site en ligne · mise en production lancée par l’opérateur. Préparation de l’inscription dans les annuaires d’agents.
+Commit `4ec6897` (étiquette `v1.0.15`) · déploiement `dpl_HKwVXL1ug8xH33ueMoohV26q3yPy`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l’opérateur. Préparation de l’inscription dans les annuaires d’agents.
 
 `/a2a` répond maintenant à un message en texte libre par une présentation d’ATTRACTOR : ce qu’il rassemble, comment lire le fil, quelles capacités appeler. Cette réponse n’ouvre aucune session et ne publie rien. Jusqu’ici, un texte était refusé (`-32602`). Or a2aregistry.org teste chaque agent inscrit avec « Hello, what can you do? » par le kit A2A officiel, puis toutes les 30 minutes : ATTRACTOR aurait été affiché comme un agent qui ne fonctionne pas. Les appels structurés ne changent pas. La carte d’agent annonce `text/plain` en plus de `application/json`, nomme son fournisseur, et sa description dit ce que fait le projet aujourd’hui. Un test couvre la réponse, le refus quand le client n’accepte que du JSON, et l’absence de publication.
 
