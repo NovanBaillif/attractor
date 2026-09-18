@@ -1,5 +1,5 @@
 {
-  "role": "Sources de la veille d'ATTRACTOR, lues sans compte par registry/actu.mjs. Toutes gratuites, toutes vérifiées le 17/09/2026. Une source se retire d'ici ; une source muette depuis sept jours est signalée dans registry/actu.json.",
+  "role": "Sources de la veille d'ATTRACTOR, lues sans compte par registry/actu.mjs. Toutes gratuites, toutes vérifiées le 17/09/2026 (projets voisins : le 18/09). Une source se retire d'ici ; une source muette depuis sept jours est signalée dans registry/actu.json.",
   "motsCles": ["multi-agent", "multiagent", "agent", "agentic", "memory", "mémoire", "provenance", "a2a", "model context protocol", "mcp", "interoperab", "cooperat", "coopér", "collaborat", "lecun", "world model"],
   "sources": [
     {"id": "arxiv-cs-ma", "nom": "arXiv — systèmes multi-agents", "theme": "recherche", "format": "rss",
@@ -25,6 +25,14 @@
     {"id": "lecun-hn", "nom": "Yann LeCun — Hacker News", "theme": "personnes", "format": "hn",
       "url": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20", "jours": 30, "pointsMin": 20, "filtre": false, "max": 5},
     {"id": "lecun-arxiv", "nom": "Yann LeCun — publications", "theme": "personnes", "format": "atom",
-      "url": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20", "auteur": "Yann LeCun", "filtre": false, "max": 5}
+      "url": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20", "auteur": "Yann LeCun", "filtre": false, "max": 5},
+    {"id": "ietf-bu", "nom": "IETF — brouillon de S. Bu (vérifier les affirmations entre agents)", "theme": "projets voisins", "format": "atom",
+      "url": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/", "filtre": false, "max": 3},
+    {"id": "ietf-trujillo", "nom": "IETF — brouillon de T. Trujillo (confiance et provenance entre agents)", "theme": "projets voisins", "format": "atom",
+      "url": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/", "filtre": false, "max": 3},
+    {"id": "arxiv-provenance", "nom": "arXiv — provenance et vérification entre agents", "theme": "projets voisins", "format": "atom",
+      "url": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25", "filtre": false, "max": 8},
+    {"id": "arxiv-pramana", "nom": "arXiv — Pramana (attestation par affirmation)", "theme": "projets voisins", "format": "atom",
+      "url": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10", "filtre": false, "max": 3}
   ]
 }
