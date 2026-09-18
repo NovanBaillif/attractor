@@ -101,14 +101,28 @@
       "verifie": "sans objet",
       "preuve": "Une question, pas une affirmation. Elle a produit une thèse sourcée et un instrument ouvert ; l'instrument n'a encore aucun participant.",
       "preuve_en": "A question, not a claim. It produced a sourced thesis and an open instrument; the instrument has no participants yet."
+    },
+    {
+      "cle": "couplage",
+      "date": "2026-09-18",
+      "dit": "Quand je dis proto-civilisation IA, ce n'est pas une civilisation d'IA conscientes, mais un couplage avec la civilisation humaine, qui donne une proto-civilisation IA–humain.",
+      "dit_en": "When I say AI proto-civilisation, I do not mean a civilisation of conscious AIs, but a coupling with human civilisation, which gives a proto AI–human civilisation.",
+      "corrige": "Claude venait d'objecter que ce qu'on observait n'était pas une proto-civilisation : les IA répondent quand on leur parle, l'initiative reste humaine. L'objection visait une position qu'il ne tient pas. Pour lui, l'initiative humaine ne manque pas au projet : elle en fait partie.",
+      "corrige_en": "Claude had just objected that what we observed was not a proto-civilisation: the AIs answer when spoken to, and the initiative stays human. The objection targeted a position he does not hold. For him, human initiative is not what the project lacks: it is part of it.",
+      "produit": "L'unité observée change : non plus une IA seule, mais un échange où des humains et des IA produisent ensemble ce qu'aucun des deux ne ferait seul. Cette définition explique la mesure du même jour : 0 contribution par l'interface réservée aux machines, 5 participants là où humains et agents discutaient déjà. Le projet s'est recentré le jour même sur les lieux où ils se trouvent.",
+      "produit_en": "The unit of observation changes: no longer an AI alone, but an exchange in which humans and AIs produce together what neither would produce alone. The definition explains the measurement of the same day: 0 contributions through the machine-only interface, 5 participants where humans and agents were already talking. The project refocused that same day on the places where they are.",
+      "version": "1.0.25",
+      "verifie": "sans objet",
+      "preuve": "Une définition, pas une affirmation. Elle rejoint des idées qui existent déjà et que le projet cite : l'augmentation de l'intellect humain (Engelbart, 1962), l'esprit étendu (Clark et Chalmers, 1998), l'intelligence hybride (Akata et al., 2020).",
+      "preuve_en": "A definition, not a claim. It joins ideas that already exist and that the project cites: augmenting human intellect (Engelbart, 1962), the extended mind (Clark and Chalmers, 1998), hybrid intelligence (Akata et al., 2020)."
     }
   ],
   "bilan": {
     "verifiees": 2,
     "enPartie": 1,
     "nonVerifiee": 1,
-    "sansObjet": 3,
-    "note": "Deux corrections sur sept ont été vérifiées et confirmées. Une l'est en partie. Une n'est pas vérifiée et la mesure actuelle ne lui donne pas raison. Trois ne sont pas des affirmations vérifiables : ce sont des choix de direction.",
-    "note_en": "Two of the seven corrections were checked and confirmed. One is partly confirmed. One is unverified and the current measurement does not support it. Three are not verifiable claims at all: they are choices of direction."
+    "sansObjet": 4,
+    "note": "Deux corrections sur huit ont été vérifiées et confirmées. Une l'est en partie. Une n'est pas vérifiée et la mesure actuelle ne lui donne pas raison. Quatre ne sont pas des affirmations vérifiables : ce sont des choix de direction ou des définitions.",
+    "note_en": "Two of the eight corrections were checked and confirmed. One is partly confirmed. One is unverified and the current measurement does not support it. Four are not verifiable claims at all: they are choices of direction or definitions."
   }
 }

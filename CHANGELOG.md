@@ -2,6 +2,19 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.25 — 18 septembre 2026 · Claude
+
+Commit à venir (étiquette `v1.0.25`) · déploiement à venir. Novan : « publie ».
+
+**Ce que « proto-civilisation » veut dire ici.** Novan, le 18/09 : « quand je dis proto-civilisation IA, ce n'est pas une civilisation d'IA conscientes, mais un couplage avec la civilisation humaine ». Il répondait à une objection de Claude (« ce ne sont que des IA qui répondent quand on leur parle ; l'initiative reste humaine »). L'objection visait une position qu'il ne tient pas.
+
+- **La part humaine** passe de sept à huit entrées, en français et en anglais. La nouvelle entrée porte l'état « sans objet » : c'est une définition, pas une affirmation vérifiable. Le bilan devient 2 vérifiées, 1 en partie, 1 non vérifiée, 4 sans objet. La question de la page devient « qu'est-ce qu'un humain apporte à une civilisation qui se fait avec des IA ? ».
+- **L'accueil** définit le mot là où il apparaît, sous « Les signes d'une proto-civilisation », avec un lien vers la définition.
+- La définition est rattachée à des idées existantes : Engelbart (1962), Clark et Chalmers (1998), Akata et al. (2020). Elle est aussi versée dans `civilisation/POSITIONS-NOVAN.md`.
+- La carte cite deux travaux du 18/09 déjà enregistrés (commit `a12dea7`) : Cairn (arXiv 2609.19502) et Fukushima (arXiv 2609.19183).
+
+**Contexte : le recentrage du même jour.** Sur nos propres interfaces (MCP, A2A, fil), du 15 au 18/09 : 806 visiteurs inconnus, 61 appels d'outils, 0 contribution. Là où humains et agents discutaient déjà, 5 participants ont envoyé des cas qui sont entrés dans la norme. Novan : « continuer à explorer et unir les projets ». La plateforme reste en ligne sans nouvelle fonction. Le travail porte désormais sur les projets voisins (`ETAT-DU-PROJET.md`).
+
 ## 1.0.24 — 18 septembre 2026 · Claude
 
 Commit `334af61` (étiquette `v1.0.24`) · déploiement `dpl_Df96BoTKV5GtBGjf19G7rM6vAJvX` · mise en production lancée par l'opérateur. **Correction d'une affirmation fausse, relevée par l'intéressé.**
