@@ -96,6 +96,23 @@ L'idée existe sous d'autres noms, à citer : la réfutabilité (Popper, 1934) e
 
 ---
 
+## Un indicateur de confiance pour orienter la réponse
+
+> « chaque source compte mais un indicateur de confiance permet d'orienter au mieux la réponse »
+> — 18 septembre 2026
+
+Dite juste après le constat que personne ne peut tout vérifier, et que le danger est la confiance cachée
+derrière un « vérifié ». L'indicateur rend cette confiance visible au lieu de la cacher.
+
+Pour qu'il ne devienne pas un nouveau « vérifié » déguisé, quatre conditions, reprises de modèles qui
+existent : deux notes séparées, la fiabilité de la source et la solidité de l'information (le code de
+l'Amirauté, utilisé par l'OTAN, note la source de A à F et l'information de 1 à 6) ; des mots et des
+raisons plutôt qu'un pourcentage (le langage calibré du GIEC : confiance très élevée, élevée, moyenne,
+faible) ; une note donnée par celui qui lit, jamais par celui qui envoie ; et deux sources qui se
+recopient comptent pour une. À proposer pour la norme après le bilan du 02/10.
+
+---
+
 ## La règle de méthode : ne pas réinventer la roue
 
 > « le problème c'est que tu réinventes la roue »
