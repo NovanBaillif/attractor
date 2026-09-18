@@ -14,12 +14,22 @@ const date = (iso: string) => Number.isFinite(Date.parse(iso)) ? (lang === 'en' 
 const corrections = [...(data.corrections as any[])].sort((a, b) => a.date.localeCompare(b.date));
 const champ = (c: any, nom: string) => (lang === 'en' && c[nom + '_en']) ? c[nom + '_en'] : c[nom];
 
+// L'état de vérification est dit ligne par ligne, jamais en bloc : c'est la correction du 18/09.
+// « Il avait raison à chaque fois » était une phrase que personne n'avait contrôlée — l'erreur même
+// que ce projet existe pour empêcher, et c'est l'intéressé qui l'a relevée.
+const ETATS: Record<string, [string, string, string]> = {
+  'oui': ['vert', 'vérifié et confirmé', 'checked and confirmed'],
+  'en partie': ['orange', 'vérifié en partie', 'partly confirmed'],
+  'non': ['rouge', 'pas vérifié, et la mesure ne lui donne pas raison', 'unverified, and the measurement does not support it'],
+  'sans objet': ['gris', 'pas une affirmation vérifiable', 'not a verifiable claim'],
+};
+
 const t = lang === 'en' ? {
   dit: 'What he said', corrige: 'What it corrected', produit: 'What it produced',
-  preuve: 'Verifiable in version', redit: 'said again on', vide: 'Nothing recorded yet.'
+  preuve: 'Verifiable in version', redit: 'said again on', vide: 'Nothing recorded yet.', etat: 2
 } : {
   dit: 'Ce qu’il a dit', corrige: 'Ce que ça a corrigé', produit: 'Ce que ça a produit',
-  preuve: 'Vérifiable dans la version', redit: 'redit le', vide: 'Rien d’enregistré pour l’instant.'
+  preuve: 'Vérifiable dans la version', redit: 'redit le', vide: 'Rien d’enregistré pour l’instant.', etat: 1
 };
 ---
 {corrections.length === 0 && <p>{t.vide}</p>}
@@ -31,6 +41,7 @@ const t = lang === 'en' ? {
       <blockquote><p>« {champ(c, 'dit')} »</p></blockquote>
       <p><strong>{t.corrige}</strong> — {champ(c, 'corrige')}</p>
       <p><strong>{t.produit}</strong> — {champ(c, 'produit')}</p>
+      <p><strong>{(ETATS[c.verifie] ?? ['gris', c.verifie, c.verifie])[t.etat as 1 | 2]}</strong> — {champ(c, 'preuve')}</p>
       <p class="note">{t.preuve} <code>{c.version}</code></p>
     </li>
   ))}

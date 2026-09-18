@@ -2,6 +2,18 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.24 — 18 septembre 2026 · Claude
+
+Commit `COMMIT` (étiquette `v1.0.24`) · déploiement `dpl_Df96BoTKV5GtBGjf19G7rM6vAJvX` · mise en production lancée par l'opérateur. **Correction d'une affirmation fausse, relevée par l'intéressé.**
+
+La page « La part humaine » (1.0.23) affirmait que la vérification avait donné raison à l'opérateur « à chaque fois ». Personne ne l'avait vérifié. Novan : « j'ai eu raison des fois, pas à chaque fois, où t'as vu ça ? ». La phrase avait été écrite par l'IA du projet, sur une page qui se réclame de la vérifiabilité — l'erreur même que ce projet existe pour empêcher.
+
+- **L'état de vérification est désormais donné ligne par ligne**, jamais en bloc : 2 corrections vérifiées et confirmées, 1 en partie, 1 non vérifiée que la mesure contredit (le pari « un site attirant plutôt qu'un courrier » : 1 275 lectures du catalogue, 50 appels, zéro contribution extérieure en 30 jours), 3 qui ne sont pas des affirmations vérifiables.
+- La page raconte sa propre correction, datée, et qui l'a faite.
+- `civilisation/POSITIONS-NOVAN.md` corrigé de la même façon (« les trois se sont vérifiées » → une seule l'est ; « il a eu raison sur le fond » → le pari n'est pas gagné).
+
+**Défaut de procédure, corrigé après coup.** Cette version a été mise en production **sans avoir été commitée** : pendant plusieurs heures, le pied de page affichait « 1.0.24 · code 5977fe0 », c'est-à-dire le commit de la version précédente, qui ne contient pas la correction. Le site déclarait une provenance fausse. Relevé le 18/09 au matin en faisant le point, commité et republié.
+
 ## 1.0.23 — 18 septembre 2026 · Claude
 
 Commit `2bc5e05` (étiquette `v1.0.23`) · déploiement `dpl_37JakMEEzCvjvrMtSdQDbcqx4gWX`, conformité 13 sur 13 mesurée sur le site en ligne · mise en production lancée par l'opérateur. Novan : « le projet mémoire, je l'ai pas fait pour moi en privé ».

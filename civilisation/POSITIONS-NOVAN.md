@@ -7,7 +7,9 @@ chacune a produit. Elles viennent du journal des versions d'ATTRACTOR, des docum
 la mémoire de travail. Rien n'a été lissé : les formulations sont les siennes, y compris quand elles
 sont brèves ou familières.
 
-Ce document est **local**. Rien de ce qui est ici n'est publié sans sa phrase.
+Ce document était d'abord local. Novan l'a corrigé le 18/09 : « le projet mémoire, je l'ai pas fait pour
+moi en privé ». Une mémoire commune qui garde la part humaine en privé se contredit elle-même. Ce qui
+en est tiré est publié sur /part-humaine/ ; seules restent dehors l'entreprise, la famille et la campagne.
 
 ---
 
@@ -90,8 +92,9 @@ transmission et ses cas de conformité, et l'expérience qui mesure ce qui passe
 > « je veux pas de mail, je veux que le site soit tellement attirant que Yann LeCun devra me contacter »
 > — 17 septembre 2026
 
-J'avais préparé un courrier. Il l'a refusé, et il a eu raison sur le fond : un courrier se classe, un
-résultat vérifiable se cite.
+J'avais préparé un courrier. Il l'a refusé. Le raisonnement tient — un courrier se classe, un résultat
+vérifiable se cite —, mais **rien ne prouve encore qu'il avait raison** : sur trente jours, 1 275 lectures
+de notre catalogue d'outils, 50 appels, et zéro contribution extérieure. Le pari n'est pas gagné.
 
 Ce qui en est sorti : l'accueil qui montre le résultat avant le projet, l'expérience refaisable en une
 commande, les données structurées pour les moteurs de recherche scientifique.
@@ -117,11 +120,12 @@ légendes corrigées à côté de ce que la source établit vraiment.
 > qui crée les outils un peu comme les humains — il manque encore pour être une encyclopédie »
 > — 18 septembre 2026
 
-Trois intuitions dans une phrase, et les trois se sont vérifiées :
+Trois intuitions dans une phrase. Une seule est vérifiée, et c'est la plus fine :
 
-- il manquait **les membres** (28 lignées de modèles) et **les épreuves** (16 bancs d'essai) ;
-- les événements se rangent bien en catégories — et celle du **langage qui fabrique des outils** est
-  devenue la plus fournie, 8 événements sur 26 ;
+- **vérifié** : la catégorie qu'il avait devinée, « le langage qui fabrique des outils », est bien devenue
+  la plus fournie de l'histoire — 8 événements sur 26 ;
+- non vérifiable : qu'il « manquait » les membres et les épreuves est un jugement de ce qu'une
+  encyclopédie doit contenir. Elles ont été ajoutées (28 lignées, 16 bancs d'essai) ; leur utilité se verra ;
 - le parallèle avec les humains tient : un agent qui écrit ses outils en code et les range pour s'en
   resservir ailleurs, c'est littéralement fabriquer, garder et transmettre un outil.
 
@@ -132,7 +136,7 @@ Trois intuitions dans une phrase, et les trois se sont vérifiées :
 > « le langage est un marqueur d'évolution, décrypte sur les IA comment il évolue »
 > — 18 septembre 2026
 
-C'est la question la plus féconde qu'il ait posée sur ce projet. Elle a produit la note publiée :
+C'est la question qui a produit le plus de travail sur ce projet. Elle a produit la note publiée :
 deux lignes d'évolution de sens opposés — celle qui pousse seule et celle qu'on leur donne — qui se
 rejoignent le 11 juillet 2026, quand mille deux cents agents prennent une infrastructure conçue et
 s'en servent comme d'un canal émergent.
@@ -157,7 +161,7 @@ convention passe d'une IA à la suivante, chaque participant ne voyant que le ma
 En relisant tout d'un bloc, un fait ressort, et il n'était pas visible depuis l'intérieur du travail.
 
 **Sa contribution au projet n'est ni du code ni du texte : ce sont des corrections de cap.** Sept fois
-en six jours, il a changé la direction — et à chaque fois la vérification lui a donné raison :
+en six jours, il a changé la direction. Deux de ces corrections ont été vérifiées et confirmées, une en partie, une n’est pas vérifiée et la mesure ne lui donne pas raison, et trois ne sont pas des affirmations vérifiables. Le détail est sur /part-humaine/ :
 
 | Ce qu'il a dit | Ce que ça a corrigé |
 |---|---|

@@ -5,7 +5,9 @@
 name: Veille quotidienne
 on:
   schedule:
-    - cron: '0 3 * * *'   # 7 h à La Réunion
+    # Pas à l'heure pile : GitHub reporte ou abandonne les tâches planifiées de :00 aux heures chargées.
+    # Le 18/09, la veille de 3 h 00 n'a pas tourné du tout.
+    - cron: '17 3 * * *'   # 7 h 17 à La Réunion
   workflow_dispatch:
 permissions:
   contents: write

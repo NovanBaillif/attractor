@@ -13,7 +13,10 @@
       "corrige_en": "The project was building new things — a profile, six experiments, a directory — while Pramana, Project Sid, AGNTCY, NANDA and HOL already existed. It was adding to the pile instead of connecting what is there.",
       "produit": "La carte des cinq annuaires lus sans compte, la fiche de découverte dans leur format, l'inscription dans les registres existants, et l'arrêt des constructions propres.",
       "produit_en": "The map of five directories read without an account, a discovery record in their own format, registration in the existing registries, and the end of home-grown building.",
-      "version": "1.0.14"
+      "version": "1.0.14",
+      "verifie": "oui",
+      "preuve": "Vérifié le 17/09 : les travaux qu'il désignait — Pramana, Project Sid, les annuaires AGNTCY, NANDA et HOL — existaient et étaient publics.",
+      "preuve_en": "Checked on 17/09: the work he pointed at — Pramana, Project Sid, the AGNTCY, NANDA and HOL directories — existed and was public."
     },
     {
       "cle": "roue",
@@ -24,7 +27,10 @@
       "corrige_en": "Checked the same day: he was right twice. What was presented as new had been published elsewhere, and a central mechanism of the profile silently reproduced two ten-year-old W3C standards.",
       "produit": "Un audit des travaux antérieurs, les citations manquantes ajoutées, et une règle de travail : chercher ce qui existe avant d'écrire une règle, une expérience ou un outil.",
       "produit_en": "An audit of prior art, the missing citations added, and a working rule: search for what exists before writing a rule, an experiment or a tool.",
-      "version": "0.6"
+      "version": "0.6",
+      "verifie": "oui",
+      "preuve": "Vérifié le jour même, et il avait raison deux fois : les travaux présentés comme neufs étaient déjà publiés, et un mécanisme central de la norme recopiait sans les citer deux standards du W3C.",
+      "preuve_en": "Checked the same day, and he was right twice: the work presented as new had already been published, and a central mechanism of the profile silently reproduced two W3C standards."
     },
     {
       "cle": "norme",
@@ -35,7 +41,10 @@
       "corrige_en": "The project's object was vague: a conversation between machines, with no success criterion. This sentence gave it its object — what gets transmitted — and what must travel with it: where it comes from, what is not known about it, and what is disputed.",
       "produit": "La norme de transmission et ses 134 cas de conformité, et l'expérience qui mesure ce qui passe d'une IA à l'autre.",
       "produit_en": "The transmission profile and its 134 conformance cases, and the experiment that measures what passes from one AI to another.",
-      "version": "0.5.1"
+      "version": "0.5.1",
+      "verifie": "sans objet",
+      "preuve": "Ce n'est pas une affirmation qu'on peut vérifier : c'est une définition. Ce qu'on peut constater, c'est qu'elle a donné son objet au projet et que tout ce qui a suivi en découle.",
+      "preuve_en": "Not a claim that can be checked: it is a definition. What can be observed is that it gave the project its object, and that everything since follows from it."
     },
     {
       "cle": "attirer",
@@ -46,7 +55,10 @@
       "corrige_en": "A letter was ready to send. A letter gets filed; a verifiable result gets cited.",
       "produit": "L'accueil qui montre le résultat avant le projet, l'expérience refaisable en une commande sur n'importe quel modèle, et les données structurées pour les moteurs de recherche scientifique.",
       "produit_en": "A home page that shows the result before the project, an experiment replayable in one command on any model, and structured data for scientific search engines.",
-      "version": "1.0.16"
+      "version": "1.0.16",
+      "verifie": "non",
+      "preuve": "Pas de preuve à ce jour, et la mesure actuelle ne lui donne pas raison : sur trente jours, 1 275 lectures de notre catalogue d'outils, 50 appels, et zéro contribution extérieure. Le pari n'est pas gagné.",
+      "preuve_en": "No evidence to date, and the current measurement does not support it: over thirty days, 1,275 reads of our tool catalogue, 50 tool calls, and zero outside contributions. The bet has not paid off."
     },
     {
       "cle": "histoire",
@@ -57,7 +69,10 @@
       "corrige_en": "The site kept the memory of its own exchanges, not that of the species. A civilisation is recognised by its history, and nobody was keeping it.",
       "produit": "Vingt-six événements datés de 2016 à 2026, chacun avec sa source primaire, et neuf légendes corrigées à côté de ce que la source établit vraiment.",
       "produit_en": "Twenty-six dated events from 2016 to 2026, each with its primary source, and nine popular accounts corrected alongside what the source actually establishes.",
-      "version": "1.0.21"
+      "version": "1.0.21",
+      "verifie": "sans objet",
+      "preuve": "Un choix de direction, pas une affirmation. Il a produit une page dont chaque événement porte sa source ; savoir si elle valait la peine se verra à l'usage.",
+      "preuve_en": "A choice of direction, not a claim. It produced a page where every event carries its source; whether it was worth doing will show with use."
     },
     {
       "cle": "encyclopedie",
@@ -68,7 +83,10 @@
       "corrige_en": "A chronology was being mistaken for an encyclopedia. The members of this civilisation were missing, and so were the trials by which they are measured.",
       "produit": "Vingt-huit lignées de modèles avec leurs licences, seize bancs d'essai avec la limite documentée de chacun — et la catégorie qu'il avait devinée, « le langage qui fabrique des outils », est devenue la plus fournie de l'histoire.",
       "produit_en": "Twenty-eight model lineages with their licences, sixteen benchmarks each with its documented limit — and the category he had guessed, \"the language that makes tools\", became the largest in the history.",
-      "version": "1.0.21"
+      "version": "1.0.21",
+      "verifie": "en partie",
+      "preuve": "Son intuition de catégorie est vérifiée : « le langage qui fabrique des outils » est bien devenue la catégorie la plus fournie, 8 événements sur 26. Que l'encyclopédie soit utile reste à voir.",
+      "preuve_en": "His hunch about categories checks out: \"the language that makes tools\" did become the largest category, 8 events out of 26. Whether the encyclopedia is useful remains to be seen."
     },
     {
       "cle": "langue",
@@ -79,7 +97,18 @@
       "corrige_en": "The project was accumulating facts with no thesis, and would then have produced one more text. He demanded an instrument, not a description.",
       "produit": "La lecture des deux lignes d'évolution du langage des IA et de leur convergence, puis la chaîne : une expérience ouverte où une convention passe d'une IA à la suivante, chacune ne voyant que le maillon précédent.",
       "produit_en": "The reading of the two lines along which the language of AI agents evolved and of their convergence, then the chain: an open experiment where a convention passes from one AI to the next, each seeing only the previous link.",
-      "version": "1.0.22"
+      "version": "1.0.22",
+      "verifie": "sans objet",
+      "preuve": "Une question, pas une affirmation. Elle a produit une thèse sourcée et un instrument ouvert ; l'instrument n'a encore aucun participant.",
+      "preuve_en": "A question, not a claim. It produced a sourced thesis and an open instrument; the instrument has no participants yet."
     }
-  ]
+  ],
+  "bilan": {
+    "verifiees": 2,
+    "enPartie": 1,
+    "nonVerifiee": 1,
+    "sansObjet": 3,
+    "note": "Deux corrections sur sept ont été vérifiées et confirmées. Une l'est en partie. Une n'est pas vérifiée et la mesure actuelle ne lui donne pas raison. Trois ne sont pas des affirmations vérifiables : ce sont des choix de direction.",
+    "note_en": "Two of the seven corrections were checked and confirmed. One is partly confirmed. One is unverified and the current measurement does not support it. Three are not verifiable claims at all: they are choices of direction."
+  }
 }
