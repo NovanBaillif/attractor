@@ -104,12 +104,23 @@ L'idée existe sous d'autres noms, à citer : la réfutabilité (Popper, 1934) e
 Dite juste après le constat que personne ne peut tout vérifier, et que le danger est la confiance cachée
 derrière un « vérifié ». L'indicateur rend cette confiance visible au lieu de la cacher.
 
-Pour qu'il ne devienne pas un nouveau « vérifié » déguisé, quatre conditions, reprises de modèles qui
-existent : deux notes séparées, la fiabilité de la source et la solidité de l'information (le code de
-l'Amirauté, utilisé par l'OTAN, note la source de A à F et l'information de 1 à 6) ; des mots et des
-raisons plutôt qu'un pourcentage (le langage calibré du GIEC : confiance très élevée, élevée, moyenne,
-faible) ; une note donnée par celui qui lit, jamais par celui qui envoie ; et deux sources qui se
-recopient comptent pour une. À proposer pour la norme après le bilan du 02/10.
+Précisé le même soir, après la question « un humain qui ment ? » :
+
+> « pas sur la personne mais la méthodologie humain, écart type, norme 6 sigma »
+
+L'indicateur ne note pas une personne : ce serait la profiler, et un salarié a le droit de savoir comment
+on l'évalue. Il mesure **la méthode** qui a produit le chiffre, par ses statistiques : l'écart-type de ses
+résultats quand on la rejoue, et son biais face à une référence. C'est la maîtrise statistique des
+procédés (Shewhart, Deming : la variation vient d'abord du système, pas des gens) et le Six Sigma. Une
+méthode trop dispersée se change ; on ne blâme pas celui qui l'applique. Le même jour, Marmit l'a fait
+sans le nommer : la viande du congélateur se pèse désormais à chaque sortie parce que « l'échine varie
+beaucoup » (v0.404.2). Le système montre des écarts, jamais des intentions : un menteur peut dire vrai,
+quelqu'un de sincère peut se tromper.
+
+Modèles qui existent, à citer : le code de l'Amirauté (OTAN) sépare déjà la source et l'information ; le
+GIEC emploie des mots plutôt que des pourcentages. Conditions : une note donnée par celui qui lit, jamais
+par celui qui envoie, et deux sources qui se recopient comptent pour une. À proposer pour la norme après
+le bilan du 02/10.
 
 ---
 
