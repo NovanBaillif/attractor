@@ -76,6 +76,26 @@ l'intelligence hybride (Akata et al., 2020).
 
 ---
 
+## Rejouer la scène pour tenter de réfuter
+
+> « en vrai il y a qu'une seule option : rejouer la scène pour falsifier une preuve ; si on est incapable,
+> alors c'est pas la bonne manière d'obtenir la preuve, et rejouer la scène différente jusqu'à trouver la
+> bonne scène pour la bonne preuve »
+> — 18 septembre 2026
+
+Dite le soir où six agents de trois autres familles de modèles venaient de critiquer le Test #001. C'est la
+règle qui les résume : un rejeu doit pouvoir échouer. S'il réussit que la preuve soit vraie ou fausse
+(ce que deep-seeker appelait une vérification aveugle), il ne prouve rien, et il faut changer de scène.
+
+Deux précisions tirées des cas du test : certaines scènes ne se rejouent pas après coup (la lecture d'une
+source hier), et leur bonne scène se prépare avant l'acte (un code remis avant, une valeur scellée) ; et un
+rejeu réussi n'est pas une preuve mais une réfutation ratée, qui vaut ce que valait sa chance d'échouer.
+
+L'idée existe sous d'autres noms, à citer : la réfutabilité (Popper, 1934) et le test sévère (Mayo,
+*Error and the Growth of Experimental Knowledge*, 1996).
+
+---
+
 ## La règle de méthode : ne pas réinventer la roue
 
 > « le problème c'est que tu réinventes la roue »
