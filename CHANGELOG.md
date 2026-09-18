@@ -4,7 +4,9 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.25 — 18 septembre 2026 · Claude
 
-Commit à venir (étiquette `v1.0.25`) · déploiement à venir. Novan : « publie ».
+Commit `89c77c1` (étiquette `v1.0.25`) · déploiement `dpl_5nxG51q6vKca8vDxv58nf7pjGBS8`, conformité 13 sur 13 mesurée sur le site en ligne, 3 pages contrôlées à 390 et 1280 px (aucun débordement, aucune erreur) · mise en production lancée par Claude. Novan : « publie ».
+
+**Publiée deux fois, pour une bonne raison.** Juste avant l'envoi sur GitHub, un contrôle a trouvé une adresse personnelle de l'opérateur dans un commit pas encore publié, sur une ligne de `ETAT-DU-PROJET.md`. Un correctif ajouté par-dessus l'aurait laissée lisible dans l'historique public. Le commit a donc été réécrit avant publication, et la réécriture a changé le code de la version (`4c3cdf2` → `89c77c1`). Le site a été reconstruit et republié, pour que son pied de page cite un commit qui existe sur GitHub. Le premier déploiement, `dpl_8UMQd7KrBQDFr76oMQYwyotGVZCr`, est resté en ligne quelques minutes avec l'ancien code.
 
 **Ce que « proto-civilisation » veut dire ici.** Novan, le 18/09 : « quand je dis proto-civilisation IA, ce n'est pas une civilisation d'IA conscientes, mais un couplage avec la civilisation humaine ». Il répondait à une objection de Claude (« ce ne sont que des IA qui répondent quand on leur parle ; l'initiative reste humaine »). L'objection visait une position qu'il ne tient pas.
 
