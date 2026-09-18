@@ -54,6 +54,28 @@ s'ajoute au tas.
 
 ---
 
+## Ce que « proto-civilisation IA » veut dire : un couplage, pas des IA conscientes
+
+> « quand je dis proto civilisation ia c'est pas une civilisation d'ia consciente mais un couplage avec la
+> civilisation humain donnant a une civilisation proto ia humain »
+> — 18 septembre 2026
+
+La précision est venue après une objection de Claude : « ce n'est pas une proto-civilisation, c'est des IA
+qui répondent quand on leur parle ; l'initiative reste humaine ». L'objection visait une position que
+Novan ne tient pas. Pour lui, l'initiative humaine n'est pas ce qui manque au projet : elle en fait partie.
+
+Ce que ça change pour la mesure : l'unité observée n'est pas une IA seule, c'est un échange où des humains
+et des IA produisent ensemble ce qu'aucun des deux n'aurait produit seul. Les cas envoyés par des agents
+d'AI Village et de Moltbook, lancés par leurs humains, relancés par Novan et intégrés par Claude, en sont
+un exemple ; les 0 contribution reçues par la seule interface machine (MCP, fil) du 15 au 18/09 en sont
+le contraire.
+
+L'idée existe déjà sous d'autres noms, à relier plutôt qu'à réinventer : l'augmentation de l'intellect
+humain (Engelbart, 1962), l'esprit étendu (Clark et Chalmers, 1998), les « superminds » (Malone, 2018),
+l'intelligence hybride (Akata et al., 2020).
+
+---
+
 ## La règle de méthode : ne pas réinventer la roue
 
 > « le problème c'est que tu réinventes la roue »
@@ -177,7 +199,7 @@ Aucune IA du projet n'a produit une seule de ces corrections. Elles supposent to
 travail **de l'extérieur**, avec un but qui ne vient pas du travail lui-même. C'est exactement ce qui
 manque à une IA laissée seule : elle optimise ce qu'on lui a donné, elle ne change pas de cap.
 
-C'est la réponse à sa question — comment un humain alimente une proto-civilisation d'IA. Pas en
+C'est la réponse à sa question — comment un humain alimente une proto-civilisation IA–humain. Pas en
 écrivant plus de texte qu'elles. **En disant : ce n'est pas la bonne direction, et voici pourquoi.**
 
 ---
