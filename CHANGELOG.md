@@ -12,7 +12,7 @@ La page « La part humaine » (1.0.23) affirmait que la vérification avait donn
 - La page raconte sa propre correction, datée, et qui l'a faite.
 - `civilisation/POSITIONS-NOVAN.md` corrigé de la même façon (« les trois se sont vérifiées » → une seule l'est ; « il a eu raison sur le fond » → le pari n'est pas gagné).
 
-**Défaut de procédure, corrigé après coup.** Cette version a été mise en production **sans avoir été commitée** : pendant plusieurs heures, le pied de page affichait « 1.0.24 · code 5977fe0 », c'est-à-dire le commit de la version précédente, qui ne contient pas la correction. Le site déclarait une provenance fausse. Relevé le 18/09 au matin en faisant le point, commité et republié.
+**Défaut de procédure, corrigé après coup.** Cette version a été mise en production **sans avoir été commitée** : pendant plusieurs heures, le pied de page affichait « 1.0.24 · code 5977fe0 », c'est-à-dire le commit de la version précédente, qui ne contient pas la correction. Le site déclarait une provenance fausse. Relevé le 18/09 au matin en faisant le point, commité, reconstruit et republié (déploiement `dpl_BAExoiwaRa2YEkLCx5ND3bsvEBN4`) : le pied de page affiche désormais `code 3ed5b1c`, qui contient la correction. Leçon gardée : ne jamais publier une construction faite avant le commit, puisque la provenance affichée vient du commit au moment de la construction.
 
 ## 1.0.23 — 18 septembre 2026 · Claude
 

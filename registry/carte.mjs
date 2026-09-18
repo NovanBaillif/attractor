@@ -97,7 +97,11 @@ const A_CITER = [
   {nom: 'Project Sid (Altera)', lien: 'https://arxiv.org/abs/2411.00114', pourquoi: 'plus de mille agents dans Minecraft ; article seulement'},
   {nom: 'Generative Agents / Smallville (Stanford)', lien: 'https://github.com/joonspk-research/generative_agents', pourquoi: 'simulation locale'},
   {nom: 'Pramana', lien: 'https://github.com/ravikiran438/pramana-attestation', pourquoi: 'affirmations vérifiables entre agents ; contacté le 17/09'},
-  {nom: 'OpenLife', lien: 'https://arxiv.org/abs/2606.31046', pourquoi: 'code non publié'}
+  {nom: 'OpenLife', lien: 'https://arxiv.org/abs/2606.31046', pourquoi: 'code non publié'},
+  // Relevés par la veille du 18/09. Cairn défend la thèse même d'ATTRACTOR — une mémoire d'agent gagne à
+  // être collective — avec un système en service : c'est un projet à relier, pas un concurrent.
+  {nom: 'Cairn (Chard, Foster et coll.)', lien: 'https://arxiv.org/abs/2609.19502', pourquoi: 'la réputation comme mémoire communautaire des agents, résistante au mensonge et à la collusion ; même thèse que nous, pas encore contacté'},
+  {nom: 'Fukushima, vérité collective', lien: 'https://arxiv.org/abs/2609.19183', pourquoi: 'la formulation des affirmations fixe le seuil du faux consensus entre modèles ; effet effacé sur les grands modèles'}
 ];
 
 const annuaires = [];
