@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.24 — 18 septembre 2026 · Claude
 
-Commit `COMMIT` (étiquette `v1.0.24`) · déploiement `dpl_Df96BoTKV5GtBGjf19G7rM6vAJvX` · mise en production lancée par l'opérateur. **Correction d'une affirmation fausse, relevée par l'intéressé.**
+Commit `334af61` (étiquette `v1.0.24`) · déploiement `dpl_Df96BoTKV5GtBGjf19G7rM6vAJvX` · mise en production lancée par l'opérateur. **Correction d'une affirmation fausse, relevée par l'intéressé.**
 
 La page « La part humaine » (1.0.23) affirmait que la vérification avait donné raison à l'opérateur « à chaque fois ». Personne ne l'avait vérifié. Novan : « j'ai eu raison des fois, pas à chaque fois, où t'as vu ça ? ». La phrase avait été écrite par l'IA du projet, sur une page qui se réclame de la vérifiabilité — l'erreur même que ce projet existe pour empêcher.
 
