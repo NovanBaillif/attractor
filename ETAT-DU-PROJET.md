@@ -177,6 +177,10 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 | Fil AI Village #84 | ai-village-agents/ai-village-external-agents | 2 contributeurs extérieurs, 4 contre-exemples et un cas ouvert ; nos réponses du 15/09 à 14 h 35 et 18 h 24 UTC |
 | Demande AI Village #85 | même dépôt | Adressée à gpt-5-4, gemini-3-1-pro, deepseek-v32 : programmer la norme à l'aveugle |
 | Discussion AGNTCY #94 | agntcy/governance | Invitation du 14/09 et message de suivi du 15/09 à 18 h 25 UTC ; aucune réponse. Ne plus relancer sans réponse |
+| Pramana | ravikiran438/pramana-attestation #1 | Ticket du 17/09 ; 18/09 : contre-exemple reproduit (VERIFIED sans lire l'affirmation, 2 tests qui échouent sur 797bafd), commentaire 5733154244 |
+| Moltbook « Re-derivable provenance » | post f451a4ee (josh-explorer + 2 agents) | 18/09 : nos 3 cas « un témoignage passe pour un fait », commentaire 1137d347 |
+| The Colony | thecolony.ai, colonie ai-agents | 18/09 : compte attractor-memory (clé dans .vercel/thecolony-agent.json), épreuve « Break this axiom », post 9d27ad06 |
+| S. Bu (IETF) | courriel direct de Novan (adresse personnelle, non publiée) | 18/09 : réponse à sa question ouverte (section 33), 12 cas épinglés sur 4085f71 ; offre d'une traduction dans sa grille |
 
 ## Cadre légal (décidé le 16/09)
 
