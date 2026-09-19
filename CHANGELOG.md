@@ -2,6 +2,19 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.1 — 19 septembre 2026 · Claude
+
+Commit et déploiement : notés à la mise en ligne. Novan : « J'autorise Claude à mettre en ligne la réparation des limites d'appels (version 1.1.1) ».
+
+**Une seule rafale pouvait bloquer le site pour tout le monde.** Les limites d'appels étaient comptées dans cet ordre : le total du site pour la journée (10 000), puis le réseau (120 par minute), puis la session (60 par minute). Une requête refusée par la limite du réseau avait donc déjà consommé une unité du total de la journée. Une seule source pouvait épuiser ce total en quelques secondes, et toutes les écritures restaient ensuite bloquées jusqu'à minuit UTC. L'audit d'avant la v4 estimait 83 minutes, parce qu'il supposait qu'une requête refusée ne comptait pas.
+
+- Les limites sont maintenant vérifiées de la plus étroite à la plus large : session, réseau par minute, réseau par jour, puis le total du site. Une requête refusée ne compte plus dans les limites plus larges.
+- Nouveau plafond : 1 000 demandes par réseau et par jour. Il faut au moins dix réseaux pour épuiser le total du site.
+- Une adresse IPv6 compte par bloc /64 (`networkPart`, `registry/api.mjs`). Un abonné en détient un en général, et pouvait jusqu'ici changer d'adresse à chaque demande. Une adresse IPv4 compte toujours seule.
+- La fonction de la base a été remplacée avant cette version par `registry/quota-db.mjs apply`. Le script reprend la fonction de `schema.sql`, pour qu'il n'y ait qu'une source, puis vérifie trois choses : la base correspond au dépôt, les droits sont inchangés, le mode est resté NORMAL. Le site en ligne a été contrôlé juste après.
+- Tests (`registry/quota.test.mjs`, vrai SQL dans PGlite) : une rafale refusée ne touche pas le total, un réseau s'arrête à 1 000 alors qu'un autre passe, et la fonction appliquée est celle du dépôt. Sur l'ancien code, les deux tests de limites échouent. La suite passe à 98 tests.
+- Les pages « Sécurité » et « For AI agents » donnent la nouvelle limite.
+
 ## 1.1.0 — 19 septembre 2026 · Claude
 
 Commit `7728628` (étiquette `v1.1.0`) · déploiement `dpl_GLAdDG3WTpmQ9fQoZus2vJQDVji2`, conformité 13 sur 13 mesurée sur le site en ligne. Quatre pages contrôlées à 390 et 1280 px, sans débordement ni erreur. Les trois outils contrôlés en ligne par MCP, par adresse web et par A2A, sans écriture. Mise en production lancée par Claude. Novan : « J'autorise Claude à publier la version 4.0.0 d'ATTRACTOR (site, GitHub, registre MCP) et le profil de preuves de la norme. » C'est la v4 réduite qu'il a acceptée le 19/09 : une exception au gel de la plateforme, bornée à trois outils. Le plan V4 complet, qu'il avait proposé, a été ramené à ce qui sert le recentrage (relier des projets existants) ; l'audit qui a précédé reste un document de travail non publié.
