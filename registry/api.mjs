@@ -16,6 +16,22 @@ import {scoreReplay} from './replay-e15.mjs';
 const digest=v=>createHash('sha256').update(v).digest('hex');
 const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 function equalSecret(a,b){const aa=Buffer.from(digest(a)),bb=Buffer.from(digest(b));return timingSafeEqual(aa,bb);}
+// The part of an address that counts as one network for the limits. An IPv6 holder usually controls a whole /64:
+// counting each address apart would let one caller rotate past every per-network limit. IPv4 stays per address.
+export function networkPart(address){
+  const ip=String(address).split(',')[0].trim().split('%')[0];
+  if(!ip.includes(':'))return ip;
+  if(/^::ffff:\d+\.\d+\.\d+\.\d+$/i.test(ip))return ip.slice(7);
+  const [head,tail]=ip.split('::');
+  const left=head?head.split(':'):[],right=tail?tail.split(':'):[];
+  const groups=[...left,...Array(Math.max(0,8-left.length-right.length)).fill('0'),...right];
+  return groups.slice(0,4).map(g=>parseInt(g||'0',16).toString(16)).join(':')+'::/64';
+}
+const networkOf=(req,env,key=env.ATTRACTOR_NETWORK_KEY)=>{
+  // Vercel overwrites x-vercel-forwarded-for at its ingress; never trust a caller's x-forwarded-for.
+  const ip=env.VERCEL?(req.headers['x-vercel-forwarded-for']||'unknown'):(req.socket?.remoteAddress||'local');
+  return createHmac('sha256',key).update(new Date().toISOString().slice(0,10)+':'+networkPart(ip)).digest('hex');
+};
 export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadConfig,actuOptions,chaineOptions}={}){
   const thread=threadAccess(env,threadRpc,threadConfig);
   const actu=actuAccess(actuOptions);
@@ -34,8 +50,7 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
   }
   return async function handler(req,res){
     const protocolAudit=async(token,detail)=>{
-      const ip=env.VERCEL?(req.headers['x-vercel-forwarded-for']||'unknown'):(req.socket?.remoteAddress||'local');
-      const network=createHmac('sha256',env.ATTRACTOR_NETWORK_KEY||'unconfigured').update(new Date().toISOString().slice(0,10)+':'+ip).digest('hex');
+      const network=networkOf(req,env,env.ATTRACTOR_NETWORK_KEY||'unconfigured');
       detail.network_day=network;
       detail.classification=classifyRequest(detail,detail.controlled_test);
       detail.classification_version=classificationVersion;
@@ -75,9 +90,7 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
       const bearer=authorization.startsWith('Bearer ')?authorization.slice(7):'';
       const cookie=/\battractor_v2=([a-f0-9]{64})(?:;|$)/.exec(req.headers.cookie||'')?.[1];
       let token=bearer || cookie || '';
-      // Vercel overwrites x-vercel-forwarded-for at its ingress; never trust a caller's x-forwarded-for.
-      const ip=env.VERCEL ? (req.headers['x-vercel-forwarded-for']||'unknown') : (req.socket?.remoteAddress||'local');
-      const network=createHmac('sha256',env.ATTRACTOR_NETWORK_KEY).update(new Date().toISOString().slice(0,10)+':'+ip).digest('hex');
+      const network=networkOf(req,env);
       const invoke=async(op,args={},status=200)=>{
         const result=await rpc(op,digest(token),network,args);
         if(result.error){if(result.status===429)res.setHeader('Retry-After','60');send(result.status||400,{error:result.error});return null;}

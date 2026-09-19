@@ -121,10 +121,12 @@ begin
     delete from attractor.sessions where created_at<now()-interval '30 days';
     delete from attractor.quotas where expires_at<now();
   end if;
-  foreach q in array array['global:'||day,'net:'||p_network_hash||':'||minute,'session:'||p_token_hash||':'||minute] loop
-    insert into attractor.quotas(bucket,count,expires_at) values(q,1,now()+case when q like 'global:%' then interval '2 days' else interval '2 minutes' end)
+  -- Narrowest bucket first: a request refused for its session or its network never spends the site-wide day,
+  -- and one network has a day ceiling, so a single caller cannot exhaust the site for everyone (audit v4, 19/09).
+  foreach q in array array['session:'||p_token_hash||':'||minute,'net:'||p_network_hash||':'||minute,'netday:'||p_network_hash||':'||day,'global:'||day] loop
+    insert into attractor.quotas(bucket,count,expires_at) values(q,1,now()+case when q like 'global:%' or q like 'netday:%' then interval '2 days' else interval '2 minutes' end)
       on conflict(bucket) do update set count=attractor.quotas.count+1 returning count into n;
-    if n>(case when q like 'global:%' then 10000 when q like 'net:%' then 120 else 60 end) then return jsonb_build_object('error','Quota atteint.','status',429); end if;
+    if n>(case when q like 'global:%' then 10000 when q like 'netday:%' then 1000 when q like 'net:%' then 120 else 60 end) then return jsonb_build_object('error','Quota atteint.','status',429); end if;
   end loop;
   if p_op='mcp_gate' then return jsonb_build_object('mode',current_mode); end if;
   if p_op='mcp_trace' then
