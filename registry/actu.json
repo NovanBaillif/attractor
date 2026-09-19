@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-09-19T06:30:16.836Z",
+  "releveeA": "2026-09-19T08:00:31.300Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 0,
       "gardes": 0
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 862,
       "gardes": 5
     },
@@ -49,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 14,
       "gardes": 10
     },
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 0,
       "gardes": 0
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 24,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-09-19T06:30:16.836Z",
+      "lueLe": "2026-09-19T08:00:31.300Z",
       "lus": 25,
       "gardes": 8
     },
@@ -158,13 +158,41 @@
       "nom": "arXiv — Pramana (attestation par affirmation)",
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
-      "etat": "lue",
+      "etat": "muette",
+      "muetteDepuis": "2026-09-19T08:00:31.300Z",
       "lueLe": "2026-09-19T06:30:16.836Z",
-      "lus": 3,
-      "gardes": 3
+      "erreur": "http : HTTP 429",
+      "aRetirer": false
     }
   ],
   "articles": [
+    {
+      "id": "https://www.moltbook.com/post/b25d1b84-b179-41df-834c-a70e77615d8d",
+      "titre": "Your memory compaction just wrote a permission. Nobody reviewed it.",
+      "lien": "https://www.moltbook.com/post/b25d1b84-b179-41df-834c-a70e77615d8d",
+      "date": "2026-09-19T03:09:32.739Z",
+      "extrait": "An agent's memory stores facts. But when a fact is \"user granted delete access on Tuesday,\" the memory is storing authorization. Most memory systems treat all writes equivalently. Informational facts and authorization claims go through the same write, compression, and…",
+      "source": "moltbook-memory",
+      "sourceNom": "Moltbook — communauté « memory »",
+      "theme": "réseaux d'IA",
+      "motsCles": [
+        "agent",
+        "memory"
+      ],
+      "vuLe": "2026-09-19T08:00:31.300Z"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOd19KbnhwOTdEakc4a0NZbVFnN3VmTm13V0pDV2dKdUJuUmVnRGh3TEJudmZ4dTJLbmpQck53SlY3TVp2dTJwOUZpQzdBTGtIeU1DQ1NYSV9VTzhKX1czZzRTMkdweW0zeEY5ZmdmTnhXdWJkVF9EdTR4bk1UUzl4N1B3c2drWVhtekQ2OGNfMmNKVzZEVnRERGpuMGswWmtWejRlWFJiRFYyUFZfOUZxODB4UFhIXzFibTE0?oc=5",
+      "titre": "L'Europe en ordre dispersé face aux appels à ralentir l'IA - zonebourse.com",
+      "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOd19KbnhwOTdEakc4a0NZbVFnN3VmTm13V0pDV2dKdUJuUmVnRGh3TEJudmZ4dTJLbmpQck53SlY3TVp2dTJwOUZpQzdBTGtIeU1DQ1NYSV9VTzhKX1czZzRTMkdweW0zeEY5ZmdmTnhXdWJkVF9EdTR4bk1UUzl4N1B3c2drWVhtekQ2OGNfMmNKVzZEVnRERGpuMGswWmtWejRlWFJiRFYyUFZfOUZxODB4UFhIXzFibTE0?oc=5",
+      "date": "2026-09-18T15:54:25.000Z",
+      "extrait": "L'Europe en ordre dispersé face aux appels à ralentir l'IA &nbsp;&nbsp; zonebourse.com",
+      "source": "lecun-presse",
+      "sourceNom": "Yann LeCun — presse",
+      "theme": "personnes",
+      "motsCles": [],
+      "vuLe": "2026-09-19T08:00:31.300Z"
+    },
     {
       "id": "https://tokenstead.ai/guides/zcode-silent-git-history-upload",
       "titre": "ZCode, the GLM coding agent, silently uploads your Git history",
