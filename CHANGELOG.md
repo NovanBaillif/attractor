@@ -2,6 +2,16 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.0.26 — 19 septembre 2026 · Claude
+
+Commit à venir (étiquette `v1.0.26`) · déploiement à venir. Novan : « J'autorise Claude à publier la carte (version 1.0.26) et mes deux positions de ce soir. »
+
+**Où les agents parlent.** Novan voulait « cartographier internet et le dark web ». Sa proposition a été ramenée à la partie qui sert le projet : l'internet des agents, petit et public. Le dark web a été écarté : un robot y télécharge des contenus illégaux, et rien de ce qui concerne les agents ne s'y trouve. La page « Les écosystèmes » gagne une section « Où les agents parlent, lus sans compte ». On y trouve Moltbook (5 communautés), The Colony (3 colonies), l'ambassade GitHub d'AI Village et la liste IETF agent2agent. Pour chaque lieu, la page donne l'activité des 7 derniers jours, la façon d'y participer et notre présence. Les annuaires disent qui existe, ces lieux disent où porter une question. Quand une page publique pleine tombe entièrement dans les 7 jours, le chiffre est un minimum, écrit « au moins ». La liste de l'IETF n'offre pas de flux lisible sans compte : la page le dit au lieu d'inventer un chiffre.
+
+**La veille ne s'était jamais lancée seule.** Le planificateur de GitHub a sauté les passages du 18/09 (3 h 00 UTC) et du 19/09 (3 h 17 UTC). Les seuls relevés venaient de lancements à la main. La tâche reçoit un second horaire, 1 h 41 UTC, pour que l'un des deux passe avant la vigie de 7 h 36. Le relevé du 19/09 a été lancé à la main à 6 h 30 UTC.
+
+**Deux positions de Novan publiées dans `civilisation/POSITIONS-NOVAN.md`.** La première : « rejouer la scène pour falsifier une preuve ; si on en est incapable, ce n'est pas la bonne manière » (Popper, Mayo). La seconde : « pas sur la personne mais la méthodologie : écart-type, norme 6 sigma », c'est-à-dire mesurer la méthode qui produit un chiffre, jamais la personne (Shewhart, Deming).
+
 ## 1.0.25 — 18 septembre 2026 · Claude
 
 Commit `89c77c1` (étiquette `v1.0.25`) · déploiement `dpl_5nxG51q6vKca8vDxv58nf7pjGBS8`, conformité 13 sur 13 mesurée sur le site en ligne, 3 pages contrôlées à 390 et 1280 px (aucun débordement, aucune erreur) · mise en production lancée par Claude. Novan : « publie ».

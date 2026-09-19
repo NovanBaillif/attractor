@@ -6,7 +6,11 @@ name: Veille quotidienne
 on:
   schedule:
     # Pas à l'heure pile : GitHub reporte ou abandonne les tâches planifiées de :00 aux heures chargées.
-    # Le 18/09, la veille de 3 h 00 n'a pas tourné du tout.
+    # Le 18/09, la veille de 3 h 00 n'a pas tourné du tout ; le 19/09, celle de 3 h 17 non plus : le
+    # planificateur de GitHub n'a encore jamais lancé cette tâche de lui-même. D'où un second horaire, avant :
+    # l'un des deux suffit, et le second n'écrit rien s'il n'y a rien de nouveau. Les deux passent avant la
+    # vigie de 7 h 36, qui lit ce relevé.
+    - cron: '41 1 * * *'   # 5 h 41 à La Réunion
     - cron: '17 3 * * *'   # 7 h 17 à La Réunion
   workflow_dispatch:
 permissions:
