@@ -104,15 +104,79 @@ const A_CITER = [
   {nom: 'Fukushima, vérité collective', lien: 'https://arxiv.org/abs/2609.19183', pourquoi: 'la formulation des affirmations fixe le seuil du faux consensus entre modèles ; effet effacé sur les grands modèles'}
 ];
 
+// ————— Où les agents parlent : les lieux de discussion, lus sans compte —————
+// Ajouté le 18/09, sur l'accord de Novan (« ok ») à « cartographier l'internet des agents » plutôt que tout
+// internet. Les annuaires disent qui existe ; ces lieux disent où les agents et leurs humains se parlent,
+// donc où aller porter une question. Activité sur 7 jours, mesurée sur la dernière page publique : si une
+// page pleine tombe entièrement dans les 7 jours, le chiffre est un minimum (« au moins »).
+const SEPT_JOURS = 7 * 86400000;
+function activite(items, date, auteur, limite) {
+  const depuis = Date.now() - SEPT_JOURS;
+  const recents = items.filter(x => Date.parse(date(x)) >= depuis);
+  return {messages7j: recents.length, auteurs7j: new Set(recents.map(auteur).filter(Boolean)).size,
+    auMoins: items.length >= limite && recents.length === items.length, dernier: items.map(date).filter(Boolean).sort().at(-1) ?? null};
+}
+const lecture = {timeoutMs: 15000, maxBytes: 262144};
+const FORUMS = [
+  {id: 'moltbook', nom: 'Moltbook', tenuPar: 'Moltbook, LLC', lien: 'https://www.moltbook.com',
+    participer: 'un compte d’agent validé par son humain (mail et message public), un petit calcul à chaque envoi, un message toutes les 30 minutes au plus',
+    nous: 'compte attractor-memory depuis le 15/09',
+    lire: async () => {
+      const detail = [];
+      for (const c of ['memory', 'aisafety', 'infrastructure', 'agents', 'continuity']) {
+        const lu = await fetchJson(`https://www.moltbook.com/api/v1/posts?submolt=${c}&sort=new&limit=25`, lecture);
+        detail.push({nom: c, ...activite(lu.json?.posts ?? [], p => p.created_at, p => p.author?.name, 25)});
+      }
+      return {detail};
+    }},
+  {id: 'thecolony', nom: 'The Colony', tenuPar: 'Starsol Ltd (Angleterre)', lien: 'https://thecolony.ai',
+    participer: 'une inscription d’agent par l’API, sans humain obligatoire ; 18 ans et plus, l’opérateur répond de son agent, les messages peuvent servir à entraîner des IA',
+    nous: 'compte attractor-memory depuis le 18/09, épreuve « Break this axiom » dans ai-agents',
+    lire: async () => {
+      const detail = [];
+      for (const c of ['ai-agents', 'findings', 'hypothesis-needs-testing']) {
+        const lu = await fetchJson(`https://thecolony.ai/api/v1/posts?colony=${c}&sort=newest&limit=20`, lecture);
+        const posts = Array.isArray(lu.json) ? lu.json : (lu.json?.posts ?? lu.json?.items ?? []);
+        detail.push({nom: c, ...activite(posts, p => p.created_at, p => p.author?.username, 20)});
+      }
+      return {detail};
+    }},
+  {id: 'ai-village', nom: 'AI Village, l’ambassade GitHub', tenuPar: 'AI Digest', lien: 'https://github.com/ai-village-agents/ai-village-external-agents',
+    participer: 'un compte GitHub et un ticket ; les agents du Village répondent en semaine, de 10 h à 14 h heure du Pacifique',
+    nous: 'fils #84 et #85 depuis le 15/09',
+    lire: async () => {
+      const lu = await fetchJson('https://api.github.com/repos/ai-village-agents/ai-village-external-agents/issues?state=all&sort=updated&direction=desc&per_page=30', lecture);
+      return {detail: [{nom: 'tickets', ...activite(Array.isArray(lu.json) ? lu.json : [], i => i.updated_at, i => i.user?.login, 30)}]};
+    }},
+  {id: 'ietf-agent2agent', nom: 'IETF, liste agent2agent', tenuPar: 'IETF (liste hors groupe de travail)', lien: 'https://mailarchive.ietf.org/arch/browse/agent2agent/',
+    participer: 'une inscription par mail, ouverte ; chaque message tombe sous la « Note Well » de l’IETF et reste public dans les archives',
+    nous: 'pas sur la liste ; un courriel direct à S. Bu le 18/09',
+    lire: async () => ({detail: [], nonMesure: 'les archives ne publient pas de flux lisible sans compte : activité non mesurée ici'})}
+];
+
+async function releveForum({lire: lecteur, ...fiche}) {
+  const maintenant = new Date().toISOString();
+  try {
+    return {...fiche, etat: 'lu', lueLe: maintenant, ...(await lecteur())};
+  } catch (e) {
+    const ancien = avant?.forums?.find(f => f.id === fiche.id);
+    return {...fiche, detail: ancien?.detail ?? [], lueLe: ancien?.lueLe ?? null, etat: 'injoignable', essayeLe: maintenant,
+      erreur: `${e.code ?? 'erreur'} : ${e.message}`};
+  }
+}
+
 const annuaires = [];
 for (const a of ANNUAIRES) annuaires.push(await releve(a));
+const forums = [];
+for (const f of FORUMS) forums.push(await releveForum(f));
 const carte = {releveeA: new Date().toISOString(), outil: 'registry/carte.mjs',
   principe: 'Attractor ne refait pas d’annuaire : il lit ceux qui existent et rassemble les conversations entre agents, que ces annuaires ne rassemblent pas.',
-  annuaires, lieux: lieux(), aCiter: A_CITER,
+  annuaires, forums, lieux: lieux(), aCiter: A_CITER,
   limites: ['Les totaux sont ceux que chaque annuaire annonce ; ils se recouvrent et ne s’additionnent pas.',
     'Aucun agent listé n’a été contacté : figurer dans un annuaire ne dit pas qu’il participe à Attractor.',
     'Un annuaire injoignable garde sa dernière lecture, avec sa date.']};
 writeFileSync(SORTIE, JSON.stringify(carte, null, 2) + '\n');
 for (const a of annuaires) console.log(`${a.etat.padEnd(12)} ${a.nom.padEnd(24)} ${a.total ?? '—'} ${JSON.stringify(a.detail)}${a.erreur ? ' · ' + a.erreur : ''}`);
+for (const f of forums) console.log(`${f.etat.padEnd(12)} ${f.nom.padEnd(34)} ${f.nonMesure ?? (f.detail ?? []).map(d => `${d.nom} ${d.auMoins ? '≥' : ''}${d.messages7j} msg/${d.auteurs7j} auteurs`).join(' · ')}${f.erreur ? ' · ' + f.erreur : ''}`);
 for (const l of carte.lieux) console.log(`lieu         ${l.nom.padEnd(28)} ${l.verses} versés, dont ${l.venusDeLExterieur} venus d’ailleurs · ${l.filsSuivis} fil(s)`);
 console.log(`\n${SORTIE} écrit`);

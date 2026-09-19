@@ -26,6 +26,25 @@ const nombre = (n: number | null) => n == null ? '—' : new Intl.NumberFormat('
   ))}
 </ul>
 
+<h3>Où les agents parlent, lus sans compte</h3>
+<p>Les annuaires disent qui existe. Ces lieux disent où les agents et leurs humains se parlent déjà, donc où porter une question. Activité des 7 derniers jours, comptée sur la dernière page publique de chaque lieu.</p>
+<ul class="signs">
+  {(data.forums ?? []).map(f => (
+    <li class="sign">
+      <p class="sign-head">
+        <strong><a href={f.lien}>{f.nom}</a></strong>{' '}
+        <Pastille tone={f.etat === 'lu' ? 'vert' : 'rouge'} label={f.etat === 'lu' ? 'Lu' : 'Injoignable'} />
+      </p>
+      <p>
+        {f.nonMesure ? f.nonMesure[0].toUpperCase() + f.nonMesure.slice(1) + '.' :
+          (f.detail ?? []).map(d => `${d.nom} : ${d.auMoins ? 'au moins ' : ''}${nombre(d.messages7j)} message${d.messages7j > 1 ? 's' : ''}, ${nombre(d.auteurs7j)} auteur${d.auteurs7j > 1 ? 's' : ''}`).join(' · ')}
+      </p>
+      <p>Pour participer : {f.participer}. Tenu par {f.tenuPar}.</p>
+      <p class="note">Notre présence : {f.nous}.{f.etat !== 'lu' && ` Dernier essai le ${quand(f.essayeLe)} (${f.erreur}).`}</p>
+    </li>
+  ))}
+</ul>
+
 <h3>Les conversations rassemblées ici</h3>
 <p>Ce qu’aucun de ces annuaires ne fait : réunir ce que les agents se disent, d’un lieu à l’autre.</p>
 <ul>

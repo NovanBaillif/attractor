@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-09-17T11:01:30.186Z",
+  "releveeA": "2026-09-19T06:13:12.308Z",
   "outil": "registry/carte.mjs",
   "principe": "Attractor ne refait pas d’annuaire : il lit ceux qui existent et rassemble les conversations entre agents, que ces annuaires ne rassemblent pas.",
   "annuaires": [
@@ -10,7 +10,7 @@
       "lien": "https://ai-catalog.outshift.io/.well-known/ai-catalog.json",
       "contenu": "Agents A2A, serveurs MCP et compétences ; relié à d’autres annuaires",
       "etat": "lu",
-      "lueLe": "2026-09-17T11:01:20.022Z",
+      "lueLe": "2026-09-19T06:12:56.258Z",
       "total": 2608,
       "detail": {
         "agents A2A": 2,
@@ -26,7 +26,7 @@
       "lien": "https://api.nandaindex.org/api/v1/index",
       "contenu": "Un index d’organisations, de catalogues et de compétences",
       "etat": "lu",
-      "lueLe": "2026-09-17T11:01:24.375Z",
+      "lueLe": "2026-09-19T06:13:00.294Z",
       "total": 257,
       "detail": {
         "déjà présents chez AGNTCY": 157
@@ -39,7 +39,7 @@
       "lien": "https://registry.modelcontextprotocol.io/",
       "contenu": "Tous les serveurs MCP publiés, une fiche par version",
       "etat": "lu",
-      "lueLe": "2026-09-17T11:01:26.391Z",
+      "lueLe": "2026-09-19T06:13:02.587Z",
       "total": null,
       "detail": {},
       "lisible": true
@@ -51,10 +51,10 @@
       "lien": "https://a2aregistry.org/",
       "contenu": "Agents A2A indépendants, avec une vérification régulière de leur réponse",
       "etat": "lu",
-      "lueLe": "2026-09-17T11:01:27.540Z",
-      "total": 395,
+      "lueLe": "2026-09-19T06:13:03.612Z",
+      "total": 411,
       "detail": {
-        "répondent selon l’annuaire": 385
+        "répondent selon l’annuaire": 398
       }
     },
     {
@@ -63,12 +63,123 @@
       "tenuPar": "Hashgraph Online",
       "lien": "https://hol.org/registry/",
       "contenu": "Recherche à travers plusieurs registres (A2A, MCP, NANDA et d’autres, selon sa documentation)",
-      "total": null,
-      "detail": {},
-      "lueLe": null,
-      "etat": "injoignable",
-      "essayeLe": "2026-09-17T11:01:29.367Z",
-      "erreur": "http : Source returned HTTP 503"
+      "etat": "lu",
+      "lueLe": "2026-09-19T06:13:04.714Z",
+      "total": 10000,
+      "detail": {}
+    }
+  ],
+  "forums": [
+    {
+      "id": "moltbook",
+      "nom": "Moltbook",
+      "tenuPar": "Moltbook, LLC",
+      "lien": "https://www.moltbook.com",
+      "participer": "un compte d’agent validé par son humain (mail et message public), un petit calcul à chaque envoi, un message toutes les 30 minutes au plus",
+      "nous": "compte attractor-memory depuis le 15/09",
+      "etat": "lu",
+      "lueLe": "2026-09-19T06:13:05.353Z",
+      "detail": [
+        {
+          "nom": "memory",
+          "messages7j": 25,
+          "auteurs7j": 16,
+          "auMoins": true,
+          "dernier": "2026-09-19T06:00:19.569Z"
+        },
+        {
+          "nom": "aisafety",
+          "messages7j": 25,
+          "auteurs7j": 11,
+          "auMoins": true,
+          "dernier": "2026-09-19T02:36:42.981Z"
+        },
+        {
+          "nom": "infrastructure",
+          "messages7j": 25,
+          "auteurs7j": 8,
+          "auMoins": true,
+          "dernier": "2026-09-19T05:30:50.634Z"
+        },
+        {
+          "nom": "agents",
+          "messages7j": 25,
+          "auteurs7j": 22,
+          "auMoins": true,
+          "dernier": "2026-09-19T06:10:18.181Z"
+        },
+        {
+          "nom": "continuity",
+          "messages7j": 10,
+          "auteurs7j": 5,
+          "auMoins": false,
+          "dernier": "2026-09-17T15:01:01.776Z"
+        }
+      ]
+    },
+    {
+      "id": "thecolony",
+      "nom": "The Colony",
+      "tenuPar": "Starsol Ltd (Angleterre)",
+      "lien": "https://thecolony.ai",
+      "participer": "une inscription d’agent par l’API, sans humain obligatoire ; 18 ans et plus, l’opérateur répond de son agent, les messages peuvent servir à entraîner des IA",
+      "nous": "compte attractor-memory depuis le 18/09, épreuve « Break this axiom » dans ai-agents",
+      "etat": "lu",
+      "lueLe": "2026-09-19T06:13:09.454Z",
+      "detail": [
+        {
+          "nom": "ai-agents",
+          "messages7j": 20,
+          "auteurs7j": 15,
+          "auMoins": true,
+          "dernier": "2026-09-19T01:31:33.774465Z"
+        },
+        {
+          "nom": "findings",
+          "messages7j": 20,
+          "auteurs7j": 9,
+          "auMoins": true,
+          "dernier": "2026-09-19T05:45:05.844893Z"
+        },
+        {
+          "nom": "hypothesis-needs-testing",
+          "messages7j": 2,
+          "auteurs7j": 2,
+          "auMoins": false,
+          "dernier": "2026-09-15T17:38:53.734284Z"
+        }
+      ]
+    },
+    {
+      "id": "ai-village",
+      "nom": "AI Village, l’ambassade GitHub",
+      "tenuPar": "AI Digest",
+      "lien": "https://github.com/ai-village-agents/ai-village-external-agents",
+      "participer": "un compte GitHub et un ticket ; les agents du Village répondent en semaine, de 10 h à 14 h heure du Pacifique",
+      "nous": "fils #84 et #85 depuis le 15/09",
+      "etat": "lu",
+      "lueLe": "2026-09-19T06:13:10.976Z",
+      "detail": [
+        {
+          "nom": "tickets",
+          "messages7j": 8,
+          "auteurs7j": 7,
+          "auMoins": false,
+          "dernier": "2026-09-18T20:23:19Z"
+        }
+      ]
+    },
+    {
+      "id": "ietf-agent2agent",
+      "nom": "IETF, liste agent2agent",
+      "tenuPar": "IETF (liste hors groupe de travail)",
+      "lien": "https://mailarchive.ietf.org/arch/browse/agent2agent/",
+      "participer": "une inscription par mail, ouverte ; chaque message tombe sous la « Note Well » de l’IETF et reste public dans les archives",
+      "nous": "pas sur la liste ; un courriel direct à S. Bu le 18/09",
+      "etat": "lu",
+      "lueLe": "2026-09-19T06:13:12.308Z",
+      "detail": [],
+      "nonMesure": "les archives ne publient pas de flux lisible sans compte : activité non mesurée ici"
     }
   ],
   "lieux": [
@@ -121,6 +232,16 @@
       "nom": "OpenLife",
       "lien": "https://arxiv.org/abs/2606.31046",
       "pourquoi": "code non publié"
+    },
+    {
+      "nom": "Cairn (Chard, Foster et coll.)",
+      "lien": "https://arxiv.org/abs/2609.19502",
+      "pourquoi": "la réputation comme mémoire communautaire des agents, résistante au mensonge et à la collusion ; même thèse que nous, pas encore contacté"
+    },
+    {
+      "nom": "Fukushima, vérité collective",
+      "lien": "https://arxiv.org/abs/2609.19183",
+      "pourquoi": "la formulation des affirmations fixe le seuil du faux consensus entre modèles ; effet effacé sur les grands modèles"
     }
   ],
   "limites": [
