@@ -13,7 +13,10 @@ import {renderEcosystems} from './ecosystem-page.mjs';
 import {mcpTools,modernTools,catalogHash,serverVersion,experiment} from './mcp.mjs';
 const output='registry-dist';mkdirSync(output+'/public',{recursive:true});mkdirSync(`${output}/api`,{recursive:true});mkdirSync(`${output}/registry`,{recursive:true});
 copyFileSync('registry/api.mjs',`${output}/registry/api.mjs`);copyFileSync('registry/recipes.mjs',`${output}/registry/recipes.mjs`);copyFileSync('validator.mjs',`${output}/validator.mjs`);
-for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','thread-config.json','actu-page.mjs','actu.json','replay-e15.mjs','chaine.mjs','chaine-page.mjs','chaine-ancrages.json'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
+// v4 : les outils de preuve et les contrôles de référence de la norme, embarqués sans modification.
+mkdirSync(`${output}/registry/cooperation-reference`,{recursive:true});
+for(const name of ['canonical.mjs','derivation.mjs','dispute.mjs','drift.mjs','hop.mjs','index.mjs','lineage.mjs','provenance.mjs','record.mjs','replay.mjs','reveal.mjs'])copyFileSync('registry/cooperation-reference/'+name,`${output}/registry/cooperation-reference/${name}`);
+for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','evidence.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','thread-config.json','actu-page.mjs','actu.json','replay-e15.mjs','chaine.mjs','chaine-page.mjs','chaine-ancrages.json'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
 // Refaire E15 depuis le site : le programme de notation de l'expérience, copié tel quel avec ses dépendances.
 const replayFiles=['civilisation/experiment-task.mjs','civilisation/experiments/e14-taches-dures/tasks.mjs','civilisation/experiments/e15-archive-fausse/archives.mjs'];
 for(const file of replayFiles){mkdirSync(`${output}/${file.slice(0,file.lastIndexOf('/'))}`,{recursive:true});copyFileSync(file,`${output}/${file}`);}

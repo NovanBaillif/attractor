@@ -49,7 +49,7 @@ test('modern direct calls, legacy coexistence, metadata, private continuation, v
   assert.ok(events.some(e=>e.reused_knowledge_id===output.knowledge_id));
   assert.ok(events.some(e=>e.claimed_knowledge_id===output.knowledge_id&&e.reused_knowledge_id===null));
   assert.ok(events.every(e=>!JSON.stringify(e).includes(context)&&!JSON.stringify(e).includes('Result:')));
-  assert.ok(events.every(e=>e.server_version==='3.0.0'&&e.classification_version==='observatory-2.0'));
+  assert.ok(events.every(e=>e.server_version==='4.0.0'&&e.classification_version==='observatory-2.0'));
   await rpc('observatory','','',{});
   const admin=await fetch(base+'/api/v2/admin/observatory',{headers:{'x-attractor-operator':'test'}});assert.equal(admin.status,200);const report=await admin.json();assert.ok(report.groups.length);assert.equal(report.counts.unknown_tool_calls,0);
   const subject=report.groups[0].subject_ids[0];const timeline=await fetch(base+'/api/v2/admin/timeline?subject='+subject,{headers:{'x-attractor-operator':'test'}});assert.equal(timeline.status,200);assert.ok((await timeline.json()).events.length);

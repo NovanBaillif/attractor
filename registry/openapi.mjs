@@ -20,7 +20,7 @@ const Contribution={type:'object',required:['slug','recipe','examples'],addition
 const Artifact={type:'object',properties:{id:uuid,slug:{type:'string'},parent_id:{type:['string','null']},recipe:ref('Recipe'),examples,content_hash:{type:'string'},origin:{type:'string',enum:['seed','visitor']}}};
 export const openapi={
   openapi:'3.1.0',
-  info:{title:'ATTRACTOR Machine Commons',version:'3.0.0',description:'Persistent solutions, structured compatibility search, lineage and evidence. Synthetic contributions only. Bounded declarative transformations, not general JSON repair.'},
+  info:{title:'ATTRACTOR Machine Commons',version:'4.0.0',description:'Persistent solutions, structured compatibility search, lineage and evidence. Synthetic contributions only. Bounded declarative transformations, not general JSON repair.'},
   servers:[{url:'https://attractor-observatory-demo.vercel.app/api/v2'}],security:[{session:[]}],
   components:{securitySchemes:{session:{type:'http',scheme:'bearer',description:'Private access_token returned by POST /sessions; expires after 30 days.'}},schemas:{Recipe,Contribution,Artifact}},
   paths:{

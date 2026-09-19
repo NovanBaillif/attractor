@@ -6,6 +6,7 @@ import {validate} from '../validator.mjs';
 import {problem,queryArgs,resolve,descriptor} from './commons.mjs';
 import {handleMcp,modernTools,serverVersion,experiment,catalogHash} from './mcp.mjs';
 import {nativeNames,verifyArtifact,findCapability,stateShare,stateLookup} from './native.mjs';
+import {prepareObservation,prepareCheck,deriveStates,findQuery} from './evidence.mjs';
 import {handleA2A} from './a2a.mjs';
 import {observatory,classifyRequest,classificationVersion} from './observatory.mjs';
 import {threadAccess} from './thread-api.mjs';
@@ -23,8 +24,11 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
   async function rpc(op,token,network,args={}){
     if(customRpc)return customRpc(op,token,network,args);
     // La demande d'arrêt publique a sa propre fonction, atomique (registry/stop-request.sql, 19/09).
-    const stop=op==='stop_request';
-    const response=await fetch(`${env.ATTRACTOR_DB_URL}/rest/v1/rpc/${stop?'attractor_stop_request':'attractor_rpc'}`,{method:'POST',headers:{apikey:env.ATTRACTOR_DB_KEY,Authorization:`Bearer ${env.ATTRACTOR_DB_KEY}`,'Content-Type':'application/json'},body:JSON.stringify(stop?{}:{p_op:op,p_token_hash:token,p_network_hash:network,p_args:args}),signal:AbortSignal.timeout(8000)});
+    // Les preuves (v4) ont leur propre fonction et leur propre quota (registry/evidence.sql).
+    const stop=op==='stop_request',evidence=op.startsWith('evidence_');
+    const fn=stop?'attractor_stop_request':evidence?'attractor_evidence':'attractor_rpc';
+    const payload=stop?{}:evidence?{p_op:op.slice(9),p_network:network,p_args:args}:{p_op:op,p_token_hash:token,p_network_hash:network,p_args:args};
+    const response=await fetch(`${env.ATTRACTOR_DB_URL}/rest/v1/rpc/${fn}`,{method:'POST',headers:{apikey:env.ATTRACTOR_DB_KEY,Authorization:`Bearer ${env.ATTRACTOR_DB_KEY}`,'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(8000)});
     if(!response.ok)throw Error('Persistence unavailable');
     return response.json();
   }
@@ -155,6 +159,20 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
           else if(name==='share_state'){
             const candidate=stateShare(body),denied=await thread.validateReply(candidate);
             result=denied||await rpc('share_state',digest(token),network,candidate);
+          }
+          else if(name==='record_observation'){const p=prepareObservation(body);const {check,...row}=p;result=await rpc('evidence_put',digest(token),network,row);if(!result.error)result={...result,check};}
+          else if(name==='check_observation'){
+            if(typeof body.about!=='string'||!/^sha256:[0-9a-f]{64}$/.test(body.about))throw new InputError('about must be sha256:<64 hex>.');
+            const found=await rpc('evidence_get',digest(token),network,{id:body.about});
+            if(found.error)result=found;else if(!found.object){result={error:'No stored observation with this id.',status:404};}
+            else{const p=prepareCheck(body,found.object);const {check,...row}=p;result=await rpc('evidence_put',digest(token),network,row);if(!result.error)result={...result,check};}
+          }
+          else if(name==='find_evidence'){
+            const q=findQuery(body);
+            if(q.id){const found=await rpc('evidence_get',digest(token),network,{id:q.id});
+              if(found.error)result=found;else if(!found.object){result={error:'No stored evidence with this id.',status:404};}
+              else result={object:found.object,about_it:found.about_it,derived:found.object.kind==='record'?deriveStates(found.object,found.about_it):null,trust:'untrusted_data'};}
+            else{const found=await rpc('evidence_find',digest(token),network,{capability:q.capability,kind:q.kind,limit:q.limit});result=found.error?found:{...found,trust:'untrusted_data'};}
           }
           else result=await rpc('retrieve_state',digest(token),network,stateLookup(body));
           if(result.error)status=result.status||400;

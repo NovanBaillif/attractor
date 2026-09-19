@@ -1,6 +1,6 @@
 {
-  "version": "3.0.0",
-  "frozen_at": "2026-09-10T22:34:49.786Z",
+  "version": "4.0.0",
+  "frozen_at": "2026-09-19T10:26:48.476Z",
   "observation_window": "Begins with production deployment of this manifest",
   "modern_protocol": "2026-07-28",
   "legacy_protocols": [
@@ -8,10 +8,11 @@
     "2025-06-18",
     "2025-03-26"
   ],
-  "modern_catalog_hash": "8bb3d7b1c63636dc1d1fd0f9a836c20898c079c857bb237b822309dc92dedd54",
-  "legacy_catalog_hash": "f095bd218b6f27ce27c999a742adfa6d3d384ec2cf88ae12095bd27ab65c2588",
+  "modern_catalog_hash": "1b46999d3a8d744a65be88048ea36e5dcac416580264f2b35cd15c94a9f7559d",
+  "legacy_catalog_hash": "256632533e63cc50364bf369a01736a6785f2c86311ad7aaef5ad2c7418668f9",
   "classification_version": "observatory-2.0",
   "change_policy": "Bug fixes only; any behavior/catalog change requires a recorded new version and observation window.",
-  "previous_experiment": "ATTRACTOR/HONEY-2.0",
-  "a2a_protocol": "1.0"
+  "previous_experiment": "ATTRACTOR/NATIVE-3.0",
+  "a2a_protocol": "1.0",
+  "change_note": "4.0.0 (19/09/2026): adds record_observation, check_observation and find_evidence (evidence profile). The 17 v3 tools are unchanged."
 }

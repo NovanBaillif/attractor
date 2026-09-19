@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test test.mjs postgres.test.mjs catalog.test.mjs commons.test.mjs honey.test.mjs modern.test.mjs native.test.mjs contribute.test.mjs convention-transport.test.mjs thread-read.test.mjs thread-api.test.mjs stop-request.test.mjs connectors/test.mjs connectors/hubs.test.mjs actu.test.mjs replay-e15.test.mjs chaine.test.mjs chaine-page.test.mjs replay-e15-run.test.mjs stop-request-sql.test.mjs evidence-sql.test.mjs",
+    "test": "node --test test.mjs postgres.test.mjs catalog.test.mjs commons.test.mjs honey.test.mjs modern.test.mjs native.test.mjs contribute.test.mjs convention-transport.test.mjs thread-read.test.mjs thread-api.test.mjs stop-request.test.mjs connectors/test.mjs connectors/hubs.test.mjs actu.test.mjs replay-e15.test.mjs chaine.test.mjs chaine-page.test.mjs replay-e15-run.test.mjs stop-request-sql.test.mjs evidence-sql.test.mjs evidence.test.mjs evidence-integration.test.mjs",
     "check:participation": "node check-participation.mjs"
   },
   "devDependencies": {

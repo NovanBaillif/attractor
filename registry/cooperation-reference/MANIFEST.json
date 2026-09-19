@@ -1,0 +1,19 @@
+{
+  "source": "https://github.com/NovanBaillif/attractor-cooperation/tree/8b342a33a4f7d44d5b5be5b76d68d32b3552e048/reference",
+  "commit": "8b342a33a4f7d44d5b5be5b76d68d32b3552e048",
+  "copied_at": "2026-09-19T10:22:58.160Z",
+  "note": "Vendored unchanged: the evidence tools run the transmission profile's own reference checks. Do not edit here; update from the source and refresh this manifest.",
+  "files": {
+    "canonical.mjs": "a1f1c0b8ac923a634506950fbed8c7ca4816d3740974033bb686b2e2aab35796",
+    "derivation.mjs": "b13116dfed47d4217d80bf622b2614fa29bebdeb5a9963bb56ecaea370febaac",
+    "dispute.mjs": "810c5ccc2e4fdb4c59b6019651c23e88dabc520adff936a2cc74018466b25780",
+    "drift.mjs": "37da552a127b9fb5a0aad04a7da8a6e38626ad3d50e1101c1488a5b5f0b94a4c",
+    "hop.mjs": "1a6c5989817ff926a87b024cdc23a9477d5bc1ea3b0f0de1081c3e5ae498b104",
+    "index.mjs": "d245d7d0caba5a8dace1c6b64d2e88fe39b911b326b0b1d6203838d8e8242153",
+    "lineage.mjs": "b4127f2b9560aab161a4950675d2ec7ea6b7e0b63f42126f22910979ad8dfa21",
+    "provenance.mjs": "b0feae0882c61a4563595be6d5d5c7afa0ecf06744fc07149896352bb75b61dc",
+    "record.mjs": "758143ae7ebe03a9278eb1adcc3a8abeb1f286dd9bfd1e5a40c8b136a8bf61f8",
+    "replay.mjs": "c3e76a3a62b22b1dab12fa8d47235543305419e0c7d51b615efee4710d63fa8d",
+    "reveal.mjs": "10c5e8b48a7b377abcb9b14b3239f4376ad7e8ca7c3c20463323359afecd80c7"
+  }
+}

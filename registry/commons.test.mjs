@@ -27,7 +27,7 @@ test('official MCP client + real PostgreSQL: resolve, contribute, cross-session 
     if(options?.body){const message=JSON.parse(options.body);if(message.method==='initialize'){message.params._meta={'attractor/source':'controlled'};options={...options,body:JSON.stringify(message)};}}
     return fetch(url,options);
   }});await client.connect(transport);t.after(()=>client.close());return client;};
-  const a=await connect();assert.equal((await a.listTools()).tools.length,17);
+  const a=await connect();assert.equal((await a.listTools()).tools.length,20); // 17 v3 tools + 3 evidence tools (4.0.0, 19/09/2026)
   const call=async(client,name,args)=>{const r=await client.callTool({name,arguments:args});assert.notEqual(r.isError,true,JSON.stringify(r));return r.structuredContent;};
   const input={amount:' 12,50 '},output_schema=descriptor(contribution(seeds[1])).output_schema;
   const found=await call(a,'find_solutions',{input,output_schema});assert.equal(found.solutions.length,1);assert.equal(found.solutions[0].output.amount,12.5);
