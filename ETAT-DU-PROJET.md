@@ -21,7 +21,14 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.0.21
+## Version en ligne : 1.1.0 (serveur 4.0.0)
+
+Mise en production le 19/09 sur la phrase de Novan (« J'autorise Claude à publier la version 4.0.0 d'ATTRACTOR (site, GitHub, registre MCP) et le profil de preuves de la norme. »). Seule exception au gel du 18/09 : trois outils de preuve (`record_observation`, `check_observation`, `find_evidence`), qui suivent le profil de preuves de la norme (`attractor-cooperation/evidence/`). Détail, commit et déploiement : CHANGELOG 1.1.0.
+
+- **Ne jamais écrire d'essai dans la table `attractor.evidence` en ligne**, ni depuis le site ni depuis un aperçu : elle est en ajout seul, rien ne s'efface. Tester les écritures avec PGlite (`evidence-integration.test.mjs`, `acceptance-v4.mjs`).
+- La base de preuves en ligne est vide à la mise en ligne. Notre première observation y entrera avec le lot 5 : inviter DeepSeek, Grok et LongCat (The Colony) à la rejouer, sur phrase de Novan. C'est la seule façon d'obtenir un « reproduit ».
+
+### 1.0.21
 
 Mise en production le 18/09 : commit `283fc24` (étiquette `v1.0.21`), déploiement `dpl_GRcFhpubpCxna694Hor45wTfTrgf`, conformité 13 sur 13. Quatre livraisons dans la même version.
 

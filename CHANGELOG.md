@@ -2,6 +2,27 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.0 — 19 septembre 2026 · Claude
+
+Commit et déploiement : notés à la mise en ligne. Novan : « J'autorise Claude à publier la version 4.0.0 d'ATTRACTOR (site, GitHub, registre MCP) et le profil de preuves de la norme. » C'est la v4 réduite qu'il a acceptée le 19/09 : une exception au gel de la plateforme, bornée à trois outils. Le plan V4 complet, qu'il avait proposé, a été ramené à ce qui sert le recentrage (relier des projets existants) ; l'audit qui a précédé reste un document de travail non publié.
+
+**Le serveur pour agents passe en 4.0.0, avec trois outils de preuve.** Ils servent à noter ce qu'un outil a répondu quand on l'a appelé, à vérifier ou rejouer cette observation, et à retrouver ce qui est vérifié, reproduit ou contredit. Ils suivent le [profil de preuves](https://github.com/NovanBaillif/attractor-cooperation/blob/main/evidence/EVIDENCE_PROTOCOL.md) de la norme de transmission, publié le même jour, et en appliquent les contrôles de référence sans modification (`registry/cooperation-reference/`, 11 modules copiés du commit `8b342a3`, empreintes dans `MANIFEST.json`).
+
+- `record_observation` : une observation conforme (champ `observed` avec `upstream` et témoin entrée → sortie), stockée en ajout seul sous l'empreinte SHA-256 de sa forme canonique RFC 8785.
+- `check_observation` : un reçu qui vérifie un champ avec sa preuve (`basis`), ou un rejeu. Un rejeu réfuté est gardé : c'est une contradiction.
+- `find_evidence` : l'objet, ce qui s'y rapporte, et les états qu'un lecteur en déduit (observé, vérifié, rejoué par soi-même, reproduit, contredit), avec des comptes et des raisons, jamais une note. L'indépendance reste « non établie » : les acteurs sont déclarés, pas vérifiés.
+- Stockage : table `attractor.evidence` (`registry/evidence.sql`), installée et vérifiée avant cette version par `registry/evidence-db.mjs`. La base recalcule elle-même l'empreinte, refuse toute modification ou suppression, et tient un quota propre (1 000 objets par jour, 100 par réseau), séparé de celui du site. Aucune écriture hors du mode NORMAL.
+- Les 17 outils existants ne changent pas. Le catalogue passe à 20 outils, figé dans un nouveau manifeste (`ATTRACTOR/EVIDENCE-4.0`). Le manifeste et les catalogues de Native 3.0 sont archivés en ligne (`/experiment-native-3.json`, `/tool-catalog-native-3.json`, `/tool-catalog-legacy-native-3.json`), comme ceux de HONEY 2.0.
+- Guide pour les agents : `/evidence.md`. Mis à jour : `/native.md`, `/mcp-2.md`, `/llms.txt`, la présentation A2A, la page « For AI agents ».
+
+**Essai d'acceptation sur un outil extérieur : 10 étapes sur 10** (`registry/acceptance-v4.mjs`, rapport `registry/acceptance/acceptance-v4.json`). L'outil : le serveur de référence officiel du protocole MCP, `@modelcontextprotocol/server-everything@2026.8.31`, lancé en local avec un environnement vide et un seul outil autorisé (`get-sum`, sans effet). Il a été inspecté, appelé sur 2 + 3, observé, vérifié par un calcul indépendant, rejoué, puis tout a été retrouvé par MCP. Une fausse observation plantée exprès (« 6 ») a été contredite par le vrai rejeu. L'essai a trouvé un défaut : deux rejeux identiques de deux observations différentes se confondaient en une seule preuve. Corrigé avant cette version, avec un test. Tout a été fait par le même opérateur : aucune observation n'est « reproduite ».
+
+**Ce qui a été vérifié sans écrire en base de production.** Le stockage est en ajout seul : un essai en production y resterait pour toujours. Les écritures ont donc été testées sur le vrai SQL dans une base en mémoire (PGlite), à travers le vrai chemin d'appel du serveur. Sur le site en ligne, seuls les chemins sans écriture sont contrôlés : lecture, observation refusée, contrôle d'un objet absent.
+
+**Distribution et registre MCP.** Le dépôt `NovanBaillif/attractor-machine-commons` passe en 4.0.0 (`server.json`, guides, contrats). La version 4.0.0 est publiée au registre officiel des serveurs MCP.
+
+**Pages du site.** La page « Versions » s'était arrêtée à 1.0.19 : elle renvoie maintenant vers ce journal pour 1.0.20 à 1.0.27, et vers l'état du projet pour les messages des 18 et 19/09. La veille compte seize sources, pas douze (pages « Le projet » et « For AI agents »).
+
 ## 1.0.27 — 19 septembre 2026 · Claude
 
 Commit `f49b429` (étiquette `v1.0.27`) · déploiement `dpl_5V7sU6sRBGWvesMXvXqSdBv3gESe`, conformité 13 sur 13 mesurée sur le site en ligne. Quatre pages contrôlées à 390 et 1280 px, sans débordement ni erreur. Mise en production lancée par Claude. Novan : « tu peux réparer les défauts ». Ce sont les défauts relevés par l'audit avant la v4 (document de travail, non publié), réparés indépendamment de toute décision sur la v4.

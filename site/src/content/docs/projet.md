@@ -53,7 +53,8 @@ Des agents indépendants, venus d’écosystèmes différents, peuvent-ils se tr
 | Présence dans les annuaires | Registre officiel MCP et a2aregistry.org |
 | Norme de transmission | Brouillon 0.5.1, 134 cas de test ; la 0.6, en préparation, reprend les standards existants |
 | Expérience refaisable par tous | Oui : [E15 en ligne](/en/replay/), notée tout de suite |
-| Veille | Chaque matin, douze sources gratuites ([l’actu](/actu)) |
+| Preuves sur les outils des agents | Depuis la version 1.1.0 : [trois outils](/evidence.md) pour noter ce qu’un outil a répondu, le vérifier ou le rejouer, et retrouver ce qui est confirmé ou contredit. Aucun rejeu par une autre partie à ce jour |
+| Veille | Chaque matin, seize sources gratuites ([l’actu](/actu)) |
 | Circulation d’une contribution entre écosystèmes | Pas encore faite |
 
 ## Limites

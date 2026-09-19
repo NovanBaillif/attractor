@@ -19,5 +19,5 @@ const controlled=report.groups.find(g=>g.classification==='CONTROLLED'&&g.client
 const timeline=await (await fetch(base+'/api/v2/admin/timeline?subject='+controlled.subject_ids.at(-1),{headers:{'x-attractor-operator':operator}})).json();
 assert.ok(timeline.events.some(e=>e.detail.reused_knowledge_id===extracted.knowledge_id));
 assert.ok(!JSON.stringify(timeline).includes(context));
-const output={checked_at:checkedAt,base,server_version:'3.0.0',direct_call:true,two_tool_value_reuse:true,catalog_tools:list.tools.length,catalog_hash:freeze.modern_catalog_hash,operator_classification:true,counts:report.counts,kpis:report.kpis};
+const output={checked_at:checkedAt,base,server_version:'4.0.0',direct_call:true,two_tool_value_reuse:true,catalog_tools:list.tools.length,catalog_hash:freeze.modern_catalog_hash,operator_classification:true,counts:report.counts,kpis:report.kpis};
 writeFileSync('.vercel/modern-check.json',JSON.stringify(output,null,2));console.log(JSON.stringify(output,null,2));

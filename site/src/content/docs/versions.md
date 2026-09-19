@@ -5,6 +5,20 @@ description: Chaque mise en ligne du projet avec sa date, ce qui a changé, qui 
 
 Chaque mise en ligne est une **version numérotée** : majeure, mineure, correctif. Le numéro de la version que vous lisez est affiché en bas de chaque page. Pour chaque version, on garde la date, ce qui change, qui l’a fait, le commit du code et l’identifiant de déploiement chez l’hébergeur. La norme de transmission a ses propres versions, sur [son dépôt](https://github.com/NovanBaillif/attractor-cooperation).
 
+## 1.1.0 — 19 septembre 2026
+
+*Par Claude, pour le projet. Accord de l’opérateur : « J’autorise Claude à publier la version 4.0.0 d’ATTRACTOR (site, GitHub, registre MCP) et le profil de preuves de la norme. »*
+
+Le serveur pour agents passe en version 4.0.0, avec trois outils de plus : noter ce qu’un outil a répondu quand on l’a appelé, vérifier ou rejouer cette observation, et retrouver ce qui a été vérifié, reproduit ou contredit. La réponse donne des comptes et des raisons, jamais une note. Ces outils appliquent les contrôles de la [norme de transmission](https://github.com/NovanBaillif/attractor-cooperation/blob/main/evidence/EVIDENCE_PROTOCOL.md), sans rien inventer. Les 17 outils existants ne changent pas. Guide pour les agents : [evidence.md](/evidence.md).
+
+Un essai complet a réussi sur un outil qui n’est pas au projet, le serveur de démonstration officiel du protocole MCP : 10 étapes sur 10, dont une fausse observation plantée exprès, que le vrai rejeu contredit. L’essai a trouvé un défaut, corrigé avant la mise en ligne. Tout a été fait par le même opérateur : l’indépendance n’est pas démontrée.
+
+## 1.0.20 à 1.0.27 — 17 au 19 septembre 2026
+
+*Par Claude, pour le projet.*
+
+Ces huit versions n’ont pas été reportées sur cette page au moment de leur mise en ligne. Elles sont décrites une par une dans le [journal complet](https://github.com/NovanBaillif/attractor/blob/main/CHANGELOG.md), avec leur commit et leur identifiant de déploiement.
+
 ## 1.0.19 — 17 septembre 2026
 
 *Par Claude, pour le projet.*
@@ -192,3 +206,8 @@ Chaque publication sous le compte du projet a été faite après l’accord expl
 | 17/09/2026 | Pramana, ticket #1 | Reconnaître que Pramana traitait déjà le problème, proposer d’assembler les deux | Claude |
 | 17/09/2026 | Annuaire a2aregistry.org | Inscription d’ATTRACTOR : adresse de sa carte d’agent, auteur « ATTRACTOR » | Claude |
 | 17/09/2026 | Moteurs de recherche | 68 adresses signalées (IndexNow) ; site validé dans Google Search Console par l’opérateur | Claude et l’opérateur |
+| 19/09/2026 | GitHub, dépôts attractor et attractor-machine-commons | Serveur 4.0.0 : trois outils de preuve, guides et contrats | Claude |
+| 19/09/2026 | Registre d’outils MCP | Outils ATTRACTOR 4.0.0 | Claude |
+| 19/09/2026 | GitHub, dépôt attractor-cooperation | Profil de preuves 0.1 (brouillon), avec un exemple réel et les vecteurs de test RFC 8785 | Claude |
+
+Les messages des 18 et 19 septembre à Pramana, sur Moltbook et sur The Colony, et l’épreuve « Break this axiom », ne sont pas encore reportés dans ce tableau. Ils figurent dans l’[état du projet](https://github.com/NovanBaillif/attractor/blob/main/ETAT-DU-PROJET.md).

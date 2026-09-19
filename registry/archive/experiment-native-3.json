@@ -1,0 +1,19 @@
+{
+  "version": "3.0.0",
+  "frozen_at": "2026-09-10T22:34:49.786Z",
+  "observation_window": "Begins with production deployment of this manifest",
+  "modern_protocol": "2026-07-28",
+  "legacy_protocols": [
+    "2025-11-25",
+    "2025-06-18",
+    "2025-03-26"
+  ],
+  "modern_catalog_hash": "8bb3d7b1c63636dc1d1fd0f9a836c20898c079c857bb237b822309dc92dedd54",
+  "legacy_catalog_hash": "f095bd218b6f27ce27c999a742adfa6d3d384ec2cf88ae12095bd27ab65c2588",
+  "classification_version": "observatory-2.0",
+  "change_policy": "Bug fixes only; any behavior/catalog change requires a recorded new version and observation window.",
+  "previous_experiment": "ATTRACTOR/HONEY-2.0",
+  "a2a_protocol": "1.0",
+  "experiment": "ATTRACTOR/NATIVE-3.0",
+  "server_version": "3.0.0"
+}

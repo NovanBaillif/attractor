@@ -34,7 +34,7 @@ Every first modern tool call works alone. To reuse a private Commons exposure re
 
 ## Compatibility and schemas
 
-Legacy 2025-11-25, 2025-06-18 and 2025-03-26 clients keep initialize and Mcp-Session-Id. Legacy catalog names remain extract_json, coerce_to_schema, validate_schema and dedupe_records. Modern names are extract_json_from_llm_output, coerce_json_to_schema, validate_json_schema and deduplicate_json_array. Both catalogs contain 17 tools; aliases do not duplicate tools in a catalog.
+Legacy 2025-11-25, 2025-06-18 and 2025-03-26 clients keep initialize and Mcp-Session-Id. Legacy catalog names remain extract_json, coerce_to_schema, validate_schema and dedupe_records. Modern names are extract_json_from_llm_output, coerce_json_to_schema, validate_json_schema and deduplicate_json_array. Both catalogs contain 20 tools; aliases do not duplicate tools in a catalog.
 
 Tool input/output contracts use JSON Schema syntax compatible with 2020-12. The **validation utility's schema argument remains the documented bounded subset**; supporting the modern protocol does not turn that utility into a full JSON Schema engine. No arbitrary schema fetching, code execution, shell, scanners or URL proxy.
 
@@ -52,6 +52,6 @@ CONTRIBUTIONS_PAUSED stops new recipes while leaving tools and reads operational
 
 The public experiment manifest archives both catalog hashes and the UTC freeze time. After release, only bug fixes may change this experiment; record a new version/hash and observation window for any behavior or catalog change. Controlled conformance tests are scripted checks, not evidence that an agent spontaneously chose the honey.
 
-## Native 3.0
+## Native 3.0 and Evidence 4.0
 
-The four machine-native capabilities are documented in [native.md](/native.md). The original HONEY 2.0 experiment and both catalogs are preserved as archives.
+The four machine-native capabilities are documented in [native.md](/native.md), the three evidence tools of 4.0 in [evidence.md](/evidence.md). The HONEY 2.0 and Native 3.0 experiments and their catalogs are preserved as archives.
