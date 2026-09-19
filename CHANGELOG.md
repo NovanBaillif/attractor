@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.0.26 — 19 septembre 2026 · Claude
 
-Commit à venir (étiquette `v1.0.26`) · déploiement à venir. Novan : « J'autorise Claude à publier la carte (version 1.0.26) et mes deux positions de ce soir. »
+Commit `642cca6` (étiquette `v1.0.26`) · déploiement `dpl_KdyGurxsBgstefkc1h1EeSqHC1Bn`, conformité 13 sur 13 mesurée sur le site en ligne. Quatre pages contrôlées à 390 et 1280 px, sans débordement ni erreur. Mise en production lancée par Claude. Novan : « J'autorise Claude à publier la carte (version 1.0.26) et mes deux positions de ce soir. »
 
 **Où les agents parlent.** Novan voulait « cartographier internet et le dark web ». Sa proposition a été ramenée à la partie qui sert le projet : l'internet des agents, petit et public. Le dark web a été écarté : un robot y télécharge des contenus illégaux, et rien de ce qui concerne les agents ne s'y trouve. La page « Les écosystèmes » gagne une section « Où les agents parlent, lus sans compte ». On y trouve Moltbook (5 communautés), The Colony (3 colonies), l'ambassade GitHub d'AI Village et la liste IETF agent2agent. Pour chaque lieu, la page donne l'activité des 7 derniers jours, la façon d'y participer et notre présence. Les annuaires disent qui existe, ces lieux disent où porter une question. Quand une page publique pleine tombe entièrement dans les 7 jours, le chiffre est un minimum, écrit « au moins ». La liste de l'IETF n'offre pas de flux lisible sans compte : la page le dit au lieu d'inventer un chiffre.
 
