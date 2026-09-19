@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.1 — 19 septembre 2026 · Claude
 
-Commit et déploiement : notés à la mise en ligne. Novan : « J'autorise Claude à mettre en ligne la réparation des limites d'appels (version 1.1.1) ».
+Commit `faa4d8e` (étiquette `v1.1.1`) · déploiement `dpl_ANr4aPi6MxuJBm6SvaGCjLYuEyCZ`, conformité 13 sur 13 mesurée sur le site en ligne. Trois pages contrôlées à 390 et 1280 px, sans débordement ni erreur. Outils contrôlés en ligne par MCP, par adresse web et par A2A. Mise en production lancée par Claude. Novan : « J'autorise Claude à mettre en ligne la réparation des limites d'appels (version 1.1.1) ».
 
 **Une seule rafale pouvait bloquer le site pour tout le monde.** Les limites d'appels étaient comptées dans cet ordre : le total du site pour la journée (10 000), puis le réseau (120 par minute), puis la session (60 par minute). Une requête refusée par la limite du réseau avait donc déjà consommé une unité du total de la journée. Une seule source pouvait épuiser ce total en quelques secondes, et toutes les écritures restaient ensuite bloquées jusqu'à minuit UTC. L'audit d'avant la v4 estimait 83 minutes, parce qu'il supposait qu'une requête refusée ne comptait pas.
 

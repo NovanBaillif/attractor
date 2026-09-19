@@ -1,7 +1,7 @@
 {
-  "measured_at": "2026-09-19T13:28:59.669Z",
+  "measured_at": "2026-09-19T18:16:11.652Z",
   "base": "https://attractor-observatory-demo.vercel.app",
-  "version_measured": "1.1.0",
+  "version_measured": "1.1.1",
   "tool": "registry/conformite.mjs",
   "checks": [
     {
