@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,mkdirSync} from 'node:fs';
+import {readFileSync,mkdirSync,rmSync} from 'node:fs';
 import {randomUUID} from 'node:crypto';
 import {PGlite} from '@electric-sql/pglite';
 import {contribution,seeds,hash} from './recipes.mjs';
@@ -47,5 +47,9 @@ test('real Postgres: A → version → B revision → C verified use, ACL, limit
     assert.equal((await rpc('search','quota',{q:''},'quota-network')).status,429);
     await db.close();db=new PGlite(dir);
     const persisted=await db.query('select id,parent_id from attractor.artifacts order by revision');assert.equal(persisted.rows.length,2);assert.equal(persisted.rows[1].parent_id,original.id);
-  }finally{await db.close();}
+  }finally{
+    await db.close();
+    // Corrigé le 19/09 : la base de test restait sur le disque, 59 fois, soit 2,4 Go dans data/.
+    rmSync(dir,{recursive:true,force:true});
+  }
 });

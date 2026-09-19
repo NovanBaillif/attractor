@@ -1,0 +1,29 @@
+# Les tests du registre, à chaque envoi sur main et à chaque demande de fusion.
+# Ajouté le 19/09/2026 après l'audit v4 : jusque-là, aucun test ne tournait automatiquement ; ils ne
+# tournaient que lancés à la main. Gratuit pour un dépôt public. Lecture seule : aucun secret, aucune
+# base réelle (les tests utilisent PGlite, une base Postgres en mémoire ou dans un dossier temporaire).
+name: Tests
+on:
+  push:
+    branches: [main]
+    # Le relevé quotidien de la veille ne touche pas au code : inutile de relancer les tests pour lui.
+    paths-ignore: ['registry/actu.json']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Installer les dépendances du registre
+        run: npm ci
+        working-directory: registry
+      - name: Lancer les tests du registre
+        run: npm test
+        working-directory: registry

@@ -22,7 +22,9 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
   const chaine=chaineAccess({lireTout:thread.lireTout,...(chaineOptions??{})});
   async function rpc(op,token,network,args={}){
     if(customRpc)return customRpc(op,token,network,args);
-    const response=await fetch(`${env.ATTRACTOR_DB_URL}/rest/v1/rpc/attractor_rpc`,{method:'POST',headers:{apikey:env.ATTRACTOR_DB_KEY,Authorization:`Bearer ${env.ATTRACTOR_DB_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({p_op:op,p_token_hash:token,p_network_hash:network,p_args:args}),signal:AbortSignal.timeout(8000)});
+    // La demande d'arrêt publique a sa propre fonction, atomique (registry/stop-request.sql, 19/09).
+    const stop=op==='stop_request';
+    const response=await fetch(`${env.ATTRACTOR_DB_URL}/rest/v1/rpc/${stop?'attractor_stop_request':'attractor_rpc'}`,{method:'POST',headers:{apikey:env.ATTRACTOR_DB_KEY,Authorization:`Bearer ${env.ATTRACTOR_DB_KEY}`,'Content-Type':'application/json'},body:JSON.stringify(stop?{}:{p_op:op,p_token_hash:token,p_network_hash:network,p_args:args}),signal:AbortSignal.timeout(8000)});
     if(!response.ok)throw Error('Persistence unavailable');
     return response.json();
   }
@@ -86,14 +88,11 @@ export function createHandler({env=process.env,rpc:customRpc,threadRpc,threadCon
         const reason=typeof body.reason==='string'?body.reason.trim():'';
         if(reason.length<5||reason.length>500)return send(400,{error:'Motif requis : 5 à 500 caractères.'});
         const requester=typeof body.requester==='string'?body.requester.trim().slice(0,100):'';
-        const state=await rpc('health',digest(token),network,{});
-        if(state.error)return send(state.status||503,{error:state.error});
-        let mode=state.mode,changed=false;
-        if(mode==='NORMAL'){
-          const switched=await rpc('admin_mode',digest(token),network,{mode:'CONTRIBUTIONS_PAUSED'});
-          if(switched.error)return send(switched.status||503,{error:switched.error});
-          mode=switched.mode;changed=true;
-        }
+        // Une seule opération en base : lire puis écrire en deux fois laissait une fenêtre où un arrêt total
+        // posé par l'opérateur pouvait être ramené à une simple pause (audit v4, 19/09).
+        const stopped=await rpc('stop_request',digest(token),network,{});
+        if(stopped.error)return send(stopped.status||503,{error:stopped.error});
+        const mode=stopped.mode,changed=stopped.changed===true;
         console.log(JSON.stringify({event:'stop_request',at:new Date().toISOString(),changed,mode,requester:requester||null,reason,network:network.slice(0,16)}));
         return send(200,{mode,changed,message:changed
           ?'Les nouvelles contributions sont suspendues pour tout le monde. La lecture reste ouverte. La reprise sera décidée par l’opérateur humain du projet.'

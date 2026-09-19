@@ -14,6 +14,7 @@ async function withServer(start, run) {
     calls.push({op, args});
     if (op === 'health') return {mode, protocol: '0.2', persistence: true};
     if (op === 'admin_mode') { mode = args.mode; return {mode}; }
+    if (op === 'stop_request') { const changed = mode === 'NORMAL'; if (changed) mode = 'CONTRIBUTIONS_PAUSED'; return {mode, changed}; }
     return {error: 'unexpected', status: 500};
   };
   const server = http.createServer(createHandler({env, rpc}));
@@ -30,7 +31,7 @@ test('a stop request moves NORMAL to CONTRIBUTIONS_PAUSED and says so', async ()
     const d = await r.json();
     assert.equal(r.status, 200); assert.equal(d.changed, true); assert.equal(d.mode, 'CONTRIBUTIONS_PAUSED');
     assert.equal(mode(), 'CONTRIBUTIONS_PAUSED');
-    assert.deepEqual(calls.map(c => c.op), ['health', 'admin_mode']);
+    assert.deepEqual(calls.map(c => c.op), ['stop_request'], 'one atomic operation, never a read followed by a write');
   });
 });
 
