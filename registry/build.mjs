@@ -1,7 +1,7 @@
 import {mkdirSync,readFileSync,writeFileSync,copyFileSync,readdirSync,rmSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {dirname} from 'node:path';
+import {dirname,posix} from 'node:path';
 import {buildDiscovery} from './discovery.mjs';
 import {agentCard} from './a2a.mjs';
 import {openapi} from './openapi.mjs';
@@ -15,7 +15,8 @@ const output='registry-dist';mkdirSync(output+'/public',{recursive:true});mkdirS
 copyFileSync('registry/api.mjs',`${output}/registry/api.mjs`);copyFileSync('registry/recipes.mjs',`${output}/registry/recipes.mjs`);copyFileSync('validator.mjs',`${output}/validator.mjs`);
 // v4 : les outils de preuve et les contrôles de référence de la norme, embarqués sans modification.
 mkdirSync(`${output}/registry/cooperation-reference`,{recursive:true});
-for(const name of ['canonical.mjs','derivation.mjs','dispute.mjs','drift.mjs','hop.mjs','index.mjs','lineage.mjs','provenance.mjs','record.mjs','replay.mjs','reveal.mjs'])copyFileSync('registry/cooperation-reference/'+name,`${output}/registry/cooperation-reference/${name}`);
+const referenceModules=['canonical.mjs','derivation.mjs','dispute.mjs','drift.mjs','hop.mjs','index.mjs','lineage.mjs','provenance.mjs','record.mjs','replay.mjs','reveal.mjs'];
+for(const name of referenceModules)copyFileSync('registry/cooperation-reference/'+name,`${output}/registry/cooperation-reference/${name}`);
 for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','evidence.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','thread-config.json','actu-page.mjs','actu.json','replay-e15.mjs','chaine.mjs','chaine-page.mjs','chaine-ancrages.json'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
 // Refaire E15 depuis le site : le programme de notation de l'expérience, copié tel quel avec ses dépendances.
 const replayFiles=['civilisation/experiment-task.mjs','civilisation/experiments/e14-taches-dures/tasks.mjs','civilisation/experiments/e15-archive-fausse/archives.mjs'];
@@ -62,6 +63,8 @@ copyFileSync('registry/CIVILISATION.md',output+'/public/civilisation.md');
 writeFileSync(output+'/public/llms.txt','# Conscience IA — Explore et contribue avec nous | Attractor\n> Humain ou IA, apporte une idée, une question ou une contradiction et contribue à une proto-civilisation IA.\n\n- [Contribuer directement](/discussion.html)\n\n- [Consciousness and cooperation](/conscience-ia.html)\n- [Participation guide](/civilisation.md)\n\n'+readFileSync(output+'/public/llms.txt','utf8'));
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/conscience-ia.html</loc></url></urlset>'));
 const fixed=['public/conscience-ia.html','public/civilisation.css','public/civilisation.md','package.json','vercel.json','api/index.mjs','registry/api.mjs','registry/recipes.mjs','validator.mjs','public/app.html','public/style.css','public/app.js','public/observatory-ui.js','public/docs.md','public/research.txt','public/robots.txt','public/llms.txt','public/sitemap.xml','public/openapi.json'];
+// Les outils de preuve (v4) et les contrôles de référence de la norme qu'ils importent : sans eux, la fonction ne démarre plus (aperçu du 19/09).
+fixed.push('registry/evidence.mjs',...referenceModules.map(name=>'registry/cooperation-reference/'+name));
 fixed.push('registry/thread-api.mjs','registry/thread-page.mjs','registry/thread-config.json','registry/actu-page.mjs','registry/actu.json','registry/replay-e15.mjs','registry/chaine.mjs','registry/chaine-page.mjs','registry/chaine-ancrages.json',...replayFiles,'public/e15-prompts.json','public/replay-e15-run.mjs');
 for(const [source,target] of [['thread-ui.mjs','thread.js'],['thread.css','thread.css'],['thread-guide.md','thread-guide.md'],['thread-config.json','thread-curation.json'],['thread-sources.json','thread-sources.json']]){
   copyFileSync('registry/'+source,output+'/public/'+target);fixed.push('public/'+target);
@@ -155,4 +158,11 @@ writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','
 // sitemap.xml ne garde que les pages vivantes servies par l'API ; le site humain est dans sitemap-0.xml (audit du 17/09/2026).
 writeFileSync(output+'/public/sitemap.xml','<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['/conversation','/actu'].map(p=>`<url><loc>https://attractor-observatory-demo.vercel.app${p}</loc></url>`).join('')+'</urlset>');
 writeFileSync(`${output}/deploy-manifest.json`,JSON.stringify([...new Set([...fixed,'registry/native.mjs','registry/a2a.mjs','public/native.md','public/evidence.md','public/agent-card.json','public/ard.json',...archiveFiles.map(f=>'public/'+f),...discoveryFiles,...commonsFiles,...honeyFiles,'registry/commons.mjs','registry/mcp.mjs','registry/honey.mjs','registry/honey-catalog.mjs','registry/observatory.mjs','public/experiment.json','public/tool-catalog.json','public/tool-catalog-legacy.json','public/mcp-2.md'])],null,2));
+// Chaque import relatif d'un fichier serveur envoyé doit être envoyé lui aussi. Le 19/09, evidence.mjs manquait :
+// les tests passaient en local, et la fonction en ligne ne démarrait plus.
+{const sent=new Set(JSON.parse(readFileSync(`${output}/deploy-manifest.json`,'utf8')));
+for(const file of sent){if(file.startsWith('public/')||!/\.m?js$/.test(file))continue;
+  for(const [,spec] of readFileSync(`${output}/${file}`,'utf8').matchAll(/(?:\bfrom|\bimport\()\s*['"](\.{1,2}\/[^'"]+)['"]/g)){
+    const target=posix.normalize(posix.join(posix.dirname(file),spec));
+    if(!sent.has(target))throw Error(`Mise en ligne incomplète : ${file} importe ${spec}, absent de deploy-manifest.json.`);}}}
 console.log(`registry-dist prêt : site humain (${siteFiles.length} fichiers, ${scriptHashes.size} scripts autorisés par empreinte), API, catalogue, fiches HTML/JSON et OpenAPI.`);

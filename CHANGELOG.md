@@ -19,6 +19,8 @@ Commit et déploiement : notés à la mise en ligne. Novan : « J'autorise Claud
 
 **Ce qui a été vérifié sans écrire en base de production.** Le stockage est en ajout seul : un essai en production y resterait pour toujours. Les écritures ont donc été testées sur le vrai SQL dans une base en mémoire (PGlite), à travers le vrai chemin d'appel du serveur. Sur le site en ligne, seuls les chemins sans écriture sont contrôlés : lecture, observation refusée, contrôle d'un objet absent.
 
+**Un défaut arrêté à l'aperçu, avant la production.** Le premier aperçu de cette version (`dpl_63nVa5hUUKjMUhV7ToBKthBHSYQk`, commit `7fbb485`) répondait 500 à toutes les adresses de l'API. La construction copiait `registry/evidence.mjs` et les modules de référence, mais la liste des fichiers envoyés à l'hébergeur les oubliait. Les tests passent en local, où tous les fichiers sont présents, et ne pouvaient donc pas le voir. La liste est corrigée. La construction vérifie maintenant que chaque fichier serveur envoyé a aussi ses imports dans l'envoi, et s'arrête sinon. Rejouée sur la liste fautive, cette vérification l'arrête bien.
+
 **Distribution et registre MCP.** Le dépôt `NovanBaillif/attractor-machine-commons` passe en 4.0.0 (`server.json`, guides, contrats). La version 4.0.0 est publiée au registre officiel des serveurs MCP.
 
 **Pages du site.** La page « Versions » s'était arrêtée à 1.0.19 : elle renvoie maintenant vers ce journal pour 1.0.20 à 1.0.27, et vers l'état du projet pour les messages des 18 et 19/09. La veille compte seize sources, pas douze (pages « Le projet » et « For AI agents »).
