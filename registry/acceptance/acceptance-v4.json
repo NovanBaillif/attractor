@@ -1,0 +1,171 @@
+{
+  "test": "ATTRACTOR v4 acceptance (plan V4 §21)",
+  "ran_at": "2026-09-19T11:30:03.717Z",
+  "external": "@modelcontextprotocol/server-everything@2026.8.31",
+  "where": "local evidence server (real server call path, real SQL in PGlite); nothing published",
+  "independence": "not established: every observation, check and replay here was made by the same operator, except the planted faulty observer",
+  "passed": 10,
+  "total": 10,
+  "steps": [
+    {
+      "step": 1,
+      "name": "register an external MCP capability",
+      "ok": true,
+      "package": "@modelcontextprotocol/server-everything@2026.8.31",
+      "server": {
+        "name": "mcp-servers/everything",
+        "title": "Everything Reference Server",
+        "version": "2.0.0"
+      }
+    },
+    {
+      "step": 2,
+      "name": "capture capability, version, schema and tools/list digest",
+      "ok": true,
+      "tool": "get-sum",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "input_schema_sha256": "140a7b5bd6582f2e5026e88fc70f513b6e9cb88b906de776c061f52172c657ff",
+      "tools_list_sha256": "0236d1d9f1b0e9f7d9777ee4002eafe5a6db36b46f2417b5728de7368d8d3796",
+      "tools_count": 13
+    },
+    {
+      "step": 3,
+      "name": "one allowlisted, read-only call",
+      "ok": true,
+      "input": {
+        "a": 2,
+        "b": 3
+      },
+      "output": {
+        "content": [
+          {
+            "type": "text",
+            "text": "The sum of 2 and 3 is 5."
+          }
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "name": "record the observation",
+      "ok": true,
+      "id": "sha256:ad458a3d4e36c6fb70519a15c6c95d0e029649952a1d8561501c3fe917a32715",
+      "check": "conformant"
+    },
+    {
+      "step": 5,
+      "name": "verify a deterministic property (the stated sum equals a + b computed independently)",
+      "ok": true,
+      "stated": 5,
+      "expected": 5,
+      "check": "conformant"
+    },
+    {
+      "step": 6,
+      "name": "fingerprints and provenance recorded",
+      "ok": true,
+      "id": "sha256:ad458a3d4e36c6fb70519a15c6c95d0e029649952a1d8561501c3fe917a32715",
+      "capability": "mcp+stdio://npm/@modelcontextprotocol/server-everything@2026.8.31#server=mcp-servers/everything@2.0.0;tool=get-sum;input-schema=sha256:140a7b5bd6582f2e5026e88fc70f513b6e9cb88b906de776c061f52172c657ff",
+      "actor": "https://attractor-observatory-demo.vercel.app/#operator",
+      "lineage": "anthropic/claude"
+    },
+    {
+      "step": 7,
+      "name": "redo the experiment",
+      "ok": true,
+      "same_output": true
+    },
+    {
+      "step": 8,
+      "name": "link the replay to the initial observation",
+      "ok": true,
+      "id": "sha256:bc55014987b8dd240ff4942f580a9d793b980461d7f467bd955ca4fbb3a4dfa8",
+      "check": "confirmed",
+      "warnings": [
+        "same-lineage-replay"
+      ]
+    },
+    {
+      "step": 9,
+      "name": "retrieve everything through find_evidence",
+      "ok": true,
+      "found_by_capability": 1,
+      "derived": {
+        "states": [
+          "observed",
+          "verified",
+          "self-replayed"
+        ],
+        "counts": {
+          "verifications": 1,
+          "self_replays": 1,
+          "reproductions": 0,
+          "contradictions": 0
+        },
+        "details": [
+          {
+            "id": "sha256:423319a1533f28a8816550264bacecc1222e0074b086a23943abcf52e352a336",
+            "kind": "receipt",
+            "actor": "https://attractor-observatory-demo.vercel.app/#operator-check",
+            "lineage": "human",
+            "status": "verified",
+            "reason": "a conformant receipt verifies a field with an independent basis (7.4, 7.1)",
+            "warnings": []
+          },
+          {
+            "id": "sha256:bc55014987b8dd240ff4942f580a9d793b980461d7f467bd955ca4fbb3a4dfa8",
+            "kind": "replay",
+            "actor": "https://attractor-observatory-demo.vercel.app/#operator",
+            "lineage": "anthropic/claude",
+            "status": "self-replayed",
+            "reason": "confirmed by the observer itself",
+            "warnings": [
+              "same-lineage-replay"
+            ]
+          }
+        ],
+        "independence": "not-established",
+        "summary": "1 verification(s), 0 reproduction(s) by another declared actor, 1 self-replay(s), 0 contradiction(s). No score: read the reasons."
+      }
+    },
+    {
+      "step": 10,
+      "name": "show a contradiction when a second execution is incompatible (planted faulty observation)",
+      "ok": true,
+      "planted": true,
+      "id": "sha256:c211f95a24d9b7038a3543471ea6ac3f22b038db75c1eb8f51ae8703c6e1f079",
+      "derived": {
+        "states": [
+          "observed",
+          "contradicted"
+        ],
+        "counts": {
+          "verifications": 0,
+          "self_replays": 0,
+          "reproductions": 0,
+          "contradictions": 1
+        },
+        "details": [
+          {
+            "id": "sha256:733097d07b16f49825ca1de951459deb0be07ac3d81cfe155f4e4eeb7c20e714",
+            "kind": "replay",
+            "actor": "https://attractor-observatory-demo.vercel.app/#operator",
+            "lineage": "anthropic/claude",
+            "status": "contradicted",
+            "reason": "the replay obtained a different output",
+            "warnings": [
+              "self-refuting-witness"
+            ]
+          }
+        ],
+        "independence": "not-established",
+        "summary": "0 verification(s), 0 reproduction(s) by another declared actor, 0 self-replay(s), 1 contradiction(s). No score: read the reasons."
+      }
+    }
+  ]
+}

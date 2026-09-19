@@ -31,6 +31,14 @@ test('what is refused: a non-conformant record, a record with no witness, a rece
   assert.throws(() => prepareCheck({about: stored.id, receipt: verification, replay}, stored), /exactly one/);
 });
 
+test('the same replay of two different observations is two pieces of evidence, each bound to its target', () => {
+  const a = prepareObservation({record: observation});
+  const b = prepareObservation({record: {...observation, id: observation.id + '-second'}});
+  const ra = prepareCheck({about: a.id, replay}, a), rb = prepareCheck({about: b.id, replay}, b);
+  assert.notEqual(ra.id, rb.id, 'found by the v4 acceptance test on 19/09: identical replays used to collide');
+  assert.equal(JSON.parse(ra.canonical).about, a.id);
+});
+
 test('states: verified and self-replayed by the observer, reproduced by another actor, contradicted by a different output', () => {
   const obs = prepareObservation({record: observation});
   const items = [

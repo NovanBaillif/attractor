@@ -65,6 +65,9 @@ export function prepareObservation(body) {
 }
 
 // Un contrôle d'une observation déjà stockée : un reçu conforme (7.4) ou un rejeu recevable (7.6).
+// Stocké avec la référence de l'observation visée DANS son contenu, donc dans son empreinte : un rejeu ne dit
+// pas lui-même ce qu'il rejoue, et deux rejeux identiques de deux observations différentes se confondaient
+// (trouvé par le test d'acceptation v4, 19/09).
 export function prepareCheck(body, storedObservation) {
   exact(body, ['about'], ['receipt', 'replay']);
   if (Boolean(body.receipt) === Boolean(body.replay)) throw new InputError('Send exactly one of receipt or replay.');
@@ -75,14 +78,14 @@ export function prepareCheck(body, storedObservation) {
     if (!isObject(receipt) || receipt.target !== record.id) throw new InputError('receipt.target must be the observed record id: ' + record.id);
     const check = inspectHop({sent: record, receipt});
     if (check.status !== 'conformant') throw new InputError('Receipt is not conformant to the profile: ' + check.violations.slice(0, 5).join(', '));
-    return {...stored('receipt', receipt, {target: storedObservation.id, actor: text(receipt.record?.author?.actor, 200) || 'unknown',
+    return {...stored('receipt', {about: storedObservation.id, receipt}, {target: storedObservation.id, actor: text(receipt.record?.author?.actor, 200) || 'unknown',
       lineage: text(receipt.record?.author?.lineage, 100)}), check};
   }
   const replay = body.replay;
   if (!isObject(replay)) throw new InputError('replay must be an object.');
   const check = inspectReplay({record, replay});
   if (check.status === 'invalid') throw new InputError('Replay is invalid: ' + check.problems.slice(0, 5).join(', '));
-  return {...stored('replay', replay, {target: storedObservation.id, actor: text(replay.by, 200) || 'unknown', lineage: text(replay.lineage, 100)}), check};
+  return {...stored('replay', {about: storedObservation.id, replay}, {target: storedObservation.id, actor: text(replay.by, 200) || 'unknown', lineage: text(replay.lineage, 100)}), check};
 }
 
 // Les états qu'un lecteur dérive (profil de preuves, section 4). Jamais écrits par le producteur, jamais une note.
@@ -93,14 +96,14 @@ export function deriveStates(observation, about) {
   for (const item of about) {
     let status, reason;
     if (item.kind === 'receipt') {
-      const receipt = JSON.parse(item.canonical), hop = inspectHop({sent: record, receipt});
+      const receipt = JSON.parse(item.canonical).receipt, hop = inspectHop({sent: record, receipt});
       const actions = (receipt.dispositions || []).map(d => d.action);
       if (hop.status === 'conformant' && actions.includes('contest')) { counts.contradictions++; status = 'contradicted'; reason = 'a conformant receipt contests a field'; }
       else if (hop.status === 'conformant' && actions.includes('verify')) { counts.verifications++; status = 'verified'; reason = 'a conformant receipt verifies a field with an independent basis (7.4, 7.1)'; }
       else { status = 'no-state'; reason = 'receipt without verify or contest, or no longer conformant'; }
       details.push({id: item.id, kind: item.kind, actor: item.actor, lineage: item.lineage, status, reason, warnings: hop.warnings});
     } else if (item.kind === 'replay') {
-      const replay = JSON.parse(item.canonical), check = inspectReplay({record, replay});
+      const replay = JSON.parse(item.canonical).replay, check = inspectReplay({record, replay});
       if (check.status === 'refuted') { counts.contradictions++; status = 'contradicted'; reason = 'the replay obtained a different output'; }
       else if (check.status === 'confirmed' && (!replay.by || replay.by === observer)) { counts.self_replays++; status = 'self-replayed'; reason = replay.by ? 'confirmed by the observer itself' : 'confirmed by an undeclared actor'; }
       else if (check.status === 'confirmed') { counts.reproductions++; status = 'reproduced'; reason = 'confirmed by a different declared actor; independence is not established by a replay alone (7.6, 9)'; }
