@@ -1,0 +1,19 @@
+{
+  "registre": "Ce que la veille a produit, article par article : lu, et ce que ça a changé. Le volume relevé ne compte pas ; seul compte ce qui a servi.",
+  "regle": "Un article n'entre ici qu'une fois lu en entier. Trois verdicts : « changement » (il a modifié un texte, une règle ou un cas, et le champ change dit où), « lu-sans-effet » (lu, rien retenu, la raison est écrite), « a-lire » (retenu pour lecture, pas encore lu). Une source qui n'a produit aucun « changement » en trois semaines est retirée de actu-sources.json.",
+  "depuis": "2026-09-22",
+  "articles": [
+    {
+      "titre": "Beyond the Text: Verifying That Agent-Written Papers Are Backed by Their Artifacts",
+      "lien": "https://arxiv.org/abs/2609.22111",
+      "source": "arxiv-cs-ma",
+      "releve_le": "2026-09-22",
+      "lu_le": "2026-09-22",
+      "verdict": "changement",
+      "ce_que_ca_a_change": "Preuve extérieure, mesurée sur du matériel réel, du cas « l'outil annoncé a tourné » : des expériences qui reproduisent le chiffre annoncé en s'écartant de la méthode annoncée. Notre monde contraire était fabriqué ; le leur est observé.",
+      "ou": ["attractor-cooperation PRIOR-ART.md › Added 22 September 2026", "attractor-cooperation experiments/break-axiom-1/README.md › Outside evidence for the tool case"],
+      "commits": ["441bfb2"],
+      "non_repris": "Leur schéma d'audit (correctifs, budgets d'exécution, niveaux de risque) sert à juger un article et son dépôt, pas à décrire ce qui voyage entre deux agents. Dépôt sans licence : rien n'en est réutilisé."
+    }
+  ]
+}
