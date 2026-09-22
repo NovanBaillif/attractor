@@ -11,9 +11,39 @@
       "lu_le": "2026-09-22",
       "verdict": "changement",
       "ce_que_ca_a_change": "Preuve extérieure, mesurée sur du matériel réel, du cas « l'outil annoncé a tourné » : des expériences qui reproduisent le chiffre annoncé en s'écartant de la méthode annoncée. Notre monde contraire était fabriqué ; le leur est observé.",
-      "ou": ["attractor-cooperation PRIOR-ART.md › Added 22 September 2026", "attractor-cooperation experiments/break-axiom-1/README.md › Outside evidence for the tool case"],
-      "commits": ["441bfb2"],
+      "ou": [
+        "attractor-cooperation PRIOR-ART.md › Added 22 September 2026",
+        "attractor-cooperation experiments/break-axiom-1/README.md › Outside evidence for the tool case"
+      ],
+      "commits": [
+        "441bfb2"
+      ],
       "non_repris": "Leur schéma d'audit (correctifs, budgets d'exécution, niveaux de risque) sert à juger un article et son dépôt, pas à décrire ce qui voyage entre deux agents. Dépôt sans licence : rien n'en est réutilisé."
+    },
+    {
+      "titre": "Who Audits Whom, on What Substrate, with What Evidence? An Independence-Graded Audit Protocol for Agentic AI",
+      "lien": "https://arxiv.org/abs/2609.18272",
+      "source": "arxiv-provenance",
+      "releve_le": "2026-09-22",
+      "lu_le": "2026-09-22",
+      "verdict": "changement",
+      "ce_que_ca_a_change": "L'indépendance cesse d'être un oui-ou-non chez nous : trois axes (qui contrôle le vérificateur, quel substrat il partage, si la preuve est attestable ou auto-déclarée), le plus faible commande. Nomme le défaut que Novan avait repéré : une implémentation écrite par une contributrice dont les cas sont déjà dans la suite n'est pas indépendante au premier axe.",
+      "ou": [
+        "attractor-cooperation SPEC.md §9 › Independence is graded, not binary"
+      ],
+      "commits": [
+        "d08dba8"
+      ],
+      "note": "Le nom de l'auteur était faux dans mon premier jet et a été corrigé sur la source avant publication."
+    },
+    {
+      "titre": "When Agentic Trust Crosses Organizational Boundaries: Structural Externalization and a Reference Model for Trust Evidence",
+      "lien": "https://arxiv.org/abs/2609.22961",
+      "source": "arxiv-provenance",
+      "releve_le": "2026-09-22",
+      "lu_le": "2026-09-22",
+      "verdict": "a-lire",
+      "pourquoi": "Résumé lu : enveloppe de preuve de confiance entre organisations, attestations en ajout seul attribuées à leur émetteur, propositions qui doivent rester examinables après révocation ou litige. Touche notre critère du vrai échange entre deux opérateurs et le profil de preuves. À lire en entier avant d'en tirer quoi que ce soit."
     }
   ]
 }
