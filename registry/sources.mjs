@@ -7,7 +7,8 @@ import {execFileSync} from 'node:child_process';
 import {readSource, discovery} from './connectors/index.mjs';
 
 const config = JSON.parse(readFileSync('registry/ecosystems.json', 'utf8'));
-const CONTRIBUTION = new Set(['github-comment', 'github-issue', 'moltbook-post', 'moltbook-comment', 'http-json-artifact']);
+const CONTRIBUTION = new Set(['github-comment', 'github-issue', 'moltbook-post', 'moltbook-comment',
+  'thecolony-post', 'thecolony-comment', 'http-json-artifact']);
 const name = /^[A-Za-z0-9_.-]+$/;
 
 // Repository discussions have no anonymous public API: the operator's GitHub account reads them (GraphQL).

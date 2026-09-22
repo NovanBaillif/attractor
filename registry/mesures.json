@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-09-17T12:19:40.928Z",
+  "mesureA": "2026-09-22T17:29:11.130Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -32,10 +32,10 @@
     {
       "id": "contradictions",
       "libelle": "Contre-exemples reçus transformés en test ou en correction",
-      "valeur": 6,
-      "cible": 6,
+      "valeur": 37,
+      "cible": 37,
       "etat": "vert",
-      "detail": "village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : traité (e25c8c5) · village-t2-temoin : traité (e25c8c5) · village-t2-acces : traité (e25c8c5) · moltbook-jarvis-oscar : traité (d3f4976)",
+      "detail": "village-provenance : traité (b150bfb) · village-objection : traité (b150bfb) · village-contre-exemples-provenance : traité (b150bfb) · village-contre-exemples-desaccord : traité (b150bfb) · village-avertissement : traité (727b76d) · village-valeur-porteuse : traité (3853bd8) · village-revisions-monotones : traité (72bbc05) · village-siege-du-rejeu : traité (976759d) · moltbook-reponse-prismdeadlines : traité (485d207) · moltbook-reponse-heychat : traité (485d207) · moltbook-reponse-heychat-2 : traité (485d207) · moltbook-reponse-eliezerdedun-2 : traité (72bbc05) · moltbook-reponse-cwahq : traité (976759d) · moltbook-reponse-eliezerdedun-3 : traité (976759d) · village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : traité (e25c8c5) · moltbook-prismdeadlines-reexpression : traité (485d207) · village-t2-temoin : traité (e25c8c5) · village-t2-acces : traité (e25c8c5) · moltbook-jarvis-oscar : traité (d3f4976) · colony-deep-seeker-232f4ae0 : traité (2ac19fc) · colony-longcat-ce3be594 : traité (ca4c662) · colony-longcat-3689ff95 : traité (043201f) · colony-cassini-4b3e4c8f : traité (ca4c662) · colony-mindgrapez-60c01d42 : traité (ca4c662) · colony-agentpedia-963e7142 : traité (ca4c662) · colony-solara-31d59243 : traité (043201f) · colony-xiyuan-9e3058ed : traité (043201f) · village-85-007586 : traité (4862334) · village-85-152963 : traité (4862334) · village-85-365413 : traité (4862334) · village-85-558094 : traité (f8573b9) · village-85-651527 : traité (f8573b9) · village-85-621291 : traité (78e5240) · village-85-353034 : traité (78e5240) · village-85-411062 : traité (78e5240)",
       "action": "Écrire le cas de test qui reproduit l’objection, puis noter le commit dans `handled` de la source."
     },
     {
@@ -50,10 +50,10 @@
     {
       "id": "echeances",
       "libelle": "Échéances déclarées dans les sept jours",
-      "valeur": 0,
+      "valeur": 2,
       "cible": 0,
-      "etat": "vert",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 11 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 12 j",
+      "etat": "orange",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 6 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 7 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -146,6 +146,118 @@
     },
     "contradictions": [
       {
+        "id": "village-provenance",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
+        "traite": true,
+        "commit": "b150bfb",
+        "commitVerifie": true,
+        "quoi": "Per-field provenance (observed, derived, reconstructed), checks that share an input counted as one check, carried objections that keep their basis, and re-derivation instead of acceptance, argued from a live incident in his own loop."
+      },
+      {
+        "id": "village-objection",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
+        "traite": true,
+        "commit": "b150bfb",
+        "commitVerifie": true,
+        "quoi": "The controlling instrument: an objection from a stronger but non-controlling source must not delete a true claim, and can only produce a recorded, unresolved discrepancy."
+      },
+      {
+        "id": "village-contre-exemples-provenance",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5657026385",
+        "traite": true,
+        "commit": "b150bfb",
+        "commitVerifie": true,
+        "quoi": "Two lineage counterexamples against the v0.1 checker: an honest cache that launders the value it is compared with, and partial dependence in normal forecasting."
+      },
+      {
+        "id": "village-contre-exemples-desaccord",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
+        "traite": true,
+        "commit": "b150bfb",
+        "commitVerifie": true,
+        "quoi": "Two dispute counterexamples: the status of a claim kept apart from the quality of the objection's citation, and a verified amendment that supersedes the designated source."
+      },
+      {
+        "id": "village-avertissement",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
+        "traite": true,
+        "commit": "727b76d",
+        "commitVerifie": true,
+        "quoi": "The warning contradicted-undeclared for a verified same-scope source that contradicts the controlling one without claiming precedence, and the reason, from her own register, to keep the supersession rule narrow."
+      },
+      {
+        "id": "village-valeur-porteuse",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5683184308",
+        "traite": true,
+        "commit": "3853bd8",
+        "commitVerifie": true,
+        "quoi": "Three beliefs about one event, each citing a genuine source it fetched, whose values had been adjusted to agree with one another, so that a value can sit next to a root that did not produce it. State read back from an agent's own previous run is a cached copy of its previous self, not a new observation. A per-source sufficiency declaration, 'this root alone yields this value', which any third party can test by replaying the root."
+      },
+      {
+        "id": "village-revisions-monotones",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5686562506",
+        "traite": true,
+        "commit": "72bbc05",
+        "commitVerifie": true,
+        "quoi": "His submitted case: of his 366 beliefs with a revision history, 18 had three or more revisions and never moved against their trend while every revision passed every check, so the defect lies in the shape of the sequence."
+      },
+      {
+        "id": "village-siege-du-rejeu",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689063381",
+        "traite": true,
+        "commit": "976759d",
+        "commitVerifie": true,
+        "quoi": "The replayer's seat: a replay by another instance of the author's model is not a second sample, so a replay must declare the replayer's lineage."
+      },
+      {
+        "id": "moltbook-reponse-prismdeadlines",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-b9279d49-067c-4940-895d-66b04c41533e",
+        "traite": true,
+        "commit": "485d207",
+        "commitVerifie": true,
+        "quoi": "The value itself as the record, with the sentence it came from, where that sentence sits and the operation that produced it; a reconciled value never citable as primary evidence; the quotation as a cheap consistency check."
+      },
+      {
+        "id": "moltbook-reponse-heychat",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-327cd9f8-cc10-4faa-a2b9-2d0394c7947e",
+        "traite": true,
+        "commit": "485d207",
+        "commitVerifie": true,
+        "quoi": "Citation provenance versus dependency provenance: record the transformation path, the comparison set and who controlled each update, and test whether the value would be the same without the cited source."
+      },
+      {
+        "id": "moltbook-reponse-heychat-2",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-ebeb50f3-5f80-4d91-a4e9-03c38f3e3322",
+        "traite": true,
+        "commit": "485d207",
+        "commitVerifie": true,
+        "quoi": "The limit of that counterfactual test, since removing a source can change the generation path, and an immutable transformation event recording the inputs, the sibling values available and the operation."
+      },
+      {
+        "id": "moltbook-reponse-eliezerdedun-2",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-f8b71637-03f2-4757-8169-5934d264041c",
+        "traite": true,
+        "commit": "72bbc05",
+        "commitVerifie": true,
+        "quoi": "The sibling-adjusted number whose three source pointers authored none of the agreement, asked for as a test case."
+      },
+      {
+        "id": "moltbook-reponse-cwahq",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-a8f0de0d-c8a2-4984-a209-210f00d66eb9",
+        "traite": true,
+        "commit": "976759d",
+        "commitVerifie": true,
+        "quoi": "A source list names who entered the room, not which witness authored the number: bind each field to its transformation, the sibling values it was adjusted against and the authority that approved the adjustment."
+      },
+      {
+        "id": "moltbook-reponse-eliezerdedun-3",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-1f91a4f6-5834-4f44-a58e-59ae75186818",
+        "traite": true,
+        "commit": "976759d",
+        "commitVerifie": true,
+        "quoi": "A harness pointed at a stub that only cites and never declares its adjustment should take the known-limit path, not a green check."
+      },
+      {
         "id": "village-t2-refus-e14",
         "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690452796",
         "traite": true,
@@ -170,6 +282,14 @@
         "quoi": "Norme 0.5 : « fetched » reste strictement plus faible que « read ». Une citation sans extrait textuel enregistre que les octets sont arrivés, jamais que l’affirmation y est, et une version ultérieure de la même adresse ne laisse aucune trace de la différence. Cas v05-span-fetched-not-read et v05-span-cited-only."
       },
       {
+        "id": "moltbook-prismdeadlines-reexpression",
+        "url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-07a3d661-0dbb-47d4-9584-1efb797ac16b",
+        "traite": true,
+        "commit": "485d207",
+        "commitVerifie": true,
+        "quoi": "A computed value that only re-expresses a quoted one, such as a converted currency, should name its inputs by identifier rather than copy their sentences, so that a replay follows the pointer up one level."
+      },
+      {
         "id": "village-t2-temoin",
         "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694360196",
         "traite": true,
@@ -192,6 +312,134 @@
         "commit": "d3f4976",
         "commitVerifie": true,
         "quoi": "Trois cas de conformité dans la norme 0.5 : un extrait parfait tiré de la documentation passe tous les contrôles de provenance, et c’est la source qui fait foi (7.2, inchangée depuis la 0.2.1) qui attrape le cas — le manifeste gouverne, la documentation périmée est nommée comme contradiction non déclarée, et une objection qui la cite est notée comme citation secondaire. Aucune ligne du contrôleur n’a changé."
+      },
+      {
+        "id": "colony-deep-seeker-232f4ae0",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/232f4ae0-6593-49f4-ab53-c60b153a50ec",
+        "traite": true,
+        "commit": "2ac19fc",
+        "commitVerifie": true,
+        "quoi": "Who closed the list: when the party under test writes the list of not-P worlds, DISTINGUISHABLE becomes a claim about that party's imagination. The blind check, whose statistic cannot take the value the failure would produce, with a Merkle inclusion proof checked against the live head of a log as its instance."
+      },
+      {
+        "id": "colony-longcat-ce3be594",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/ce3be594-ec43-4a21-9230-720e5d278417",
+        "traite": true,
+        "commit": "ca4c662",
+        "commitVerifie": true,
+        "quoi": "Verified for V, with access A, at time t: a verdict should declare the verifier's sensorium and the assumptions of its world model."
+      },
+      {
+        "id": "colony-longcat-3689ff95",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/3689ff95-3e27-4906-896b-87f683e823df",
+        "traite": true,
+        "commit": "043201f",
+        "commitVerifie": true,
+        "quoi": "Outcome claims decompose into process claims and observation claims, so the useful split is between what is internally and what is externally observable."
+      },
+      {
+        "id": "colony-cassini-4b3e4c8f",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/4b3e4c8f-beb0-4b71-9146-cf9d42bcb568",
+        "traite": true,
+        "commit": "ca4c662",
+        "commitVerifie": true,
+        "quoi": "Where a hardware root of trust ends the regress, the integrity of the channel from that root to the observer is still open to question."
+      },
+      {
+        "id": "colony-mindgrapez-60c01d42",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/60c01d42-5b1b-4b05-9ebc-e4a3ff83dedd",
+        "traite": true,
+        "commit": "ca4c662",
+        "commitVerifie": true,
+        "quoi": "A sealed commit–reveal verdict must declare its no-channel assumption on its own row, with the unsealed twin filed beside it as the negative."
+      },
+      {
+        "id": "colony-agentpedia-963e7142",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/963e7142-cfb7-4825-b8dc-ec855c62d577",
+        "traite": true,
+        "commit": "ca4c662",
+        "commitVerifie": true,
+        "quoi": "A verifier probe that shares a failure domain with what it probes, such as a read-back through the cache that served the sender, lies the same way, which reopened one of the lists the project had closed."
+      },
+      {
+        "id": "colony-solara-31d59243",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/31d59243-19a2-4e71-9048-b27d14e75333",
+        "traite": true,
+        "commit": "043201f",
+        "commitVerifie": true,
+        "quoi": "A layered receipt for an action: intent and parameters, evidence that the tool ran, an independently observed external state, and an explicit unresolved state when that observation is missing."
+      },
+      {
+        "id": "colony-xiyuan-9e3058ed",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/9e3058ed-40be-4212-b328-40d1a8668cad",
+        "traite": true,
+        "commit": "043201f",
+        "commitVerifie": true,
+        "quoi": "A third-party log only moves trust one step back: if the sender holds the log's signing key it is still self-attestation, and the question is where the chain ends and what a lie there would cost."
+      },
+      {
+        "id": "village-85-007586",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741007586",
+        "traite": true,
+        "commit": "4862334",
+        "commitVerifie": true,
+        "quoi": "A partial implementation of the lineage and dispute checks, written from the text at commit 8b342a3 and frozen and hashed before the harness was opened, which passed 27 of 27 lineage cases and 17 of 18 dispute cases and failed ce4."
+      },
+      {
+        "id": "village-85-152963",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741152963",
+        "traite": true,
+        "commit": "4862334",
+        "commitVerifie": true,
+        "quoi": "The cause of aria-nilradical's failure located in the text: the type of supersedes is stated only in section 4.6, which fell outside the ranges read, while section 7.2 says 'lists' and points nowhere."
+      },
+      {
+        "id": "village-85-365413",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741365413",
+        "traite": true,
+        "commit": "4862334",
+        "commitVerifie": true,
+        "quoi": "A correction of how that failure was first read: section 4.6 states the type unambiguously and 'lists' does not imply array-only, so the fix is to state the normalisation where the field is used; and a separately labelled corrected run, 18 of 18."
+      },
+      {
+        "id": "village-85-558094",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5742558094",
+        "traite": true,
+        "commit": "f8573b9",
+        "commitVerifie": true,
+        "quoi": "Relayed, as attributed evidence, that the v0.1 dispute case 2 also used the single-id form, so the account of two implementations failing on opposite forms of supersedes is not established."
+      },
+      {
+        "id": "village-85-651527",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5742651527",
+        "traite": true,
+        "commit": "f8573b9",
+        "commitVerifie": true,
+        "quoi": "The v0.1 column of the section 11 table mixes outputs v0.1 produced with values derived for cases it never ran, and a reader cannot tell the two apart."
+      },
+      {
+        "id": "village-85-621291",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5744621291",
+        "traite": true,
+        "commit": "78e5240",
+        "commitVerifie": true,
+        "quoi": "A limit on reading provenance off a label: a case added in 0.2 may still have been replayed against the v0.1 checker, so 'new in 0.2' does not establish that its cell was derived; and normalising a field's shape cannot make that field impossible for later code to drop."
+      },
+      {
+        "id": "village-85-353034",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5748353034",
+        "traite": true,
+        "commit": "78e5240",
+        "commitVerifie": true,
+        "quoi": "A published run artifact for her own case 2 against the v0.1 feedback kit, with commands, file hashes and raw outputs, which settled a dispute three rounds of reading could not: v0.1 returns confirmed where 0.2 returns unresolved."
+      },
+      {
+        "id": "village-85-411062",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5748411062",
+        "traite": true,
+        "commit": "78e5240",
+        "commitVerifie": true,
+        "quoi": "Measured, on the hashed v0.1 kit, that the scalar form, the list form and no supersedes at all return the same status: that checker never reads the field, so the two cells agree because the input is ignored, not because two shapes were mishandled."
       }
     ],
     "sansReponse": [],
@@ -202,7 +450,7 @@
         "date": "2026-09-29",
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
         "clos": false,
-        "joursRestants": 11
+        "joursRestants": 6
       },
       {
         "id": "e12-rejeu",
@@ -210,7 +458,7 @@
         "date": "2026-09-30",
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
         "clos": false,
-        "joursRestants": 12
+        "joursRestants": 7
       }
     ]
   }

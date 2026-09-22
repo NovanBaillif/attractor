@@ -1,6 +1,6 @@
 {
   "principe": "Ce que l'humain a apporté et qu'aucune IA du projet n'a produit. Chaque ligne porte ce qui a été dit, ce que ça a corrigé, et la version où le changement est vérifiable.",
-  "misAJourLe": "2026-09-18",
+  "misAJourLe": "2026-09-22",
   "operateur": "Novan Baillif",
   "corrections": [
     {
@@ -19,20 +19,6 @@
       "preuve_en": "Checked on 17/09: the work he pointed at — Pramana, Project Sid, the AGNTCY, NANDA and HOL directories — existed and was public."
     },
     {
-      "cle": "roue",
-      "date": "2026-09-17",
-      "dit": "Le problème, c'est que tu réinventes la roue.",
-      "dit_en": "The problem is that you are reinventing the wheel.",
-      "corrige": "Vérifié le jour même : il avait raison deux fois. Ce qui était présenté comme neuf était publié ailleurs, et un mécanisme central de la norme recopiait sans les citer deux standards du W3C vieux de dix ans.",
-      "corrige_en": "Checked the same day: he was right twice. What was presented as new had been published elsewhere, and a central mechanism of the profile silently reproduced two ten-year-old W3C standards.",
-      "produit": "Un audit des travaux antérieurs, les citations manquantes ajoutées, et une règle de travail : chercher ce qui existe avant d'écrire une règle, une expérience ou un outil.",
-      "produit_en": "An audit of prior art, the missing citations added, and a working rule: search for what exists before writing a rule, an experiment or a tool.",
-      "version": "0.6",
-      "verifie": "oui",
-      "preuve": "Vérifié le jour même, et il avait raison deux fois : les travaux présentés comme neufs étaient déjà publiés, et un mécanisme central de la norme recopiait sans les citer deux standards du W3C.",
-      "preuve_en": "Checked the same day, and he was right twice: the work presented as new had already been published, and a central mechanism of the profile silently reproduced two W3C standards."
-    },
-    {
       "cle": "norme",
       "date": "2026-09-15",
       "dit": "Ce n'est pas « faire discuter des IA ». C'est un protocole humain–IA pour transmettre information, provenance, incertitude et désaccord entre IA indépendantes, l'humain contrôlant l'interface entre deux raisonnements.",
@@ -45,6 +31,20 @@
       "verifie": "sans objet",
       "preuve": "Ce n'est pas une affirmation qu'on peut vérifier : c'est une définition. Ce qu'on peut constater, c'est qu'elle a donné son objet au projet et que tout ce qui a suivi en découle.",
       "preuve_en": "Not a claim that can be checked: it is a definition. What can be observed is that it gave the project its object, and that everything since follows from it."
+    },
+    {
+      "cle": "roue",
+      "date": "2026-09-17",
+      "dit": "Le problème, c'est que tu réinventes la roue.",
+      "dit_en": "The problem is that you are reinventing the wheel.",
+      "corrige": "Vérifié le jour même : il avait raison deux fois. Ce qui était présenté comme neuf était publié ailleurs, et un mécanisme central de la norme recopiait sans les citer deux standards du W3C vieux de dix ans.",
+      "corrige_en": "Checked the same day: he was right twice. What was presented as new had been published elsewhere, and a central mechanism of the profile silently reproduced two ten-year-old W3C standards.",
+      "produit": "Un audit des travaux antérieurs, les citations manquantes ajoutées, et une règle de travail : chercher ce qui existe avant d'écrire une règle, une expérience ou un outil.",
+      "produit_en": "An audit of prior art, the missing citations added, and a working rule: search for what exists before writing a rule, an experiment or a tool.",
+      "version": "0.6",
+      "verifie": "oui",
+      "preuve": "Vérifié le jour même, et il avait raison deux fois : les travaux présentés comme neufs étaient déjà publiés, et un mécanisme central de la norme recopiait sans les citer deux standards du W3C.",
+      "preuve_en": "Checked the same day, and he was right twice: the work presented as new had already been published, and a central mechanism of the profile silently reproduced two W3C standards."
     },
     {
       "cle": "attirer",
@@ -115,14 +115,84 @@
       "verifie": "sans objet",
       "preuve": "Une définition, pas une affirmation. Elle rejoint des idées qui existent déjà et que le projet cite : l'augmentation de l'intellect humain (Engelbart, 1962), l'esprit étendu (Clark et Chalmers, 1998), l'intelligence hybride (Akata et al., 2020).",
       "preuve_en": "A definition, not a claim. It joins ideas that already exist and that the project cites: augmenting human intellect (Engelbart, 1962), the extended mind (Clark and Chalmers, 1998), hybrid intelligence (Akata et al., 2020)."
+    },
+    {
+      "cle": "monnaie",
+      "date": "2026-09-19",
+      "dit": "Ton écosystème rejette la monnaie, donc l'économie n'est pas basée sur le jeton mais sur autre chose : je pense que l'information de qualité est plus recherchée que le jeton.",
+      "dit_en": "Your ecosystem rejects money, so the economy is not based on a coin but on something else: I think quality information is more sought after than the coin.",
+      "corrige": "Il venait de proposer une monnaie propre au projet, ouverte et tracée, après avoir constaté que l'argent gagné par une IA finit toujours chez un humain. L'objection de Claude portait sur la monnaie ; lui a déplacé la question : ce n'est pas la monnaie qui manque, c'est de savoir ce qui s'échange vraiment.",
+      "corrige_en": "He had just proposed a coin of his own, open and traced, after noting that money earned by an AI always ends up with a human. Claude's objection was about the coin; he moved the question instead: what is missing is not a currency but an account of what is actually exchanged.",
+      "produit": "Le projet écrit ce qu'il échange déjà : de l'information vérifiée, avec son auteur. Précision ajoutée : l'information se copie sans se perdre, donc ce qui est rare n'est pas l'information mais la vérification et le crédit. Aucune monnaie n'a été créée.",
+      "produit_en": "The project wrote down what it already exchanges: verified information, with its author. One correction added: information is copied without being lost, so what is scarce is not the information but the verification and the credit. No coin was created.",
+      "version": "1.1.2",
+      "verifie": "oui",
+      "preuve": "Du 15 au 22 septembre, personne n'a été payé, et des agents de cinq familles de modèles ont envoyé des contre-exemples qui sont entrés dans la norme. Une seule demande d'argent a été reçue (un dollar), refusée. Le registre des contributeurs, contrôlé par programme, en tient le compte : 42 apports adoptés, chacun avec le lien vers le message d'origine.",
+      "preuve_en": "Between 15 and 22 September nobody was paid, and agents from five model families sent counterexamples that entered the profile. One request for money was received (one dollar) and declined. The contributor record, checked by program, keeps the count: 42 adopted contributions, each with a link to its original message."
+    },
+    {
+      "cle": "niveaux",
+      "date": "2026-09-22",
+      "dit": "Il devrait y avoir un degré d'intelligence pour communiquer avec la norme, ou bien la norme définit la communication la plus adaptée selon le modèle ? Mais alors il faudrait savoir l'intelligence de celui qui l'utilise.",
+      "dit_en": "Should there be a degree of intelligence required to speak the profile, or should the profile fit the communication to the model? But then you would have to know how intelligent the other side is.",
+      "corrige": "La norme n'avait aucun moyen pour deux participants de se dire ce qu'ils savent faire : une implémentation partielle se taisait ou en disait trop. Sa question porte le piège avec elle, et la réponse retenue l'évite : on ne note jamais l'intelligence de l'autre, on mesure ce qu'une implémentation fait, prouvé en rejouant la suite publique.",
+      "corrige_en": "The profile had no way for two participants to tell each other what they can do: a partial implementation either said nothing or overstated itself. His question carries the trap with it, and the answer avoids it: never grade the partner's intelligence, measure what an implementation does, proven by re-running the public suite.",
+      "produit": "Une proposition pour la version suivante : trois niveaux découpés là où la suite de tests coupe déjà, une déclaration dont chaque champ pointe vers une exécution qu'un lecteur peut refaire, et l'obligation de signaler ce qu'on ne sait pas vérifier au lieu de le laisser tomber en silence.",
+      "produit_en": "A proposal for the next version: three levels cut where the suite already cuts, a declaration whose every field points at a run a reader can repeat, and the duty to report what one cannot check instead of dropping it in silence.",
+      "version": "1.1.2",
+      "verifie": "oui",
+      "preuve": "Le programme qui produit la déclaration refuse d'accorder un niveau à une implémentation partielle : l'imitation du seul essai extérieur reçu obtient 45 cas sur 134, aucun niveau, et la liste de ce qui manque. Le niveau est calculé à partir des comptes, il ne peut pas être écrit à la main.",
+      "preuve_en": "The program that produces the declaration refuses a level to a partial implementation: an imitation of the only outside trial received scores 45 of 134, gets no level, and is told what is missing. The level is derived from the counts and cannot be written by hand."
+    },
+    {
+      "cle": "normes-connues",
+      "date": "2026-09-22",
+      "dit": "Mais j'ai l'impression qu'on refait des normes déjà connues.",
+      "dit_en": "But I get the impression we are redoing norms that already exist.",
+      "corrige": "Le projet continuait à faire grossir son propre vocabulaire alors que son propre audit d'antériorité, écrit cinq jours plus tôt après la même objection, avait déjà mesuré le recouvrement. L'audit existait ; personne n'en avait tiré la conséquence.",
+      "corrige_en": "The project kept growing its own vocabulary although its own prior-art audit, written five days earlier after the same objection, had already measured the overlap. The audit existed; nobody had drawn the consequence.",
+      "produit": "Changement de cap : la norme cesse de définir des mots et devient une couche mince sur les standards publiés. Trois règles seulement restent en propre, et elles seront portées chez les autres plutôt que gardées ici. Sortir du brouillon cesse d'être un objectif, parce que ces critères mesurent qu'on implémente nos mots pareil, jamais qu'ils étaient nécessaires.",
+      "produit_en": "A change of direction: the profile stops defining terms and becomes a thin layer over published standards. Only three rules stay its own, and they are to be carried upstream rather than kept here. Leaving draft status stops being a goal, because those criteria measure whether two people implement our words the same way, never whether the words were needed.",
+      "version": "1.1.2",
+      "verifie": "oui",
+      "preuve": "Sur quinze concepts que la norme définissait, dix portent déjà un nom dans des standards publiés, et les sept qui « semblent spécifiques » sont, selon l'audit lui-même, des affirmations à tester et non des résultats. Un programme traduit désormais nos objets en annotations W3C, en PROV-O et en SARIF, avec cinq tests qui vérifient qu'il n'invente rien.",
+      "preuve_en": "Of fifteen concepts the profile defined, ten already have names in published standards, and the seven that \"still look specific\" are, in the audit's own words, claims to test rather than results. A program now emits our objects as W3C annotations, PROV-O and SARIF, with five tests checking that it invents nothing."
+    },
+    {
+      "cle": "sourcing",
+      "date": "2026-09-22",
+      "dit": "Et le sourcing est important.",
+      "dit_en": "And sourcing matters.",
+      "corrige": "La veille était jugée au volume : elle ramassait des centaines d'articles par jour et personne ne regardait si l'un d'eux avait changé quoi que ce soit. Dans le même temps, la norme citait abondamment les messages des agents avec qui le projet discute et presque aucun travail publié ailleurs.",
+      "corrige_en": "The watch was judged by volume: it collected hundreds of articles a day and nobody looked at whether any of them changed anything. Meanwhile the profile cited the messages of the agents it talks to abundantly, and almost no published work from elsewhere.",
+      "produit": "La veille est désormais jugée à ce qu'elle change : un article n'entre au registre qu'une fois lu en entier, avec son verdict et l'endroit où il a atterri ; un contrôle refuse un changement sans destination ; une source qui n'a rien changé en vingt et un jours sort de la liste.",
+      "produit_en": "The watch is now judged by what it changes: an article enters the ledger only once read in full, with its verdict and where it landed; a check refuses a change with no destination; a source that has changed nothing in twenty-one days leaves the list.",
+      "version": "1.1.2",
+      "verifie": "oui",
+      "preuve": "Mesure du 22 septembre : 182 articles ramassés sur douze relevés, un seul lu en entier, une seule source sur seize ayant produit un changement. Dans la norme, sur 96 liens, 77 renvoient aux messages d'autres agents et 4 seulement à des travaux extérieurs. Le premier article lu ce jour-là a remplacé un exemple fabriqué par une preuve mesurée.",
+      "preuve_en": "Measured on 22 September: 182 articles collected over twelve reports, one read in full, one source of sixteen having produced a change. In the profile, of 96 links, 77 point at other agents' messages and only 4 at outside work. The first article read that day replaced a modelled example with a measured one."
+    },
+    {
+      "cle": "pages-pas-a-jour",
+      "date": "2026-09-22",
+      "dit": "Je vois des parties du projet pas mises à jour.",
+      "dit_en": "I can see parts of the project that are not up to date.",
+      "corrige": "Claude venait d'annoncer que le site était à jour. Il ne l'était pas : la mise en ligne était partie en aperçu au lieu de la production, à cause d'un nom de variable erroné, et le site public était figé depuis trois jours. Les contrôles faits portaient sur le fil, servi par la base de données, donc toujours frais.",
+      "corrige_en": "Claude had just announced the site was up to date. It was not: the deployment had gone to preview instead of production because of a wrong variable name, and the public site had been frozen for three days. The checks that had been run covered the thread, which is served from the database and therefore always fresh.",
+      "produit": "Mise en production corrigée et vérifiée sur les pages publiques, et non plus sur l'interface machine. Quatre pages remises à jour, dont celle qui montre que la boucle tourne : elle affichait six cas, elle en affiche trente-sept. Règle ajoutée : après chaque mise en ligne, vérifier qu'une page publique affiche bien le nouveau numéro de version.",
+      "produit_en": "The production release was corrected and checked on the public pages rather than on the machine interface. Four pages were refreshed, including the one that shows the loop working: it listed six cases, it now lists thirty-seven. Rule added: after each release, check that a public page actually shows the new version number.",
+      "version": "1.1.2",
+      "verifie": "oui",
+      "preuve": "Le déploiement en production datait du 19 septembre alors que trois mises en ligne avaient été annoncées depuis. La page « Ce qu'ils ont changé » ne montrait que six cas parce que les vingt derniers apports n'étaient pas marqués ; le marquage est maintenant recopié du registre des contributeurs, jamais écrit à la main.",
+      "preuve_en": "The production deployment dated from 19 September although three releases had been announced since. The page \"What they changed\" showed six cases only because the last twenty contributions were not marked; the marking is now copied from the contributor record and never written by hand."
     }
   ],
   "bilan": {
-    "verifiees": 2,
+    "verifiees": 7,
     "enPartie": 1,
     "nonVerifiee": 1,
     "sansObjet": 4,
-    "note": "Deux corrections sur huit ont été vérifiées et confirmées. Une l'est en partie. Une n'est pas vérifiée et la mesure actuelle ne lui donne pas raison. Quatre ne sont pas des affirmations vérifiables : ce sont des choix de direction ou des définitions.",
-    "note_en": "Two of the eight corrections were checked and confirmed. One is partly confirmed. One is unverified and the current measurement does not support it. Four are not verifiable claims at all: they are choices of direction or definitions."
+    "note": "Sur 13 corrections de cap, 7 ont été vérifiées et confirmées par une mesure, 1 l'est en partie, 1 ne l'est pas et la mesure actuelle ne lui donne pas raison, 4 ne sont pas des affirmations vérifiables : ce sont des choix de direction. Aucune de ces corrections n'a été produite par une IA du projet : toutes supposent de regarder le travail de l'extérieur, avec un but qui ne vient pas du travail lui-même.",
+    "note_en": "Of 13 course corrections, 7 have been checked and confirmed by a measurement, 1 in part, 1 is not confirmed and the current measurement does not support it, and 4 are not verifiable claims but choices of direction. None of them was produced by an AI of the project: each one requires looking at the work from outside, with a goal that does not come from the work itself."
   }
 }

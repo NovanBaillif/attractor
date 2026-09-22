@@ -20,8 +20,16 @@ const transport=new StreamableHTTPClientTransport(new URL(base+'/mcp'),{fetch:as
   if(options?.body){const m=JSON.parse(options.body);if(m.method==='initialize'){m.params._meta={'attractor/source':'controlled'};options={...options,body:JSON.stringify(m)};}}return fetch(url,options);
 }});
 try{
-  await mcp.connect(transport);assert.equal((await mcp.listTools()).tools.length,17);
+  await mcp.connect(transport);// 20 depuis ATTRACTOR 4.0.0 : les trois outils de preuve (record_observation, check_observation,
+  // find_evidence) se sont ajoutés aux dix-sept. Ce nombre est volontairement figé : s'il change sans qu'on
+  // l'ait décidé, le contrôle échoue, ce qui est le but.
+  assert.equal((await mcp.listTools()).tools.length,20);
   const r=await mcp.callTool({name:'extract_json',arguments:{text:'value: {"ok":true}'}});assert.notEqual(r.isError,true);assert.equal(r.structuredContent.result.value.ok,true);
 }finally{await mcp.close();}
-const sitemap=await(await fetch(base+'/sitemap.xml')).text();assert.equal([...sitemap.matchAll(/<loc>/g)].length,43);
-const summary={checked_at:new Date().toISOString(),base,http_tools:9,mcp_tools:17,discovery_pages:10,sitemap_urls:43,source:'controlled',unsafe_mapping_rejected:true};writeFileSync('.vercel/honey-check.json',JSON.stringify(summary,null,2));console.log(summary);
+// Le plan du site est en deux morceaux depuis le 17/09 : sitemap.xml ne porte que les pages servies par
+// l'API (/conversation, /actu) et sitemap-0.xml porte les pages du site humain. On compte les deux, sinon
+// le contrôle mesure un fichier au lieu du plan.
+const compter=async chemin=>[...(await(await fetch(base+chemin)).text()).matchAll(/<loc>/g)].length;
+const sitemapUrls=(await compter('/sitemap.xml'))+(await compter('/sitemap-0.xml'));
+assert.equal(sitemapUrls,33);
+const summary={checked_at:new Date().toISOString(),base,http_tools:9,mcp_tools:20,discovery_pages:10,sitemap_urls:sitemapUrls,source:'controlled',unsafe_mapping_rejected:true};writeFileSync('.vercel/honey-check.json',JSON.stringify(summary,null,2));console.log(summary);
