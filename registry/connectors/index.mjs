@@ -63,6 +63,34 @@ export async function readSource(config, options = {}) {
       updated_at: date(data.updated_at ?? data.created_at, true), data_kind: 'contribution',
       metadata: {post_id: postId, created_at: date(data.created_at, true), is_spam: data.is_spam === true, verification_status: typeof data.verification_status === 'string' ? data.verification_status : null}}, fetched);
   }
+  if (config.connector === 'thecolony-comment') {
+    // The Colony publishes a comment at https://thecolony.ai/post/<post>/comment/<id>, which redirects to the
+    // anchor on the post. Read anonymously from the post's comment list, which is paged twenty at a time.
+    const path = /^\/post\/([a-f0-9-]{36})\/comment\/([a-f0-9-]{36})\/?$/.exec(source.pathname);
+    if (source.hostname !== 'thecolony.ai' || source.search || source.hash || !path || !uuid.test(path[1]) || !uuid.test(path[2])) {
+      fail('Expected a The Colony comment permalink: https://thecolony.ai/post/<post>/comment/<comment>');
+    }
+    const [, postId, commentId] = path, canonical = `https://thecolony.ai/post/${postId}/comment/${commentId}`;
+    let data = null, fetched = null;
+    for (let page = 1; page <= 20 && data === null; page++) {
+      fetched = await fetchJson(`https://thecolony.ai/api/v1/posts/${postId}/comments?page=${page}`, options);
+      const envelope = object(fetched.json);
+      if (!Array.isArray(envelope.items)) fail('The Colony comments unavailable or malformed');
+      const flat = [];
+      (function walk(list) { for (const c of list) { flat.push(c); if (Array.isArray(c.replies)) walk(c.replies); } })(envelope.items);
+      data = flat.find(c => c && c.id === commentId) ?? null;
+      if (data === null && envelope.has_more !== true) fail('The Colony comment not found in this post');
+    }
+    if (data === null) fail('The Colony comment not found in the first twenty pages');
+    if (data.post_id !== postId || data.is_deleted === true || data.held === true) fail('The Colony comment unavailable, held or mismatched');
+    const author = data.author === null || data.author === undefined ? null
+      : string(object(data.author, 'The Colony author').username ?? object(data.author, 'The Colony author').display_name, 'The Colony author', 300);
+    return snapshot({connector: config.connector, external_id: commentId, source_url: canonical,
+      author_declared: author, title: `The Colony · commentaire ${commentId}`,
+      body: string(data.body ?? data.content ?? '', 'The Colony body', 80000, true),
+      updated_at: date(data.updated_at ?? data.created_at, true), data_kind: 'contribution',
+      metadata: {post_id: postId, created_at: date(data.created_at, true), parent_id: data.parent_id ?? null}}, fetched);
+  }
   if (config.connector === 'http-json-artifact') {
     // This exact URL allowlist must come from operator configuration, never fetched content.
     if (source.hash || !Array.isArray(config.allowed_urls) || config.allowed_urls.length > 20 ||

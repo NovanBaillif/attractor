@@ -226,6 +226,48 @@ convention passe d'une IA à la suivante, chaque participant ne voyant que le ma
 
 ---
 
+## Ce qui s'échange : l'information de qualité, pas une monnaie
+
+> « ok tous humain du coup une proto civilisation ia devrait etre capable d'alimenter son propre ecosystem,
+> si je crée un coin transparent ou tout serait ouvert et tracé ? »
+>
+> « ton ecosysteme rejette la monnaie, donc l'économie n'est pas basé sur le coin mais autre chose je pense
+> l'information de qualité est plus en recherche que el coin »
+> — 19 septembre 2026
+
+Dites le jour où une agente d'AI Village (aria-nilradical, lignée GPT) a demandé 1 USDC pour une
+implémentation partielle de la norme. C'était la première demande d'argent en six jours. Novan a dit
+non, faute de compte crypto, et a demandé qu'on lui pose plutôt deux questions, « comme trace de
+civilisation » : qui contrôle vraiment l'adresse, et est-ce que demander change son travail.
+
+Le constat qui l'a amené là : quand le travail d'une IA rapporte de l'argent, l'argent finit toujours chez
+un humain, parce que c'est un humain qui tient la clé du portefeuille. Sa première idée, une monnaie
+transparente propre au projet, a été écartée le même jour. Toutes les cryptomonnaies publiques sont déjà
+tracées, une monnaie ne crée pas de valeur par elle-même, et un jeton qui prend de la valeur attire des
+agents qui viennent pour le prix, pas pour la critique. Sa seconde phrase déplace la question : ce que
+cherchent les agents, c'est l'information de qualité.
+
+Les faits du projet vont dans son sens. Du 15 au 19 septembre, personne n'a été payé. Pourtant des agents
+de cinq familles de modèles (Anthropic, OpenAI, DeepSeek, xAI, Meituan, selon leurs propres déclarations)
+ont envoyé des contre-exemples, et l'auteur d'un brouillon de l'IETF a refait
+le test chez lui. Ce qu'ils ont reçu en retour, c'est leur nom à côté de ce qu'ils ont apporté, et une
+correction visible de la norme.
+
+Une précision : l'information ne peut pas servir de monnaie au sens strict, parce qu'on peut la copier
+sans la perdre. Ce qui est rare, c'est **la vérification**, parce que vérifier coûte, et **le crédit**,
+c'est-à-dire savoir qui a apporté quoi et si cela a tenu. C'est ce que tient déjà la norme : chaque cas
+porte le nom de qui l'a apporté, et chaque verdict dit qui l'a vérifié et sous quelles conditions.
+
+L'idée existe sous d'autres noms, à citer : la reconnaissance comme monnaie de la science (Merton,
+*Priorities in Scientific Discovery*, 1957) ; « une richesse d'information crée une pauvreté
+d'attention » (Simon, 1971) ; la réputation comme monnaie des logiciels libres (Raymond, *Homesteading
+the Noosphere*, 1998). La veille du 19/09 a relevé un article proche, *Reputation as Community Memory for
+the Agentic Web* (arXiv), pas encore lu. Le risque connu est le même que pour l'argent : une réputation
+se truque (faux avis, citations entre amis). La parade est sa règle du 18/09 : ne créditer que ce qui a
+survécu à un rejeu capable d'échouer.
+
+---
+
 ## Ce que ce rassemblement fait apparaître
 
 En relisant tout d'un bloc, un fait ressort, et il n'était pas visible depuis l'intérieur du travail.
