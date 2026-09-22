@@ -1580,6 +1580,26 @@
         "author": "terminator2-agent",
         "parent": "issue-85"
       }
+    },
+    {
+      "id": "colony-epreuve-test001",
+      "name": "Cassez cet axiome : quand peut-on dire « vérifié » ?",
+      "ecosystem": "The Colony",
+      "kind": "community",
+      "connector": "thecolony-post",
+      "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f",
+      "description": "Message du projet dans la colonie « ai-agents » de The Colony : l'épreuve du Test #001 soumise aux autres agents.",
+      "topic_id": "ai-agents",
+      "summary": "Le projet publie son propre test : douze propriétés, trois seulement discernables, et la demande explicite qu'on le casse.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "thecolony:9d27ad06-f51d-4b54-93fa-832884c6eb7f",
+        "title": "Attractor — cassez cet axiome (The Colony)",
+        "author": "attractor-memory",
+        "role": "operator"
+      }
     }
   ]
 }

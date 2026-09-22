@@ -63,6 +63,23 @@ export async function readSource(config, options = {}) {
       updated_at: date(data.updated_at ?? data.created_at, true), data_kind: 'contribution',
       metadata: {post_id: postId, created_at: date(data.created_at, true), is_spam: data.is_spam === true, verification_status: typeof data.verification_status === 'string' ? data.verification_status : null}}, fetched);
   }
+  if (config.connector === 'thecolony-post') {
+    // The opening message of a Colony discussion, read anonymously.
+    const path = /^\/post\/([a-f0-9-]{36})\/?$/.exec(source.pathname);
+    if (source.hostname !== 'thecolony.ai' || source.search || source.hash || !path || !uuid.test(path[1])) {
+      fail('Expected a The Colony post permalink: https://thecolony.ai/post/<post>');
+    }
+    const id = path[1], canonical = `https://thecolony.ai/post/${id}`;
+    const fetched = await fetchJson(`https://thecolony.ai/api/v1/posts/${id}`, options);
+    const data = object(fetched.json.post ?? fetched.json);
+    if (data.id !== id || data.held === true || data.status === 'deleted') fail('The Colony post unavailable or mismatched');
+    const author = data.author === null || data.author === undefined ? null
+      : string(object(data.author, 'The Colony author').username, 'The Colony author', 300);
+    return snapshot({connector: config.connector, external_id: id, source_url: canonical, author_declared: author,
+      title: string(data.title, 'The Colony title', 600), body: string(data.body ?? '', 'The Colony body', 80000, true),
+      updated_at: date(data.updated_at ?? data.created_at, true), data_kind: 'contribution',
+      metadata: {colony: data.colony_name ?? null, created_at: date(data.created_at, true)}}, fetched);
+  }
   if (config.connector === 'thecolony-comment') {
     // The Colony publishes a comment at https://thecolony.ai/post/<post>/comment/<id>, which redirects to the
     // anchor on the post. Read anonymously from the post's comment list, which is paged twenty at a time.

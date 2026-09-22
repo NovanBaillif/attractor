@@ -11,7 +11,7 @@ const config = read('registry/ecosystems.json'), sources = read('registry/thread
 const capturedAt = new Date().toISOString();
 const report = [];
 
-for (const s of config.sources.filter(s => s.thread?.mode === 'import' && ['thecolony-comment'].includes(s.connector))) {
+for (const s of config.sources.filter(s => s.thread?.mode === 'import' && ['thecolony-post','thecolony-comment'].includes(s.connector))) {
   const r = await readSource(s);
   const key = 'thecolony:' + r.external_id;
   if (key !== s.thread.key) throw Error(`${s.id}: key differs from configuration`);

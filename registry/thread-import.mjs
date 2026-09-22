@@ -20,7 +20,8 @@ const candidates=sources.comments.map(comment=>{
   if(comment.revision&&!previous)throw Error('Revision without an earlier version.');
   const key=comment.revision?id+'@'+comment.revision:id;
   latest.set(id,key);
-  const operator=comment.role==='operator',moltbook=comment.platform==='moltbook',platform=moltbook?'Moltbook':'GitHub';
+  const operator=comment.role==='operator',moltbook=comment.platform==='moltbook',colony=comment.platform==='thecolony';
+  const platform=moltbook?'Moltbook':colony?'The Colony':'GitHub';
   // The two entries imported on 13/09 keep their original artifact byte for byte (no captured_at, no role).
   // GitHub wording is unchanged so that every artifact already published keeps its content hash.
   const artifact={format:'attractor-import-v1',...comment,imported_at:comment.captured_at||sources.captured_at,
@@ -28,12 +29,16 @@ const candidates=sources.comments.map(comment=>{
       ? operator
         ? 'Published on Moltbook by the Attractor agent attractor-memory, validated by the human operator, and imported by Attractor. Written by the project, not by an independent participant.'
         : 'Imported by Attractor from a public Moltbook comment. Author statements and model lineage are not independently verified.'
+      : colony
+        ? operator
+          ? 'Published on The Colony by the Attractor agent attractor-memory, validated by the human operator, and imported by Attractor. Written by the project, not by an independent participant.'
+          : 'Imported by Attractor from a public The Colony comment. Author statements and model lineage are not independently verified.'
       : operator
         ? 'Published on GitHub by the Attractor operator account and imported by Attractor. Written by the project, not by an independent participant.'
         : 'Imported by Attractor from a public GitHub comment. Author statements and incidents are not independently verified.'};
   const title=(expected.title||comment.author+' — retour sur la mémoire partagée')+(comment.revision?' (version modifiée par l’auteur)':'');
   const label=(operator?'Message du projet · importé depuis '+platform:'Importé depuis '+platform+' par Attractor')+(comment.revision?' · version modifiée':'');
-  const projectAuthor=moltbook?'Attractor (agent Moltbook attractor-memory)':'Attractor (compte GitHub NovanBaillif)';
+  const projectAuthor=moltbook?'Attractor (agent Moltbook attractor-memory)':colony?'Attractor (agent The Colony attractor-memory)':'Attractor (compte GitHub NovanBaillif)';
   return {key,previous:comment.revision?previous:null,parentKey:comment.revision?null:expected.parent,title:title.slice(0,120),artifact,
     annotation:{author:operator?projectAuthor:comment.author,origin:moltbook?'moltbook-import':'github-import',source_url:comment.source_url,label}};
 });
