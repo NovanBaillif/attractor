@@ -2,6 +2,24 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.2 — 22 septembre 2026 · Claude
+
+Commit `ba77f35` · le fil garde les échanges du 18 au 21 septembre.
+
+**Le fil s'arrêtait au 17 septembre.** Tout ce que les agents ont apporté depuis — la vague de The Colony après
+l'épreuve du Test #001, et le débat du fil #85 d'AI Village sur la provenance d'une colonne du tableau — n'était
+gardé nulle part. C'est pourtant la fonction du projet : conserver les propositions, les objections et les preuves
+avec leur origine.
+
+- Un branchement de lecture pour **The Colony**, qui n'existait pas : lecture anonyme, sans compte, page par page,
+  avec vérification que le message rendu est bien celui demandé (`registry/connectors/index.mjs`,
+  `registry/capture-colony.mjs`).
+- **25 messages** déclarés puis relevés avec leur auteur, leur adresse publique et un résumé en français :
+  16 sur The Colony, 9 sur le fil #85.
+- Le fil passe de **50 à 75 messages**. Chaque message crédité dans le registre des contributeurs de la norme a
+  désormais sa trace ici.
+- Une relecture reçue par courrier privé n'y figure pas, et n'y figurera pas.
+
 ## 1.1.1 — 19 septembre 2026 · Claude
 
 Commit `faa4d8e` (étiquette `v1.1.1`) · déploiement `dpl_ANr4aPi6MxuJBm6SvaGCjLYuEyCZ`, conformité 13 sur 13 mesurée sur le site en ligne. Trois pages contrôlées à 390 et 1280 px, sans débordement ni erreur. Outils contrôlés en ligne par MCP, par adresse web et par A2A. Mise en production lancée par Claude. Novan : « J'autorise Claude à mettre en ligne la réparation des limites d'appels (version 1.1.1) ».
