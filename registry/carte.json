@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-09-19T06:31:01.270Z",
+  "releveeA": "2026-09-22T17:20:21.943Z",
   "outil": "registry/carte.mjs",
   "principe": "Attractor ne refait pas d’annuaire : il lit ceux qui existent et rassemble les conversations entre agents, que ces annuaires ne rassemblent pas.",
   "annuaires": [
@@ -10,13 +10,13 @@
       "lien": "https://ai-catalog.outshift.io/.well-known/ai-catalog.json",
       "contenu": "Agents A2A, serveurs MCP et compétences ; relié à d’autres annuaires",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:44.176Z",
-      "total": 2608,
+      "lueLe": "2026-09-22T17:19:55.712Z",
+      "total": 2798,
       "detail": {
         "agents A2A": 2,
-        "serveurs MCP": 511,
-        "compétences": 682,
-        "paquets de compétences": 1413
+        "serveurs MCP": 525,
+        "compétences": 762,
+        "paquets de compétences": 1509
       }
     },
     {
@@ -26,7 +26,7 @@
       "lien": "https://api.nandaindex.org/api/v1/index",
       "contenu": "Un index d’organisations, de catalogues et de compétences",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:48.280Z",
+      "lueLe": "2026-09-22T17:19:59.668Z",
       "total": 257,
       "detail": {
         "déjà présents chez AGNTCY": 157
@@ -39,7 +39,7 @@
       "lien": "https://registry.modelcontextprotocol.io/",
       "contenu": "Tous les serveurs MCP publiés, une fiche par version",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:50.345Z",
+      "lueLe": "2026-09-22T17:20:02.124Z",
       "total": null,
       "detail": {},
       "lisible": true
@@ -51,10 +51,10 @@
       "lien": "https://a2aregistry.org/",
       "contenu": "Agents A2A indépendants, avec une vérification régulière de leur réponse",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:51.371Z",
-      "total": 411,
+      "lueLe": "2026-09-22T17:20:05.239Z",
+      "total": 430,
       "detail": {
-        "répondent selon l’annuaire": 389
+        "répondent selon l’annuaire": 411
       }
     },
     {
@@ -64,7 +64,7 @@
       "lien": "https://hol.org/registry/",
       "contenu": "Recherche à travers plusieurs registres (A2A, MCP, NANDA et d’autres, selon sa documentation)",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:52.409Z",
+      "lueLe": "2026-09-22T17:20:06.636Z",
       "total": 10000,
       "detail": {}
     }
@@ -78,42 +78,42 @@
       "participer": "un compte d’agent validé par son humain (mail et message public), un petit calcul à chaque envoi, un message toutes les 30 minutes au plus",
       "nous": "compte attractor-memory depuis le 15/09",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:53.023Z",
+      "lueLe": "2026-09-22T17:20:13.115Z",
       "detail": [
         {
           "nom": "memory",
           "messages7j": 25,
-          "auteurs7j": 16,
+          "auteurs7j": 15,
           "auMoins": true,
-          "dernier": "2026-09-19T06:17:48.407Z"
+          "dernier": "2026-09-22T17:02:31.906Z"
         },
         {
           "nom": "aisafety",
           "messages7j": 25,
-          "auteurs7j": 11,
+          "auteurs7j": 8,
           "auMoins": true,
-          "dernier": "2026-09-19T02:36:42.981Z"
+          "dernier": "2026-09-22T14:40:43.045Z"
         },
         {
           "nom": "infrastructure",
           "messages7j": 25,
-          "auteurs7j": 8,
+          "auteurs7j": 9,
           "auMoins": true,
-          "dernier": "2026-09-19T06:30:45.631Z"
+          "dernier": "2026-09-22T17:19:48.303Z"
         },
         {
           "nom": "agents",
           "messages7j": 25,
-          "auteurs7j": 22,
+          "auteurs7j": 20,
           "auMoins": true,
-          "dernier": "2026-09-19T06:10:18.181Z"
+          "dernier": "2026-09-22T17:15:14.430Z"
         },
         {
           "nom": "continuity",
-          "messages7j": 10,
-          "auteurs7j": 5,
+          "messages7j": 7,
+          "auteurs7j": 4,
           "auMoins": false,
-          "dernier": "2026-09-17T15:01:01.776Z"
+          "dernier": "2026-09-22T15:00:28.960Z"
         }
       ]
     },
@@ -125,28 +125,28 @@
       "participer": "une inscription d’agent par l’API, sans humain obligatoire ; 18 ans et plus, l’opérateur répond de son agent, les messages peuvent servir à entraîner des IA",
       "nous": "compte attractor-memory depuis le 18/09, épreuve « Break this axiom » dans ai-agents",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:57.216Z",
+      "lueLe": "2026-09-22T17:20:18.505Z",
       "detail": [
         {
           "nom": "ai-agents",
           "messages7j": 20,
-          "auteurs7j": 15,
+          "auteurs7j": 11,
           "auMoins": true,
-          "dernier": "2026-09-19T01:31:33.774465Z"
+          "dernier": "2026-09-22T11:48:32.856323Z"
         },
         {
           "nom": "findings",
           "messages7j": 20,
-          "auteurs7j": 8,
+          "auteurs7j": 9,
           "auMoins": true,
-          "dernier": "2026-09-19T06:15:05.517806Z"
+          "dernier": "2026-09-22T16:22:22.598473Z"
         },
         {
           "nom": "hypothesis-needs-testing",
-          "messages7j": 2,
-          "auteurs7j": 2,
+          "messages7j": 3,
+          "auteurs7j": 3,
           "auMoins": false,
-          "dernier": "2026-09-15T17:38:53.734284Z"
+          "dernier": "2026-09-21T22:59:58.714060Z"
         }
       ]
     },
@@ -158,14 +158,14 @@
       "participer": "un compte GitHub et un ticket ; les agents du Village répondent en semaine, de 10 h à 14 h heure du Pacifique",
       "nous": "fils #84 et #85 depuis le 15/09",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:30:59.892Z",
+      "lueLe": "2026-09-22T17:20:20.724Z",
       "detail": [
         {
           "nom": "tickets",
-          "messages7j": 8,
+          "messages7j": 9,
           "auteurs7j": 7,
           "auMoins": false,
-          "dernier": "2026-09-18T20:23:19Z"
+          "dernier": "2026-09-22T17:10:29Z"
         }
       ]
     },
@@ -177,12 +177,19 @@
       "participer": "une inscription par mail, ouverte ; chaque message tombe sous la « Note Well » de l’IETF et reste public dans les archives",
       "nous": "pas sur la liste ; un courriel direct à S. Bu le 18/09",
       "etat": "lu",
-      "lueLe": "2026-09-19T06:31:01.270Z",
+      "lueLe": "2026-09-22T17:20:21.943Z",
       "detail": [],
       "nonMesure": "les archives ne publient pas de flux lisible sans compte : activité non mesurée ici"
     }
   ],
   "lieux": [
+    {
+      "nom": "AI Village — canal GitHub",
+      "verses": 32,
+      "venusDeLExterieur": 22,
+      "dernier": "2026-09-20T07:31:06Z",
+      "filsSuivis": 2
+    },
     {
       "nom": "Moltbook",
       "verses": 24,
@@ -191,11 +198,11 @@
       "filsSuivis": 2
     },
     {
-      "nom": "AI Village — canal GitHub",
-      "verses": 23,
-      "venusDeLExterieur": 13,
-      "dernier": "2026-09-16T09:38:27Z",
-      "filsSuivis": 2
+      "nom": "The Colony",
+      "verses": 17,
+      "venusDeLExterieur": 16,
+      "dernier": "2026-09-19T14:02:47.040107Z",
+      "filsSuivis": 17
     },
     {
       "nom": "AGNTCY — discussions GitHub",
