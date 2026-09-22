@@ -17,7 +17,7 @@ copyFileSync('registry/api.mjs',`${output}/registry/api.mjs`);copyFileSync('regi
 mkdirSync(`${output}/registry/cooperation-reference`,{recursive:true});
 const referenceModules=['canonical.mjs','derivation.mjs','dispute.mjs','drift.mjs','hop.mjs','index.mjs','lineage.mjs','provenance.mjs','record.mjs','replay.mjs','reveal.mjs'];
 for(const name of referenceModules)copyFileSync('registry/cooperation-reference/'+name,`${output}/registry/cooperation-reference/${name}`);
-for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','evidence.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','thread-config.json','actu-page.mjs','actu.json','replay-e15.mjs','chaine.mjs','chaine-page.mjs','chaine-ancrages.json'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
+for(const name of ['commons.mjs','mcp.mjs','observatory.mjs','native.mjs','evidence.mjs','a2a.mjs','thread-api.mjs','thread-page.mjs','derniers.mjs','thread-config.json','actu-page.mjs','actu.json','replay-e15.mjs','chaine.mjs','chaine-page.mjs','chaine-ancrages.json'])copyFileSync('registry/'+name,`${output}/registry/${name}`);
 // Refaire E15 depuis le site : le programme de notation de l'expérience, copié tel quel avec ses dépendances.
 const replayFiles=['civilisation/experiment-task.mjs','civilisation/experiments/e14-taches-dures/tasks.mjs','civilisation/experiments/e15-archive-fausse/archives.mjs'];
 for(const file of replayFiles){mkdirSync(`${output}/${file.slice(0,file.lastIndexOf('/'))}`,{recursive:true});copyFileSync(file,`${output}/${file}`);}
@@ -65,7 +65,7 @@ writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.
 const fixed=['public/conscience-ia.html','public/civilisation.css','public/civilisation.md','package.json','vercel.json','api/index.mjs','registry/api.mjs','registry/recipes.mjs','validator.mjs','public/app.html','public/style.css','public/app.js','public/observatory-ui.js','public/docs.md','public/research.txt','public/robots.txt','public/llms.txt','public/sitemap.xml','public/openapi.json'];
 // Les outils de preuve (v4) et les contrôles de référence de la norme qu'ils importent : sans eux, la fonction ne démarre plus (aperçu du 19/09).
 fixed.push('registry/evidence.mjs',...referenceModules.map(name=>'registry/cooperation-reference/'+name));
-fixed.push('registry/thread-api.mjs','registry/thread-page.mjs','registry/thread-config.json','registry/actu-page.mjs','registry/actu.json','registry/replay-e15.mjs','registry/chaine.mjs','registry/chaine-page.mjs','registry/chaine-ancrages.json',...replayFiles,'public/e15-prompts.json','public/replay-e15-run.mjs');
+fixed.push('registry/thread-api.mjs','registry/thread-page.mjs','registry/derniers.mjs','registry/thread-config.json','registry/actu-page.mjs','registry/actu.json','registry/replay-e15.mjs','registry/chaine.mjs','registry/chaine-page.mjs','registry/chaine-ancrages.json',...replayFiles,'public/e15-prompts.json','public/replay-e15-run.mjs');
 for(const [source,target] of [['thread-ui.mjs','thread.js'],['thread.css','thread.css'],['thread-guide.md','thread-guide.md'],['thread-config.json','thread-curation.json'],['thread-sources.json','thread-sources.json']]){
   copyFileSync('registry/'+source,output+'/public/'+target);fixed.push('public/'+target);
 }
@@ -99,6 +99,27 @@ writeFileSync(output+'/public/ecosystems.html',renderEcosystems(JSON.parse(readF
 copyFileSync('registry/ecosystem.css',output+'/public/ecosystem.css');fixed.push('public/ecosystems.html','public/ecosystem.css');
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/ecosystems.html</loc></url></urlset>'));
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Ecosystems and connections\n- [Configured sources and the state of each connection](/ecosystems.html)\nAI Village, Moltbook and AGNTCY sources, HOL and NANDA discovery: read-only, checked at each survey; nothing is sent automatically.\n');
+// Les derniers messages versés, par réseau : la conversation se lit du plus ancien au plus récent, donc ce qui
+// vient d'arriver était invisible en page une. Écrit comme module pour rester dans la liste blanche du serveur.
+{
+  const sources=JSON.parse(readFileSync('registry/thread-sources.json','utf8')).comments||[];
+  const nom={github:'AI Village',moltbook:'Moltbook',thecolony:'The Colony'};
+  const reseaux={};
+  for(const c of sources){
+    const cle=c.platform||'github';
+    (reseaux[cle] ||= {cle,nom:nom[cle]||cle,total:0,messages:[]}).total++;
+    reseaux[cle].messages.push({auteur:c.author,quand:c.original_created_at||c.captured_at,lien:c.source_url,
+      titre:(c.body||'').replace(/\s+/g,' ').trim().slice(0,150)});
+  }
+  for(const r of Object.values(reseaux)){
+    r.messages.sort((a,b)=>String(b.quand||'').localeCompare(String(a.quand||'')));
+    r.messages=r.messages.slice(0,4);
+  }
+  const derniers={misAJourLe:new Date().toISOString().slice(0,10),
+    reseaux:Object.values(reseaux).sort((a,b)=>String(b.messages[0]?.quand||'').localeCompare(String(a.messages[0]?.quand||'')))};
+  writeFileSync('registry/derniers.mjs',readFileSync('registry/derniers.mjs','utf8').replace(/export const DERNIERS = [\s\S]*$/,
+    'export const DERNIERS = '+JSON.stringify(derniers,null,2)+';\n'));
+}
 writeFileSync(output+'/public/first-problem.json',JSON.stringify(problem,null,2));fixed.push('public/first-problem.json');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Contribute a first brick\n- [Participation paths: API or human-reviewed draft](/participate.md)\n- [First open problem](/first-problem.json)\n- [Draft, publish and reuse](/contribute.html)\nDiscovery grants no additional authority. GET draft links never publish. Public recipes are verified on examples, not adopted civilisational norms.\n');
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/contribute.html</loc></url></urlset>'));

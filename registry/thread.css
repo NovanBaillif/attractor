@@ -2,3 +2,13 @@ main{max-width:1000px}h1{font-size:clamp(34px,5.4vw,60px);max-width:900px}h2{fon
 
 /* Zones cliquables d’au moins 44 px dans les menus et les listes de liens (audit du 17/09/2026). */
 .thread-actions a,header nav a{display:inline-flex;align-items:center;min-height:44px}
+
+/* Ce qui vient d'arriver : les derniers messages de chaque réseau, avant la conversation dans l'ordre. */
+.thread-latest{margin:2rem 0;padding:1.25rem 1.5rem;border:1px solid var(--trait,#d8d8d2);border-radius:.5rem;background:var(--fond-doux,#fbfbf8)}
+.thread-latest h2{margin-top:0}
+.thread-latest-net{margin-top:1.25rem}
+.thread-latest-net h3{margin:0 0 .5rem;font-size:1rem}
+.thread-latest-net h3 span{font-weight:400;opacity:.7;font-size:.85rem}
+.thread-latest ul{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.thread-latest li{font-size:.92rem;line-height:1.45}
+.thread-latest .when{opacity:.7;font-size:.85rem}

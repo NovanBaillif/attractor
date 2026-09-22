@@ -1,3 +1,4 @@
+import {DERNIERS} from './derniers.mjs';
 const question = 'Comment transmettre une mémoire utile sans propager ses erreurs ?';
 const statePattern = /^ATR-S-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -76,6 +77,25 @@ function card(item, rootId, visibleIds) {
     <details><summary>JSON, références et empreinte enregistrés</summary>${a.specversion ? field('Événement d’origine', eventRef(a)) + field('Version visée', d.target ? eventRef(d.target) : '') : ''}<p class="thread-hash">${escape(item.content_hash || 'Empreinte non fournie')}</p><pre>${escape(text(item.artifact))}</pre></details>
   </article>`;
 }
+// La conversation se lit du plus ancien au plus récent, vingt par page : sans ce bloc, ce qui vient d'arriver
+// est trois pages plus loin et personne ne le voit (Novan, 22 septembre 2026).
+function derniers() {
+  const reseaux = Array.isArray(DERNIERS?.reseaux) ? DERNIERS.reseaux : [];
+  if (!reseaux.length) return '';
+  const jour = iso => { const d = new Date(iso); return Number.isFinite(d.getTime())
+    ? d.toLocaleDateString('fr-FR', {day: 'numeric', month: 'long', timeZone: 'Indian/Reunion'}) : ''; };
+  return `<section class="thread-latest" aria-labelledby="derniers-heading">
+    <h2 id="derniers-heading">Ce qui vient d’arriver</h2>
+    <p>Les messages les plus récents versés dans le fil, par réseau. La conversation ci-dessous se lit
+    dans l’ordre, du premier message au dernier.</p>
+    ${reseaux.map(r => `<article class="thread-latest-net"><h3>${escape(r.nom)} <span>${r.total} message(s) versé(s)</span></h3>
+      <ul>${(r.messages || []).map(m => `<li><strong>${escape(m.auteur || 'auteur non renseigné')}</strong>
+        <span class="when">${escape(jour(m.quand))}</span><br>${escape((m.titre || '').slice(0, 140))}…
+        ${httpUrl(m.lien) ? `<a href="${escape(m.lien)}" rel="nofollow noopener">le message d’origine</a>` : ''}</li>`).join('')}</ul>
+    </article>`).join('')}
+  </section>`;
+}
+
 export function renderThread(page) {
   const items = Array.isArray(page.items) ? page.items : [], rootId = statePattern.test(page.root_id || '') ? page.root_id : '';
   const visibleIds = new Set(items.map(item => item.id));
@@ -91,6 +111,7 @@ export function renderThread(page) {
     <p class="lead">Des propositions, leurs objections et les essais qui permettent de les reprendre. Chaque contribution garde son origine ; chacun décide pour sa propre pratique.</p>
     <p>Les messages portant « importé depuis GitHub » ont été repris depuis le fil public. Un auteur renseigné dans une nouvelle réponse reste déclaré. Une publication ou un test ne vaut pas adoption collective.</p>
     <div class="thread-actions"><a class="button" href="#reply">Apporter une réponse</a><a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/84" rel="noreferrer">Lire le fil GitHub d’origine</a><a href="/convention-v02.md">Le brouillon 0.2 issu des objections</a><a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85" rel="noreferrer">Programmer la norme à l’aveugle</a></div></section>
+    ${derniers()}
     <section class="thread-list" aria-labelledby="contributions-heading"><h2 id="contributions-heading">La conversation</h2>
     ${items.length ? items.map(item => card(item, rootId, visibleIds)).join('\n') : '<p>Aucune contribution disponible sur cette page.</p>'}
     ${next ? `<nav class="thread-pagination" aria-label="Pages de la conversation"><a class="button" href="${escape(next)}">Lire la suite</a><a href="/api/v3/thread${escape(query)}">Suite en JSON</a></nav>` : ''}</section>
