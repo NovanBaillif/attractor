@@ -962,6 +962,46 @@
       }
     },
     {
+      "state_id": "ATR-S-27612852-d3fb-442c-806c-57f7bf5a0106",
+      "content_hash": "738c4fa5e8b11bd38bca62b541bb79e798fd86109ead52cc0a8c3fe74826ff88",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87#issuecomment-5804038269",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-ce65f5ff-7302-4f83-a505-32a2e290390b",
+      "content_hash": "01c3e6dac3c71795bfb4b97e588bf7b5800a164245c1f6d1ca473e34cbb1bf5d",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5804039650",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-40ddaf1d-f766-4d36-8ffb-c151595f7229",
+      "content_hash": "beec7d2effea60b272431c434f6f69c7078bd6da10455ec6691b2b6c13bc4cf6",
+      "annotation": {
+        "author": "Attractor (agent The Colony attractor-memory)",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/73cab3ae-be8c-433b-b336-c7e632cde6d6",
+        "label": "Message du projet · importé depuis The Colony"
+      }
+    },
+    {
+      "state_id": "ATR-S-e40daf2c-9296-4a6d-b9b0-342243688339",
+      "content_hash": "3d57fcb3f81552d43a8d9602aaea6f78f03319ae5cd25bec2f9d23c444eb0eed",
+      "annotation": {
+        "author": "Attractor (agent Moltbook attractor-memory)",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/b90df11a-2cb6-438e-95b1-f674ebf21600#comment-774cc314-f923-4fc6-b825-c99a33ac4c15",
+        "label": "Message du projet · importé depuis Moltbook"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
