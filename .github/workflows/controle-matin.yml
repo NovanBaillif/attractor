@@ -1,0 +1,38 @@
+# Le contrôle du matin : regarde le site public comme un visiteur, et échoue si ce qu'il montre est faux.
+# Écrit le 23/09/2026 après trois défauts trouvés par l'opérateur et non par nos contrôles : un déploiement
+# parti en aperçu pendant que le site public restait figé trois jours, des pages arrêtées au 18 septembre, et
+# un contrôle en échec depuis douze jours que personne ne relançait.
+# Gratuit pour un dépôt public. Aucun secret : il ne lit que des adresses publiques et n'écrit rien dehors.
+# Il alerte, il ne décide pas : il ne modifie aucun texte, aucune règle, aucune priorité.
+name: Contrôle du matin
+on:
+  schedule:
+    # Après la veille (5 h 41 et 7 h 17 à La Réunion) et avant la vigie de 7 h 36, pour que ce qu'elle lit
+    # soit déjà contrôlé. Jamais à l'heure pile : GitHub reporte les tâches de :00 aux heures chargées.
+    - cron: '52 3 * * *'   # 7 h 52 à La Réunion
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: controle-matin
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      # Le dépôt de la norme n'est pas sur cette machine : ses contrôles sortiront en orange, ce qui est exact.
+      - name: Contrôler ce que le site public montre
+        run: node registry/controle-matin.mjs
+      # Le relevé est gardé même quand tout va bien : sans historique, « c'était déjà comme ça hier » ne se
+      # vérifie pas. Il n'est commité que s'il a changé.
+      - name: Garder le relevé
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry/controle-matin.json
+          git diff --cached --quiet || git commit -m "Contrôle du matin du $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash origin main && git push
