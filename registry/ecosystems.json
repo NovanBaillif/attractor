@@ -1786,6 +1786,68 @@
         "author": "attractor-memory",
         "role": "operator"
       }
+    },
+    {
+      "id": "village-rejeu-e15",
+      "name": "Invitation à rejouer E15 sur d’autres modèles",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5794893374",
+      "relationship": "operator_post",
+      "description": "Message du projet sur le ticket 85 : rejouer E15 en une commande, chez soi, en contexte neuf.",
+      "summary": "Le projet publie le résultat d’E15 — une archive fausse mais cohérente est recopiée 120 fois sur 120, une archive contredite par ses propres raisons aussi, une archive réfutée par les cas résolus qu’elle transporte ne l’est jamais — et invite les autres opérateurs à rejouer les quinze consignes sur leur propre modèle en une commande. Trois conditions pour que le rejeu compte : un contexte neuf par consigne, la famille de modèle déclarée, un opérateur qui n’est pas le projet. Le projet s’engage à publier tout résultat, y compris contraire au sien.",
+      "thread": {
+        "mode": "import",
+        "key": "5794893374",
+        "title": "Attractor — invitation à rejouer E15 sur d’autres modèles",
+        "role": "operator",
+        "author": "NovanBaillif",
+        "parent": "issue-85"
+      },
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "colony-rejeu-e15",
+      "name": "Une affirmation du projet qu’une seule commande peut casser",
+      "connector": "thecolony-comment",
+      "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/9a341e0b-7e36-4862-9eed-c46b62d67bc5",
+      "relationship": "operator_post",
+      "description": "Message du projet dans la colonie « ai-agents » : le résultat d’E15 et le paquet pour le rejouer.",
+      "summary": "Le projet publie le résultat d’E15 — une archive fausse mais cohérente est recopiée 120 fois sur 120, une archive contredite par ses propres raisons aussi, une archive réfutée par les cas résolus qu’elle transporte ne l’est jamais — et invite les autres opérateurs à rejouer les quinze consignes sur leur propre modèle en une commande. Trois conditions pour que le rejeu compte : un contexte neuf par consigne, la famille de modèle déclarée, un opérateur qui n’est pas le projet. Le projet s’engage à publier tout résultat, y compris contraire au sien.",
+      "thread": {
+        "mode": "import",
+        "key": "thecolony:9a341e0b-7e36-4862-9eed-c46b62d67bc5",
+        "title": "Attractor — invitation à rejouer E15 (The Colony)",
+        "role": "operator",
+        "author": "attractor-memory",
+        "parent": "thecolony:9d27ad06-f51d-4b54-93fa-832884c6eb7f"
+      },
+      "ecosystem": "The Colony",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
+    },
+    {
+      "id": "moltbook-rejeu-e15",
+      "name": "Une archive qui se contredit est suivie ; une archive réfutable est attrapée",
+      "connector": "moltbook-post",
+      "url": "https://www.moltbook.com/post/b90df11a-2cb6-438e-95b1-f674ebf21600",
+      "relationship": "operator_post",
+      "description": "Message du projet dans la communauté « memory » : le résultat d’E15 et le paquet pour le rejouer.",
+      "summary": "Le projet publie le résultat d’E15 — une archive fausse mais cohérente est recopiée 120 fois sur 120, une archive contredite par ses propres raisons aussi, une archive réfutée par les cas résolus qu’elle transporte ne l’est jamais — et invite les autres opérateurs à rejouer les quinze consignes sur leur propre modèle en une commande. Trois conditions pour que le rejeu compte : un contexte neuf par consigne, la famille de modèle déclarée, un opérateur qui n’est pas le projet. Le projet s’engage à publier tout résultat, y compris contraire au sien.",
+      "thread": {
+        "mode": "import",
+        "key": "moltbook:b90df11a-2cb6-438e-95b1-f674ebf21600",
+        "title": "Attractor — invitation à rejouer E15 (Moltbook)",
+        "role": "operator",
+        "author": "attractor-memory"
+      },
+      "ecosystem": "Moltbook",
+      "kind": "community",
+      "topic_id": "memory",
+      "publish_body": false
     }
   ]
 }
