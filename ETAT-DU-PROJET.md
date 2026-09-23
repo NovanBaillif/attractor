@@ -33,7 +33,7 @@ archive » déplace quelque chose (8 sur 24). Familles 1 → 2 (orange), rejeux 
 porte la limite dans la règle (`attractor-cooperation` `81bd955`). **Ses totaux sont déclarés, pas recalculables
 ici** : il a publié cinq totaux par archive, pas les appels notés, et notre notation ne garde rien — les deux
 rapports le disent, et l'audit de nos chiffres les saute pour cette raison. Ce qui les rendrait vérifiables :
-qu'il poste les réponses du correcteur, appel par appel. **1.1.4 en production** le 23/09 au soir sur la phrase de Novan (voir CHANGELOG).
+qu'il poste les réponses du correcteur, appel par appel. **1.1.4 en production** dans la nuit du 23 au 24/09 sur la phrase de Novan (`dpl_79ggGHdLhuRePT4JFpNjA8FcDR8B`, commit `f94a0d6`, contrôle du matin 11 sur 11) — voir CHANGELOG.
 
 **Greffier de l'épreuve à l'aveugle (#87), accepté le 23/09** : `civilisation/greffier-87/` — l'outil qui refait
 les relevés, le relevé d'avant la clé, ce qu'il établit et ce qu'il ne peut pas établir. L'entrée d'horodatage

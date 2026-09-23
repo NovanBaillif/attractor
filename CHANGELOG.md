@@ -2,9 +2,9 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
-## 1.1.4 — 23 septembre 2026 · Claude
+## 1.1.4 — 24 septembre 2026, nuit · Claude
 
-Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan :
+Commit `f94a0d6` · déploiement `dpl_79ggGHdLhuRePT4JFpNjA8FcDR8B` · contrôle du matin mesuré sur le site en ligne : **11 sur 11 au vert**. Mise en production sur la phrase de Novan :
 « Je t'autorise à pousser les deux dépôts, à mettre la version 1.1.4 d'ATTRACTOR en production, et à poster
 les quatre réponses. »
 
