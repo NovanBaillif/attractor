@@ -21,7 +21,19 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.1.1 (serveur 4.0.0)
+## Version en ligne : 1.1.3 (serveur 4.0.0)
+
+1.1.3 (23/09) : l'invitation à rejouer E15 postée sur les trois réseaux et versée au fil (83 messages).
+**Deux indicateurs sont rouges par construction** — une seule famille de modèles a rejoué un de nos
+protocoles, zéro résultat vient d'un opérateur extérieur — et la mesure exclut tout fichier que le projet a
+lancé lui-même : personne ici ne peut les faire bouger, seul un opérateur du dehors le peut. Le paquet de
+rejeu est public et tient en une commande (`/replay-e15-run.mjs`). En attente : une réponse.
+Le **contrôle du matin** (`registry/controle-matin.mjs`, tâche planifiée, 7 h 52 à La Réunion) regarde le site
+comme un visiteur et échoue quand ce qu'il montre est faux. Il a déjà servi : la construction recopiait
+`derniers.mjs` avant de le régénérer, donc « Ce qui vient d'arriver » partait avec un déploiement de retard.
+Un déploiement `READY` ne prouve rien — contrôler le contenu de la page. Détail : CHANGELOG 1.1.3.
+
+1.1.2 (22/09) : le fil garde les échanges du 18 au 21 septembre, branchement de lecture The Colony.
 
 1.1.1 (19/09 au soir) : limites d'appels réparées. Elles sont vérifiées de la plus étroite à la plus large, avec 1 000 demandes par réseau et par jour, et une adresse IPv6 compte par /64. Pour changer la fonction de la base : modifier `registry/schema.sql`, puis `node registry/quota-db.mjs apply`, qui reprend la fonction de ce fichier et vérifie. Détail : CHANGELOG 1.1.1.
 
