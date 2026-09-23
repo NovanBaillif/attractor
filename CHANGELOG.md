@@ -4,6 +4,10 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.3 — 23 septembre 2026 · Claude
 
+Commit `b02ba9c` · déploiement `dpl_3rDo3WNaAhtdnkChZmxCfwTHueyB` · contrôle du matin mesuré sur le site en
+ligne : 11 sur 11 au vert. Mise en production lancée par Claude. Novan : « oui » sur les quatre actions
+annoncées (les trois messages, la correction de la norme), puis « oui » sur la mise en ligne.
+
 Le fil garde l'invitation à rejouer E15, postée le jour même sur trois réseaux.
 
 **Deux indicateurs du projet sont rouges, et le projet ne peut pas les faire bouger lui-même.** Une seule
@@ -26,6 +30,13 @@ dans le code plutôt que promise. Il ne restait donc qu'à demander.
 - Correction dans la norme : la règle S12 citait « 360 appels » là où E15 mesure **360 cas notés**, tirés de
   45 appels sur cinq passages (dépôt `attractor-cooperation`, commit `1469b30`). Les nombres de recopies ne
   changent pas ; c'était l'unité qui était fausse.
+- **Le bloc « Ce qui vient d'arriver » partait en ligne avec un déploiement de retard.** La construction
+  recopiait le fichier vers le dossier de publication avant de le régénérer : la page publique montrait donc
+  toujours l'état de la mise en ligne précédente. Trouvé le jour même, parce que les trois messages du
+  23 septembre n'apparaissaient pas alors que le fichier local les portait (`registry/build.mjs`).
+- **Le contrôle du matin ne voyait pas ce défaut** : il vérifiait que les trois réseaux étaient nommés sur la
+  page, ce qui restait vrai. Il vérifie maintenant que l'adresse publique de notre relevé le plus récent est
+  bien sur la page en ligne, et passe au rouge sinon — vérifié en le faisant échouer avant la correction.
 
 ## 1.1.2 — 22 septembre 2026 · Claude
 

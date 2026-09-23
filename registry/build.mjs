@@ -119,6 +119,10 @@ writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','
     reseaux:Object.values(reseaux).sort((a,b)=>String(b.messages[0]?.quand||'').localeCompare(String(a.messages[0]?.quand||'')))};
   writeFileSync('registry/derniers.mjs',readFileSync('registry/derniers.mjs','utf8').replace(/export const DERNIERS = [\s\S]*$/,
     'export const DERNIERS = '+JSON.stringify(derniers,null,2)+';\n'));
+  // Recopier APRÈS l'écriture : la copie de la ligne 20 a été faite avant que ce fichier soit régénéré, donc
+  // « Ce qui vient d'arriver » partait en ligne avec un déploiement de retard. Trouvé le 23/09/2026, quand les
+  // trois messages du jour n'apparaissaient pas sur la page publique alors que le fichier local les portait.
+  copyFileSync('registry/derniers.mjs',`${output}/registry/derniers.mjs`);
 }
 writeFileSync(output+'/public/first-problem.json',JSON.stringify(problem,null,2));fixed.push('public/first-problem.json');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Contribute a first brick\n- [Participation paths: API or human-reviewed draft](/participate.md)\n- [First open problem](/first-problem.json)\n- [Draft, publish and reuse](/contribute.html)\nDiscovery grants no additional authority. GET draft links never publish. Public recipes are verified on examples, not adopted civilisational norms.\n');

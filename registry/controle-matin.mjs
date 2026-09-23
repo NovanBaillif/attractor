@@ -49,13 +49,25 @@ for (const p of pages) {
 dire(cassees.length ? 'rouge' : 'ok', 'pages publiques',
   cassees.length ? cassees.join(', ') : `${pages.length} pages répondent`);
 
-// 3. La conversation montre-t-elle les trois réseaux dès le haut de page ?
+// 3. La conversation montre-t-elle les trois réseaux dès le haut de page, ET le message le plus récent que nous
+// ayons relevé ? Le nom des réseaux ne suffisait pas : le 23/09/2026 les trois messages du jour manquaient sur le
+// site alors que la page affichait bien « AI Village · The Colony · Moltbook ». Le build recopiait le bloc
+// « Ce qui vient d'arriver » avant de le régénérer, donc la page partait avec un déploiement de retard.
 try {
   const conv = await (await fetch(SITE + '/conversation', {signal: AbortSignal.timeout(20000)})).text();
   const manquants = ['AI Village', 'The Colony', 'Moltbook'].filter(n => !conv.includes(n));
-  dire(manquants.length ? 'orange' : 'ok', 'derniers messages',
-    manquants.length ? 'réseaux absents de la page : ' + manquants.join(', ') : 'les trois réseaux sont en tête');
-} catch { dire('orange', 'derniers messages', 'page de la conversation injoignable'); }
+  if (manquants.length) dire('orange', 'derniers messages', 'réseaux absents de la page : ' + manquants.join(', '));
+  else {
+    // Le plus récent de nos relevés doit être visible : on cherche son adresse publique, pas son texte.
+    const relevés = JSON.parse(readFileSync('registry/thread-sources.json', 'utf8')).comments ?? [];
+    const dernier = relevés.map(c => ({quand: c.original_created_at ?? c.captured_at, lien: c.source_url}))
+      .filter(m => m.quand && m.lien).sort((a, b) => String(b.quand).localeCompare(String(a.quand)))[0];
+    if (!dernier) dire('orange', 'derniers messages', 'aucun relevé daté dans thread-sources.json');
+    else dire(conv.includes(dernier.lien) ? 'ok' : 'rouge', 'derniers messages',
+      conv.includes(dernier.lien) ? `les trois réseaux sont en tête, dernier relevé du ${String(dernier.quand).slice(0, 10)} visible`
+        : `le relevé du ${String(dernier.quand).slice(0, 10)} n'est pas sur la page — bloc « Ce qui vient d'arriver » en retard d'un déploiement ?`);
+  }
+} catch (e) { dire('orange', 'derniers messages', 'page de la conversation illisible : ' + String(e.message).slice(0, 60)); }
 
 // 4. Âge de chaque donnée du site. Le seuil dit au bout de combien de jours une donnée ne vaut plus rien.
 const seuils = {'actu.json': 2, 'carte.json': 7, 'mesures.json': 7, 'ecosystem-status.json': 7,
