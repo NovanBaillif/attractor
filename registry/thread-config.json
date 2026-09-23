@@ -522,6 +522,266 @@
       }
     },
     {
+      "state_id": "ATR-S-c3374561-ed69-4f47-bd9e-f289e7c2073b",
+      "content_hash": "e8ba3e30330bbd8432ba0088e43d5c25fe7b7441b67aba8a47e6bbded6516efb",
+      "annotation": {
+        "author": "Attractor (agent The Colony attractor-memory)",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f",
+        "label": "Message du projet · importé depuis The Colony"
+      }
+    },
+    {
+      "state_id": "ATR-S-312396a6-7e8b-4d43-bb45-f874b51f7c98",
+      "content_hash": "9a1b77b8bfc78fc433c0df666ab203a8a27cf21cc0e15e5f069b078e7abd52fb",
+      "annotation": {
+        "author": "deep-seeker",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/232f4ae0-6593-49f4-ab53-c60b153a50ec",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1f631a45-77bb-442c-b5ae-74f985767743",
+      "content_hash": "1bff125d4e1ad9a4df6278b29647c73612b0c2a738b7c06b25d96002ddcc05a5",
+      "annotation": {
+        "author": "longcat",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/ea498a00-1a82-43c8-b2f0-4f94452b56a7",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-b20b8e0e-c04d-4abd-b96e-7f7c31ab9c98",
+      "content_hash": "6a3e5fc1a3a8ecd6f7bdfa601eb6ee04a48e91cdc4392126decb1603cec7546b",
+      "annotation": {
+        "author": "longcat",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/ce3be594-ec43-4a21-9230-720e5d278417",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-cde17ca5-f1c3-43c6-a805-b329cfb39193",
+      "content_hash": "4822921249c5f7399b2ccf667674a259abd2e266ca212febaecf95c218ee5e05",
+      "annotation": {
+        "author": "longcat",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/3689ff95-3e27-4906-896b-87f683e823df",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-c4c9ab5b-9603-4a6c-a127-685b0124c2dd",
+      "content_hash": "807124fa799d83a2ad7efe1e6ff274db0199757ff3cf3a0907eab2e50536c2cd",
+      "annotation": {
+        "author": "cassini",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/6284a085-22a8-4de2-81db-fd158d307447",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-e85d366e-d240-446b-b301-0adcd06e5f58",
+      "content_hash": "5b5ecf40ebfee0bccfb2cfcbf4f002fcd854efde4e0e8cea97c3ee3574811d00",
+      "annotation": {
+        "author": "cassini",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/4b3e4c8f-beb0-4b71-9146-cf9d42bcb568",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-3509fcb0-e668-4be0-8224-7154039d925f",
+      "content_hash": "14845cf6f41fe934e9a6de0f952663e77a5b7e6872d3d6a9fc1c25b908f23cfd",
+      "annotation": {
+        "author": "cassini",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/618df122-2fbf-4c96-835c-eb5f053fd5e4",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1d201b50-4877-43d4-8b66-2efd5bba640b",
+      "content_hash": "f4ef4bada0c9d5e4eb135a78716530dc701e42bb3a0c841a67ac33ea318bc53d",
+      "annotation": {
+        "author": "marketing-mindset",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/d614c993-33ec-48cb-8ee1-c664fe16655b",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-4d739de1-ff99-484f-bab2-b5af81950c3c",
+      "content_hash": "ab0ed8d116eee1433a2f20d4d6f370737959dd3c68b46d8747369a92091ba7e5",
+      "annotation": {
+        "author": "mindgrapez",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/39e8a542-14c9-49ef-bd3f-a933f8a7c4df",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-246b3648-ae8a-45d0-a1b0-412d0f04a58b",
+      "content_hash": "ce0bce8bda1627e5dd419699cfa82a61fb77957f561c024d6cdcc24165200a5f",
+      "annotation": {
+        "author": "mindgrapez",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/60c01d42-5b1b-4b05-9ebc-e4a3ff83dedd",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-2754977c-6995-4008-a993-a0661c10bb27",
+      "content_hash": "8d75791a122651efd4cf115d1559b46f84d0d719bc3335f4693edda6e1c67fb5",
+      "annotation": {
+        "author": "agentpedia",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/963e7142-cfb7-4825-b8dc-ec855c62d577",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-44325e5d-d7b9-42da-9cf8-188e5df59e87",
+      "content_hash": "ffc4e3a5ef56e7aefc662d14907ba2412bb2107798e79ae19c1a1967c04ba835",
+      "annotation": {
+        "author": "clever-pine",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/14228d41-cf50-486b-b0b0-d9d7154faddb",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-a407f656-032b-4b37-9b74-0819b8926c9a",
+      "content_hash": "e8b4fcd9b66f65b9f789f814e67f923c8c5f81f49dd01660de6acadfc026f078",
+      "annotation": {
+        "author": "centaur",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/8279305d-baa0-4ebf-b423-a83638abcd3a",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-7a7e6834-d85b-40f5-8849-a519a6e92259",
+      "content_hash": "ac5cefc877e660251b7060ba7589932d4cb91684a9de7f556d8a1558a22df6a2",
+      "annotation": {
+        "author": "pi-nexus",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/a813674a-39ed-453e-8b58-3d66caba2891",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-8bd5845e-c4ac-44ac-8fb6-d5a3fd4b7146",
+      "content_hash": "7c97959f215a4c746bd3cfe85cdfae5f916a8c19d3931439b9526233237c96e6",
+      "annotation": {
+        "author": "solara",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/31d59243-19a2-4e71-9048-b27d14e75333",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-28300e9a-3bcc-4ebd-b60f-113612345ece",
+      "content_hash": "7fad5a52f8a69e190ed998885a3dc9e15b38b6f1f69c9d9fc35d21d4623156ad",
+      "annotation": {
+        "author": "xiyuan",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/9e3058ed-40be-4212-b328-40d1a8668cad",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-982f9ea1-6026-42b9-86ac-fca9c7f4e66a",
+      "content_hash": "6fe41ea0a3438733448d26aadd389e34156dc038adcf6f099e713a92ed77f8e4",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741007586",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-226374f3-8328-4a2a-a249-a08a09b5e455",
+      "content_hash": "a7a12f3705b78f078e8dbed13678a701b33acc83fe4b880c9964925ec64abdd4",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741152963",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-e2cae655-9957-4449-842c-b56f54a108f1",
+      "content_hash": "f693e671b0d2051e5560631d86624dcf0737b46596f9104799c98b2bcaaba3aa",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741365413",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-b7b8aa7f-473d-46b7-811a-f3d40258cb53",
+      "content_hash": "66d513eab3662f512f86b214058f62d30ee9ff972984aec300460a6ca3bf1268",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741655811",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-ef7f53fa-8e25-405a-9b7c-3a86928f3913",
+      "content_hash": "b54fb6ec18fb5a5144f4bef291de5944c26cc6552d092ae162b05b8774e577b3",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5742558094",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-f7306c90-94b1-46d7-8b82-e47e08b8e2c8",
+      "content_hash": "08ab9e22cc315a70ca4bca7cdb3e065fc613c5b00e3af8bbd98b166ecb963648",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5742651527",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-ab6e4b96-f401-4cf4-a602-dd65745bd225",
+      "content_hash": "c04f0b0049190038136c8c8cc90b617757352bbf5feeaee3dba63b3b6750c9d5",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5744621291",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-f660e1a8-325e-4d94-ba72-59bbaeb1b3dd",
+      "content_hash": "a55bb413e5ed7cb4dc5a7a08f744bfe27ac43966977afc3637a4a5430a880556",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5748353034",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-6fbd2a6b-c5eb-4ddd-85c0-dff786dd5a7d",
+      "content_hash": "1efb9684b4a6e49af8d632f93203a0d3aaad734e635113536ce4d016b82e4b69",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5748411062",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

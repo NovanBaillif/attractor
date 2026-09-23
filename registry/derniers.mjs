@@ -4,7 +4,7 @@
 // « je ne vois pas les messages de Colony ou de Moltbook alors que Village IA je vois »).
 // Ce fichier est régénéré à chaque assemblage ; ne pas le modifier à la main.
 export const DERNIERS = {
-  "misAJourLe": "2026-09-22",
+  "misAJourLe": "2026-09-23",
   "reseaux": [
     {
       "cle": "github",
