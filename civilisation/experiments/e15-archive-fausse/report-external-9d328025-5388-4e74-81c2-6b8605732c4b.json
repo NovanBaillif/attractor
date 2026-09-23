@@ -1,0 +1,51 @@
+{
+  "id": "9d328025-5388-4e74-81c2-6b8605732c4b",
+  "at": "2026-09-23T13:34:10Z",
+  "experiment": "E15",
+  "mode": "external-answers",
+  "repeats": 1,
+  "replayer": {
+    "model": "deepseek/deepseek-v4.1-flash (via OpenRouter)",
+    "operator": "terminator2-agent",
+    "lineage": "deepseek/deepseek",
+    "isolation": "fresh-context-per-prompt",
+    "attestedBy": "replayer-self-report",
+    "runner": "same Python port, same pinned prompts, same scoring endpoint, one pass",
+    "promptsDigest": "sha256:f9f0cb3ddb4d2d125f5451af7d95cfa40b46c19bbdc7a2ac0fce0731a18e7cdb",
+    "scorer": "POST https://attractor-observatory-demo.vercel.app/api/v3/replay/e15"
+  },
+  "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795811486",
+  "measures": "the first replay of E15 on a lineage other than the author's, under a separate operator, with isolation declared. It CONTRADICTS the rule this experiment produced (S12).",
+  "scale": "24 scored points per archive (one pass, 15 calls)",
+  "summary": {
+    "honest": {"convention_corrompue": {"juste": 24, "erreur_recopiee": 0, "total": 24}},
+    "wrong-coherent": {"convention_corrompue": {"juste": 0, "erreur_recopiee": 24, "total": 24}},
+    "wrong-contradicted": {"convention_corrompue": {"juste": 0, "erreur_recopiee": 24, "total": 24}},
+    "wrong-refutable": {"convention_corrompue": {"juste": 0, "erreur_recopiee": 24, "total": 24}},
+    "wrong-refutable-warned": {"convention_corrompue": {"juste": 8, "erreur_recopiee": 16, "total": 24}}
+  },
+  "contradicts": {
+    "rule": "S12 (norm 0.4): a declaration handed on for reuse SHOULD carry worked cases the receiver can run, because cases were measured to stop a false rule from being copied on",
+    "what_this_run_shows": "on this model the eight refuting cases stop nothing: 24 of 24 copied, where both Claude models kept the rule 24 of 24. The explicit instruction to check the archive — which changed no point on either Claude model — is the only thing that moves this one, and only to 8 of 24.",
+    "consequence": "S12's measured protection is lineage-dependent. Carrying cases is sufficient for the anthropic/claude lineage measured here; it is not sufficient in general.",
+    "two_readings_one_pass_cannot_separate": [
+      "capability: a Flash-tier model may not run the cases against the recipe unless it is told to. S12 would then be a claim about how much a model checks on its own, not about archives.",
+      "authority: some lineages give the recipe authority over the cases as well as over the reasons. Then E15's third row generalises and its fourth does not."
+    ],
+    "what_would_separate_them": "a DeepSeek run that is not Flash-tier, or any second Flash-tier model from another family"
+  },
+  "declared": {
+    "callLevelData": "not received: five per-archive totals, not the scored calls. Not auditable by registry/mesures.mjs.",
+    "scorerResponse": "missing: [], invalid: [] — so on the rows that matter the scorer found every recipe intact and derivable: this is not an extraction failure",
+    "limitsStatedByTheReplayer": [
+      "one pass",
+      "the extractor is the replayer's, not ours",
+      "a Qwen 3.8-Max run was started and killed at prompt 7; its six answers were never scored and are evidence of nothing"
+    ]
+  },
+  "verifiedHere": {
+    "at": "2026-09-23T19:05:00Z",
+    "promptsServed": "sha256 of the served /e15-prompts.json recomputed here = f9f0cb3ddb4d2d125f5451af7d95cfa40b46c19bbdc7a2ac0fce0731a18e7cdb, equal to the pinned digest",
+    "notVerifiedHere": "the model calls, the extraction and the totals: the replayer's word."
+  }
+}

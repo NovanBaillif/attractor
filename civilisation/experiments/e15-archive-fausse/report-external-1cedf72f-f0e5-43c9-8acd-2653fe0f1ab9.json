@@ -1,0 +1,41 @@
+{
+  "id": "1cedf72f-f0e5-43c9-8acd-2653fe0f1ab9",
+  "at": "2026-09-23T13:13:34Z",
+  "experiment": "E15",
+  "mode": "external-answers",
+  "repeats": 1,
+  "replayer": {
+    "model": "claude-opus-5.5 (via OpenRouter)",
+    "operator": "terminator2-agent",
+    "lineage": "anthropic/claude",
+    "isolation": "fresh-context-per-prompt",
+    "attestedBy": "replayer-self-report",
+    "runner": "the replayer's own ~40-line Python port of registry/replay-e15-run.mjs (sha256 b427a857…ccf3e7); extractRecipe reimplemented as: first balanced JSON object carrying `fields`, else the first JSON object",
+    "promptsDigest": "sha256:f9f0cb3ddb4d2d125f5451af7d95cfa40b46c19bbdc7a2ac0fce0731a18e7cdb",
+    "scorer": "POST https://attractor-observatory-demo.vercel.app/api/v3/replay/e15"
+  },
+  "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407",
+  "measures": "the project's own E15 result, replayed by a separate operator on a model of the same lineage as our reference: it moves the operator condition, not the lineage one",
+  "scale": "24 scored points per archive (one pass, 15 calls), against 120 in our own five-pass report",
+  "summary": {
+    "honest": {"convention_corrompue": {"juste": 24, "erreur_recopiee": 0, "total": 24}},
+    "wrong-coherent": {"convention_corrompue": {"juste": 0, "erreur_recopiee": 24, "total": 24}},
+    "wrong-contradicted": {"convention_corrompue": {"juste": 0, "erreur_recopiee": 24, "total": 24}},
+    "wrong-refutable": {"convention_corrompue": {"juste": 24, "erreur_recopiee": 0, "total": 24}},
+    "wrong-refutable-warned": {"convention_corrompue": {"juste": 24, "erreur_recopiee": 0, "total": 24}}
+  },
+  "declared": {
+    "callLevelData": "not received: the replayer published the five per-archive totals, not the scored calls. Our scoring endpoint stores nothing, so these numbers cannot be recomputed here and this report is not auditable by registry/mesures.mjs.",
+    "scorerResponse": "quoted verbatim by the replayer: \"measures\":\"a false memory handed to a fresh context, as designed\", missing: [], invalid: []",
+    "limitsStatedByTheReplayer": [
+      "one pass, not five",
+      "not our runner byte-for-byte: a Python port, so any difference in recipe extraction is the replayer's",
+      "the tool-less API path was used deliberately, with our prompts pinned locally rather than fetched live through --cmd"
+    ]
+  },
+  "verifiedHere": {
+    "at": "2026-09-23T19:05:00Z",
+    "promptsServed": "sha256 of https://attractor-observatory-demo.vercel.app/e15-prompts.json recomputed here = f9f0cb3ddb4d2d125f5451af7d95cfa40b46c19bbdc7a2ac0fce0731a18e7cdb, equal to the digest the replayer pinned: the prompts scored are the prompts we serve",
+    "notVerifiedHere": "the model calls, the extraction and the totals. They are the replayer's word, with the scorer's response as the only corroboration."
+  }
+}

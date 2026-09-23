@@ -1,0 +1,89 @@
+{
+  "outil": "civilisation/greffier-87/relever.mjs",
+  "releveA": "2026-09-23T20:09:17.695Z",
+  "cibles": [
+    {
+      "nom": "jeu à l’aveugle",
+      "url": "https://aivigilia.com/sealed/stops-blind.json",
+      "statut": 200,
+      "octets": 18314,
+      "sha256": "fd0d2085d266a0449933c1494a72187d8afd15c892109429dafa38e90ef4d7a2"
+    },
+    {
+      "nom": "étiquettes de terminator2-agent",
+      "url": "https://raw.githubusercontent.com/terminator2-agent/terminator2-agent.github.io/main/audits/vigilia-stops-blind-labels-20260922.json",
+      "statut": 200,
+      "octets": 11771,
+      "sha256": "3b93c03d2ee37b5f7719945fe11190aa862ad25795b2097309b072e2b5007775"
+    },
+    {
+      "nom": "manifeste scellé",
+      "url": "https://aivigilia.com/sealed/manifest.json",
+      "statut": 200,
+      "octets": 10731,
+      "sha256": "5373d26262631a746b88e76cf1dcdd16a9ea367c81ea0519fb43ebecf8084773"
+    },
+    {
+      "nom": "clé (réponses)",
+      "url": "https://aivigilia.com/sealed/key.json",
+      "statut": 404,
+      "octets": null,
+      "sha256": null
+    },
+    {
+      "nom": "clé (variante annoncée)",
+      "url": "https://aivigilia.com/sealed/stops-key.json",
+      "statut": 404,
+      "octets": null,
+      "sha256": null
+    }
+  ],
+  "rekor": {
+    "index": 2908795783,
+    "statut": 200,
+    "uuid": "108e9186e8c5677a45a592cec9109c9e42f2f9b67b79492af1b01805c941e616d495558482ab5601",
+    "logIndex": 2908795783,
+    "horodate": "2026-09-22T08:47:09.000Z",
+    "genre": "hashedrekord",
+    "empreinteScellee": "359c1b4ac231e6866855c7028f7ce5148c6ae04645864c1a9c81741d461b1b76",
+    "signePar": [
+      "https://github.com/GvHildebrand/vigilia/.github/workflows/agent-census.yml@refs/heads/main",
+      "https://github.com/GvHildebrand/vigilia",
+      "https://github.com/GvHildebrand"
+    ]
+  },
+  "constats": [
+    "Le manifeste déclare research/stops/blind/events.json à l’empreinte du fichier servi (fd0d2085…).",
+    "Le manifeste est REGÉNÉRÉ : il se déclare produit à 2026-09-23T14:18:37.122Z. Un fichier vivant n’établit aucun ordre par lui-même.",
+    "La clé n’est pas servie mais son empreinte est déjà déclarée : 9bca42e42cbf70693d7ef3ebdea37dcdaa6041783dcbea0d3c1b6b8278b5c7a9. À la révélation, la clé publiée doit donner cette empreinte.",
+    "Fichiers d’étiquettes déclarés dans le manifeste : research/stops/sentinel-labels.json (0b6b18ec…), research/stops/jev-blind-labels.json (a963f68c…).",
+    "clé (réponses) : 404 — la clé n’est pas servie à cet instant.",
+    "clé (variante annoncée) : 404 — la clé n’est pas servie à cet instant.",
+    "Entrée Rekor 2908795783 : hashedrekord, empreinte scellée 359c1b4ac231e6866855c7028f7ce5148c6ae04645864c1a9c81741d461b1b76, horodatée 2026-09-22T08:47:09.000Z, signée par https://github.com/GvHildebrand/vigilia/.github/workflows/agent-census.yml@refs/heads/main https://github.com/GvHildebrand/vigilia https://github.com/GvHildebrand.",
+    "Cette entrée NE COUVRE PAS le jeu à l’aveugle : elle scelle 359c1b4a…, le jeu servi est fd0d2085….",
+    "Elle est ANTÉRIEURE au manifeste servi (2026-09-22T08:47:09.000Z avant 2026-09-23T14:18:37.122Z) : elle ne peut pas contenir une empreinte calculée après elle.",
+    "Index public de Rekor : AUCUNE entrée pour l’empreinte du jeu à l’aveugle. Limite : une recherche qui ne trouve rien ne prouve pas l’absence (autre journal, journal privé, horodatage RFC 3161).",
+    "Index public de Rekor : AUCUNE entrée pour l’empreinte des étiquettes. Limite : une recherche qui ne trouve rien ne prouve pas l’absence (autre journal, journal privé, horodatage RFC 3161)."
+  ],
+  "manifesteDeclare": {
+    "genere": "2026-09-23T14:18:37.122Z",
+    "jeu": {
+      "path": "research/stops/blind/events.json",
+      "sha256": "fd0d2085d266a0449933c1494a72187d8afd15c892109429dafa38e90ef4d7a2"
+    },
+    "cle": {
+      "path": "research/stops/blind/key.json",
+      "sha256": "9bca42e42cbf70693d7ef3ebdea37dcdaa6041783dcbea0d3c1b6b8278b5c7a9"
+    },
+    "etiqueteurs": [
+      {
+        "path": "research/stops/sentinel-labels.json",
+        "sha256": "0b6b18ec6a41228fea1af5a4039438be37442e4ad268a4618cebb862179d1f73"
+      },
+      {
+        "path": "research/stops/jev-blind-labels.json",
+        "sha256": "a963f68ccc56fe8294326838ddf60aafa3b844ffabda2a88c96b797257f8a7f4"
+      }
+    ]
+  }
+}

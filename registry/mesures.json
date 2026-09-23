@@ -1,23 +1,23 @@
 {
-  "mesureA": "2026-09-22T17:29:11.130Z",
+  "mesureA": "2026-09-23T19:52:47.824Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
       "id": "familles",
       "libelle": "Familles de modèles ayant rejoué un protocole",
-      "valeur": 1,
+      "valeur": 2,
       "cible": 3,
-      "etat": "rouge",
-      "detail": "anthropic/claude",
+      "etat": "orange",
+      "detail": "anthropic/claude, deepseek/deepseek",
       "action": "Préparer une invitation là où les agents répondent, en demandant la déclaration de famille (norme 0.3.1). Ne pas envoyer sans accord."
     },
     {
       "id": "replications",
       "libelle": "Résultats rejoués par un opérateur extérieur",
-      "valeur": 0,
+      "valeur": 2,
       "cible": 1,
-      "etat": "rouge",
-      "detail": "aucun",
+      "etat": "vert",
+      "detail": "E15 par claude-opus-5.5 (via OpenRouter) · E15 par deepseek/deepseek-v4.1-flash (via OpenRouter)",
       "action": "Relancer les invitations en cours et proposer le paquet de consignes à un autre écosystème."
     },
     {
@@ -53,7 +53,7 @@
       "valeur": 2,
       "cible": 0,
       "etat": "orange",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 6 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 7 j",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 5 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 6 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -123,6 +123,12 @@
         "aRegarder": []
       },
       {
+        "fichier": "civilisation/experiments/e15-archive-fausse/report-external-1cedf72f-f0e5-43c9-8acd-2653fe0f1ab9.json",
+        "verifiable": false,
+        "problemes": [],
+        "aRegarder": []
+      },
+      {
         "fichier": "civilisation/experiments/e15-archive-fausse/report-external-1f308137-d3a9-4af2-9370-6bce5d6f8017.json",
         "verifiable": true,
         "remplaceParUneVersionRenotee": false,
@@ -133,16 +139,39 @@
         "casEnErreurParCondition": {},
         "problemes": [],
         "aRegarder": []
+      },
+      {
+        "fichier": "civilisation/experiments/e15-archive-fausse/report-external-9d328025-5388-4e74-81c2-6b8605732c4b.json",
+        "verifiable": false,
+        "problemes": [],
+        "aRegarder": []
       }
     ],
     "rejeux": {
       "familles": [
-        "anthropic/claude"
+        "anthropic/claude",
+        "deepseek/deepseek"
       ],
       "operateurs": [
-        "projet"
+        "projet",
+        "terminator2-agent"
       ],
-      "externes": []
+      "externes": [
+        {
+          "experience": "E15",
+          "modele": "claude-opus-5.5 (via OpenRouter)",
+          "famille": "anthropic/claude",
+          "operateur": "terminator2-agent",
+          "isolement": "fresh-context-per-prompt"
+        },
+        {
+          "experience": "E15",
+          "modele": "deepseek/deepseek-v4.1-flash (via OpenRouter)",
+          "famille": "deepseek/deepseek",
+          "operateur": "terminator2-agent",
+          "isolement": "fresh-context-per-prompt"
+        }
+      ]
     },
     "contradictions": [
       {
@@ -450,7 +479,7 @@
         "date": "2026-09-29",
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
         "clos": false,
-        "joursRestants": 6
+        "joursRestants": 5
       },
       {
         "id": "e12-rejeu",
@@ -458,7 +487,7 @@
         "date": "2026-09-30",
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
         "clos": false,
-        "joursRestants": 7
+        "joursRestants": 6
       }
     ]
   }

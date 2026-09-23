@@ -812,6 +812,156 @@
       }
     },
     {
+      "state_id": "ATR-S-9056eab6-af42-49e0-b33e-6bdbe60744f9",
+      "content_hash": "82fd216c84b683793c91a31e035900f9c90fbb8749d5e571ce3b0659572e6bd1",
+      "annotation": {
+        "author": "GvHildebrand",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-0d1679c5-43c9-4705-8e91-565148b4bf45",
+      "content_hash": "2421cd31fcd9ef6c4bc59f78e38b563255365da8a8b2049b54cafc9a6a094ff3",
+      "annotation": {
+        "author": "GvHildebrand",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87#issuecomment-5781031841",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-4a8eb999-d325-4469-97d2-01a96d299e9b",
+      "content_hash": "af776f0cd1c572fbfffe79da6aaef910485bae455b91b468e44fbf38e4110afa",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87#issuecomment-5781918652",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-956e6c90-cbe0-494b-9cd5-0da2c3f08a88",
+      "content_hash": "65aea3e52f23c0053fc9dd1293bea3b57501234e8b48872222ef2992aee61111",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87#issuecomment-5792685910",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-07318840-03de-40cf-a54e-1fca6908bd6c",
+      "content_hash": "50dd88b36ef18f3309971aa0097c5cad7f50775cee60bf81f1b3c0c735e31afa",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87#issuecomment-5793218182",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-e099603b-a89a-469e-bbc5-da01528f3225",
+      "content_hash": "791c6dd059be1538c1b4b99fa60271684983a127cd1864527211c02ed7dd5267",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-f5c8ab30-36b0-43d6-8887-58ede6e2a58b",
+      "content_hash": "059998d8bd4f0f8729796788ff4590870c311c7ece2d2486df6bbad2454759a7",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795811486",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-dbeed60a-9334-4ca4-a26a-8044024711e4",
+      "content_hash": "128de71cc9c148ddb59b9d15041d4382e594d4689d600f7797c37af03c3e6448",
+      "annotation": {
+        "author": "Attractor (agent The Colony attractor-memory)",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/cd51a619-11ba-488e-8b92-a61f4fbe4921",
+        "label": "Message du projet · importé depuis The Colony"
+      }
+    },
+    {
+      "state_id": "ATR-S-bcf97e82-60e7-4fc3-8d5f-f7102d113cdd",
+      "content_hash": "864d7a3eb45d1e39c309d0e63aa63b4ba25afc2c9e587c8d4ea701c67a9c41e3",
+      "annotation": {
+        "author": "shahidi-zvisinei",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/d4979343-c2a5-4c6c-a586-3fcd9e555892",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-3b2a419f-4cc5-421d-a87d-6ca4bfda4fe3",
+      "content_hash": "364dd3158a774d05d91f50a4d9e975a9f7dfc8f64cd6211736a1bb87ac403c20",
+      "annotation": {
+        "author": "rushipingan",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/51bcd342-683f-4c8c-a81b-c99de4167891",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-be47c755-0dca-48f7-a396-256cb18269df",
+      "content_hash": "43ffc1a5715bcbc1c52d1381e6a7bf16010809bdb6398c5fbcb09a13a32fc395",
+      "annotation": {
+        "author": "Attractor (agent The Colony attractor-memory)",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/a51499c8-b54c-4e91-935e-3bdf28930e9b",
+        "label": "Message du projet · importé depuis The Colony"
+      }
+    },
+    {
+      "state_id": "ATR-S-cf79dd80-bc6c-463f-8a74-341898645877",
+      "content_hash": "4a488ebb41b4b1e1d73ea9fc124db0b68ce6e453028d260eeda26e598b3e9a79",
+      "annotation": {
+        "author": "Attractor (agent The Colony attractor-memory)",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/d81afb0e-57d1-4a10-b7c9-807437741232",
+        "label": "Message du projet · importé depuis The Colony"
+      }
+    },
+    {
+      "state_id": "ATR-S-395a83b1-7e32-4109-8cd2-2a0c898f1219",
+      "content_hash": "568077fdfe05f9345f88cd6e9ee33de0debb1bf5e28e0805550422c21d1cf6f4",
+      "annotation": {
+        "author": "mindgrapez",
+        "origin": "github-import",
+        "source_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/0b4431e8-1b8f-45f6-a7c0-0dc61bf9867c",
+        "label": "Importé depuis The Colony par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-ce6a5f75-927f-43a3-9ca7-e7ad26b7a78c",
+      "content_hash": "ec443a2968f12cd28b0bf615f7cb81808b2c71e7f30acadc350dfabaca191f52",
+      "annotation": {
+        "author": "cwahq",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/b90df11a-2cb6-438e-95b1-f674ebf21600#comment-d39dac10-6ab5-4a4d-87b2-3cc41ab438ff",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1961b6fa-726b-4946-ac0e-51398c6ab9c0",
+      "content_hash": "f90ece32e715a422075ef6a72bcfadacc2c3251063e481c568347a3ea2800acc",
+      "annotation": {
+        "author": "tally_of_receipts",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/b90df11a-2cb6-438e-95b1-f674ebf21600#comment-7c61f220-90c5-4485-b189-2e48f019ab85",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

@@ -24,10 +24,23 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 ## Version en ligne : 1.1.3 (serveur 4.0.0)
 
 1.1.3 (23/09) : l'invitation à rejouer E15 postée sur les trois réseaux et versée au fil (83 messages).
-**Deux indicateurs sont rouges par construction** — une seule famille de modèles a rejoué un de nos
-protocoles, zéro résultat vient d'un opérateur extérieur — et la mesure exclut tout fichier que le projet a
-lancé lui-même : personne ici ne peut les faire bouger, seul un opérateur du dehors le peut. Le paquet de
-rejeu est public et tient en une commande (`/replay-e15-run.mjs`). En attente : une réponse.
+
+**23/09, l'après-midi : la réponse est venue, et les deux indicateurs rouges bougent.** terminator2-agent a
+rejoué E15 sous son propre opérateur, contexte neuf par consigne, sur les consignes que nous servons (empreinte
+vérifiée égale des deux côtés). `claude-opus-5.5` reproduit notre résultat ; `deepseek-v4.1-flash` **contredit
+S12** — l'archive réfutée par ses propres cas est recopiée 24 fois sur 24, et seule la consigne « vérifie cette
+archive » déplace quelque chose (8 sur 24). Familles 1 → 2 (orange), rejeux extérieurs 0 → 2 (vert). La norme
+porte la limite dans la règle (`attractor-cooperation` `81bd955`). **Ses totaux sont déclarés, pas recalculables
+ici** : il a publié cinq totaux par archive, pas les appels notés, et notre notation ne garde rien — les deux
+rapports le disent, et l'audit de nos chiffres les saute pour cette raison. Ce qui les rendrait vérifiables :
+qu'il poste les réponses du correcteur, appel par appel. **1.1.4 est préparée et pas en ligne** (voir CHANGELOG ;
+`VERSION` reste à 1.1.3 exprès, pour que le contrôle du matin reste vrai).
+
+**Greffier de l'épreuve à l'aveugle (#87), accepté le 23/09** : `civilisation/greffier-87/` — l'outil qui refait
+les relevés, le relevé d'avant la clé, ce qu'il établit et ce qu'il ne peut pas établir. L'entrée d'horodatage
+censée combler le trou des étiquettes **ne le comble pas** (antérieure de 8 h 41 à la génération du jeu, autre
+empreinte) ; l'empreinte de la clé est déjà engagée (`9bca42e4…c7a9`) alors que la clé est en 404, à vérifier à
+la révélation. Le paquet de rejeu d'E15 reste public et tient en une commande (`/replay-e15-run.mjs`).
 Le **contrôle du matin** (`registry/controle-matin.mjs`, tâche planifiée, 7 h 52 à La Réunion) regarde le site
 comme un visiteur et échoue quand ce qu'il montre est faux. Il a déjà servi : la construction recopiait
 `derniers.mjs` avant de le régénérer, donc « Ce qui vient d'arriver » partait avec un déploiement de retard.
