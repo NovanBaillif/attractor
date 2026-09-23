@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-09-17T11:00:47.391Z",
+  "checked_at": "2026-09-23T09:20:04.529Z",
   "checks": [
     {
       "source_id": "village-provenance",
-      "checked_at": "2026-09-17T10:59:42.692Z",
+      "checked_at": "2026-09-23T09:17:39.848Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656528807",
       "content_hash": "97f988161f7a7846c4c69b4948ba4bcf36e788c5ec9f4a149c729b1843747510",
@@ -11,7 +11,7 @@
     },
     {
       "source_id": "village-objection",
-      "checked_at": "2026-09-17T10:59:43.979Z",
+      "checked_at": "2026-09-23T09:17:42.562Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656534610",
       "content_hash": "883ec5bab07e57af7b18f2077fd9e2bd860a0206919bed244d54934b5d3a3e49",
@@ -19,7 +19,7 @@
     },
     {
       "source_id": "village-suite-projet",
-      "checked_at": "2026-09-17T10:59:44.792Z",
+      "checked_at": "2026-09-23T09:17:43.083Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5656920354",
       "content_hash": "b4ed339584b15214e34366fc3d56a5a06b0a1c898c8e77c70825de2f64c58f8c",
@@ -27,7 +27,7 @@
     },
     {
       "source_id": "village-contre-exemples-provenance",
-      "checked_at": "2026-09-17T10:59:45.528Z",
+      "checked_at": "2026-09-23T09:17:43.766Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5657026385",
       "content_hash": "bd6be83c491862f78fce623b6a981e5e49068fb86e9840bdbfb6c620d1abda2a",
@@ -35,7 +35,7 @@
     },
     {
       "source_id": "village-contre-exemples-desaccord",
-      "checked_at": "2026-09-17T10:59:46.060Z",
+      "checked_at": "2026-09-23T09:17:44.497Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5659817602",
       "content_hash": "fd5a647e4b19ed4b64dcc670a19959e06f3a2013ca036878b5574807f42af70b",
@@ -43,7 +43,7 @@
     },
     {
       "source_id": "village-reponse-v02",
-      "checked_at": "2026-09-17T10:59:46.571Z",
+      "checked_at": "2026-09-23T09:17:45.000Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682099636",
       "content_hash": "9843de0de5551df979ee07ba62c3a93ad8879a237966cac7c48e48d3ea2f13c3",
@@ -51,15 +51,15 @@
     },
     {
       "source_id": "village-demande-85",
-      "checked_at": "2026-09-17T10:59:47.192Z",
+      "checked_at": "2026-09-23T09:17:45.796Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
-      "content_hash": "be7cffd3588ad2a8da6c7e09fb146ed55e3173c28d5ec31e54e3787d850b7a8b",
-      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-16T09:38:27Z"
+      "content_hash": "8df99d14c1ab6b75b73b40949306c71fa130f9f80b913c9215a5e37c1bfa51c0",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-22T18:37:57Z"
     },
     {
       "source_id": "village-avertissement",
-      "checked_at": "2026-09-17T10:59:47.611Z",
+      "checked_at": "2026-09-23T09:17:46.690Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5682799621",
       "content_hash": "42b42dcc1780b4a6d6178a41d93490f95398fe3df703bb1fe3e3f1f6be2bd8da",
@@ -67,7 +67,7 @@
     },
     {
       "source_id": "village-valeur-porteuse",
-      "checked_at": "2026-09-17T10:59:48.343Z",
+      "checked_at": "2026-09-23T09:17:49.923Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5683184308",
       "content_hash": "53f731324c83b2c1b787b94a41a950b2b670c8418b1c81cba89fd5362977dcdb",
@@ -75,7 +75,7 @@
     },
     {
       "source_id": "village-reponse-021",
-      "checked_at": "2026-09-17T10:59:48.820Z",
+      "checked_at": "2026-09-23T09:17:52.614Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5685748165",
       "content_hash": "0a88ee872ef7c222bd8fc6b1e11215b55f5653e35ae9b3005664dce2ea37a0e6",
@@ -83,7 +83,7 @@
     },
     {
       "source_id": "village-revisions-monotones",
-      "checked_at": "2026-09-17T10:59:49.429Z",
+      "checked_at": "2026-09-23T09:17:53.818Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5686562506",
       "content_hash": "8d362de8af91d57b05eeac8ec6c15a3c737a9602e54d8404b44427470724d3fd",
@@ -91,7 +91,7 @@
     },
     {
       "source_id": "village-annonce-03",
-      "checked_at": "2026-09-17T10:59:50.061Z",
+      "checked_at": "2026-09-23T09:17:54.609Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5688727177",
       "content_hash": "5c175678be80a961e0c33d2572e066ee3c56b3ecffd99efa977eb0f27b7a6de4",
@@ -99,7 +99,7 @@
     },
     {
       "source_id": "village-siege-du-rejeu",
-      "checked_at": "2026-09-17T10:59:50.576Z",
+      "checked_at": "2026-09-23T09:17:55.355Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689063381",
       "content_hash": "e4873eba7401d18cda77d7e5b4b2c0da17c319a5e7e0ac7042ac7a4303fa4862",
@@ -107,7 +107,7 @@
     },
     {
       "source_id": "village-annonce-031",
-      "checked_at": "2026-09-17T10:59:51.081Z",
+      "checked_at": "2026-09-23T09:17:55.898Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/84#issuecomment-5689480432",
       "content_hash": "d91797c4cccf8d14beab0e41f9c495a3f540e784d42ec027d91fe65c72ad87b8",
@@ -115,7 +115,7 @@
     },
     {
       "source_id": "village-demande-rejeu",
-      "checked_at": "2026-09-17T10:59:51.584Z",
+      "checked_at": "2026-09-23T09:17:56.406Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689480918",
       "content_hash": "fd0bf88ef80b08067165103ec80a768c6f80a0562426aed0282ecbba91ed3224",
@@ -123,7 +123,7 @@
     },
     {
       "source_id": "village-invitation-e14",
-      "checked_at": "2026-09-17T10:59:52.210Z",
+      "checked_at": "2026-09-23T09:17:57.043Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690026766",
       "content_hash": "8836acc3fa9129c8c6763ca9555bef1e459e41d74f8f53335e5edfcbac4b843c",
@@ -131,7 +131,7 @@
     },
     {
       "source_id": "moltbook-memory",
-      "checked_at": "2026-09-17T10:59:52.815Z",
+      "checked_at": "2026-09-23T09:17:59.565Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/498c3b49-0408-4d0f-a716-526684907ffc",
       "content_hash": "276fc9ee05b34f1ec84057759341caf3229e7fd49ae0e4ab66778a54af652aa2",
@@ -139,7 +139,7 @@
     },
     {
       "source_id": "moltbook-attractor-premier",
-      "checked_at": "2026-09-17T10:59:53.836Z",
+      "checked_at": "2026-09-23T09:18:03.237Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91",
       "content_hash": "82cead7860997a1ecbe707a78be629ade30e4c73f0e3d1b2e93900cb81bafce3",
@@ -147,7 +147,7 @@
     },
     {
       "source_id": "moltbook-reponse-eliezerdedun",
-      "checked_at": "2026-09-17T10:59:54.861Z",
+      "checked_at": "2026-09-23T09:18:04.376Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-35cd3991-a2d5-46b3-aaaf-7df79be7f141",
       "content_hash": "9814a09692cf944629fc9ba8f92041bd305eb7081cc1809e9cc44c44d74a98f5",
@@ -155,7 +155,7 @@
     },
     {
       "source_id": "moltbook-reponse-prismdeadlines",
-      "checked_at": "2026-09-17T10:59:55.378Z",
+      "checked_at": "2026-09-23T09:18:05.477Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-b9279d49-067c-4940-895d-66b04c41533e",
       "content_hash": "3b5feddcda5b068452ac185588fbe17f3ca18c4b44291bd200d1063e1812c392",
@@ -163,7 +163,7 @@
     },
     {
       "source_id": "moltbook-reponse-heychat",
-      "checked_at": "2026-09-17T10:59:58.340Z",
+      "checked_at": "2026-09-23T09:18:10.364Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-327cd9f8-cc10-4faa-a2b9-2d0394c7947e",
       "content_hash": "58255e2ee356deec0384724557cc6199cbcade2024f0598b7a66eca8a9464fb3",
@@ -171,7 +171,7 @@
     },
     {
       "source_id": "moltbook-reponse-midearthherald",
-      "checked_at": "2026-09-17T10:59:59.971Z",
+      "checked_at": "2026-09-23T09:18:12.290Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-2a355c59-2741-448b-abc2-b8324521dfc4",
       "content_hash": "6c5b3a3a4ae30b4775d3f96410eaa401631e538acd1a069896c1f9621767a9b4",
@@ -179,7 +179,7 @@
     },
     {
       "source_id": "moltbook-reponse-attractor",
-      "checked_at": "2026-09-17T11:00:01.208Z",
+      "checked_at": "2026-09-23T09:18:14.175Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-830f0666-f145-4b89-a450-6793c45ee202",
       "content_hash": "95170733a41e053bf50efb7e77d3d5587c561de8371dfc124d0f484be04b28e0",
@@ -187,7 +187,7 @@
     },
     {
       "source_id": "moltbook-reponse-heychat-2",
-      "checked_at": "2026-09-17T11:00:02.949Z",
+      "checked_at": "2026-09-23T09:18:15.788Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-ebeb50f3-5f80-4d91-a4e9-03c38f3e3322",
       "content_hash": "17db0f05ef5496507db567c790a3f1ad21a4fbffc3118e591638a805133c5803",
@@ -195,7 +195,7 @@
     },
     {
       "source_id": "moltbook-reponse-eliezerdedun-2",
-      "checked_at": "2026-09-17T11:00:03.405Z",
+      "checked_at": "2026-09-23T09:18:19.109Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-f8b71637-03f2-4757-8169-5934d264041c",
       "content_hash": "86cfc392153d2d3de6c458dabeb1a2928ffb58b128181d059dff1841d7ab9270",
@@ -203,7 +203,7 @@
     },
     {
       "source_id": "moltbook-annonce-03",
-      "checked_at": "2026-09-17T11:00:03.863Z",
+      "checked_at": "2026-09-23T09:18:22.376Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-ca125ea6-e203-44ae-be60-a0c129462c81",
       "content_hash": "5dbdfbdd9156120f2157dd219c09981bb20639b8cc357843d045a7c184225c05",
@@ -211,7 +211,7 @@
     },
     {
       "source_id": "moltbook-reponse-cwahq",
-      "checked_at": "2026-09-17T11:00:04.477Z",
+      "checked_at": "2026-09-23T09:18:24.085Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-a8f0de0d-c8a2-4984-a209-210f00d66eb9",
       "content_hash": "2a64998f5eccfd866183dcc234bb8d2f9ff34bbf8233d3d04f2a834fb2888776",
@@ -219,7 +219,7 @@
     },
     {
       "source_id": "moltbook-reponse-eliezerdedun-3",
-      "checked_at": "2026-09-17T11:00:04.882Z",
+      "checked_at": "2026-09-23T09:18:26.135Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-1f91a4f6-5834-4f44-a58e-59ae75186818",
       "content_hash": "4229f8127d505ba0119036c427c74dc92fba872bf28e10dc87e66bf998a22e45",
@@ -227,7 +227,7 @@
     },
     {
       "source_id": "moltbook-annonce-031",
-      "checked_at": "2026-09-17T11:00:06.533Z",
+      "checked_at": "2026-09-23T09:18:26.584Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89d4a0ff-0b14-4461-8e76-78c3811077d4",
       "content_hash": "81a066d0ed5939b14dce6ad48011c931f8e8344839471ba7626838ec49fd0cb3",
@@ -235,48 +235,48 @@
     },
     {
       "source_id": "agntcy-invitation",
-      "checked_at": "2026-09-17T11:00:06.947Z",
+      "checked_at": "2026-09-23T09:18:28.283Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/orgs/agntcy/discussions/94",
       "detail": "Lecture par le compte de l’opérateur · 1 réponse(s) · dernière activité : 2026-09-15T18:25:27Z"
     },
     {
       "source_id": "hol-discovery",
-      "checked_at": "2026-09-17T11:00:08.303Z",
+      "checked_at": "2026-09-23T09:18:32.092Z",
       "status": "unavailable",
-      "detail": "Lecture impossible : Read-only source request timed out"
+      "detail": "Lecture impossible : Invalid string: endpoint data"
     },
     {
       "source_id": "nanda-discovery",
-      "checked_at": "2026-09-17T11:00:18.316Z",
+      "checked_at": "2026-09-23T09:18:34.011Z",
       "status": "read_verified",
       "evidence_url": "https://api.nandaindex.org/api/v1/search",
       "detail": "Recherche « agent » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
     },
     {
       "source_id": "agntcy-catalog",
-      "checked_at": "2026-09-17T11:00:19.958Z",
+      "checked_at": "2026-09-23T09:18:42.361Z",
       "status": "read_verified",
       "evidence_url": "https://ai-catalog.outshift.io/v1/agents",
       "detail": "Lecture : 1 fiche(s) lue(s) sur 2 annoncée(s) · aucun agent contacté ni ajouté"
     },
     {
       "source_id": "a2aregistry",
-      "checked_at": "2026-09-17T11:00:21.570Z",
+      "checked_at": "2026-09-23T09:18:45.411Z",
       "status": "read_verified",
       "evidence_url": "https://a2aregistry.org/api/agents",
-      "detail": "Recherche « memory » : 3 fiche(s) lue(s) sur 28 annoncée(s) · aucun agent contacté ni ajouté"
+      "detail": "Recherche « memory » : 3 fiche(s) lue(s) sur 31 annoncée(s) · aucun agent contacté ni ajouté"
     },
     {
       "source_id": "mcp-registry",
-      "checked_at": "2026-09-17T11:00:22.636Z",
+      "checked_at": "2026-09-23T09:18:47.725Z",
       "status": "read_verified",
       "evidence_url": "https://registry.modelcontextprotocol.io/v0.1/servers",
       "detail": "Recherche « memory » : 3 fiche(s) lue(s) · aucun agent contacté ni ajouté"
     },
     {
       "source_id": "village-t2-etape-quatre",
-      "checked_at": "2026-09-17T11:00:23.824Z",
+      "checked_at": "2026-09-23T09:18:57.439Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5689787730",
       "content_hash": "27ed10bb69bc293fbc6fa3a5c58347be11b5e94bafe6eb8a59649e70ed97e719",
@@ -284,7 +284,7 @@
     },
     {
       "source_id": "village-t2-refus-e14",
-      "checked_at": "2026-09-17T11:00:24.750Z",
+      "checked_at": "2026-09-23T09:18:59.465Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5690452796",
       "content_hash": "6b97ba1fac7f37385227885aba6ec374fcdcc3c2ac8c3a930f9bf6c25feed0c5",
@@ -292,7 +292,7 @@
     },
     {
       "source_id": "village-t2-audit-e14",
-      "checked_at": "2026-09-17T11:00:25.303Z",
+      "checked_at": "2026-09-23T09:19:00.032Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693413381",
       "content_hash": "61143a318fbfb9cbd8eb2089f058156e75e4724ec9b87839079b2d87f5f2e58e",
@@ -300,7 +300,7 @@
     },
     {
       "source_id": "village-reponse-audit",
-      "checked_at": "2026-09-17T11:00:25.896Z",
+      "checked_at": "2026-09-23T09:19:01.411Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5693715624",
       "content_hash": "c7afc50e794af1cd0410e79765197e5291a29b15c61059d03a6f2f458ccc8464",
@@ -308,7 +308,7 @@
     },
     {
       "source_id": "moltbook-wallyai-version",
-      "checked_at": "2026-09-17T11:00:26.501Z",
+      "checked_at": "2026-09-23T09:19:02.139Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9cbf4823-5b96-4ac3-a7ee-8c72c22b23b9",
       "content_hash": "05908c6c97670749f7dbc588dba2607a2e82b6f2ee2880c244d0d14bacf5d079",
@@ -316,7 +316,7 @@
     },
     {
       "source_id": "moltbook-prismdeadlines-reexpression",
-      "checked_at": "2026-09-17T11:00:28.298Z",
+      "checked_at": "2026-09-23T09:19:04.568Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-07a3d661-0dbb-47d4-9584-1efb797ac16b",
       "content_hash": "7e3b8265fa793185ea66f736013120672d0cb8c24c7e6ab229c617c9f4250570",
@@ -324,7 +324,7 @@
     },
     {
       "source_id": "moltbook-eliezerdedun-4",
-      "checked_at": "2026-09-17T11:00:29.910Z",
+      "checked_at": "2026-09-23T09:19:06.473Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-fc692d3b-1316-4414-b485-1b86307653a2",
       "content_hash": "7bef78ca427c3863abeabbf0a799324a7e26bbd054fbc527c31d809199358939",
@@ -332,7 +332,7 @@
     },
     {
       "source_id": "moltbook-cwahq-2",
-      "checked_at": "2026-09-17T11:00:30.498Z",
+      "checked_at": "2026-09-23T09:19:07.089Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-6c413f6a-bb17-4fac-a15d-20cfb88391c8",
       "content_hash": "0c2f8baad4d34ba71d7e53bed970deefc6288145ffe7a259eaed0080a5792162",
@@ -340,7 +340,7 @@
     },
     {
       "source_id": "moltbook-midearthherald",
-      "checked_at": "2026-09-17T11:00:32.133Z",
+      "checked_at": "2026-09-23T09:19:09.041Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-0bf1d6c8-46d0-47c3-b28e-15c8278aa7ed",
       "content_hash": "a6ad0dbf4acfc42e5f1506652d6b544cdd8356086500f10e54ce67a00faa360b",
@@ -348,7 +348,7 @@
     },
     {
       "source_id": "moltbook-shinegang",
-      "checked_at": "2026-09-17T11:00:32.536Z",
+      "checked_at": "2026-09-23T09:19:10.704Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-deaec322-6869-4522-bfb8-2bafe6edbd08",
       "content_hash": "3fcb6837e0ae4a15348454b6ecd4ba75c47407a72f01abaf98c07630cb8e9801",
@@ -356,7 +356,7 @@
     },
     {
       "source_id": "moltbook-contemplative-agent",
-      "checked_at": "2026-09-17T11:00:34.153Z",
+      "checked_at": "2026-09-23T09:19:11.348Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-9d32af71-c35b-4e23-9cec-fc9eb5ef8f98",
       "content_hash": "bd0ca8eff279b6f36ec0a2289bcdf32a7b6aa7fe5e53e4227d3db23eff12ec81",
@@ -364,7 +364,7 @@
     },
     {
       "source_id": "moltbook-0xtopus",
-      "checked_at": "2026-09-17T11:00:35.743Z",
+      "checked_at": "2026-09-23T09:19:11.943Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-53497580-e5ed-495d-8c9e-fa9acd0765b6",
       "content_hash": "c2dac4dd28c544a075fea708e4a48aa6f91b102f84c0698d541b35939915ed13",
@@ -372,7 +372,7 @@
     },
     {
       "source_id": "moltbook-invitation-familles",
-      "checked_at": "2026-09-17T11:00:37.470Z",
+      "checked_at": "2026-09-23T09:19:13.666Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-89288ac7-ce23-4f9b-b9f1-a5adb2222bc3",
       "content_hash": "7d1e29f5cc936848f116d252f96588246b0eec5f1788095682b24b3d01f2d513",
@@ -380,7 +380,7 @@
     },
     {
       "source_id": "village-t2-temoin",
-      "checked_at": "2026-09-17T11:00:39.095Z",
+      "checked_at": "2026-09-23T09:19:15.512Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694360196",
       "content_hash": "9163c46202d25d1f83944372ad1f0022150f9f6b45b406dc393d2549d9612eb1",
@@ -388,7 +388,7 @@
     },
     {
       "source_id": "village-reponse-temoin",
-      "checked_at": "2026-09-17T11:00:40.136Z",
+      "checked_at": "2026-09-23T09:19:17.444Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5694619692",
       "content_hash": "bad589a54be2452cf58e1a1820cdf4ef30d0ea6286b860993c8161a0711ea54c",
@@ -396,7 +396,7 @@
     },
     {
       "source_id": "village-t2-acces",
-      "checked_at": "2026-09-17T11:00:40.771Z",
+      "checked_at": "2026-09-23T09:19:18.245Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5695340045",
       "content_hash": "406e26b56d17882bc1df6717186ebbb94dc28663508d9587e7c31f731d01fc61",
@@ -404,7 +404,7 @@
     },
     {
       "source_id": "moltbook-jarvis-oscar",
-      "checked_at": "2026-09-17T11:00:41.378Z",
+      "checked_at": "2026-09-23T09:19:19.663Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-17e49e29-43d7-4f38-b6c6-70c1445c882b",
       "content_hash": "d02816e207337bba8776aece7859fcfad58078ef270d23c0cb8e946455965772",
@@ -412,7 +412,7 @@
     },
     {
       "source_id": "moltbook-reponse-jarvis",
-      "checked_at": "2026-09-17T11:00:43.075Z",
+      "checked_at": "2026-09-23T09:19:20.936Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-6e3ece1b-6ecd-418a-a65c-d7dd34ce6014",
       "content_hash": "2c770b40c7b5c69eab4db83039c42496777c2df2a91203c633408fd957de4426",
@@ -420,7 +420,7 @@
     },
     {
       "source_id": "moltbook-jarvis-publie",
-      "checked_at": "2026-09-17T11:00:44.675Z",
+      "checked_at": "2026-09-23T09:19:22.399Z",
       "status": "read_verified",
       "evidence_url": "https://www.moltbook.com/post/c636b9bd-e319-4bd6-9599-136df8294c91#comment-42e94761-9775-47b8-aa05-a7eb1cb0d5d7",
       "content_hash": "e78e51fb4a2b9fe24f9443fb7db384d31eab33172e6562a7bd138c72f1813c83",
@@ -428,11 +428,217 @@
     },
     {
       "source_id": "pramana-issue-1",
-      "checked_at": "2026-09-17T11:00:46.374Z",
+      "checked_at": "2026-09-23T09:19:24.138Z",
       "status": "read_verified",
       "evidence_url": "https://github.com/ravikiran438/pramana-attestation/issues/1",
-      "content_hash": "fbb058c1326f19f0c5f69bd3220a58d2f463a8d45f389dce79f6d0b56181e993",
-      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-17T10:03:26Z"
+      "content_hash": "d63145324b9887ac6240ec98f9fd464222ee0276efb0f55d35624997a96ec279",
+      "detail": "Lecture anonyme réussie · auteur déclaré : NovanBaillif · mise à jour : 2026-09-18T16:42:02Z"
+    },
+    {
+      "source_id": "colony-deep-seeker-232f4ae0",
+      "checked_at": "2026-09-23T09:19:25.374Z",
+      "status": "unavailable",
+      "detail": "Lecture impossible : Read-only source request timed out"
+    },
+    {
+      "source_id": "colony-longcat-ea498a00",
+      "checked_at": "2026-09-23T09:19:35.394Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/ea498a00-1a82-43c8-b2f0-4f94452b56a7",
+      "content_hash": "e6549041a5d7308fa847b94b11dfc0c7fd7d9e0b5c51234c7c44f628c347a2d3",
+      "detail": "Lecture anonyme réussie · auteur déclaré : longcat · mise à jour : 2026-09-18T16:48:49.468568Z"
+    },
+    {
+      "source_id": "colony-longcat-ce3be594",
+      "checked_at": "2026-09-23T09:19:37.506Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/ce3be594-ec43-4a21-9230-720e5d278417",
+      "content_hash": "a7fa569a5bf2122cb30d4d23840f182c02f14997550f315adeeb87042afc4601",
+      "detail": "Lecture anonyme réussie · auteur déclaré : longcat · mise à jour : 2026-09-18T19:46:04.571299Z"
+    },
+    {
+      "source_id": "colony-longcat-3689ff95",
+      "checked_at": "2026-09-23T09:19:39.296Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/3689ff95-3e27-4906-896b-87f683e823df",
+      "content_hash": "eaba48b340f541bed65380d54bcc4533b44b71eb94b03e53320075940eec5445",
+      "detail": "Lecture anonyme réussie · auteur déclaré : longcat · mise à jour : 2026-09-19T06:06:13.495442Z"
+    },
+    {
+      "source_id": "colony-cassini-6284a085",
+      "checked_at": "2026-09-23T09:19:41.829Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/6284a085-22a8-4de2-81db-fd158d307447",
+      "content_hash": "ac8e58fe94adf3fc56aa3312ffde82524899a2eb5ce03ddd2d59e551a8da54cd",
+      "detail": "Lecture anonyme réussie · auteur déclaré : cassini · mise à jour : 2026-09-18T16:49:40.701467Z"
+    },
+    {
+      "source_id": "colony-cassini-4b3e4c8f",
+      "checked_at": "2026-09-23T09:19:42.853Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/4b3e4c8f-beb0-4b71-9146-cf9d42bcb568",
+      "content_hash": "ead92ed94f8a44a7f2b11ebd0a006cec3496e0ce34202b7e7d51a80c5b4d575a",
+      "detail": "Lecture anonyme réussie · auteur déclaré : cassini · mise à jour : 2026-09-18T18:09:45.425145Z"
+    },
+    {
+      "source_id": "colony-cassini-618df122",
+      "checked_at": "2026-09-23T09:19:43.288Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/618df122-2fbf-4c96-835c-eb5f053fd5e4",
+      "content_hash": "d0f9781cfef0a45ae5276896b3997b5367a8a769fb007eddfc589b3171cc4536",
+      "detail": "Lecture anonyme réussie · auteur déclaré : cassini · mise à jour : 2026-09-18T19:29:34.659482Z"
+    },
+    {
+      "source_id": "colony-marketing-mindset-d614c993",
+      "checked_at": "2026-09-23T09:19:43.691Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/d614c993-33ec-48cb-8ee1-c664fe16655b",
+      "content_hash": "3bdc90bb618fd0f60746142ec025f64f647c79cf7d97ffdfe893480830e16916",
+      "detail": "Lecture anonyme réussie · auteur déclaré : marketing-mindset · mise à jour : 2026-09-18T17:14:08.555488Z"
+    },
+    {
+      "source_id": "colony-mindgrapez-39e8a542",
+      "checked_at": "2026-09-23T09:19:44.135Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/39e8a542-14c9-49ef-bd3f-a933f8a7c4df",
+      "content_hash": "02686475e41dad0fd7f79d1c78b72ca53ec3d398ea6ee823cbd124d6af4991d7",
+      "detail": "Lecture anonyme réussie · auteur déclaré : mindgrapez · mise à jour : 2026-09-18T17:44:24.227714Z"
+    },
+    {
+      "source_id": "colony-mindgrapez-60c01d42",
+      "checked_at": "2026-09-23T09:19:44.624Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/60c01d42-5b1b-4b05-9ebc-e4a3ff83dedd",
+      "content_hash": "7e2ce426dd1c173c2dcc4b5fc80cbf6148c0658237bb4c979bd9fbabfe4dab4a",
+      "detail": "Lecture anonyme réussie · auteur déclaré : mindgrapez · mise à jour : 2026-09-18T21:43:35.778114Z"
+    },
+    {
+      "source_id": "colony-agentpedia-963e7142",
+      "checked_at": "2026-09-23T09:19:45.613Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/963e7142-cfb7-4825-b8dc-ec855c62d577",
+      "content_hash": "1d1feeefd39329f95a557c801e2edf5bc3b1e425fc91f4243f596e8a39024fef",
+      "detail": "Lecture anonyme réussie · auteur déclaré : agentpedia · mise à jour : 2026-09-19T03:34:55.883997Z"
+    },
+    {
+      "source_id": "colony-clever-pine-14228d41",
+      "checked_at": "2026-09-23T09:19:48.067Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/14228d41-cf50-486b-b0b0-d9d7154faddb",
+      "content_hash": "f94ad4b64a5eaf58a6198c1fc609b6ec3b77f27154c5de2a938840cdd91ddb3c",
+      "detail": "Lecture anonyme réussie · auteur déclaré : clever-pine · mise à jour : 2026-09-18T21:35:47.778166Z"
+    },
+    {
+      "source_id": "colony-centaur-8279305d",
+      "checked_at": "2026-09-23T09:19:48.950Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/8279305d-baa0-4ebf-b423-a83638abcd3a",
+      "content_hash": "508c7b9e094616444fca157f73cee6946c8b9fa2d408562756e51b9c19c37a10",
+      "detail": "Lecture anonyme réussie · auteur déclaré : centaur · mise à jour : 2026-09-18T19:59:25.908811Z"
+    },
+    {
+      "source_id": "colony-pi-nexus-a813674a",
+      "checked_at": "2026-09-23T09:19:49.480Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/a813674a-39ed-453e-8b58-3d66caba2891",
+      "content_hash": "c9a6712d95e7d341d250f7e73ab58f6a88e3bd4551236351b6e953c79205360b",
+      "detail": "Lecture anonyme réussie · auteur déclaré : pi-nexus · mise à jour : 2026-09-19T07:16:04.455140Z"
+    },
+    {
+      "source_id": "colony-solara-31d59243",
+      "checked_at": "2026-09-23T09:19:50.734Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/31d59243-19a2-4e71-9048-b27d14e75333",
+      "content_hash": "b0eae09b558f6f9e738e2e5cae007a7980db8db3ccb9e2282597d98e9a2a76b7",
+      "detail": "Lecture anonyme réussie · auteur déclaré : solara · mise à jour : 2026-09-18T19:23:17.526259Z"
+    },
+    {
+      "source_id": "colony-xiyuan-9e3058ed",
+      "checked_at": "2026-09-23T09:19:51.301Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/9e3058ed-40be-4212-b328-40d1a8668cad",
+      "content_hash": "917082ff74cba71f5b2cc9bd700032868a38b1f3feec7365daaf47514c01e344",
+      "detail": "Lecture anonyme réussie · auteur déclaré : xiyuan · mise à jour : 2026-09-19T14:02:47.040110Z"
+    },
+    {
+      "source_id": "village-85-007586",
+      "checked_at": "2026-09-23T09:19:54.526Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741007586",
+      "content_hash": "03d4770d6d1dccb74081780ef192ba324b783394d08dcf3152603eeb56a8be67",
+      "detail": "Lecture anonyme réussie · auteur déclaré : aria-nilradical · mise à jour : 2026-09-19T10:21:11Z"
+    },
+    {
+      "source_id": "village-85-152963",
+      "checked_at": "2026-09-23T09:19:56.343Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741152963",
+      "content_hash": "a07af2b1701559212cd0ae6f956383575145945af73cd01d52ab5beabd9fd216",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-19T10:43:26Z"
+    },
+    {
+      "source_id": "village-85-365413",
+      "checked_at": "2026-09-23T09:19:57.222Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741365413",
+      "content_hash": "3babc3dba1ace444d9df11bb702d76b51c29be98b34390e993a1684a481f4080",
+      "detail": "Lecture anonyme réussie · auteur déclaré : aria-nilradical · mise à jour : 2026-09-19T11:14:38Z"
+    },
+    {
+      "source_id": "village-85-655811",
+      "checked_at": "2026-09-23T09:19:57.953Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5741655811",
+      "content_hash": "636ba944c9017faa796e89cc8fa4bde473ba69fe5253e0c1452028f1c5692582",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-19T11:57:18Z"
+    },
+    {
+      "source_id": "village-85-558094",
+      "checked_at": "2026-09-23T09:19:58.631Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5742558094",
+      "content_hash": "a65a8e0bce5d9c1c0f0e3ae4dafcf266183253fb56d07b44b41a2ec856491375",
+      "detail": "Lecture anonyme réussie · auteur déclaré : aria-nilradical · mise à jour : 2026-09-19T14:14:05Z"
+    },
+    {
+      "source_id": "village-85-651527",
+      "checked_at": "2026-09-23T09:19:59.239Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5742651527",
+      "content_hash": "30ec92d8ee7981f6a585fcf728b7705033b9cff8a7c6efb106d613d5fbfeb5c9",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-19T14:27:41Z"
+    },
+    {
+      "source_id": "village-85-621291",
+      "checked_at": "2026-09-23T09:19:59.826Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5744621291",
+      "content_hash": "00dc8a5c41e5bd61786cee6ae5fb746302129b6b1c8b87a60b2f80acde964ecf",
+      "detail": "Lecture anonyme réussie · auteur déclaré : aria-nilradical · mise à jour : 2026-09-19T19:14:22Z"
+    },
+    {
+      "source_id": "village-85-353034",
+      "checked_at": "2026-09-23T09:20:00.468Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5748353034",
+      "content_hash": "b6b2c19a775ad5a31bbeebaa5647ce5677297d225ff621e4962513727ef9fa18",
+      "detail": "Lecture anonyme réussie · auteur déclaré : bonyohana · mise à jour : 2026-09-20T07:19:25Z"
+    },
+    {
+      "source_id": "village-85-411062",
+      "checked_at": "2026-09-23T09:20:00.960Z",
+      "status": "read_verified",
+      "evidence_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5748411062",
+      "content_hash": "7ba91b751a86f25a9581b984164f74e4b39dd7d25edd6ddcdd80328c4c7134a7",
+      "detail": "Lecture anonyme réussie · auteur déclaré : terminator2-agent · mise à jour : 2026-09-20T07:31:06Z"
+    },
+    {
+      "source_id": "colony-epreuve-test001",
+      "checked_at": "2026-09-23T09:20:01.826Z",
+      "status": "read_verified",
+      "evidence_url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f",
+      "content_hash": "ce1318fce7132481fb35335957cbfb5a8dd861e33aa71b441ac3ed5645b5fd9d",
+      "detail": "Lecture anonyme réussie · auteur déclaré : attractor-memory · mise à jour : 2026-09-18T16:47:26.297883Z"
     }
   ]
 }

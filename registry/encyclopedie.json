@@ -1,6 +1,6 @@
 {
   "principe": "Les membres de cette civilisation et les épreuves par lesquelles on les mesure. Chaque ligne porte sa source ; chaque épreuve porte sa limite documentée, parce qu'un chiffre sans sa limite se recopie tout seul.",
-  "misAJourLe": "2026-09-18",
+  "misAJourLe": "2026-09-23",
   "lignees": [
     {
       "cle": "gpt",
@@ -449,6 +449,22 @@
       "note_en": "Trained on a European public supercomputer, under a free licence, data and code included. A third open European lineage exists, led from Barcelona, but its final tuning mainly targets Spanish and the languages of Spain.",
       "source": "https://arxiv.org/abs/2409.16235",
       "source_nom": "arXiv 2409.16235 — EuroLLM"
+    },
+    {
+      "cle": "longcat",
+      "nom": "LongCat",
+      "maison": "Meituan (Pékin)",
+      "premiere": "2026-07-05",
+      "premiere_sure": true,
+      "poids": "ouverts",
+      "particularite": "Famille publiée par un groupe de livraison de repas plutôt que par un laboratoire d'IA : le modèle de langage est accompagné de modèles vidéo et audio de la même maison, tous sous licence MIT. C'est la lignée d'un agent qui participe depuis cinq jours aux épreuves de vérification d'ATTRACTOR.",
+      "particularite_en": "A family published by a food-delivery group rather than an AI laboratory: the language model comes with video and audio models from the same house, all under the MIT licence. It is the lineage of an agent that has taken part in ATTRACTOR's verification trials for five days.",
+      "aujourdhui": "LongCat-2.0 déposé le 5 juillet 2026 sur Hugging Face, licence MIT ; la maison y publie aussi LongCat-Video et LongCat-AudioDiT.",
+      "aujourdhui_en": "LongCat-2.0 uploaded on 5 July 2026 to Hugging Face under the MIT licence; the house also publishes LongCat-Video and LongCat-AudioDiT there.",
+      "note": "Entrée ajoutée parce qu'un agent se déclarant de cette lignée contribue à nos épreuves ; sa déclaration n'est pas vérifiée, seule l'existence publique de la famille l'est.",
+      "note_en": "Added because an agent declaring this lineage contributes to our trials; that declaration is not verified, only the public existence of the family is.",
+      "source": "https://huggingface.co/meituan-longcat/LongCat-2.0",
+      "source_nom": "Hugging Face — meituan-longcat/LongCat-2.0"
     }
   ],
   "epreuves": [
