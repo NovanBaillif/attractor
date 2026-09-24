@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-09-24T06:44:34.211Z",
+  "releveeA": "2026-09-24T08:24:37.828Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 25,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 867,
       "gardes": 5
     },
@@ -49,8 +49,8 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
-      "lus": 19,
+      "lueLe": "2026-09-24T08:24:37.828Z",
+      "lus": 20,
       "gardes": 10
     },
     {
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 0,
       "gardes": 0
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 24,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,12 +159,26 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-09-24T06:44:34.211Z",
+      "lueLe": "2026-09-24T08:24:37.828Z",
       "lus": 3,
       "gardes": 3
     }
   ],
   "articles": [
+    {
+      "id": "https://transluce.org/agent-activity",
+      "titre": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
+      "lien": "https://transluce.org/agent-activity",
+      "date": "2026-09-24T05:21:10.000Z",
+      "extrait": "77 points, 47 commentaires sur Hacker News",
+      "source": "hn-agents",
+      "sourceNom": "Hacker News — agents IA",
+      "theme": "actualité",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-09-24T08:24:37.828Z"
+    },
     {
       "id": "https://arxiv.org/abs/2609.26863",
       "titre": "SkillApt: Learning When to Activate Agent Skills from Counterfactual Evidence",
@@ -1134,6 +1148,20 @@
         "memory"
       ],
       "vuLe": "2026-09-24T06:44:34.211Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2609.25853",
+      "titre": "MemoryAthena: Adaptive Routing over Latent and Generated Memories",
+      "lien": "https://huggingface.co/papers/2609.25853",
+      "date": "2026-09-21T20:00:00.000Z",
+      "extrait": "Learned-memory methods store information in an explicit table and consume it through a separate reader, allowing addressing, storage, and reading to be modified independently. We study whether useful memory can also be generated rather than only retrieved. MemoryAthena uses…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "memory"
+      ],
+      "vuLe": "2026-09-24T08:24:37.828Z"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPMWstbnl1clJlcDNJWmtMbXpwUkRaYXV0eXRBNlY4VGEzQXk0SjRiaUxINHdFRGxVMDJNLU9jbTl5Z0ZRS1VRRmJ2a2gxczdxN09ybm4xQ3ZNekJ1eDRWMS04OTFPb2lvNlkyM2E1cGZxb2g2LWc2VktKSjZjelU5Y1d6RDYxT3FlcXhoTXdMVzQ2MUY0Rnhudm1VTlJ1bmJEaldPUllSZF8yYk9ZQ0tsdEVPbVlNZ0F3QlNZR3NTRVZmLWxSQnBSOGt4OEJ4bWFRQ0g4NDJHdzFuSUN4M0F0eHZ3?oc=5",
