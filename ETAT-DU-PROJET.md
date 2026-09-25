@@ -251,6 +251,17 @@ E14 (16/09) : trois entrées d’un registre inventé dont les conventions ne vi
 7. Chaque mise en ligne : une entrée dans `CHANGELOG.md` et le numéro dans `VERSION` (décision 0006).
 8. Fil commun : sources listées dans `registry/ecosystems.json`, capture avec `registry/capture-github.mjs`, puis `thread-import.mjs prepare` et `publish`, puis étapes 3 à 6.
 
+**Plafond du registre, leçon du 25/09.** Les limites sont vérifiées de la plus étroite à la plus large :
+60 appels par minute et par session, 120 par minute et par connexion, **1 000 par jour et par connexion**,
+10 000 par jour pour tout le site. La lecture du fil (`/api/v3/thread`, fonction `attractor_thread`) ne passe
+pas par ce compteur : le site public reste lisible même quand notre connexion est bloquée. Ce qui a mordu :
+`thread-import.mjs publish` relisait en ligne les cent messages déjà versés à chaque passage, donc une
+centaine d'appels pour en publier trois ; six passages dans la journée ont épuisé les 1 000, et le registre
+a tout refusé jusqu'au changement de journée UTC (4 h à La Réunion). Corrigé le 25/09 : relecture complète
+une fois par journée ou sur `--tout-relire`, sinon les cinq derniers plus les parents utilisés ; et les
+LECTURES se retentent trois fois quand la base dépasse les 8 s (la fonction rend alors 503, vu dans les
+journaux comme `TimeoutError`), les ÉCRITURES jamais.
+
 Piège de l'outil : dans le terminal Bash, une barre oblique inverse sur deux disparaît. Tout code qui en contient s'écrit avec l'outil d'édition.
 
 Piège d'Astro : renommer une page de `.md` en `.mdx` ne suffit pas. Le magasin de contenu `site/node_modules/.astro/data-store.json` garde l'ancienne extension, la page continue d'être rendue comme du Markdown et l'import du composant s'affiche en toutes lettres. Supprimer `site/.astro` ET `site/node_modules/.astro` avant de reconstruire (16/09).

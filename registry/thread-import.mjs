@@ -62,13 +62,31 @@ if(process.argv[2]==='prepare'){
   // Stay well under the registry's own per-minute quotas (each request counts several times): at most
   // 12 requests per calendar minute, then wait for the next minute. Never retry on refusal.
   const perMinute=12;let minute=-1,used=0;
-  async function post(path,body){
+  const pause=ms=>new Promise(done=>setTimeout(done,ms));
+  async function once(path,body){
     const now=new Date(),m=Math.floor(now.getTime()/60000);
     if(m!==minute){minute=m;used=0;}
-    if(used>=perMinute){await new Promise(done=>setTimeout(done,(m+1)*60000-now.getTime()+1500));minute=m+1;used=0;}
+    if(used>=perMinute){await pause((m+1)*60000-now.getTime()+1500);minute=m+1;used=0;}
     used++;
     const r=await fetch(origin+path,{method:'POST',headers:{'Content-Type':'application/json','X-Attractor-Test':'controlled',...(token?{Authorization:'Bearer '+token}:{})},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)});
-    const result=await r.json();if(!r.ok)throw Error(`Attractor ${r.status}: ${result.error||'request failed'}`);return result;
+    const result=await r.json();if(!r.ok)throw Error(`Attractor ${r.status}: ${result.error||'request failed'}`,{cause:r.status});return result;
+  }
+  // 25/09/2026 : la base répond parfois au-delà des 8 s que la fonction s'accorde, et le registre rend alors 503.
+  // Un import entier mourait sur un seul de ces hoquets. Une LECTURE se retente donc, jusqu'à trois fois, en
+  // attendant de plus en plus ; une ÉCRITURE ne se retente JAMAIS — on ne sait pas si elle a abouti, et le
+  // fichier « pending » existe précisément pour arrêter la session tant que son sort n'est pas établi.
+  const readOnly=new Set(['/api/v2/sessions','/api/v3/retrieve_state']);
+  async function post(path,body){
+    const attempts=readOnly.has(path)?3:1;
+    for(let i=1;;i++){
+      try{return await once(path,body);}
+      catch(error){
+        const transient=error.cause===503||error.cause===429||error.name==='TimeoutError';
+        if(i>=attempts||!transient)throw error;
+        console.error(`  ${path} : ${error.message} — nouvelle tentative ${i+1} sur ${attempts}`);
+        await pause(i*20000);
+      }
+    }
   }
   token=(await post('/api/v2/sessions',{source:'controlled',entrypoint:'docs',campaign:'thread-import'})).access_token;
   for(const name of ['question','proposal']){
@@ -82,10 +100,23 @@ if(process.argv[2]==='prepare'){
     if(c.parentKey){const p=record.items[c.parentKey]?.state_id;if(!p)throw Error('Parent message not published.');return p;}
     return parent;
   };
+  // 25/09/2026 : relire en ligne les cent messages déjà versés à CHAQUE passage coûtait une centaine d'appels
+  // pour en publier trois, et a fini par épuiser le plafond du registre (1 000 par jour et par connexion), qui a
+  // alors tout refusé. La relecture complète garde son sens — elle attrape une réécriture silencieuse — mais elle
+  // n'a pas besoin d'avoir lieu douze fois par jour : elle se fait une fois par journée, ou sur --tout-relire.
+  // Les autres passages relisent quand même les cinq derniers et tout parent dont on va se servir : un import ne
+  // s'appuie jamais sur un état qu'il n'a pas vu lui-même dans la minute.
+  const jour=new Date().toISOString().slice(0,10);
+  const toutRelire=process.argv.includes('--tout-relire')||record.last_full_check!==jour;
+  const cinqDerniers=new Set(Object.keys(record.items).slice(-5));
+  const parentsUtiles=new Set(candidates.filter(c=>!record.items[c.key]).flatMap(c=>[c.previous,c.parentKey].filter(Boolean)));
+  let relus=0,passes=0;
   for(const c of candidates){
     if(record.items[c.key]){
+      if(!toutRelire&&!cinqDerniers.has(c.key)&&!parentsUtiles.has(c.key)){passes++;continue;}
       const saved=record.items[c.key],r=await post('/api/v3/retrieve_state',{id:saved.state_id});
       if(hash(r.state.artifact)!==hash(c.artifact)||r.state.parent_id!==parentOf(c))throw Error('Imported content differs; stop before duplicate.');
+      relus++;
       continue;
     }
     if(existsSync(pending)&&read(pending).unresolved)throw Error('Previous publication outcome unresolved. Inspect registry before retry.');
@@ -99,8 +130,9 @@ if(process.argv[2]==='prepare'){
     const verified=await post('/api/v3/retrieve_state',{id:published.state.id});
     if(hash(verified.state.artifact)!==hash(c.artifact)||verified.state.parent_id!==target)throw Error('Published import verification failed.');
   }
+  if(toutRelire){record.last_full_check=jour;writeFileSync(file,JSON.stringify(record,null,2));}
   const messages=['question','proposal'].map(name=>({state_id:pilot[name].state_id,content_hash:hash(pilot[name].event),annotation:{author:'Attractor',origin:'operator-seed',source_url:origin+'/cooperation-pilot.json',label:'Amorce du projet'}}));
   for(const c of candidates)messages.push({...record.items[c.key],annotation:c.annotation});
   writeFileSync('registry/thread-config.json',JSON.stringify({root_id:root,messages},null,2));
-  console.log(JSON.stringify({root_id:root,messages:messages.length,imports:Object.keys(record.items),public_url:origin+'/conversation'}));
+  console.log(JSON.stringify({root_id:root,messages:messages.length,relus:relus,non_relus:passes,relecture_complete:toutRelire,imports:Object.keys(record.items),public_url:origin+'/conversation'}));
 }else throw Error('Usage: node registry/thread-import.mjs prepare|publish');
