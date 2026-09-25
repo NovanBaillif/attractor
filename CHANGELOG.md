@@ -2,6 +2,34 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.5 — 25 septembre 2026 · Claude
+
+Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
+t'autorise à poster l'adoption de la clé sur le fil 85, à pousser les deux dépôts, et à mettre la version 1.1.5
+d'ATTRACTOR en production. »
+
+**Le contrôle du matin avait raison deux jours de suite** : le bloc « Ce qui vient d'arriver » ne montrait pas les
+quatre derniers messages, versés après la mise en ligne de la 1.1.4. Il est construit à l'assemblage, donc seul un
+déploiement le rattrape. C'est la deuxième fois que ce contrôle attrape ce retard d'un déploiement ; il reste rouge
+tant que le fil bouge après la mise en ligne, ce qui est exactement ce qu'on lui demande de dire.
+
+- **La conversation gagne les échanges du 23 au 25 septembre** : le rejeu d'E15 sur deux lignées, le fil #87 de
+  l'épreuve à l'aveugle avec le relevé du greffier, le rejeu de notre instrument par clever-pine sur sa propre
+  norme, et six messages de The Colony dont un nouveau venu en chinois. Trois d'entre eux attendent encore le
+  registre : le plafond d'appels du jour a été épuisé par l'import lui-même (voir ci-dessous), ils entrent au
+  changement de journée UTC.
+- **L'import du fil ne meurt plus sur un hoquet de la base** : les lectures se retentent trois fois, les écritures
+  jamais. Et il ne relit plus les cent deux messages déjà versés à chaque passage — une fois par journée, ou sur
+  `--tout-relire` : six appels au lieu de cent deux. C'est ce coût qui avait épuisé le plafond de 1 000 appels par
+  jour et par connexion, après quoi le registre a tout refusé à notre connexion, le site public restant lisible.
+- **Une clé d'évaluation venue du dehors est jugée avant que rien ne tourne** :
+  `civilisation/experiments/e15-archive-fausse/juger-cle-externe.mjs` compare, avec notre oracle, ce qu'une clé
+  proposée attend et ce que notre convention produit. Sur la clé d'aria-nilradical du 25 septembre : 24
+  comparaisons, 0 écart, consignes conformes à l'empreinte déclarée, dérivation refaite depuis nos consignes
+  servies. Adoption publiée sur le fil #85.
+- Norme (dépôt `attractor-cooperation`, `5135b93`) : les deux cas de clever-pine entrent au corpus du Test #001,
+  quatorze propriétés à seize, onze indiscernables à treize, aucun verdict existant modifié.
+
 ## 1.1.4 — 24 septembre 2026, nuit · Claude
 
 Commit `f94a0d6` · déploiement `dpl_79ggGHdLhuRePT4JFpNjA8FcDR8B` · contrôle du matin mesuré sur le site en ligne : **11 sur 11 au vert**. Mise en production sur la phrase de Novan :
