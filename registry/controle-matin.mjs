@@ -92,6 +92,25 @@ if (existsSync('.vercel/thread-import-pending.json')) {
       : 'aucune publication en suspens');
 }
 
+// 5 bis. Le retard du fil, ajouté le 25/09/2026 : ce contrôle s'était déclaré vert alors que TROIS messages
+// étaient relevés, déclarés, affichés en tête de la page publique — et absents du registre. Le point 5 ne regarde
+// que la dernière écriture laissée en suspens ; il ne voit pas un lot jamais parti. Le retard se mesure sans
+// réseau, en comparant les messages déclarés dans thread-sources.json à ceux que thread-config.json dit versés
+// (ce fichier n'est réécrit qu'à la fin d'un import réussi). Deux fichiers suivis par git : le contrôle marche
+// aussi en intégration continue, là où le dossier .vercel/ est absent.
+// On compare des ADRESSES, jamais des totaux : la liste des candidats de l'import ne coïncide pas avec le relevé
+// (elle porte aussi les amorces et une entrée par révision), et un total contre un autre total donnait une
+// fausse alerte comme un faux calme. Chaque message versé porte l'adresse de son origine dans son annotation.
+if (existsSync('registry/thread-sources.json') && existsSync('registry/thread-config.json')) {
+  const sources = JSON.parse(readFileSync('registry/thread-sources.json', 'utf8'));
+  const config = JSON.parse(readFileSync('registry/thread-config.json', 'utf8'));
+  const enLigne = new Set((config.messages ?? []).map(m => m.annotation?.source_url).filter(Boolean));
+  const manquants = (sources.comments ?? []).filter(c => c.source_url && !enLigne.has(c.source_url));
+  dire(manquants.length ? 'rouge' : 'ok', 'retard du fil',
+    manquants.length ? `${manquants.length} message(s) relevé(s) et déclaré(s) mais absent(s) du registre (${manquants.slice(0, 3).map(c => c.id).join(', ')}${manquants.length > 3 ? '…' : ''}) : lancer node registry/thread-import.mjs publish`
+      : `${enLigne.size} message(s) versés, aucun relevé en attente`);
+}
+
 // 6. Les contrôles de la norme, s'ils sont sur cette machine. Un code de sortie, pas une lecture de la dernière ligne.
 if (existsSync(NORME + '/conformance/run.mjs')) {
   for (const [nom, args] of [['conformité', ['conformance/run.mjs']], ['registre des crédits', ['conformance/contributors-check.mjs']],

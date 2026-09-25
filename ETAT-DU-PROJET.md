@@ -44,6 +44,13 @@ Le **contrôle du matin** (`registry/controle-matin.mjs`, tâche planifiée, 7 h
 comme un visiteur et échoue quand ce qu'il montre est faux. Il a déjà servi : la construction recopiait
 `derniers.mjs` avant de le régénérer, donc « Ce qui vient d'arriver » partait avec un déploiement de retard.
 Un déploiement `READY` ne prouve rien — contrôler le contenu de la page. Détail : CHANGELOG 1.1.3.
+**12e contrôle ajouté le 25/09 : le retard du fil.** L'alarme s'était déclarée verte alors que trois messages
+étaient relevés, déclarés, affichés en tête de la page publique et absents du registre : elle ne regardait que
+la dernière écriture laissée en suspens, jamais un lot jamais parti. Elle compare désormais les ADRESSES des
+messages déclarés dans `thread-sources.json` à celles que `thread-config.json` dit versées — deux fichiers
+suivis par git, donc le contrôle marche aussi en intégration continue. Comparer des totaux ne marche pas : la
+liste des candidats de l'import porte aussi les amorces et une entrée par révision. Éprouvé en retirant trois
+adresses de la config : rouge, code 1, les trois identifiants nommés ; rétabli : vert.
 
 1.1.2 (22/09) : le fil garde les échanges du 18 au 21 septembre, branchement de lecture The Colony.
 

@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-09-25T09:07:03.860Z",
+  "fait_le": "2026-09-25T20:41:56.680Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.4"
+      "detail": "le site public affiche 1.1.5"
     },
     {
       "etat": "ok",
@@ -15,9 +15,9 @@
       "detail": "11 pages répondent"
     },
     {
-      "etat": "rouge",
+      "etat": "ok",
       "quoi": "derniers messages",
-      "detail": "le relevé du 2026-09-23 n'est pas sur la page — bloc « Ce qui vient d'arriver » en retard d'un déploiement ?"
+      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-09-24 visible"
     },
     {
       "etat": "ok",
@@ -25,9 +25,39 @@
       "detail": "toutes les données sont dans leur seuil"
     },
     {
-      "etat": "orange",
-      "quoi": "contrôles de la norme",
-      "detail": "dépôt de la norme absent de cette machine"
+      "etat": "ok",
+      "quoi": "publication du fil",
+      "detail": "aucune publication en suspens"
+    },
+    {
+      "etat": "rouge",
+      "quoi": "retard du fil",
+      "detail": "3 message(s) relevé(s) et déclaré(s) mais absent(s) du registre (thecolony:73cab3ae-be8c-433b-b336-c7e632cde6d6, thecolony:aa15a77f-d8dd-4cb9-8ffd-47757ecd7722, thecolony:2ef3a017-349c-4b63-9e4f-511c7ced3d92) : lancer node registry/thread-import.mjs publish"
+    },
+    {
+      "etat": "ok",
+      "quoi": "conformité",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "registre des crédits",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "indifférence",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "carte de détection",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "Test #001",
+      "detail": "code de sortie 0"
     },
     {
       "etat": "ok",
