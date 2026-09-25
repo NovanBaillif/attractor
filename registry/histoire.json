@@ -1,6 +1,6 @@
 {
   "principe": "Un événement n’entre ici qu’avec sa source d’origine. Quand ce qui a été raconté diffère de ce que la source établit, les deux sont écrits. La date est celle des faits quand elle est établie, sinon celle de la publication de la source.",
-  "misAJourLe": "2026-09-23",
+  "misAJourLe": "2026-09-26",
   "evenements": [
     {
       "cle": "foerster-canal-appris-2016",
@@ -375,6 +375,21 @@
       "source_nom": "Linux Foundation — lancement de la x402 Foundation"
     },
     {
+      "cle": "modele-monde-representations-creuses-2026",
+      "date": "2026-08-24",
+      "theme": "outils",
+      "titre": "Moins de mémoire, meilleure prévision",
+      "titre_en": "Less memory, better prediction",
+      "etabli": "Six chercheurs, dont Yann LeCun, montrent qu'un modèle du monde prévoit mieux les suites d'une action quand sa représentation interne est « creuse » — la plupart des cases à zéro — plutôt que dense. Ils prouvent d'abord qu'une dynamique non linéaire se laisse approcher par une dynamique linéaire conditionnée à l'action, dans un espace creux assez grand, l'erreur s'effaçant à mesure que la dimension grandit. Mesuré sur une tâche de poussée d'objet : jusqu'à 57 % de réussite en plus que la version dense, à capacité de prédicteur intermédiaire. Le support de la représentation code le régime de dynamique en cours, décodable dans 94 à 99 % des cas sur leur jeu par morceaux.",
+      "etabli_en": "Six researchers, Yann LeCun among them, show that a world model predicts the consequences of an action better when its internal representation is sparse — most entries at zero — rather than dense. They first prove that nonlinear dynamics can be approximated by action-conditioned linear dynamics in a sufficiently large sparse space, the error vanishing as the dimension grows. Measured on an object-pushing task: up to 57% more planning success than the dense version, at intermediate predictor capacity. The representation's support encodes the current dynamics regime, decodable in 94 to 99% of cases on their piecewise set.",
+      "raconte": "La presse retient le nom et la levée de fonds de sa société, pas le résultat : sur les quatorze articles que notre veille a ramassés à son sujet en septembre, aucun ne cite ce travail.",
+      "raconte_en": "The press keeps the name and his company's funding round, not the result: of the fourteen articles our watch collected about him in September, none cites this work.",
+      "nuance": "Les auteurs écrivent eux-mêmes deux limites. L'avantage disparaît aux fortes capacités de prédicteur : il vaut à capacité intermédiaire, pas partout. Et la parcimonie seule ne garantit pas que les changements de support correspondent à des événements ayant un sens : sans structure temporelle ajoutée, le support se comporte surtout comme un détecteur de mouvement. Sur la tâche de poussée, le prédicteur linéaire que leur théorie suggère échoue en pratique, pour la version creuse comme pour la dense.",
+      "nuance_en": "The authors state two limits themselves. The advantage disappears at high predictor capacity: it holds at intermediate capacity, not everywhere. And sparsity alone does not ensure that support transitions correspond to meaningful events: without added temporal structure, the support behaves largely as a motion detector. On the pushing task, the linear predictor their theory suggests fails in practice, for the sparse version as for the dense one.",
+      "source": "https://arxiv.org/abs/2608.22764",
+      "source_nom": "Kuang, Dagade, Le Lidec, Maes, Balestriero, LeCun — arXiv 2608.22764"
+    },
+    {
       "cle": "aaif-mcp-a2a-2026",
       "date": "2026-08-27",
       "theme": "protocole",
@@ -388,6 +403,21 @@
       "nuance_en": "At MCP's donation in December 2025, more than 10,000 public servers were declared active. No more recent official figure was found.",
       "source": "https://a2a-protocol.org/latest/blog/2026/08/27/a-new-chapter-for-a2a-joining-the-agentic-ai-foundation/",
       "source_nom": "A2A Protocol — A New Chapter for A2A"
+    },
+    {
+      "cle": "apprendre-de-la-video-sans-bricolage-2026",
+      "date": "2026-08-27",
+      "theme": "outils",
+      "titre": "Apprendre d'une vidéo sans les bricolages qui tenaient l'édifice",
+      "titre_en": "Learning from video without the patches that held it together",
+      "etabli": "Sept chercheurs, dont Yann LeCun, entraînent un modèle à représenter des vidéos sans les artifices que ce domaine employait pour empêcher l'effondrement de la représentation — un second encodeur qui suit lentement le premier, un gradient coupé, un prédicteur volontairement bridé, ou la reconstruction des pixels masqués. Il ne reste qu'un encodeur et un projecteur, un seul réglage, et une régularisation dont l'absence d'effondrement est démontrée. À nombre d'époques et données identiques, il égale ou dépasse le meilleur modèle vidéo de référence en consommant 5,6 à 20,8 fois moins de calcul ; à calcul égal, il le dépasse de 7,6 points sur le jeu d'images de référence.",
+      "etabli_en": "Seven researchers, Yann LeCun among them, train a video representation model without the devices the field used to prevent representation collapse — a second encoder slowly tracking the first, a cut gradient, a deliberately limited predictor, or masked-pixel reconstruction. What remains is an encoder and a projector, a single hyperparameter, and a regulariser whose freedom from collapse is proved. At matched epochs and data it matches or surpasses the strongest reference video model while using 5.6 to 20.8 times less compute; at matched compute it exceeds it by 7.6 points on the reference image set.",
+      "raconte": null,
+      "raconte_en": null,
+      "nuance": "Le gain de calcul vient de ce que l'encodeur regarde moins de morceaux d'image, et la façon de les jeter compte : en jetant les mêmes emplacements dans toutes les images d'un clip, la précision baisse nettement. Les auteurs laissent cette question ouverte. Le gain est donc établi pour un tirage au hasard uniforme, pas pour n'importe quelle façon d'alléger.",
+      "nuance_en": "The compute saving comes from the encoder seeing fewer image patches, and how they are dropped matters: dropping the same locations in every frame of a clip lowers accuracy substantially. The authors leave that question open. The saving is therefore established for uniform random dropping, not for any way of lightening the load.",
+      "source": "https://arxiv.org/abs/2608.27395",
+      "source_nom": "Kuhn, Maes, Serra, Le Lidec, LeCun, Balestriero et al. — arXiv 2608.27395"
     },
     {
       "cle": "independance-graduee-2026",

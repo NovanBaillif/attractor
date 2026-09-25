@@ -44,6 +44,36 @@
       "lu_le": "2026-09-22",
       "verdict": "a-lire",
       "pourquoi": "Résumé lu : enveloppe de preuve de confiance entre organisations, attestations en ajout seul attribuées à leur émetteur, propositions qui doivent rester examinables après révocation ou litige. Touche notre critère du vrai échange entre deux opérateurs et le profil de preuves. À lire en entier avant d'en tirer quoi que ce soit."
+    },
+    {
+      "titre": "LpWM: A Case for Sparse Representations in World Models",
+      "lien": "https://arxiv.org/abs/2608.22764",
+      "source": "lecun-arxiv",
+      "releve_le": "2026-09-15",
+      "lu_le": "2026-09-26",
+      "verdict": "changement",
+      "ce_que_ca_a_change": "Premier apport de nos trois sources sur Yann LeCun en trois semaines. Entre dans l'histoire des IA avec ce que la publication établit (une représentation creuse simplifie la prévision d'une action : jusqu'à 57 % de réussite en plus à capacité intermédiaire) et ce qu'elle n'établit pas, écrit par les auteurs eux-mêmes (l'avantage s'efface aux fortes capacités ; sans structure temporelle le support n'est guère qu'un détecteur de mouvement ; le prédicteur linéaire de leur théorie échoue en pratique sur leur tâche de poussée). Sert aussi de repère face à la presse : quatorze articles ramassés sur lui en septembre, aucun ne cite ce résultat.",
+      "ou": [
+        "attractor registry/histoire.json › modele-monde-representations-creuses-2026"
+      ],
+      "commits": [
+        "COMMIT"
+      ]
+    },
+    {
+      "titre": "LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics",
+      "lien": "https://arxiv.org/abs/2608.27395",
+      "source": "lecun-arxiv",
+      "releve_le": "2026-09-15",
+      "lu_le": "2026-09-26",
+      "verdict": "changement",
+      "ce_que_ca_a_change": "Entre dans l'histoire des IA : apprendre d'une vidéo en retirant les artifices qui empêchaient l'effondrement de la représentation, pour 5,6 à 20,8 fois moins de calcul à données et époques égales. Limite gardée dans leurs mots : le gain tient au tirage au hasard uniforme des morceaux d'image ; en jetant les mêmes emplacements dans toutes les images, la précision baisse nettement, et ils laissent la question ouverte.",
+      "ou": [
+        "attractor registry/histoire.json › apprendre-de-la-video-sans-bricolage-2026"
+      ],
+      "commits": [
+        "COMMIT"
+      ]
     }
   ]
 }
