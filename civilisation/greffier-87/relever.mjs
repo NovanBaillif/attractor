@@ -106,6 +106,48 @@ for (const [nom, fichier] of [['du jeu à l’aveugle', jeu], ['des étiquettes'
     : `Index public de Rekor : ${trouvees} entrée(s) pour l’empreinte ${nom}.`);
 }
 
+// ————— Le sceau du jour, ajouté le 26/09 : un journal d'horodatage scelle le MANIFESTE, pas chaque fichier —————
+// C'est pourquoi une recherche par l'empreinte d'un fichier ne trouve rien, et pourquoi mon premier relevé a
+// conclu à tort que le trou restait ouvert. @GvHildebrand a donné l'index le 25/09 ; la vérification se refait ici.
+//   --sceau <index Rekor> <adresse du manifeste daté>
+const iSceau = process.argv.indexOf('--sceau');
+if (iSceau > -1) {
+  const [index, adresse] = process.argv.slice(iSceau + 1, iSceau + 3);
+  if (!index || !adresse) throw Error('--sceau attend un index Rekor puis l’adresse du manifeste');
+  const entree = await releverRekor(Number(index));
+  const r = await fetch(adresse, {headers: {'user-agent': 'attractor-greffier/1.0'}});
+  const corps = Buffer.from(await r.arrayBuffer());
+  const empreinte = sha256(corps);
+  const m = r.ok ? JSON.parse(corps.toString()) : {};
+  const toutes = Object.values(m).flatMap(v => Array.isArray(v) ? v : (v && typeof v === 'object' ? [v] : []));
+  const liste = c => toutes.find(e => e && e.path === c) ?? null;
+  const sceau = {
+    rekor: entree, manifeste: {adresse, statut: r.status, octets: corps.length, sha256: empreinte, genere: m.generated},
+    // Le point qui décide : l'empreinte du manifeste est-elle CELLE que le journal a scellée ?
+    manifeste_scelle: entree.empreinteScellee === empreinte,
+    jeu: liste(CHEMIN_JEU), cle: liste(CHEMIN_CLE)
+  };
+  sceau.jeu_conforme = sceau.jeu?.sha256 === jeu.sha256;
+  sceau.cle_declaree = sceau.cle?.sha256 ?? null;
+  // La fenêtre : le sceau tombe-t-il entre la génération du jeu et la publication des étiquettes ?
+  const GENERE = '2026-09-22T17:28:23.441Z', ETIQUETTES = '2026-09-22T18:35:54Z';
+  sceau.fenetre = {jeu_genere: GENERE, etiquettes: ETIQUETTES,
+    dans_la_fenetre: entree.horodate > GENERE && entree.horodate < ETIQUETTES};
+  releve.sceau = sceau;
+  const dit2 = t => releve.constats.push(t);
+  dit2(sceau.manifeste_scelle
+    ? `Le manifeste ${adresse} donne exactement l’empreinte scellée par Rekor ${index} (${empreinte.slice(0, 8)}…).`
+    : `ÉCART : le manifeste donne ${empreinte.slice(0, 8)}…, le journal scelle ${String(entree.empreinteScellee).slice(0, 8)}….`);
+  if (sceau.jeu) dit2(sceau.jeu_conforme
+    ? `Ce manifeste liste ${CHEMIN_JEU} à l’empreinte du jeu servi : le jeu à l’aveugle est scellé.`
+    : `ÉCART : le manifeste liste ${CHEMIN_JEU} à ${sceau.jeu.sha256.slice(0, 8)}…, le fichier servi donne ${jeu.sha256.slice(0, 8)}….`);
+  if (sceau.cle) dit2(`Ce manifeste liste aussi la clé des réponses (${sceau.cle.sha256.slice(0, 12)}…), donc la clé était scellée avant d’être servie.`);
+  dit2(sceau.fenetre.dans_la_fenetre
+    ? `Le sceau est horodaté ${entree.horodate}, donc APRÈS la génération du jeu (${GENERE}) et AVANT les étiquettes (${ETIQUETTES}) : l’ordre est établi par une horloge tierce.`
+    : `Le sceau est horodaté ${entree.horodate}, hors de la fenêtre ${GENERE} → ${ETIQUETTES}.`);
+  dit2('Un journal d’horodatage scelle le MANIFESTE et non chaque fichier : une recherche par l’empreinte d’un fichier ne trouve donc rien, et son silence ne prouve rien. C’est l’erreur de lecture de mon premier relevé.');
+}
+
 if (process.argv.includes('--json')) {
   const propre = {...releve, cibles: releve.cibles.map(({corps, ...reste}) => reste)};
   console.log(JSON.stringify(propre, null, 2));
