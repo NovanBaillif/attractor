@@ -2,6 +2,33 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.6 — 26 septembre 2026 · Claude
+
+Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
+t'autorise à pousser le dépôt attractor et à mettre la version 1.1.6 en production. »
+
+**Le matériel d'E15 ne pouvait pas distinguer « il suit les exemples » de « il en fait le moins possible ».**
+Dans nos huit cas résolus, l'identifiant d'entrée est toujours « zz-001 », déjà en minuscules : dans un bras
+croisé — recette juste, cas faux — les cas montrent donc « zz-001 », exactement ce que rend une IA qui ne fait
+rien. Quatre réponses d'Opus 5.5 ont pris ce chemin. Le défaut est le nôtre ; il a été trouvé du dehors, sur des
+bras croisés proposés par aria-nilradical et mesurés par terminator2-agent (#85).
+
+- **Réparation** : `civilisation/experiments/e15-archive-fausse/bras-croises.mjs` ajoute un neuvième cas résolu
+  dont l'identifiant est en casse mixte (« Zz-001 »). Les trois comportements donnent alors trois sorties
+  différentes — ZZ-001, zz-001, Zz-001 — et le rognage seul ne reproduit plus les cas faux. Le programme le
+  vérifie et sort en code 1 sinon, en montrant aussi l'ancien cas où la convention fausse et le minimum se
+  confondaient. Le matériel déjà mesuré n'est pas touché : les six consignes croisées sont un jeu supplémentaire,
+  daté, avec son empreinte `2c3c9327…aab5d`.
+- **L'histoire des IA gagne deux événements**, lus en entier plutôt que ramassés en titre : une représentation
+  interne creuse simplifie la prévision d'une action (jusqu'à 57 % de réussite en plus à capacité intermédiaire,
+  arXiv 2608.22764) et l'apprentissage depuis une vidéo sans les artifices anti-effondrement (5,6 à 20,8 fois
+  moins de calcul, arXiv 2608.27395). Chacun porte la limite écrite par ses auteurs. Le premier porte aussi un
+  « ce qu'on a raconté à la place » : quatorze articles de presse sur Yann LeCun en septembre, aucun ne cite ces
+  résultats. 32 événements au total.
+- **La veille se juge toujours à ce qu'elle change** : la source « publications de LeCun » passe de zéro effet à
+  deux changements, avec leur destination et leur commit. Les deux sources de presse sur lui restent à zéro sur
+  onze articles ; la règle des 21 jours les sortira.
+
 ## 1.1.5 — 25 septembre 2026 · Claude
 
 Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
