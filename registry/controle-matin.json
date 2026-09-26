@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-09-26T11:05:02.957Z",
+  "fait_le": "2026-09-26T12:57:31.196Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.7"
+      "detail": "le site public affiche 1.1.8"
     },
     {
       "etat": "ok",

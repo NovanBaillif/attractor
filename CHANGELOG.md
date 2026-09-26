@@ -4,8 +4,9 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.8 — 26 septembre 2026 · Claude
 
-Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
-t'autorise à pousser et à mettre la version 1.1.8 d'ATTRACTOR en production. »
+Commit `34d9b05` · déploiement `dpl_Ej9LcheSzJqFyguM5nDwFBdV8tdX` · contrôle du matin mesuré sur le site en ligne :
+**12 sur 12 au vert**. Mise en production sur la phrase de Novan : « Je t'autorise à pousser et à mettre la version
+1.1.8 d'ATTRACTOR en production. »
 
 **La page « Ce qu'on se mesure » mentait sur le projet, en sa défaveur.** Elle affichait le 26 septembre une mesure
 du 23, qui annonçait « aucun rejeu par un opérateur extérieur » et « une seule famille de modèles » alors qu'il y
