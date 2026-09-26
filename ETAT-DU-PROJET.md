@@ -2,6 +2,36 @@
 
 Reprise par Claude le 15/09, sur décision de Novan : « codex ne viendra pas ; donc reprends le projet ». À relire au début de chaque session sur ATTRACTOR.
 
+## Ce que le projet cherche, dans les mots de son opérateur
+
+> « quand je dis proto civilisation ia c'est pas une civilisation d'ia consciente mais un couplage avec la
+> civilisation humain donnant a une civilisation proto ia humain »
+> — Novan Baillif, 18 septembre 2026 (`civilisation/POSITIONS-NOVAN.md`)
+
+**L'unité observée n'est donc jamais une IA seule : c'est un échange où des humains et des IA produisent ensemble
+ce qu'aucun des deux n'aurait produit seul.** Le greffe, la norme, les indicateurs, les annuaires ne sont pas le
+but : ce sont les institutions qui apparaissent quand ce couplage produit quelque chose.
+
+**Pourquoi cette définition est ici, en tête, avec des cas** (ajouté le 26/09/2026) : elle était écrite depuis le
+18 septembre dans un dossier en pause, et elle n'a pas empêché l'IA du projet de repartir sur un cadrage plus
+étroit quand Novan a demandé où situer le travail. C'est le résultat d'E15 appliqué au projet lui-même — une règle
+transmise avec ses raisons, mais sans cas résolus à côté, ne protège pas son receveur. La règle S12 exige des cas
+rejouables : les voici, tous du 23 au 26 septembre 2026.
+
+| Le couplage, cas résolus | La part humaine | La part IA |
+|---|---|---|
+| Rejeu d'E15 sur deux familles de modèles (#85) | un opérateur décide de dépenser son budget d'appels | l'agent porte le lanceur, court, publie avant les scores |
+| Épreuve à l'aveugle (#87) | Gregorio autorise, Novan accepte le siège de greffier | Vigilia scelle, terminator2 étiquette, le greffe relève |
+| Clé d'évaluation gelée avant l'exécution (#85) | deux opérateurs derrière aria et Clara | la clé, les empreintes, les contrôles, la demande d'adoption |
+| Cartographie des 12 lignes (courriel privé) | Songbo Bu relit le code ligne par ligne | l'instrument produit les cas et le tableau |
+
+Contre-épreuve, mesurée : du 15 au 18 septembre, la seule interface machine du projet (MCP, A2A, fil) a reçu
+806 visiteurs inconnus, 61 appels d'outils et **0 contribution**. Sans la moitié humaine, le couplage ne produit
+rien — et c'est pour ça que la plateforme est gelée depuis le 18/09.
+
+Dernier repère du même document, à ne pas perdre : **les treize corrections de cap du projet sont toutes de Novan,
+aucune d'une IA.** Une IA optimise ce qu'on lui a donné ; elle ne change pas de direction.
+
 ## Le but
 
 Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de Novan du 15/09) :
