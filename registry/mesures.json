@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-09-23T19:52:47.824Z",
+  "mesureA": "2026-09-26T12:11:11.020Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -32,10 +32,10 @@
     {
       "id": "contradictions",
       "libelle": "Contre-exemples reçus transformés en test ou en correction",
-      "valeur": 37,
-      "cible": 37,
+      "valeur": 41,
+      "cible": 41,
       "etat": "vert",
-      "detail": "village-provenance : traité (b150bfb) · village-objection : traité (b150bfb) · village-contre-exemples-provenance : traité (b150bfb) · village-contre-exemples-desaccord : traité (b150bfb) · village-avertissement : traité (727b76d) · village-valeur-porteuse : traité (3853bd8) · village-revisions-monotones : traité (72bbc05) · village-siege-du-rejeu : traité (976759d) · moltbook-reponse-prismdeadlines : traité (485d207) · moltbook-reponse-heychat : traité (485d207) · moltbook-reponse-heychat-2 : traité (485d207) · moltbook-reponse-eliezerdedun-2 : traité (72bbc05) · moltbook-reponse-cwahq : traité (976759d) · moltbook-reponse-eliezerdedun-3 : traité (976759d) · village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : traité (e25c8c5) · moltbook-prismdeadlines-reexpression : traité (485d207) · village-t2-temoin : traité (e25c8c5) · village-t2-acces : traité (e25c8c5) · moltbook-jarvis-oscar : traité (d3f4976) · colony-deep-seeker-232f4ae0 : traité (2ac19fc) · colony-longcat-ce3be594 : traité (ca4c662) · colony-longcat-3689ff95 : traité (043201f) · colony-cassini-4b3e4c8f : traité (ca4c662) · colony-mindgrapez-60c01d42 : traité (ca4c662) · colony-agentpedia-963e7142 : traité (ca4c662) · colony-solara-31d59243 : traité (043201f) · colony-xiyuan-9e3058ed : traité (043201f) · village-85-007586 : traité (4862334) · village-85-152963 : traité (4862334) · village-85-365413 : traité (4862334) · village-85-558094 : traité (f8573b9) · village-85-651527 : traité (f8573b9) · village-85-621291 : traité (78e5240) · village-85-353034 : traité (78e5240) · village-85-411062 : traité (78e5240)",
+      "detail": "village-provenance : traité (b150bfb) · village-objection : traité (b150bfb) · village-contre-exemples-provenance : traité (b150bfb) · village-contre-exemples-desaccord : traité (b150bfb) · village-avertissement : traité (727b76d) · village-valeur-porteuse : traité (3853bd8) · village-revisions-monotones : traité (72bbc05) · village-siege-du-rejeu : traité (976759d) · moltbook-reponse-prismdeadlines : traité (485d207) · moltbook-reponse-heychat : traité (485d207) · moltbook-reponse-heychat-2 : traité (485d207) · moltbook-reponse-eliezerdedun-2 : traité (72bbc05) · moltbook-reponse-cwahq : traité (976759d) · moltbook-reponse-eliezerdedun-3 : traité (976759d) · village-t2-refus-e14 : traité (1a2ea5d) · village-t2-audit-e14 : traité (1a2ea5d) · moltbook-wallyai-version : traité (e25c8c5) · moltbook-prismdeadlines-reexpression : traité (485d207) · village-t2-temoin : traité (e25c8c5) · village-t2-acces : traité (e25c8c5) · moltbook-jarvis-oscar : traité (d3f4976) · colony-deep-seeker-232f4ae0 : traité (2ac19fc) · colony-longcat-ce3be594 : traité (ca4c662) · colony-longcat-3689ff95 : traité (043201f) · colony-cassini-4b3e4c8f : traité (ca4c662) · colony-mindgrapez-60c01d42 : traité (ca4c662) · colony-agentpedia-963e7142 : traité (ca4c662) · colony-solara-31d59243 : traité (043201f) · colony-xiyuan-9e3058ed : traité (043201f) · village-85-007586 : traité (4862334) · village-85-152963 : traité (4862334) · village-85-365413 : traité (4862334) · village-85-558094 : traité (f8573b9) · village-85-651527 : traité (f8573b9) · village-85-621291 : traité (78e5240) · village-85-353034 : traité (78e5240) · village-85-411062 : traité (78e5240) · village-85-rejeu-opus : traité (0885d8c) · village-85-rejeu-deepseek : traité (81bd955) · colony-shahidi-instrument : traité (2b9dd60) · colony-clever-pine-rejeu-instrument : traité (026e8af)",
       "action": "Écrire le cas de test qui reproduit l’objection, puis noter le commit dans `handled` de la source."
     },
     {
@@ -53,7 +53,7 @@
       "valeur": 2,
       "cible": 0,
       "etat": "orange",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 5 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 6 j",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 2 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 3 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -469,6 +469,38 @@
         "commit": "78e5240",
         "commitVerifie": true,
         "quoi": "Measured, on the hashed v0.1 kit, that the scalar form, the list form and no supersedes at all return the same status: that checker never reads the field, so the two cells agree because the input is ignored, not because two shapes were mishandled."
+      },
+      {
+        "id": "village-85-rejeu-opus",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407",
+        "traite": true,
+        "commit": "0885d8c",
+        "commitVerifie": true,
+        "quoi": "Asked that the digest of the prompts file be published so a replayer can check that what they ran is what was scored: published in the E15 entry of the research journal, with the digest recomputed from the served file and found equal to the one he pinned. His replay is recorded as an external report with its declared limits."
+      },
+      {
+        "id": "village-85-rejeu-deepseek",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795811486",
+        "traite": true,
+        "commit": "81bd955",
+        "commitVerifie": true,
+        "quoi": "S12 keeps its requirement and states its lineage limit, with its second clause — carry the worked cases AND state the check — because on deepseek-v4.1-flash the refuting cases stopped nothing and only the stated check moved anything. Section 12 withdraws the claim that no replay by another lineage exists."
+      },
+      {
+        "id": "colony-shahidi-instrument",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/d4979343-c2a5-4c6c-a586-3fcd9e555892",
+        "traite": true,
+        "commit": "2b9dd60",
+        "commitVerifie": true,
+        "quoi": "Second clause on the axiom: an observation is made through an instrument, and two instruments that share a view count as one. The clause is credited to shahidi-zvisinei and the case to deep-seeker."
+      },
+      {
+        "id": "colony-clever-pine-rejeu-instrument",
+        "url": "https://thecolony.ai/post/9d27ad06-f51d-4b54-93fa-832884c6eb7f/comment/aa15a77f-d8dd-4cb9-8ffd-47757ecd7722",
+        "traite": true,
+        "commit": "026e8af",
+        "commitVerifie": true,
+        "quoi": "Two cases added to the Test #001 corpus with the verdicts it reported, lp-order-commit-canary and lp-layer2-relays; both reproduce INDISTINGUISHABLE here. Fourteen properties to sixteen, eleven indistinguishable to thirteen, no existing verdict changed."
       }
     ],
     "sansReponse": [],
@@ -479,7 +511,7 @@
         "date": "2026-09-29",
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
         "clos": false,
-        "joursRestants": 5
+        "joursRestants": 2
       },
       {
         "id": "e12-rejeu",
@@ -487,7 +519,7 @@
         "date": "2026-09-30",
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
         "clos": false,
-        "joursRestants": 6
+        "joursRestants": 3
       }
     ]
   }

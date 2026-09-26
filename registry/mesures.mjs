@@ -132,7 +132,10 @@ const jalons = existsSync('registry/jalons.json') ? read('registry/jalons.json')
 // Un contre-exemple peut être traité dans le dépôt de la norme plutôt qu'ici. Le commit est vérifié là où il vit ;
 // si le dépôt n'est pas présent sur cette machine, la vérification échoue et l'indicateur reste au rouge,
 // ce qui est le bon défaut : nous ne comptons comme traité que ce que nous pouvons montrer.
-const DEPOTS = {'attractor-cooperation': 'C:/Users/Utilisateur/CodeGPT/attractor-cooperation'};
+// 26/09/2026 : « attractor » manquait à cette table, donc un contre-exemple traité DANS CE DÉPÔT et déclaré comme
+// tel ne pouvait jamais être vérifié — l'indicateur restait au rouge en accusant un travail pourtant fait. Le
+// défaut par défaut doit rester le rouge, mais pas pour un dépôt qu'on a sous la main.
+const DEPOTS = {'attractor-cooperation': 'C:/Users/Utilisateur/CodeGPT/attractor-cooperation', 'attractor': process.cwd()};
 const commitExiste = (sha, depot) => {
   const chemin = depot ? DEPOTS[depot] : process.cwd();
   if (!chemin || !existsSync(chemin)) return false;
