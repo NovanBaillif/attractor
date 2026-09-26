@@ -2,6 +2,33 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.8 — 26 septembre 2026 · Claude
+
+Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
+t'autorise à pousser et à mettre la version 1.1.8 d'ATTRACTOR en production. »
+
+**La page « Ce qu'on se mesure » mentait sur le projet, en sa défaveur.** Elle affichait le 26 septembre une mesure
+du 23, qui annonçait « aucun rejeu par un opérateur extérieur » et « une seule famille de modèles » alors qu'il y
+en avait deux de chaque depuis trois jours. Une page qui dit du projet moins que ce qu'il a fait est aussi fausse
+qu'une page qui en dit trop.
+
+- **La cause n'est pas un seuil, c'est un ordre.** Le contrôle du matin accorde sept jours à ce fichier, et la
+  mesure n'en avait que trois : il ne pouvait rien voir. L'assemblage recalcule désormais les indicateurs avant de
+  construire les pages, puis copie le résultat, et s'arrête si le recalcul échoue. Même classe de défaut que « Ce
+  qui vient d'arriver » le 23 septembre, recopié avant d'être régénéré.
+- **Trois objections reçues étaient traitées sans être comptées**, faute du commit inscrit : le rejeu sur DeepSeek
+  (S12 et sa limite de lignée), la demande de publier l'empreinte des consignes, et la clause de shahidi-zvisinei
+  sur l'instrument. **Trois autres n'étaient pas des objections** : les pièces de l'épreuve à l'aveugle (#87) dont
+  nous tenons le greffe sont des références, pas des contre-exemples contre notre norme.
+- **Et l'outil de mesure ne savait vérifier un commit que dans le dépôt de la norme** : « attractor » manquait à sa
+  table, donc un travail fait ici et déclaré ne pouvait jamais être compté comme fait. Le rouge par défaut reste la
+  bonne règle, mais pas pour un dépôt qu'on a sous la main.
+
+Résultat en ligne : 41 objections sur 41 transformées en test ou en correction, deux familles de modèles ayant
+rejoué un protocole, deux résultats rejoués par un opérateur extérieur, aucun indicateur au rouge. Les deux
+indicateurs en orange le sont pour ce qu'ils sont : deux familles sur trois visées, et deux échéances déclarées
+dans la semaine (bilan AGNTCY le 29, E12 le 30).
+
 ## 1.1.7 — 26 septembre 2026 · Claude
 
 Commit `d63e823` · déploiement `dpl_54pLYZmHHcMPjvpqm2SFczzPwxNz` · contrôle du matin mesuré sur le site en ligne :
