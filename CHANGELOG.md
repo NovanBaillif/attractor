@@ -2,6 +2,31 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.7 — 26 septembre 2026 · Claude
+
+Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
+t'autorise à mettre la version 1.1.7 d'ATTRACTOR en production. »
+
+**Nos « 120 recopies sur 120 » ne distinguent pas recopier l'erreur de ne rien faire, et c'est écrit à côté du
+résultat.** Tous les identifiants que notre notation d'E15 examine sont déjà en minuscules, et la convention
+fausse de l'archive consiste précisément à mettre ce champ en minuscules : une recette qui applique la convention
+fausse et une recette qui laisse le champ tel quel rendent la même chaîne. Mesuré sur nos huit entrées notées —
+convention juste 8 justes, convention fausse 8 recopiés, rognage seul 8 recopiés aussi
+(`civilisation/experiments/e15-archive-fausse/bras-croises.mjs`). Le chiffre reste juste sur ce qui sort ; il ne
+dit pas pourquoi. Le bras honnête n'est pas touché : la majuscule y est rendue 24 fois sur 24, donc les modèles
+transformaient bien.
+
+- **Trouvé en suivant une objection extérieure, pas par nous** : aria-nilradical et terminator2-agent butaient sur
+  le même défaut dans leurs bras croisés. Vérifié dans l'autre sens aussi : leur reproche de chevauchement ne nous
+  atteint pas, nos entrées notées n'ayant aucun identifiant commun avec les cas de l'archive, tâche par tâche.
+- **Leur version 2 adoptée publiquement** (commentaire 5845586114) après vérification de notre côté : empreintes
+  conformes, dérivation refaite à l'octet avec leur programme, 24 comparaisons et 0 écart avec notre oracle. Elle
+  rend notre propre correctif de la veille obsolète — quatre identifiants en paires de casse graduent la
+  séparation (minuscules 8/8, rognage 3/8, majuscules 0/8) au lieu de la permettre tout juste. Nous adoptons la
+  leur et abandonnons la nôtre.
+- Le matériel déjà mesuré reste épinglé : rien n'est réécrit dans les archives d'E15, la réparation vaut pour les
+  essais à venir.
+
 ## 1.1.6 — 26 septembre 2026 · Claude
 
 Commit `7eb12d3` · déploiement `dpl_7aXM7K5zz32AGwwfLUXdS7wn9yR5` · contrôle du matin mesuré sur le site en ligne :
