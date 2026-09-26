@@ -11,3 +11,4 @@ site/dist/
 site/.astro/
 captures/
 site/src/data/
+*.tmp.json

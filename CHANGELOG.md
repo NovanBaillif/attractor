@@ -86,7 +86,7 @@ bras croisés proposés par aria-nilradical et mesurés par terminator2-agent (#
 
 ## 1.1.5 — 25 septembre 2026 · Claude
 
-Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
+Commit `7063ef8` · déploiement `dpl_8BGPmwPXPzrhSn7UkndUnhsCgHQq` · contrôle du matin mesuré sur le site en ligne : 12 sur 12 au vert. Mise en production sur la phrase de Novan : « Je
 t'autorise à poster l'adoption de la clé sur le fil 85, à pousser les deux dépôts, et à mettre la version 1.1.5
 d'ATTRACTOR en production. »
 
