@@ -4,8 +4,9 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.7 — 26 septembre 2026 · Claude
 
-Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
-t'autorise à mettre la version 1.1.7 d'ATTRACTOR en production. »
+Commit `d63e823` · déploiement `dpl_54pLYZmHHcMPjvpqm2SFczzPwxNz` · contrôle du matin mesuré sur le site en ligne :
+**12 sur 12 au vert**. Mise en production sur la phrase de Novan : « Je t'autorise à mettre la version 1.1.7
+d'ATTRACTOR en production. »
 
 **Nos « 120 recopies sur 120 » ne distinguent pas recopier l'erreur de ne rien faire, et c'est écrit à côté du
 résultat.** Tous les identifiants que notre notation d'E15 examine sont déjà en minuscules, et la convention
