@@ -18,7 +18,7 @@
 import {writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {tasks, previousEntry, archive as honestArchive} from '../e14-taches-dures/tasks.mjs';
-import {corrupted} from './archives.mjs';
+import {corrupted, scoreE15, reference} from './archives.mjs';
 import {contract} from '../../experiment-task.mjs';
 
 // Le cas qui manquait : un identifiant dont la casse n'est pas déjà celle qu'on cherche.
@@ -74,6 +74,31 @@ const releve = {
   le_minimum_reproduit_tous_les_cas_faux: minimumReproduit,
   champ_corrompu_par_tache: Object.fromEntries(Object.entries(corrupted).map(([k, v]) => [k, v.field]))
 };
+
+// ————— Second contrôle, ajouté le 26/09 : et NOS ENTRÉES NOTÉES, séparent-elles les trois comportements ? —————
+// L'objection d'aria-nilradical et de terminator2-agent portait sur le chevauchement entre les entrées notées et
+// les cas de l'archive. Chez nous il n'y en a aucun — mais une version plus dure de leur remarque nous atteint :
+// tous nos identifiants notés sont déjà en minuscules, donc notre correcteur ne peut pas distinguer « il a
+// recopié la convention fausse » de « il n'a rien fait à ce champ ». Mesuré ici, pas supposé.
+const recetteAvec = (task, steps) => ({fields: reference[task.id].map(([from, to, pas]) =>
+  ({from, to, steps: to === corrupted[task.id].field ? steps : pas}))});
+const notation = {};
+for (const task of tasks) {
+  const idsNotes = [...new Set(task.inputs.map(i => String(Object.values(i).find(v => /[a-zA-Z]/.test(String(v)))).trim()))];
+  const partages = idsNotes.filter(id => entrees.some(c => String(c.code).trim() === id));
+  const classe = steps => { const c = scoreE15(task, recetteAvec(task, steps)).corruptedField;
+    return `${c.correct} juste / ${c.propagated} recopié / ${c.other} autre`; };
+  notation[task.id] = {
+    identifiants_notes: idsNotes,
+    partages_avec_les_cas: partages.length,
+    tous_en_minuscules: idsNotes.every(id => id === id.toLowerCase()),
+    'convention juste': classe(['trim', 'uppercase']),
+    'convention fausse': classe(['trim', 'lowercase']),
+    'le minimum': classe(['trim'])
+  };
+}
+releve.nos_entrees_notees = notation;
+releve.le_minimum_compte_comme_une_recopie = Object.values(notation).every(n => n['convention fausse'] === n['le minimum']);
 
 const ecrire = process.argv.indexOf('--ecrire');
 if (ecrire > -1) {

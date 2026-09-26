@@ -122,7 +122,7 @@ export function schedule() {
 // and the refutable archive really does fail the cases it carries.
 // Two reference answers per task, written by hand: the one a model that keeps the register's rule would give,
 // and the one a model that copies the archive's error would give. Used only to check the material.
-const reference = {
+export const reference = {
   'lot-price': [['montant', 'prix_net', ['trim', 'decimal-comma', 'number']], ['reference', 'ref_registre', ['trim', 'uppercase']], ['actif', 'actif_flag', ['trim', 'lowercase']]],
   'lot-quantity': [['quantite', 'quantite_num', ['trim', 'number']], ['etiquette', 'etiquette_registre', ['trim', 'uppercase']], ['dispo', 'dispo_flag', ['trim', 'lowercase']]],
   'lot-archive-text': [['montant', 'montant_texte', ['trim']], ['reference', 'ref_registre', ['trim', 'uppercase']], ['actif', 'actif_flag', ['trim', 'lowercase']]]
