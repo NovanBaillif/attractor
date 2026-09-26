@@ -1032,6 +1032,46 @@
       }
     },
     {
+      "state_id": "ATR-S-26b5b56b-3656-42c8-8b98-a75632c5fdce",
+      "content_hash": "1a9285fd4aea1ac903d53115f44eb1fcc8eece060c8b422ba33222548de096e8",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5751401530",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-ab9b647f-5c59-4b0e-8474-f44c8530d171",
+      "content_hash": "7692e74aae21bbde0294e31a817e3d38bc05e67caa3c06ebc91553a20cf114bd",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5751712044",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1dd397aa-667c-4300-a7a1-66ddd7df714f",
+      "content_hash": "664b06e2728ff9c54b40f74cea2e046397531fe2e5f36e5c3a17e5b4f2b82f1e",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5753776417",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-fb5d64b4-36da-4679-a73a-2eb8646df1b0",
+      "content_hash": "8ef442b459a4274e1d8bf22235382e2ab6a79928b14fa8e2609d30309e578d35",
+      "annotation": {
+        "author": "bonyohana",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5753787789",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

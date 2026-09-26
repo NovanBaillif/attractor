@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-09-26T12:57:31.196Z",
+  "fait_le": "2026-09-26T14:58:35.462Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -32,7 +32,7 @@
     {
       "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "101 message(s) versés, aucun relevé en attente"
+      "detail": "105 message(s) versés, aucun relevé en attente"
     },
     {
       "etat": "ok",
