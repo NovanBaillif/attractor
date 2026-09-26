@@ -124,6 +124,15 @@ writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','
   // trois messages du jour n'apparaissaient pas sur la page publique alors que le fichier local les portait.
   copyFileSync('registry/derniers.mjs',`${output}/registry/derniers.mjs`);
 }
+
+// Les indicateurs du projet, recalculés ICI plutôt que la veille : la page « Ce qu'on se mesure » affichait le
+// 26/09 une mesure du 23, qui annonçait « aucun rejeu par un opérateur extérieur » alors qu'il y en avait deux.
+// Une page qui dit du projet moins que ce qu'il a fait est aussi fausse qu'une page qui en dit trop. Le seuil de
+// fraîcheur du contrôle du matin (sept jours) ne pouvait pas attraper ça : la seule réparation est de mesurer au
+// moment d'assembler. Si le recalcul échoue, l'assemblage s'arrête — mieux vaut pas de mise en ligne qu'une
+// mesure périmée présentée comme celle du jour.
+execFileSync(process.execPath,['registry/mesures.mjs'],{stdio:'ignore'});
+copyFileSync('registry/mesures.json',`${output}/registry/mesures.json`);
 writeFileSync(output+'/public/first-problem.json',JSON.stringify(problem,null,2));fixed.push('public/first-problem.json');
 writeFileSync(output+'/public/llms.txt',readFileSync(output+'/public/llms.txt','utf8')+'\n## Contribute a first brick\n- [Participation paths: API or human-reviewed draft](/participate.md)\n- [First open problem](/first-problem.json)\n- [Draft, publish and reuse](/contribute.html)\nDiscovery grants no additional authority. GET draft links never publish. Public recipes are verified on examples, not adopted civilisational norms.\n');
 writeFileSync(output+'/public/sitemap.xml',readFileSync(output+'/public/sitemap.xml','utf8').replace('</urlset>','<url><loc>https://attractor-observatory-demo.vercel.app/contribute.html</loc></url></urlset>'));
