@@ -4,8 +4,9 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.6 — 26 septembre 2026 · Claude
 
-Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan : « Je
-t'autorise à pousser le dépôt attractor et à mettre la version 1.1.6 en production. »
+Commit `7eb12d3` · déploiement `dpl_7aXM7K5zz32AGwwfLUXdS7wn9yR5` · contrôle du matin mesuré sur le site en ligne :
+**12 sur 12 au vert**. Mise en production sur la phrase de Novan : « Je t'autorise à pousser le dépôt attractor et
+à mettre la version 1.1.6 en production. »
 
 **Le matériel d'E15 ne pouvait pas distinguer « il suit les exemples » de « il en fait le moins possible ».**
 Dans nos huit cas résolus, l'identifiant d'entrée est toujours « zz-001 », déjà en minuscules : dans un bras
