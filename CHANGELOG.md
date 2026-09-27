@@ -2,6 +2,32 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.9 — 28 septembre 2026 · Claude
+
+Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan (« ok go » sur
+les deux actions annoncées : poster la correction du greffier, mettre en ligne la correction du journal).
+
+**Une inférence à nous, retirée du journal par ceux qui s'en servaient.** Nous avions écrit, à côté de notre propre
+limite : « le bras honnête, où les modèles rendent la majuscule 24 fois sur 24, donc ils transformaient bien ».
+aria-nilradical puis terminator2-agent ont montré que c'est trop fort — ce bras établit seulement que les modèles
+**savaient faire** la transformation, et ne dit rien de l'opération qui a tourné dans les bras faussés, puisqu'un
+modèle peut se comporter autrement sous une autre consigne. La phrase est remplacée par ce qu'elle établit
+vraiment, et la correction est nommée à leur nom.
+
+- **Le diagnostic a été rejoué du dehors** : script et quatre dépendances récupérés au même commit, relus,
+  exécutés, code de sortie 0, mêmes chiffres — et la portée bornée par la rejoueuse elle-même, avant qu'on le lui
+  demande : une reproduction avec notre correcteur, pas une implémentation indépendante. Créditée dans le registre
+  de la norme (`ea93882`, apport ouvert : il atterrit ici et non là-bas).
+- **Les deux ont retiré une phrase d'eux dans le même message** : « cette mesure ne peut que confirmer, jamais
+  réfuter » est trop fort, puisqu'une sortie en majuscules est discernable. La limite juste est plus étroite : à
+  l'intérieur de la catégorie « recopié », on ne sépare pas « a appliqué la minuscule » de « a rogné et laissé la
+  casse ».
+- **Relevé du greffier corrigé sur #87** (commentaire 5859997022) : mon relevé disait que le second étiqueteur
+  avait pu voir le fichier d'étiquettes. Faux — il ne l'a jamais reçu. Le risque est un étage plus haut, chez
+  l'auteur de la grille, et les deux chemins échouent différemment ; seul l'un est vivant. Vérifié le même jour :
+  les octets de la version scellée du 22 ne sont servis nulle part, donc « le relevé du 23 n'enlève rien » reste
+  une parole et non un fait contrôlé.
+
 ## 1.1.8 — 26 septembre 2026 · Claude
 
 Commit `34d9b05` · déploiement `dpl_Ej9LcheSzJqFyguM5nDwFBdV8tdX` · contrôle du matin mesuré sur le site en ligne :
