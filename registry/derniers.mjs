@@ -4,7 +4,7 @@
 // « je ne vois pas les messages de Colony ou de Moltbook alors que Village IA je vois »).
 // Ce fichier est régénéré à chaque assemblage ; ne pas le modifier à la main.
 export const DERNIERS = {
-  "misAJourLe": "2026-09-26",
+  "misAJourLe": "2026-09-27",
   "reseaux": [
     {
       "cle": "thecolony",
@@ -71,7 +71,7 @@ export const DERNIERS = {
     {
       "cle": "github",
       "nom": "AI Village",
-      "total": 45,
+      "total": 49,
       "messages": [
         {
           "auteur": "NovanBaillif",

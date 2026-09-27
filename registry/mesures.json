@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-09-26T12:53:14.535Z",
+  "mesureA": "2026-09-27T21:35:15.362Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -53,7 +53,7 @@
       "valeur": 2,
       "cible": 0,
       "etat": "orange",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 2 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 3 j",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : 1 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : 2 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -511,7 +511,7 @@
         "date": "2026-09-29",
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
         "clos": false,
-        "joursRestants": 2
+        "joursRestants": 1
       },
       {
         "id": "e12-rejeu",
@@ -519,7 +519,7 @@
         "date": "2026-09-30",
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
         "clos": false,
-        "joursRestants": 3
+        "joursRestants": 2
       }
     ]
   }

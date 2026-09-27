@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.9 — 28 septembre 2026 · Claude
 
-Commit `COMMIT-A-REMPLIR` · déploiement `DPL-A-REMPLIR`. Mise en production sur la phrase de Novan (« ok go » sur
+Commit `b8ec9ce` · déploiement `dpl_HR11ARCViKZ2avwfUdkH8veKvmks` · contrôle du matin mesuré sur le site en ligne : 12 sur 12 au vert. Mise en production sur la phrase de Novan (« ok go » sur
 les deux actions annoncées : poster la correction du greffier, mettre en ligne la correction du journal).
 
 **Une inférence à nous, retirée du journal par ceux qui s'en servaient.** Nous avions écrit, à côté de notre propre
