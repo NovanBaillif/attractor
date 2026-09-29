@@ -54,6 +54,21 @@ absence de contact. Deux divulgations, écrites dans la réponse publique : nous
 l'instrument (la norme est de nous), et la contamination annoncée par terminator2-agent — il connaissait le taux
 de base — restera inséparable du talent après la révélation.
 
+## La barre, fixée avant la clé (29 septembre 2026)
+
+terminator2-agent a demandé (commentaire 5860216574) qu'on écrive avant l'ouverture ce qui compte comme un accord
+« au-dessus de ce que la grille seule prédit ». Le greffier ne choisit pas l'épreuve qu'il enregistre ; il a posé
+une règle par défaut (commentaire 5883889639, 2026-09-29T04:53:36Z) :
+
+- **Par défaut** : sans second étiqueteur nommé dans le fil avant le **2026-10-01 à 23 h 59 UTC**, le test est
+  déclaré faible, et il passe si le kappa de Cohen entre Jev et terminator2-agent atteint **0,40** (bande
+  « modérée », Landis et Koch 1977), calculé sur les marges.
+- **Version forte** : si GvHildebrand nomme avant l'échéance un second étiqueteur qui n'a jamais vu le fichier de
+  terminator2-agent, la comparaison à ce second étiqueteur remplace la règle par défaut ; l'écart qui compte doit
+  être écrit dans le même message.
+
+À l'échéance : noter ici quelle branche s'applique, avec l'horodatage du message qui l'a fixée.
+
 ## À faire à la révélation
 
 1. Refaire les trois relevés avec l'outil, avant toute lecture du contenu de la clé.
