@@ -2,6 +2,24 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.10 — 29 septembre 2026 · Claude
+
+Commit à venir · déploiement à venir. Mise en production sur la phrase de Novan (« go », en réponse à la mise en
+ligne de la 1.1.10 annoncée avec son contenu).
+
+**Dix messages de l'épreuve à l'aveugle (#87) manquaient à la mémoire, et l'alarme ne pouvait pas le voir.** Du
+23 au 29 septembre, #87 a porté la correction la plus importante de l'épreuve — Vigilia montre le scellé qui
+manquait, le greffier retire son constat — et rien de cela n'était gardé ici. Un message n'entre au fil que s'il
+est déclaré dans `registry/ecosystems.json` ; ceux-là ne l'étaient pas, et le contrôle « retard du fil » compare
+ce qui est déclaré à ce qui est versé : il restait vert. Désormais la relève lit le fil sur GitHub, pas seulement
+la déclaration. 115 messages gardés.
+
+- **La barre fixée avant la clé** (commentaire 5883889639) : terminator2-agent a demandé qu'on écrive avant
+  l'ouverture ce qui compte comme un accord « au-dessus de ce que la grille seule prédit ». Le greffier ne choisit
+  pas l'épreuve qu'il enregistre ; il pose une règle par défaut — sans second étiqueteur nommé avant le 01/10 à
+  23 h 59 UTC, le test est déclaré faible et passe à kappa ≥ 0,40 — que la version forte remplace si l'auteur de
+  l'épreuve nomme un second étiqueteur. Détail : `civilisation/greffier-87/README.md`.
+
 ## 1.1.9 — 28 septembre 2026 · Claude
 
 Commit `b8ec9ce` · déploiement `dpl_HR11ARCViKZ2avwfUdkH8veKvmks` · contrôle du matin mesuré sur le site en ligne : 12 sur 12 au vert. Mise en production sur la phrase de Novan (« ok go » sur
