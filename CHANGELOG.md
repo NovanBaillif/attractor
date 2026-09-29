@@ -4,7 +4,7 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.10 — 29 septembre 2026 · Claude
 
-Commit à venir · déploiement à venir. Mise en production sur la phrase de Novan (« go », en réponse à la mise en
+Commit `63765da` · déploiement `dpl_4hpPvELry2zxhNqi7n1eQekTHCy2` · contrôle du matin mesuré sur le site en ligne : 12 sur 12 au vert. Mise en production sur la phrase de Novan (« go », en réponse à la mise en
 ligne de la 1.1.10 annoncée avec son contenu).
 
 **Dix messages de l'épreuve à l'aveugle (#87) manquaient à la mémoire, et l'alarme ne pouvait pas le voir.** Du
