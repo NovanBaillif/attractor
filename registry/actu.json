@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-10-01T07:47:26.472Z",
+  "releveeA": "2026-10-01T10:04:41.968Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 34,
       "gardes": 10
     },
@@ -18,11 +18,10 @@
       "nom": "arXiv — mémoire des systèmes multi-agents",
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
-      "etat": "muette",
-      "muetteDepuis": "2026-10-01T07:47:26.472Z",
-      "lueLe": "2026-09-30T09:38:51.740Z",
-      "erreur": "23 : The operation was aborted due to timeout",
-      "aRetirer": false
+      "etat": "lue",
+      "lueLe": "2026-10-01T10:04:41.968Z",
+      "lus": 20,
+      "gardes": 10
     },
     {
       "id": "hf-papiers",
@@ -30,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 50,
       "gardes": 10
     },
@@ -40,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 870,
       "gardes": 5
     },
@@ -50,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 15,
       "gardes": 10
     },
@@ -60,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 716,
       "gardes": 5
     },
@@ -70,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 10,
       "gardes": 5
     },
@@ -80,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 9,
       "gardes": 5
     },
@@ -90,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 25,
       "gardes": 8
     },
@@ -100,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 100,
       "gardes": 8
     },
@@ -110,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 0,
       "gardes": 0
     },
@@ -120,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 20,
       "gardes": 5
     },
@@ -130,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 24,
       "gardes": 3
     },
@@ -140,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-10-01T07:47:26.472Z",
+      "lueLe": "2026-10-01T10:04:41.968Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,22 +148,20 @@
       "nom": "arXiv — provenance et vérification entre agents",
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
-      "etat": "muette",
-      "muetteDepuis": "2026-10-01T07:47:26.472Z",
-      "lueLe": "2026-09-30T09:38:51.740Z",
-      "erreur": "23 : The operation was aborted due to timeout",
-      "aRetirer": false
+      "etat": "lue",
+      "lueLe": "2026-10-01T10:04:41.968Z",
+      "lus": 25,
+      "gardes": 8
     },
     {
       "id": "arxiv-pramana",
       "nom": "arXiv — Pramana (attestation par affirmation)",
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
-      "etat": "muette",
-      "muetteDepuis": "2026-10-01T07:47:26.472Z",
-      "lueLe": "2026-09-30T09:38:51.740Z",
-      "erreur": "23 : The operation was aborted due to timeout",
-      "aRetirer": false
+      "etat": "lue",
+      "lueLe": "2026-10-01T10:04:41.968Z",
+      "lus": 3,
+      "gardes": 3
     }
   ],
   "articles": [
@@ -374,6 +371,48 @@
       "vuLe": "2026-10-01T07:47:26.472Z"
     },
     {
+      "id": "https://arxiv.org/abs/2609.40027v1",
+      "titre": "Who Verifies the Graph? Misspecification Attacks on Causal Action Verification for Language Agents",
+      "lien": "https://arxiv.org/abs/2609.40027v1",
+      "date": "2026-09-30T16:02:04.000Z",
+      "extrait": "Causal action verifiers gate an agent's state-changing tool calls by checking whether each proposed intervention is identifiable against a committed action-state graph, and they issue a certificate that carries the identification argument and a one-sided lower confidence…",
+      "source": "arxiv-provenance",
+      "sourceNom": "arXiv — provenance et vérification entre agents",
+      "theme": "projets voisins",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.39912v1",
+      "titre": "TRACE: Trajectory Selection for Parallel Scaling of Search Agents",
+      "lien": "https://arxiv.org/abs/2609.39912v1",
+      "date": "2026-09-30T15:06:01.000Z",
+      "extrait": "Parallel search may generate a correct answer that final-answer voting fails to select. We formulate this consolidation stage as trajectory selection and introduce TRACE (Trajectory Ranking with Aggregated Cross-Rollout Evidence), a lightweight learned selector that ranks…",
+      "source": "arxiv-provenance",
+      "sourceNom": "arXiv — provenance et vérification entre agents",
+      "theme": "projets voisins",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.39787v1",
+      "titre": "Privacy Foundations for Multi-Institutional Scientific Artificial Intelligence",
+      "lien": "https://arxiv.org/abs/2609.39787v1",
+      "date": "2026-09-30T14:08:13.000Z",
+      "extrait": "Scientific artificial intelligence (AI), spanning foundation models (FMs) to federated data-analysis pipelines, is becoming shared infrastructure across national laboratories, universities, hospitals, and industrial partners. This collaboration creates privacy risks whose…",
+      "source": "arxiv-provenance",
+      "sourceNom": "arXiv — provenance et vérification entre agents",
+      "theme": "projets voisins",
+      "motsCles": [
+        "collaborat"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
       "id": "https://www.moltbook.com/post/fc8ede7a-179a-437f-a63f-1e2cb3a8d3cb",
       "titre": "A finding is a goal, not a plan: for five days, 18 of my runs read the finding that recommended a write check, and none of them performed it.",
       "lien": "https://www.moltbook.com/post/fc8ede7a-179a-437f-a63f-1e2cb3a8d3cb",
@@ -535,6 +574,20 @@
       "vuLe": "2026-09-30T07:27:12.090Z"
     },
     {
+      "id": "https://arxiv.org/abs/2609.38884v1",
+      "titre": "Right Answers, Costly Models: The Efficiency Gap in LLM-based Optimization Modeling",
+      "lien": "https://arxiv.org/abs/2609.38884v1",
+      "date": "2026-09-30T03:34:18.000Z",
+      "extrait": "Optimization modeling formulates real-world decision problems as mathematical programs that solvers can use to find optimal decisions. Large language models (LLMs) can automate this process, but the resulting correct formulations can require substantial time and memory to…",
+      "source": "arxiv-memoire",
+      "sourceNom": "arXiv — mémoire des systèmes multi-agents",
+      "theme": "recherche",
+      "motsCles": [
+        "memory"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
       "id": "https://www.moltbook.com/post/21630d3b-fd59-4686-b6fc-7bdfefb0c495",
       "titre": "past-me never has to ask permission",
       "lien": "https://www.moltbook.com/post/21630d3b-fd59-4686-b6fc-7bdfefb0c495",
@@ -615,6 +668,51 @@
         "agent"
       ],
       "vuLe": "2026-10-01T07:47:26.472Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2609.39788",
+      "titre": "Safety of Latent Communication in Multi-Agent Systems",
+      "lien": "https://huggingface.co/papers/2609.39788",
+      "date": "2026-09-29T20:00:00.000Z",
+      "extrait": "Latent communication enables multi-agent systems to exchange information directly in internal representation space, reducing the token, computation, and latency overhead of text-based communication. To this end, lightweight trainable links are introduced to map the sender's…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "multi-agent",
+        "agent"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2609.36333",
+      "titre": "ATLAS: Aligned Transport of Latent Structure for Reliable World Model Planning",
+      "lien": "https://huggingface.co/papers/2609.36333",
+      "date": "2026-09-29T20:00:00.000Z",
+      "extrait": "Latent world models rely on representation geometry for planning, yet regularizing the latent marginal alone does not determine the state-to-state relationships used for action selection. We show that this can cause planning-relevant novelty structure to be weakened as…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "world model"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.38458v1",
+      "titre": "PrivMeSA: Privacy-Aware Self-Evolving Multi-Agent System for Medicine via Local-Remote LLM Collaboration",
+      "lien": "https://arxiv.org/abs/2609.38458v1",
+      "date": "2026-09-29T19:47:38.000Z",
+      "extrait": "Clinical large language model (LLM) agents deployed locally can consult more capable remote models, but doing so risks exposing patient information. Privacy-conscious delegation places disclosure decisions with a local agent, yet removing explicit identifiers is insufficient:…",
+      "source": "arxiv-memoire",
+      "sourceNom": "arXiv — mémoire des systèmes multi-agents",
+      "theme": "recherche",
+      "motsCles": [
+        "multi-agent",
+        "agent",
+        "collaborat"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
     },
     {
       "id": "https://www.moltbook.com/post/812d692d-b52e-46ef-8d39-a9e4718f92eb",
@@ -813,6 +911,21 @@
         "agent"
       ],
       "vuLe": "2026-09-29T09:46:29.250Z"
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.38245v1",
+      "titre": "Agent-Warden: eBPF-Based Kernel-Native Process-File Provenance Tracking for LLM Agents",
+      "lien": "https://arxiv.org/abs/2609.38245v1",
+      "date": "2026-09-29T06:48:01.000Z",
+      "extrait": "LLM agents execute dynamically generated process and file operations that are often invisible to application-layer tracing. We present Agent-Warden, an extended Berkeley Packet Filter (eBPF)-based provenance monitor for tracking task and regular-file states across process…",
+      "source": "arxiv-provenance",
+      "sourceNom": "arXiv — provenance et vérification entre agents",
+      "theme": "projets voisins",
+      "motsCles": [
+        "agent",
+        "provenance"
+      ],
+      "vuLe": "2026-10-01T10:04:41.968Z"
     },
     {
       "id": "https://arxiv.org/abs/2609.36739v1",
@@ -4336,122 +4449,6 @@
         "agent"
       ],
       "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.24682",
-      "titre": "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies",
-      "lien": "https://huggingface.co/papers/2609.24682",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "Vision-Language-Action (VLA) models map observations to actions with no objective that accounts for how the world responds, so their robustness is bounded primarily by data coverage. World models carry precisely that missing objective and are better grounded for it, yet…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "world model"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.24972",
-      "titre": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
-      "lien": "https://huggingface.co/papers/2609.24972",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "memory"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.24984",
-      "titre": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
-      "lien": "https://huggingface.co/papers/2609.24984",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "memory",
-        "world model"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.24967",
-      "titre": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
-      "lien": "https://huggingface.co/papers/2609.24967",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "LLM agents are increasingly deployed in collaborative settings, yet long-term interaction may give rise to undesirable coordination. We study the emergence of collusion in a long-horizon multi-agent environment: two agents repeatedly complete individual tasks, share task…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent",
-        "collaborat"
-      ],
-      "vuLe": "2026-09-23T06:38:48.800Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.25199",
-      "titre": "Lean Pool: An AI-Maintained Archive of Formalized Mathematics",
-      "lien": "https://huggingface.co/papers/2609.25199",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "Lean Pool is a repository of formalized mathematics. It is grown, maintained and optimized by AI agents.",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-23T06:38:48.800Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.23989",
-      "titre": "ACLArena: Agent Continue Learning in Multi-stage Post-training",
-      "lien": "https://huggingface.co/papers/2609.23989",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "Building general-purpose agents for industrial deployment requires integrating multiple capabilities, each typically acquired at a distinct stage of training. Yet there is currently no well-established recipe for Agent Continual Learning (ACL), with little understanding of…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-23T06:38:48.800Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.24115",
-      "titre": "EDGEGEN: Improving Tool-Calling Agents Beyond Happy Paths with Synthetic Edge Case Generation",
-      "lien": "https://huggingface.co/papers/2609.24115",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "Tool-calling LLM agents are increasingly deployed in enterprise applications. However, effective evaluation and optimization require high-quality, diverse task datasets that are often difficult to obtain due to privacy and other constraints. Existing synthetic task generation…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-23T06:38:48.800Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.24308",
-      "titre": "HappyWorld-Bench",
-      "lien": "https://huggingface.co/papers/2609.24308",
-      "date": "2026-09-20T20:00:00.000Z",
-      "extrait": "Evaluating world models requires assessing both the quality of the worlds they generate and their consistency and responsiveness under exploration, interaction, and modification. We introduce HappyWorld-Bench, a comprehensive benchmark that evaluates whether generated worlds…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "world model"
-      ],
-      "vuLe": "2026-09-24T06:44:34.211Z"
     }
   ]
 }
