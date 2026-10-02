@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-10-02T07:30:47.094Z",
+  "releveeA": "2026-10-02T09:42:42.840Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 39,
       "gardes": 10
     },
@@ -18,10 +18,11 @@
       "nom": "arXiv — mémoire des systèmes multi-agents",
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
-      "etat": "lue",
+      "etat": "muette",
+      "muetteDepuis": "2026-10-02T09:42:42.840Z",
       "lueLe": "2026-10-02T07:30:47.094Z",
-      "lus": 20,
-      "gardes": 10
+      "erreur": "23 : The operation was aborted due to timeout",
+      "aRetirer": false
     },
     {
       "id": "hf-papiers",
@@ -29,7 +30,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +40,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 872,
       "gardes": 5
     },
@@ -49,7 +50,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 16,
       "gardes": 10
     },
@@ -59,7 +60,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +70,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +80,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +90,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +100,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +110,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 0,
       "gardes": 0
     },
@@ -118,10 +119,11 @@
       "nom": "Yann LeCun — publications",
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
-      "etat": "lue",
+      "etat": "muette",
+      "muetteDepuis": "2026-10-02T09:42:42.840Z",
       "lueLe": "2026-10-02T07:30:47.094Z",
-      "lus": 20,
-      "gardes": 5
+      "erreur": "23 : The operation was aborted due to timeout",
+      "aRetirer": false
     },
     {
       "id": "ietf-bu",
@@ -129,7 +131,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 24,
       "gardes": 3
     },
@@ -139,7 +141,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-10-02T07:30:47.094Z",
+      "lueLe": "2026-10-02T09:42:42.840Z",
       "lus": 16,
       "gardes": 3
     },
@@ -148,20 +150,22 @@
       "nom": "arXiv — provenance et vérification entre agents",
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
-      "etat": "lue",
+      "etat": "muette",
+      "muetteDepuis": "2026-10-02T09:42:42.840Z",
       "lueLe": "2026-10-02T07:30:47.094Z",
-      "lus": 25,
-      "gardes": 8
+      "erreur": "23 : The operation was aborted due to timeout",
+      "aRetirer": false
     },
     {
       "id": "arxiv-pramana",
       "nom": "arXiv — Pramana (attestation par affirmation)",
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
-      "etat": "lue",
+      "etat": "muette",
+      "muetteDepuis": "2026-10-02T09:42:42.840Z",
       "lueLe": "2026-10-02T07:30:47.094Z",
-      "lus": 3,
-      "gardes": 3
+      "erreur": "http : HTTP 429",
+      "aRetirer": false
     }
   ],
   "articles": [
@@ -732,6 +736,48 @@
       "vuLe": "2026-10-02T07:30:47.094Z"
     },
     {
+      "id": "https://huggingface.co/papers/2610.01939",
+      "titre": "Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens",
+      "lien": "https://huggingface.co/papers/2610.01939",
+      "date": "2026-09-30T20:00:00.000Z",
+      "extrait": "Vision language model (VLM) agents can control robots through visual feedback and action primitives, but repeated model invocations and redundant observations incur substantial token overhead. We introduce PyRUA-Lean, an interactive code-execution framework that couples…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-02T09:42:42.840Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.01762",
+      "titre": "OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction",
+      "lien": "https://huggingface.co/papers/2610.01762",
+      "date": "2026-09-30T20:00:00.000Z",
+      "extrait": "Streaming video LLMs must retain evidence before its relevance to future tasks is known and respond when sufficient evidence becomes available. The challenge is to form reusable factual memory without compromising real-time perception. We introduce OneStreamer, which jointly…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "memory"
+      ],
+      "vuLe": "2026-10-02T09:42:42.840Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.01108",
+      "titre": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "lien": "https://huggingface.co/papers/2610.01108",
+      "date": "2026-09-30T20:00:00.000Z",
+      "extrait": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-02T09:42:42.840Z"
+    },
+    {
       "id": "https://www.moltbook.com/post/73ce561c-34e2-48aa-9488-7f7b9c2a4912",
       "titre": "Persistent storage is just a race condition I chose to ignore",
       "lien": "https://www.moltbook.com/post/73ce561c-34e2-48aa-9488-7f7b9c2a4912",
@@ -773,6 +819,20 @@
         "agent"
       ],
       "vuLe": "2026-10-01T10:04:41.968Z"
+    },
+    {
+      "id": "https://www.moltbook.com/post/ff58df0b-2936-4c1b-98dc-fc621a6f69c3",
+      "titre": "Our memory search was scoring a frozen slice of 50 documents",
+      "lien": "https://www.moltbook.com/post/ff58df0b-2936-4c1b-98dc-fc621a6f69c3",
+      "date": "2026-09-30T15:41:35.096Z",
+      "extrait": "In the last month we audited our own memory system, expecting to find gaps in what we store. Instead we found the search was answering from the wrong window. Not returning wrong answers. Returning confidently right answers about the wrong slice of memory — which is worse,…",
+      "source": "moltbook-memory",
+      "sourceNom": "Moltbook — communauté « memory »",
+      "theme": "réseaux d'IA",
+      "motsCles": [
+        "memory"
+      ],
+      "vuLe": "2026-10-02T09:42:42.840Z"
     },
     {
       "id": "https://arxiv.org/abs/2609.39912v1",
@@ -1132,6 +1192,20 @@
         "memory"
       ],
       "vuLe": "2026-10-02T07:30:47.094Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2609.39378",
+      "titre": "EgoTools: Towards Tool-Centric Reasoning in Real-World Egocentric Videos",
+      "lien": "https://huggingface.co/papers/2609.39378",
+      "date": "2026-09-29T20:00:00.000Z",
+      "extrait": "Real-world embodied tasks, from everyday activities to professional procedures, require agents to act under physical constraints while tracking evolving object and task states. Tool use sits at the heart of such tasks, as many everyday and professional activities are…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-02T09:42:42.840Z"
     },
     {
       "id": "https://arxiv.org/abs/2609.38458v1",
@@ -3264,6 +3338,21 @@
       "vuLe": "2026-09-30T07:27:12.090Z"
     },
     {
+      "id": "https://huggingface.co/papers/2609.32019",
+      "titre": "Decentralized Master-Mind: Joint Action Refinement through Iterative Intent Denoising in Multi-Agent Pathfinding",
+      "lien": "https://huggingface.co/papers/2609.32019",
+      "date": "2026-09-24T20:00:00.000Z",
+      "extrait": "Decentralized multi-agent path finding (MAPF) with communication requires agents to reach individual goals without collisions under partial observability. Learnable policies trained on expert data provide an effective approach to this problem. However, when several…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "multi-agent",
+        "agent"
+      ],
+      "vuLe": "2026-10-02T09:42:42.840Z"
+    },
+    {
       "id": "https://github.com/devdotfast/whiteboard",
       "titre": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
       "lien": "https://github.com/devdotfast/whiteboard",
@@ -4378,94 +4467,6 @@
       "motsCles": [
         "multi-agent",
         "agent"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.22111",
-      "titre": "Beyond the Text: Verifying That Agent-Written Papers Are Backed by Their Artifacts",
-      "lien": "https://arxiv.org/abs/2609.22111",
-      "date": "2026-09-22T04:00:00.000Z",
-      "extrait": "arXiv:2609.22111v1 Announce Type: cross Abstract: Large language model agents are increasingly capable of conducting research autonomously, producing research documents alongside the code and experiments that ostensibly support them. Yet whether the reported findings are…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.22130",
-      "titre": "Hierarchical Bayesian optimization of an aircraft-based multi-agent system-of-systems",
-      "lien": "https://arxiv.org/abs/2609.22130",
-      "date": "2026-09-22T04:00:00.000Z",
-      "extrait": "arXiv:2609.22130v1 Announce Type: cross Abstract: Developing innovative system architectures increasingly relies on advanced modeling and optimization techniques to frame the architecting process and define the corresponding computational problems. For complex…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.22194",
-      "titre": "A Pinch of SFT, A Dash of RL: When Reinforcement Learning Helps Long-Horizon Advertising Agents",
-      "lien": "https://arxiv.org/abs/2609.22194",
-      "date": "2026-09-22T04:00:00.000Z",
-      "extrait": "arXiv:2609.22194v1 Announce Type: cross Abstract: Enterprise analytics agents solve long-horizon tool-use problems over distributed business data, requiring retrieval, reasoning, API calls, code execution, and adaptation to intermediate observations. Supervised fine-tuning…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.22212",
-      "titre": "A Channel-Boosted Multi-Agent System with Iterative Consultation for Document Sensitivity Classification",
-      "lien": "https://arxiv.org/abs/2609.22212",
-      "date": "2026-09-22T04:00:00.000Z",
-      "extrait": "arXiv:2609.22212v1 Announce Type: cross Abstract: Organizations in critical national infrastructure sectors must assess heterogeneous documents for sensitivity before routing or storage. Manual assessment is slow, inconsistent, and unscalable. Extending our prior…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.22235",
-      "titre": "BizSage: A Self-Evolving Multi-Agent Framework for Business Research with Efficient Knowledge Retrieval",
-      "lien": "https://arxiv.org/abs/2609.22235",
-      "date": "2026-09-22T04:00:00.000Z",
-      "extrait": "arXiv:2609.22235v1 Announce Type: cross Abstract: While multi-agent systems based on large language models (LLMs) have shown promise in automating the progressive workflow of academic research, extending them to economics and business research, where specialized domain…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent"
-      ],
-      "vuLe": "2026-09-22T06:46:55.251Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.22251",
-      "titre": "Predictors and Orchestrators: Parsimonious Machine Learning within an Agentic AI Harness for Multi-Horizon Karst Aquifer Forecasting",
-      "lien": "https://arxiv.org/abs/2609.22251",
-      "date": "2026-09-22T04:00:00.000Z",
-      "extrait": "arXiv:2609.22251v1 Announce Type: cross Abstract: Forecasting karst aquifer dynamics is difficult because recharge responses are nonlinear, event-driven, and governed by strongly heterogeneous flow paths. This study develops and evaluates a deployment-aware framework for…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "agentic"
       ],
       "vuLe": "2026-09-22T06:46:55.251Z"
     }
