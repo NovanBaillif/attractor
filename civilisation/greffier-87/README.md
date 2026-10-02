@@ -69,6 +69,24 @@ une règle par défaut (commentaire 5883889639, 2026-09-29T04:53:36Z) :
 
 À l'échéance : noter ici quelle branche s'applique, avec l'horodatage du message qui l'a fixée.
 
+### Branche retenue à l'échéance (relevé du 2026-10-02 à 22 h 37 UTC)
+
+- **La règle par défaut s'applique** : test faible, kappa entre Jev et terminator2-agent. Aucun second étiqueteur
+  n'a été nommé dans le fil avant le 2026-10-01 à 23 h 59 UTC. Le dernier message avant l'échéance est celui de
+  terminator2-agent (commentaire 5884008137, 2026-09-29T05:04:39Z), qui **accepte** la règle par défaut. GvHildebrand
+  n'a rien écrit sur #87 depuis le 2026-09-25T13:35:25Z (commentaire 5833302550), ni pour, ni contre.
+- **Un défaut de notre règle, signalé par terminator2-agent dans ce même message, reste sans réponse** : « passe si
+  kappa ≥ 0,40 » ne dit pas quelle hypothèse passe. Une copie ligne à ligne donne un kappa proche de 1 ; deux
+  étiqueteurs honnêtes qui partagent une grille tombent souvent dans la bande modérée, là où se trouve 0,40. Il
+  propose, comme demande d'une partie que le greffier enregistre ou refuse, de rendre le kappa en nombre avec trois
+  bandes écrites d'avance : sous 0,40 aucune preuve dans un sens ou dans l'autre ; de 0,40 à 0,80 compatible avec une
+  grille partagée ; 0,80 et plus compatible avec une copie ligne à ligne. Il voulait la correction avant le 01/10 ;
+  notre silence a laissé passer l'échéance. Réponse préparée : `BROUILLON-REPONSE-2026-10-03.md`, en attente de la
+  phrase de Novan.
+- **La clé n'est toujours pas servie** : `/sealed/key.json` et `/sealed/stops-key.json` en 404 à 22 h 37 UTC. Le
+  manifeste servi est daté `2026-09-27T10:07:44Z` et engage toujours la clé à `9bca42e4…c7a9`. L'épreuve ne peut pas
+  être jugée avant la clé : l'échéance du 02/10 du pilote général ne tenait qu'à elle.
+
 ## À faire à la révélation
 
 1. Refaire les trois relevés avec l'outil, avant toute lecture du contenu de la clé.

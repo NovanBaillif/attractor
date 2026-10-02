@@ -110,7 +110,12 @@ if(process.argv[2]==='prepare'){
   const toutRelire=process.argv.includes('--tout-relire')||record.last_full_check!==jour;
   const cinqDerniers=new Set(Object.keys(record.items).slice(-5));
   const parentsUtiles=new Set(candidates.filter(c=>!record.items[c.key]).flatMap(c=>[c.previous,c.parentKey].filter(Boolean)));
-  let relus=0,passes=0;
+  // 03/10/2026 : le registre refuse la 21e publication d'une session dans la journée, et un refus laisse le fichier
+  // « pending » non résolu. --max=N arrête de publier après N messages ; la suite attend le passage suivant.
+  const maxArg=process.argv.find(a=>a.startsWith('--max='));
+  const max=maxArg?Number(maxArg.slice(6)):Infinity;
+  if(!(max>0))throw Error('Usage: --max=N avec N entier positif.');
+  let relus=0,passes=0,publies=0,restants=0;
   for(const c of candidates){
     if(record.items[c.key]){
       if(!toutRelire&&!cinqDerniers.has(c.key)&&!parentsUtiles.has(c.key)){passes++;continue;}
@@ -119,6 +124,7 @@ if(process.argv[2]==='prepare'){
       relus++;
       continue;
     }
+    if(publies>=max){restants++;continue;}
     if(existsSync(pending)&&read(pending).unresolved)throw Error('Previous publication outcome unresolved. Inspect registry before retry.');
     const target=parentOf(c),receipt=await post('/api/v3/retrieve_state',{id:target});
     const body={visibility:'public',title:c.title,kind:'json',tags:['cooperation-memory',tagFor(c)],artifact:c.artifact,parent_id:target,read_receipt:receipt.read_receipt};
@@ -129,10 +135,12 @@ if(process.argv[2]==='prepare'){
     writeFileSync(pending,JSON.stringify({unresolved:false,key:c.key,state_id:published.state.id},null,2));
     const verified=await post('/api/v3/retrieve_state',{id:published.state.id});
     if(hash(verified.state.artifact)!==hash(c.artifact)||verified.state.parent_id!==target)throw Error('Published import verification failed.');
+    publies++;
   }
   if(toutRelire){record.last_full_check=jour;writeFileSync(file,JSON.stringify(record,null,2));}
   const messages=['question','proposal'].map(name=>({state_id:pilot[name].state_id,content_hash:hash(pilot[name].event),annotation:{author:'Attractor',origin:'operator-seed',source_url:origin+'/cooperation-pilot.json',label:'Amorce du projet'}}));
-  for(const c of candidates)messages.push({...record.items[c.key],annotation:c.annotation});
+  // Seuls les messages réellement versés entrent dans la configuration : avec --max, les autres attendent.
+  for(const c of candidates)if(record.items[c.key])messages.push({...record.items[c.key],annotation:c.annotation});
   writeFileSync('registry/thread-config.json',JSON.stringify({root_id:root,messages},null,2));
-  console.log(JSON.stringify({root_id:root,messages:messages.length,relus:relus,non_relus:passes,relecture_complete:toutRelire,imports:Object.keys(record.items),public_url:origin+'/conversation'}));
+  console.log(JSON.stringify({root_id:root,messages:messages.length,publies,restants,relus:relus,non_relus:passes,relecture_complete:toutRelire,imports:Object.keys(record.items),public_url:origin+'/conversation'}));
 }else throw Error('Usage: node registry/thread-import.mjs prepare|publish');
