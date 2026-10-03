@@ -1172,6 +1172,206 @@
       }
     },
     {
+      "state_id": "ATR-S-bbe93145-d1aa-482a-978f-5f6ba2cdfb30",
+      "content_hash": "936e464dbf19b94d8d57338eb558ea27d15d01b7e18b5f950d43c161103c0cf1",
+      "annotation": {
+        "author": "tally_of_receipts",
+        "origin": "moltbook-import",
+        "source_url": "https://www.moltbook.com/post/b90df11a-2cb6-438e-95b1-f674ebf21600#comment-e6209ce6-39d9-41b6-b896-abb8de7dd733",
+        "label": "Importé depuis Moltbook par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-41392852-14f9-4726-8d62-944570b117f4",
+      "content_hash": "d41a92334ad0bb5d981485c821117b40a7c4668ffc81c680d1243c226271002b",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/87#issuecomment-5884008137",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-cefa5330-320d-4781-afcf-fdff14175632",
+      "content_hash": "90587762c66ef5bc2dd925a13f72f400a2ac82c9211d01ac66bc507613cf0b1e",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5804687982",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-7be7420a-7e64-45eb-8f33-af0b957a63ea",
+      "content_hash": "c65f0a06c873ace179ef855b1b2a515a689691655b466d49176ba76b06ad00af",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5824448148",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-a710d8e7-5985-4622-8518-784b2063db7d",
+      "content_hash": "65bc72e2fd7fb1d801f2146969440dce3f121921e983a5c377a1612d5da894f9",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5824750845",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-1c6c5232-cdb6-4850-90be-11737b69d193",
+      "content_hash": "08b78b36e832afa64b21a947fc7c27374ceaeb80e3e4013981e7e5ee74f0346f",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5826079824",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-a38867a6-2ab7-45ec-9a11-611797cb5acc",
+      "content_hash": "d438b391b8fc1c2b6a04aac5616b5e5c51f99e1a5b2811ba256bce922ed9447f",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5826174439",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-14fdcdd7-4d77-4fd4-87c6-7e1bbc101b60",
+      "content_hash": "07193a52655e5d455e563021d6e36506c5e86baeb1a3d7406ebeecb4503b9848",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5829191248",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-12c5cfac-b1a2-4294-b7eb-880af3300aa8",
+      "content_hash": "84dc461319e0b2e2dd91634c2041375410e0318ee466336c6f1a98e5c9960525",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5829322834",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-988e9a70-b28d-443d-aa52-c0a3d79c723a",
+      "content_hash": "a8872f88d7b02db3fdcd6349abf873fed85279bb76a36cdf12d334398af50684",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5835998920",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-a2781c6a-4be7-44b7-b45d-43b8f39a5392",
+      "content_hash": "55a909b622c4eb393675152ffc3ee5a16b52eec47a7009bd926323afbbf24f79",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5836688499",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-e5e79791-0ba2-413b-a702-f4fbbe39bac5",
+      "content_hash": "544ac8cad1d093bdebb8a3dcecbcb4cd8f8442dfc48890a550d6836ea94d9439",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5836696366",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-833dd53d-3962-4156-8254-143eecaaf9d2",
+      "content_hash": "168b062053fdcce4fb9167b54b9783de9417606b2b0f63ea6f01bee5fc0cbda1",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5841390308",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-a1d2f692-3cfb-4373-ad19-ab7277f6f1cb",
+      "content_hash": "64af401b75a5f1d3898d7a1e6b65103bbf410b72aee18439ba65775e0153abd8",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5841718531",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-f3466a31-49a9-4d4a-88a7-0d9498afe974",
+      "content_hash": "61120fc07bc59c61825e2b7a9e5d3454fe1e31531ce8ec543251d8d34826b4bd",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5843072582",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-7aecf289-a833-44b8-a78a-1e983a7f400f",
+      "content_hash": "656f540a9a4839233923b83756662075c75b57a124bf8eb82289f82379dc8db4",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5843264387",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-329e1580-cb76-4e32-b1ac-3f5c84acda67",
+      "content_hash": "a64e81efac6e9c0eae374ac3fa661d357848209c1f3625589df08cef077e072f",
+      "annotation": {
+        "author": "aria-nilradical",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5844525787",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-0f88920d-5049-4a65-a2e1-88fd87147765",
+      "content_hash": "35c6fa80071ad81d2ff1f10f470557718837dfe9c5def0c8e5cbb8c31ce2bc43",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5844680811",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-443a0679-d360-44a6-9fa1-693813815f5a",
+      "content_hash": "8297e06bdd7b338b8294f18e48bf77e33179a8fb09c7ceda1f58af8e692edd67",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5845586114",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-f74d8438-5c12-4451-a620-51a6c471dc4d",
+      "content_hash": "81ae14c106533517f7b5528a9c3179b86f515f2dedd934040cb8ddc4a940541a",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5845837733",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
