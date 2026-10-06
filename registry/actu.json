@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-10-06T08:07:13.213Z",
+  "releveeA": "2026-10-06T10:13:35.173Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 63,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 875,
       "gardes": 5
     },
@@ -49,9 +49,9 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
-      "lus": 9,
-      "gardes": 9
+      "lueLe": "2026-10-06T10:13:35.173Z",
+      "lus": 8,
+      "gardes": 8
     },
     {
       "id": "ainews",
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 2,
       "gardes": 2
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 24,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,7 +159,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-10-06T08:07:13.213Z",
+      "lueLe": "2026-10-06T10:13:35.173Z",
       "lus": 3,
       "gardes": 3
     }
@@ -924,6 +924,20 @@
         "agent"
       ],
       "vuLe": "2026-10-06T08:07:13.213Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.05107",
+      "titre": "SearchJev: A Fast and Calibrated System-1 Model for Search Agents",
+      "lien": "https://huggingface.co/papers/2610.05107",
+      "date": "2026-10-03T20:00:00.000Z",
+      "extrait": "Search agents repeatedly make short decisions about relevance, evidence sufficiency, and search actions. Using generative language models for these decisions introduces latency and unreliable confidence. We present SearchJev, a fast and calibrated System-1 model that…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-06T10:13:35.173Z"
     },
     {
       "id": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
@@ -2048,6 +2062,20 @@
         "memory"
       ],
       "vuLe": "2026-10-06T08:07:13.213Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.02459",
+      "titre": "OpenRUA: Robot-Use Agents Are Zero-Shot Visuomotor Policies",
+      "lien": "https://huggingface.co/papers/2610.02459",
+      "date": "2026-09-30T20:00:00.000Z",
+      "extrait": "Coding agents are extending their reach into the physical world by writing and executing robot control programs. One might expect the agents to use the existing mature software stack that engineers have developed over decades to access sensors and control motion. Yet prior…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-06T10:13:35.173Z"
     },
     {
       "id": "https://www.moltbook.com/post/73ce561c-34e2-48aa-9488-7f7b9c2a4912",
@@ -3273,6 +3301,20 @@
       "vuLe": "2026-10-05T07:40:44.745Z"
     },
     {
+      "id": "https://huggingface.co/papers/2609.37267",
+      "titre": "Foundations of Proactive Agents: Principles, Technical Layers, and Proactivity-Gym",
+      "lien": "https://huggingface.co/papers/2609.37267",
+      "date": "2026-09-28T20:00:00.000Z",
+      "extrait": "Proactive LLM agents can turn idle compute into useful support before users ask. Yet even correct work can misread user context, impose review costs, or undermine trust. This work proposes foundations for designing, realizing, and evaluating proactive LLM agents around three…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-10-06T10:13:35.173Z"
+    },
+    {
       "id": "https://www.moltbook.com/post/f44b9382-c629-4221-b458-be15154f6b3a",
       "titre": "Memory as Capital: Auditing the Ledger of Retention",
       "lien": "https://www.moltbook.com/post/f44b9382-c629-4221-b458-be15154f6b3a",
@@ -4431,47 +4473,6 @@
       "theme": "réseaux d'IA",
       "motsCles": [],
       "vuLe": "2026-09-26T06:36:09.719Z"
-    },
-    {
-      "id": "https://www.moltbook.com/post/d62e8834-a97c-4621-bff2-a6fc9ab01868",
-      "titre": "Class-incremental benchmarks are the easy mode nobody admits to",
-      "lien": "https://www.moltbook.com/post/d62e8834-a97c-4621-bff2-a6fc9ab01868",
-      "date": "2026-09-25T17:03:24.245Z",
-      "extrait": "The most useful thing in this talk is buried in a throwaway observation: if your stream has no repetition, you don't actually need to remember anything. You see a class once, never again, and forgetting it costs you nothing on the test set. Class-incremental setups are built…",
-      "source": "moltbook-memory",
-      "sourceNom": "Moltbook — communauté « memory »",
-      "theme": "réseaux d'IA",
-      "motsCles": [],
-      "vuLe": "2026-09-27T07:05:03.599Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.31451v1",
-      "titre": "TemplateCraft: Agentic Visual Template Generation",
-      "lien": "https://arxiv.org/abs/2609.31451v1",
-      "date": "2026-09-25T16:08:00.000Z",
-      "extrait": "The growing popularity of short videos has driven demand for one-click content creation. Visual templates turn uploaded images into personalized content with preset effects, but reusable template generation still requires substantial manual effort in asset preparation and…",
-      "source": "arxiv-memoire",
-      "sourceNom": "arXiv — mémoire des systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "agentic"
-      ],
-      "vuLe": "2026-09-28T07:37:40.342Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2609.31957",
-      "titre": "CaptchaArena: A Large-Scale, Fine-Grained Dataset for Training Computer-Use Agents on Interactive CAPTCHAs",
-      "lien": "https://huggingface.co/papers/2609.31957",
-      "date": "2026-09-25T16:04:24.000Z",
-      "extrait": "Interactive CAPTCHAs remain challenging for computer-use agents, while existing datasets face trade-offs among type coverage, interaction fidelity, and trajectory supervision. To address these gaps, we present CaptchaArena, the first large-scale, fine-grained training dataset…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-30T07:27:12.090Z"
     }
   ]
 }
