@@ -23,8 +23,17 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: '24'
-      # Le dépôt de la norme n'est pas sur cette machine : ses contrôles sortiront en orange, ce qui est exact.
+      # Le dépôt de la norme, public, extrait à côté pour que ses contrôles tournent ici aussi (jusqu'au 07/10/2026
+      # ils sortaient en orange chaque matin). Historique complet : le registre des crédits vérifie que chaque
+      # commit qu'il cite est bien un ancêtre de la branche.
+      - uses: actions/checkout@v7
+        with:
+          repository: NovanBaillif/attractor-cooperation
+          path: norme
+          fetch-depth: 0
       - name: Contrôler ce que le site public montre
+        env:
+          ATTRACTOR_NORME: norme
         run: node registry/controle-matin.mjs
       # Le relevé est gardé même quand tout va bien : sans historique, « c'était déjà comme ça hier » ne se
       # vérifie pas. Il n'est commité que s'il a changé.

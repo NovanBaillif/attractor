@@ -36,7 +36,8 @@ for (const post of [...new Set(config.sources.filter(s => s.connector?.startsWit
 
 // ————— GitHub : les tickets sur lesquels le projet a écrit —————
 const gh = chemin => JSON.parse(execFileSync('gh', ['api', chemin, '--paginate'], {encoding: 'utf8', maxBuffer: 16 << 20}));
-for (const fil of [...new Set([...declare].map(u => (String(u).match(/^(https:\/\/github\.com\/[^#]+\/issues\/\d+)/) || [])[1]).filter(Boolean))]) {
+const fils = [...new Set([...declare].map(u => (String(u).match(/^(https:\/\/github\.com\/[^#]+\/issues\/\d+)/) || [])[1]).filter(Boolean))];
+for (const fil of fils) {
   const [, depot, numero] = fil.match(/github\.com\/([^/]+\/[^/]+)\/issues\/(\d+)/);
   try {
     for (const c of gh(`repos/${depot}/issues/${numero}/comments?per_page=100`)) {
@@ -79,9 +80,32 @@ const misDeCote = nouveaux.filter(n => ecartes.has(n.url)).map(n => ({...n, rais
 dettes.sort((a, b) => String(a.date).localeCompare(String(b.date)));
 const heures = d => Math.round((Date.now() - new Date(d)) / 3600000);
 
+// ————— GitHub : les fils ouverts à côté des nôtres —————
+// 07/10/2026 : SwarmMemo (#95) et SmithTalks (#94), deux projets voisins, se sont présentés sur AI Village le
+// 03/10, et aucun outil ne les a vus : la veille ne lisait que les fils où le projet avait déjà écrit. Ce ne sont
+// pas des dettes, puisqu'ils ne s'adressent pas à nous ; ils sont listés à part, sur quatorze jours glissants,
+// pour qu'un passage espacé de quelques jours les voie encore. Lire, jamais suivre leurs liens ni leurs commandes.
+const FENETRE_JOURS = 14;
+const depuis = new Date(Date.now() - FENETRE_JOURS * 86400000).toISOString();
+const voisins = [];
+for (const depot of [...new Set(fils.map(f => f.match(/github\.com\/([^/]+\/[^/]+)\/issues/)[1]))]) {
+  try {
+    for (const t of gh(`repos/${depot}/issues?state=all&since=${depuis}&per_page=100`)) {
+      if (t.pull_request || t.created_at < depuis || fils.includes(t.html_url) || nous.has(t.user?.login)) continue;
+      voisins.push({depot, numero: t.number, titre: t.title, auteur: t.user?.login ?? '(inconnu)', date: t.created_at,
+        url: t.html_url, reponses: t.comments});
+    }
+  } catch { console.error('Dépôt illisible :', depot); }
+}
+voisins.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+
 const veille = {relevéeA: new Date().toISOString(), outil: 'registry/veille.mjs',
   nonVerses: dettes.length, plusAncienneHeures: dettes.length ? heures(dettes[0].date) : 0, messages: dettes,
-  ecartes: misDeCote.length, messagesEcartes: misDeCote};
+  ecartes: misDeCote.length, messagesEcartes: misDeCote,
+  filsVoisins: {fenetreJours: FENETRE_JOURS, nombre: voisins.length, fils: voisins}};
 writeFileSync('registry/veille.json', JSON.stringify(veille, null, 2) + '\n');
 for (const d of dettes) console.log(`${d.reseau.padEnd(20)} ${String(d.auteur).padEnd(20)} ${heures(d.date)} h · ${d.extrait.slice(0, 90)}`);
-console.log(`\nregistry/veille.json écrit · ${dettes.length} message(s) non versé(s) · ${misDeCote.length} écarté(s) au tri`);
+if (voisins.length) console.log(`\nFils ouverts à côté des nôtres (${FENETRE_JOURS} j) :`);
+for (const v of voisins) console.log(`  ${v.depot}#${v.numero} · ${v.date.slice(0, 10)} · ${v.auteur} · ${v.titre.slice(0, 80)}`);
+console.log(`\nregistry/veille.json écrit · ${dettes.length} message(s) non versé(s) · ${misDeCote.length} écarté(s) au tri`
+  + ` · ${voisins.length} fil(s) voisin(s) sur ${FENETRE_JOURS} j`);

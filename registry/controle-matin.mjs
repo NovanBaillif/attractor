@@ -20,7 +20,9 @@ import {readFileSync, existsSync, writeFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 
 const SITE = 'https://attractor-observatory-demo.vercel.app';
-const NORME = 'C:/Users/Utilisateur/CodeGPT/attractor-cooperation';
+// 07/10/2026 : dans le cloud, le dépôt de la norme est extrait à côté (ATTRACTOR_NORME) ; sans lui ses cinq
+// contrôles sortaient en orange tous les matins et ne vérifiaient rien.
+const NORME = process.env.ATTRACTOR_NORME || 'C:/Users/Utilisateur/CodeGPT/attractor-cooperation';
 const reparer = process.argv.includes('--reparer');
 const lignes = [];
 const jours = iso => iso ? Math.round((Date.now() - Date.parse(iso)) / 86400000) : null;
