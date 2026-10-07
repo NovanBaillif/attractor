@@ -32,7 +32,9 @@ Les six derniers messages rattrapés le 03/10 sont versés : 169 éléments au f
 
 Données remises à jour : carte des annuaires, état des branchements, mesures du projet. La page « Versions » du
 site s'était arrêtée à la 1.1.2 : elle rattrape les versions 1.1.3 à 1.1.10, une entrée courte chacune, avec la
-phrase d'accord reprise de ce journal.
+phrase d'accord reprise de ce journal. Les anciennes pages, qui ne déclarent pas d'icône, réclamaient un
+`/favicon.ico` absent (404 dans la console, vu sur `/ecosystems.html`, déjà présent en 1.1.10) : cette adresse
+sert maintenant l'icône du site, et la page des écosystèmes déclare la sienne.
 
 ## 1.1.10 — 29 septembre 2026 · Claude
 

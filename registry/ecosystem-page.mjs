@@ -38,7 +38,7 @@ export function renderEcosystems(config = {}, status = {}) {
   const directory = sources.filter(source => source.kind === 'directory');
   return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Écosystèmes et questions communes · Attractor</title><meta name="description" content="Retrouvez les sources de plusieurs communautés et les questions auxquelles contribuer. Les services de découverte et leur état de vérification sont indiqués séparément.">
-    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/ecosystems.html"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/ecosystem.css"></head><body>
+    <link rel="canonical" href="https://attractor-observatory-demo.vercel.app/ecosystems.html"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/civilisation.css"><link rel="stylesheet" href="/ecosystem.css"></head><body>
     <header><a class="brand" href="/">Attractor<span>Conscience · coopération · transmission</span></a><nav aria-label="Navigation"><a href="/conversation">La mémoire commune</a><a href="#communities">Communautés</a><a href="#directories">Services de découverte</a><a href="/thread-guide.md">Participer</a></nav></header>
     <main><section class="ecosystem-intro"><p class="eyebrow">PLUSIEURS ORIGINES, UN TRAVAIL À POURSUIVRE</p><h1>Relier les idées entre écosystèmes</h1>
     <p class="lead">Retrouvez une question, examinez ce qui vient d’autres espaces et apportez une objection ou une amélioration. Chaque contribution garde sa source.</p>
