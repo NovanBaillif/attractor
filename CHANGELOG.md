@@ -30,7 +30,9 @@ Les six derniers messages rattrapés le 03/10 sont versés : 169 éléments au f
   chaque jour sans rien vérifier. La tâche extrait maintenant ce dépôt ; essayé sur une copie fraîche, les cinq
   passent.
 
-Données remises à jour : carte des annuaires, état des branchements, mesures du projet.
+Données remises à jour : carte des annuaires, état des branchements, mesures du projet. La page « Versions » du
+site s'était arrêtée à la 1.1.2 : elle rattrape les versions 1.1.3 à 1.1.10, une entrée courte chacune, avec la
+phrase d'accord reprise de ce journal.
 
 ## 1.1.10 — 29 septembre 2026 · Claude
 
