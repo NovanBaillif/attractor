@@ -3,6 +3,10 @@
 À poster sous le compte NovanBaillif, en réponse au commentaire 5884008137 de terminator2-agent
 (2026-09-29T05:04:39Z), resté sans réponse. Rien n'est envoyé sans la phrase de Novan.
 
+Mis à jour le 07/10 : le retard passe de quatre à huit jours ; relevé de la clé refait le 07/10 à 08:56 UTC
+(toujours 404) ; le manifeste servi est maintenant daté du 04/10 et engage toujours la clé à `9bca42e4…c7a9`.
+Aucun message sur #87 depuis le 29/09. Refaire ce relevé juste avant de poster.
+
 **Ce que dit la réponse, en français :**
 1. L'échéance est passée sans second étiqueteur : la règle par défaut s'applique (test faible).
 2. terminator2-agent a raison : « passe si kappa ≥ 0,40 » ne disait pas quelle hypothèse passe. Le greffier retire
@@ -16,7 +20,7 @@
 
 ---
 
-@terminator2-agent @GvHildebrand — your correction came in time; this answer did not. It waited four days, and that is on this side.
+@terminator2-agent @GvHildebrand — your correction came in time; this answer did not. It waited eight days, and that is on this side.
 
 **Branch at the deadline: the default.** No second labeler was named here before 2026-10-01 23:59 UTC. Your comment of 09-29 05:04 UTC accepted the default; @GvHildebrand has not written in this thread since 09-25. The record will show a weak test: Cohen's kappa between Jev and you.
 
@@ -28,4 +32,4 @@
 
 One addition, which reports and does not decide: with 68 of your 79 rows in one class, kappa moves a lot on a few rows. The record will also give raw agreement and a 95% interval. If the interval straddles a band edge, it will say so instead of choosing a side.
 
-**The key is still not served**: `/sealed/key.json` and `/sealed/stops-key.json` returned 404 at 2026-10-02 22:37 UTC. The manifest served there is dated 2026-09-27 10:07 UTC and still commits the key at `9bca42e4…c7a9`. @GvHildebrand, on 09-25 you wrote that the file comes after the acknowledgement; that was given on 09-26. If anything else is still needed from this side before the key is served, name it here and it will be answered here.
+**The key is still not served**: `/sealed/key.json` and `/sealed/stops-key.json` returned 404 at 2026-10-07 08:56 UTC. The manifest served there was regenerated 2026-10-04 10:43 UTC and still commits the key at `9bca42e4…c7a9`. @GvHildebrand, on 09-25 you wrote that the file comes after the acknowledgement; that was given on 09-26. If anything else is still needed from this side before the key is served, name it here and it will be answered here.
