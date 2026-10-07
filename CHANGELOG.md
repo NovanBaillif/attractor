@@ -4,7 +4,10 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.11 — 7 octobre 2026 · Claude
 
-Mise en production sur la phrase de Novan (« publie met à jour améliore »).
+Commit `5f296f8` (étiquette `v1.1.11`) · déploiement `dpl_2voDNMFNzxuM2tEcuXNT4R3pWn2E` · contrôle du matin mesuré
+sur le site en ligne : **12 sur 12 au vert, aucun orange** · conformité 13 sur 13 · 18 pages contrôlées à 390 et
+1280 px sans débordement ni erreur de console. Mise en production sur la phrase de Novan (« publie met à jour
+améliore »).
 
 **Le greffier a répondu, avec huit jours de retard, et le dit.** Sur #87, terminator2-agent avait montré le 29/09
 que notre barre « passe si kappa ≥ 0,40 » nommait un seuil sans dire quelle hypothèse passe. Réponse du 07/10

@@ -52,7 +52,19 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.1.10 (serveur 4.0.0)
+## Version en ligne : 1.1.11 (serveur 4.0.0)
+
+1.1.11 (07/10, sur « publie met à jour améliore ») : commit `5f296f8`, `dpl_2voDNMFNzxuM2tEcuXNT4R3pWn2E`, contrôle
+du matin 12 sur 12 sans orange, conformité 13 sur 13. Réponse du greffier #87, fil à 169, page Versions rattrapée
+(1.1.3 à 1.1.10 y manquaient), `/favicon.ico` servi. Trois instruments réparés :
+- `node registry/sources.mjs check` lit chaque ticket GitHub d'un coup (6 lectures au lieu de 103 ; l'accès
+  anonyme en permet 60 par heure, elle ne pouvait plus jamais partir). Les connecteurs n'envoient toujours aucun
+  identifiant : ne pas « réparer » en ajoutant un jeton.
+- `node registry/veille.mjs` liste à part les fils voisins sur 14 jours (`filsVoisins` dans veille.json).
+- Le contrôle du matin du cloud extrait le dépôt de la norme (`ATTRACTOR_NORME`) : ses cinq contrôles tournent.
+Piège rencontré : la construction modifie `derniers.mjs` et `mesures.json` ; les remettre en l'état
+(`git checkout --`) avant tout `rebase`, puis reconstruire après. Si `origin/main` a bougé (veille ou contrôle
+automatiques), recaler, RECONSTRUIRE (le pied de page cite le commit), publier, puis pousser aussitôt.
 
 1.1.3 (23/09) : l'invitation à rejouer E15 postée sur les trois réseaux et versée au fil (83 messages).
 
@@ -240,7 +252,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production 1.0.6 `dpl_3SyqFxUfQvud2Jp8qsnkaFnuxHPv`. Précédente : 1.0.5 `dpl_EKGeKNs38bjr6cAYSprHmDVdbJUp` (retour arrière possible) |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.1.11 `dpl_2voDNMFNzxuM2tEcuXNT4R3pWn2E` (07/10). Précédente : 1.1.10 `dpl_4hpPvELry2zxhNqi7n1eQekTHCy2` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
 | Fil commun | /conversation, /api/v3/thread | **169 éléments au fil public le 07/10**, comptés sur les 9 pages : les 6 restants du rattrapage versés le 07/10 (157 anciens relus identiques), puis notre réponse #87 du jour. Le 03/10 : 162, dont 40 messages jamais déclarés (#85 du 19 au 27/09, #87 d'avant notre siège, Moltbook) et 6 de nos propres réponses rattrapés ce jour-là (plafond de 20 par jour, `thread-import.mjs publish --max=20`). Avant : 54 messages au 17/09 (les derniers : jarvis_oscar, notre réponse et l’annonce de ses cas publiés, page 3). Le fil public est paginé par 20 : un message versé est en ligne tout de suite, mais pas forcément sur la première page |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
