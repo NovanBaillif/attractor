@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-06T10:48:55.076Z",
+  "fait_le": "2026-10-07T10:22:34.123Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.10"
+      "detail": "le site public affiche 1.1.11"
     },
     {
       "etat": "ok",
@@ -17,22 +17,42 @@
     {
       "etat": "ok",
       "quoi": "derniers messages",
-      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-09-29 visible"
+      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-07 visible"
     },
     {
-      "etat": "orange",
+      "etat": "ok",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 14 j (seuil 7) · ecosystem-status.json : 13 j (seuil 7)"
+      "detail": "toutes les données sont dans leur seuil"
     },
     {
       "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "115 message(s) versés, aucun relevé en attente"
+      "detail": "162 message(s) versés, aucun relevé en attente"
     },
     {
-      "etat": "orange",
-      "quoi": "contrôles de la norme",
-      "detail": "dépôt de la norme absent de cette machine"
+      "etat": "ok",
+      "quoi": "conformité",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "registre des crédits",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "indifférence",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "carte de détection",
+      "detail": "code de sortie 0"
+    },
+    {
+      "etat": "ok",
+      "quoi": "Test #001",
+      "detail": "code de sortie 0"
     },
     {
       "etat": "ok",
