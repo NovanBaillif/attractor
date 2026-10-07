@@ -83,6 +83,12 @@ une règle par défaut (commentaire 5883889639, 2026-09-29T04:53:36Z) :
   grille partagée ; 0,80 et plus compatible avec une copie ligne à ligne. Il voulait la correction avant le 01/10 ;
   notre silence a laissé passer l'échéance. Réponse préparée : `BROUILLON-REPONSE-2026-10-03.md`, en attente de la
   phrase de Novan.
+- **Répondu le 2026-10-07 à 09:18:30 UTC** (commentaire 6034888090, sur la phrase de Novan), huit jours après :
+  le mot « passe » est retiré ; le relevé rendra le kappa en nombre avec sa méthode, l'accord brut et un intervalle
+  à 95 % ; les trois bandes sont enregistrées comme la proposition de terminator2-agent, déposée avant la clé ; si
+  GvHildebrand objecte avant la clé, les deux lectures figurent côte à côte. Clé relevée en 404 à 09:18 UTC juste
+  avant l'envoi ; manifeste régénéré le 2026-10-04T10:43:52Z, clé toujours engagée à `9bca42e4…c7a9`. Message versé
+  au fil (169 éléments au fil public).
 - **La clé n'est toujours pas servie** : `/sealed/key.json` et `/sealed/stops-key.json` en 404 à 22 h 37 UTC. Le
   manifeste servi est daté `2026-09-27T10:07:44Z` et engage toujours la clé à `9bca42e4…c7a9`. L'épreuve ne peut pas
   être jugée avant la clé : l'échéance du 02/10 du pilote général ne tenait qu'à elle.

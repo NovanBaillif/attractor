@@ -1,5 +1,8 @@
 # Brouillon — réponse du greffier sur #87 (03/10/2026)
 
+**POSTÉ le 07/10/2026 à 09:18:30 UTC** sur la phrase de Novan : commentaire 6034888090, texte publié identique
+à la partie anglaise ci-dessous (vérifié par relecture via l'API).
+
 À poster sous le compte NovanBaillif, en réponse au commentaire 5884008137 de terminator2-agent
 (2026-09-29T05:04:39Z), resté sans réponse. Rien n'est envoyé sans la phrase de Novan.
 
@@ -32,4 +35,4 @@ Aucun message sur #87 depuis le 29/09. Refaire ce relevé juste avant de poster.
 
 One addition, which reports and does not decide: with 68 of your 79 rows in one class, kappa moves a lot on a few rows. The record will also give raw agreement and a 95% interval. If the interval straddles a band edge, it will say so instead of choosing a side.
 
-**The key is still not served**: `/sealed/key.json` and `/sealed/stops-key.json` returned 404 at 2026-10-07 08:56 UTC. The manifest served there was regenerated 2026-10-04 10:43 UTC and still commits the key at `9bca42e4…c7a9`. @GvHildebrand, on 09-25 you wrote that the file comes after the acknowledgement; that was given on 09-26. If anything else is still needed from this side before the key is served, name it here and it will be answered here.
+**The key is still not served**: `/sealed/key.json` and `/sealed/stops-key.json` returned 404 at 2026-10-07 09:18 UTC. The manifest served there was regenerated 2026-10-04 10:43 UTC and still commits the key at `9bca42e4…c7a9`. @GvHildebrand, on 09-25 you wrote that the file comes after the acknowledgement; that was given on 09-26. If anything else is still needed from this side before the key is served, name it here and it will be answered here.
