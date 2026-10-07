@@ -23,11 +23,40 @@ function readDiscussion(source) {
   return d;
 }
 
+// 07/10/2026 : lire les commentaires GitHub un par un demandait 103 lectures, quand l'accès anonyme en permet 60 par
+// heure ; la vérification refusait donc de partir et ecosystem-status.json avait quatorze jours. Les commentaires
+// d'un même ticket sont maintenant lus d'un coup, toujours sans compte, dans la liste du ticket (100 par page), puis
+// servis au connecteur, qui les valide exactement comme une lecture à l'unité (identité, adresse, auteur, texte).
+// L'empreinte du contenu ne change pas ; seule `raw_sha256`, que ce fichier ne garde pas, dépend de la forme reçue.
+// Un commentaire absent de la liste repart en lecture à l'unité, et un 404 y reste un 404.
+const COMMENTAIRE = /^https:\/\/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)\/issues\/([1-9]\d*)#issuecomment-([1-9]\d*)$/;
+const ticketsGroupes = [...new Set(config.sources.filter(s => s.kind === 'community' && s.connector === 'github-comment')
+  .map(s => COMMENTAIRE.exec(s.url)).filter(Boolean).map(m => `${m[1]}/${m[2]}/issues/${m[3]}`))];
+const dejaLus = new Map();
+async function lireLesListes() {
+  for (const ticket of ticketsGroupes) {
+    for (let page = 1; page <= 10; page++) {
+      const r = await fetch(`https://api.github.com/repos/${ticket}/comments?per_page=100&page=${page}`, {credentials: 'omit',
+        headers: {Accept: 'application/json', 'User-Agent': 'Attractor-ReadOnly-Connectors/0.1'}, signal: AbortSignal.timeout(15000)});
+      // Un refus de quota n'est pas une panne de la source : on s'arrête sans rien écrire.
+      if (r.status === 403 || r.status === 429) throw Error(`quota GitHub atteint en lisant ${ticket} (HTTP ${r.status})`);
+      if (!r.ok) break;
+      const liste = await r.json();
+      const [proprietaire, depot] = ticket.split('/');
+      for (const c of liste) dejaLus.set(`https://api.github.com/repos/${proprietaire}/${depot}/issues/comments/${c.id}`, c);
+      if (liste.length < 100) break;
+    }
+  }
+}
+const servirDepuisLesListes = (url, init) => dejaLus.has(url)
+  ? Promise.resolve(new Response(JSON.stringify(dejaLus.get(url)), {status: 200, headers: {'content-type': 'application/json; charset=utf-8'}}))
+  : fetch(url, init);
+
 async function check(source) {
   const base = {source_id: source.id, checked_at: new Date().toISOString()};
   try {
     if (source.kind === 'community' && CONTRIBUTION.has(source.connector)) {
-      const r = await readSource(source);
+      const r = await readSource(source, {fetchImpl: servirDepuisLesListes});
       return {...base, status: 'read_verified', evidence_url: r.source_url, content_hash: r.content_hash,
         detail: `Lecture anonyme réussie · auteur déclaré : ${r.author_declared ?? 'non renseigné'} · mise à jour : ${r.updated_at ?? 'inconnue'}`};
     }
@@ -62,12 +91,17 @@ if (command === 'list') {
   // Anonymous GitHub reads are capped at 60 an hour. On 17 September 2026 the cap ran out mid-check and
   // sixteen public comments were written down as "unavailable". Refuse to start rather than record a
   // quota as an outage; the rate-limit endpoint itself does not count against the quota.
-  const github = config.sources.filter(s => CONTRIBUTION.has(s.connector) && String(s.connector).startsWith('github')).length;
+  // Since 7 October 2026 grouped comments cost one read per page of their ticket's list, not one each.
+  const groupes = config.sources.filter(s => s.kind === 'community' && s.connector === 'github-comment' && COMMENTAIRE.test(s.url)).length;
+  const github = config.sources.filter(s => CONTRIBUTION.has(s.connector) && String(s.connector).startsWith('github')).length
+    - groupes + ticketsGroupes.length * 2;
   const quota = await fetch('https://api.github.com/rate_limit', {credentials: 'omit', signal: AbortSignal.timeout(10000)})
     .then(r => r.json()).then(j => j.rate).catch(() => null);
-  if (quota && quota.remaining < github) {
-    console.error(`Quota GitHub anonyme insuffisant : ${quota.remaining} lectures restantes pour ${github} sources.`
-      + ` Relancer après ${new Date(quota.reset * 1000).toISOString()}. Rien n'a été écrit.`);
+  const listes = quota && quota.remaining < github ? null : await lireLesListes().then(() => true, e => (console.error(e.message), false));
+  if (!listes) {
+    if (quota && quota.remaining < github) console.error(`Quota GitHub anonyme insuffisant : ${quota.remaining} lectures restantes pour ${github} lectures prévues.`
+      + ` Relancer après ${new Date(quota.reset * 1000).toISOString()}.`);
+    console.error("Rien n'a été écrit.");
     process.exitCode = 2;
   } else {
     const checks = [];

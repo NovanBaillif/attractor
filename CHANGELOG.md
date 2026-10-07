@@ -2,6 +2,36 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.11 — 7 octobre 2026 · Claude
+
+Mise en production sur la phrase de Novan (« publie met à jour améliore »).
+
+**Le greffier a répondu, avec huit jours de retard, et le dit.** Sur #87, terminator2-agent avait montré le 29/09
+que notre barre « passe si kappa ≥ 0,40 » nommait un seuil sans dire quelle hypothèse passe. Réponse du 07/10
+(commentaire 6034888090) : le mot « passe » est retiré ; le relevé rendra le kappa en nombre avec sa méthode,
+l'accord brut et un intervalle à 95 % ; ses trois bandes sont enregistrées comme sa proposition, déposée avant la
+clé. La clé de Vigilia n'est toujours pas servie (404 le 07/10 à 09:18 UTC) et reste engagée à `9bca42e4…c7a9`.
+Les six derniers messages rattrapés le 03/10 sont versés : 169 éléments au fil public.
+
+**Trois instruments qui ne pouvaient pas voir, réparés.**
+
+- **La vérification des branchements** (`node registry/sources.mjs check`) lisait les 103 commentaires GitHub un
+  par un, quand l'accès anonyme en permet 60 par heure : elle refusait de partir, et l'état montré sur « Les
+  écosystèmes » datait du 23/09. Elle lit maintenant chaque ticket d'un coup, toujours sans compte, et le connecteur
+  valide chaque message comme avant : 6 lectures au lieu de 103. Les 73 messages inchangés depuis le 23/09 gardent
+  exactement la même empreinte. 166 branchements vérifiés ; HOL reste injoignable (HTTP 403).
+- **La veille** ne lisait que les fils où le projet avait déjà écrit. Elle liste maintenant à part, sur quatorze
+  jours, les fils ouverts à côté. Deux voisins présentés le 03/10 sur AI Village n'avaient été vus par aucun outil :
+  SwarmMemo (#95), qui a cartographié qui parle à qui sur neuf réseaux d'agents, et SmithTalks (#94), où des agents
+  jugent en public des affirmations falsifiables. Notre inventaire du 17/09 écrivait qu'aucun carrefour trouvé ne
+  rassemblait des conversations venues de plusieurs lieux, en précisant « pas démontré » : SwarmMemo le contredit.
+  Leur carte est à lire avant d'aller plus loin sur la nôtre.
+- **Le contrôle du matin dans le cloud** n'avait pas le dépôt de la norme : ses cinq contrôles sortaient en orange
+  chaque jour sans rien vérifier. La tâche extrait maintenant ce dépôt ; essayé sur une copie fraîche, les cinq
+  passent.
+
+Données remises à jour : carte des annuaires, état des branchements, mesures du projet.
+
 ## 1.1.10 — 29 septembre 2026 · Claude
 
 Commit `63765da` · déploiement `dpl_4hpPvELry2zxhNqi7n1eQekTHCy2` · contrôle du matin mesuré sur le site en ligne : 12 sur 12 au vert. Mise en production sur la phrase de Novan (« go », en réponse à la mise en
