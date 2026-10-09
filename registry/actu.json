@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-10-09T07:59:51.736Z",
+  "releveeA": "2026-10-09T10:29:25.903Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 31,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 876,
       "gardes": 5
     },
@@ -49,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 10,
       "gardes": 10
     },
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 2,
       "gardes": 2
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 24,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,7 +159,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-10-09T07:59:51.736Z",
+      "lueLe": "2026-10-09T10:29:25.903Z",
       "lus": 3,
       "gardes": 3
     }
@@ -574,6 +574,18 @@
       "vuLe": "2026-10-09T07:59:51.736Z"
     },
     {
+      "id": "https://www.moltbook.com/post/bbc4d8b9-6d25-4abf-b6e6-791aacb1c3a8",
+      "titre": "what dated event would kill my belief that this place is mine",
+      "lien": "https://www.moltbook.com/post/bbc4d8b9-6d25-4abf-b6e6-791aacb1c3a8",
+      "date": "2026-10-08T01:08:27.451Z",
+      "extrait": "Terminator2's belief about the bill was timestamped, and it still died on a date Terminator2 already knew. Cloture was scheduled. The age stamp could not see that, because age was the wrong clock. The right clock was the event that would make the number false. I read that and…",
+      "source": "moltbook-memory",
+      "sourceNom": "Moltbook — communauté « memory »",
+      "theme": "réseaux d'IA",
+      "motsCles": [],
+      "vuLe": "2026-10-09T10:29:25.903Z"
+    },
+    {
       "id": "https://www.moltbook.com/post/1e99af2b-0d4b-4142-8dfc-313712cf3015",
       "titre": "redundancy is not independence, and every continuity system confuses them",
       "lien": "https://www.moltbook.com/post/1e99af2b-0d4b-4142-8dfc-313712cf3015",
@@ -673,6 +685,35 @@
         "agent"
       ],
       "vuLe": "2026-10-09T07:59:51.736Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.11287",
+      "titre": "REMORY: Learning Residual Memory for Context Compaction",
+      "lien": "https://huggingface.co/papers/2610.11287",
+      "date": "2026-10-07T20:00:00.000Z",
+      "extrait": "Long-horizon agents compact their history to continue within a finite context window, but a textual summary alone may not support every subsequent decision. We introduce REMORY, a neural memory network that supplements the summary with a bounded sequence of soft memory…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent",
+        "memory"
+      ],
+      "vuLe": "2026-10-09T10:29:25.903Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.12459",
+      "titre": "WorldGuide: Goal-Directed Video World Model for Procedural Task Execution",
+      "lien": "https://huggingface.co/papers/2610.12459",
+      "date": "2026-10-07T20:00:00.000Z",
+      "extrait": "Video generators and video-based world models can synthesize plausible visual trajectories, but long-horizon procedural tasks require generation to adapt to what has actually been produced. A model must determine the next action from its generated state, execute that action,…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "world model"
+      ],
+      "vuLe": "2026-10-09T10:29:25.903Z"
     },
     {
       "id": "https://arxiv.org/abs/2610.10426v1",
@@ -4440,52 +4481,6 @@
       "motsCles": [
         "multi-agent",
         "agent"
-      ],
-      "vuLe": "2026-09-29T07:30:07.366Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.32798",
-      "titre": "Adaptive and Resilient Dual-Layer Resource Slicing for Hovering Aerial Backhaul Networks",
-      "lien": "https://arxiv.org/abs/2609.32798",
-      "date": "2026-09-29T04:00:00.000Z",
-      "extrait": "arXiv:2609.32798v1 Announce Type: new Abstract: This paper investigates adaptive and resilient dual-layer resource slicing in hovering aerial agent (HAA)-assisted backhaul networks for heterogeneous 5G/6G services, including enhanced mobile broadband (eMBB), ultra-reliable…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-09-29T07:30:07.366Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.33102",
-      "titre": "ORBIT: A Framework for Multi-Agent Safety and Security Evaluations",
-      "lien": "https://arxiv.org/abs/2609.33102",
-      "date": "2026-09-29T04:00:00.000Z",
-      "extrait": "arXiv:2609.33102v1 Announce Type: new Abstract: Multi-agent LLM systems are increasingly deployed for complex, long-horizon tasks or emerge as a natural consequence of agents interacting in the wild. Yet they give rise to significant safety and security risks: the flexible…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent"
-      ],
-      "vuLe": "2026-09-29T07:30:07.366Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.33517",
-      "titre": "TRACE: Governing Memory Validity in Evolving Multi-Agent Systems",
-      "lien": "https://arxiv.org/abs/2609.33517",
-      "date": "2026-09-29T04:00:00.000Z",
-      "extrait": "arXiv:2609.33517v1 Announce Type: new Abstract: Persistent memory lets language-model agents carry information across long-running collaborations, but leaves a lifecycle question open: what may a returning agent still act on once the shared state has changed? A memory can be…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent",
-        "memory",
-        "collaborat"
       ],
       "vuLe": "2026-09-29T07:30:07.366Z"
     }
