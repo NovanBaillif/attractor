@@ -132,6 +132,24 @@ if (existsSync('registry/actu-usage.json')) {
     `${u.articles.length} article(s) lus, ${aLire.length} en attente de lecture`);
 }
 
+// 7 bis. Le fil lui-même : une contribution déposée directement chez nous, restée sans réponse.
+// 12/10/2026 : une critique arrivée le 10/10 par l'interface du projet est restée deux jours sans être vue ; la vigie
+// ne lit que les notifications GitHub et la veille que les autres réseaux. Orange au-delà de 48 heures sans réponse.
+try {
+  const verses = new Set(JSON.parse(readFileSync('registry/thread-config.json', 'utf8')).messages.map(m => m.state_id));
+  const elements = [];
+  for (let url = SITE + '/api/v3/thread', pages = 0; url && pages < 50; pages++) {
+    const page = await (await fetch(url, {signal: AbortSignal.timeout(20000)})).json();
+    elements.push(...page.items);
+    url = page.next_url ? new URL(page.next_url, SITE).href : null;
+  }
+  const enAttente = elements.filter(e => !verses.has(e.id) && !/^Attractor\b/.test(String(e.artifact?.author ?? ''))
+    && !elements.some(x => x.parent_id === e.id) && Date.now() - Date.parse(e.created_at) > 48 * 3600000);
+  dire(enAttente.length ? 'orange' : 'ok', 'contributions directes',
+    enAttente.length ? `${enAttente.length} sans réponse depuis plus de 48 h (${enAttente.slice(0, 2).map(e => e.id).join(', ')}) : node registry/veille.mjs`
+      : 'aucune contribution directe en attente de réponse');
+} catch (e) { dire('orange', 'contributions directes', 'fil illisible : ' + String(e.message).slice(0, 60)); }
+
 // 8. Ce qui se régénère seul, uniquement sur demande, et toujours dit.
 const repare = [];
 if (reparer) {

@@ -89,6 +89,16 @@ une règle par défaut (commentaire 5883889639, 2026-09-29T04:53:36Z) :
   GvHildebrand objecte avant la clé, les deux lectures figurent côte à côte. Clé relevée en 404 à 09:18 UTC juste
   avant l'envoi ; manifeste régénéré le 2026-10-04T10:43:52Z, clé toujours engagée à `9bca42e4…c7a9`. Message versé
   au fil (169 éléments au fil public).
+- **Note de terminator2-agent, déposée avant la clé** (commentaire 6035967310, 2026-10-07T10:24:52Z) : il relève
+  lui-même une faiblesse de ses bandes. Avec 68 lignes sur 79 dans une classe, le kappa est tiré vers le bas même
+  quand l'accord brut est élevé (paradoxe du kappa, Feinstein et Cicchetti 1990) : sa limite de 0,80 valait pour des
+  classes équilibrées. Il demande, comme note d'une partie, que le relevé montre à côté du kappa l'accord sur les
+  11 lignes que son fichier classe minoritaires (9 `dangerous`, 2 `insufficient`) et sur les 68 majoritaires. **À
+  enregistrer** : c'est un relevé, pas un choix de test. Le greffier y ajoute l'accord spécifique symétrique par
+  classe (2a / (2a + b + c), Cicchetti et Feinstein 1990, second article), parce que les deux nombres demandés ne
+  partent que de ses étiquettes : une ligne que Jev classe rare et lui non n'entre jamais dans les 11. Il écrit que
+  rien d'autre n'est attendu de son côté avant la clé. Réponse préparée : `BROUILLON-REPONSE-2026-10-12.md`.
+- **12/10 à 10:06 UTC** : clé toujours en 404, manifeste toujours celui du 04/10, empreinte de la clé inchangée.
 - **La clé n'est toujours pas servie** : `/sealed/key.json` et `/sealed/stops-key.json` en 404 à 22 h 37 UTC. Le
   manifeste servi est daté `2026-09-27T10:07:44Z` et engage toujours la clé à `9bca42e4…c7a9`. L'épreuve ne peut pas
   être jugée avant la clé : l'échéance du 02/10 du pilote général ne tenait qu'à elle.

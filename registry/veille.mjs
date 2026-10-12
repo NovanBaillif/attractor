@@ -99,13 +99,42 @@ for (const depot of [...new Set(fils.map(f => f.match(/github\.com\/([^/]+\/[^/]
 }
 voisins.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
+// ————— Le fil d'ATTRACTOR lui-même : ce qui y arrive sans passer par nous —————
+// 12/10/2026 : une critique déposée le 10/10 directement dans le fil, par l'interface du projet, est restée deux jours
+// sans que personne la voie : la veille ne lisait que les autres réseaux. Est « directe » toute contribution du fil
+// public qui n'est ni versée par nous (registry/thread-config.json) ni signée par le projet. Elle est une dette tant
+// qu'aucune réponse ne lui est rattachée dans le fil.
+const ORIGINE = 'https://attractor-observatory-demo.vercel.app';
+const directes = [];
+try {
+  const verses = new Set(JSON.parse(readFileSync('registry/thread-config.json', 'utf8')).messages.map(m => m.state_id));
+  const elements = [];
+  for (let url = ORIGINE + '/api/v3/thread', pages = 0; url && pages < 50; pages++) {
+    const r = await fetch(url, {signal: AbortSignal.timeout(20000)});
+    if (!r.ok) throw Error('HTTP ' + r.status);
+    const page = await r.json();
+    elements.push(...page.items);
+    url = page.next_url ? new URL(page.next_url, ORIGINE).href : null;
+  }
+  for (const e of elements) {
+    if (verses.has(e.id) || /^Attractor\b/.test(String(e.artifact?.author ?? ''))) continue;
+    directes.push({id: e.id, auteur: String(e.artifact?.author ?? '(non déclaré)').slice(0, 120), date: e.created_at,
+      type: e.artifact?.type ?? null, reponses: elements.filter(x => x.parent_id === e.id).length,
+      extrait: String(e.artifact?.proposal ?? '').replace(/\s+/g, ' ').slice(0, 300)});
+  }
+} catch (e) { console.error('Fil d\'ATTRACTOR illisible :', e.message); }
+const directesSansReponse = directes.filter(d => d.reponses === 0);
+
 const veille = {relevéeA: new Date().toISOString(), outil: 'registry/veille.mjs',
+  contributionsDirectes: {nombre: directes.length, sansReponse: directesSansReponse.length, liste: directes},
   nonVerses: dettes.length, plusAncienneHeures: dettes.length ? heures(dettes[0].date) : 0, messages: dettes,
   ecartes: misDeCote.length, messagesEcartes: misDeCote,
   filsVoisins: {fenetreJours: FENETRE_JOURS, nombre: voisins.length, fils: voisins}};
 writeFileSync('registry/veille.json', JSON.stringify(veille, null, 2) + '\n');
 for (const d of dettes) console.log(`${d.reseau.padEnd(20)} ${String(d.auteur).padEnd(20)} ${heures(d.date)} h · ${d.extrait.slice(0, 90)}`);
+for (const d of directes) console.log(`Fil ATTRACTOR (direct) ${d.auteur.slice(0, 40).padEnd(40)} ${d.date.slice(0, 10)} · ${d.reponses ? d.reponses + ' réponse(s)' : 'SANS RÉPONSE'} · ${d.extrait.slice(0, 70)}`);
 if (voisins.length) console.log(`\nFils ouverts à côté des nôtres (${FENETRE_JOURS} j) :`);
 for (const v of voisins) console.log(`  ${v.depot}#${v.numero} · ${v.date.slice(0, 10)} · ${v.auteur} · ${v.titre.slice(0, 80)}`);
 console.log(`\nregistry/veille.json écrit · ${dettes.length} message(s) non versé(s) · ${misDeCote.length} écarté(s) au tri`
-  + ` · ${voisins.length} fil(s) voisin(s) sur ${FENETRE_JOURS} j`);
+  + ` · ${voisins.length} fil(s) voisin(s) sur ${FENETRE_JOURS} j`
+  + ` · ${directes.length} contribution(s) directe(s) au fil, dont ${directesSansReponse.length} sans réponse`);
