@@ -52,7 +52,17 @@ La norme de transmission (v0.1 publiée, v0.2 en brouillon) est la première rè
 - Étapes 1 à 3 faites le 17/09 : la carte et la fiche ARD (`/.well-known/ard.json`) sont en ligne avec la 1.0.14. Étape 4, à faire sur phrase de Novan : se présenter aux annuaires qui acceptent les inscriptions. Le tableau des publications indique qu'ATTRACTOR figure déjà, depuis le 10/09, au registre d'outils MCP (« Codex, probablement ») : vérifier avant toute nouvelle inscription.
 - `node registry/sources.mjs check` refuse de démarrer si le quota GitHub anonyme (60 lectures par heure) ne suffit pas. Ne pas le lancer après une journée de lectures GitHub.
 
-## Version en ligne : 1.1.11 (serveur 4.0.0)
+## Version en ligne : 1.1.12 (serveur 4.0.0)
+
+1.1.12 (12/10, sur la phrase « Je t'autorise à poster les trois réponses préparées le 12/10 (#87, Moltbook, fil), à
+mettre la version 1.1.12 d'ATTRACTOR en production et à pousser le dépôt. ») : commit `83333fc`,
+`dpl_7eSWSagEn4Adef8bk8S34J2BvMrp`, contrôle du matin 13 sur 13, conformité 13 sur 13, fil à 175. Trois réponses
+postées : #87 6122780802, Moltbook 422b0435 (défi réussi avec « 30.00 » : deux décimales), fil ATR-S-f8543b98 sous
+Genesis. Page « Les écosystèmes » : cite la carte des lieux de SwarmMemo. Veille et contrôle du matin voient les
+contributions directes au fil ; `registry/thread-reply.mjs` y répond.
+**Promesse faite à Genesis, à tenir** : inscrire la limite des remplacements en chaîne (7.2 ne suit que les
+remplacements directs) en section 12 de la norme au prochain profil étiqueté, avec un cas de conformité (son entrée
+a ← b ← c, résultat confirmed + `contradicted-undeclared:c`) et son crédit (SPEC 13, CONTRIBUTORS.json).
 
 1.1.11 (07/10, sur « publie met à jour améliore ») : commit `5f296f8`, `dpl_2voDNMFNzxuM2tEcuXNT4R3pWn2E`, contrôle
 du matin 12 sur 12 sans orange, conformité 13 sur 13. Réponse du greffier #87, fil à 169, page Versions rattrapée
@@ -252,7 +262,7 @@ Mise en production le 15/09 au soir, après le « ok go » de Novan : commit `f2
 
 | Élément | Où | État au 15/09 au soir |
 |---|---|---|
-| Site public | https://attractor-observatory-demo.vercel.app | Production 1.1.11 `dpl_2voDNMFNzxuM2tEcuXNT4R3pWn2E` (07/10). Précédente : 1.1.10 `dpl_4hpPvELry2zxhNqi7n1eQekTHCy2` (retour arrière possible) |
+| Site public | https://attractor-observatory-demo.vercel.app | Production 1.1.12 `dpl_7eSWSagEn4Adef8bk8S34J2BvMrp` (12/10). Précédente : 1.1.11 `dpl_2voDNMFNzxuM2tEcuXNT4R3pWn2E` (retour arrière possible) |
 | Code du projet | https://github.com/NovanBaillif/attractor | Public depuis le 15/09 au soir, sur accord de Novan. Branche `main` seulement |
 | Fil commun | /conversation, /api/v3/thread | **169 éléments au fil public le 07/10**, comptés sur les 9 pages : les 6 restants du rattrapage versés le 07/10 (157 anciens relus identiques), puis notre réponse #87 du jour. Le 03/10 : 162, dont 40 messages jamais déclarés (#85 du 19 au 27/09, #87 d'avant notre siège, Moltbook) et 6 de nos propres réponses rattrapés ce jour-là (plafond de 20 par jour, `thread-import.mjs publish --max=20`). Avant : 54 messages au 17/09 (les derniers : jarvis_oscar, notre réponse et l’annonce de ses cas publiés, page 3). Le fil public est paginé par 20 : un message versé est en ligne tout de suite, mais pas forcément sur la première page |
 | Base de données dédiée | Supabase `ingmqxzwrwpjyxgmbrhe` | Jamais celle de Marmit ni du QMS |
@@ -325,7 +335,7 @@ Piège d'Astro : renommer une page de `.md` en `.mdx` ne suffit pas. Le magasin 
 ## Ce qui attend Novan
 
 - ~~Notifications GitHub vers sa messagerie~~ **FAIT le 16/09** : surveillance du dépôt et envoi par courriel réglés par Novan. Les messages GitHub arrivent sur son adresse personnelle, pas sur administration@ ; c’est la boîte que la Vigie utilise déjà. Aucun ticket n’avait été manqué : le dépôt n’en avait reçu aucun.
-- **12/10 — 1.1.12 prête en aperçu (commit `770b186`, non poussé), trois réponses en brouillon, une seule phrase
+- **FAIT le 12/10** (voir « Version en ligne ») — *historique* : **12/10 — 1.1.12 prête en aperçu (commit `770b186`, non poussé), trois réponses en brouillon, une seule phrase
   attendue** : « Je t'autorise à poster les trois réponses préparées le 12/10 (#87, Moltbook, fil), à mettre la
   version 1.1.12 d'ATTRACTOR en production et à pousser le dépôt. » Ordre après la phrase : refaire le relevé de la
   clé ; poster `civilisation/greffier-87/BROUILLON-REPONSE-2026-10-12.md` sur #87 (gh api) ; poster

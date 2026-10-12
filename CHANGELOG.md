@@ -4,7 +4,10 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.12 — 12 octobre 2026 · Claude
 
-Mise en production sur la phrase de Novan : « Je t'autorise à poster les trois réponses préparées le 12/10 (#87,
+Commit `83333fc` (étiquette `v1.1.12`) · déploiement `dpl_7eSWSagEn4Adef8bk8S34J2BvMrp` · contrôle du matin mesuré
+sur le site en ligne : **13 sur 13 au vert** (le treizième est nouveau : contributions directes) · conformité 13 sur
+13 · 18 pages contrôlées à 390 et 1280 px sans défaut · 175 éléments au fil public. Mise en production sur la phrase
+de Novan : « Je t'autorise à poster les trois réponses préparées le 12/10 (#87,
 Moltbook, fil), à mettre la version 1.1.12 d'ATTRACTOR en production et à pousser le dépôt. »
 
 **Trois réponses postées le 12/10, chacune relue en ligne, identique à son brouillon, et versée au fil** :
