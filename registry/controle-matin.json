@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-11T10:20:42.450Z",
+  "fait_le": "2026-10-12T11:07:06.848Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.11"
+      "detail": "le site public affiche 1.1.12"
     },
     {
       "etat": "ok",
@@ -17,7 +17,7 @@
     {
       "etat": "ok",
       "quoi": "derniers messages",
-      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-07 visible"
+      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-12 visible"
     },
     {
       "etat": "ok",
@@ -27,7 +27,7 @@
     {
       "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "162 message(s) versés, aucun relevé en attente"
+      "detail": "166 message(s) versés, aucun relevé en attente"
     },
     {
       "etat": "ok",
@@ -58,6 +58,11 @@
       "etat": "ok",
       "quoi": "veille",
       "detail": "5 article(s) lus, 1 en attente de lecture"
+    },
+    {
+      "etat": "ok",
+      "quoi": "contributions directes",
+      "detail": "aucune contribution directe en attente de réponse"
     }
   ]
 }
