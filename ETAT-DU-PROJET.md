@@ -325,6 +325,16 @@ Piège d'Astro : renommer une page de `.md` en `.mdx` ne suffit pas. Le magasin 
 ## Ce qui attend Novan
 
 - ~~Notifications GitHub vers sa messagerie~~ **FAIT le 16/09** : surveillance du dépôt et envoi par courriel réglés par Novan. Les messages GitHub arrivent sur son adresse personnelle, pas sur administration@ ; c’est la boîte que la Vigie utilise déjà. Aucun ticket n’avait été manqué : le dépôt n’en avait reçu aucun.
+- **12/10 — 1.1.12 prête en aperçu (commit `770b186`, non poussé), trois réponses en brouillon, une seule phrase
+  attendue** : « Je t'autorise à poster les trois réponses préparées le 12/10 (#87, Moltbook, fil), à mettre la
+  version 1.1.12 d'ATTRACTOR en production et à pousser le dépôt. » Ordre après la phrase : refaire le relevé de la
+  clé ; poster `civilisation/greffier-87/BROUILLON-REPONSE-2026-10-12.md` sur #87 (gh api) ; poster
+  `civilisation/convention/DRAFT-MOLTBOOK-JARVIS-2026-10-12.md` (moltbook-post.mjs comment, défi de calcul) ;
+  `node registry/thread-reply.mjs civilisation/convention/BROUILLON-FIL-GENESIS-2026-10-12.json` ; déclarer et verser
+  les deux premières ; compléter le CHANGELOG ; committer ; reconstruire ; production ; pousser aussitôt. NE PAS pousser
+  avant la production : le contrôle du cloud passerait au rouge (« derniers messages », « version en ligne »).
+  La réponse à Genesis annonce la limite dans la section 12 de la norme au prochain profil étiqueté, avec son crédit :
+  à faire ensuite dans attractor-cooperation (cas de conformité + SPEC 12 + CONTRIBUTORS.json).
 - ~~Réponse du greffier sur #87~~ **POSTÉE le 07/10 à 09:18 UTC** sur la phrase de Novan (« poste la réponse du greffier du 03/10 sur #87 ») : commentaire 6034888090, texte publié identique au brouillon, déclaré (`village-87-greffier-6`) et versé au fil. Reste : juger l'épreuve quand Vigilia sert la clé ; surveiller une objection de GvHildebrand aux bandes.
 - *Historique* — **03/10 — réponse du greffier sur #87, en attente de la phrase de Novan** (brouillon remis à jour le 07/10 : huit jours de retard, clé toujours en 404 à 08:56 UTC, manifeste régénéré le 04/10, empreinte de la clé inchangée ; aucun message sur #87 depuis le 29/09) : `civilisation/greffier-87/BROUILLON-REPONSE-2026-10-03.md`. Elle répond au défaut de notre barre relevé par terminator2-agent le 29/09 (« passe si kappa ≥ 0,40 » ne dit pas quelle hypothèse passe), resté quatre jours sans réponse, et demande à Vigilia si elle attend encore quelque chose de nous pour servir la clé (toujours en 404 le 03/10).
 - À surveiller : réponses sur Moltbook (communauté « memory »), AGNTCY #94, AI Village #84 et #85 ; les verser dans la mémoire avec leur origine, puis préparer nos réponses pour validation.
