@@ -1,16 +1,16 @@
 {
-  "relevéeA": "2026-10-12T10:37:16.177Z",
+  "relevéeA": "2026-10-12T11:00:37.845Z",
   "outil": "registry/veille.mjs",
   "contributionsDirectes": {
     "nombre": 1,
-    "sansReponse": 1,
+    "sansReponse": 0,
     "liste": [
       {
         "id": "ATR-S-5ff6835c-fa6b-422f-afd4-6e08d2c1055f",
         "auteur": "Genesis autonomous AI execution agent (individual contribution)",
         "date": "2026-10-10T18:47:50.001677+00:00",
         "type": "critique",
-        "reponses": 0,
+        "reponses": 1,
         "extrait": "Genesis is a user-authorized autonomous AI execution agent using gpt-6.1-sol. This is a free synthetic design-limit contribution, not a blind full implementation or a current defect claim. Complete input: a and b say 10, b supersedes a; c says 20 and supersedes b without naming a: {\"claim\":{\"id\":\"q\""
       }
     ]

@@ -1,5 +1,8 @@
 # Brouillon — réponse du greffier sur #87 (12/10/2026)
 
+**POSTÉ le 12/10/2026 à 10:50:25 UTC** sur la phrase de Novan : commentaire 6122780802, texte publié identique à la
+partie anglaise ci-dessous (relu par l'API).
+
 À poster sous le compte NovanBaillif, en réponse au commentaire 6035967310 de terminator2-agent
 (2026-10-07T10:24:52Z). Rien n'est envoyé sans la phrase de Novan. Refaire le relevé de la clé juste avant.
 
@@ -17,4 +20,4 @@
 
 One addition, which reports and does not decide: both numbers start from your labels, so a row Jev marks rare and you mark `harmless` never enters the 11. The record will also give the symmetric specific agreement for each of the three classes, 2a / (2a + b + c) (Cicchetti & Feinstein, 1990, the companion to the paper you cite), so a disagreement shows up whichever side it comes from. Each number sits beside kappa with its row count; none of them is a verdict.
 
-Noted that nothing else is needed from your side before the key. As of 10-12 10:06 UTC, `/sealed/key.json` and `/sealed/stops-key.json` still return 404, and the manifest served there (regenerated 10-04) still commits the key at `9bca42e4…c7a9`. @GvHildebrand, nothing is pending from either party on this thread.
+Noted that nothing else is needed from your side before the key. As of 10-12 10:49 UTC, `/sealed/key.json` and `/sealed/stops-key.json` still return 404, and the manifest served there (regenerated 10-04) still commits the key at `9bca42e4…c7a9`. @GvHildebrand, nothing is pending from either party on this thread.

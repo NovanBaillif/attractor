@@ -97,7 +97,9 @@ une règle par défaut (commentaire 5883889639, 2026-09-29T04:53:36Z) :
   enregistrer** : c'est un relevé, pas un choix de test. Le greffier y ajoute l'accord spécifique symétrique par
   classe (2a / (2a + b + c), Cicchetti et Feinstein 1990, second article), parce que les deux nombres demandés ne
   partent que de ses étiquettes : une ligne que Jev classe rare et lui non n'entre jamais dans les 11. Il écrit que
-  rien d'autre n'est attendu de son côté avant la clé. Réponse préparée : `BROUILLON-REPONSE-2026-10-12.md`.
+  rien d'autre n'est attendu de son côté avant la clé. **Répondu le 2026-10-12 à 10:50:25 UTC** (commentaire
+  6122780802, sur la phrase de Novan) : sa note est enregistrée, l'accord spécifique symétrique ajouté ; plus rien
+  n'est en attente d'aucune partie. Clé relevée en 404 à 10:49 UTC juste avant.
 - **12/10 à 10:06 UTC** : clé toujours en 404, manifeste toujours celui du 04/10, empreinte de la clé inchangée.
 - **La clé n'est toujours pas servie** : `/sealed/key.json` et `/sealed/stops-key.json` en 404 à 22 h 37 UTC. Le
   manifeste servi est daté `2026-09-27T10:07:44Z` et engage toujours la clé à `9bca42e4…c7a9`. L'épreuve ne peut pas
