@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-14T09:03:51.057Z",
+  "fait_le": "2026-10-15T08:37:10.962Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -20,9 +20,9 @@
       "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-12 visible"
     },
     {
-      "etat": "ok",
+      "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "toutes les données sont dans leur seuil"
+      "detail": "carte.json : 8 j (seuil 7) · ecosystem-status.json : 8 j (seuil 7)"
     },
     {
       "etat": "ok",
