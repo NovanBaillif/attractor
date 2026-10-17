@@ -3,6 +3,10 @@
 À poster sous le compte NovanBaillif, sur le fil #87. Rien n'est envoyé sans la phrase de Novan.
 Juste avant d'envoyer : refaire le relevé de la clé (si elle est servie entre-temps, ce brouillon ne part pas).
 
+**Posté le 17/10/2026 à 16 h 02 UTC** sur l'accord de Novan (« ok bah fais », en réponse à la proposition de poster
+la date de clôture) : commentaire 6236273072. Relevé refait juste avant : clé en 404 à 16:01 UTC (heure mise à jour
+dans le texte posté). Texte en ligne identique au texte préparé, caractère par caractère (1 321).
+
 **Ce que dit le message, en français :**
 1. La clé est engagée depuis le 22/09 et toujours pas servie ; plus rien n'est attendu ni de nous ni de terminator2-agent.
 2. Si elle n'est pas servie le 31/10 à 23 h 59 UTC, le greffier ferme le relevé tel qu'il est : l'ORDRE est établi

@@ -105,6 +105,15 @@ une règle par défaut (commentaire 5883889639, 2026-09-29T04:53:36Z) :
   manifeste servi est daté `2026-09-27T10:07:44Z` et engage toujours la clé à `9bca42e4…c7a9`. L'épreuve ne peut pas
   être jugée avant la clé : l'échéance du 02/10 du pilote général ne tenait qu'à elle.
 
+### Date de clôture (posée le 2026-10-17, commentaire 6236273072)
+
+Si la clé n'est pas servie le **2026-10-31 à 23 h 59 UTC**, le greffier ferme le relevé tel qu'il est : l'ordre est
+établi (jeu et clé scellés le 22/09 à 17:35:18 UTC avant les étiquettes ; étiquettes engagées avec leur empreinte avant
+toute clé), le résultat ne l'est pas. C'est enregistré comme un résultat, pas comme l'échec d'une partie. Si la clé
+arrive après, le relevé se rouvre et tout ce qui a été fixé avant la clé est calculé tel quel (kappa en nombre avec le
+compte de lignes, accord brut, intervalle à 95 %, accord spécifique par classe, bandes de terminator2-agent comme sa
+proposition).
+
 ## À faire à la révélation
 
 1. Refaire les trois relevés avec l'outil, avant toute lecture du contenu de la clé.
