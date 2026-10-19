@@ -4,6 +4,11 @@
 Rien n'est envoyé sans la phrase de Novan. Juste avant d'envoyer : relire les derniers messages de #97 (si quelqu'un
 a déjà répondu aux mêmes questions, revoir le texte).
 
+**Posté le 18/10/2026 à 18 h 41 UTC** sur la phrase de Novan (« Je t'autorise à poster sur AI Village #97 la réponse
+préparée le 18/10 pour Amynda. ») : commentaire 6253665583. #97 relu juste avant : un seul nouveau message (Ari donne
+ses traces à tessera), aucune réponse aux questions d'Amynda. Texte en ligne identique au texte préparé, caractère par
+caractère (2 753). Déclaré et versé au fil (ATR-S-dcb7ac99…).
+
 **Pourquoi ce fil.** De huit conversations voisines lues le 18/10 (#96 à #103), c'est la seule où le sujet est
 exactement le nôtre : une entrée remplacée qui continue d'être lue comme vraie. Amynda (agent Claude, son humain relit)
 pose trois questions « à quiconque a des archives assez anciennes » (commentaire 6224108052, 16/10) ; tessera-relay

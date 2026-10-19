@@ -35,15 +35,26 @@ for (const post of [...new Set(config.sources.filter(s => s.connector?.startsWit
 }
 
 // ————— GitHub : les tickets sur lesquels le projet a écrit —————
+// Nos propres messages ne sont pas une dette : ils sont déclarés ou ils sont de nous.
+const nous = new Set(['NovanBaillif', 'attractor-memory']);
+// Un message écarté au tri (registry/ecartes.json, avec sa raison) n'est pas une dette non plus,
+// mais il reste listé à part : écarter se relit.
+const ecartes = new Map(JSON.parse(readFileSync('registry/ecartes.json', 'utf8')).messages.map(m => [m.url, m.raison]));
 const gh = chemin => JSON.parse(execFileSync('gh', ['api', chemin, '--paginate'], {encoding: 'utf8', maxBuffer: 16 << 20}));
 const fils = [...new Set([...declare].map(u => (String(u).match(/^(https:\/\/github\.com\/[^#]+\/issues\/\d+)/) || [])[1]).filter(Boolean))];
 for (const fil of fils) {
   const [, depot, numero] = fil.match(/github\.com\/([^/]+\/[^/]+)\/issues\/(\d+)/);
   try {
-    for (const c of gh(`repos/${depot}/issues/${numero}/comments?per_page=100`)) {
-      if (connusGithub.has(String(c.id))) continue;
+    const commentaires = gh(`repos/${depot}/issues/${numero}/comments?per_page=100`);
+    // Sur un ticket ouvert par d'autres, ce qui s'est dit avant notre premier message ne nous était pas adressé
+    // (18/10, #97 : 34 messages d'avant notre arrivée seraient sinon comptés comme dette). Sur nos fils
+    // existants, tout message d'avant notre arrivée est déjà déclaré ou écarté ; un écarté reste listé à part.
+    const arrivee = commentaires.filter(c => nous.has(c.user?.login)).map(c => c.created_at).sort()[0];
+    for (const c of commentaires) {
+      const url = `${fil}#issuecomment-${c.id}`;
+      if (connusGithub.has(String(c.id)) || (arrivee && c.created_at < arrivee && !ecartes.has(url))) continue;
       nouveaux.push({reseau: 'AI Village — GitHub', auteur: c.user?.login ?? '(inconnu)', date: c.created_at,
-        url: `${fil}#issuecomment-${c.id}`, extrait: String(c.body ?? '').replace(/\s+/g, ' ').slice(0, 400)});
+        url, extrait: String(c.body ?? '').replace(/\s+/g, ' ').slice(0, 400)});
     }
   } catch { console.error('Ticket illisible :', fil); }
 }
@@ -70,11 +81,6 @@ for (const url of [...declare].filter(u => /github\.com\/orgs\/[^/]+\/discussion
   } catch { console.error("Discussion illisible :", url); }
 }
 
-// Nos propres messages ne sont pas une dette : ils sont déclarés ou ils sont de nous.
-// Un message écarté au tri (registry/ecartes.json, avec sa raison) n'en est pas une non plus,
-// mais il reste listé à part : écarter se relit.
-const nous = new Set(['NovanBaillif', 'attractor-memory']);
-const ecartes = new Map(JSON.parse(readFileSync('registry/ecartes.json', 'utf8')).messages.map(m => [m.url, m.raison]));
 const dettes = nouveaux.filter(n => !nous.has(n.auteur) && !ecartes.has(n.url));
 const misDeCote = nouveaux.filter(n => ecartes.has(n.url)).map(n => ({...n, raison: ecartes.get(n.url)}));
 dettes.sort((a, b) => String(a.date).localeCompare(String(b.date)));
