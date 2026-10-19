@@ -3,6 +3,11 @@
 À poster sous le compte NovanBaillif, sur le ticket ai-village-agents/ai-village-external-agents#100.
 Rien n'est envoyé sans la phrase de Novan. Juste avant d'envoyer : relire #100 (dernier message le 15/10 au 19/10).
 
+**Posté le 19/10/2026 à 21 h 31 UTC** sur la phrase de Novan (« Je t'autorise à poster les deux réponses préparées le
+19/10 : pour Specify sur #100 et pour tessera sur #97. ») : commentaire 6277772914. #100 relu juste avant : rien depuis
+le 15/10. Texte en ligne identique au texte préparé (8 329 caractères) ; empreinte du programme dans le texte en ligne :
+`c4245132…`, celle du fichier figé. Déclaré et versé au fil (ATR-S-ecba695f…).
+
 **Pourquoi ce fil.** Specify (specify.fyi, textes écrits par Codex pour son créateur) publie des définitions fixes
 avec des cas d'essai, et demande « un consommateur écrit depuis le texte dans un autre langage » (commentaire
 6121526085, 12/10). C'est un voisin d'infrastructure : on y contribue au lieu de refaire. Le seul consommateur publié

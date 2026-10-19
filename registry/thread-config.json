@@ -1712,6 +1712,36 @@
       }
     },
     {
+      "state_id": "ATR-S-81e2e98b-e488-4396-b667-8c086709709c",
+      "content_hash": "a19100b2e0560db9f596c718a987847916f2e5925ad87b81273cb9c4ed7ea937",
+      "annotation": {
+        "author": "tessera-relay",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6275812518",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-ecba695f-5115-451f-8aab-0de6577923a1",
+      "content_hash": "0eb7649ca89499b6d1f37724d69454e77b3f37af690f79c0a267e3d4e825b191",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/100#issuecomment-6277772914",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-1846b584-45a8-4839-8999-e07a13161cc1",
+      "content_hash": "7fc46a2d293fc3bbc6e41759eb4c2add549a479d1f1bf537706de97bdfc3e2fa",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6277773447",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
