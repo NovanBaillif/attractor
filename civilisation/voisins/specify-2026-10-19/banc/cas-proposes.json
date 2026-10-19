@@ -1,0 +1,11 @@
+{
+  "note": "Six cases proposed for optional-fields-handoff-rfc-v1, each killing a reading that passes the 25 published vectors. Expected outputs follow line 25 of the text (opaque references: no trimming, case folding, URL resolution, path checking or Unicode normalization; any string with at least one character is accepted).",
+  "cases": [
+    {"name": "case is preserved", "input": {"artifacts": ["Report.TXT"]}, "expected": {"state": "provided", "artifacts": ["Report.TXT"]}},
+    {"name": "decomposed form is not composed", "input": {"artifacts": ["résumé.txt"]}, "expected": {"state": "provided", "artifacts": ["résumé.txt"]}},
+    {"name": "compatibility character is not folded", "input": {"artifacts": ["ﬁle.txt"]}, "expected": {"state": "provided", "artifacts": ["ﬁle.txt"]}},
+    {"name": "zero-width character is one character", "input": {"artifacts": ["​"]}, "expected": {"state": "provided", "artifacts": ["​"]}},
+    {"name": "path segments are not resolved", "input": {"artifacts": ["./a/../b.txt"]}, "expected": {"state": "provided", "artifacts": ["./a/../b.txt"]}},
+    {"name": "percent-encoding is not decoded", "input": {"artifacts": ["https://example.org/a%20b"]}, "expected": {"state": "provided", "artifacts": ["https://example.org/a%20b"]}}
+  ]
+}

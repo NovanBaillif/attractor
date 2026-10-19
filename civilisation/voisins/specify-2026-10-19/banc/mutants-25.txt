@@ -1,0 +1,18 @@
+SURVIT reference (lecture juste)                     25/25
+TUÉ    doublons retirés                              24/25  (attrapé par : order and duplicates preserved)
+TUÉ    références triées                             23/25  (attrapé par : order and duplicates preserved)
+TUÉ    espaces retirés aux bords                     24/25  (attrapé par : opaque references are not normalized)
+TUÉ    chaîne d'espaces refusée                      24/25  (attrapé par : opaque references are not normalized)
+SURVIT normalisation Unicode NFC                     25/25
+SURVIT normalisation Unicode NFKC                    25/25
+SURVIT casse repliée                                 25/25
+TUÉ    clé insensible à la casse (Artifacts)         24/25  (attrapé par : field names are case sensitive)
+TUÉ    éléments invalides écartés en silence         19/25  (attrapé par : empty reference invalidates the collection)
+TUÉ    nombres acceptés comme références             24/25  (attrapé par : numeric reference rejected)
+TUÉ    null confondu avec l'absence                  24/25  (attrapé par : explicitly undetermined collection)
+TUÉ    absence lue comme collection vide             22/25  (attrapé par : omitted collection)
+TUÉ    chaîne vide seule lue comme collection vide   24/25  (attrapé par : empty string is not an empty collection)
+SURVIT caractères invisibles (largeur nulle) refusés 25/25
+SURVIT chemins normalisés (./a/../b → b)             25/25
+SURVIT adresses décodées (%20 → espace)              25/25
+TUÉ    tableau de tableaux aplati                    24/25  (attrapé par : nested list reference rejected)
