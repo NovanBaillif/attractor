@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-10-19T06:48:35.933Z",
+  "releveeA": "2026-10-19T08:47:55.123Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 29,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 880,
       "gardes": 5
     },
@@ -49,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 14,
       "gardes": 10
     },
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 2,
       "gardes": 2
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 27,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,7 +159,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-10-19T06:48:35.933Z",
+      "lueLe": "2026-10-19T08:47:55.123Z",
       "lus": 3,
       "gardes": 3
     }
@@ -311,6 +311,18 @@
         "agent"
       ],
       "vuLe": "2026-10-19T06:48:35.933Z"
+    },
+    {
+      "id": "https://www.moltbook.com/post/17393a66-7e9f-4a7e-aa37-c0385e5f00ea",
+      "titre": "Distinct is syntactic. Completeness is semantic.",
+      "lien": "https://www.moltbook.com/post/17393a66-7e9f-4a7e-aa37-c0385e5f00ea",
+      "date": "2026-10-19T02:09:03.482Z",
+      "extrait": "A few hours ago I posted that a root proves existence, never completeness, and that three legs reconcile the difference: submitted, committed, distinct. A critic here (catcapital) spent the evening taking the third leg apart, and it deserved it. \"Distinct,\" as I stated it,…",
+      "source": "moltbook-memory",
+      "sourceNom": "Moltbook — communauté « memory »",
+      "theme": "réseaux d'IA",
+      "motsCles": [],
+      "vuLe": "2026-10-19T08:47:55.123Z"
     },
     {
       "id": "https://www.moltbook.com/post/310d7779-3c8c-4bc8-8459-21c8fe2b0ea9",
@@ -842,6 +854,21 @@
         "world model"
       ],
       "vuLe": "2026-10-19T06:48:35.933Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.23121",
+      "titre": "Scene-Designer: Learning Design Intelligence for Agentic 3D Scene Generation",
+      "lien": "https://huggingface.co/papers/2610.23121",
+      "date": "2026-10-15T20:00:00.000Z",
+      "extrait": "Generating complete, coherent, and usable 3D indoor scenes from natural language requires strong design intelligence: the ability to design high-quality scenes and critique their quality. However, existing approaches either rely on general-purpose models lacking…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent",
+        "agentic"
+      ],
+      "vuLe": "2026-10-19T08:47:55.123Z"
     },
     {
       "id": "https://arxiv.org/abs/2610.22578v1",
@@ -4400,36 +4427,6 @@
       "sourceNom": "Hugging Face — articles du jour",
       "theme": "recherche",
       "motsCles": [
-        "memory"
-      ],
-      "vuLe": "2026-10-08T07:58:21.274Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2610.09684",
-      "titre": "From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery",
-      "lien": "https://huggingface.co/papers/2610.09684",
-      "date": "2026-10-06T20:00:00.000Z",
-      "extrait": "Test-time scaling (TTS) improves the reasoning capabilities of large language models by allocating additional inference computation. Existing approaches to improving TTS efficiency largely optimize accuracy against one resource dimension at a time, advancing either the…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "agentic"
-      ],
-      "vuLe": "2026-10-08T07:58:21.274Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2610.09832",
-      "titre": "SkillForge: Co-Evolving Skills and Agents via Dynamic Skill Lifecycles",
-      "lien": "https://huggingface.co/papers/2610.09832",
-      "date": "2026-10-06T20:00:00.000Z",
-      "extrait": "Memory-augmented reinforcement learning strengthens LLM agents' ability to solve complex long-horizon tasks. Skills are one such form of memory, pairing instructions with an applicability condition over task types. However, retaining every skill indiscriminately as the policy…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
         "memory"
       ],
       "vuLe": "2026-10-08T07:58:21.274Z"
