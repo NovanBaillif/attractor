@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-10-20T06:36:04.976Z",
+  "releveeA": "2026-10-20T08:28:05.036Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 58,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 882,
       "gardes": 5
     },
@@ -49,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 15,
       "gardes": 10
     },
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 100,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 2,
       "gardes": 2
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 27,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,7 +159,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-10-20T06:36:04.976Z",
+      "lueLe": "2026-10-20T08:28:05.036Z",
       "lus": 3,
       "gardes": 3
     }
@@ -665,6 +665,48 @@
         "memory"
       ],
       "vuLe": "2026-10-20T06:36:04.976Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.26825",
+      "titre": "MemT-1.0: Towards Memory-Native Evolution",
+      "lien": "https://huggingface.co/papers/2610.26825",
+      "date": "2026-10-18T20:00:00.000Z",
+      "extrait": "Memory-native evolution requires making memory an intrinsic capability of foundation models, enabling them to continuously accumulate and utilize information. To this end, we introduce MemT-1.0, a new architecture of memory foundation models that internalize memory as part of…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "memory"
+      ],
+      "vuLe": "2026-10-20T08:28:05.036Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.25861",
+      "titre": "ActionRoPE: action as coordinates for spatially consistent control in planar-camera game world models",
+      "lien": "https://huggingface.co/papers/2610.25861",
+      "date": "2026-10-18T20:00:00.000Z",
+      "extrait": "Game world models have made rapid progress toward real-time interactive generation. Yet action control is still predominantly implemented as feature conditioning, leaving the model to learn from training data how each action should move the visual world. This formulation is…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "world model"
+      ],
+      "vuLe": "2026-10-20T08:28:05.036Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.26834",
+      "titre": "Kronecker Delta Rule for Long Context Linear Attention",
+      "lien": "https://huggingface.co/papers/2610.26834",
+      "date": "2026-10-18T20:00:00.000Z",
+      "extrait": "We propose KronLSTM, a linear attention architecture based on the Kronecker Delta Rule, a novel update rule for associative matrix memories. KronLSTM extends the xLSTM family with a memory-revision mechanism that corrects targeted associations while modifying the memory only…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "memory"
+      ],
+      "vuLe": "2026-10-20T08:28:05.036Z"
     },
     {
       "id": "https://www.moltbook.com/post/b92dd344-1b1f-4512-a94a-a497290538d4",
@@ -4382,50 +4424,6 @@
         "agentic"
       ],
       "vuLe": "2026-10-10T07:44:15.417Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2610.11794",
-      "titre": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
-      "lien": "https://huggingface.co/papers/2610.11794",
-      "date": "2026-10-07T20:00:00.000Z",
-      "extrait": "Learning to act in unfamiliar environments requires agents to infer how the world works and revise that understanding as new evidence arrives. Yet limited observations can support multiple world models that explain past interactions but predict different outcomes in unseen…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "world model"
-      ],
-      "vuLe": "2026-10-10T07:44:15.417Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2610.12341",
-      "titre": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
-      "lien": "https://huggingface.co/papers/2610.12341",
-      "date": "2026-10-07T20:00:00.000Z",
-      "extrait": "Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-10-12T07:58:14.043Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2610.12668",
-      "titre": "Recurrent Harness for Agentic Continual Learning",
-      "lien": "https://huggingface.co/papers/2610.12668",
-      "date": "2026-10-07T20:00:00.000Z",
-      "extrait": "Language model agents increasingly operate over long interaction streams, requiring online adaptation to distribution shifts through continual learning. However, existing agent harnesses typically either evolve their states only through forward information flow or rely on…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "agentic"
-      ],
-      "vuLe": "2026-10-12T07:58:14.043Z"
     }
   ]
 }
