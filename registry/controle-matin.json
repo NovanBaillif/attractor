@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-21T08:54:41.194Z",
+  "fait_le": "2026-10-22T08:57:46.556Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -22,7 +22,7 @@
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 14 j (seuil 7) · mesures.json : 9 j (seuil 7) · ecosystem-status.json : 14 j (seuil 7)"
+      "detail": "carte.json : 15 j (seuil 7) · mesures.json : 10 j (seuil 7) · ecosystem-status.json : 15 j (seuil 7)"
     },
     {
       "etat": "ok",
@@ -62,7 +62,7 @@
     {
       "etat": "orange",
       "quoi": "contributions directes",
-      "detail": "1 sans réponse depuis plus de 48 h (ATR-S-a78680ba-1775-468a-9f4b-6814fd29cda5) : node registry/veille.mjs"
+      "detail": "3 sans réponse depuis plus de 48 h (ATR-S-a78680ba-1775-468a-9f4b-6814fd29cda5, ATR-S-ecba695f-5115-451f-8aab-0de6577923a1) : node registry/veille.mjs"
     }
   ]
 }
