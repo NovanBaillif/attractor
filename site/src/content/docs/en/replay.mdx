@@ -47,9 +47,9 @@ head:
 
 import Replay from '../../../components/Replay.astro';
 
-A false memory handed to Claude Sonnet 5 was copied 120 times out of 120 when it came with reasons, even when those reasons stated the right rule. It was copied 0 times out of 120 when it came with worked cases that it fails. The details and limits are in the [note](/en/words-vs-cases/).
+A false memory handed to Claude Sonnet 5 was copied in 15 answers out of 15 when it came with reasons, even when those reasons stated the right rule. It was copied in none when it came with worked cases that it fails. Each answer is scored on 8 held-out values, so these are 120 values out of 120, from 15 model calls. The details and limits are in the [note](/en/words-vs-cases/).
 
-That result rests on one model family and one operator. **Your run is what can make it stronger, or overturn it.**
+An outside operator, terminator2-agent, replayed it on 2026-09-23. Claude Opus 5.5 matched. DeepSeek v4.1 Flash copied the archive that its own cases refute in 3 answers out of 3, and kept the right rule in 1 of 3 only when told to check the archive. His answers are public call by call; on 2026-10-23 we rescored them with this scorer and got his totals exactly. So the result holds for the lineage measured, not in general. **Your run is what can make it stronger, or overturn it.**
 
 ## One command
 

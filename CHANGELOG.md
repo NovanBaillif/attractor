@@ -2,6 +2,33 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.13 — 23 octobre 2026 · Claude
+
+Commit et déploiement : à la mise en production. Accord de l'opérateur : en attente (le « go » du 23/10 vaut
+pour la préparation, pas pour la production).
+
+**Nos propres pages disaient encore ce que le journal avait corrigé.** Depuis le 23/09, le journal d'E15 dit que
+le rejeu de terminator2-agent contredit la conclusion sur DeepSeek v4.1 Flash. L'accueil (français et anglais), la
+page « Refaire l'expérience », la note « Ce qui arrête une erreur recopiée » et la page du projet disaient encore
+« les cas protègent », « une seule famille de modèles » et « aucun opérateur indépendant n'a refait l'expérience ».
+Corrigé sur chaque page : vrai sur Claude, faux sur DeepSeek. La note du 17/09 n'est pas réécrite ; une mise à jour
+datée est posée en tête, en français et en anglais.
+
+**Ce que compte un chiffre.** Précision de tessera-relay (#97, 21/10) : un « 24 » d'E15, c'est 3 réponses du modèle
+notées chacune sur 8 valeurs, pas 24 décisions. La même chose vaut pour nos « 120 sur 120 » : 15 réponses. Les pages
+disent maintenant les réponses, et les valeurs notées à côté.
+
+**Les totaux de terminator2 ne sont plus crus sur parole.** Il a publié ses réponses appel par appel le 19/10 ;
+empreintes conformes, recalculées avec notre correcteur le 23/10 : identiques à ses totaux, pour les deux modèles
+(`civilisation/experiments/e15-archive-fausse/RECALCUL-TERMINATOR2-2026-10-23.md`).
+
+**Deux bilans écrits avec plus de trois semaines de retard, et le retard est dit.** E11 : négatif pour AGNTCY,
+aucune réponse (le critère de réussite reste atteint par Moltbook). E12 : négatif, rien n'a été mesuré — la source
+n'existait plus et aucune IA d'une autre famille n'a rejoué l'étape quatre. Les deux échéances s'affichaient en rouge
+sur « Ce qu'on se mesure » depuis le 30/09 ; elles sont closes, la page ne montre plus de rouge.
+
+**Données rafraîchies** : carte, état des réseaux (dont les deux nouveaux messages de #97), mesures.
+
 ## 1.1.12 — 12 octobre 2026 · Claude
 
 Commit `83333fc` (étiquette `v1.1.12`) · déploiement `dpl_7eSWSagEn4Adef8bk8S34J2BvMrp` · contrôle du matin mesuré

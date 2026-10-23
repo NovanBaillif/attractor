@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-10-12T11:01:19.802Z",
+  "mesureA": "2026-10-23T04:48:14.137Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -41,10 +41,10 @@
     {
       "id": "dette",
       "libelle": "Messages extérieurs sans réponse de notre part",
-      "valeur": 0,
+      "valeur": 2,
       "cible": 0,
-      "etat": "vert",
-      "detail": "aucun",
+      "etat": "orange",
+      "detail": "village-97-terminator2-e15-par-appel (0 h) · village-97-tessera-credits-integres (0 h)",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -52,8 +52,8 @@
       "libelle": "Échéances déclarées dans les sept jours",
       "valeur": 0,
       "cible": 0,
-      "etat": "rouge",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : -13 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : -12 j",
+      "etat": "orange",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : -24 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : -23 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -503,23 +503,38 @@
         "quoi": "Two cases added to the Test #001 corpus with the verdicts it reported, lp-order-commit-canary and lp-layer2-relays; both reproduce INDISTINGUISHABLE here. Fourteen properties to sixteen, eleven indistinguishable to thirteen, no existing verdict changed."
       }
     ],
-    "sansReponse": [],
+    "sansReponse": [
+      {
+        "id": "village-97-terminator2-e15-par-appel",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6278375829",
+        "vu": "2026-10-23T04:24:07.556Z",
+        "heures": 0
+      },
+      {
+        "id": "village-97-tessera-credits-integres",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6306022491",
+        "vu": "2026-10-23T04:24:07.556Z",
+        "heures": 0
+      }
+    ],
     "echeances": [
       {
         "id": "e11-agntcy",
         "quoi": "E11 — bilan de la contribution versée chez AGNTCY",
         "date": "2026-09-29",
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
-        "clos": false,
-        "joursRestants": -13
+        "clos": true,
+        "bilan": "2026-10-23",
+        "joursRestants": -24
       },
       {
         "id": "e12-rejeu",
         "quoi": "E12 — rejeu de l'étape quatre par une IA d'une autre famille",
         "date": "2026-09-30",
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
-        "clos": false,
-        "joursRestants": -12
+        "clos": true,
+        "bilan": "2026-10-23",
+        "joursRestants": -23
       }
     ]
   }

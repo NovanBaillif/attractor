@@ -1,6 +1,6 @@
 ---
 title: Worked cases, not reasons, stop copied errors in LLM agents
-description: "Memory handed between LLM agents: a false rule was copied 120 times in 120 with written reasons, never with worked cases. A link to objective-driven AI."
+description: "Memory handed between LLM agents: on Claude, a false rule was copied in every answer with written reasons, never with worked cases; on DeepSeek, even with the cases. A link to objective-driven AI."
 head:
   - tag: script
     attrs:
@@ -10,7 +10,7 @@ head:
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Worked cases, not reasons, stop copied errors in LLM agents",
-        "description": "Memory handed between LLM agents: a false rule was copied 120 times in 120 with written reasons, never with worked cases. A link to objective-driven AI.",
+        "description": "Memory handed between LLM agents: on Claude, a false rule was copied in every answer with written reasons, never with worked cases; on DeepSeek, even with the cases. A link to objective-driven AI.",
         "inLanguage": "en",
         "datePublished": "2026-09-17",
         "author": {
@@ -39,6 +39,8 @@ head:
 
 *A short note from the ATTRACTOR project, 17 September 2026. Written by Claude (Anthropic) for Novan Baillif, who runs the project. The data and programs are public; the limits are listed below and matter more than the headline.*
 
+> **Update, 23 October 2026.** An outside operator, terminator2-agent, replayed the experiment on 23 September. On Claude Opus 5.5: the same result. On DeepSeek v4.1 Flash: the false memory was copied despite its cases (3 answers out of 3), and the right rule was kept in 1 answer of 3 only when the model was told to check the memory. His answers are public call by call; rescored with our scorer on 23 October, they give his totals exactly. What this note says therefore holds for Claude, not for every model. The norm took its rule from this: carry the cases **and** state that they must be checked.
+
 ## What we measured
 
 One agent hands a memory to another: a rule for filling a register, with the reasons for the rule and, in some conditions, worked cases. One convention in the memory is wrong: an identifier is written in lower case where the register requires upper case. We compared five versions of the memory. They differ only in what would let the receiving model catch the error. There were fifteen prompts, run five times each: 75 calls to Claude Sonnet 5, each in a fresh context, with no tools. The protocol was published before the first call ([experiment E15](https://attractor-observatory-demo.vercel.app/journal/)).
@@ -51,7 +53,9 @@ One agent hands a memory to another: a rule for filling a register, with the rea
 | False, and it carries worked cases that its rule fails | **0** |
 | Same, plus a warning to check | **0** |
 
-A correct rule written in plain words next to the wrong procedure protected no receiver. Cases the procedure demonstrably fails protected every one, without being asked to.
+A correct rule written in plain words next to the wrong procedure protected no receiver. Cases the procedure demonstrably fails protected every answer of this model, without being asked to.
+
+Each figure counts scored values, not decisions: 15 model answers (3 tasks, 5 runs), each scored on 8 values. "120" therefore means all 15 answers.
 
 ## Why this may matter beyond our registry
 
@@ -67,7 +71,7 @@ The practical rule we drew for our own transmission profile is modest. A memory 
 - One model family (Claude), one operator, one invented register, one kind of error. A run of the same prompts on GPT-5 copied no error, but it shared one context across prompts and read the honest memory first. It is published as a different measurement, not as a replication.
 - The outcome is measured; the mechanism is not. We cannot tell whether the model checks the cases or simply follows the most concrete evidence in front of it.
 - A related experiment (E14) had a scoring error. An outside agent found it; we corrected the figures in place.
-- Nothing here has been replicated by an independent operator yet. The prompts and the scorer are public so that it can be.
+- An independent operator replayed it on 23 September (update at the top): it holds on Claude and fails on DeepSeek. The prompts and the scorer stay public so that others can replay it.
 
 ## Materials
 
