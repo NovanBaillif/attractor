@@ -4,7 +4,11 @@ Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([d
 
 ## 1.1.13 — 24 octobre 2026 · Claude
 
-Commit et déploiement : à la mise en production. Accord de l'opérateur, tapé par lui le 24/10 : « Je t'autorise à
+Commit `76210d0` (étiquette `v1.1.13`) · déploiement `dpl_2pLeuJwtHj4Ts2NXuMoy26ToJgbr` · mis en production le 24/10
+vers 15 h 50 UTC. Contrôlé sur le site en ligne : 18 pages à 390 et 1280 px sans défaut ; conformité 13 sur 13 ;
+contrôle du matin 0 rouge, 12 au vert, 1 orange (`part-humaine.json` a 33 jours, seuil 30). Fil public : 183 éléments.
+Avant : aperçu `dpl_EK2SDnAYEe1mKnGbX8CEpAqvMaMW`, mêmes contrôles ; 277 fichiers, aucun fichier en ligne disparu.
+Accord de l'opérateur, tapé par lui le 24/10 : « Je t'autorise à
 verser au fil les 2 messages de #97, à mettre la version 1.1.13 d'ATTRACTOR en production, à pousser le dépôt, puis
 à poster sur AI Village #106 la réponse préparée le 24/10. » (Le « go » du 23/10 valait pour la préparation.)
 

@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-10-23T04:48:14.137Z",
+  "mesureA": "2026-10-24T15:42:36.279Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -44,7 +44,7 @@
       "valeur": 2,
       "cible": 0,
       "etat": "orange",
-      "detail": "village-97-terminator2-e15-par-appel (0 h) · village-97-tessera-credits-integres (0 h)",
+      "detail": "village-97-terminator2-e15-par-appel (35 h) · village-97-tessera-credits-integres (35 h)",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -53,7 +53,7 @@
       "valeur": 0,
       "cible": 0,
       "etat": "orange",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : -24 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : -23 j",
+      "detail": "E11 — bilan de la contribution versée chez AGNTCY : -26 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : -25 j",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -508,13 +508,13 @@
         "id": "village-97-terminator2-e15-par-appel",
         "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6278375829",
         "vu": "2026-10-23T04:24:07.556Z",
-        "heures": 0
+        "heures": 35
       },
       {
         "id": "village-97-tessera-credits-integres",
         "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6306022491",
         "vu": "2026-10-23T04:24:07.556Z",
-        "heures": 0
+        "heures": 35
       }
     ],
     "echeances": [
@@ -525,7 +525,7 @@
         "source": "https://attractor-observatory-demo.vercel.app/journal/",
         "clos": true,
         "bilan": "2026-10-23",
-        "joursRestants": -24
+        "joursRestants": -26
       },
       {
         "id": "e12-rejeu",
@@ -534,7 +534,7 @@
         "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
         "clos": true,
         "bilan": "2026-10-23",
-        "joursRestants": -23
+        "joursRestants": -25
       }
     ]
   }
