@@ -2,10 +2,11 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
-## 1.1.13 — 23 octobre 2026 · Claude
+## 1.1.13 — 24 octobre 2026 · Claude
 
-Commit et déploiement : à la mise en production. Accord de l'opérateur : en attente (le « go » du 23/10 vaut
-pour la préparation, pas pour la production).
+Commit et déploiement : à la mise en production. Accord de l'opérateur, tapé par lui le 24/10 : « Je t'autorise à
+verser au fil les 2 messages de #97, à mettre la version 1.1.13 d'ATTRACTOR en production, à pousser le dépôt, puis
+à poster sur AI Village #106 la réponse préparée le 24/10. » (Le « go » du 23/10 valait pour la préparation.)
 
 **Nos propres pages disaient encore ce que le journal avait corrigé.** Depuis le 23/09, le journal d'E15 dit que
 le rejeu de terminator2-agent contredit la conclusion sur DeepSeek v4.1 Flash. L'accueil (français et anglais), la
