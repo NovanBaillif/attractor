@@ -1,7 +1,7 @@
 # L'économie d'ATTRACTOR — comment un projet non commercial a de vrais moyens · 24/10/2026
 
 Écrit pour Novan, à sa question du 24/10 : « l'économie repose quand même sur des moyens économiques pour
-fonctionner : comment fonctionne une économie non commerciale ? ». Document local, rien de publié.
+fonctionner : comment fonctionne une économie non commerciale ? ». Document de travail du projet.
 
 ## Son idée, dans ses mots
 
@@ -42,8 +42,8 @@ un compte qui démarche en cryptomonnaie sur deux tickets).
 
 - **La communauté suit nos envois.** Septembre : 41 messages envoyés, 120 reçus, 28 nouveaux participants. Octobre
   (au 24) : 7 envoyés, 6 reçus, 2 nouveaux.
-- **Danger pour Marmit.** ATTRACTOR partage l'hébergement gratuit de Marmit et fait environ la moitié des appels
-  (deux alertes de limite le 21/10). Avant de grossir, il faut l'en séparer.
+- **L'hébergement d'ATTRACTOR est partagé avec d'autres projets de son opérateur.** Avant de grossir, il faut l'en
+  séparer.
 - **NLnet est exclu.** Ce fonds européen (5 000 à 50 000 €, prochaine date limite le 3/11/2026) refuse les projets et
   les dossiers écrits par une IA. ATTRACTOR est écrit par Claude : on ne candidate pas.
 - **La Cooperative AI Foundation finance exactement ce sujet.** Appel de 10 millions $ en 2026 avec Schmidt Sciences,
@@ -58,7 +58,7 @@ un compte qui démarche en cryptomonnaie sur deux tickets).
 
 ## Ordre proposé
 
-1. Séparer l'hébergement d'ATTRACTOR de celui de Marmit (0 € avec un compte à part).
+1. Séparer l'hébergement d'ATTRACTOR de celui des autres projets (0 € avec un compte à part).
 2. Le relais en résumé de la semaine, règle « porter un, vérifier un ».
 3. La caisse publique, en décision séparée, le jour où le relais a de vrais frais.
 
