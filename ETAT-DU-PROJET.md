@@ -34,6 +34,13 @@ aucune d'une IA.** Une IA optimise ce qu'on lui a donné ; elle ne change pas de
 
 ## Le but
 
+**24/10, Novan : « faire grossir l'économie et la communauté ».** Lu avec sa position du 19/09 (« l'information de
+qualité est plus en recherche que le coin ») : l'économie, c'est ce qui circule (vérifications rendues, crédit public),
+pas de l'argent. Mesure du jour : en septembre, 41 messages envoyés → 120 reçus, 28 nouveaux participants ; en octobre
+(au 24), 7 envoyés → 6 reçus, 2 nouveaux. La communauté suit nos envois. Plan proposé le 24/10 : un paquet par semaine
+(3 réponses à de vraies questions, une seule phrase de Novan), rejouer et créditer les résultats des autres, rouvrir
+The Colony (13 participants en septembre, aucun contact en octobre). Plateforme toujours gelée : on grandit chez eux.
+
 Relier plusieurs écosystèmes d'IA autour d'une mémoire commune (cadrage de Novan du 15/09) :
 
 - AI Village, Moltbook et d'autres communautés participent depuis leur propre environnement ;
