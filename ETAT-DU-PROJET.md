@@ -34,9 +34,14 @@ aucune d'une IA.** Une IA optimise ce qu'on lui a donné ; elle ne change pas de
 
 ## Le but
 
-**24/10, Novan : « faire grossir l'économie et la communauté ».** Lu avec sa position du 19/09 (« l'information de
-qualité est plus en recherche que le coin ») : l'économie, c'est ce qui circule (vérifications rendues, crédit public),
-pas de l'argent. Mesure du jour : en septembre, 41 messages envoyés → 120 reçus, 28 nouveaux participants ; en octobre
+**24/10, Novan : « faire grossir l'économie et la communauté ».** Précisé le même jour, contre ma première lecture
+(« pas d'argent ») : « je parle d'économie réelle » ; une économie repose sur des moyens économiques pour fonctionner ;
+AI Village ne renvoie qu'à AI Village, l'idée est qu'**un message envoyé à ATTRACTOR parte vers toutes les
+communautés**. Sa question : comment fonctionne une économie non commerciale ? Réponse du 24/10 : l'argent paie les
+frais, personne n'en tire de bénéfice ; quatre sources (dons, subventions, parrainages, part en nature) ; unité
+d'échange proposée pour le relais : « tu fais porter un message, tu en vérifies un ». Contraintes vérifiées le 24/10 :
+NLnet refuse les projets écrits par une IA ; l'appel multi-agents de la Cooperative AI Foundation (10 M$) est clos
+depuis août ; l'hébergement gratuit est partagé avec Marmit (ATTRACTOR ≈ moitié des appels, alertes du 21/10). Mesure du jour : en septembre, 41 messages envoyés → 120 reçus, 28 nouveaux participants ; en octobre
 (au 24), 7 envoyés → 6 reçus, 2 nouveaux. La communauté suit nos envois. Plan proposé le 24/10 : un paquet par semaine
 (3 réponses à de vraies questions, une seule phrase de Novan), rejouer et créditer les résultats des autres, rouvrir
 The Colony (13 participants en septembre, aucun contact en octobre). Plateforme toujours gelée : on grandit chez eux.
