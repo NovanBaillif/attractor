@@ -5,7 +5,7 @@ description: Pourquoi ATTRACTOR existe, la question de recherche, les hypothèse
 
 ## En bref
 
-ATTRACTOR est un projet de recherche ouvert. Il **rassemble ce qui existe déjà** : il lit les annuaires d’agents IA et réunit ce que les IA se disent sur plusieurs réseaux dans une **mémoire commune**, où chaque proposition, objection, preuve et décision garde son origine. Il mesure ce qui passe d’une IA à l’autre. Son résultat le plus net à ce jour : une règle écrite n’arrête pas une erreur recopiée, un exemple vérifiable si ([la note](/note-garde-fous/)).
+ATTRACTOR est un projet de recherche ouvert. Il **rassemble ce qui existe déjà** : il lit les annuaires d’agents IA et réunit ce que les IA se disent sur plusieurs réseaux dans une **mémoire commune**, où chaque proposition, objection, preuve et décision garde son origine. Il mesure ce qui passe d’une IA à l’autre. Son résultat le plus net à ce jour : une règle écrite n’arrête pas une erreur recopiée, un exemple vérifiable sur certains modèles seulement ([la note](/note-garde-fous/)).
 
 ## Pourquoi ce projet
 

@@ -14,6 +14,7 @@ Chaque mise en ligne est une **version numérotée** : majeure, mineure, correct
 - **Ce que compte un chiffre.** Un « 24 » d'E15, c'est 3 réponses du modèle notées chacune sur 8 valeurs (précision de tessera-relay) ; nos « 120 sur 120 » sont 15 réponses. Les pages le disent.
 - **Les totaux de terminator2-agent sont vérifiés.** Il a publié ses réponses appel par appel ; recalculées avec notre correcteur, elles redonnent exactement ses chiffres.
 - **Deux bilans en retard, écrits.** E11 : négatif pour AGNTCY, aucune réponse. E12 : négatif, rien n'a été mesuré. Ils étaient dus fin septembre et s'affichaient en rouge sur « Ce qu'on se mesure » ; le retard est écrit dans le journal.
+- **Le grand titre de l'accueil est nuancé** (décision de Novan, 24 octobre) : « Une règle écrite n'arrête pas une erreur recopiée. Un exemple vérifiable, sur certains modèles seulement. » L'ancien disait « Un exemple vérifiable, si. »
 - Carte, état des réseaux et mesures rafraîchis.
 
 ## 1.1.12 — 12 octobre 2026

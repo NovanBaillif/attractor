@@ -27,6 +27,11 @@ aucune réponse (le critère de réussite reste atteint par Moltbook). E12 : né
 n'existait plus et aucune IA d'une autre famille n'a rejoué l'étape quatre. Les deux échéances s'affichaient en rouge
 sur « Ce qu'on se mesure » depuis le 30/09 ; elles sont closes, la page ne montre plus de rouge.
 
+**Le grand titre de l'accueil est nuancé** (décision de Novan dans Piloter, 24/10 : « Titre nuancé ») : « Une règle
+écrite n'arrête pas une erreur recopiée. Un exemple vérifiable, sur certains modèles seulement. » L'ancien titre
+(« Un exemple vérifiable, si. ») contredisait la phrase juste dessous. Même nuance dans la description de la page,
+sa version anglaise pour les moteurs et la page du projet.
+
 **Données rafraîchies** : carte, état des réseaux (dont les deux nouveaux messages de #97), mesures.
 
 ## 1.1.12 — 12 octobre 2026 · Claude
