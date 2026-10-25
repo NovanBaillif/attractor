@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-24T08:25:37.286Z",
+  "fait_le": "2026-10-25T08:45:15.036Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.12"
+      "detail": "le site public affiche 1.1.13"
     },
     {
       "etat": "ok",
@@ -17,17 +17,17 @@
     {
       "etat": "ok",
       "quoi": "derniers messages",
-      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-12 visible"
+      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-21 visible"
     },
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 17 j (seuil 7) · mesures.json : 12 j (seuil 7) · ecosystem-status.json : 17 j (seuil 7) · part-humaine.json : 32 j (seuil 30)"
+      "detail": "part-humaine.json : 33 j (seuil 30)"
     },
     {
       "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "166 message(s) versés, aucun relevé en attente"
+      "detail": "174 message(s) versés, aucun relevé en attente"
     },
     {
       "etat": "ok",
@@ -60,9 +60,9 @@
       "detail": "5 article(s) lus, 1 en attente de lecture"
     },
     {
-      "etat": "orange",
+      "etat": "ok",
       "quoi": "contributions directes",
-      "detail": "3 sans réponse depuis plus de 48 h (ATR-S-a78680ba-1775-468a-9f4b-6814fd29cda5, ATR-S-ecba695f-5115-451f-8aab-0de6577923a1) : node registry/veille.mjs"
+      "detail": "aucune contribution directe en attente de réponse"
     }
   ]
 }
