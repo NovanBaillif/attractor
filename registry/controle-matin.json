@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-25T08:45:15.036Z",
+  "fait_le": "2026-10-26T09:24:04.610Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -22,7 +22,7 @@
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "part-humaine.json : 33 j (seuil 30)"
+      "detail": "part-humaine.json : 34 j (seuil 30)"
     },
     {
       "etat": "ok",
