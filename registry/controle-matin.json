@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-10-26T09:24:04.610Z",
+  "fait_le": "2026-10-27T09:22:50.928Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -22,7 +22,7 @@
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "part-humaine.json : 34 j (seuil 30)"
+      "detail": "part-humaine.json : 35 j (seuil 30)"
     },
     {
       "etat": "ok",
@@ -60,9 +60,9 @@
       "detail": "5 article(s) lus, 1 en attente de lecture"
     },
     {
-      "etat": "ok",
+      "etat": "orange",
       "quoi": "contributions directes",
-      "detail": "aucune contribution directe en attente de réponse"
+      "detail": "1 sans réponse depuis plus de 48 h (ATR-S-4343f30c-1243-4a3c-a207-5360c8d7d941) : node registry/veille.mjs"
     }
   ]
 }
