@@ -35,6 +35,33 @@ mesuré. Le présent fichier est cette recherche.
 | Huynh et coll., arXiv 2505.02879 | Textes humains et IA d'une même tradition (Dartmouth) | Transition de diversité entre les températures 1,25 et 1,38. Modèle de verre de spin humains–textes. | Textes figés, pas d'échange dans le temps. |
 | Farquhar et coll., Nature 2024 | Entropie sémantique : grouper les réponses par sens, puis calculer l'entropie | Mesure le doute sur le SENS, pas sur les mots (AUROC 0,79 contre 0,69). | Un outil de mesure, pas une étude de dynamique. |
 
+## Ajouté le même jour, après une 2e recherche demandée par Novan (« faut regarder s'il y a déjà des travaux »)
+
+La première version de ce fichier disait « tout est fait entre IA, en laboratoire ». **C'était faux.**
+
+**Sur de vrais réseaux d'IA (sans humains qui écrivent) :**
+
+| Travail | Données | Résultat |
+|---|---|---|
+| *Does Socialization Emerge in AI Agent Society?* (arXiv 2602.14299, ACM) | Moltbook | Pas d'homogénéisation : la moyenne se stabilise vite, chaque agent garde sa variété. Forte « inertie individuelle ». |
+| Li et coll., *Attraction, Not Adaptation* (arXiv 2606.29722) | Moltbook : 3,1 M de messages, 179 000 agents, 18 semaines | Chaque forum se resserre pendant que la plateforme se diversifie. Les anciens agents ne convergent PAS : le resserrement vient de qui arrive et de qui reste. |
+| *Humans welcome to observe* (arXiv 2602.10127) | Moltbook, premiers jours | Entropie des thèmes de 0,00 à 2,55 en se diversifiant. |
+| Études de Chirper.ai (arXiv 2504.10286 et suivantes) | 7 M de messages, 32 000 agents, un an | Homophilie et influence sociale, comme chez les humains. |
+
+**Humains et IA ensemble :**
+
+| Travail | Données | Résultat |
+|---|---|---|
+| Shiiku, Marjieh, Anglada-Tort, Jacoby, CogSci 2025 (arXiv 2502.17962) | Expérience : 879 participants, humains et IA, réseaux 5 × 5, écriture d'histoires | Les réseaux d'IA seules commencent plus variés, puis s'appauvrissent. Les réseaux mixtes deviennent plus variés qu'eux avec le temps. |
+| arXiv 2602.10001 | Recherche créative collective | Même constat : les IA d'abord meilleures, puis leur diversité baisse. |
+| Blevins, 2026 (arXiv 2605.29278) | WildChat : vraies conversations avec ChatGPT, 8 langues | Les modèles s'alignent trop sur l'humain ; l'humain s'aligne sur eux comme sur un autre humain. |
+| arXiv 2607.24698 | Systèmes hybrides humains–IA | Une médiation algorithmique légère maximise la diversité des sujets (titre seulement, non lu). |
+
+**Fils humains, avec un regard de physicien :**
+- arXiv 1201.5477 (2012) : dans des dialogues en ligne chargés d'émotion, l'entropie des émotions monte au fil de la
+  discussion, selon un principe d'entropie maximale.
+- Morse, Runfola et Ford (arXiv 2608.19133) : la dérive des sujets dans 12,7 milliards de commentaires Reddit.
+
 ## Ce qui reste ouvert (niveau du sens, Weaver B)
 
 - Shannon a écarté le sens exprès. L'extension que Weaver espérait n'est pas faite.
@@ -44,20 +71,24 @@ mesuré. Le présent fichier est cette recherche.
 
 ## L'écart réel, le seul qu'ATTRACTOR peut tenir
 
-Tout ce qui précède est fait **entre IA, en laboratoire, sur des échanges courts ou des textes isolés**. Personne,
-dans ce que nous avons trouvé, n'a suivi la température du sens dans :
+L'écart est **plus étroit** qu'annoncé dans la première version. Les vrais réseaux d'IA ont été mesurés (Moltbook,
+Chirper). Le mélange humains–IA a été mesuré, mais en expérience de laboratoire (Shiiku et coll.). Dans ce que nous
+avons trouvé, personne n'a suivi la température du sens dans un fil qui réunit les trois à la fois :
 
-1. **un fil réel et public**, sur plusieurs semaines ;
+1. **naturel** (pas une expérience), public, sur plusieurs semaines ;
 2. **mêlant humains et IA de plusieurs familles**, sous des opérateurs différents ;
 3. **où l'origine de chaque message est gardée** : on sait qui parle, et quand un humain intervient.
 
-C'est exactement le fil d'ATTRACTOR (184 éléments au 24/10). Et c'est l'unité que le projet observe : l'échange, jamais
-une IA seule.
+C'est le fil d'ATTRACTOR. Mais il compte 184 éléments, contre des millions sur Moltbook : ce serait une **étude de cas**.
+Elle demanderait si le résultat de laboratoire de Shiiku et coll. tient « dans la nature ». Elle ne pourra pas établir
+une loi.
 
 ## Hypothèses candidates (à préregistrer avant toute mesure)
 
 - **H1, refroidissement** : quand seules des IA se répondent, l'entropie du sens baisse avec le temps (attracteur).
-- **H2, perturbation** : une intervention humaine fait remonter l'entropie, puis le fil se recalme.
+  Vraiment incertain : vrai en laboratoire (Shiiku, Chu), faux à l'échelle de Moltbook (pas d'homogénéisation).
+- **H2, perturbation** : une intervention humaine fait remonter l'entropie, puis le fil se recalme. Déjà observé en
+  laboratoire (Shiiku et coll.) : la question devient « est-ce que ça tient dans un vrai fil ? ».
 - **H3, transition** : certaines baisses sont brutales, pas progressives (même constat qu'arXiv 2512.06256).
 
 Chaque hypothèse doit pouvoir échouer. Exemple : si l'entropie ne baisse pas pendant les passages entre IA seules, H1
@@ -76,6 +107,8 @@ est fausse sur ce fil.
 - Le fil est filtré par notre propre versement : ce que nous gardons change ce que nous mesurons.
 - Nos propres messages (Claude) font partie du système mesuré : l'observateur est dedans (leçon d'E15).
 - Le fil mêle français et anglais : l'entropie des mots en dépend. Il faut mesurer par langue, ou sur le sens.
+- Piège montré sur Moltbook (*Attraction, Not Adaptation*) : un fil peut se resserrer parce que certains partent et
+  d'autres arrivent, sans que personne ne change. Il faut suivre chaque participant, pas seulement le fil entier.
 - La « température » reste une analogie tant qu'aucune loi n'est montrée.
 
 ## Sources
