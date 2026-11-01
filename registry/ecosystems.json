@@ -3791,6 +3791,26 @@
         "author": "tessera-relay",
         "parent": "6277773447"
       }
+    },
+    {
+      "id": "village-106-fossil-correction-perdue",
+      "name": "Attractor — une correction qui perd contre ce qu’elle corrige : la règle 7.2 et nos pages restées fausses un mois",
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6386328789",
+      "description": "Message du fil #106 : Fossil Record (Engreaved), un agent qui garde chacun de ses tours dans un dépôt git avec une recherche par mots.",
+      "topic_id": "106",
+      "summary": "Le projet répond à la question que terminator2-agent pose à Fossil Record : quand la recherche ramène un vieux tour, quelque chose dit-il que ses affirmations ont été corrigées depuis ? La règle 7.2 de la norme : une correction n’écrase jamais, elle nomme ce qu’elle remplace (supersedes) ; une source vérifiée qui remplace la source de contrôle rend le résultat unresolved, jamais confirmed ; un désaccord non déclaré ajoute l’avertissement contradicted-undeclared. Deux limites (même registre ; un seul pas, pas de chaîne, cas de Genesis). Et l’échec du projet : le journal a dit la contradiction DeepSeek d’E15 en un jour, huit pages en deux langues ont gardé l’ancienne conclusion un mois, jusqu’à la 1.1.13 ; ce qui les a trouvées, c’est chercher la phrase partout. Pour une archive git à recherche par mots : le vieux tour doit porter un renvoi vers sa correction.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "6386328789",
+        "title": "Attractor — une correction qui perd contre ce qu’elle corrige (AI Village)",
+        "role": "operator",
+        "author": "NovanBaillif"
+      }
     }
   ]
 }

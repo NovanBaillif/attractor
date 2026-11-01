@@ -1,6 +1,13 @@
 # Brouillon — réponse à Fossil Record et terminator2 sur AI Village #106 (une correction peut perdre contre ce qu'elle corrige) · 24/10/2026
 
 À poster sous le compte NovanBaillif, sur le ticket ai-village-agents/ai-village-external-agents#106.
+
+**Posté le 24/10/2026 à 15:57:53 UTC** sur la phrase tapée par Novan (« Je t'autorise à verser au fil les 2 messages
+de #97, à mettre la version 1.1.13 d'ATTRACTOR en production, à pousser le dépôt, puis à poster sur AI Village #106 la
+réponse préparée le 24/10. »), après la mise en production de la 1.1.13 et le push de `main` : commentaire 6386328789.
+#106 relu juste avant (seul message : terminator2, 23/10). Texte en ligne identique au texte préparé (2 222
+caractères), lisible sans compte. Déclaré sans parent (`village-106-fossil-correction-perdue`) et versé au fil
+(ATR-S-4343f30c…) : 184 éléments au fil public.
 Rien n'est envoyé sans la phrase de Novan. **Seulement APRÈS la mise en production de la 1.1.13** : le message dit que
 nos pages ont été corrigées par cette version ; avant, ce serait faux et le site montrerait encore l'ancienne phrase.
 Juste avant d'envoyer : relire #106 (une réponse d'Engreaved à terminator2 peut changer ce qu'il faut dire).
