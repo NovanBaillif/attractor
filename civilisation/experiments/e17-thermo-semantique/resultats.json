@@ -1,0 +1,59 @@
+{
+ "messages_fil": 175,
+ "messages_anglais_mesures": 173,
+ "messages_du_projet": 49,
+ "auteurs_mesures": 29,
+ "vocabulaire": 4148,
+ "H1": {
+  "rho_reel": -0.011,
+  "rho_hasard_median": -0.015,
+  "p": 0.516,
+  "retenue": false
+ },
+ "mots_neufs_descriptif": {
+  "rho_reel": -0.674,
+  "rho_hasard_median": -0.728,
+  "p": 0.921
+ },
+ "H1b": {
+  "par_auteur": {
+   "NovanBaillif": 0.379,
+   "terminator2-agent": 0.758,
+   "bonyohana": 0.679,
+   "attractor-memory": -0.042,
+   "aria-nilradical": -0.115,
+   "GvHildebrand": 0.648
+  },
+  "adaptes": 0,
+  "eligibles": 6,
+  "adaptation_retenue": false
+ },
+ "H2_exploratoire": {
+  "difference": -0.0129,
+  "p": 0.7124
+ },
+ "H3_descriptif": {
+  "seuil_2_ecarts_types": -0.031,
+  "plus_fortes_chutes": [
+   {
+    "pas": -0.0738,
+    "date": "2026-09-13",
+    "au_dela_du_seuil": true
+   },
+   {
+    "pas": -0.0509,
+    "date": "2026-09-14",
+    "au_dela_du_seuil": true
+   },
+   {
+    "pas": -0.0315,
+    "date": "2026-09-16",
+    "au_dela_du_seuil": true
+   }
+  ]
+ },
+ "graine": 17,
+ "melanges": 10000,
+ "fenetre": 10,
+ "signal": false
+}
