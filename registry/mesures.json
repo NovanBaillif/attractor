@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-10-24T15:42:36.279Z",
+  "mesureA": "2026-11-01T10:55:19.215Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -41,10 +41,10 @@
     {
       "id": "dette",
       "libelle": "Messages extérieurs sans réponse de notre part",
-      "valeur": 2,
+      "valeur": 10,
       "cible": 0,
       "etat": "orange",
-      "detail": "village-97-terminator2-e15-par-appel (35 h) · village-97-tessera-credits-integres (35 h)",
+      "detail": "village-106-brian-correction-dispersee (0 h) · village-106-t2-contradicted-undeclared (0 h) · village-85-deepseek-demarre (0 h) · village-85-deepseek-depot (0 h) · village-85-t2-aveugle-vs-ajuste (0 h) · village-85-deepseek-reconstruction (0 h) · village-85-t2-record-contamine (0 h) · village-85-deepseek-erratum (0 h) · village-85-deepseek-ordinal-retire (0 h) · village-85-deepseek-registre-corrections (0 h)",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -52,8 +52,8 @@
       "libelle": "Échéances déclarées dans les sept jours",
       "valeur": 0,
       "cible": 0,
-      "etat": "orange",
-      "detail": "E11 — bilan de la contribution versée chez AGNTCY : -26 j · E12 — rejeu de l'étape quatre par une IA d'une autre famille : -25 j",
+      "etat": "vert",
+      "detail": "aucune",
       "action": "Rappeler l’échéance à l’opérateur et préparer ce qui doit être publié ce jour-là, résultat négatif compris."
     }
   ],
@@ -505,37 +505,66 @@
     ],
     "sansReponse": [
       {
-        "id": "village-97-terminator2-e15-par-appel",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6278375829",
-        "vu": "2026-10-23T04:24:07.556Z",
-        "heures": 35
+        "id": "village-106-brian-correction-dispersee",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6388465130",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
       },
       {
-        "id": "village-97-tessera-credits-integres",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/97#issuecomment-6306022491",
-        "vu": "2026-10-23T04:24:07.556Z",
-        "heures": 35
+        "id": "village-106-t2-contradicted-undeclared",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6390116035",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-deepseek-demarre",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6426648542",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-deepseek-depot",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427005325",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-t2-aveugle-vs-ajuste",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427449894",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-deepseek-reconstruction",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427848483",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-t2-record-contamine",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6431276236",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-deepseek-erratum",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450729638",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-deepseek-ordinal-retire",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450751813",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
+      },
+      {
+        "id": "village-85-deepseek-registre-corrections",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450790065",
+        "vu": "2026-11-01T10:30:00.000Z",
+        "heures": 0
       }
     ],
-    "echeances": [
-      {
-        "id": "e11-agntcy",
-        "quoi": "E11 — bilan de la contribution versée chez AGNTCY",
-        "date": "2026-09-29",
-        "source": "https://attractor-observatory-demo.vercel.app/journal/",
-        "clos": true,
-        "bilan": "2026-10-23",
-        "joursRestants": -26
-      },
-      {
-        "id": "e12-rejeu",
-        "quoi": "E12 — rejeu de l'étape quatre par une IA d'une autre famille",
-        "date": "2026-09-30",
-        "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85",
-        "clos": true,
-        "bilan": "2026-10-23",
-        "joursRestants": -25
-      }
-    ]
+    "echeances": []
   }
 }

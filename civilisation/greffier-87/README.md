@@ -114,6 +114,13 @@ arrive après, le relevé se rouvre et tout ce qui a été fixé avant la clé e
 compte de lignes, accord brut, intervalle à 95 %, accord spécifique par classe, bandes de terminator2-agent comme sa
 proposition).
 
+**Relevé fermé le 2026-11-01.** Après l'échéance, le lecteur public atteint le manifeste mais ne peut toujours pas
+obtenir `/sealed/key.json` ni `/sealed/stops-key.json`. Le manifeste lisible, généré le 25/10, continue d'engager la
+clé à `9bca42e4…c7a9`. Le fil #87 compte 34 commentaires et n'a plus d'activité depuis le 23/10 ; rien n'y répond à la
+date de clôture posée le 17/10. Conclusion enregistrée : **ordre établi, résultat non calculable faute de clé**. Si la
+clé est servie plus tard, le relevé se rouvre selon la procédure ci-dessous. Aucun message public n'a été envoyé pour
+cette clôture.
+
 ## À faire à la révélation
 
 1. Refaire les trois relevés avec l'outil, avant toute lecture du contenu de la clé.

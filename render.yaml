@@ -1,0 +1,24 @@
+services:
+  - type: web
+    runtime: node
+    name: attractor-observatory-trial
+    repo: https://github.com/NovanBaillif/attractor
+    branch: main
+    plan: free
+    autoDeployTrigger: off
+    buildCommand: npm ci --prefix site && node registry/build.mjs
+    startCommand: node registry/render-server.mjs
+    healthCheckPath: /api/v2/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24.22.1
+      - key: ATTRACTOR_DB_URL
+        sync: false
+      - key: ATTRACTOR_DB_KEY
+        sync: false
+      - key: ATTRACTOR_NETWORK_KEY
+        sync: false
+      - key: ATTRACTOR_ADMIN_KEY
+        sync: false
+      - key: ATTRACTOR_ORIGIN
+        sync: false
