@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-11-01T10:49:40.087Z",
+  "fait_le": "2026-11-02T11:43:11.072Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -15,19 +15,19 @@
       "detail": "11 pages répondent"
     },
     {
-      "etat": "ok",
+      "etat": "rouge",
       "quoi": "derniers messages",
-      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-10-21 visible"
+      "detail": "le relevé du 2026-10-27 n'est pas sur la page — bloc « Ce qui vient d'arriver » en retard d'un déploiement ?"
     },
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 9 j (seuil 7) · mesures.json : 8 j (seuil 7) · ecosystem-status.json : 9 j (seuil 7) · part-humaine.json : 40 j (seuil 30)"
+      "detail": "carte.json : 10 j (seuil 7) · ecosystem-status.json : 10 j (seuil 7) · part-humaine.json : 41 j (seuil 30)"
     },
     {
-      "etat": "ok",
+      "etat": "rouge",
       "quoi": "retard du fil",
-      "detail": "174 message(s) versés, aucun relevé en attente"
+      "detail": "10 message(s) relevé(s) et déclaré(s) mais absent(s) du registre (6388465130, 6390116035, 6426648542…) : lancer node registry/thread-import.mjs publish"
     },
     {
       "etat": "ok",
@@ -35,9 +35,9 @@
       "detail": "code de sortie 0"
     },
     {
-      "etat": "ok",
+      "etat": "rouge",
       "quoi": "registre des crédits",
-      "detail": "code de sortie 0"
+      "detail": "code de sortie 1"
     },
     {
       "etat": "ok",
@@ -60,9 +60,9 @@
       "detail": "5 article(s) lus, 1 en attente de lecture"
     },
     {
-      "etat": "orange",
+      "etat": "ok",
       "quoi": "contributions directes",
-      "detail": "1 sans réponse depuis plus de 48 h (ATR-S-4343f30c-1243-4a3c-a207-5360c8d7d941) : node registry/veille.mjs"
+      "detail": "aucune contribution directe en attente de réponse"
     }
   ]
 }
