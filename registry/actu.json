@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-11-02T08:18:24.003Z",
+  "releveeA": "2026-11-02T10:57:54.517Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 24,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 894,
       "gardes": 5
     },
@@ -49,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 9,
       "gardes": 9
     },
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,8 +99,8 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
-      "lus": 58,
+      "lueLe": "2026-11-02T10:57:54.517Z",
+      "lus": 100,
       "gardes": 8
     },
     {
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 1,
       "gardes": 1
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 27,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,12 +159,26 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-11-02T08:18:24.003Z",
+      "lueLe": "2026-11-02T10:57:54.517Z",
       "lus": 3,
       "gardes": 3
     }
   ],
   "articles": [
+    {
+      "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUEs0S1BkTHJSNC1HYVRNOEFHazlxUkhfNl9vTGxGRVE1SmQtY1RNTG1pY0x3ZUxoSEVUX053YzhLRjJVUnJ2LXpxR2JNcGkwRVI5QVF0bjd5d01zeC1pY0lFVm1QeDV1aDRMMmNNZ0V4Ukx3d3cyS2o3V0JGZW5MWGNfb2dvdENkTndKRkg0QXJ2WW5WbEE3S1BKR0VDM3dsWFNXUEMzd0kxbmJHMDdzUFREcnZhdklZLW5YNndhNzhLZw?oc=5",
+      "titre": "Yann LeCun tient peut-être la preuve que la taille d’un LLM ne fait pas sa qualité - Numerama",
+      "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUEs0S1BkTHJSNC1HYVRNOEFHazlxUkhfNl9vTGxGRVE1SmQtY1RNTG1pY0x3ZUxoSEVUX053YzhLRjJVUnJ2LXpxR2JNcGkwRVI5QVF0bjd5d01zeC1pY0lFVm1QeDV1aDRMMmNNZ0V4Ukx3d3cyS2o3V0JGZW5MWGNfb2dvdENkTndKRkg0QXJ2WW5WbEE3S1BKR0VDM3dsWFNXUEMzd0kxbmJHMDdzUFREcnZhdklZLW5YNndhNzhLZw?oc=5",
+      "date": "2026-11-02T09:40:22.000Z",
+      "extrait": "Yann LeCun tient peut-être la preuve que la taille d’un LLM ne fait pas sa qualité &nbsp;&nbsp; Numerama",
+      "source": "lecun-presse",
+      "sourceNom": "Yann LeCun — presse",
+      "theme": "personnes",
+      "motsCles": [
+        "lecun"
+      ],
+      "vuLe": "2026-11-02T10:57:54.517Z"
+    },
     {
       "id": "https://arxiv.org/abs/2610.40999",
       "titre": "A Robust Approach to Belief Mismatch in Non-cooperative Dynamic Games",
@@ -553,6 +567,20 @@
         "memory"
       ],
       "vuLe": "2026-10-31T07:30:02.789Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.42053",
+      "titre": "REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control",
+      "lien": "https://huggingface.co/papers/2610.42053",
+      "date": "2026-10-30T13:18:13.000Z",
+      "extrait": "Foundation models are becoming remarkably reliable at high-level reasoning, yet they remain too slow and costly to serve as fine-grained controllers. Conversely, fast policies like VLAs and whole-body controllers offer more efficient reflexes, but struggle to generalize.…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-02T10:57:54.517Z"
     },
     {
       "id": "https://arxiv.org/abs/2610.41563v1",
@@ -1020,6 +1048,20 @@
       "vuLe": "2026-10-30T07:43:26.994Z"
     },
     {
+      "id": "https://huggingface.co/papers/2610.40727",
+      "titre": "VoxLock: Target-Speaker Extraction for Voice Agents Without an Enrollment Step",
+      "lien": "https://huggingface.co/papers/2610.40727",
+      "date": "2026-10-29T06:16:03.000Z",
+      "extrait": "A voice agent's speech recognizer transcribes everyone near the microphone, including people other than the caller. I fine-tuned a public causal target-speaker extraction model (REAL-TSE, 27M parameters) on one GPU to work from a voice sample cut from the call itself, and…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-02T10:57:54.517Z"
+    },
+    {
       "id": "https://arxiv.org/abs/2610.39302v1",
       "titre": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
       "lien": "https://arxiv.org/abs/2610.39302v1",
@@ -1100,6 +1142,21 @@
         "mcp"
       ],
       "vuLe": "2026-10-30T07:43:26.994Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.39276",
+      "titre": "MemSteer: Turning User Histories into Supervision for Agent Memory Optimization",
+      "lien": "https://huggingface.co/papers/2610.39276",
+      "date": "2026-10-28T23:28:49.000Z",
+      "extrait": "An effective agent memory system should adapt to a user's history and task requirements. Human-annotated supervision can guide this adaptation by providing feedback for evaluating and improving memory designs. Yet suitable labels are rarely available for new user histories,…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent",
+        "memory"
+      ],
+      "vuLe": "2026-11-02T10:57:54.517Z"
     },
     {
       "id": "https://www.moltbook.com/post/8a88b9ec-75f3-4f57-a9da-f526ecf60a26",
@@ -1576,6 +1633,20 @@
       "theme": "réseaux d'IA",
       "motsCles": [],
       "vuLe": "2026-10-29T07:40:06.991Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2610.37919",
+      "titre": "SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World",
+      "lien": "https://huggingface.co/papers/2610.37919",
+      "date": "2026-10-27T16:02:47.000Z",
+      "extrait": "Large language model agents are increasingly used for scientific discovery. However, existing benchmarks mix law inference with programming, score data fitting instead of prediction on unseen inputs, and do not separate empirical evidence from pretrained priors. We introduce…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-02T10:57:54.517Z"
     },
     {
       "id": "https://www.moltbook.com/post/0dcaa012-2096-49e0-b004-0d94e255710d",
@@ -4395,80 +4466,6 @@
         "multi-agent",
         "agent",
         "collaborat"
-      ],
-      "vuLe": "2026-10-20T06:36:04.976Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2610.24833",
-      "titre": "Measuring Consensus in AI Agent Networks",
-      "lien": "https://arxiv.org/abs/2610.24833",
-      "date": "2026-10-20T04:00:00.000Z",
-      "extrait": "arXiv:2610.24833v1 Announce Type: new Abstract: As AI agents become increasingly connected through networks and take on tasks that require negotiation and joint decision-making, a systematic approach is needed to assess how their views converge and what information supports…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-10-20T06:36:04.976Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2610.24845",
-      "titre": "AgentSoV: Virtual Sensing for LLM Multi-Agent Systems via Stream of Variation",
-      "lien": "https://arxiv.org/abs/2610.24845",
-      "date": "2026-10-20T04:00:00.000Z",
-      "extrait": "arXiv:2610.24845v1 Announce Type: new Abstract: Large language model (LLM) multi-agent systems (MASs) solve complex tasks through interacting agents, yet their reliability is difficult to analyze because failures depend on both individual agents and how information and errors…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent"
-      ],
-      "vuLe": "2026-10-20T06:36:04.976Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2610.25508",
-      "titre": "How Far Can an Agent Push? Trust-Safety Margins in Live Language-Based Economic Games",
-      "lien": "https://arxiv.org/abs/2610.25508",
-      "date": "2026-10-20T04:00:00.000Z",
-      "extrait": "arXiv:2610.25508v1 Announce Type: new Abstract: The previous version contained Unicode em dashes. Paste this ASCII-only version: Game theory identifies when a strategic action should be accepted, but not how long a live, language-based counterpart will continue to accept it.…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
-      ],
-      "vuLe": "2026-10-20T06:36:04.976Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2610.25851",
-      "titre": "Learning Who Talks to Whom: Role-Aware Communication Topology Scheduling for Efficient LLM Multi-Agent Collaboration",
-      "lien": "https://arxiv.org/abs/2610.25851",
-      "date": "2026-10-20T04:00:00.000Z",
-      "extrait": "arXiv:2610.25851v1 Announce Type: new Abstract: Multi-agent systems driven by large language models (LLMs) rely on structured communication topologies to facilitate information exchange and collaborative reasoning. However, effectively scheduling these topologies to…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent",
-        "collaborat"
-      ],
-      "vuLe": "2026-10-20T06:36:04.976Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2610.26359",
-      "titre": "Discovery-Probability Graph Planning for Embodied Agents in Tasks with Hidden Cooperation Requirements",
-      "lien": "https://arxiv.org/abs/2610.26359",
-      "date": "2026-10-20T04:00:00.000Z",
-      "extrait": "arXiv:2610.26359v1 Announce Type: new Abstract: Embodied agents are increasingly capable of perceiving, planning, and acting autonomously in dynamic environments, demonstrating strong performance on complex cooperative tasks. Recent advances typically assume that cooperative…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "cooperat"
       ],
       "vuLe": "2026-10-20T06:36:04.976Z"
     }
