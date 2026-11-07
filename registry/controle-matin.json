@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-11-06T11:37:48.677Z",
+  "fait_le": "2026-11-07T10:43:42.524Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -22,7 +22,7 @@
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 14 j (seuil 7) · ecosystem-status.json : 14 j (seuil 7) · part-humaine.json : 45 j (seuil 30)"
+      "detail": "carte.json : 15 j (seuil 7) · ecosystem-status.json : 15 j (seuil 7) · part-humaine.json : 46 j (seuil 30)"
     },
     {
       "etat": "rouge",
