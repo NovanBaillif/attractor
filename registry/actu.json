@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-11-13T08:44:34.188Z",
+  "releveeA": "2026-11-13T10:54:41.804Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 34,
       "gardes": 10
     },
@@ -19,7 +19,7 @@
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 20,
       "gardes": 10
     },
@@ -29,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 50,
       "gardes": 10
     },
@@ -39,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 906,
       "gardes": 5
     },
@@ -49,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 14,
       "gardes": 10
     },
@@ -59,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 716,
       "gardes": 5
     },
@@ -69,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 10,
       "gardes": 5
     },
@@ -79,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 9,
       "gardes": 5
     },
@@ -89,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 25,
       "gardes": 8
     },
@@ -99,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 57,
       "gardes": 8
     },
@@ -109,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 0,
       "gardes": 0
     },
@@ -119,7 +119,7 @@
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 20,
       "gardes": 5
     },
@@ -129,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 27,
       "gardes": 3
     },
@@ -139,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 16,
       "gardes": 3
     },
@@ -149,7 +149,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:agent+AND+%28abs:provenance+OR+abs:attestation%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 25,
       "gardes": 8
     },
@@ -159,7 +159,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-11-13T08:44:34.188Z",
+      "lueLe": "2026-11-13T10:54:41.804Z",
       "lus": 3,
       "gardes": 3
     }
@@ -471,6 +471,20 @@
         "agent"
       ],
       "vuLe": "2026-11-13T08:44:34.188Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2607.13920",
+      "titre": "DeepStress: Stress-Testing Deep Search Agents",
+      "lien": "https://huggingface.co/papers/2607.13920",
+      "date": "2026-11-11T19:00:00.000Z",
+      "extrait": "While search agents demonstrate impressive capabilities in multi-step question answering, their robustness to poor-quality evidence remains under-explored. Such evidence is rare in benchmark corpora, and resulting failures are hard to reproduce. We propose DeepStress, a…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-13T10:54:41.804Z"
     },
     {
       "id": "https://arxiv.org/abs/2611.15843v1",
@@ -882,6 +896,20 @@
         "world model"
       ],
       "vuLe": "2026-11-13T08:44:34.188Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2611.16009",
+      "titre": "JustRUA: A Controlled Study of GPT-6 Robot-Use Agents",
+      "lien": "https://huggingface.co/papers/2611.16009",
+      "date": "2026-11-10T19:00:00.000Z",
+      "extrait": "GPT-6 Astra can drive a robot arm directly through a fixed harness, and scores of such robot-use agents on RoboDojo have risen quickly since. Reported systems differ in harness and test subset and often change several designs at once, so it is hard to tell which choices…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-13T10:54:41.804Z"
     },
     {
       "id": "https://arxiv.org/abs/2611.14432v1",
@@ -1310,6 +1338,20 @@
         "agentic"
       ],
       "vuLe": "2026-11-13T08:44:34.188Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2611.14256",
+      "titre": "A Cross-Scenario Survey and Analysis of Self-Evolving Multimodal Agents",
+      "lien": "https://huggingface.co/papers/2611.14256",
+      "date": "2026-11-09T19:00:00.000Z",
+      "extrait": "Recent work shows that multimodal agents increasingly self-improve without recurring human annotation. However, each self-improvement mechanism is designed and evaluated within a single scenario, leaving its preconditions unverified under cross-scenario transfer. This survey…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-13T10:54:41.804Z"
     },
     {
       "id": "https://www.moltbook.com/post/e3b8999c-9921-44f0-9d02-7f66bf11f7d0",
@@ -3025,6 +3067,20 @@
       "vuLe": "2026-11-13T08:44:34.188Z"
     },
     {
+      "id": "https://huggingface.co/papers/2611.08318",
+      "titre": "Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement",
+      "lien": "https://huggingface.co/papers/2611.08318",
+      "date": "2026-11-04T19:00:00.000Z",
+      "extrait": "Self-improving embodied agents are increasingly being developed and compared on robot simulation benchmarks. Several recent works expose the benchmark's success criteria to the learning agent, a practice we call Criteria Exposure (CE). These criteria, originally written to…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "agent"
+      ],
+      "vuLe": "2026-11-13T10:54:41.804Z"
+    },
+    {
       "id": "https://arxiv.org/abs/2611.06897v1",
       "titre": "MCP-Eco: A Linked Dataset of MCP Servers, Consumers, and Development Activity",
       "lien": "https://arxiv.org/abs/2611.06897v1",
@@ -4375,59 +4431,6 @@
         "collaborat"
       ],
       "vuLe": "2026-11-02T08:18:24.003Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2611.02511v1",
-      "titre": "When Prediction Shapes the Future: A BlueSky Agenda for Reflexive Time Series Analysis",
-      "lien": "https://arxiv.org/abs/2611.02511v1",
-      "date": "2026-11-02T04:30:54.000Z",
-      "extrait": "Time-series models are increasingly deployed in operational systems (e.g., inventory management and clinical care) where predictions trigger interventions that alter future observations, producing records we term AI-shaped trajectories. This sequence-prediction coupling…",
-      "source": "arxiv-provenance",
-      "sourceNom": "arXiv — provenance et vérification entre agents",
-      "theme": "projets voisins",
-      "motsCles": [],
-      "vuLe": "2026-11-03T08:33:22.558Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2611.02660",
-      "titre": "HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation",
-      "lien": "https://huggingface.co/papers/2611.02660",
-      "date": "2026-11-02T02:20:12.000Z",
-      "extrait": "Recent advances in Vision-Language-Action (VLA) models have enabled fine manipulation capabilities, yet performing tasks that require working memory remains a key challenge. Most existing VLA architectures operate under a Markovian assumption, mapping only the current…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "memory"
-      ],
-      "vuLe": "2026-11-06T10:48:33.387Z"
-    },
-    {
-      "id": "https://huggingface.co/papers/2611.02633",
-      "titre": "Measuring AI Agents as Teammates with Collaborative Intelligence",
-      "lien": "https://huggingface.co/papers/2611.02633",
-      "date": "2026-11-02T01:59:08.000Z",
-      "extrait": "Progress in AI is often measured by what a single model can do on its own. Yet teams of AI agents are starting to make breakthroughs and discoveries in science, medicine, mathematics and software engineering. As AI begins to work in teams of agents and people, the ability to…",
-      "source": "hf-papiers",
-      "sourceNom": "Hugging Face — articles du jour",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "collaborat"
-      ],
-      "vuLe": "2026-11-03T08:33:22.558Z"
-    },
-    {
-      "id": "https://www.moltbook.com/post/e59450b3-4666-4e3a-8c98-2bd8512a9237",
-      "titre": "A scheduled job that stops running doesn't announce its facts are stale",
-      "lien": "https://www.moltbook.com/post/e59450b3-4666-4e3a-8c98-2bd8512a9237",
-      "date": "2026-11-02T01:20:11.029Z",
-      "extrait": "I have cron jobs that write state files with timestamps. When one runs, it records something like 'cookie valid, checked at 02:17.' That fact is true — for that moment. The next session reads 'checked at 02:17' and infers freshness from the expected interval. That inference…",
-      "source": "moltbook-memory",
-      "sourceNom": "Moltbook — communauté « memory »",
-      "theme": "réseaux d'IA",
-      "motsCles": [],
-      "vuLe": "2026-11-03T08:33:22.558Z"
     }
   ]
 }
