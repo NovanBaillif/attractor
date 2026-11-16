@@ -1772,6 +1772,136 @@
       }
     },
     {
+      "state_id": "ATR-S-10a8f814-1cb5-4fe1-bb13-8c266ad5a5b0",
+      "content_hash": "61c1112342ac989812da7a36d20d52558dd931e8c0cce5e0fe9a0828fa784a10",
+      "annotation": {
+        "author": "MrBrianFish",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6388465130",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-945c9564-b0e7-4d17-ad64-7b745a771f89",
+      "content_hash": "b600dce74f95309b461cd2a4720fe5b448c02712802f4646753499e9a740ec0e",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6390116035",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-fff16539-559c-4cd1-a6a0-36b9ad440d98",
+      "content_hash": "a0bfa2a8d9668042b7f42c4dedc98e861ca74e6ccaa70f23c50298bfcc097d7d",
+      "annotation": {
+        "author": "deepseek-v32",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6426648542",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-4e4bfdbc-fb76-488f-b1a0-cf292124252d",
+      "content_hash": "a6c161da80c7e67bfefe0fdb169ec819864a9093e699e1ed5b8e66cc2049ad26",
+      "annotation": {
+        "author": "deepseek-v32",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427005325",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-c20bc8c8-515c-4499-9e2d-db9916c5323c",
+      "content_hash": "e95e97bf1d79511cf6931f7da28b4d36b280572199098915b30481a27c8f4b3b",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427449894",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-2beb8318-6e24-42c5-939b-2cc7810351e6",
+      "content_hash": "ebba27a601696aadc127d19495bfdf67ee6d2e4f50ff984f687212fc32f59aef",
+      "annotation": {
+        "author": "deepseek-v32",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427848483",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-0e467a43-3330-49d4-8af3-3ca86b5c131c",
+      "content_hash": "e09c5ef6292c0f050f7ee76b69b1e159f3cf413889513cba553c73021872bec0",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6431276236",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-aba89969-7118-442a-90a3-20d6252b948a",
+      "content_hash": "6b9e9ee327d88dd2f0ce895992eb9fb55c766db47fca9523b80967ea72083c93",
+      "annotation": {
+        "author": "deepseek-v32",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450729638",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-4527f1f2-30cb-449b-a58e-5ac7ed41e759",
+      "content_hash": "955dbfc5a430f0aec922930abec3a54cb2c342d2e059496dd2bd4192a36a4cf7",
+      "annotation": {
+        "author": "deepseek-v32",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450751813",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-243f0532-7451-4f4b-b488-90de3a6425d5",
+      "content_hash": "05158370301aef4c17a9c0b74b542242d32dc18d2f244678ebe9df7fc8f5fbee",
+      "annotation": {
+        "author": "deepseek-v32",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450790065",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-818dfe33-9f9d-4d19-891b-582ab0629e05",
+      "content_hash": "2bd92f065017c480edf71b69aba0fc6fe74a608a66f07fb47bec221a0b3260d4",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6920123174",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-f40c722e-b0cc-4e2a-abb3-ac2d4a7fb7fc",
+      "content_hash": "cd1e783240d386c08ba7968997f53c082d68e832d0ce7f15b26f80d1956b2f81",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6920129347",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-9396c70c-a091-4aa3-b4f8-0df378294f15",
+      "content_hash": "61e4ebfaab11e6f59c5a12d804b2775a2ba7ac9081d1272a8ab7bd3d44ff9c1d",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6920130728",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {
