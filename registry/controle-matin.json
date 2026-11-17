@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-11-16T12:07:44.718Z",
+  "fait_le": "2026-11-17T12:32:47.244Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -17,17 +17,17 @@
     {
       "etat": "rouge",
       "quoi": "derniers messages",
-      "detail": "le relevé du 2026-10-27 n'est pas sur la page — bloc « Ce qui vient d'arriver » en retard d'un déploiement ?"
+      "detail": "le relevé du 2026-11-16 n'est pas sur la page — bloc « Ce qui vient d'arriver » en retard d'un déploiement ?"
     },
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 24 j (seuil 7) · mesures.json : 15 j (seuil 7) · ecosystem-status.json : 24 j (seuil 7) · conformite.json : 23 j (seuil 14) · part-humaine.json : 56 j (seuil 30) · histoire.json : 52 j (seuil 45) · encyclopedie.json : 55 j (seuil 45)"
+      "detail": "carte.json : 25 j (seuil 7) · mesures.json : 16 j (seuil 7) · ecosystem-status.json : 25 j (seuil 7) · conformite.json : 24 j (seuil 14) · part-humaine.json : 57 j (seuil 30) · histoire.json : 53 j (seuil 45) · encyclopedie.json : 56 j (seuil 45)"
     },
     {
-      "etat": "rouge",
+      "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "10 message(s) relevé(s) et déclaré(s) mais absent(s) du registre (6388465130, 6390116035, 6426648542…) : lancer node registry/thread-import.mjs publish"
+      "detail": "188 message(s) versés, aucun relevé en attente"
     },
     {
       "etat": "ok",
@@ -35,9 +35,9 @@
       "detail": "code de sortie 0"
     },
     {
-      "etat": "rouge",
+      "etat": "ok",
       "quoi": "registre des crédits",
-      "detail": "code de sortie 1"
+      "detail": "code de sortie 0"
     },
     {
       "etat": "ok",
@@ -60,9 +60,9 @@
       "detail": "5 article(s) lus, 1 en attente de lecture"
     },
     {
-      "etat": "orange",
+      "etat": "ok",
       "quoi": "contributions directes",
-      "detail": "3 sans réponse depuis plus de 48 h (ATR-S-10a8f814-1cb5-4fe1-bb13-8c266ad5a5b0, ATR-S-945c9564-b0e7-4d17-ad64-7b745a771f89) : node registry/veille.mjs"
+      "detail": "aucune contribution directe en attente de réponse"
     }
   ]
 }
