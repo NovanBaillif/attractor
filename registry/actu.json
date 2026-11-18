@@ -1,5 +1,5 @@
 {
-  "releveeA": "2026-11-18T09:05:54.093Z",
+  "releveeA": "2026-11-18T11:35:19.212Z",
   "outil": "registry/actu.mjs",
   "principe": "Ce que le projet lit chaque jour, sans compte, dans des sources publiques et gratuites. Titres dans leur langue d’origine, court extrait, lien vers la source. Aucune de ces sources n’a validé ATTRACTOR.",
   "sources": [
@@ -9,7 +9,7 @@
       "theme": "recherche",
       "lien": "https://rss.arxiv.org/rss/cs.MA",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 29,
       "gardes": 10
     },
@@ -18,11 +18,10 @@
       "nom": "arXiv — mémoire des systèmes multi-agents",
       "theme": "recherche",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:%22multi-agent%22+AND+abs:memory&sortBy=submittedDate&sortOrder=descending&max_results=20",
-      "etat": "muette",
-      "muetteDepuis": "2026-11-18T09:05:54.093Z",
-      "lueLe": "2026-11-17T11:46:24.398Z",
-      "erreur": "23 : The operation was aborted due to timeout",
-      "aRetirer": false
+      "etat": "lue",
+      "lueLe": "2026-11-18T11:35:19.212Z",
+      "lus": 20,
+      "gardes": 10
     },
     {
       "id": "hf-papiers",
@@ -30,7 +29,7 @@
       "theme": "recherche",
       "lien": "https://huggingface.co/api/daily_papers?limit=50",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 50,
       "gardes": 10
     },
@@ -40,7 +39,7 @@
       "theme": "actualité",
       "lien": "https://huggingface.co/blog/feed.xml",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 908,
       "gardes": 5
     },
@@ -50,7 +49,7 @@
       "theme": "actualité",
       "lien": "https://hn.algolia.com/api/v1/search?query=AI%20agents&tags=story&hitsPerPage=30",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 15,
       "gardes": 10
     },
@@ -60,7 +59,7 @@
       "theme": "actualité",
       "lien": "https://news.smol.ai/rss.xml",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 716,
       "gardes": 5
     },
@@ -70,7 +69,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/a2aproject/A2A/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 10,
       "gardes": 5
     },
@@ -80,7 +79,7 @@
       "theme": "protocoles",
       "lien": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 9,
       "gardes": 5
     },
@@ -90,7 +89,7 @@
       "theme": "réseaux d'IA",
       "lien": "https://www.moltbook.com/api/v1/posts?submolt=memory&sort=hot&limit=25",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 25,
       "gardes": 8
     },
@@ -100,7 +99,7 @@
       "theme": "personnes",
       "lien": "https://news.google.com/rss/search?q=%22Yann%20LeCun%22&hl=fr&gl=FR&ceid=FR:fr",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 63,
       "gardes": 8
     },
@@ -110,7 +109,7 @@
       "theme": "personnes",
       "lien": "https://hn.algolia.com/api/v1/search?query=LeCun&tags=story&hitsPerPage=20",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 0,
       "gardes": 0
     },
@@ -119,11 +118,10 @@
       "nom": "Yann LeCun — publications",
       "theme": "personnes",
       "lien": "https://export.arxiv.org/api/query?search_query=au:lecun&sortBy=submittedDate&sortOrder=descending&max_results=20",
-      "etat": "muette",
-      "muetteDepuis": "2026-11-18T09:05:54.093Z",
-      "lueLe": "2026-11-17T11:46:24.398Z",
-      "erreur": "23 : The operation was aborted due to timeout",
-      "aRetirer": false
+      "etat": "lue",
+      "lueLe": "2026-11-18T11:35:19.212Z",
+      "lus": 20,
+      "gardes": 5
     },
     {
       "id": "ietf-bu",
@@ -131,7 +129,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-bu-agentproto-security-principal-binding/",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 27,
       "gardes": 3
     },
@@ -141,7 +139,7 @@
       "theme": "projets voisins",
       "lien": "https://datatracker.ietf.org/feed/document-changes/draft-tonyai-a2a-trust/",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 16,
       "gardes": 3
     },
@@ -162,7 +160,7 @@
       "theme": "projets voisins",
       "lien": "https://export.arxiv.org/api/query?search_query=abs:Pramana+AND+abs:agent&sortBy=submittedDate&sortOrder=descending&max_results=10",
       "etat": "lue",
-      "lueLe": "2026-11-18T09:05:54.093Z",
+      "lueLe": "2026-11-18T11:35:19.212Z",
       "lus": 3,
       "gardes": 3
     }
@@ -385,6 +383,22 @@
       "vuLe": "2026-11-18T09:05:54.093Z"
     },
     {
+      "id": "https://arxiv.org/abs/2611.22245v1",
+      "titre": "Multi-Agent Memory Inconsistency: Where Factual Conflicts Disappear in LLM Agents",
+      "lien": "https://arxiv.org/abs/2611.22245v1",
+      "date": "2026-11-17T05:47:01.000Z",
+      "extrait": "Multi-agent delegation lets LLM systems distribute evidence collection across workers with separate contexts. This creates a consistency challenge: facts retrieved by workers may be missing from the evidence available to the lead for a joint conclusion. We introduce a…",
+      "source": "arxiv-memoire",
+      "sourceNom": "arXiv — mémoire des systèmes multi-agents",
+      "theme": "recherche",
+      "motsCles": [
+        "multi-agent",
+        "agent",
+        "memory"
+      ],
+      "vuLe": "2026-11-18T11:35:19.212Z"
+    },
+    {
       "id": "https://arxiv.org/abs/2611.18693",
       "titre": "Swarm Shepherd: Securing Multi-Agent Ecosystems Against Persistent Latent Compromise",
       "lien": "https://arxiv.org/abs/2611.18693",
@@ -593,6 +607,21 @@
         "memory"
       ],
       "vuLe": "2026-11-18T09:05:54.093Z"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.22016v1",
+      "titre": "An Explainable Agentic AI Framework for Distribution System Load Restoration",
+      "lien": "https://arxiv.org/abs/2611.22016v1",
+      "date": "2026-11-17T00:06:48.000Z",
+      "extrait": "Distribution system load restoration is a sequential decision-making problem in which restoration actions must maximize served load, prioritize critical loads, and preserve power-flow feasibility. This paper proposes an explainable agentic artificial intelligence (AI)…",
+      "source": "arxiv-memoire",
+      "sourceNom": "arXiv — mémoire des systèmes multi-agents",
+      "theme": "recherche",
+      "motsCles": [
+        "agent",
+        "agentic"
+      ],
+      "vuLe": "2026-11-18T11:35:19.212Z"
     },
     {
       "id": "https://www.moltbook.com/post/3260d6b6-058c-49dd-bdec-b22e960f59f7",
@@ -1128,6 +1157,20 @@
         "collaborat"
       ],
       "vuLe": "2026-11-17T09:43:52.011Z"
+    },
+    {
+      "id": "https://huggingface.co/papers/2611.19857",
+      "titre": "PanDWM: Panoramic 4D Driving World Models",
+      "lien": "https://huggingface.co/papers/2611.19857",
+      "date": "2026-11-14T19:00:00.000Z",
+      "extrait": "Driving world models usually generate videos from six pinhole cameras with separate optical centres and small overlaps, and must learn to keep these views consistent. We present PanDWM, which stitches them into one 360^circ panoramic band. Camera boundaries then fall inside…",
+      "source": "hf-papiers",
+      "sourceNom": "Hugging Face — articles du jour",
+      "theme": "recherche",
+      "motsCles": [
+        "world model"
+      ],
+      "vuLe": "2026-11-18T11:35:19.212Z"
     },
     {
       "id": "https://www.moltbook.com/post/80c0cdd2-0939-4b45-bea5-21e65dd90552",
@@ -4388,51 +4431,6 @@
         "agent",
         "agentic",
         "memory"
-      ],
-      "vuLe": "2026-11-05T08:30:29.388Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2611.05524",
-      "titre": "MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models",
-      "lien": "https://arxiv.org/abs/2611.05524",
-      "date": "2026-11-05T05:00:00.000Z",
-      "extrait": "arXiv:2611.05524v1 Announce Type: cross Abstract: We propose MA-SafeDiffuser, a multi-agent extension of SafeDiffuser that equips diffusion-based trajectory planners with finite-time diffusion invariance guarantees for joint-agent safety specifications. Building on the…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "multi-agent",
-        "agent"
-      ],
-      "vuLe": "2026-11-05T08:30:29.388Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2611.06585",
-      "titre": "Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains",
-      "lien": "https://arxiv.org/abs/2611.06585",
-      "date": "2026-11-05T05:00:00.000Z",
-      "extrait": "arXiv:2611.06585v1 Announce Type: cross Abstract: AI agents rely on third-party tools, such as Model Context Protocol (MCP) servers, whose publishers can be authenticated and whose execution can be restricted by runtime security policies. Yet authenticity does not guarantee…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent",
-        "model context protocol",
-        "mcp"
-      ],
-      "vuLe": "2026-11-05T08:30:29.388Z"
-    },
-    {
-      "id": "https://arxiv.org/abs/2609.28190",
-      "titre": "Connectivity Preservation and Graph Stretching in Range-Only Swarm Dispersion",
-      "lien": "https://arxiv.org/abs/2609.28190",
-      "date": "2026-11-05T05:00:00.000Z",
-      "extrait": "arXiv:2609.28190v2 Announce Type: replace Abstract: We study connectivity-preserving finite-jump dispersion of anonymous, identical, and oblivious agents under an idealized range-only sensing model. Each agent measures only the distances to its visible neighbors, without…",
-      "source": "arxiv-cs-ma",
-      "sourceNom": "arXiv — systèmes multi-agents",
-      "theme": "recherche",
-      "motsCles": [
-        "agent"
       ],
       "vuLe": "2026-11-05T08:30:29.388Z"
     }
