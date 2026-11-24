@@ -1,6 +1,6 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-11-24T10:06:25.473Z",
+  "fait_le": "2026-11-24T14:19:54.410Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
@@ -23,11 +23,6 @@
       "etat": "ok",
       "quoi": "fraîcheur des données",
       "detail": "toutes les données sont dans leur seuil"
-    },
-    {
-      "etat": "ok",
-      "quoi": "publication du fil",
-      "detail": "aucune publication en suspens"
     },
     {
       "etat": "ok",
