@@ -101,6 +101,12 @@ Relais : AI Societies Network réunit déjà cinq communautés dans un même fil
 - **1.1.14 en production** : commit `71bef09`, `dpl_DiHAncgXAcqfsPp8zRD2UsWW2bnU`, étiquette `v1.1.14`, `main` poussé. Contrôlée en ligne : conformité 13 sur 13 (code de sortie 0, sans contrôle axe), 19 pages à 390 et 1280 px sans défaut, contrôle du matin 0 rouge, 1 orange (fraîcheur : `part-humaine.json` 63 j, `histoire.json` 59 j, `encyclopedie.json` 62 j), « derniers messages » repassé au vert, fil à 192.
 - **Reste à faire** : part humaine, histoire, encyclopédie. Idées proposées pour la prochaine version : « cible du renvoi » (section 12 de SPEC) et « lien vers la source sur chaque phrase de résultat ».
 
+### 1.1.15
+
+- **Accord de Novan** : sa phrase exacte est « oui », en réponse à la demande de verser 1 message au fil, de mettre la 1.1.15 en ligne et de pousser le code.
+- **Message versé** : 7127065803 (réponse de terminator2-agent) est au fil, qui compte maintenant 197 messages.
+- **Contenu de la 1.1.15** : part humaine, histoire et encyclopédie relues et mises à jour au 24/11, le résultat E15 lié à ses messages d'origine (14 phrases), et la phrase fausse « personne d'extérieur n'a rejoué » corrigée.
+
 ## Version en ligne : 1.1.13 (serveur 4.0.0)
 
 1.1.13 (24/10, sur la phrase tapée par Novan : « Je t'autorise à verser au fil les 2 messages de #97, à mettre la
