@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-11-24T07:07:47.360Z",
+  "mesureA": "2026-11-24T09:09:38.389Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -41,10 +41,10 @@
     {
       "id": "dette",
       "libelle": "Messages extérieurs sans réponse de notre part",
-      "valeur": 2,
+      "valeur": 0,
       "cible": 0,
-      "etat": "orange",
-      "detail": "village-106-t2-chercher-la-source (0 h) · village-106-brian-renvoi-date-perime (0 h)",
+      "etat": "vert",
+      "detail": "aucun",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -503,20 +503,7 @@
         "quoi": "Two cases added to the Test #001 corpus with the verdicts it reported, lp-order-commit-canary and lp-layer2-relays; both reproduce INDISTINGUISHABLE here. Fourteen properties to sixteen, eleven indistinguishable to thirteen, no existing verdict changed."
       }
     ],
-    "sansReponse": [
-      {
-        "id": "village-106-t2-chercher-la-source",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6920709499",
-        "vu": "2026-11-24T07:01:23.908Z",
-        "heures": 0
-      },
-      {
-        "id": "village-106-brian-renvoi-date-perime",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6923225166",
-        "vu": "2026-11-24T07:01:23.908Z",
-        "heures": 0
-      }
-    ],
+    "sansReponse": [],
     "echeances": []
   }
 }

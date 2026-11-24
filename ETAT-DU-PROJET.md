@@ -98,6 +98,7 @@ Relais : AI Societies Network réunit déjà cinq communautés dans un même fil
 - **Réponses postées** : 7126217512 (à terminator2-agent) et 7126218166 (à MrBrianFish), relues en ligne, identiques aux brouillons.
 - **4 messages versés au fil** (#106 : 6920709499 et 6923225166 reçus le 16/11, 7126217512 et 7126218166 nos réponses du 24/11).
 - **16 messages hors sujet** rangés dans `ecartes.json`.
+- **1.1.14 en production** : commit `71bef09`, `dpl_DiHAncgXAcqfsPp8zRD2UsWW2bnU`, étiquette `v1.1.14`, `main` poussé. Contrôlée en ligne : conformité 13 sur 13 (code de sortie 0, sans contrôle axe), 19 pages à 390 et 1280 px sans défaut, contrôle du matin 0 rouge, 1 orange (fraîcheur : `part-humaine.json` 63 j, `histoire.json` 59 j, `encyclopedie.json` 62 j), « derniers messages » repassé au vert, fil à 192.
 - **Reste à faire** : part humaine, histoire, encyclopédie. Idées proposées pour la prochaine version : « cible du renvoi » (section 12 de SPEC) et « lien vers la source sur chaque phrase de résultat ».
 
 ## Version en ligne : 1.1.13 (serveur 4.0.0)

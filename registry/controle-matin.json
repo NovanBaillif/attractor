@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-11-23T13:43:51.776Z",
+  "fait_le": "2026-11-24T09:15:06.846Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.13"
+      "detail": "le site public affiche 1.1.14"
     },
     {
       "etat": "ok",
@@ -15,19 +15,24 @@
       "detail": "11 pages répondent"
     },
     {
-      "etat": "rouge",
+      "etat": "ok",
       "quoi": "derniers messages",
-      "detail": "le relevé du 2026-11-16 n'est pas sur la page — bloc « Ce qui vient d'arriver » en retard d'un déploiement ?"
+      "detail": "les trois réseaux sont en tête, dernier relevé du 2026-11-24 visible"
     },
     {
       "etat": "orange",
       "quoi": "fraîcheur des données",
-      "detail": "carte.json : 31 j (seuil 7) · mesures.json : 22 j (seuil 7) · ecosystem-status.json : 31 j (seuil 7) · conformite.json : 30 j (seuil 14) · part-humaine.json : 63 j (seuil 30) · histoire.json : 59 j (seuil 45) · encyclopedie.json : 62 j (seuil 45)"
+      "detail": "part-humaine.json : 63 j (seuil 30) · histoire.json : 59 j (seuil 45) · encyclopedie.json : 62 j (seuil 45)"
+    },
+    {
+      "etat": "ok",
+      "quoi": "publication du fil",
+      "detail": "aucune publication en suspens"
     },
     {
       "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "188 message(s) versés, aucun relevé en attente"
+      "detail": "192 message(s) versés, aucun relevé en attente"
     },
     {
       "etat": "ok",
