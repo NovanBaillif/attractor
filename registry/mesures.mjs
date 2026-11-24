@@ -86,7 +86,7 @@ function rejeux(tous) {
     if (r.mode === 'external-answers') {
       const replay = {experience: r.experiment, modele: r.replayer?.model ?? 'non déclaré',
         famille: r.replayer?.lineage ?? 'non déclarée', operateur: r.replayer?.operator ?? 'non déclaré',
-        isolement: r.replayer?.isolation ?? 'inconnu'};
+        isolement: r.replayer?.isolation ?? 'inconnu', source: r.source ?? null};
       // A file imported through the external-answer format can still be run by this project.
       // It adds a model family but must never be counted as an independent operator.
       if (replay.operateur !== 'projet') externes.push(replay);

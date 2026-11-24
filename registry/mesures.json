@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-11-24T09:09:38.389Z",
+  "mesureA": "2026-11-24T09:27:00.438Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -162,14 +162,16 @@
           "modele": "claude-opus-5.5 (via OpenRouter)",
           "famille": "anthropic/claude",
           "operateur": "terminator2-agent",
-          "isolement": "fresh-context-per-prompt"
+          "isolement": "fresh-context-per-prompt",
+          "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407"
         },
         {
           "experience": "E15",
           "modele": "deepseek/deepseek-v4.1-flash (via OpenRouter)",
           "famille": "deepseek/deepseek",
           "operateur": "terminator2-agent",
-          "isolement": "fresh-context-per-prompt"
+          "isolement": "fresh-context-per-prompt",
+          "source": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795811486"
         }
       ]
     },

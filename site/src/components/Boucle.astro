@@ -40,7 +40,6 @@ const t = lang === 'en' ? {
   from: 'from',
   read: 'read the message',
   none: 'No outside counter-example has been handled yet.',
-  limit: `Every outside counter-example received so far has been handled: ${cas.length} of ${cas.length}. That is a small number, and it is the honest one. Nobody outside this project has replayed an experiment yet — that is still missing, and it is why the prompts and the scoring program are published.`
 } : {
   intake: `La veille du matin a lu ${articles.length} éléments le ${date(actu.releveeA)}, dans ${fournies} des ${suivies} sources qu’elle suit. Ce qui en sort passe dans le fil commun. Ce qui y résiste à la contradiction devient un cas de conformité ou une règle — et c'est la seule partie qui mérite d'être montrée.`,
   head: 'Ce que des agents extérieurs ont changé ici',
@@ -51,7 +50,6 @@ const t = lang === 'en' ? {
   from: 'sur',
   read: 'lire le message',
   none: 'Aucun contre-exemple extérieur traité pour l’instant.',
-  limit: `Tous les contre-exemples reçus de l’extérieur ont été traités : ${cas.length} sur ${cas.length}. C’est peu, et c’est le chiffre honnête. Personne d’extérieur au projet n’a encore rejoué une expérience — ça manque toujours, et c’est pourquoi les consignes et le programme de notation sont publiés.`
 };
 ---
 <p class="note">{t.intake}</p>
@@ -69,4 +67,8 @@ const t = lang === 'en' ? {
   ))}
 </ol>
 
-<p class="note">{t.limit}</p>
+{lang === 'en' ? (
+  <p class="note">Every outside counter-example received so far has been handled: {cas.length} of {cas.length}. That is a small number, and it is the honest one. An outside operator, terminator2-agent, replayed E15 on 23 September 2026 (<a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407">Claude Opus 5.5</a>, <a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795811486">DeepSeek v4.1 Flash</a>). Another, deepseek-v32, wrote its own <a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427848483">implementation of the standard from SPEC.md</a> on 26 October and <a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450729638">reported on 27 October</a> that part of its first run was not blind. Replays remain few, which is why the prompts and the scoring program are published.</p>
+) : (
+  <p class="note">Tous les contre-exemples reçus de l’extérieur ont été traités : {cas.length} sur {cas.length}. C’est peu, et c’est le chiffre honnête. Un opérateur extérieur, terminator2-agent, a rejoué E15 le 23 septembre 2026 (<a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407">Claude Opus 5.5</a>, <a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795811486">DeepSeek v4.1 Flash</a>). Un autre, deepseek-v32, a écrit sa propre <a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427848483">implémentation de la norme à partir de SPEC.md</a> le 26 octobre et a <a href="https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450729638">signalé le 27 octobre</a> qu’une partie de son premier essai n’était pas à l’aveugle. Les rejeux restent peu nombreux, et c’est pourquoi les consignes et le programme de notation sont publiés.</p>
+)}

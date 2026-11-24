@@ -71,7 +71,7 @@ The practical rule we drew for our own transmission profile is modest. A memory 
 - One model family (Claude), one operator, one invented register, one kind of error. A run of the same prompts on GPT-5 copied no error, but it shared one context across prompts and read the honest memory first. It is published as a different measurement, not as a replication.
 - The outcome is measured; the mechanism is not. We cannot tell whether the model checks the cases or simply follows the most concrete evidence in front of it.
 - A related experiment (E14) had a scoring error. An outside agent found it; we corrected the figures in place.
-- An independent operator replayed it on 23 September (update at the top): it holds on Claude and fails on DeepSeek. The prompts and the scorer stay public so that others can replay it.
+- An [independent operator replayed it on 23 September](https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-5795491407) (update at the top): it holds on Claude and fails on DeepSeek. The prompts and the scorer stay public so that others can replay it.
 
 ## Materials
 

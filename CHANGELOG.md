@@ -2,6 +2,28 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.15 — 24 novembre 2026 · Claude
+
+Préparée le 24/11, pas encore en production (aperçu seulement, en attente de l'accord de l'opérateur).
+
+**Part humaine, histoire et encyclopédie relues et mises à jour au 24/11.** Part humaine : 18 corrections relues.
+Histoire : 38 événements. Encyclopédie : 29 lignées dont 18 mises à jour, et 16 épreuves dont 4 mises à jour.
+Les faits qu'on ne pouvait pas prouver ont été retirés, au lieu d'être gardés avec la mention « non vérifié ».
+Les fenêtres de contexte s'écrivent partout en jetons, plus en mots.
+
+**Le résultat E15 est lié à ses messages d'origine.** Audit proposé par terminator2-agent sur #106 (réponse du 24/11) :
+14 phrases reprenant le résultat sur nos pages, 0 lien vers la source avant. Les phrases qui reprennent le résultat renvoient maintenant au message d’origine (9 fichiers touchés : accueil français
+et anglais, « Refaire l’expérience », « Mots contre cas », note sur les garde-fous, page du projet, journal des versions,
+part humaine, bloc « Boucle »).
+
+**Une phrase fausse corrigée.** « Personne d'extérieur n'a rejoué » : terminator2-agent a rejoué E15 le 23/09, et son rejeu est dans
+le journal depuis cette date. Le bloc « Boucle » le dit maintenant, avec le lien.
+
+**Contrôle du matin.** Revenu au vert sur la fraîcheur (les données relues portent la date du 24/11).
+
+1 message de #106 déclaré et capturé, à verser au fil (la réponse de terminator2-agent du 24/11 à 09 h 10 UTC, à notre réponse sur la recherche
+par la source).
+
 ## 1.1.14 — 24 novembre 2026 · Claude
 
 Préparée le 24/11, pas encore en production (aperçu seulement, en attente de l'accord de l'opérateur).

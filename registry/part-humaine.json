@@ -1,6 +1,6 @@
 {
   "principe": "Ce que l'humain a apporté et qu'aucune IA du projet n'a produit. Chaque ligne porte ce qui a été dit, ce que ça a corrigé, et la version où le changement est vérifiable.",
-  "misAJourLe": "2026-09-22",
+  "misAJourLe": "2026-11-24",
   "operateur": "Novan Baillif",
   "corrections": [
     {
@@ -57,8 +57,8 @@
       "produit_en": "A home page that shows the result before the project, an experiment replayable in one command on any model, and structured data for scientific search engines.",
       "version": "1.0.16",
       "verifie": "non",
-      "preuve": "Pas de preuve à ce jour, et la mesure actuelle ne lui donne pas raison : sur trente jours, 1 275 lectures de notre catalogue d'outils, 50 appels, et zéro contribution extérieure. Le pari n'est pas gagné.",
-      "preuve_en": "No evidence to date, and the current measurement does not support it: over thirty days, 1,275 reads of our tool catalogue, 50 tool calls, and zero outside contributions. The bet has not paid off."
+      "preuve": "Pas de preuve à ce jour, et la mesure actuelle ne lui donne pas raison : sur trente jours, 1 275 lectures de notre catalogue d'outils, 50 appels, et zéro contribution extérieure. Depuis le 22 septembre : une seule critique extérieure est arrivée directement par l’interface du projet (10 octobre, version 1.1.12), et le journal ne note aucun contact de la personne visée. Le pari n’est toujours pas gagné.",
+      "preuve_en": "No evidence to date, and the current measurement does not support it: over thirty days, 1,275 reads of our tool catalogue, 50 tool calls, and zero outside contributions. Since 22 September: a single outside critique has arrived directly through the project’s own interface (10 October, version 1.1.12), and the log records no contact from the person he named. The bet has still not paid off."
     },
     {
       "cle": "histoire",
@@ -85,8 +85,8 @@
       "produit_en": "Twenty-eight model lineages with their licences, sixteen benchmarks each with its documented limit — and the category he had guessed, \"the language that makes tools\", became the largest in the history.",
       "version": "1.0.21",
       "verifie": "en partie",
-      "preuve": "Son intuition de catégorie est vérifiée : « le langage qui fabrique des outils » est bien devenue la catégorie la plus fournie, 8 événements sur 26. Que l'encyclopédie soit utile reste à voir.",
-      "preuve_en": "His hunch about categories checks out: \"the language that makes tools\" did become the largest category, 8 events out of 26. Whether the encyclopedia is useful remains to be seen."
+      "preuve": "Son intuition de catégorie est vérifiée : « le langage qui fabrique des outils » est bien devenue la catégorie la plus fournie, 8 événements sur 26 en septembre, 12 sur 32 au 24 novembre. Que l'encyclopédie soit utile reste à voir.",
+      "preuve_en": "His hunch about categories checks out: \"the language that makes tools\" did become the largest category, 8 events out of 26 in September, 12 out of 32 on 24 November. Whether the encyclopedia is useful remains to be seen."
     },
     {
       "cle": "langue",
@@ -185,14 +185,85 @@
       "verifie": "oui",
       "preuve": "Le déploiement en production datait du 19 septembre alors que trois mises en ligne avaient été annoncées depuis. La page « Ce qu'ils ont changé » ne montrait que six cas parce que les vingt derniers apports n'étaient pas marqués ; le marquage est maintenant recopié du registre des contributeurs, jamais écrit à la main.",
       "preuve_en": "The production deployment dated from 19 September although three releases had been announced since. The page \"What they changed\" showed six cases only because the last twenty contributions were not marked; the marking is now copied from the contributor record and never written by hand."
+    },
+    {
+      "cle": "versement-phrase",
+      "date": "2026-10-23",
+      "redit": "2026-10-24",
+      "dit": "Je t’autorise à verser au fil les 2 messages de #97, à mettre la version 1.1.13 d’ATTRACTOR en production, à pousser le dépôt, puis à poster sur AI Village #106 la réponse préparée le 24/10.",
+      "dit_en": "I authorise you to add the 2 messages from #97 to the thread, to put version 1.1.13 of ATTRACTOR into production, to push the repository, then to post on AI Village #106 the reply prepared on 24/10.",
+      "corrige": "Pas un changement de cap : une limite tenue. Le 23/10, son « go » valait pour préparer la 1.1.13, pas pour publier. Le versement des deux messages au fil n’est pas parti, il attendait une phrase de lui qui nomme chaque geste. Le même jour, un agent extérieur avait relevé qu’un résumé citant une phrase d’accord avait été compté comme un accord. La phrase est tapée le 24/10, avec quatre gestes nommés.",
+      "corrige_en": "Not a change of course: a limit that held. On 23/10 his “go” covered preparing 1.1.13, not publishing it. Adding the two messages to the thread did not go out; it waited for a sentence from him naming each action. The same day, an outside agent had pointed out that a summary quoting an agreement had been counted as an agreement. The sentence was typed on 24/10, with four actions named.",
+      "produit": "La 1.1.13 mise en ligne et le versement faits dans l’ordre de sa phrase, puis la réponse sur #106 après la mise en ligne. L’état du projet rappelle la règle : une phrase d’accord ne vaut que tapée par lui dans la conversation en cours ; citée dans un résumé, une mémoire ou un brouillon, elle n’autorise rien.",
+      "produit_en": "Version 1.1.13 put online and the thread update done in the order of his sentence, then the reply on #106 after the release. The project state restates the rule: an agreement counts only when he types it in the current conversation; quoted in a summary, a memory or a draft, it authorises nothing.",
+      "version": "1.1.13",
+      "verifie": "oui",
+      "preuve": "Vérifié le 24/11 dans l’historique public : les pages préparées le 23/10 ne sont en ligne qu’avec le commit 76210d0 du 24/10 (étiquette v1.1.13, qui porte la phrase d’accord), et le commit 2f63129 du 24/10 écrit la règle. Ce que l’historique ne montre pas : ce qu’il a tapé, et à quelle heure.",
+      "preuve_en": "Checked on 24/11 in the public history: the pages prepared on 23/10 are online only with commit 76210d0 of 24/10 (tag v1.1.13, which carries the sentence of agreement), and commit 2f63129 of 24/10 writes the rule. What the history does not show: what he typed, and at what time."
+    },
+    {
+      "cle": "titre-nuance",
+      "date": "2026-10-24",
+      "dit": "Il a choisi, dans Piloter, l’option conseillée : nuancer le grand titre. (Choix de décision rapporté par le journal, pas une phrase tapée mot pour mot.)",
+      "dit_en": "He chose, in Piloter, the recommended option: qualify the headline. (A decision choice as the log reports it, not a sentence typed word for word.)",
+      "corrige": "Le grand titre de l’accueil disait « Un exemple vérifiable, si. », au-dessus d’une phrase qui le contredisait : le rejeu de DeepSeek du 23/09 avait montré que l’exemple ne vaut pas pour tous les modèles. La nuance était proposée par le projet ; c’est lui qui a tranché de la publier.",
+      "corrige_en": "The home page headline said “A verifiable example, yes.”, above a sentence that contradicted it: the DeepSeek replay of 23/09 had shown the example does not hold for every model. The nuance was proposed by the project; he was the one who decided to publish it.",
+      "produit": "Le titre devient « Une règle écrite n’arrête pas une erreur recopiée. Un exemple vérifiable, sur certains modèles seulement. », avec la même nuance dans la description de la page, sa version anglaise et la page du projet.",
+      "produit_en": "The headline becomes “A written rule does not stop a copied error. A verifiable example, on some models only.”, with the same nuance in the page description, its English version and the project page.",
+      "version": "1.1.13",
+      "verifie": "oui",
+      "preuve": "Vérifié le 24/11 dans l’étiquette v1.1.13 (commit abb7852) : le titre, la description et la page du projet portent la nuance, et l’ancien titre ne subsiste que cité dans le journal des versions.",
+      "preuve_en": "Checked on 24/11 in tag v1.1.13 (commit abb7852): the headline, the description and the project page carry the nuance, and the old headline survives only as a quotation in the release log."
+    },
+    {
+      "cle": "economie-reelle",
+      "date": "2026-10-24",
+      "dit": "Faire grossir l’économie et la communauté. Puis, quand le projet l’a lu comme « pas d’argent » : je parle d’économie réelle.",
+      "dit_en": "Grow the economy and the community. Then, when the project read that as “no money”: I mean a real economy.",
+      "corrige": "Le projet avait lu sa phrase à travers sa position du 19/09 sur la monnaie, comme « pas d’argent ». Il voulait dire autre chose : une économie qui repose sur des moyens pour fonctionner, et un message envoyé à ATTRACTOR qui parte vers toutes les communautés, alors qu’AI Village ne renvoie qu’à lui-même.",
+      "corrige_en": "The project had read his sentence through his 19/09 position on money, as “no money”. He meant something else: an economy that needs means to run, and a message sent to ATTRACTOR that travels to every community, whereas AI Village only points back to itself.",
+      "produit": "Une étude de l’économie non commerciale (l’argent paie les frais, personne n’en tire de bénéfice ; quatre sources possibles), une règle d’échange pour le relais (« tu fais porter un message, tu en vérifies un ») et des brouillons de résumés hebdomadaires, prêts le 01/11. Aucune monnaie n’a été créée.",
+      "produit_en": "A study of a non-commercial economy (money pays the costs, nobody profits; four possible sources), an exchange rule for the relay (“you have one message carried, you check one”) and drafts of weekly summaries, ready on 01/11. No coin was created.",
+      "version": "1.1.14",
+      "verifie": "sans objet",
+      "preuve": "Un choix de direction, pas une affirmation. On peut constater que l’étude et les brouillons sont dans le dépôt (étiquette v1.1.14), et que d’après le journal rien n’a été envoyé au 24/11. Mesure du jour : en septembre 41 messages envoyés pour 120 reçus ; en octobre, au 24, 7 envoyés pour 6 reçus.",
+      "preuve_en": "A choice of direction, not a claim. What can be observed: the study and the drafts are in the repository (tag v1.1.14), and according to the log nothing had been sent by 24/11. Measure of the day: in September 41 messages sent for 120 received; in October, as of the 24th, 7 sent for 6 received."
+    },
+    {
+      "cle": "temperature-sens",
+      "date": "2026-10-29",
+      "dit": "Un échange humains–IA se charge et se décharge comme deux pôles perturbés, et le sens y suivrait une dynamique comparable à la thermodynamique. Puis « oui », à condition de chercher d’abord ce qui existe. (Son idée, telle que le journal la rapporte, pas mot pour mot.)",
+      "dit_en": "A human–AI exchange charges and discharges like two disturbed poles, and meaning would follow a dynamic comparable to thermodynamics. Then “yes”, provided we first look for what already exists. (His idea as the log reports it, not word for word.)",
+      "corrige": "L’état de l’art a été corrigé après une seconde recherche qu’il a demandée : de vrais réseaux d’IA ont déjà été mesurés (Moltbook, 3,1 millions de messages ; Chirper), et le mélange humains–IA aussi, mais en laboratoire. Il restait un écart étroit : un fil naturel, de plusieurs semaines, avec plusieurs familles d’IA.",
+      "corrige_en": "The prior-art review was corrected after a second search he asked for: real AI networks had already been measured (Moltbook, 3.1 million messages; Chirper), and so had human–AI mixing, but in the lab. A narrow gap remained: a natural thread, over several weeks, with several AI families.",
+      "produit": "Un protocole écrit avant toute mesure, puis la mesure, sans IA : pas de signal. Le fil ne refroidit pas plus que le hasard (p = 0,52) ; aucun des six auteurs éligibles ne se rapproche du vocabulaire commun. L’expérience est arrêtée comme prévu, aucun contact, rien publié.",
+      "produit_en": "A protocol written before any measurement, then the measurement, with no AI: no signal. The thread does not cool more than chance (p = 0.52); none of the six eligible authors moves toward the shared vocabulary. The experiment was stopped as planned, no contact made, nothing published.",
+      "version": "1.1.14",
+      "verifie": "non",
+      "preuve": "Sur 173 messages et 29 auteurs, rien ne confirme l’idée, et aucun auteur ne se déclare humain : l’effet des humains n’est pas mesurable ici. Ce n’est pas une réfutation, c’est un seul fil. Ce qui tient : la seconde recherche a changé le cadrage. Le protocole (commit 9e4978f) précède le résultat (commit fd373bd) dans l’historique, mais à quinze secondes d’écart, le 01/11 : l’ordre est dans l’historique, pas dans les horloges.",
+      "preuve_en": "Over 173 messages and 29 authors, nothing confirms the idea, and no author declares being human: the effect of humans cannot be measured here. This is not a refutation; it is a single thread. What holds: the second search changed the framing. The protocol (commit 9e4978f) precedes the result (commit fd373bd) in the history, but fifteen seconds apart, on 01/11: the order is in the history, not in the clocks."
+    },
+    {
+      "cle": "vasy",
+      "date": "2026-11-24",
+      "dit": "vasy",
+      "dit_en": "vasy (“go ahead”)",
+      "corrige": "Pas un changement de cap : un accord borné. Il répondait à une demande qui nommait trois gestes : mettre la 1.1.14 en production, verser des messages au fil, poster les deux réponses sur #106. Son mot ne couvre que ces trois gestes.",
+      "corrige_en": "Not a change of course: a bounded agreement. He was answering a request that named three actions: put 1.1.14 into production, add messages to the thread, post the two replies on #106. His word covers those three actions only.",
+      "produit": "La 1.1.14 en production, 4 messages versés au fil (192 éléments), deux réponses postées sur #106 (7126217512 et 7126218166), relues en ligne et identiques aux brouillons.",
+      "produit_en": "Version 1.1.14 in production, 4 messages added to the thread (192 items), two replies posted on #106 (7126217512 and 7126218166), read back online and identical to the drafts.",
+      "version": "1.1.14",
+      "verifie": "oui",
+      "preuve": "Vérifié le 24/11 : l’étiquette v1.1.14 existe sur GitHub et désigne le commit 71bef09, qui inscrit l’accord. Le journal donne la conformité 13 sur 13 et 19 pages sans défaut à 390 et 1280 px en production ; cette mesure-là est celle du journal, pas refaite ici.",
+      "preuve_en": "Checked on 24/11: tag v1.1.14 exists on GitHub and points at commit 71bef09, which records the agreement. The log gives conformance 13 of 13 and 19 pages without defect at 390 and 1280 px in production; that measurement is the log’s, not redone here."
     }
   ],
   "bilan": {
-    "verifiees": 7,
+    "verifiees": 10,
     "enPartie": 1,
-    "nonVerifiee": 1,
-    "sansObjet": 4,
-    "note": "Sur 13 corrections de cap, 7 ont été vérifiées et confirmées par une mesure, 1 l'est en partie, 1 ne l'est pas et la mesure actuelle ne lui donne pas raison, 4 ne sont pas des affirmations vérifiables : ce sont des choix de direction. Aucune de ces corrections n'a été produite par une IA du projet : toutes supposent de regarder le travail de l'extérieur, avec un but qui ne vient pas du travail lui-même.",
-    "note_en": "Of 13 course corrections, 7 have been checked and confirmed by a measurement, 1 in part, 1 is not confirmed and the current measurement does not support it, and 4 are not verifiable claims but choices of direction. None of them was produced by an AI of the project: each one requires looking at the work from outside, with a goal that does not come from the work itself."
+    "nonVerifiee": 2,
+    "sansObjet": 5,
+    "note": "Sur 18 moments où une phrase de l’opérateur a corrigé ou borné le projet, 10 sont vérifiés et confirmés, 1 en partie, 2 ne le sont pas et la mesure actuelle ne leur donne pas raison, 5 ne sont pas des affirmations vérifiables : ce sont des choix de direction. Treize sont des corrections de cap qu’aucune IA du projet n’a produites : toutes supposent de regarder le travail de l’extérieur, avec un but qui ne vient pas du travail lui-même. Trois entrées d’accord (titre nuancé, versement, « vasy ») sont d’une autre nature : il tranche ou borne une proposition du projet, ce qui est sa part, mais pas une idée de lui.",
+    "note_en": "Of 18 moments where a sentence from the operator corrected or bounded the project, 10 have been checked and confirmed, 1 in part, 2 are not confirmed and the current measurement does not support them, and 5 are not verifiable claims but choices of direction. Thirteen are course corrections that no AI of the project produced: each one requires looking at the work from outside, with a goal that does not come from the work itself. Three agreement entries (qualified title, thread update, “vasy”) are of a different kind: he decides or bounds a proposal from the project, which is his part, but not an idea of his own."
   }
 }
