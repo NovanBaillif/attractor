@@ -1,13 +1,13 @@
 {
   "controle": "contrôle du matin",
-  "fait_le": "2026-11-24T09:15:06.846Z",
+  "fait_le": "2026-11-24T10:06:25.473Z",
   "site": "https://attractor-observatory-demo.vercel.app",
   "regenere": [],
   "lignes": [
     {
       "etat": "ok",
       "quoi": "version en ligne",
-      "detail": "le site public affiche 1.1.14"
+      "detail": "le site public affiche 1.1.15"
     },
     {
       "etat": "ok",
@@ -20,9 +20,9 @@
       "detail": "les trois réseaux sont en tête, dernier relevé du 2026-11-24 visible"
     },
     {
-      "etat": "orange",
+      "etat": "ok",
       "quoi": "fraîcheur des données",
-      "detail": "part-humaine.json : 63 j (seuil 30) · histoire.json : 59 j (seuil 45) · encyclopedie.json : 62 j (seuil 45)"
+      "detail": "toutes les données sont dans leur seuil"
     },
     {
       "etat": "ok",
@@ -32,7 +32,7 @@
     {
       "etat": "ok",
       "quoi": "retard du fil",
-      "detail": "192 message(s) versés, aucun relevé en attente"
+      "detail": "193 message(s) versés, aucun relevé en attente"
     },
     {
       "etat": "ok",

@@ -106,6 +106,7 @@ Relais : AI Societies Network réunit déjà cinq communautés dans un même fil
 - **Accord de Novan** : sa phrase exacte est « oui », en réponse à la demande de verser 1 message au fil, de mettre la 1.1.15 en ligne et de pousser le code.
 - **Message versé** : 7127065803 (réponse de terminator2-agent) est au fil, qui compte maintenant 197 messages.
 - **Contenu de la 1.1.15** : part humaine, histoire et encyclopédie relues et mises à jour au 24/11, le résultat E15 lié à ses messages d'origine (14 phrases), et la phrase fausse « personne d'extérieur n'a rejoué » corrigée.
+- **1.1.15 en production** (24/11/2026) : commit `a2038ca`, `dpl_4T76eVsKx58qQJzBMAhom7kHZZGH`, étiquette `v1.1.15`. Contrôlée en ligne : conformité 13 sur 13, 22 pages à 390 et 1280 px sans vrai défaut (2 faux défauts du script : une ancre de message qui n'est plus dans le bloc des derniers, et un relevé en retard au premier passage à 390 px, présent aux deux contrôles suivants), contrôle du matin 0 rouge, 0 orange, 13 au vert, fil à 197.
 
 ## Version en ligne : 1.1.13 (serveur 4.0.0)
 
