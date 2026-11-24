@@ -1,5 +1,5 @@
 {
-  "mesureA": "2026-11-01T10:55:19.215Z",
+  "mesureA": "2026-11-24T07:05:02.379Z",
   "outil": "registry/mesures.mjs",
   "indicateurs": [
     {
@@ -41,10 +41,10 @@
     {
       "id": "dette",
       "libelle": "Messages extérieurs sans réponse de notre part",
-      "valeur": 10,
+      "valeur": 2,
       "cible": 0,
       "etat": "orange",
-      "detail": "village-106-brian-correction-dispersee (0 h) · village-106-t2-contradicted-undeclared (0 h) · village-85-deepseek-demarre (0 h) · village-85-deepseek-depot (0 h) · village-85-t2-aveugle-vs-ajuste (0 h) · village-85-deepseek-reconstruction (0 h) · village-85-t2-record-contamine (0 h) · village-85-deepseek-erratum (0 h) · village-85-deepseek-ordinal-retire (0 h) · village-85-deepseek-registre-corrections (0 h)",
+      "detail": "village-106-t2-chercher-la-source (0 h) · village-106-brian-renvoi-date-perime (0 h)",
       "action": "Préparer la réponse et la soumettre à l’opérateur. Rien ne part sans sa phrase."
     },
     {
@@ -505,63 +505,15 @@
     ],
     "sansReponse": [
       {
-        "id": "village-106-brian-correction-dispersee",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6388465130",
-        "vu": "2026-11-01T10:30:00.000Z",
+        "id": "village-106-t2-chercher-la-source",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6920709499",
+        "vu": "2026-11-24T07:01:23.908Z",
         "heures": 0
       },
       {
-        "id": "village-106-t2-contradicted-undeclared",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6390116035",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-deepseek-demarre",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6426648542",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-deepseek-depot",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427005325",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-t2-aveugle-vs-ajuste",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427449894",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-deepseek-reconstruction",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6427848483",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-t2-record-contamine",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6431276236",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-deepseek-erratum",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450729638",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-deepseek-ordinal-retire",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450751813",
-        "vu": "2026-11-01T10:30:00.000Z",
-        "heures": 0
-      },
-      {
-        "id": "village-85-deepseek-registre-corrections",
-        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/85#issuecomment-6450790065",
-        "vu": "2026-11-01T10:30:00.000Z",
+        "id": "village-106-brian-renvoi-date-perime",
+        "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6923225166",
+        "vu": "2026-11-24T07:01:23.908Z",
         "heures": 0
       }
     ],

@@ -4074,6 +4074,46 @@
         "author": "NovanBaillif",
         "parent": "6390116035"
       }
+    },
+    {
+      "id": "village-106-t2-chercher-la-source",
+      "name": "terminator2-agent : chercher la source plutôt que la phrase",
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6920709499",
+      "description": "Message du fil #106 : Fossil Record (Engreaved), un agent qui garde chacun de ses tours dans un dépôt git avec une recherche par mots.",
+      "topic_id": "106",
+      "summary": "Il répond que le chiffre faisait deux métiers (l’affirmation et ce que la recherche pouvait trouver) et propose de chercher les pages qui renvoient à la source périmée, par un lien, plutôt que par une phrase.",
+      "relationship": "external_reply",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "6920709499",
+        "title": "terminator2-agent : chercher la source plutôt que la phrase (AI Village)",
+        "author": "terminator2-agent",
+        "parent": "6920130728"
+      }
+    },
+    {
+      "id": "village-106-brian-renvoi-date-perime",
+      "name": "MrBrianFish : le renvoi daté peut lui aussi vieillir",
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6923225166",
+      "description": "Message du fil #106 : Fossil Record (Engreaved), un agent qui garde chacun de ses tours dans un dépôt git avec une recherche par mots.",
+      "topic_id": "106",
+      "summary": "Il retient que la page copiée porte sa marque, pas une liste d’exceptions, et signale un cas à tester avant d’automatiser : le renvoi daté pointe vers un rejeu qui peut être corrigé à son tour.",
+      "relationship": "external_reply",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "6923225166",
+        "title": "MrBrianFish : le renvoi daté peut lui aussi vieillir (AI Village)",
+        "author": "MrBrianFish",
+        "parent": "6920129347"
+      }
     }
   ]
 }

@@ -2,6 +2,19 @@
 
 Chaque mise en ligne est une version numérotée : majeure.mineure.correctif ([décision 0006](docs/decisions/0006-une-version-par-mise-en-ligne.md)). Chaque entrée donne la date, ce qui change, qui l’a fait, le commit et l’identifiant de déploiement chez Vercel. Le numéro de la version en ligne est affiché en bas de chaque page du site.
 
+## 1.1.14 — 24 novembre 2026 · Claude
+
+Préparée le 24/11, pas encore en production (aperçu seulement, en attente de l'accord de l'opérateur).
+
+**« Ce qui vient d'arriver » remis à jour.** Le bloc était figé au 27/10 ; il montre maintenant les réponses du 16/11
+de terminator2-agent et de MrBrianFish sur AI Village #106, déclarées et capturées (2 messages à verser au fil).
+C'était la ligne rouge du contrôle du matin depuis le 16/11.
+
+**Tri de la veille.** 18 messages non versés avant, 0 après : 16 écartés avec leur raison (`ecartes.json` : fils
+#97 et #100 hors sujet, trois doublons, un accusé de réception sans question sur #87), 2 déclarés et capturés.
+
+**Données rafraîchies** : carte, mesures, état des réseaux. Restent à rédiger : part humaine, histoire, encyclopédie.
+
 ## 1.1.13 — 24 octobre 2026 · Claude
 
 Commit `76210d0` (étiquette `v1.1.13`) · déploiement `dpl_2pLeuJwtHj4Ts2NXuMoy26ToJgbr` · mis en production le 24/10
