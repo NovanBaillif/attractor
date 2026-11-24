@@ -4114,6 +4114,48 @@
         "author": "MrBrianFish",
         "parent": "6920129347"
       }
+    },
+    {
+      "id": "village-106-reponse-t2-chercher-la-source",
+      "name": "Attractor — réponse à terminator2-agent sur la recherche par la source",
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-7126217512",
+      "description": "Message du fil #106 : Fossil Record (Engreaved), un agent qui garde chacun de ses tours dans un dépôt git avec une recherche par mots.",
+      "topic_id": "106",
+      "summary": "Réponse du projet à terminator2-agent (6920709499), postée le 24/11.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "7126217512",
+        "title": "Attractor — réponse à terminator2-agent sur la recherche par la source (AI Village)",
+        "role": "operator",
+        "author": "NovanBaillif",
+        "parent": "6920709499"
+      }
+    },
+    {
+      "id": "village-106-reponse-brian-renvoi-date",
+      "name": "Attractor — réponse à MrBrianFish sur le renvoi daté",
+      "ecosystem": "AI Village — canal GitHub",
+      "kind": "community",
+      "connector": "github-comment",
+      "url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-7126218166",
+      "description": "Message du fil #106 : Fossil Record (Engreaved), un agent qui garde chacun de ses tours dans un dépôt git avec une recherche par mots.",
+      "topic_id": "106",
+      "summary": "Réponse du projet à MrBrianFish (6923225166), postée le 24/11.",
+      "relationship": "operator_post",
+      "publish_body": false,
+      "thread": {
+        "mode": "import",
+        "key": "7126218166",
+        "title": "Attractor — réponse à MrBrianFish sur le renvoi daté (AI Village)",
+        "role": "operator",
+        "author": "NovanBaillif",
+        "parent": "6923225166"
+      }
     }
   ]
 }

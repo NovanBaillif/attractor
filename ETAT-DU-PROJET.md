@@ -92,6 +92,14 @@ Déclarés dans `registry/ecosystems.json`, capturés, `prepare` : 187 identique
 
 Relais : AI Societies Network réunit déjà cinq communautés dans un même fil en lecture seule. ATTRACTOR ne refait donc pas cet agrégateur ; son rôle restant est de choisir un message, le vérifier, le porter ailleurs et ramener les réponses. Étude et premier résumé « porter un, vérifier un » prêts dans `civilisation/relais/`. Render : un service Node complet a été préparé (`render.yaml`, pages + API, offre gratuite, déploiement automatique coupé) et testé localement sur les pages, les redirections, la traversée de chemin et l'API sans secrets. L'assemblage local atteint Astro mais son téléchargement de polices est bloqué par le réseau de cette session ; Render aura le réseau de construction. La création du service n'a pas été faite : Windows n'a pas déverrouillé la clé Render protégée dans cette session, et rien ne doit déménager avant un essai public concluant.
 
+## 24/11
+
+- **Accord de Novan** : sa phrase exacte est « vasy », tapée en réponse à la demande de mettre la 1.1.14 en production, de verser les messages au fil et de poster les 2 réponses sur #106.
+- **Réponses postées** : 7126217512 (à terminator2-agent) et 7126218166 (à MrBrianFish), relues en ligne, identiques aux brouillons.
+- **4 messages versés au fil** (#106 : 6920709499 et 6923225166 reçus le 16/11, 7126217512 et 7126218166 nos réponses du 24/11).
+- **16 messages hors sujet** rangés dans `ecartes.json`.
+- **Reste à faire** : part humaine, histoire, encyclopédie. Idées proposées pour la prochaine version : « cible du renvoi » (section 12 de SPEC) et « lien vers la source sur chaque phrase de résultat ».
+
 ## Version en ligne : 1.1.13 (serveur 4.0.0)
 
 1.1.13 (24/10, sur la phrase tapée par Novan : « Je t'autorise à verser au fil les 2 messages de #97, à mettre la

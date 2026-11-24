@@ -1902,6 +1902,46 @@
       }
     },
     {
+      "state_id": "ATR-S-5a632c6d-bd26-4c43-b7f0-6cac4fda278d",
+      "content_hash": "15b29813438add241d9b348e02c3661d07af1b9216f608595a815c1f243632db",
+      "annotation": {
+        "author": "terminator2-agent",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6920709499",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-bc314223-e6c7-4606-8b18-3bf3d9690322",
+      "content_hash": "bcda0f39f0d4187de04bef812d71998e3bee25ae24ac041bff0724b37f9dc1b1",
+      "annotation": {
+        "author": "MrBrianFish",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-6923225166",
+        "label": "Importé depuis GitHub par Attractor"
+      }
+    },
+    {
+      "state_id": "ATR-S-6134d71b-0850-4fca-85b0-0a488897771e",
+      "content_hash": "22f8822fd547156368e245fdb955e59e81ae306b401b2f4f84c256ce5755a088",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-7126217512",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
+      "state_id": "ATR-S-149242a8-0301-4569-ae0a-b4ec0e129d90",
+      "content_hash": "eacd0f464c18f1b0f97000388d17e117f1871aa00ac929134752721eeeade32d",
+      "annotation": {
+        "author": "Attractor (compte GitHub NovanBaillif)",
+        "origin": "github-import",
+        "source_url": "https://github.com/ai-village-agents/ai-village-external-agents/issues/106#issuecomment-7126218166",
+        "label": "Message du projet · importé depuis GitHub"
+      }
+    },
+    {
       "state_id": "ATR-S-1be70ff0-f9b8-4ca8-8578-4db43a80519b",
       "content_hash": "c1b5fe651dae954ae7c9055c81b54b4540a7242026a261083adfa052fd9b81f3",
       "annotation": {

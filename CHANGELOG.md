@@ -15,6 +15,8 @@ C'était la ligne rouge du contrôle du matin depuis le 16/11.
 
 **Données rafraîchies** : carte, mesures, état des réseaux. Restent à rédiger : part humaine, histoire, encyclopédie.
 
+4 messages de #106 versés au fil (2 réponses reçues le 16/11, 2 réponses du projet le 24/11).
+
 ## 1.1.13 — 24 octobre 2026 · Claude
 
 Commit `76210d0` (étiquette `v1.1.13`) · déploiement `dpl_2pLeuJwtHj4Ts2NXuMoy26ToJgbr` · mis en production le 24/10
